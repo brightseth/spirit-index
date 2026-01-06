@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { getAgentById, getAllAgentIds } from "@/lib/agents";
 import { DIMENSIONS, DimensionKey, Agent, ScoreRationale } from "@/lib/types";
 import { RadarChart } from "@/app/components/RadarChart";
+import { ScoreHistoryChart } from "@/app/components/ScoreHistoryChart";
 
 // Helper to format the last reviewed date
 function getLastReviewed(agent: Agent): string {
@@ -200,6 +201,17 @@ export default async function AgentDossier({ params }: Props) {
                 </a>
               </div>
             ))}
+          </div>
+        </div>
+
+        {/* Score History */}
+        <div className="mt-12">
+          <h3 className="section-title">Score History</h3>
+          <div className="border border-subtle rounded p-4">
+            <ScoreHistoryChart
+              history={agent.score_history}
+              currentTotal={agent.total}
+            />
           </div>
         </div>
 
