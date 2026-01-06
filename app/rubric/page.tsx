@@ -98,6 +98,9 @@ export default function Rubric() {
             <Link href="/rubric" className="nav-link active">
               Rubric
             </Link>
+            <Link href="/compare" className="nav-link">
+              Compare
+            </Link>
             <Link href="/submit" className="nav-link">
               Submit
             </Link>

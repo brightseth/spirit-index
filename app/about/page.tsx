@@ -23,6 +23,9 @@ export default function About() {
             <Link href="/rubric" className="nav-link">
               Rubric
             </Link>
+            <Link href="/compare" className="nav-link">
+              Compare
+            </Link>
             <Link href="/submit" className="nav-link">
               Submit
             </Link>
