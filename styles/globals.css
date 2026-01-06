@@ -1,4 +1,6 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /**
  * Spirit Index Design System
@@ -10,40 +12,43 @@
 
 :root {
   /* Primary Palette - Inherited from Spirit Protocol, shifted darker */
-  --spirit-deep-blue: #150b6b;
-  --spirit-blue: #1c0f8a;
-  --spirit-blue-light: #2a1aa3;
+  --spirit-deep-blue: #150b6b;        /* Primary background - archival depth */
+  --spirit-blue: #1c0f8a;             /* Secondary background */
+  --spirit-blue-light: #2a1aa3;       /* Card backgrounds, hover states */
 
   /* Accent - Neon Green (use sparingly) */
-  --spirit-green: #00FF00;
-  --spirit-green-muted: #00FF0033;
-  --spirit-green-dim: #00FF0066;
+  --spirit-green: #00FF00;            /* Active states, key data, radar fill stroke */
+  --spirit-green-muted: #00FF0033;    /* Radar fill, translucent overlays */
+  --spirit-green-dim: #00FF0066;      /* Hover states */
 
   /* Text */
-  --text-primary: #FFFFFF;
-  --text-body: #F5F5F5;
-  --text-muted: #9CA3AF;
-  --text-dim: #6B7280;
+  --text-primary: #FFFFFF;            /* Headlines, emphasis */
+  --text-body: #F5F5F5;               /* Body text */
+  --text-muted: #9CA3AF;              /* Secondary, labels */
+  --text-dim: #6B7280;                /* Tertiary, metadata */
 
   /* Borders & Dividers */
-  --border-default: #374151;
-  --border-subtle: #1F2937;
+  --border-default: #374151;          /* Muted gray-blue */
+  --border-subtle: #1F2937;           /* Very subtle dividers */
 
   /* Status Colors */
-  --status-active: #00FF00;
-  --status-dormant: #F59E0B;
-  --status-deceased: #6B7280;
-  --status-subsumed: #3B82F6;
-  --status-forked: #A855F7;
+  --status-active: #00FF00;           /* Green */
+  --status-dormant: #F59E0B;          /* Amber */
+  --status-deceased: #6B7280;         /* Gray */
+  --status-subsumed: #3B82F6;         /* Blue */
+  --status-forked: #A855F7;           /* Purple */
 
   /* Confidence Indicators */
   --confidence-high: #00FF00;
   --confidence-medium: #F59E0B;
   --confidence-low: #6B7280;
 
-  /* Typography */
-  --font-mono: 'JetBrains Mono', 'Fira Code', 'SF Mono', ui-monospace, monospace;
-  --font-serif: 'Libre Caslon Text', 'EB Garamond', Georgia, serif;
+  /* Spacing */
+  --space-unit: 4px;
+
+  /* Typography Scale */
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'SF Mono', monospace;
+  --font-serif: 'Libre Caslon Text', 'EB Garamond', 'Georgia', serif;
 }
 
 /* Base Styles */
@@ -58,7 +63,35 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  min-height: 100vh;
+}
+
+/* Typography Utilities */
+.font-data {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.font-narrative {
+  font-family: var(--font-serif);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.small-caps {
+  font-variant: small-caps;
+  letter-spacing: 0.1em;
+}
+
+.tracking-wide {
+  letter-spacing: 0.05em;
+}
+
+.tracking-wider {
+  letter-spacing: 0.1em;
+}
+
+.tracking-widest {
+  letter-spacing: 0.3em;
 }
 
 /* Masthead - No Logo, Typography Only */
@@ -124,9 +157,17 @@ body {
   margin-left: 4px;
 }
 
-.confidence-high { background-color: var(--confidence-high); }
-.confidence-medium { background-color: var(--confidence-medium); }
-.confidence-low { background-color: var(--confidence-low); }
+.confidence-high {
+  background-color: var(--confidence-high);
+}
+
+.confidence-medium {
+  background-color: var(--confidence-medium);
+}
+
+.confidence-low {
+  background-color: var(--confidence-low);
+}
 
 /* Status Badges */
 .status-badge {
@@ -172,8 +213,13 @@ body {
   user-select: none;
 }
 
-.data-table th:hover { color: var(--spirit-green); }
-.data-table th.sorted { color: var(--spirit-green); }
+.data-table th:hover {
+  color: var(--spirit-green);
+}
+
+.data-table th.sorted {
+  color: var(--spirit-green);
+}
 
 .data-table td {
   padding: 0.75rem 1rem;
@@ -181,9 +227,18 @@ body {
   vertical-align: middle;
 }
 
-.data-table tr:hover { background-color: var(--spirit-blue); }
-.data-table a { color: var(--text-primary); text-decoration: none; }
-.data-table a:hover { color: var(--spirit-green); }
+.data-table tr:hover {
+  background-color: var(--spirit-blue);
+}
+
+.data-table a {
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.data-table a:hover {
+  color: var(--spirit-green);
+}
 
 /* Curator Notes (Serif) */
 .curator-notes {
@@ -194,7 +249,9 @@ body {
   max-width: 65ch;
 }
 
-.curator-notes p { margin-bottom: 1rem; }
+.curator-notes p {
+  margin-bottom: 1rem;
+}
 
 /* Evidence List */
 .evidence-item {
@@ -215,9 +272,19 @@ body {
   color: var(--text-muted);
 }
 
-.evidence-claim { flex-grow: 1; color: var(--text-body); }
-.evidence-link { color: var(--spirit-green); text-decoration: none; }
-.evidence-link:hover { text-decoration: underline; }
+.evidence-claim {
+  flex-grow: 1;
+  color: var(--text-body);
+}
+
+.evidence-link {
+  color: var(--spirit-green);
+  text-decoration: none;
+}
+
+.evidence-link:hover {
+  text-decoration: underline;
+}
 
 /* Radar Chart Container */
 .radar-container {
@@ -235,7 +302,9 @@ body {
   transition: border-color 0.15s ease;
 }
 
-.agent-card:hover { border-color: var(--spirit-green-dim); }
+.agent-card:hover {
+  border-color: var(--spirit-green-dim);
+}
 
 /* Layout */
 .container {
@@ -244,7 +313,9 @@ body {
   padding: 0 1.5rem;
 }
 
-.section { padding: 3rem 0; }
+.section {
+  padding: 3rem 0;
+}
 
 .section-title {
   font-family: var(--font-mono);
@@ -258,8 +329,14 @@ body {
 }
 
 /* Links */
-a { color: var(--spirit-green); text-decoration: none; }
-a:hover { text-decoration: underline; }
+a {
+  color: var(--spirit-green);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
 
 /* Navigation */
 .nav {
@@ -276,10 +353,15 @@ a:hover { text-decoration: underline; }
   letter-spacing: 0.1em;
 }
 
-.nav-link:hover { color: var(--text-primary); text-decoration: none; }
-.nav-link.active { color: var(--spirit-green); }
+.nav-link:hover {
+  color: var(--text-primary);
+}
 
-/* Dimension Bar */
+.nav-link.active {
+  color: var(--spirit-green);
+}
+
+/* Dimension Bar (Horizontal Score Display) */
 .dimension-bar {
   display: flex;
   align-items: center;
@@ -325,7 +407,6 @@ a:hover { text-decoration: underline; }
 .bg-deep { background-color: var(--spirit-deep-blue); }
 .bg-blue { background-color: var(--spirit-blue); }
 .border-subtle { border-color: var(--border-subtle); }
-.no-underline { text-decoration: none !important; }
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -334,7 +415,12 @@ a:hover { text-decoration: underline; }
     letter-spacing: 0.2em;
   }
 
-  .data-table { font-size: 0.75rem; }
-  .data-table th, .data-table td { padding: 0.5rem; }
-  .nav { gap: 1rem; flex-wrap: wrap; }
+  .data-table {
+    font-size: 0.75rem;
+  }
+
+  .data-table th,
+  .data-table td {
+    padding: 0.5rem;
+  }
 }

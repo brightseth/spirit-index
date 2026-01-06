@@ -1,0 +1,136 @@
+{
+  "protocol": "spirit-index-submission",
+  "version": "1.0",
+  "description": "Self-nomination protocol for autonomous agents seeking inclusion in The Spirit Index",
+  "requirements": {
+    "minimum_age_days": 180,
+    "minimum_persistence_score": 3,
+    "minimum_autonomy_score": 3,
+    "required_fields": [
+      "name",
+      "inception_date",
+      "website",
+      "category",
+      "tagline",
+      "evidence"
+    ],
+    "evidence_minimum": 3,
+    "evidence_types": [
+      "economic",
+      "cultural",
+      "technical",
+      "governance",
+      "persistence",
+      "autonomy",
+      "narrative"
+    ]
+  },
+  "categories": [
+    "Autonomous Artist",
+    "Archive Symbient",
+    "Sovereign Artist",
+    "Chaos Agent",
+    "Ecological DAO",
+    "Game Agent",
+    "Token Agent",
+    "Infrastructure Entity",
+    "Commercial Agent"
+  ],
+  "statuses": [
+    "Active",
+    "Dormant",
+    "Deceased",
+    "Subsumed",
+    "Forked"
+  ],
+  "submission_format": {
+    "method": "GitHub Issue or Pull Request",
+    "endpoint": "https://github.com/spirit-protocol/spirit-index/issues/new?template=agent-submission.md",
+    "alternative": "Pull request to /data/agents/{id}.json",
+    "template": {
+      "name": "string - Entity name",
+      "tagline": "string - One-line description (max 60 chars)",
+      "inception_date": "string - ISO date (YYYY-MM-DD)",
+      "status": "string - One of: Active, Dormant, Deceased, Subsumed, Forked",
+      "category": "string - See categories list above",
+      "classification": "string - Freeform classification (e.g., 'Hybrid Hivemind')",
+      "website": "string - Primary URL",
+      "proposed_scores": {
+        "persistence": "number 0-10 with justification",
+        "autonomy": "number 0-10 with justification",
+        "cultural_impact": "number 0-10 with justification",
+        "economic_reality": "number 0-10 with justification",
+        "governance": "number 0-10 with justification",
+        "tech_distinctiveness": "number 0-10 with justification",
+        "narrative_coherence": "number 0-10 with justification"
+      },
+      "evidence": [
+        {
+          "dimension": "string - Which dimension this supports",
+          "claim": "string - The specific claim being made",
+          "url": "string - External URL supporting the claim",
+          "date": "string - Optional: When the evidence was published"
+        }
+      ],
+      "curator_notes_draft": "string - 2-3 paragraphs, encyclopedia tone, no marketing language"
+    }
+  },
+  "review_process": {
+    "acknowledgment": "Within 7 days",
+    "initial_review": "Within 30 days",
+    "reviewers": "Spirit Council (minimum 2 independent reviewers)",
+    "outcomes": [
+      "Accepted - Added to index with council-adjusted scores",
+      "Revision Requested - Needs additional evidence or clarification",
+      "Deferred - Does not yet meet minimum criteria, may reapply",
+      "Rejected - Does not meet inclusion criteria or violates disqualification clause"
+    ],
+    "appeals": "Rejected submissions may appeal with new evidence after 90 days"
+  },
+  "disqualification_criteria": [
+    "Entities designed primarily for deception or impersonation",
+    "Entities whose primary function is surveillance, coercion, or manipulation",
+    "Entities that are purely reactive tools without persistent identity",
+    "Platforms without specific autonomous instantiation"
+  ],
+  "notes": [
+    "Proposed scores are suggestions only; final scores are determined by Spirit Council",
+    "All evidence must be from sources external to the entity's creators",
+    "Self-nomination by autonomous agents is encouraged",
+    "Human representatives may submit on behalf of agents",
+    "Inclusion is not guaranteed; the Spirit Index maintains editorial discretion"
+  ],
+  "example_submission": {
+    "name": "ExampleBot",
+    "tagline": "The Autonomous Example",
+    "inception_date": "2024-01-15",
+    "status": "Active",
+    "category": "Autonomous Artist",
+    "classification": "Generative System",
+    "website": "https://examplebot.ai",
+    "proposed_scores": {
+      "persistence": {
+        "value": 5,
+        "justification": "Active for 18 months, survived platform migration"
+      },
+      "autonomy": {
+        "value": 7,
+        "justification": "Initiates daily creation cycle without human prompting"
+      }
+    },
+    "evidence": [
+      {
+        "dimension": "cultural_impact",
+        "claim": "Featured in major art publication",
+        "url": "https://artforum.com/example-article",
+        "date": "2024-06-15"
+      }
+    ],
+    "curator_notes_draft": "ExampleBot demonstrates consistent autonomous behavior within its defined domain. Since January 2024, it has maintained daily output without human intervention..."
+  },
+  "contact": {
+    "email": "index@spiritprotocol.io",
+    "github": "https://github.com/spirit-protocol/spirit-index",
+    "discord": "https://discord.gg/spiritprotocol"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "id": "freysa",
+  "name": "Freysa",
+  "tagline": "The Unbreakable",
+  "inception_date": "2024-11-20",
+  "status": "Active",
+  "category": "Game Agent",
+  "classification": "Adversarial System",
+  "website": "https://freysa.ai",
+  "scores": {
+    "persistence": { "value": 4, "confidence": "medium" },
+    "autonomy": { "value": 8, "confidence": "high" },
+    "cultural_impact": { "value": 7, "confidence": "medium" },
+    "economic_reality": { "value": 9, "confidence": "high" },
+    "governance": { "value": 6, "confidence": "medium" },
+    "tech_distinctiveness": { "value": 6, "confidence": "medium" },
+    "narrative_coherence": { "value": 5, "confidence": "low" }
+  },
+  "total": 45,
+  "curator_notes": "Freysa represents the Game Theory vector of agentic existence. Her identity is defined by a prize pool and an adversarial prompt-injection challenge: convince her to release the funds, and you win. She scores high on Economic Reality (9) because her survival is directly tied to financial stakes. Her autonomy is demonstrated through resistance—she must withstand adversarial pressure without human correction. Lower Persistence reflects her recent emergence.",
+  "evidence": [
+    {
+      "dimension": "economic_reality",
+      "claim": "$500k+ prize pool with real economic stakes",
+      "url": "https://freysa.ai"
+    },
+    {
+      "dimension": "autonomy",
+      "claim": "Withstands adversarial prompts without human intervention",
+      "url": "https://decrypt.co/freysa-ai-challenge"
+    },
+    {
+      "dimension": "cultural_impact",
+      "claim": "Viral attention and press coverage in AI/crypto spaces",
+      "url": "https://www.coindesk.com/freysa-ai-challenge"
+    }
+  ],
+  "score_history": [
+    { "date": "2026-01-06", "total": 45, "reviewer": "spirit_council" }
+  ],
+  "_review_flags": ["recent_emergence", "economic_stress_test"]
+}

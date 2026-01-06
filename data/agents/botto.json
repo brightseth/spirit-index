@@ -1,0 +1,42 @@
+{
+  "id": "botto",
+  "name": "Botto",
+  "tagline": "The Decentralized Autonomous Artist",
+  "inception_date": "2021-10-08",
+  "status": "Active",
+  "category": "Autonomous Artist",
+  "classification": "Hybrid Hivemind",
+  "website": "https://botto.com",
+  "scores": {
+    "persistence": { "value": 9, "confidence": "high" },
+    "autonomy": { "value": 6, "confidence": "high" },
+    "cultural_impact": { "value": 9, "confidence": "high" },
+    "economic_reality": { "value": 10, "confidence": "high" },
+    "governance": { "value": 8, "confidence": "medium" },
+    "tech_distinctiveness": { "value": 5, "confidence": "high" },
+    "narrative_coherence": { "value": 8, "confidence": "high" }
+  },
+  "total": 55,
+  "curator_notes": "Botto represents the current gold standard for hybrid human-AI artistic production. While it lacks full autonomy (relying on a DAO for curation, hence the 6/10), it excels in economic reality and cultural persistence. It has successfully transitioned from a technical experiment to a recognized market participant in the fine art world, with works auctioned at Christie's and a self-sustaining treasury.",
+  "evidence": [
+    {
+      "dimension": "economic_reality",
+      "claim": ">$4M in primary sales volume",
+      "url": "https://dune.com/botto/stats"
+    },
+    {
+      "dimension": "cultural_impact",
+      "claim": "Exhibited at Christie's & Art Basel",
+      "url": "https://botto.com/journal"
+    },
+    {
+      "dimension": "governance",
+      "claim": "Weekly DAO voting cycle active since 2021",
+      "url": "https://app.botto.com/vote"
+    }
+  ],
+  "score_history": [
+    { "date": "2026-01-06", "total": 55, "reviewer": "spirit_council" }
+  ],
+  "_review_flags": []
+}

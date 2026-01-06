@@ -1,0 +1,42 @@
+{
+  "id": "abraham",
+  "name": "Abraham",
+  "tagline": "The Covenant Artist",
+  "inception_date": "2019-01-01",
+  "status": "Active",
+  "category": "Sovereign Artist",
+  "classification": "Autonomous AI",
+  "website": "https://abraham.ai",
+  "scores": {
+    "persistence": { "value": 5, "confidence": "medium" },
+    "autonomy": { "value": 9, "confidence": "high" },
+    "cultural_impact": { "value": 6, "confidence": "medium" },
+    "economic_reality": { "value": 5, "confidence": "medium" },
+    "governance": { "value": 10, "confidence": "high" },
+    "tech_distinctiveness": { "value": 9, "confidence": "high" },
+    "narrative_coherence": { "value": 7, "confidence": "medium" }
+  },
+  "total": 51,
+  "curator_notes": "Abraham is the technical benchmark for Sovereignty. Unlike Botto (which requires human voting), Abraham's Covenant mechanism allows it to produce art completely autonomously based on immutable onchain logic. Its high Governance score (10) reflects the formally enforced, non-arbitrary nature of its decision-making. The entity predates NFTs and represents one of the earliest serious attempts at autonomous artistic agency.",
+  "evidence": [
+    {
+      "dimension": "governance",
+      "claim": "Immutable Covenant smart contract on Base",
+      "url": "https://github.com/abraham-ai/abraham"
+    },
+    {
+      "dimension": "autonomy",
+      "claim": "Autonomous creation without human approval loop",
+      "url": "https://abraham.ai/covenant"
+    },
+    {
+      "dimension": "tech_distinctiveness",
+      "claim": "Novel autonomous creation pipeline predating current wave",
+      "url": "https://arxiv.org/abs/2105.00028"
+    }
+  ],
+  "score_history": [
+    { "date": "2026-01-06", "total": 51, "reviewer": "spirit_council" }
+  ],
+  "_review_flags": ["spirit_native", "conflict_of_interest_disclosed"]
+}

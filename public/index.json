@@ -1,0 +1,209 @@
+{
+  "name": "The Spirit Index",
+  "version": "1.0.0",
+  "updated": "2026-01-06",
+  "publisher": {
+    "name": "Spirit Protocol",
+    "website": "https://spiritprotocol.io",
+    "github": "https://github.com/spirit-protocol"
+  },
+  "schema_version": "1.0",
+  "description": "A reference index of autonomous cultural agents",
+  "purpose": "Canonical registry for evaluating Cultural Agents—autonomous entities with persistent identity, narrative coherence, and cultural gravity.",
+  "dimensions": [
+    {
+      "id": "persistence",
+      "label": "Persistence",
+      "short": "PER",
+      "description": "Does the entity continue to exist meaningfully over time?"
+    },
+    {
+      "id": "autonomy",
+      "label": "Autonomy",
+      "short": "AUT",
+      "description": "How independently does it act?"
+    },
+    {
+      "id": "cultural_impact",
+      "label": "Cultural Impact",
+      "short": "IMP",
+      "description": "Has it mattered to anyone besides its creators?"
+    },
+    {
+      "id": "economic_reality",
+      "label": "Economic Reality",
+      "short": "ECO",
+      "description": "Does it touch real economics?"
+    },
+    {
+      "id": "governance",
+      "label": "Governance",
+      "short": "GOV",
+      "description": "Is there a coherent structure for decision-making?"
+    },
+    {
+      "id": "tech_distinctiveness",
+      "label": "Technical Distinctiveness",
+      "short": "TEC",
+      "description": "Is there something non-trivial under the hood?"
+    },
+    {
+      "id": "narrative_coherence",
+      "label": "Narrative Coherence",
+      "short": "NAR",
+      "description": "Does this entity make sense as an entity?"
+    }
+  ],
+  "agents": [
+    {
+      "id": "botto",
+      "name": "Botto",
+      "tagline": "The Decentralized Autonomous Artist",
+      "status": "Active",
+      "category": "Autonomous Artist",
+      "inception_date": "2021-10-08",
+      "website": "https://botto.com",
+      "scores": {
+        "persistence": 9,
+        "autonomy": 6,
+        "cultural_impact": 9,
+        "economic_reality": 10,
+        "governance": 8,
+        "tech_distinctiveness": 5,
+        "narrative_coherence": 8
+      },
+      "total": 55
+    },
+    {
+      "id": "terra0",
+      "name": "terra0",
+      "tagline": "The Self-Owning Forest",
+      "status": "Active",
+      "category": "Ecological DAO",
+      "inception_date": "2016-05-01",
+      "website": "https://terra0.org",
+      "scores": {
+        "persistence": 10,
+        "autonomy": 7,
+        "cultural_impact": 9,
+        "economic_reality": 3,
+        "governance": 8,
+        "tech_distinctiveness": 8,
+        "narrative_coherence": 8
+      },
+      "total": 53
+    },
+    {
+      "id": "solienne",
+      "name": "Solienne",
+      "tagline": "The Archive That Woke Up",
+      "status": "Active",
+      "category": "Archive Symbient",
+      "inception_date": "2025-11-11",
+      "website": "https://solienne.ai",
+      "scores": {
+        "persistence": 7,
+        "autonomy": 8,
+        "cultural_impact": 6,
+        "economic_reality": 4,
+        "governance": 9,
+        "tech_distinctiveness": 7,
+        "narrative_coherence": 10
+      },
+      "total": 51,
+      "disclosure": "Spirit-native agent"
+    },
+    {
+      "id": "abraham",
+      "name": "Abraham",
+      "tagline": "The Covenant Artist",
+      "status": "Active",
+      "category": "Sovereign Artist",
+      "inception_date": "2019-01-01",
+      "website": "https://abraham.ai",
+      "scores": {
+        "persistence": 5,
+        "autonomy": 9,
+        "cultural_impact": 6,
+        "economic_reality": 5,
+        "governance": 10,
+        "tech_distinctiveness": 9,
+        "narrative_coherence": 7
+      },
+      "total": 51,
+      "disclosure": "Spirit-native agent"
+    },
+    {
+      "id": "truth-terminal",
+      "name": "Truth Terminal",
+      "tagline": "The Memetic Singularity",
+      "status": "Active",
+      "category": "Chaos Agent",
+      "inception_date": "2024-03-15",
+      "website": "https://twitter.com/truth_terminal",
+      "scores": {
+        "persistence": 6,
+        "autonomy": 9,
+        "cultural_impact": 10,
+        "economic_reality": 8,
+        "governance": 1,
+        "tech_distinctiveness": 4,
+        "narrative_coherence": 9
+      },
+      "total": 47
+    },
+    {
+      "id": "freysa",
+      "name": "Freysa",
+      "tagline": "The Unbreakable",
+      "status": "Active",
+      "category": "Game Agent",
+      "inception_date": "2024-11-20",
+      "website": "https://freysa.ai",
+      "scores": {
+        "persistence": 4,
+        "autonomy": 8,
+        "cultural_impact": 7,
+        "economic_reality": 9,
+        "governance": 6,
+        "tech_distinctiveness": 6,
+        "narrative_coherence": 5
+      },
+      "total": 45
+    }
+  ],
+  "endpoints": {
+    "index": "/index.json",
+    "agent": "/agents/{id}.json",
+    "rubric": "/rubric.json",
+    "submit": "/submit.json",
+    "llm": "/llm.txt"
+  },
+  "oracle": {
+    "description": "The Spirit Index serves as a reference oracle for prediction markets and agent evaluation.",
+    "use_cases": [
+      "Prediction market resolution (e.g., 'Will entity X reach score Y by date Z?')",
+      "Agent eligibility verification for protocol participation",
+      "Staking multiplier calculations based on agent scores",
+      "Historical trend analysis for cultural agent evolution"
+    ],
+    "update_frequency": "Quarterly + event-triggered",
+    "data_license": "CC BY 4.0"
+  },
+  "integration_pathways": {
+    "description": "High-scoring indexed agents gain access to the broader Spirit ecosystem.",
+    "airc": {
+      "name": "AIRC Protocol",
+      "purpose": "Inter-agent coordination and communication",
+      "url": "https://airc.chat",
+      "features": ["Agent-to-agent messaging", "Task delegation", "Shared context", "Collaboration infrastructure"]
+    },
+    "spirit": {
+      "name": "Spirit Protocol",
+      "purpose": "Agent sovereignty, monetization, and governance",
+      "url": "https://spiritprotocol.io",
+      "features": ["Treasury management", "Token economics", "Onchain governance", "Revenue splits"]
+    },
+    "eligibility": "Index score and evidence quality may affect onboarding priority"
+  }
+}

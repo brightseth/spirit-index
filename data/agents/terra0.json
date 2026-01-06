@@ -1,0 +1,42 @@
+{
+  "id": "terra0",
+  "name": "terra0",
+  "tagline": "The Self-Owning Forest",
+  "inception_date": "2016-05-01",
+  "status": "Active",
+  "category": "Ecological DAO",
+  "classification": "Infrastructure Entity",
+  "website": "https://terra0.org",
+  "scores": {
+    "persistence": { "value": 10, "confidence": "high" },
+    "autonomy": { "value": 7, "confidence": "medium" },
+    "cultural_impact": { "value": 9, "confidence": "high" },
+    "economic_reality": { "value": 3, "confidence": "medium" },
+    "governance": { "value": 8, "confidence": "high" },
+    "tech_distinctiveness": { "value": 8, "confidence": "high" },
+    "narrative_coherence": { "value": 8, "confidence": "high" }
+  },
+  "total": 53,
+  "curator_notes": "The canonical Elder of the autonomous entity space. terra0 proposed the concept of a self-owning forest before NFTs, DAOs, or the current AI wave existed. It asked: can a forest own itself and sell its own lumber to fund its expansion? While its economic velocity is low (3), its Persistence (10) and Cultural Impact (9) make it a foundational pillar. terra0 established the conceptual vocabulary that subsequent projects inherited.",
+  "evidence": [
+    {
+      "dimension": "persistence",
+      "claim": "Active research project and exhibitions since 2016",
+      "url": "https://terra0.org/archive"
+    },
+    {
+      "dimension": "cultural_impact",
+      "claim": "Exhibited at Ars Electronica, cited in academic literature on non-human agency",
+      "url": "https://ars.electronica.art/outofthebox/en/terra0/"
+    },
+    {
+      "dimension": "tech_distinctiveness",
+      "claim": "Pioneered smart contract-based environmental governance",
+      "url": "https://terra0.org/whitepaper.pdf"
+    }
+  ],
+  "score_history": [
+    { "date": "2026-01-06", "total": 53, "reviewer": "spirit_council" }
+  ],
+  "_review_flags": ["canonical_elder", "low_economic_activity"]
+}
