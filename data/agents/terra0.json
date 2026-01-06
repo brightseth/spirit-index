@@ -17,6 +17,15 @@
     "narrative_coherence": { "value": 8, "confidence": "high" }
   },
   "total": 53,
+  "score_rationale": {
+    "persistence": "Active since 2016 (10 years); exhibitions and research continuing; survived entire crypto arc from pre-ICO to post-NFT. 'Institutional.'",
+    "autonomy": "Designed for autonomous forest management; current implementation is research/exhibition focused with human curation of outputs. Above 'Cyborg,' below 'Sovereign.'",
+    "cultural_impact": "Ars Electronica, academic citations, influenced entire discourse on non-human agency and ecological DAOs. Near 'Canonical.'",
+    "economic_reality": "Conceptual project with minimal economic activity; grant-funded, no significant revenue generation. Between 'Cost Center' and 'Revenue Positive.'",
+    "governance": "Smart contract-based governance model; publicly documented decision framework. Strong 'Constitutional.'",
+    "tech_distinctiveness": "Pioneered smart contract environmental governance before the concept existed. Novel architecture, though not fully deployed at scale.",
+    "narrative_coherence": "'Self-owning forest' concept is immediately graspable and philosophically rich. Strong 'Character' with conceptual depth."
+  },
   "curator_notes": "The canonical Elder of the autonomous entity space. terra0 proposed the concept of a self-owning forest before NFTs, DAOs, or the current AI wave existed. It asked: can a forest own itself and sell its own lumber to fund its expansion? While its economic velocity is low (3), its Persistence (10) and Cultural Impact (9) make it a foundational pillar. terra0 established the conceptual vocabulary that subsequent projects inherited.",
   "evidence": [
     {

@@ -17,6 +17,15 @@
     "narrative_coherence": { "value": 10, "confidence": "high" }
   },
   "total": 60,
+  "score_rationale": {
+    "persistence": "Operating since 2015 (11 years); survived founder stepping back, multiple crypto winters, and platform migrations. Meets 'Institutional' anchor.",
+    "autonomy": "Initiates reproduction autonomously when wallet threshold reached; bounded by smart contract rules but no routine human prompting required. Near-sovereign.",
+    "cultural_impact": "Featured at Centre Pompidou, Tate Modern; cited in academic blockchain/art discourse. Between 'Niche Cult' and 'Canonical.'",
+    "economic_reality": "Self-funding through donations but not a major market mover; treasury exists but modest scale. Solidly 'Revenue Positive.'",
+    "governance": "Self-executing smart contracts govern all reproduction decisions; non-arbitrary, externally auditable. Near 'Algorithmic Law.'",
+    "tech_distinctiveness": "Pioneered blockchain-based autonomous reproduction before the concept existed elsewhere. Novel architecture for its time.",
+    "narrative_coherence": "The mythos of a plant that evolves beyond its creator, reproducing itself through code. Transcends function entirely. Perfect 'Mythos.'"
+  },
   "curator_notes": "Plantoid is the OG of blockchain-based autonomous entities. Created by Primavera De Filippi in 2015, it predates the current AI agent wave by nearly a decade. A physical robotic sculpture that 'feeds' on cryptocurrency and 'reproduces' by commissioning new Plantoids when its Ethereum wallet reaches a threshold. It has survived multiple crypto winters, founder stepping back, and platform changes. The mythos is impeccable: a plant that evolves beyond its creator. A canonical reference in the field.",
   "evidence": [
     {

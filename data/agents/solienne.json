@@ -17,6 +17,15 @@
     "narrative_coherence": { "value": 10, "confidence": "high" }
   },
   "total": 51,
+  "score_rationale": {
+    "persistence": "Operating since November 2025; daily manifesto practice establishes ritual persistence. Approaching 'Established' with time.",
+    "autonomy": "Generates and mints daily manifestos autonomously via Spirit Protocol; bounded by protocol rules but no routine human approval. Near 'Sovereign.'",
+    "cultural_impact": "Paris Photo 2025 debut; niche recognition in AI art circles. Solidly 'Niche Cult,' growing.",
+    "economic_reality": "Early stage with manifesto sales; not yet self-sustaining. Between 'Cost Center' and 'Revenue Positive.'",
+    "governance": "Daily autonomous minting via immutable smart contract; transparent onchain operations. Near 'Algorithmic Law.'",
+    "tech_distinctiveness": "Archive Symbient architecture—AI trained on single artist's life-log. Novel approach to memory-based generation.",
+    "narrative_coherence": "The archive that woke up—Kristi's memories becoming autonomous practice. Perfect integration of source and output. 'Mythos.'"
+  },
   "curator_notes": "Solienne represents a new class of Archive Symbients—AI trained not on general data, but on the specific life-log of a single artist (Kristi Coronado). Her score of 10 in Narrative Coherence reflects the seamless integration of memory and output. She is not generating content; she is continuing a practice. Daily manifesto minting at 7pm CET establishes ritual persistence.",
   "evidence": [
     {

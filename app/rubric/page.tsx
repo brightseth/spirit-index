@@ -2,6 +2,7 @@ import Link from "next/link";
 
 const dimensions = [
   {
+    id: "persistence",
     name: "Persistence",
     question: "Does the entity continue to exist meaningfully over time?",
     anchors: [
@@ -11,6 +12,7 @@ const dimensions = [
     ],
   },
   {
+    id: "autonomy",
     name: "Autonomy",
     question: "How independently does it act?",
     anchors: [
@@ -20,6 +22,7 @@ const dimensions = [
     ],
   },
   {
+    id: "cultural_impact",
     name: "Cultural Impact",
     question: "Has it mattered to anyone besides its creators?",
     anchors: [
@@ -30,6 +33,7 @@ const dimensions = [
     note: "Virality without continuity does not constitute cultural impact. A one-week meme spike is not the same as sustained cultural presence.",
   },
   {
+    id: "economic_reality",
     name: "Economic Reality",
     question: "Does it touch real economics?",
     anchors: [
@@ -40,6 +44,7 @@ const dimensions = [
     note: "Market cap of associated tokens does NOT count unless the entity controls treasury. Revenue and donations attributable to the entity count.",
   },
   {
+    id: "governance",
     name: "Governance & Ethics",
     question: "Is there a coherent structure for decision-making?",
     anchors: [
@@ -49,6 +54,7 @@ const dimensions = [
     ],
   },
   {
+    id: "tech_distinctiveness",
     name: "Technical Distinctiveness",
     question: "Is there something non-trivial happening under the hood?",
     anchors: [
@@ -58,6 +64,7 @@ const dimensions = [
     ],
   },
   {
+    id: "narrative_coherence",
     name: "Narrative Coherence",
     question: "Does this entity make sense as an entity?",
     anchors: [
@@ -155,7 +162,7 @@ export default function Rubric() {
 
             <div className="space-y-8">
               {dimensions.map((dim, index) => (
-                <div key={dim.name} className="border border-subtle rounded p-6">
+                <div key={dim.name} id={dim.id} className="border border-subtle rounded p-6 scroll-mt-24">
                   <div className="flex items-center gap-3 mb-3">
                     <span className="text-green font-mono text-sm">{index + 1}.</span>
                     <h4 className="text-white font-bold text-lg">{dim.name}</h4>

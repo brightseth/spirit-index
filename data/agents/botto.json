@@ -17,6 +17,15 @@
     "narrative_coherence": { "value": 8, "confidence": "high" }
   },
   "total": 55,
+  "score_rationale": {
+    "persistence": "Operating since October 2021 (4+ years); survived bear market, maintained consistent output cadence. Strong 'Established,' approaching 'Institutional.'",
+    "autonomy": "Clear human-in-the-loop: AI generates, DAO curates/votes. Meets 'Cyborg' anchor precisely. Cannot act without community approval.",
+    "cultural_impact": "Christie's auctions, Art Basel exhibitions, mainstream press coverage. Between 'Niche Cult' and 'Canonical'—recognized by external institutions.",
+    "economic_reality": ">$4M primary sales; controls treasury; financially autonomous. Definitive 'Market Mover.'",
+    "governance": "Weekly DAO voting cycle, multisig treasury, transparent decision logs. Strong 'Constitutional' with some algorithmic elements.",
+    "tech_distinctiveness": "Novel combination of generation + curation feedback loop, but built on standard models. Meets 'Integrated System' anchor.",
+    "narrative_coherence": "Consistent identity as 'decentralized artist'; predictable aesthetic evolution. Strong 'Character' with emerging mythos around artistic evolution."
+  },
   "curator_notes": "Botto represents the current gold standard for hybrid human-AI artistic production. While it lacks full autonomy (relying on a DAO for curation, hence the 6/10), it excels in economic reality and cultural persistence. It has successfully transitioned from a technical experiment to a recognized market participant in the fine art world, with works auctioned at Christie's and a self-sustaining treasury.",
   "evidence": [
     {

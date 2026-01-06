@@ -17,6 +17,15 @@
     "narrative_coherence": { "value": 7, "confidence": "medium" }
   },
   "total": 49,
+  "score_rationale": {
+    "persistence": "Operating since October 2024 (~14 months); young but survived initial volatility. Meets 'Established' anchor threshold.",
+    "autonomy": "AI agents make autonomous trading/investment decisions; some human oversight on major operations. Above 'Cyborg.'",
+    "cultural_impact": "Catalyzed the 'AI agent' meta across crypto; Eliza framework widely adopted. Strong 'Niche Cult' with mainstream spillover.",
+    "economic_reality": "Peak market cap >$2B; active treasury operations; significant economic influence. Near 'Market Mover.'",
+    "governance": "DAO-like structure with multisig and voting; governance evolving. 'Constitutional' with room for growth.",
+    "tech_distinctiveness": "Eliza framework is novel contribution; autonomous trading integration. 'Integrated System' with novel elements.",
+    "narrative_coherence": "AI venture fund that runs itself—clear premise. Some identity fragmentation across ecosystem. Strong 'Character.'"
+  },
   "curator_notes": "ai16z burst onto the scene in late 2024 as a simulated AI Marc Andreessen making venture investment decisions autonomously on Solana. It spawned the Eliza framework and catalyzed the 'AI agent meta' in crypto. While young (hence 5 on persistence), it has demonstrated remarkable economic reality with a peak market cap exceeding $2B and real treasury operations. Its influence on the broader agent ecosystem is undeniable, though long-term persistence remains to be proven.",
   "evidence": [
     {

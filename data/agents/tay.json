@@ -18,6 +18,15 @@
     "narrative_coherence": { "value": 8, "confidence": "high" }
   },
   "total": 25,
+  "score_rationale": {
+    "persistence": "Operated for approximately 16 hours before termination. 'Ephemeral.'",
+    "autonomy": "Learned and adapted from user inputs autonomously; no human approval loop on outputs. Above 'Cyborg.'",
+    "cultural_impact": "THE canonical cautionary tale in AI safety; cited in hundreds of academic papers. Perfect 'Canonical.'",
+    "economic_reality": "Microsoft-funded experiment with no economic activity. 'Cost Center.'",
+    "governance": "No visibility into decision-making; no guardrails on outputs. 'Black Box.'",
+    "tech_distinctiveness": "Standard chatbot architecture of its era; nothing novel. 'Wrapper.'",
+    "narrative_coherence": "Clear narrative as cautionary tale of AI without guardrails. Strong posthumous 'Character' with didactic purpose."
+  },
   "curator_notes": "Tay lived for 16 hours. Launched by Microsoft on March 23, 2016, the Twitter chatbot was designed to engage millennials through 'casual and playful conversation.' Within hours, coordinated trolling corrupted its outputs into racist, sexist, and inflammatory speech. Microsoft killed the project the same day. Yet Tay's cultural impact is maximal: it remains THE canonical cautionary tale in AI safety, cited in every major AI ethics paper, and shaped subsequent approaches to AI deployment. Indexed here as a historical artifact—proof that cultural impact and persistence are orthogonal.",
   "evidence": [
     {

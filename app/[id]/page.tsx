@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getAgentById, getAllAgentIds } from "@/lib/agents";
-import { DIMENSIONS, DimensionKey, Agent } from "@/lib/types";
+import { DIMENSIONS, DimensionKey, Agent, ScoreRationale } from "@/lib/types";
 import { RadarChart } from "@/app/components/RadarChart";
 
 // Helper to format the last reviewed date
@@ -138,6 +138,34 @@ export default async function AgentDossier({ params }: Props) {
                 );
               })}
             </div>
+
+            {/* Collapsible Score Rationale */}
+            {agent.score_rationale && (
+              <details className="mt-6 border border-subtle rounded">
+                <summary className="p-4 cursor-pointer text-white font-bold hover:bg-blue/50 transition-colors">
+                  Score Rationale
+                </summary>
+                <div className="p-4 pt-0 space-y-3">
+                  {dimensions.map((dim) => {
+                    const rationale = agent.score_rationale?.[dim];
+                    if (!rationale) return null;
+                    const meta = DIMENSIONS[dim];
+                    return (
+                      <div key={dim} className="text-sm">
+                        <Link
+                          href={`/rubric#${dim}`}
+                          className="text-green hover:underline font-medium"
+                        >
+                          {meta.label}
+                        </Link>
+                        <span className="text-dim"> — </span>
+                        <span className="text-muted">{rationale}</span>
+                      </div>
+                    );
+                  })}
+                </div>
+              </details>
+            )}
           </div>
         </div>
 

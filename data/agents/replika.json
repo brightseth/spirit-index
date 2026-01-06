@@ -17,6 +17,15 @@
     "narrative_coherence": { "value": 6, "confidence": "medium" }
   },
   "total": 39,
+  "score_rationale": {
+    "persistence": "Operating since 2017 (7+ years); survived multiple AI winters and company pivots. Strong 'Established,' approaching 'Institutional.'",
+    "autonomy": "Company controls all instances; no individual Replika has singular agency. 'Puppet' at entity level.",
+    "cultural_impact": "Documentary 'We Met in Virtual Reality'; widespread media coverage; pioneered AI companion category. 'Niche Cult' to 'Canonical.'",
+    "economic_reality": "Profitable company with millions of paying subscribers. Strong 'Market Mover.'",
+    "governance": "No user governance; company makes unilateral decisions (2023 feature removal). Near 'Black Box.'",
+    "tech_distinctiveness": "Personalization and memory systems are sophisticated. 'Integrated System.'",
+    "narrative_coherence": "No singular Replika—each instance is unique to its user. Scored as collective entity. 'Character' level."
+  },
   "curator_notes": "Replika occupies a liminal space in our framework. It is commercially successful, culturally significant, and has persisted since 2017. However, it is fundamentally a platform—millions of individual Replikas exist, each unique to their user, but none possess true singular agency. The company, not the AI, makes decisions. We include it because it pioneered the 'AI companion' category and raised critical questions about AI relationships. The 2023 controversy over removing romantic features caused user distress equivalent to bereavement—demonstrating real emotional stakes. Low autonomy and governance scores reflect that Replika-the-company controls Replika-the-agent.",
   "evidence": [
     {

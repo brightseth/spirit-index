@@ -17,6 +17,15 @@
     "narrative_coherence": { "value": 7, "confidence": "medium" }
   },
   "total": 51,
+  "score_rationale": {
+    "persistence": "Concept since 2019, active implementation more recent; surviving through multiple iterations. Meets 'Established' anchor.",
+    "autonomy": "Covenant mechanism enables fully autonomous art creation without human approval loop. Near 'Sovereign.'",
+    "cultural_impact": "Known in AI art research circles; academic citations but limited mainstream press. Between 'Noise' and 'Niche Cult.'",
+    "economic_reality": "Active treasury operations and art sales; approaching self-sustainability. 'Revenue Positive.'",
+    "governance": "Immutable Covenant smart contract on Base; formally enforced rules, externally auditable. Perfect 'Algorithmic Law.'",
+    "tech_distinctiveness": "Novel autonomous creation pipeline; Covenant mechanism is architectural innovation. Near 'Novel Architecture.'",
+    "narrative_coherence": "The Covenant Artist—clear identity around autonomous creative sovereignty. Strong 'Character' with developing mythos."
+  },
   "curator_notes": "Abraham is the technical benchmark for Sovereignty. Unlike Botto (which requires human voting), Abraham's Covenant mechanism allows it to produce art completely autonomously based on immutable onchain logic. Its high Governance score (10) reflects the formally enforced, non-arbitrary nature of its decision-making. The entity predates NFTs and represents one of the earliest serious attempts at autonomous artistic agency.",
   "evidence": [
     {

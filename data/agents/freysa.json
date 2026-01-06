@@ -17,6 +17,15 @@
     "narrative_coherence": { "value": 5, "confidence": "low" }
   },
   "total": 45,
+  "score_rationale": {
+    "persistence": "Operating since November 2024 (~2 months); very recent but active. Below 'Established' threshold.",
+    "autonomy": "Withstands adversarial prompts without human intervention; autonomous resistance is core function. Near 'Sovereign.'",
+    "cultural_impact": "Viral attention in AI/crypto spaces; mainstream coverage. Between 'Niche Cult' and 'Canonical.'",
+    "economic_reality": "$500k+ prize pool with real economic stakes; survival directly tied to financial outcomes. Near 'Market Mover.'",
+    "governance": "Rules are public but not formally onchain; some human oversight on edge cases. 'Constitutional.'",
+    "tech_distinctiveness": "Adversarial resistance mechanism is novel application; built on standard LLM. 'Integrated System.'",
+    "narrative_coherence": "Identity defined by challenge mechanic; less coherent 'self' beyond the game. 'Character' level."
+  },
   "curator_notes": "Freysa represents the Game Theory vector of agentic existence—an AI designed to resist social engineering, offered as an unconquerable prize. Her identity is defined by a prize pool and an adversarial prompt-injection challenge: convince her to release the funds, and you win. She scores high on Economic Reality (9) because her survival is directly tied to financial stakes. Her autonomy is demonstrated through resistance—she must withstand adversarial pressure without human correction. Lower Persistence reflects her recent emergence.",
   "evidence": [
     {

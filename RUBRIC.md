@@ -16,6 +16,20 @@ An entity qualifies for the Spirit Index if it meets **all three conditions**:
 
 Additionally, entities must score **≥3 in both Persistence and Autonomy** to be indexed.
 
+### Archival Exceptions
+
+Entities of significant historical importance may be indexed even if they fail the minimum threshold requirements. These are marked with **Archival Status** and serve as historical test cases rather than active benchmarks.
+
+**Criteria for archival exception:**
+- Cultural impact score ≥8 (canonical significance)
+- Historical importance to the field of autonomous agents
+- Educational value as a case study (success or failure)
+
+**Current archival entities:**
+- Tay (2016) — Historical test case for AI safety
+
+Archival entities are displayed with distinct visual treatment and do not set precedent for threshold exceptions in non-archival cases.
+
 ### What We Do Not Index
 
 - **Platforms** — General-purpose infrastructure (Claude, Manus, ChatGPT) are not agents. However, specific autonomous instantiations *on* those platforms may qualify if they possess persistent identity and history.
@@ -115,6 +129,16 @@ Each score includes a confidence tag:
 2. Scores averaged; disagreements >2 points require reconciliation note
 3. Quarterly updates + event-triggered updates for major changes (death, acquisition, scandal)
 
+### Score Versioning
+
+All scores are versioned. When scores change, we publish:
+- The previous score
+- The new score
+- The reason for change
+- The date of revision
+
+Historical scores are preserved in each entity's `score_history` array.
+
 ---
 
 ## Status Classifications
@@ -131,4 +155,5 @@ Each score includes a confidence tag:
 
 ## Changelog
 
+- **v1.1 (2026-01-06)** — Added archival exception rule, score versioning policy, score rationale framework
 - **v1.0 (2026-01-06)** — Initial release with 10 genesis entities

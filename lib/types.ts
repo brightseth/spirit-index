@@ -57,6 +57,17 @@ export interface Evidence {
   url: string;
 }
 
+// Score rationale - explains why each dimension received its score
+export interface ScoreRationale {
+  persistence: string;
+  autonomy: string;
+  cultural_impact: string;
+  economic_reality: string;
+  governance: string;
+  tech_distinctiveness: string;
+  narrative_coherence: string;
+}
+
 // Score history entry (for time-series tracking)
 export interface ScoreHistoryEntry {
   date: string; // ISO date string
@@ -92,6 +103,7 @@ export interface Agent {
   scores: Scores;
   total: number;
   curator_notes: string;
+  score_rationale?: ScoreRationale; // Detailed rationale for each dimension score
   evidence: Evidence[];
   score_history: ScoreHistoryEntry[];
   _review_flags: ReviewFlag[] | Array<{ dimension: string; note: string }>; // Internal, not displayed
