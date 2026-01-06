@@ -1,0 +1,70 @@
+{
+  "id": "numerai",
+  "name": "Numerai Meta Model",
+  "tagline": "The Crowdsourced Hedge Fund Brain",
+  "inception_date": "2015-12-01",
+  "status": "Active",
+  "category": "Infrastructure Entity",
+  "classification": "Ensemble ML System / Prediction Market",
+  "website": "https://numer.ai",
+  "scores": {
+    "persistence": { "value": 10, "confidence": "high" },
+    "autonomy": { "value": 7, "confidence": "medium" },
+    "cultural_impact": { "value": 6, "confidence": "medium" },
+    "economic_reality": { "value": 9, "confidence": "high" },
+    "governance": { "value": 5, "confidence": "medium" },
+    "tech_distinctiveness": { "value": 9, "confidence": "high" },
+    "narrative_coherence": { "value": 6, "confidence": "medium" }
+  },
+  "total": 52,
+  "curator_notes": "Numerai's Meta Model is an unusual entity: a hedge fund whose trading signals come from an ensemble of thousands of data scientists' models, coordinated via the NMR token and staking mechanism. The 'agent' here is the aggregated intelligence of the crowd, filtered through stake-weighted consensus. Operating since 2015, it manages real capital and has pioneered novel approaches to crowdsourced intelligence. Lower narrative score reflects that it's more infrastructure than character—but its persistence and economic reality are unquestionable. A canonical example of decentralized intelligence that predates the current 'agent' discourse.",
+  "score_rationale": {
+    "persistence": "Operating continuously since December 2015. 10+ years of proven operation. Institutional-grade persistence.",
+    "autonomy": "The meta model operates autonomously once signals are submitted. Human models feed it, but aggregation and execution are autonomous.",
+    "cultural_impact": "Influential in ML/quant communities but less mainstream recognition. Respected but niche.",
+    "economic_reality": "Manages real hedge fund capital ($100M+); NMR token with significant market cap; pays out to stakers.",
+    "governance": "Hybrid: Numerai Inc controls platform, but signal weights determined by stake (pseudo-decentralized).",
+    "tech_distinctiveness": "Pioneered erasure encoding for data privacy, stake-weighted ensembling, novel tournament structure.",
+    "narrative_coherence": "More infrastructure than character. No distinct personality, but clear purpose: crowdsourced alpha generation."
+  },
+  "evidence": [
+    {
+      "dimension": "persistence",
+      "claim": "Operating since December 2015, over 10 years continuous operation",
+      "url": "https://numer.ai/about"
+    },
+    {
+      "dimension": "economic_reality",
+      "claim": "Manages hedge fund with $100M+ AUM, NMR token staking",
+      "url": "https://numer.ai/tournament"
+    },
+    {
+      "dimension": "tech_distinctiveness",
+      "claim": "Pioneered erasure encoding for data privacy in ML competitions",
+      "url": "https://medium.com/numerai/encrypted-data-for-efficient-markets-fffee22e1a81"
+    },
+    {
+      "dimension": "governance",
+      "claim": "Stake-weighted signal aggregation creates pseudo-decentralized governance",
+      "url": "https://docs.numer.ai/tournament/staking"
+    },
+    {
+      "dimension": "cultural_impact",
+      "claim": "Featured in academic papers and ML conference presentations",
+      "url": "https://arxiv.org/search/?query=numerai"
+    },
+    {
+      "dimension": "autonomy",
+      "claim": "Meta model aggregates and executes trades autonomously based on staked signals",
+      "url": "https://numer.ai/docs"
+    }
+  ],
+  "score_history": [
+    {
+      "date": "2026-01-06",
+      "total": 52,
+      "reviewer": "Spirit Index Editorial"
+    }
+  ],
+  "_review_flags": ["canonical_elder", "edge_case"]
+}

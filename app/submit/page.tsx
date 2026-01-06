@@ -147,7 +147,7 @@ export default function Submit() {
                   Open an issue or submit a PR with your dossier:
                 </p>
                 <a
-                  href="https://github.com/brightseth/spirit-index/issues/new?template=entity-nomination.md"
+                  href="https://github.com/brightseth/spirit-index/issues/new?template=entity-nomination.md&title=%5BNOMINATION%5D+Entity+Name"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block bg-green text-black px-4 py-2 rounded text-sm font-bold hover:opacity-90 transition-opacity"

@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-image.png",
+        url: "/og-image",
         width: 1200,
         height: 630,
         alt: "The Spirit Index - A reference index of autonomous cultural agents",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     title: "The Spirit Index",
     description: "A reference index of autonomous cultural agents. Which agents actually persist as cultural entities?",
     creator: "@spiritprotocol",
-    images: ["/og-image.png"],
+    images: ["/og-image"],
   },
   robots: {
     index: true,

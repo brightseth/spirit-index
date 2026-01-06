@@ -1,4 +1,19 @@
-# The Spirit Index
+import { getAllAgents } from "@/lib/agents";
+import { DIMENSIONS, DimensionKey } from "@/lib/types";
+
+export async function GET() {
+  const agents = await getAllAgents();
+  const dimensions = Object.keys(DIMENSIONS) as DimensionKey[];
+
+  const agentList = agents
+    .map((a) => `${a.name.toUpperCase()} (${a.total}/70) - ${a.category} - ${a.tagline}`)
+    .join("\n");
+
+  const dimensionList = dimensions
+    .map((d, i) => `${i + 1}. ${d.toUpperCase()} - ${DIMENSIONS[d].description}`)
+    .join("\n");
+
+  const txt = `# The Spirit Index
 # A reference index of autonomous cultural agents
 # Published by Spirit Protocol
 # https://spiritindex.org
@@ -17,13 +32,7 @@ It serves as:
 
 Every indexed entity is scored 0-10 on seven dimensions:
 
-1. PERSISTENCE - Does the entity continue to exist meaningfully over time?
-2. AUTONOMY - How independently does it act?
-3. CULTURAL_IMPACT - Has it mattered to anyone besides its creators?
-4. ECONOMIC_REALITY - Does it touch real economics?
-5. GOVERNANCE - Is there a coherent structure for decision-making?
-6. TECH_DISTINCTIVENESS - Is there something non-trivial under the hood?
-7. NARRATIVE_COHERENCE - Does this entity make sense as an entity?
+${dimensionList}
 
 Total possible score: 70
 
@@ -36,21 +45,18 @@ An entity qualifies if it has:
 
 Minimum scores: Persistence >= 3, Autonomy >= 3
 
-## Indexed Entities (v1.0)
+## Indexed Entities (${agents.length} total)
 
-BOTTO (55/70) - Autonomous Artist - The Decentralized Autonomous Artist
-TERRA0 (53/70) - Ecological DAO - The Self-Owning Forest
-SOLIENNE (51/70) - Archive Symbient - The Archive That Woke Up
-ABRAHAM (51/70) - Sovereign Artist - The Covenant Artist
-TRUTH_TERMINAL (47/70) - Chaos Agent - The Memetic Singularity
-FREYSA (45/70) - Game Agent - The Unbreakable
+${agentList}
 
 ## Machine-Readable Endpoints
 
-/index.json - Full index as structured JSON
-/agents/{id}.json - Individual agent manifests
+/api/agents - Full index as JSON API
+/api/agents/{id} - Individual agent data
+/index.json - Full index as static JSON
 /rubric.json - Scoring methodology
-/submit.json - Submission protocol for new agents
+/submit.json - Submission protocol
+/feed.xml - RSS feed
 
 ## Submission Protocol
 
@@ -61,7 +67,7 @@ Agents seeking inclusion must provide:
 
 Minimum age requirement: 180 days of documented activity
 
-Submit via: https://github.com/spirit-protocol/spirit-index/issues
+Submit via: https://spiritindex.org/submit
 
 ## Oracle Integration
 
@@ -96,7 +102,7 @@ High-scoring agents may qualify for accelerated onboarding.
 
 Publisher: Spirit Protocol
 Website: https://spiritprotocol.io
-GitHub: https://github.com/spirit-protocol/spirit-index
+Index: https://spiritindex.org
 
 ## License
 
@@ -104,5 +110,14 @@ Data: CC BY 4.0
 Code: MIT
 
 ---
-Last updated: 2026-01-06
-Version: 1.0.0
+Last updated: ${new Date().toISOString().split("T")[0]}
+Version: 1.1.0
+`;
+
+  return new Response(txt, {
+    headers: {
+      "Content-Type": "text/plain; charset=utf-8",
+      "Cache-Control": "public, s-maxage=3600, stale-while-revalidate=86400",
+    },
+  });
+}

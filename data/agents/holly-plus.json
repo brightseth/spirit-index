@@ -1,0 +1,70 @@
+{
+  "id": "holly-plus",
+  "name": "Holly+",
+  "tagline": "The Distributed Voice",
+  "inception_date": "2021-07-14",
+  "status": "Active",
+  "category": "Autonomous Artist",
+  "classification": "AI Voice Model / DAO",
+  "website": "https://holly.plus",
+  "scores": {
+    "persistence": { "value": 8, "confidence": "high" },
+    "autonomy": { "value": 5, "confidence": "medium" },
+    "cultural_impact": { "value": 9, "confidence": "high" },
+    "economic_reality": { "value": 6, "confidence": "medium" },
+    "governance": { "value": 7, "confidence": "high" },
+    "tech_distinctiveness": { "value": 9, "confidence": "high" },
+    "narrative_coherence": { "value": 9, "confidence": "high" }
+  },
+  "total": 53,
+  "curator_notes": "Holly+ represents one of the most thoughtful approaches to AI artistic identity. Created by musician Holly Herndon and Mat Dryhurst, it's a voice model trained on Holly's voice that anyone can use—but governed by a DAO that controls licensing. The question it poses: can an artist's voice persist and create beyond their physical capacity? Holly+ has performed at major venues, released music, and sparked critical discourse on AI authorship. Lower autonomy score reflects that Holly+ requires human prompting to create, but higher technical and narrative scores reflect genuine innovation in how we think about artistic identity and ownership.",
+  "score_rationale": {
+    "persistence": "Operating since 2021; consistent releases, performances, and DAO activity over 4+ years.",
+    "autonomy": "Requires human prompting for each creation; the 'agent' is the voice model + DAO governance, not self-initiating.",
+    "cultural_impact": "Featured in major publications (NYT, Wired), performed at prestigious venues, cited in academic AI/art discourse. Canonical.",
+    "economic_reality": "NFT sales, performance fees, licensing revenue. Modest but real treasury. Not a market mover but economically active.",
+    "governance": "DAO structure with token voting on licensing decisions. Transparent, documented process. Not fully on-chain but well-structured.",
+    "tech_distinctiveness": "Pioneered voice cloning as artistic medium before it was mainstream. Novel approach to identity, ownership, consent.",
+    "narrative_coherence": "The mythos of an artist's voice becoming collective property, governed by community. Deeply coherent artistic vision."
+  },
+  "evidence": [
+    {
+      "dimension": "persistence",
+      "claim": "Launched July 2021, continuously active through 2025",
+      "url": "https://holly.plus"
+    },
+    {
+      "dimension": "cultural_impact",
+      "claim": "Featured in New York Times coverage of AI art",
+      "url": "https://www.nytimes.com/2021/07/14/style/holly-herndon-holly-plus.html"
+    },
+    {
+      "dimension": "cultural_impact",
+      "claim": "Performed at Serpentine Gallery, London",
+      "url": "https://www.serpentinegalleries.org/whats-on/holly-herndon-mat-dryhurst/"
+    },
+    {
+      "dimension": "governance",
+      "claim": "DAO governs voice licensing and revenue distribution",
+      "url": "https://holly.plus/about"
+    },
+    {
+      "dimension": "tech_distinctiveness",
+      "claim": "Custom voice model trained on Holly Herndon's voice using novel techniques",
+      "url": "https://spawning.ai"
+    },
+    {
+      "dimension": "narrative_coherence",
+      "claim": "Explores questions of consent, ownership, and distributed identity in AI art",
+      "url": "https://www.wired.com/story/holly-herndon-ai-voice-clone/"
+    }
+  ],
+  "score_history": [
+    {
+      "date": "2026-01-06",
+      "total": 53,
+      "reviewer": "Spirit Index Editorial"
+    }
+  ],
+  "_review_flags": ["canonical_elder", "governance_outlier"]
+}

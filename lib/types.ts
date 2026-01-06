@@ -99,6 +99,7 @@ export interface Agent {
   category: EntityCategory;
   classification: string;
   archival_status?: ArchivalStatus; // For entities below threshold with historical significance
+  disclosure?: string; // Conflict of interest disclosure (e.g., "Spirit-native agent")
   website: string;
   scores: Scores;
   total: number;

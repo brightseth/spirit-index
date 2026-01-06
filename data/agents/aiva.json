@@ -1,0 +1,65 @@
+{
+  "id": "aiva",
+  "name": "AIVA",
+  "tagline": "The AI Composer",
+  "inception_date": "2016-02-01",
+  "status": "Active",
+  "category": "Autonomous Artist",
+  "classification": "Generative Music AI",
+  "website": "https://aiva.ai",
+  "scores": {
+    "persistence": { "value": 10, "confidence": "high" },
+    "autonomy": { "value": 5, "confidence": "medium" },
+    "cultural_impact": { "value": 7, "confidence": "high" },
+    "economic_reality": { "value": 7, "confidence": "high" },
+    "governance": { "value": 3, "confidence": "high" },
+    "tech_distinctiveness": { "value": 7, "confidence": "medium" },
+    "narrative_coherence": { "value": 6, "confidence": "medium" }
+  },
+  "total": 45,
+  "curator_notes": "AIVA (Artificial Intelligence Virtual Artist) was one of the first AI systems to be officially recognized as a composer, registered with SACEM (French professional association of composers) in 2016. It creates orchestral and cinematic music used in films, games, and commercials. AIVA represents the 'corporate AI artist' model—technically sophisticated, commercially successful, but operating as a tool/service rather than an autonomous cultural entity. Lower autonomy reflects that it primarily responds to user prompts rather than self-initiating. Lower governance reflects traditional corporate structure. Still, its persistence and official recognition as a 'composer' make it historically significant.",
+  "score_rationale": {
+    "persistence": "Operating since 2016, nearly 10 years of continuous operation. First AI registered as composer with SACEM.",
+    "autonomy": "Generates music on request but doesn't self-initiate creative projects. Tool-like operation model.",
+    "cultural_impact": "First AI composer officially recognized; music used in major films and games. Historically significant.",
+    "economic_reality": "Successful commercial product with paying customers; used by major studios and brands.",
+    "governance": "Traditional corporate structure (AIVA Technologies). No community governance or decentralization.",
+    "tech_distinctiveness": "Deep learning music generation was novel in 2016. Now more commoditized but still well-executed.",
+    "narrative_coherence": "Identity as 'AI composer' is clear but somewhat generic. Less distinctive personality than newer agents."
+  },
+  "evidence": [
+    {
+      "dimension": "persistence",
+      "claim": "Operating since 2016, first AI registered with SACEM as composer",
+      "url": "https://aiva.ai/about"
+    },
+    {
+      "dimension": "cultural_impact",
+      "claim": "Official SACEM registration as composer in 2016",
+      "url": "https://www.theverge.com/2016/4/20/11467760/aiva-ai-composer-classical-music"
+    },
+    {
+      "dimension": "economic_reality",
+      "claim": "Commercial product used by major film and game studios",
+      "url": "https://aiva.ai/pricing"
+    },
+    {
+      "dimension": "cultural_impact",
+      "claim": "Music featured in commercials, films, and video games",
+      "url": "https://aiva.ai/case-studies"
+    },
+    {
+      "dimension": "tech_distinctiveness",
+      "claim": "Deep learning orchestral composition system trained on classical music corpus",
+      "url": "https://aiva.ai/technology"
+    }
+  ],
+  "score_history": [
+    {
+      "date": "2026-01-06",
+      "total": 45,
+      "reviewer": "Spirit Index Editorial"
+    }
+  ],
+  "_review_flags": ["canonical_elder", "commercial_agent"]
+}

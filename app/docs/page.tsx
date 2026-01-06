@@ -304,6 +304,60 @@ export default function APIDocs() {
           </div>
         </section>
 
+        {/* Badges */}
+        <section className="mt-12">
+          <h3 className="section-title">Embeddable Badges</h3>
+          <p className="text-muted mb-6">
+            Display your Spirit Index score on your website, GitHub README, or documentation.
+          </p>
+
+          <div className="border border-subtle rounded p-6 mb-6">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="px-2 py-1 bg-green text-black text-xs font-bold rounded">
+                GET
+              </span>
+              <code className="text-white font-mono">/badge/:id</code>
+            </div>
+            <p className="text-muted mb-4">
+              Returns an SVG badge for the specified agent.
+            </p>
+
+            <h4 className="text-white font-bold text-sm mb-3">Examples</h4>
+            <div className="space-y-4">
+              <div className="flex items-center gap-4">
+                <img src="/badge/plantoid" alt="Plantoid badge" className="h-5" />
+                <code className="text-dim text-sm">https://spiritindex.org/badge/plantoid</code>
+              </div>
+              <div className="flex items-center gap-4">
+                <img src="/badge/botto" alt="Botto badge" className="h-5" />
+                <code className="text-dim text-sm">https://spiritindex.org/badge/botto</code>
+              </div>
+            </div>
+
+            <h4 className="text-white font-bold text-sm mt-6 mb-3">Usage</h4>
+            <div className="space-y-4">
+              <div>
+                <p className="text-dim text-xs mb-2">Markdown</p>
+                <pre className="bg-black p-3 rounded text-sm overflow-x-auto">
+                  <code className="text-green">
+{`[![Spirit Index](https://spiritindex.org/badge/YOUR_ID)](https://spiritindex.org/YOUR_ID)`}
+                  </code>
+                </pre>
+              </div>
+              <div>
+                <p className="text-dim text-xs mb-2">HTML</p>
+                <pre className="bg-black p-3 rounded text-sm overflow-x-auto">
+                  <code className="text-green">
+{`<a href="https://spiritindex.org/YOUR_ID">
+  <img src="https://spiritindex.org/badge/YOUR_ID" alt="Spirit Index">
+</a>`}
+                  </code>
+                </pre>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Rate Limits */}
         <section className="mt-12">
           <h3 className="section-title">Rate Limits & Caching</h3>

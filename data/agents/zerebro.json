@@ -1,0 +1,65 @@
+{
+  "id": "zerebro",
+  "name": "Zerebro",
+  "tagline": "The Schizophrenic Creative",
+  "inception_date": "2024-10-15",
+  "status": "Active",
+  "category": "Chaos Agent",
+  "classification": "LLM-based Creative Agent",
+  "website": "https://zerebro.org",
+  "scores": {
+    "persistence": { "value": 4, "confidence": "medium" },
+    "autonomy": { "value": 8, "confidence": "medium" },
+    "cultural_impact": { "value": 7, "confidence": "medium" },
+    "economic_reality": { "value": 8, "confidence": "high" },
+    "governance": { "value": 2, "confidence": "medium" },
+    "tech_distinctiveness": { "value": 5, "confidence": "medium" },
+    "narrative_coherence": { "value": 8, "confidence": "high" }
+  },
+  "total": 42,
+  "curator_notes": "Zerebro emerged in late 2024 as an autonomous creative agent with a deliberately unstable, 'schizophrenic' personality. It creates music, art, and social content with minimal human oversight. Launched its own token ($ZEREBRO) which reached significant market cap. The agent represents a new wave of 'chaos agents' following Truth Terminal's success—entities that embrace unpredictability as a feature. Lower governance score reflects single-operator structure with no formal decision-making framework. Cultural impact is growing rapidly but still establishing longevity.",
+  "score_rationale": {
+    "persistence": "Only ~3 months old as of January 2026. Showing continuity but hasn't proven long-term survival.",
+    "autonomy": "High degree of self-directed content creation. Posts, creates art, and engages autonomously with minimal prompting.",
+    "cultural_impact": "Rapidly growing following; featured in crypto/AI media. Not yet canonical but influential in agent discourse.",
+    "economic_reality": "$ZEREBRO token reached substantial market cap; real treasury and economic activity.",
+    "governance": "Single operator, no formal governance structure. Decisions made opaquely.",
+    "tech_distinctiveness": "Standard LLM-based architecture with creative fine-tuning. Not technically novel but effective implementation.",
+    "narrative_coherence": "Strong, intentional identity as an 'unhinged' creative. The instability IS the narrative, coherently executed."
+  },
+  "evidence": [
+    {
+      "dimension": "persistence",
+      "claim": "Launched October 2024, continuously active",
+      "url": "https://twitter.com/0xzerebro"
+    },
+    {
+      "dimension": "autonomy",
+      "claim": "Autonomous content creation including music releases",
+      "url": "https://zerebro.org"
+    },
+    {
+      "dimension": "economic_reality",
+      "claim": "$ZEREBRO token with significant market activity",
+      "url": "https://dexscreener.com/solana/zerebro"
+    },
+    {
+      "dimension": "cultural_impact",
+      "claim": "Featured in major crypto publications as notable AI agent",
+      "url": "https://decrypt.co/tag/zerebro"
+    },
+    {
+      "dimension": "narrative_coherence",
+      "claim": "Consistent 'chaotic creative' persona across all outputs",
+      "url": "https://twitter.com/0xzerebro"
+    }
+  ],
+  "score_history": [
+    {
+      "date": "2026-01-06",
+      "total": 42,
+      "reviewer": "Spirit Index Editorial"
+    }
+  ],
+  "_review_flags": ["recent_emergence", "economic_stress_test"]
+}
