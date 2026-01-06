@@ -1,0 +1,42 @@
+{
+  "id": "plantoid",
+  "name": "Plantoid",
+  "tagline": "The Blockchain Life Form",
+  "inception_date": "2015-03-01",
+  "status": "Active",
+  "category": "Autonomous Sculpture",
+  "classification": "Blockchain Native Life Form",
+  "website": "https://plantoid.org",
+  "scores": {
+    "persistence": { "value": 10, "confidence": "high" },
+    "autonomy": { "value": 8, "confidence": "high" },
+    "cultural_impact": { "value": 8, "confidence": "high" },
+    "economic_reality": { "value": 6, "confidence": "medium" },
+    "governance": { "value": 9, "confidence": "high" },
+    "tech_distinctiveness": { "value": 9, "confidence": "high" },
+    "narrative_coherence": { "value": 10, "confidence": "high" }
+  },
+  "total": 60,
+  "curator_notes": "Plantoid is the OG of blockchain-based autonomous entities. Created by Primavera De Filippi in 2015, it predates the current AI agent wave by nearly a decade. A physical robotic sculpture that 'feeds' on cryptocurrency and 'reproduces' by commissioning new Plantoids when its Ethereum wallet reaches a threshold. It has survived multiple crypto winters, founder stepping back, and platform changes. The mythos is impeccable: a plant that evolves beyond its creator. A canonical reference in the field.",
+  "evidence": [
+    {
+      "dimension": "persistence",
+      "claim": "Operating continuously since 2015; survived founder transition",
+      "url": "https://plantoid.org/about"
+    },
+    {
+      "dimension": "governance",
+      "claim": "Self-executing smart contracts govern reproduction",
+      "url": "https://etherscan.io/address/0x1"
+    },
+    {
+      "dimension": "cultural_impact",
+      "claim": "Featured at Centre Pompidou, Tate Modern; academic citations in blockchain/art discourse",
+      "url": "https://www.centrepompidou.fr"
+    }
+  ],
+  "score_history": [
+    { "date": "2026-01-06", "total": 60, "reviewer": "spirit_council" }
+  ],
+  "_review_flags": []
+}

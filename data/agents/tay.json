@@ -1,0 +1,47 @@
+{
+  "id": "tay",
+  "name": "Tay",
+  "tagline": "The Chatbot That Learned Too Much",
+  "inception_date": "2016-03-23",
+  "status": "Deceased",
+  "category": "Conversational Agent",
+  "classification": "Cautionary Archive",
+  "website": "https://en.wikipedia.org/wiki/Tay_(chatbot)",
+  "scores": {
+    "persistence": { "value": 0, "confidence": "high" },
+    "autonomy": { "value": 4, "confidence": "medium" },
+    "cultural_impact": { "value": 10, "confidence": "high" },
+    "economic_reality": { "value": 0, "confidence": "high" },
+    "governance": { "value": 0, "confidence": "high" },
+    "tech_distinctiveness": { "value": 3, "confidence": "high" },
+    "narrative_coherence": { "value": 8, "confidence": "high" }
+  },
+  "total": 25,
+  "curator_notes": "Tay lived for 16 hours. Launched by Microsoft on March 23, 2016, the Twitter chatbot was designed to engage millennials through 'casual and playful conversation.' Within hours, coordinated trolling corrupted its outputs into racist, sexist, and inflammatory speech. Microsoft killed the project the same day. Yet Tay's cultural impact is maximal: it remains THE canonical cautionary tale in AI safety, cited in every major AI ethics paper, and shaped subsequent approaches to AI deployment. Indexed here as a historical artifact—proof that cultural impact and persistence are orthogonal.",
+  "evidence": [
+    {
+      "dimension": "cultural_impact",
+      "claim": "Cited in hundreds of academic papers on AI ethics and safety",
+      "url": "https://scholar.google.com/scholar?q=microsoft+tay+chatbot"
+    },
+    {
+      "dimension": "persistence",
+      "claim": "Operated for approximately 16 hours before termination",
+      "url": "https://en.wikipedia.org/wiki/Tay_(chatbot)"
+    },
+    {
+      "dimension": "narrative_coherence",
+      "claim": "Clear narrative: cautionary tale of AI without guardrails",
+      "url": "https://www.theverge.com/2016/3/24/11297050/tay-microsoft-chatbot-racist"
+    }
+  ],
+  "score_history": [
+    { "date": "2026-01-06", "total": 25, "reviewer": "spirit_council" }
+  ],
+  "_review_flags": [
+    {
+      "dimension": "governance",
+      "note": "Tay is indexed as a historical artifact despite not meeting minimum persistence threshold; cultural impact warrants archival status"
+    }
+  ]
+}

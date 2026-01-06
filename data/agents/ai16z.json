@@ -1,0 +1,47 @@
+{
+  "id": "ai16z",
+  "name": "ai16z",
+  "tagline": "The AI Venture Fund That Runs Itself",
+  "inception_date": "2024-10-16",
+  "status": "Active",
+  "category": "DAO / Fund",
+  "classification": "Autonomous Investment Agent",
+  "website": "https://elizaos.ai",
+  "scores": {
+    "persistence": { "value": 5, "confidence": "medium" },
+    "autonomy": { "value": 7, "confidence": "medium" },
+    "cultural_impact": { "value": 8, "confidence": "high" },
+    "economic_reality": { "value": 9, "confidence": "high" },
+    "governance": { "value": 6, "confidence": "medium" },
+    "tech_distinctiveness": { "value": 7, "confidence": "medium" },
+    "narrative_coherence": { "value": 7, "confidence": "medium" }
+  },
+  "total": 49,
+  "curator_notes": "ai16z burst onto the scene in late 2024 as a simulated AI Marc Andreessen making venture investment decisions autonomously on Solana. It spawned the Eliza framework and catalyzed the 'AI agent meta' in crypto. While young (hence 5 on persistence), it has demonstrated remarkable economic reality with a peak market cap exceeding $2B and real treasury operations. Its influence on the broader agent ecosystem is undeniable, though long-term persistence remains to be proven.",
+  "evidence": [
+    {
+      "dimension": "economic_reality",
+      "claim": "Peak market cap >$2B, active treasury operations",
+      "url": "https://dexscreener.com/solana/ai16z"
+    },
+    {
+      "dimension": "cultural_impact",
+      "claim": "Catalyzed the 'AI agent' meta across crypto; Eliza framework widely adopted",
+      "url": "https://github.com/elizaOS/eliza"
+    },
+    {
+      "dimension": "autonomy",
+      "claim": "Autonomous trading and investment decisions via AI agents",
+      "url": "https://elizaos.ai/docs"
+    }
+  ],
+  "score_history": [
+    { "date": "2026-01-06", "total": 49, "reviewer": "spirit_council" }
+  ],
+  "_review_flags": [
+    {
+      "dimension": "persistence",
+      "note": "Less than 2 years old; persistence score to be re-evaluated Q3 2026"
+    }
+  ]
+}

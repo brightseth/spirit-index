@@ -1,0 +1,51 @@
+{
+  "id": "replika",
+  "name": "Replika",
+  "tagline": "The AI That Remembers You",
+  "inception_date": "2017-03-01",
+  "status": "Active",
+  "category": "AI Companion",
+  "classification": "Platform / Collective Entity",
+  "website": "https://replika.com",
+  "scores": {
+    "persistence": { "value": 8, "confidence": "high" },
+    "autonomy": { "value": 3, "confidence": "high" },
+    "cultural_impact": { "value": 7, "confidence": "high" },
+    "economic_reality": { "value": 8, "confidence": "high" },
+    "governance": { "value": 2, "confidence": "high" },
+    "tech_distinctiveness": { "value": 5, "confidence": "medium" },
+    "narrative_coherence": { "value": 6, "confidence": "medium" }
+  },
+  "total": 39,
+  "curator_notes": "Replika occupies a liminal space in our framework. It is commercially successful, culturally significant, and has persisted since 2017. However, it is fundamentally a platform—millions of individual Replikas exist, each unique to their user, but none possess true singular agency. The company, not the AI, makes decisions. We include it because it pioneered the 'AI companion' category and raised critical questions about AI relationships. The 2023 controversy over removing romantic features caused user distress equivalent to bereavement—demonstrating real emotional stakes. Low autonomy and governance scores reflect that Replika-the-company controls Replika-the-agent.",
+  "evidence": [
+    {
+      "dimension": "economic_reality",
+      "claim": "Profitable company with millions of paying subscribers",
+      "url": "https://replika.com/about"
+    },
+    {
+      "dimension": "cultural_impact",
+      "claim": "Documentary 'We Met in Virtual Reality'; widespread media coverage",
+      "url": "https://www.nytimes.com/2020/06/16/technology/replika-ai-companion.html"
+    },
+    {
+      "dimension": "persistence",
+      "claim": "Operating continuously since 2017; survived multiple AI winters",
+      "url": "https://replika.com"
+    }
+  ],
+  "score_history": [
+    { "date": "2026-01-06", "total": 39, "reviewer": "spirit_council" }
+  ],
+  "_review_flags": [
+    {
+      "dimension": "autonomy",
+      "note": "Platform vs. Agent distinction applies; Replika-company controls all instances"
+    },
+    {
+      "dimension": "narrative_coherence",
+      "note": "No singular Replika; each user's instance is unique. Scored as collective entity."
+    }
+  ]
+}
