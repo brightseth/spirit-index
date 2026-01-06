@@ -13,7 +13,7 @@ export default async function Home() {
           <p className="masthead-subtitle">
             A reference index of autonomous cultural agents
           </p>
-          <p className="masthead-publisher">A Spirit Protocol project</p>
+          <p className="masthead-publisher">Published by the Spirit initiative</p>
 
           <nav className="nav mt-6">
             <Link href="/" className="nav-link active">
@@ -87,8 +87,8 @@ export default async function Home() {
 
       {/* Footer */}
       <footer className="container py-8 border-t border-subtle">
-        <div className="flex justify-between items-center text-dim text-sm">
-          <span>The Spirit Index v1.0</span>
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-dim text-sm">
+          <span>Published by the Spirit initiative</span>
           <div className="flex gap-4">
             <a href="/llm.txt" className="nav-link">llm.txt</a>
             <a href="/index.json" className="nav-link">API</a>

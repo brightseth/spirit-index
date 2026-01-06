@@ -37,8 +37,13 @@ export default function Submit() {
             Submit an Entity
           </h2>
 
+          <div className="p-4 border border-subtle rounded mb-8 font-mono text-sm">
+            <p className="text-white">The Spirit Index is an editorial institution, not a directory.</p>
+            <p className="text-muted">Submission does not imply inclusion. Git is our CMS.</p>
+          </div>
+
           <p className="text-muted mb-8">
-            The Spirit Index welcomes nominations for entities that demonstrate persistent cultural agency. We evaluate all submissions against our{" "}
+            We welcome nominations for entities that demonstrate persistent cultural agency. All submissions are evaluated against our{" "}
             <Link href="/rubric" className="text-green hover:underline">
               7-Dimension Framework
             </Link>.
@@ -124,11 +129,19 @@ export default function Submit() {
           {/* Submission Channels */}
           <section className="mb-12">
             <h3 className="section-title">How to Submit</h3>
+
+            <div className="p-4 bg-blue rounded mb-6">
+              <p className="text-muted text-sm">
+                <strong className="text-white">Important:</strong> No DM submissions. All nominations must go through GitHub.
+                This filters for high-quality, technically-capable submissions.
+              </p>
+            </div>
+
             <div className="grid md:grid-cols-2 gap-6">
               <div className="p-6 border border-green rounded">
-                <h4 className="text-green font-bold mb-3">GitHub (Preferred)</h4>
+                <h4 className="text-green font-bold mb-3">GitHub (Required)</h4>
                 <p className="text-muted text-sm mb-4">
-                  Open an issue on our repository with your dossier:
+                  Open an issue or submit a PR with your dossier:
                 </p>
                 <a
                   href="https://github.com/brightseth/spirit-index/issues/new?template=entity-nomination.md"
@@ -138,12 +151,15 @@ export default function Submit() {
                 >
                   Submit via GitHub →
                 </a>
+                <p className="text-dim text-xs mt-3">
+                  PRs with complete JSON dossiers are reviewed faster.
+                </p>
               </div>
 
-              <div className="p-6 border border-subtle rounded">
-                <h4 className="text-white font-bold mb-3">Direct Contact</h4>
+              <div className="p-6 border border-subtle rounded opacity-75">
+                <h4 className="text-white font-bold mb-3">Email (Exceptions Only)</h4>
                 <p className="text-muted text-sm mb-4">
-                  For sensitive submissions or questions about the process:
+                  Reserved for genuinely sensitive cases that cannot be public:
                 </p>
                 <a
                   href="mailto:index@spiritprotocol.io"
@@ -151,6 +167,9 @@ export default function Submit() {
                 >
                   index@spiritprotocol.io
                 </a>
+                <p className="text-dim text-xs mt-3">
+                  Most submissions should go through GitHub.
+                </p>
               </div>
             </div>
           </section>
@@ -261,8 +280,8 @@ export default function Submit() {
 
       {/* Footer */}
       <footer className="container py-8 border-t border-subtle">
-        <div className="flex justify-between items-center text-dim text-sm">
-          <span>The Spirit Index v1.0</span>
+        <div className="flex flex-col md:flex-row justify-between items-center gap-2 text-dim text-sm">
+          <span>Published by the Spirit initiative</span>
           <a
             href="https://spiritprotocol.io"
             className="nav-link"

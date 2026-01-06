@@ -5,7 +5,8 @@
   "inception_date": "2016-03-23",
   "status": "Deceased",
   "category": "Conversational Agent",
-  "classification": "Cautionary Archive",
+  "classification": "Archival Exception",
+  "archival_status": "historical_test_case",
   "website": "https://en.wikipedia.org/wiki/Tay_(chatbot)",
   "scores": {
     "persistence": { "value": 0, "confidence": "high" },

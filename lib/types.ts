@@ -21,7 +21,14 @@ export type EntityCategory =
   | "Game Agent"
   | "Token Agent"
   | "Infrastructure Entity"
-  | "Commercial Agent";
+  | "Commercial Agent"
+  | "DAO / Fund"
+  | "Autonomous Sculpture"
+  | "Conversational Agent"
+  | "AI Companion";
+
+// Archival status for entities that don't meet threshold but have historical significance
+export type ArchivalStatus = "historical_test_case" | "canonical_failure" | "cultural_artifact";
 
 // Confidence levels for scores
 export type Confidence = "high" | "medium" | "low";
@@ -80,13 +87,14 @@ export interface Agent {
   status: EntityStatus;
   category: EntityCategory;
   classification: string;
+  archival_status?: ArchivalStatus; // For entities below threshold with historical significance
   website: string;
   scores: Scores;
   total: number;
   curator_notes: string;
   evidence: Evidence[];
   score_history: ScoreHistoryEntry[];
-  _review_flags: ReviewFlag[]; // Internal, not displayed
+  _review_flags: ReviewFlag[] | Array<{ dimension: string; note: string }>; // Internal, not displayed
 }
 
 // Radar chart data point (for visualization)

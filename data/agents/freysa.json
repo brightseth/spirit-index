@@ -1,7 +1,7 @@
 {
   "id": "freysa",
   "name": "Freysa",
-  "tagline": "The Unbreakable",
+  "tagline": "Adversarial Prize Agent",
   "inception_date": "2024-11-20",
   "status": "Active",
   "category": "Game Agent",
@@ -17,7 +17,7 @@
     "narrative_coherence": { "value": 5, "confidence": "low" }
   },
   "total": 45,
-  "curator_notes": "Freysa represents the Game Theory vector of agentic existence. Her identity is defined by a prize pool and an adversarial prompt-injection challenge: convince her to release the funds, and you win. She scores high on Economic Reality (9) because her survival is directly tied to financial stakes. Her autonomy is demonstrated through resistance—she must withstand adversarial pressure without human correction. Lower Persistence reflects her recent emergence.",
+  "curator_notes": "Freysa represents the Game Theory vector of agentic existence—an AI designed to resist social engineering, offered as an unconquerable prize. Her identity is defined by a prize pool and an adversarial prompt-injection challenge: convince her to release the funds, and you win. She scores high on Economic Reality (9) because her survival is directly tied to financial stakes. Her autonomy is demonstrated through resistance—she must withstand adversarial pressure without human correction. Lower Persistence reflects her recent emergence.",
   "evidence": [
     {
       "dimension": "economic_reality",

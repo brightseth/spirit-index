@@ -1,8 +1,23 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getAgentById, getAllAgentIds } from "@/lib/agents";
-import { DIMENSIONS, DimensionKey } from "@/lib/types";
+import { DIMENSIONS, DimensionKey, Agent } from "@/lib/types";
 import { RadarChart } from "@/app/components/RadarChart";
+
+// Helper to format the last reviewed date
+function getLastReviewed(agent: Agent): string {
+  const lastEntry = agent.score_history[agent.score_history.length - 1];
+  if (!lastEntry) return "N/A";
+  const date = new Date(lastEntry.date);
+  return date.toLocaleDateString("en-US", { month: "long", year: "numeric" });
+}
+
+// Helper to format archival status for display
+function formatArchivalStatus(status: string): string {
+  return status.split("_").map(word =>
+    word.charAt(0).toUpperCase() + word.slice(1)
+  ).join(" ");
+}
 
 interface Props {
   params: Promise<{ id: string }>;
@@ -55,16 +70,33 @@ export default async function AgentDossier({ params }: Props) {
 
       {/* Main Content */}
       <main className="container section">
+        {/* Last Reviewed Banner */}
+        <div className="text-dim text-sm mb-4 font-mono">
+          Last reviewed: {getLastReviewed(agent)}
+        </div>
+
+        {/* Archival Badge (if applicable) */}
+        {agent.archival_status && (
+          <div className="archival-badge mb-6">
+            <span className="archival-icon">&#x2020;</span>
+            <span className="archival-text">
+              ARCHIVAL • {formatArchivalStatus(agent.archival_status).toUpperCase()}
+            </span>
+          </div>
+        )}
+
         {/* Agent Header */}
         <div className="flex justify-between items-start mb-8">
           <div>
             <h2 className="text-3xl font-bold text-white mb-2">{agent.name}</h2>
             <p className="text-muted text-lg mb-3">{agent.tagline}</p>
-            <span className={`status-badge status-${agent.status.toLowerCase()}`}>
-              <span className="status-dot" />
-              {agent.status}
-            </span>
-            <span className="text-dim ml-4">{agent.category}</span>
+            <div className="flex items-center gap-3 flex-wrap">
+              <span className={`status-badge status-${agent.status.toLowerCase()}`}>
+                <span className="status-dot" />
+                {agent.status}
+              </span>
+              <span className="text-dim">{agent.category}</span>
+            </div>
           </div>
           <div className="text-right">
             <div className="score-total">{agent.total}</div>
@@ -119,7 +151,7 @@ export default async function AgentDossier({ params }: Props) {
 
         {/* Evidence */}
         <div className="mt-12">
-          <h3 className="section-title">Evidence Locker</h3>
+          <h3 className="section-title">Evidence Archive</h3>
           <div className="space-y-0">
             {agent.evidence.map((item, index) => (
               <div key={index} className="evidence-item">
@@ -177,8 +209,8 @@ export default async function AgentDossier({ params }: Props) {
 
       {/* Footer */}
       <footer className="container py-8 border-t border-subtle">
-        <div className="flex justify-between items-center text-dim text-sm">
-          <span>The Spirit Index v1.0</span>
+        <div className="flex flex-col md:flex-row justify-between items-center gap-2 text-dim text-sm">
+          <span>Published by the Spirit initiative</span>
           <a href="https://spiritprotocol.io" className="nav-link" target="_blank" rel="noopener noreferrer">
             Spirit Protocol
           </a>

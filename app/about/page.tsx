@@ -233,7 +233,7 @@ export default function About() {
       {/* Footer */}
       <footer className="container py-8 border-t border-subtle">
         <div className="flex justify-between items-center text-dim text-sm">
-          <span>The Spirit Index v1.0</span>
+          <span>Published by the Spirit initiative</span>
           <a
             href="https://spiritprotocol.io"
             className="nav-link"
