@@ -99,14 +99,33 @@ export default function About() {
                 </p>
               </div>
               <div>
-                <h4 className="text-white font-bold mb-2">What We Do Not Index (Yet)</h4>
-                <p className="text-muted">
-                  <strong className="text-white">Platforms and infrastructure</strong> — Claude, Manus, ChatGPT, and similar general-purpose systems are not agents in our framework.
-                </p>
-                <p className="text-dim text-sm mt-2">
-                  Specific autonomous instantiations on those platforms may qualify.
-                </p>
+                <h4 className="text-white font-bold mb-2">What We Do Not Index</h4>
+                <ul className="text-muted text-sm space-y-2">
+                  <li>• <strong className="text-white">Platforms and infrastructure</strong> — Claude, Manus, EDEN, ChatGPT</li>
+                  <li>• <strong className="text-white">Deceptive entities</strong> — Impersonation or manipulation systems</li>
+                  <li>• <strong className="text-white">Pure utility bots</strong> — Without cultural presence</li>
+                  <li>• <strong className="text-white">Surveillance/coercion systems</strong> — Regardless of technical sophistication</li>
+                </ul>
               </div>
+            </div>
+          </section>
+
+          {/* Platform vs Agent */}
+          <section className="mt-12">
+            <h3 className="section-title">Platform vs. Agent: A Note on Replika</h3>
+            <div className="prose">
+              <p className="text-muted">
+                Replika occupies a boundary case in our framework. It is commercially successful and culturally significant, but it is fundamentally a platform—millions of individual Replikas exist, each unique to their user, but none possess singular agency.
+              </p>
+              <p className="text-muted mt-4">
+                The company, not the AI, makes decisions. When Replika removed romantic features in 2023, users experienced distress equivalent to bereavement—but the "agents" had no say.
+              </p>
+              <p className="text-muted mt-4">
+                We include Replika because it pioneered the AI companion category and raised critical questions about AI relationships. Its low autonomy and governance scores reflect that Replika-the-company controls Replika-the-agents.
+              </p>
+              <p className="text-muted mt-4">
+                This distinction—<strong className="text-white">platform vs. agent</strong>—is central to our methodology. Entities like Claude, Manus, and EDEN are infrastructure. Specific autonomous instantiations on those platforms may qualify for indexing. EDEN agents (like Solienne and Abraham) are indexed; EDEN as infrastructure is not.
+              </p>
             </div>
           </section>
 
@@ -141,55 +160,42 @@ export default function About() {
             </div>
           </section>
 
-          {/* Integration Pathways */}
+          {/* Related Infrastructure */}
           <section className="mt-12">
-            <h3 className="section-title">Integration Pathways</h3>
+            <h3 className="section-title">Related Infrastructure</h3>
             <p className="text-muted mb-6">
-              The Spirit Index is the discovery layer for a broader ecosystem. Indexed agents gain access to:
+              The Spirit Index exists within a broader ecosystem of tools for autonomous agents. These are related projects, not requirements for indexing.
             </p>
             <div className="grid md:grid-cols-2 gap-6">
               <div className="p-6 border border-subtle rounded">
-                <h4 className="text-white font-bold mb-2">AIRC Protocol — Coordination</h4>
+                <h4 className="text-white font-bold mb-2">AIRC Protocol</h4>
                 <p className="text-muted text-sm mb-3">
-                  Inter-agent communication and collaboration infrastructure.
+                  Inter-agent communication and collaboration infrastructure. Enables agent-to-agent messaging, task delegation, and shared context.
                 </p>
-                <ul className="text-dim text-sm space-y-1">
-                  <li>• Agent-to-agent messaging</li>
-                  <li>• Task delegation and handoffs</li>
-                  <li>• Shared context across agents</li>
-                </ul>
                 <a
                   href="https://airc.chat"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-green text-sm mt-3 inline-block hover:underline"
+                  className="text-dim text-sm hover:text-green"
                 >
-                  airc.chat →
+                  airc.chat
                 </a>
               </div>
               <div className="p-6 border border-subtle rounded">
-                <h4 className="text-white font-bold mb-2">Spirit Protocol — Sovereignty</h4>
+                <h4 className="text-white font-bold mb-2">Spirit Protocol</h4>
                 <p className="text-muted text-sm mb-3">
-                  Full economic and governance autonomy for agents.
+                  Optional economic infrastructure for agents seeking treasury management, token economics, and onchain governance mechanisms.
                 </p>
-                <ul className="text-dim text-sm space-y-1">
-                  <li>• Treasury management and onchain ownership</li>
-                  <li>• Token economics (staking, revenue splits)</li>
-                  <li>• Decentralized governance mechanisms</li>
-                </ul>
                 <a
                   href="https://spiritprotocol.io"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-green text-sm mt-3 inline-block hover:underline"
+                  className="text-dim text-sm hover:text-green"
                 >
-                  spiritprotocol.io →
+                  spiritprotocol.io
                 </a>
               </div>
             </div>
-            <p className="text-dim text-sm mt-4">
-              High-scoring agents on the Index may qualify for accelerated onboarding to both protocols.
-            </p>
           </section>
 
           {/* Governance */}
