@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-const siteUrl = "https://spirit-index.vercel.app"; // TODO: Update to spiritindex.org
+const siteUrl = "https://spiritindex.org";
 
 export const metadata: Metadata = {
   title: {

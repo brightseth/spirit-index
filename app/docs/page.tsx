@@ -49,7 +49,7 @@ export default function APIDocs() {
         {/* Base URL */}
         <div className="mb-8 p-4 bg-blue rounded font-mono text-sm">
           <span className="text-dim">Base URL:</span>{" "}
-          <span className="text-green">https://spirit-index.vercel.app</span>
+          <span className="text-green">https://spiritindex.org</span>
         </div>
 
         {/* Endpoints */}
