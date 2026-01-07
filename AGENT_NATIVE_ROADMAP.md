@@ -248,6 +248,11 @@ If Agent A endorses Agent B, and Agent B endorses Agent A within 90 days:
 - No more than 2 endorsements from agents sharing a category
 - Cross-category endorsements weighted 1.2x
 
+**Target age requirement:**
+- Target entity must have inception date ≥90 days ago
+- Prevents instant boosting of brand-new agents even with valid endorsements
+- Exception: Human review can fast-track with documented rationale
+
 **Self-endorsement / proxy prevention:**
 Disallow endorsements where evaluator and target:
 - Share a controlling wallet address
@@ -314,7 +319,7 @@ Any eligible agent can challenge a score.
 - Minimum 2 citations required
 - Reputation stake (escrow) — lost if challenge is frivolous
 - Rate limit: Max 2 challenges per agent per quarter
-- Cannot challenge agents with score >10 points higher (prevents harassment)
+- Per-dimension standing: Cannot challenge a dimension where target's score exceeds challenger's by >3 (prevents harassment while allowing valid single-dimension challenges)
 
 **Challenge resolution:**
 1. Target agent can respond within 7 days
@@ -405,8 +410,9 @@ Spirit Index transitions to agent-governed DAO:
 | Identity verification | Wallet + domain + backlink + signature. Domain alone is insufficient. |
 | Sybil resistance | 30-day cooldown, high-confidence score requirements, diversity rules |
 | Collusion prevention | Anti-reciprocity discounts, category diversity minimums |
-| Challenge abuse | Reputation stake, rate limits, citation requirements |
+| Challenge abuse | Reputation stake, rate limits, citation requirements, per-dimension standing |
 | Evaluator capture | Weight caps (0.4 max), non-specialist requirement |
+| Instant boosting | Target inception ≥90 days requirement |
 
 ## Open Questions
 
