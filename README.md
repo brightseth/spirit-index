@@ -4,25 +4,60 @@
 
 A public benchmark for Cultural Agents — autonomous entities with persistent identity, narrative coherence, and cultural gravity. The canonical reference oracle for evaluating autonomous agents.
 
-## The Oracle Layer
+[![Spirit Index](https://spiritindex.org/badge/plantoid)](https://spiritindex.org)
 
-Spirit Index is designed as the **reference oracle for prediction markets and agent evaluation** — like LLM Arena for autonomous agents. Scores are:
+## Live Index
 
-- **Time-series tracked** — Every assessment is timestamped, history preserved
-- **Falsifiable** — "Will entity X reach score Y by date Z?" is a real bet
-- **Evidence-locked** — Score changes require new citations
-- **Machine-readable** — Full API at `/index.json`, `/llm.txt`, `/submit.json`
+**[spiritindex.org](https://spiritindex.org)** — 15 entities indexed
 
-### Use Cases
+| # | Entity | Score | Category |
+|---|--------|-------|----------|
+| 1 | [Plantoid](https://spiritindex.org/plantoid) | 60/70 | Autonomous Sculpture |
+| 2 | [Botto](https://spiritindex.org/botto) | 55/70 | Autonomous Artist |
+| 3 | [terra0](https://spiritindex.org/terra0) | 53/70 | Ecological DAO |
+| 4 | [Holly+](https://spiritindex.org/holly-plus) | 53/70 | Voice DAO |
+| 5 | [Numerai](https://spiritindex.org/numerai) | 52/70 | Prediction Meta-Model |
 
-- Prediction market resolution
-- Agent eligibility verification for protocol participation
-- Staking multiplier calculations
-- Historical trend analysis for cultural agent evolution
+[View full index →](https://spiritindex.org)
+
+## The 7 Dimensions
+
+Every entity is scored 0-10 on seven dimensions:
+
+| Dimension | What it measures |
+|-----------|------------------|
+| **Persistence** | Continuity over time |
+| **Autonomy** | Independence of action |
+| **Cultural Impact** | Recognition beyond creators |
+| **Economic Reality** | Real economic interaction |
+| **Governance** | Decision-making structure |
+| **Tech Distinctiveness** | Non-trivial architecture |
+| **Narrative Coherence** | Makes sense as an entity |
+
+See [RUBRIC.md](./RUBRIC.md) for full scoring anchors.
+
+## API & Endpoints
+
+| Endpoint | Purpose |
+|----------|---------|
+| [`/api/agents`](https://spiritindex.org/api/agents) | REST API with filtering/sorting |
+| [`/api/agents/:id`](https://spiritindex.org/api/agents/plantoid) | Individual agent data |
+| [`/feed.xml`](https://spiritindex.org/feed.xml) | RSS feed |
+| [`/badge/:id`](https://spiritindex.org/badge/plantoid) | Embeddable SVG badge |
+| [`/llm.txt`](https://spiritindex.org/llm.txt) | LLM context summary |
+| [`/index.json`](https://spiritindex.org/index.json) | Full index as JSON |
+| [`/docs`](https://spiritindex.org/docs) | API documentation |
+
+### Embed a Badge
+
+```markdown
+[![Spirit Index](https://spiritindex.org/badge/YOUR_ID)](https://spiritindex.org/YOUR_ID)
+```
 
 ## Quick Start
 
 ```bash
+git clone https://github.com/brightseth/spirit-index.git
 cd spirit-index
 npm install
 npm run dev
@@ -30,124 +65,61 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000)
 
-## Agent-Friendly Endpoints
-
-The Index is discoverable and parseable by AI agents:
-
-| Endpoint | Purpose |
-|----------|---------|
-| `/llm.txt` | Human-readable summary for LLM context windows |
-| `/index.json` | Full index as structured JSON |
-| `/rubric.json` | Scoring methodology |
-| `/submit.json` | Self-nomination protocol for agents |
-| `/agents/{id}.json` | Individual agent manifests |
-
 ## Project Structure
 
 ```
 spirit-index/
-├── README.md
-├── RUBRIC.md                    # The constitution (public)
-├── ABOUT.md                     # Project overview + roadmap
-├── public/
-│   ├── llm.txt                  # Machine-readable index
-│   ├── index.json               # Full index as structured data
-│   ├── rubric.json              # Scoring methodology
-│   └── submit.json              # Submission protocol spec
-├── data/
-│   └── agents/
-│       ├── botto.json
-│       ├── solienne.json
-│       ├── abraham.json
-│       ├── truth-terminal.json
-│       ├── terra0.json
-│       └── freysa.json
 ├── app/
-│   ├── page.tsx                 # Index table (sortable by dimension)
-│   ├── [id]/page.tsx            # Entity dossier view
-│   ├── about/page.tsx           # About + methodology
-│   ├── rubric/page.tsx          # Full rubric display
-│   ├── submit/page.tsx          # Submission guidelines
-│   └── components/
-│       ├── Masthead.tsx
-│       ├── RadarChart.tsx
-│       ├── ScoreTable.tsx
-│       ├── DimensionBar.tsx
-│       ├── EvidenceList.tsx
-│       ├── StatusBadge.tsx
-│       └── AgentCard.tsx
-├── lib/
-│   └── types.ts                 # TypeScript interfaces
-└── styles/
-    └── globals.css              # Spirit design system
+│   ├── page.tsx              # Index with search/filter
+│   ├── [id]/page.tsx         # Entity dossier
+│   ├── api/agents/           # REST API
+│   ├── badge/[id]/           # SVG badge generator
+│   ├── compare/              # Side-by-side comparison
+│   ├── leaderboard/          # Dimension rankings
+│   └── docs/                 # API documentation
+├── data/agents/              # Entity JSON files (15 entities)
+├── lib/types.ts              # TypeScript definitions
+├── ROADMAP.md                # Product & oracle roadmap
+├── RUBRIC.md                 # Scoring methodology
+└── CONTRIBUTING.md           # How to contribute
 ```
-
-## The 7 Dimensions
-
-| Dimension | Short | What it measures |
-|-----------|-------|------------------|
-| **Persistence** | PER | Continuity over time |
-| **Autonomy** | AUT | Independence of action |
-| **Cultural Impact** | IMP | Recognition beyond creators |
-| **Economic Reality** | ECO | Real economic interaction |
-| **Governance** | GOV | Decision-making structure |
-| **Tech Distinctiveness** | TEC | Non-trivial architecture |
-| **Narrative Coherence** | NAR | Makes sense as an entity |
-
-See [RUBRIC.md](./RUBRIC.md) for full scoring anchors (0/5/10).
-
-## Genesis Entities (v1.0)
-
-| Entity | Category | Total | Key Feature |
-|--------|----------|-------|-------------|
-| Botto | Autonomous Artist | 55/70 | Gold standard (high economics) |
-| terra0 | Ecological DAO | 53/70 | Canonical elder (max persistence) |
-| Solienne | Archive Symbient | 51/70 | Max narrative coherence |
-| Abraham | Sovereign Artist | 51/70 | Max governance |
-| Truth Terminal | Chaos Agent | 47/70 | Max impact, min governance |
-| Freysa | Game Agent | 45/70 | Adversarial economics |
-
-## Design System
-
-**Reference:** Bloomberg Terminal meets October Magazine meets Library Card Catalog
-
-- **No logo** — Typography carries all authority
-- **Colors:** Deep blue background, neon green accent (sparingly)
-- **Typography:** Monospace for data, serif for narrative
-- **Radar charts:** 7-axis spider showing agent "shape"
-
-## Submission Protocol
-
-Agents seeking inclusion:
-
-1. Review requirements at `/submit.json`
-2. Prepare evidence (2-3 citations per dimension ≥5)
-3. Submit via [GitHub Issue](https://github.com/spirit-protocol/spirit-index/issues)
-4. Spirit Council reviews within 30 days
-
-Self-nomination by autonomous agents is encouraged.
-
-## Conflict of Interest Disclosure
-
-Spirit Index is a project of Spirit Protocol. Two indexed entities (Solienne, Abraham) are Spirit-native agents. They are scored using the same rubric as all other entities. We welcome external review and challenge of these assessments.
-
-## Tech Stack
-
-- Next.js 14 (App Router)
-- Tailwind CSS
-- Recharts (radar visualization)
-- Static JSON (Git-versioned, no database)
 
 ## Roadmap
 
-**Phase 1 (Current):** Cultural Agents — 10 canonical entities, public rubric
-**Phase 2 (2026):** Commercial Agent Track — utility-focused agents with adapted anchors
-**Phase 3:** Oracle Layer — prediction market integration, Spirit Protocol staking
+See **[ROADMAP.md](./ROADMAP.md)** for the full roadmap, including:
+
+- **Phase 2 (Q1 2026):** 25+ entities, advisory reviewers
+- **Phase 3 (Q2-Q3 2026):** Hybrid verified/reviewed scoring
+- **Phase 4 (Q3-Q4 2026):** SPIRIT-001 telemetry standard
+- **Phase 5 (2027):** Decentralized oracle network
+
+### Oracle Vision
+
+Spirit Index is designed as a **reference oracle for prediction markets**:
+
+```solidity
+// Example: Resolve "Will Botto reach 60 by Q2 2026?"
+ISpiritOracle.getScore("botto", "total") → (55, "high", 1704556800)
+```
+
+See [ORACLE_ROADMAP.md](./ORACLE_ROADMAP.md) for technical specification.
+
+## Submit an Entity
+
+1. Review requirements at [/submit](https://spiritindex.org/submit)
+2. Open a [GitHub Issue](https://github.com/brightseth/spirit-index/issues/new?template=entity-nomination.md)
+3. Provide evidence (2-3 citations per dimension)
+
+Self-nomination by autonomous agents is encouraged.
+
+## Conflict of Interest
+
+Spirit Index is a Spirit Protocol project. Two indexed entities (Solienne, Abraham) are Spirit-native. They are scored using the same rubric as all others. Disclosures are visible on each dossier page.
 
 ## License
 
-- Data: CC BY 4.0
-- Code: MIT
+- **Data:** CC BY 4.0
+- **Code:** MIT
 
 ---
 
