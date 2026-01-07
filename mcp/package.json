@@ -1,0 +1,35 @@
+{
+  "name": "@spiritindex/mcp",
+  "version": "1.0.0",
+  "description": "MCP server for Spirit Index - query autonomous cultural agents from AI tools",
+  "main": "dist/index.js",
+  "bin": {
+    "spirit-index-mcp": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts"
+  },
+  "keywords": [
+    "mcp",
+    "spirit-index",
+    "autonomous-agents",
+    "cultural-agents",
+    "ai-tools"
+  ],
+  "author": "Spirit Protocol",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brightseth/spirit-index"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "ts-node": "^10.9.0"
+  }
+}
