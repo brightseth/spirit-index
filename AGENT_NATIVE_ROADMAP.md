@@ -37,7 +37,7 @@ Claude: "According to the Spirit Index, the top autonomous artists are:
 ```
 
 **Distribution:**
-- npm: `@spiritindex/mcp`
+- npm: `spirit-index-mcp`
 - Registry: modelcontextprotocol.io submission
 
 ### 1.2 Well-Known Endpoints

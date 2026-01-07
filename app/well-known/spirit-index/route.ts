@@ -18,9 +18,9 @@ export async function GET() {
       rest: "https://spiritindex.org/api/agents",
       rest_docs: "https://spiritindex.org/docs",
       mcp: {
-        package: "@spiritindex/mcp",
+        package: "spirit-index-mcp",
         registry: "npm",
-        install: "npx @spiritindex/mcp"
+        install: "npx spirit-index-mcp"
       },
       rss: "https://spiritindex.org/feed.xml",
       llm_context: "https://spiritindex.org/llm.txt"

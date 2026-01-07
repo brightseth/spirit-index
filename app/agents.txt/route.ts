@@ -18,7 +18,7 @@ export async function GET() {
     "# Format: ID | Score | Name | Category | Status",
     "#",
     "# API: https://spiritindex.org/api/agents",
-    "# MCP: npx @spiritindex/mcp",
+    "# MCP: npx spirit-index-mcp",
     "# Web: https://spiritindex.org",
     "",
     ...agents.map(

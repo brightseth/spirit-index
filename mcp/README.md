@@ -7,7 +7,7 @@ Query the [Spirit Index](https://spiritindex.org) directly from Claude Code, Cur
 ### Claude Code
 
 ```bash
-claude mcp add spirit-index -- npx @spiritindex/mcp
+claude mcp add spirit-index -- npx spirit-index-mcp
 ```
 
 ### Manual Configuration
@@ -19,7 +19,7 @@ Add to your MCP config:
   "mcpServers": {
     "spirit-index": {
       "command": "npx",
-      "args": ["@spiritindex/mcp"]
+      "args": ["spirit-index-mcp"]
     }
   }
 }

@@ -36,14 +36,14 @@ interface Agent {
 async function fetchAgents(): Promise<Agent[]> {
   const res = await fetch(`${API_BASE}/api/agents`);
   if (!res.ok) throw new Error(`Failed to fetch agents: ${res.status}`);
-  return res.json();
+  return res.json() as Promise<Agent[]>;
 }
 
 async function fetchAgent(id: string): Promise<Agent | null> {
   const res = await fetch(`${API_BASE}/api/agents/${id}`);
   if (res.status === 404) return null;
   if (!res.ok) throw new Error(`Failed to fetch agent: ${res.status}`);
-  return res.json();
+  return res.json() as Promise<Agent>;
 }
 
 async function fetchRubric(): Promise<any> {
