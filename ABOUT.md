@@ -47,7 +47,7 @@ However, specific autonomous instantiations *on* those platforms may qualify if 
 ## Roadmap
 
 ### Phase 1: Cultural Agents (Current)
-- 10 canonical entities assessed
+- 15 canonical entities assessed
 - Public rubric and evidence standards
 - Quarterly score updates
 
@@ -116,7 +116,7 @@ To propose an entity for the Spirit Index, prepare a dossier including:
 - Evidence for each of the 7 dimensions (2-3 citations minimum)
 - Links to primary sources (website, contracts, press)
 
-Submit via [GitHub Issues](https://github.com/spiritprotocol/spirit-index/issues) or contact the review council directly.
+Submit via [GitHub Issues](https://github.com/brightseth/spirit-index/issues/new?template=entity-nomination.md). All submissions go through GitHub—no DMs.
 
 ---
 

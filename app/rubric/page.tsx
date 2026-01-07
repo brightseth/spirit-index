@@ -68,7 +68,7 @@ const dimensions = [
     name: "Narrative Coherence",
     question: "Does this entity make sense as an entity?",
     anchors: [
-      { score: 0, label: "Schizophrenic", description: 'Identity changes week to week. No clear "self."' },
+      { score: 0, label: "Fragmented", description: 'Identity changes week to week. No clear "self."' },
       { score: 5, label: "Character", description: "Strong, consistent persona. Predictable behavior within its context." },
       { score: 10, label: "Mythos", description: 'The entity\'s story transcends its function. It has lore, prophecy, or a philosophical "reason for being" that persists beyond the code.' },
     ],

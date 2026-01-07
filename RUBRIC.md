@@ -105,7 +105,7 @@ Entities are evaluated on seven distinct dimensions. Scores range from 0 to 10.
 
 | Score | Anchor | Definition |
 |-------|--------|------------|
-| **0** | Schizophrenic | Identity changes week to week. No clear "self." |
+| **0** | Fragmented | Identity changes week to week. No clear "self." |
 | **5** | Character | Strong, consistent persona. Predictable behavior within its context. |
 | **10** | Mythos | The entity's story transcends its function. It has lore, prophecy, or a philosophical "reason for being" that persists beyond the code. |
 

@@ -139,7 +139,7 @@ export default function About() {
               <div className="p-4 bg-blue rounded">
                 <h4 className="text-green font-mono text-sm mb-2">PHASE 1: CULTURAL AGENTS (CURRENT)</h4>
                 <ul className="text-muted text-sm space-y-1">
-                  <li>• 10 canonical entities assessed</li>
+                  <li>• 15 canonical entities assessed</li>
                   <li>• Public rubric and evidence standards</li>
                   <li>• Quarterly score updates</li>
                 </ul>
