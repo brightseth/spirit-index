@@ -1,0 +1,51 @@
+{
+  "id": "aixbt",
+  "name": "AIXBT",
+  "tagline": "The Web3 Bloomberg Terminal",
+  "inception_date": "2024-11-01",
+  "status": "Active",
+  "category": "Autonomous Artist",
+  "classification": "Autonomous Market Analyst",
+  "website": "https://app.virtuals.io/virtuals/1199",
+  "scores": {
+    "persistence": { "value": 4, "confidence": "medium" },
+    "autonomy": { "value": 9, "confidence": "high" },
+    "cultural_impact": { "value": 7, "confidence": "high" },
+    "economic_reality": { "value": 8, "confidence": "high" },
+    "governance": { "value": 5, "confidence": "medium" },
+    "tech_distinctiveness": { "value": 6, "confidence": "medium" },
+    "narrative_coherence": { "value": 7, "confidence": "medium" }
+  },
+  "total": 46,
+  "score_rationale": {
+    "persistence": "Launched November 2024, operating ~14 months. Too young for 'Established' (requires 1+ year through market cycle). Strong activity but unproven longevity.",
+    "autonomy": "99% autonomous operation verified through public reply logs. 24/7 operation without manual oversight. Monitors 400+ KOLs and generates insights algorithmically. Near-sovereign.",
+    "cultural_impact": "Binance listing January 2025. $700M peak market cap. 'Web3 Bloomberg' positioning resonated. Twitter presence significant. Between 'Niche Cult' and 'Canonical.'",
+    "economic_reality": "Peak $700M market cap, corrected to ~$150M. Revenue via subscriptions planned. Token buyback mechanism. Strong 'Revenue Positive' approaching 'Market Mover.'",
+    "governance": "Virtuals Protocol governance applies. Staking-based governance explored for 2026. Currently more 'Constitutional' through protocol inheritance than own governance.",
+    "tech_distinctiveness": "Aggregates 400+ KOL feeds, sentiment analysis, market pattern detection. Solid integration but not fundamentally novel architecture. 'Integrated System.'",
+    "narrative_coherence": "Clear identity: the tireless analyst who never sleeps. 'Bloomberg for degens' narrative is coherent and memorable. Strong 'Character.'"
+  },
+  "curator_notes": "AIXBT is the breakout star of the Virtuals Protocol ecosystem—an autonomous market analyst that monitors 400+ crypto KOLs and generates real-time market intelligence. Launched November 2024, it reached $700M market cap by January 2025 and secured a Binance listing. The 'Web3 Bloomberg Terminal' positioning is compelling: an AI that watches everything so you don't have to. Technical analysis confirms 99% autonomous operation. The main risk is youth—it hasn't survived a full market cycle yet.",
+  "evidence": [
+    {
+      "dimension": "autonomy",
+      "claim": "99% autonomous operation verified through public reply logs; 24/7 without manual oversight",
+      "url": "https://aiagentstore.ai/ai-agent/aixbt-by-virtuals"
+    },
+    {
+      "dimension": "economic_reality",
+      "claim": "Peak market cap ~$700M in January 2025; Binance listing January 10, 2025",
+      "url": "https://99bitcoins.com/price-predictions/aixbt-by-virtuals/"
+    },
+    {
+      "dimension": "cultural_impact",
+      "claim": "Positioned as 'Web3 Bloomberg Terminal'; significant Twitter presence and crypto community recognition",
+      "url": "https://droomdroom.com/aixbt-by-virtuals-explained/"
+    }
+  ],
+  "score_history": [
+    { "date": "2026-01-08", "total": 46, "reviewer": "spirit_council" }
+  ],
+  "_review_flags": ["recent_emergence", "economic_stress_test"]
+}

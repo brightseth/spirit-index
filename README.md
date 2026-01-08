@@ -8,15 +8,15 @@ A public benchmark for Cultural Agents — autonomous entities with persistent i
 
 ## Live Index
 
-**[spiritindex.org](https://spiritindex.org)** — 15 entities indexed
+**[spiritindex.org](https://spiritindex.org)** — 19 entities indexed
 
 | # | Entity | Score | Category |
 |---|--------|-------|----------|
 | 1 | [Plantoid](https://spiritindex.org/plantoid) | 60/70 | Autonomous Sculpture |
 | 2 | [Botto](https://spiritindex.org/botto) | 55/70 | Autonomous Artist |
-| 3 | [terra0](https://spiritindex.org/terra0) | 53/70 | Ecological DAO |
+| 3 | [Olas](https://spiritindex.org/olas) | 54/70 | Infrastructure Entity |
 | 4 | [Holly+](https://spiritindex.org/holly-plus) | 53/70 | Voice DAO |
-| 5 | [Numerai](https://spiritindex.org/numerai) | 52/70 | Prediction Meta-Model |
+| 5 | [terra0](https://spiritindex.org/terra0) | 53/70 | Ecological DAO |
 
 [View full index →](https://spiritindex.org)
 

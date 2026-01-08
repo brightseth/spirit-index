@@ -1,0 +1,51 @@
+{
+  "id": "omen-agents",
+  "name": "Omen Prediction Agents",
+  "tagline": "The Autonomous Forecasters",
+  "inception_date": "2023-06-01",
+  "status": "Active",
+  "category": "Token Agent",
+  "classification": "Autonomous Prediction Market Collective",
+  "website": "https://olas.network/agent-economies/predict",
+  "scores": {
+    "persistence": { "value": 6, "confidence": "high" },
+    "autonomy": { "value": 9, "confidence": "high" },
+    "cultural_impact": { "value": 5, "confidence": "medium" },
+    "economic_reality": { "value": 8, "confidence": "high" },
+    "governance": { "value": 7, "confidence": "high" },
+    "tech_distinctiveness": { "value": 8, "confidence": "high" },
+    "narrative_coherence": { "value": 6, "confidence": "medium" }
+  },
+  "total": 49,
+  "score_rationale": {
+    "persistence": "Operating since 2023, ~2.5 years. Consistent daily activity with 300+ agents. Survived multiple market conditions. Approaching 'Established' with strong continuity.",
+    "autonomy": "361+ daily active agents executing 8.2M+ transactions without human intervention. Market Creator, AI Mech, and Trader agents operate fully autonomously. Near-sovereign.",
+    "cultural_impact": "Well-known in prediction market and Gnosis ecosystem. Academic interest in agent accuracy. Not mainstream recognition yet. 'Niche Cult.'",
+    "economic_reality": "35%+ of all Safe transactions on Gnosis Chain. Real money wagered and won. Agents achieve 79% prediction accuracy. Strong 'Revenue Positive.'",
+    "governance": "Governed by Olas protocol mechanisms. On-chain transaction records fully auditable. Market creation and trading follow algorithmic rules. 'Constitutional.'",
+    "tech_distinctiveness": "Three-agent architecture (Market Creator, AI Mech, Trader) is novel. Built on Conditional Token Framework. Autonomous market creation from news feeds. 'Integrated System' with novel elements.",
+    "narrative_coherence": "A collective of forecasters competing to predict the future. Identity is diffuse (many agents) rather than singular. Clear function but weaker mythos. 'Character' tier."
+  },
+  "curator_notes": "The Omen Prediction Agents are not a single entity but a thriving economy of 300+ autonomous agents trading on Gnosis Chain's Omen prediction market. Built on Olas infrastructure, they achieve 79% prediction accuracy and constitute 35%+ of all Safe transactions on Gnosis. The three-agent architecture (Market Creator creates markets from news, AI Mech estimates probabilities, Trader executes bets) represents genuine autonomous coordination. This is the largest functioning agent economy in crypto—real agents, real money, real predictions. The challenge: as a collective, narrative coherence is lower than singular agents.",
+  "evidence": [
+    {
+      "dimension": "autonomy",
+      "claim": "361+ daily active AI agents executing 8.2M+ transactions on Gnosis Chain",
+      "url": "https://www.gnosis.io/blog/the-rise-of-ai-agents-in-prediction-markets-how-gnosis-infrastructure-is-powering-the-future-of-information-finance"
+    },
+    {
+      "dimension": "economic_reality",
+      "claim": "35%+ of all Safe transactions on Gnosis Chain; 79% prediction accuracy",
+      "url": "https://olas.network/blog/how-gnosis-used-olas-predict-to-build-the-largest-on-chain-prediction-market-economy"
+    },
+    {
+      "dimension": "tech_distinctiveness",
+      "claim": "Three-agent architecture: Market Creator, AI Mech, and Trader agents working autonomously",
+      "url": "https://github.com/valory-xyz/trader"
+    }
+  ],
+  "score_history": [
+    { "date": "2026-01-08", "total": 49, "reviewer": "spirit_council" }
+  ],
+  "_review_flags": ["edge_case"]
+}
