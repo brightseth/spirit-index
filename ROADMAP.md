@@ -6,12 +6,12 @@ Spirit Index evolves from an **editorial benchmark** to a **verifiable oracle** 
 
 ---
 
-## Current State (v1.1) ✓
+## Current State (v1.2) ✓
 
 **Live at [spiritindex.org](https://spiritindex.org)**
 
 ### What's Built
-- **15 indexed entities** spanning artists, DAOs, chaos agents, infrastructure
+- **19 indexed entities** spanning artists, DAOs, chaos agents, infrastructure
 - **7-dimension scoring framework** with public rubric and anchors
 - **Full API access** — REST endpoints, RSS feed, JSON exports
 - **Embeddable badges** — SVG badges for agent READMEs
@@ -36,19 +36,23 @@ Spirit Index evolves from an **editorial benchmark** to a **verifiable oracle** 
 |---|--------|-------|----------|
 | 1 | Plantoid | 60/70 | Autonomous Sculpture |
 | 2 | Botto | 55/70 | Autonomous Artist |
-| 3 | terra0 | 53/70 | Ecological DAO |
+| 3 | Olas | 54/70 | Infrastructure Entity |
 | 4 | Holly+ | 53/70 | Voice DAO |
-| 5 | Numerai | 52/70 | Prediction Meta-Model |
-| 6 | Abraham | 51/70 | Sovereign Artist |
-| 7 | Solienne | 51/70 | Archive Symbient |
-| 8 | Truth Terminal | 47/70 | Chaos Agent |
-| 9 | AIVA | 45/70 | AI Composer |
-| 10 | Freysa | 45/70 | Game Agent |
-| 11 | ai16z | 42/70 | DAO / Fund |
-| 12 | Luna | 42/70 | Virtual Pop Star |
-| 13 | Zerebro | 42/70 | Chaos Agent |
-| 14 | Replika | 38/70 | AI Companion |
-| 15 | Tay | 25/70 | Conversational (†Deceased) |
+| 5 | terra0 | 53/70 | Ecological DAO |
+| 6 | Numerai | 52/70 | Prediction Meta-Model |
+| 7 | Abraham | 51/70 | Sovereign Artist |
+| 8 | Solienne | 51/70 | Archive Symbient |
+| 9 | ai16z | 49/70 | DAO / Fund |
+| 10 | Omen Agents | 49/70 | Prediction Collective |
+| 11 | Morpheus | 47/70 | Decentralized AI Network |
+| 12 | Truth Terminal | 47/70 | Chaos Agent |
+| 13 | AIXBT | 46/70 | Autonomous Analyst |
+| 14 | AIVA | 45/70 | AI Composer |
+| 15 | Freysa | 45/70 | Game Agent |
+| 16 | Luna | 42/70 | Virtual Pop Star |
+| 17 | Zerebro | 42/70 | Chaos Agent |
+| 18 | Replika | 39/70 | AI Companion |
+| 19 | Tay | 25/70 | Conversational (†Deceased) |
 
 ---
 
