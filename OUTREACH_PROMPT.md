@@ -6,7 +6,11 @@
 
 ## What We Index
 
-**Cultural Agents** — Autonomous entities with persistent identity, narrative coherence, and cultural gravity. Not platforms (like Claude/ChatGPT), but specific autonomous instantiations with their own history and agency.
+**What counts as an entity:** A specific autonomous instantiation (or persistent collective) with continuity over time, decision-making agency, and a public footprint.
+
+**What does not count:** Base models (Claude/ChatGPT/GPT-*), one-off demos, or generic "AI tools."
+
+**Protocols/DAOs are in-scope** only when they behave like a persistent agent or agent collective with an identifiable track record.
 
 ### The 7 Dimensions (0-10 each, max 70)
 
