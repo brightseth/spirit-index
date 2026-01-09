@@ -201,6 +201,25 @@ export default function About() {
             </div>
           </section>
 
+          {/* Advisor Criteria */}
+          <section className="mt-12">
+            <h3 className="section-title">Advisor Criteria</h3>
+            <div className="prose">
+              <p className="text-muted">
+                The Spirit Index seeks advisors who bring domain expertise, rigorous thinking, and a commitment to transparent evaluation. We prioritize:
+              </p>
+              <ul className="mt-4 space-y-2 text-muted">
+                <li>• <strong className="text-white">Direct experience</strong> — Creators, operators, or researchers with firsthand knowledge of autonomous agent systems</li>
+                <li>• <strong className="text-white">Intellectual rigor</strong> — Published work, public discourse, or demonstrated analytical depth in AI, blockchain, or cultural infrastructure</li>
+                <li>• <strong className="text-white">Independence</strong> — Willingness to score entities objectively, including those adjacent to their own work</li>
+                <li>• <strong className="text-white">Long-term thinking</strong> — Commitment to quarterly review cycles and evolution of the framework</li>
+              </ul>
+              <p className="text-muted mt-4">
+                Advisors participate in quarterly scoring rounds and contribute to rubric evolution. Conflicts of interest are disclosed transparently. Interested? Contact us at <a href="mailto:council@spiritindex.org" className="text-green hover:underline">council@spiritindex.org</a>
+              </p>
+            </div>
+          </section>
+
           {/* Governance */}
           <section className="mt-12">
             <h3 className="section-title">Governance & Disclosure</h3>
@@ -211,20 +230,25 @@ export default function About() {
                   The Spirit Index is currently maintained by:
                 </p>
                 <ul className="mt-2 space-y-1">
-                  <li className="text-white text-sm">• Seth Goldstein — Spirit Protocol, Eden</li>
+                  <li className="text-white text-sm">• Seth Goldstein — Spirit Protocol</li>
+                  <li className="text-white text-sm">• Primavera De Filippi — Plantoid, COALA</li>
+                  <li className="text-dim text-sm">• Simon Hudson — forthcoming</li>
                   <li className="text-dim text-sm">• [Additional reviewers to be named]</li>
                 </ul>
                 <p className="text-dim text-sm mt-3">
-                  We welcome external reviewers. Contact us to participate.
+                  We welcome external reviewers. See advisor criteria below.
                 </p>
               </div>
               <div>
                 <h4 className="text-white font-bold mb-2">Conflict of Interest Statement</h4>
                 <p className="text-muted text-sm">
-                  Spirit Index is a project of <strong className="text-white">Spirit Protocol</strong>. Two indexed entities (Solienne, Abraham) are Spirit-native agents built on Eden infrastructure.
+                  Spirit Index is a project of <strong className="text-white">Spirit Protocol</strong>. Two indexed entities (Solienne, Abraham) are Spirit-native agents.
                 </p>
                 <p className="text-dim text-sm mt-3">
                   We score them using the same rubric as all other entities. We welcome external review and challenge of these assessments. Transparency is non-negotiable.
+                </p>
+                <p className="text-dim text-sm mt-3">
+                  Council member Primavera De Filippi created Plantoid (currently ranked #1). Her expertise is invaluable, and her entity is scored independently with full disclosure.
                 </p>
               </div>
             </div>
