@@ -69,12 +69,12 @@ export async function GET() {
           <div
             style={{
               display: "flex",
-              gap: 16,
+              gap: 12,
               alignItems: "flex-end",
               marginBottom: 48,
             }}
           >
-            {[60, 55, 53, 51, 51, 47, 45, 42, 38, 25].map((score, i) => (
+            {[60, 55, 54, 53, 53, 52, 51, 51, 49, 49, 47, 47, 46].map((score, i) => (
               <div
                 key={i}
                 style={{
@@ -86,10 +86,10 @@ export async function GET() {
               >
                 <div
                   style={{
-                    width: 40,
+                    width: 32,
                     height: score * 2.5,
                     backgroundColor: i < 3 ? "#00ff00" : "#22c55e",
-                    opacity: 1 - i * 0.08,
+                    opacity: 1 - i * 0.06,
                     borderRadius: 4,
                   }}
                 />

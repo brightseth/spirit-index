@@ -76,6 +76,9 @@ export default function RootLayout({
           title="Spirit Index RSS Feed"
           href="/feed.xml"
         />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <meta name="theme-color" content="#0a0a14" />
       </head>
       <body>
         {children}
