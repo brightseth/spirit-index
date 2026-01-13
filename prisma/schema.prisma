@@ -1,13 +1,14 @@
 // Spirit Index Identity Binding Database Schema
-// SQLite for simplicity - can migrate to Postgres later
+// PostgreSQL via Neon for production
 
 generator client {
   provider = "prisma-client-js"
 }
 
 datasource db {
-  provider = "sqlite"
-  url      = env("DATABASE_URL")
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DATABASE_URL_UNPOOLED")
 }
 
 // Core identity binding for agents
