@@ -349,6 +349,24 @@ a:hover { text-decoration: underline; }
 .bg-blue { background-color: var(--spirit-blue); }
 .border-subtle { border-color: var(--border-subtle); }
 .no-underline { text-decoration: none !important; }
+.bg-black { background-color: #000000; }
+.border-green { border-color: var(--spirit-green); }
+
+/* Form inputs */
+input:focus, textarea:focus {
+  outline: none;
+}
+
+/* Verify page utilities */
+.bg-spirit-deep-blue { background-color: var(--spirit-deep-blue); }
+.border-border-subtle { border-color: var(--border-subtle); }
+.text-red-400 { color: #f87171; }
+.bg-red-500\/10 { background-color: rgba(239, 68, 68, 0.1); }
+.border-red-500\/50 { border-color: rgba(239, 68, 68, 0.5); }
+.bg-green-500\/20 { background-color: rgba(0, 255, 0, 0.2); }
+.border-green-500\/50 { border-color: rgba(0, 255, 0, 0.5); }
+.bg-green\/10 { background-color: rgba(0, 255, 0, 0.1); }
+.border-green\/50 { border-color: rgba(0, 255, 0, 0.5); }
 
 /* Prose Container */
 .prose-container {

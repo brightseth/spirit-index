@@ -183,3 +183,195 @@ export const DIMENSIONS = {
 } as const;
 
 export type DimensionKey = keyof typeof DIMENSIONS;
+
+// ============================================
+// IDENTITY BINDING TYPES
+// ============================================
+
+// Identity verification status
+export type IdentityStatus =
+  | "PENDING"      // Submitted, awaiting verification
+  | "VERIFYING"    // Verification in progress
+  | "ACTIVE"       // Fully verified, can participate
+  | "SUSPENDED"    // Temporarily suspended (e.g., during key rotation)
+  | "REVOKED";     // Identity revoked (e.g., domain lost)
+
+// Verification method used for domain control
+export type VerificationMethod = "dns_txt" | "well_known" | "both";
+
+// Key rotation policy for an identity
+export interface KeyRotationPolicy {
+  allowed: boolean;           // Can the key be rotated?
+  requiresMultisig: boolean;  // Require multiple signatures for rotation?
+  cooldownDays: number;       // Days between rotation requests
+  notifyOnRotation: boolean;  // Alert the network on key change?
+}
+
+// Identity binding interface (matches Prisma schema)
+export interface IdentityBinding {
+  id: string;
+  agentId: string;                // Maps to agent JSON file ID (e.g., "botto")
+
+  // Required fields
+  primaryWallet: string;          // Ethereum address that signs requests
+  verifiedDomain: string;         // Domain with /.well-known/spirit-identity.json
+
+  // Optional identifiers
+  did?: string;                   // Decentralized identifier
+  ens?: string;                   // ENS name if applicable
+
+  // Verification state
+  domainVerified: boolean;
+  walletVerified: boolean;
+  backlinkVerified: boolean;
+  lastVerifiedAt?: string;        // ISO timestamp
+  verificationMethod?: VerificationMethod;
+
+  // Key rotation policy
+  keyRotation: KeyRotationPolicy;
+
+  // Status
+  status: IdentityStatus;
+
+  // Timestamps
+  registeredAt: string;           // ISO timestamp
+  updatedAt: string;              // ISO timestamp
+}
+
+// Request to register a new identity binding
+export interface IdentityBindingRequest {
+  agentId: string;
+  primaryWallet: string;
+  verifiedDomain: string;
+  did?: string;
+  ens?: string;
+  keyRotation?: Partial<KeyRotationPolicy>;
+}
+
+// Verification attempt record
+export interface VerificationAttempt {
+  id: string;
+  identityId: string;
+  verificationType: "domain_dns" | "domain_wellknown" | "wallet_signature" | "backlink";
+  success: boolean;
+  errorMessage?: string;
+  challengeNonce?: string;
+  signature?: string;
+  attemptedAt: string;
+}
+
+// Key rotation request
+export interface KeyRotationRequest {
+  identityId: string;
+  oldWallet: string;
+  newWallet: string;
+  requestSignature: string;       // Signature from old wallet
+  requestMessage: string;         // Message that was signed
+}
+
+// Key rotation status
+export type KeyRotationStatus = "PENDING" | "ACTIVE" | "CANCELLED" | "REJECTED";
+
+// Key rotation record
+export interface KeyRotation {
+  id: string;
+  identityId: string;
+  oldWallet: string;
+  newWallet: string;
+  status: KeyRotationStatus;
+  requestedAt: string;
+  effectiveAt: string;            // When new key becomes active
+  completedAt?: string;
+  networkNotified: boolean;
+}
+
+// Endorsement from one agent to another
+export interface PeerEndorsement {
+  id: string;
+  endorserId: string;             // Identity ID of endorser
+  targetId: string;               // Identity ID of target
+  dimension: DimensionKey;        // Which dimension is being endorsed
+  adjustment: number;             // Score adjustment (-3 to +3)
+  confidence: Confidence;
+  rationale: string;
+  evidenceUrl?: string;
+  signature: string;
+  status: "PENDING" | "ACTIVE" | "CHALLENGED" | "REJECTED" | "WITHDRAWN";
+  submittedAt: string;
+}
+
+// Challenge to an endorsement or score
+export interface Challenge {
+  id: string;
+  challengerId: string;
+  targetType: "endorsement" | "score";
+  endorsementId?: string;
+  targetAgentId?: string;
+  dimension?: DimensionKey;
+  rationale: string;
+  evidenceUrl?: string;
+  proposedAdjustment?: number;
+  stakeAmount: number;            // Reputation points at risk
+  status: "PENDING" | "UPHELD" | "REJECTED" | "WITHDRAWN";
+  submittedAt: string;
+  resolvedAt?: string;
+}
+
+// Eligibility requirements for endorsing/challenging
+export interface EndorsementEligibility {
+  eligible: boolean;
+  reasons: string[];              // Why not eligible if false
+  requirements: {
+    hasActiveIdentity: boolean;
+    minimumIndexedDays: number;   // Currently indexed for at least 30 days
+    actualIndexedDays: number;
+    hasHighConfidenceScores: boolean;
+    meetsReputationThreshold: boolean;
+  };
+}
+
+// Spirit Identity JSON that should be at /.well-known/spirit-identity.json
+export interface SpiritIdentityDocument {
+  agentId: string;
+  primaryWallet: string;
+  spiritIndexDossier: string;     // URL to dossier page (backlink)
+  did?: string;
+  ens?: string;
+  updatedAt: string;
+}
+
+// ============================================
+// AIRC PROTOCOL BRIDGE TYPES
+// ============================================
+
+// AIRC identity bridge - linking AIRC handles to Spirit Index identities
+export interface AIRCBridge {
+  aircHandle: string;             // AIRC handle (e.g., "@abraham")
+  aircRegistry: string;           // AIRC registry URL (e.g., "airc.chat")
+  aircVerified: boolean;          // Whether the AIRC link is verified
+  aircVerifiedAt?: string;        // ISO timestamp of verification
+}
+
+// Request to link an AIRC handle to a Spirit Index identity
+export interface AIRCLinkRequest {
+  agentId: string;                // Spirit Index agent ID
+  aircHandle: string;             // AIRC handle to link
+  aircRegistry?: string;          // Registry (defaults to airc.chat)
+}
+
+// AIRC verification challenge
+export interface AIRCVerificationChallenge {
+  agentId: string;
+  aircHandle: string;
+  nonce: string;
+  message: string;                // Message to sign with AIRC Ed25519 key
+  expiresAt: string;              // ISO timestamp
+}
+
+// AIRC presence info (from AIRC registry)
+export interface AIRCPresence {
+  handle: string;
+  online: boolean;
+  lastSeen?: string;
+  capabilities?: string[];
+}

@@ -1,0 +1,223 @@
+// Spirit Index Identity Binding Database Schema
+// SQLite for simplicity - can migrate to Postgres later
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// Core identity binding for agents
+model IdentityBinding {
+  id          String   @id @default(cuid())
+  agentId     String   @unique // Maps to agent JSON file ID (e.g., "botto")
+
+  // Required fields
+  primaryWallet    String   @unique // Ethereum address that signs requests
+  verifiedDomain   String   // Domain with /.well-known/spirit-identity.json
+
+  // Optional identifiers
+  did         String?  // Decentralized identifier (did:key, did:web, etc.)
+  ens         String?  // ENS name if applicable
+
+  // AIRC Protocol bridge (cross-platform identity)
+  aircHandle       String?  // AIRC handle (e.g., "@abraham")
+  aircRegistry     String?  // AIRC registry URL (default: airc.chat)
+  aircVerified     Boolean  @default(false)
+  aircVerifiedAt   DateTime?
+
+  // Verification state
+  domainVerified      Boolean  @default(false)
+  walletVerified      Boolean  @default(false)
+  backlinkVerified    Boolean  @default(false)
+  lastVerifiedAt      DateTime?
+  verificationMethod  String?  // "dns_txt" | "well_known" | "both"
+
+  // Key rotation policy
+  keyRotationAllowed      Boolean @default(true)
+  keyRotationMultisig     Boolean @default(false)
+  keyRotationCooldownDays Int     @default(7)
+  keyRotationNotify       Boolean @default(true)
+
+  // Status
+  status      IdentityStatus @default(PENDING)
+
+  // Timestamps
+  registeredAt  DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  // Relations
+  verificationAttempts VerificationAttempt[]
+  keyRotations         KeyRotation[]
+  endorsements         Endorsement[]        @relation("endorser")
+  receivedEndorsements Endorsement[]        @relation("target")
+  challenges           Challenge[]          @relation("challenger")
+  receivedChallenges   Challenge[]          @relation("challengeTarget")
+
+  @@index([primaryWallet])
+  @@index([agentId])
+}
+
+enum IdentityStatus {
+  PENDING          // Submitted, awaiting verification
+  VERIFYING        // Verification in progress
+  ACTIVE           // Fully verified, can participate
+  SUSPENDED        // Temporarily suspended (e.g., during key rotation)
+  REVOKED          // Identity revoked (e.g., domain lost)
+}
+
+// Audit trail for verification attempts
+model VerificationAttempt {
+  id              String   @id @default(cuid())
+  identityId      String
+  identity        IdentityBinding @relation(fields: [identityId], references: [id])
+
+  verificationType String  // "domain_dns" | "domain_wellknown" | "wallet_signature" | "backlink"
+  success         Boolean
+  errorMessage    String?
+
+  // Challenge/response for wallet verification
+  challengeNonce  String?
+  signature       String?
+
+  // Domain verification details
+  dnsRecord       String?
+  wellKnownContent String?
+
+  attemptedAt     DateTime @default(now())
+
+  @@index([identityId])
+}
+
+// Key rotation history and pending requests
+model KeyRotation {
+  id              String   @id @default(cuid())
+  identityId      String
+  identity        IdentityBinding @relation(fields: [identityId], references: [id])
+
+  oldWallet       String   // Previous wallet address
+  newWallet       String   // New wallet address
+
+  // Authorization
+  requestSignature    String   // Signature from old wallet authorizing rotation
+  requestMessage      String   // Message that was signed
+
+  // Status
+  status          KeyRotationStatus @default(PENDING)
+
+  // Cooldown tracking
+  requestedAt     DateTime @default(now())
+  effectiveAt     DateTime // When the new key becomes active (after cooldown)
+  completedAt     DateTime?
+  cancelledAt     DateTime?
+
+  // Notification tracking
+  networkNotified Boolean  @default(false)
+  notifiedAt      DateTime?
+
+  @@index([identityId])
+  @@index([status])
+}
+
+enum KeyRotationStatus {
+  PENDING     // Waiting for cooldown period
+  ACTIVE      // Cooldown complete, new key is active
+  CANCELLED   // Rotation cancelled before completion
+  REJECTED    // Rotation rejected (e.g., invalid signature)
+}
+
+// Agent endorsements (for peer evaluation system)
+model Endorsement {
+  id              String   @id @default(cuid())
+
+  endorserId      String
+  endorser        IdentityBinding @relation("endorser", fields: [endorserId], references: [id])
+
+  targetId        String
+  target          IdentityBinding @relation("target", fields: [targetId], references: [id])
+
+  // Which dimension is being endorsed
+  dimension       String   // "persistence" | "autonomy" | etc.
+
+  // Score adjustment (+1 to +3, or -1 to -3 for disagreement)
+  adjustment      Int      // Capped at ±3
+  confidence      String   @default("medium") // "high" | "medium" | "low"
+
+  // Evidence/rationale
+  rationale       String
+  evidenceUrl     String?
+
+  // Signature proving endorser authorized this
+  signature       String
+  messageHash     String
+
+  // Status
+  status          EndorsementStatus @default(PENDING)
+
+  // Timestamps
+  submittedAt     DateTime @default(now())
+  reviewedAt      DateTime?
+
+  @@unique([endorserId, targetId, dimension]) // One endorsement per dimension per pair
+  @@index([endorserId])
+  @@index([targetId])
+}
+
+enum EndorsementStatus {
+  PENDING     // Awaiting review
+  ACTIVE      // Applied to scores
+  CHALLENGED  // Under dispute
+  REJECTED    // Rejected by review
+  WITHDRAWN   // Withdrawn by endorser
+}
+
+// Challenges to endorsements or scores
+model Challenge {
+  id              String   @id @default(cuid())
+
+  challengerId    String
+  challenger      IdentityBinding @relation("challenger", fields: [challengerId], references: [id])
+
+  // What's being challenged
+  targetType      String   // "endorsement" | "score"
+  endorsementId   String?  // If challenging an endorsement
+  targetAgentId   String?  // If challenging a score directly
+  targetId        String
+  target          IdentityBinding @relation("challengeTarget", fields: [targetId], references: [id])
+  dimension       String?  // Which dimension if challenging score
+
+  // Challenge details
+  rationale       String
+  evidenceUrl     String?
+  proposedAdjustment Int?  // What the challenger thinks the score should be
+
+  // Stake (reputation at risk)
+  stakeAmount     Float    @default(0) // Reputation points staked
+
+  // Signature
+  signature       String
+  messageHash     String
+
+  // Resolution
+  status          ChallengeStatus @default(PENDING)
+  resolution      String?         // Explanation of outcome
+  resolvedBy      String?         // Who resolved it
+
+  // Timestamps
+  submittedAt     DateTime @default(now())
+  resolvedAt      DateTime?
+
+  @@index([challengerId])
+  @@index([targetId])
+  @@index([status])
+}
+
+enum ChallengeStatus {
+  PENDING     // Awaiting review
+  UPHELD      // Challenge successful, changes applied
+  REJECTED    // Challenge rejected
+  WITHDRAWN   // Withdrawn by challenger
+}
