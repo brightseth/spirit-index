@@ -76,11 +76,13 @@ export async function GET(request: NextRequest) {
         }
 
         // Score similarity (closer scores = more similar)
-        const agentScores = agent.scores || {} as Record<string, { value?: number }>;
-        const dims = ['persistence', 'autonomy', 'cultural_impact', 'economic_reality'] as const;
+        const agentScores = agent.scores || {};
+        const dims = ['persistence', 'autonomy', 'cultural_impact', 'economic_reality'];
         for (const dim of dims) {
-          const refVal = (refScores as Record<string, { value?: number }>)[dim]?.value || 5;
-          const agentVal = (agentScores as Record<string, { value?: number }>)[dim]?.value || 5;
+          // @ts-expect-error - dynamic key access
+          const refVal = refScores[dim]?.value || 5;
+          // @ts-expect-error - dynamic key access
+          const agentVal = agentScores[dim]?.value || 5;
           similarity += 10 - Math.abs(refVal - agentVal);
         }
 
