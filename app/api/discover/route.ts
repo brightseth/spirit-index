@@ -20,7 +20,7 @@ export async function GET(request: NextRequest) {
   const similarTo = searchParams.get('similar_to');
   const limit = Math.min(parseInt(searchParams.get('limit') || '20'), 100);
 
-  let agents = getAllAgents();
+  let agents = await getAllAgents();
 
   // If looking for similar agents, find the reference agent first
   let referenceAgent = null;

@@ -11,7 +11,7 @@ import { getAllAgents } from '@/lib/agents';
 export const dynamic = 'force-dynamic';
 
 export async function GET() {
-  const agents = getAllAgents();
+  const agents = await getAllAgents();
 
   // Flatten to minimal structure for LLM consumption
   const flatAgents = agents.map(agent => {

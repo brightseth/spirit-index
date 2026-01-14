@@ -18,7 +18,7 @@ export async function GET(
   const { agentId } = await params;
 
   // Check if agent is indexed
-  const agent = getAgentById(agentId);
+  const agent = await getAgentById(agentId);
   const indexed = !!agent;
 
   // Check identity verification status
