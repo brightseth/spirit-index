@@ -124,6 +124,7 @@ export async function GET(request: NextRequest) {
         profile_url: `https://spiritindex.org/${agent.id}`,
         api_url: `https://spiritindex.org/api/agents/${agent.id}`,
         // Include similarity score if calculated
+        // @ts-expect-error - _similarity added dynamically for similar_to queries
         ...(agent._similarity !== undefined && { similarity: agent._similarity })
       };
     }),
