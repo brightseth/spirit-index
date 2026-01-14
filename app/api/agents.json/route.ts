@@ -33,9 +33,10 @@ export async function GET() {
         persistence: scores.persistence?.value || 0,
         autonomy: scores.autonomy?.value || 0,
         cultural: scores.cultural_impact?.value || 0,
-        economic: scores.economic_sustainability?.value || 0,
+        economic: scores.economic_reality?.value || 0,
         governance: scores.governance?.value || 0,
-        technical: scores.technical?.value || 0
+        technical: scores.tech_distinctiveness?.value || 0,
+        narrative: scores.narrative_coherence?.value || 0
       }
     };
   });

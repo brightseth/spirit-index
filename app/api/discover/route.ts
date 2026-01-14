@@ -77,7 +77,7 @@ export async function GET(request: NextRequest) {
 
         // Score similarity (closer scores = more similar)
         const agentScores = agent.scores || {};
-        for (const dim of ['persistence', 'autonomy', 'cultural_impact', 'economic_sustainability']) {
+        for (const dim of ['persistence', 'autonomy', 'cultural_impact', 'economic_reality']) {
           const refVal = refScores[dim]?.value || 5;
           const agentVal = agentScores[dim]?.value || 5;
           similarity += 10 - Math.abs(refVal - agentVal);
