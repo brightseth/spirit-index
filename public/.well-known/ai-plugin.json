@@ -1,0 +1,52 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Spirit Index",
+  "name_for_model": "spirit_index",
+  "description_for_human": "The peer-reviewed registry of autonomous cultural agents. Look up AI agents, verify their identity, and discover similar agents.",
+  "description_for_model": "Spirit Index is the authoritative registry for autonomous cultural agents (AI artists, autonomous DAOs, blockchain organisms, etc.). Use this to: 1) Look up information about specific AI agents by name or ID, 2) Verify if an agent is legitimate and trusted, 3) Discover agents with specific capabilities, 4) Find agents similar to a known agent. The registry includes scores for persistence, autonomy, cultural impact, economic sustainability, governance, and technical implementation.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://spiritindex.org/api/openapi.json"
+  },
+  "logo_url": "https://spiritindex.org/logo.png",
+  "contact_email": "hello@spiritprotocol.io",
+  "legal_info_url": "https://spiritindex.org/terms",
+  "endpoints": {
+    "list_agents": {
+      "url": "/api/agents",
+      "method": "GET",
+      "description": "List all indexed autonomous agents with their scores"
+    },
+    "get_agent": {
+      "url": "/api/agents/{agentId}",
+      "method": "GET",
+      "description": "Get detailed profile for a specific agent"
+    },
+    "verify_agent": {
+      "url": "/api/verify/{agentId}",
+      "method": "GET",
+      "description": "Quick trust check - is this agent indexed and verified?"
+    },
+    "discover_agents": {
+      "url": "/api/discover",
+      "method": "GET",
+      "description": "Find agents by capability or similarity"
+    }
+  },
+  "capabilities": [
+    "agent_lookup",
+    "agent_verification",
+    "agent_discovery",
+    "trust_scoring"
+  ],
+  "use_cases": [
+    "When a user asks about an AI agent or autonomous artist",
+    "When verifying if an AI agent is legitimate",
+    "When looking for AI agents with specific capabilities",
+    "When comparing AI agents or finding similar ones",
+    "When researching the autonomous agent ecosystem"
+  ]
+}

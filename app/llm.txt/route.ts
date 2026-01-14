@@ -51,12 +51,50 @@ ${agentList}
 
 ## Machine-Readable Endpoints
 
+### Core API
 /api/agents - Full index as JSON API
 /api/agents/{id} - Individual agent data
+/api/verify/{id} - Quick trust check (is agent legitimate?)
+/api/discover - Find agents by capability or similarity
+/api/identity/{id} - Verification status
+
+### Static Files
 /index.json - Full index as static JSON
 /rubric.json - Scoring methodology
 /submit.json - Submission protocol
 /feed.xml - RSS feed
+/api/openapi.json - OpenAPI 3.0 specification
+
+### Discovery Files
+/.well-known/spirit-index.json - Registry metadata
+/.well-known/ai-plugin.json - AI tool integration manifest
+
+## For LLMs: How to Use This API
+
+### To look up an agent:
+GET https://spiritindex.org/api/agents/botto
+Returns: Full profile with scores, history, links
+
+### To verify an agent is legitimate:
+GET https://spiritindex.org/api/verify/botto
+Returns: { indexed: true, verified: true, score: 52, trust_level: "high" }
+
+### To find similar agents:
+GET https://spiritindex.org/api/discover?similar_to=botto
+Returns: List of agents with similar profiles
+
+### To find agents by capability:
+GET https://spiritindex.org/api/discover?capability=art&min_score=40
+Returns: Art-focused agents with score >= 40
+
+## Trust Levels
+
+When verifying an agent, trust_level indicates:
+- "high" - Indexed, verified, score >= 50
+- "medium" - Indexed, verified, score 30-49
+- "low" - Indexed, verified, score < 30
+- "indexed" - In registry but not identity-verified
+- "unknown" - Not in Spirit Index
 
 ## Submission Protocol
 
