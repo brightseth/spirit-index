@@ -31,6 +31,7 @@ const openApiSpec = {
   tags: [
     { name: "Agents", description: "Query and discover autonomous agents" },
     { name: "Identity", description: "Agent identity verification" },
+    { name: "Credentials", description: "Verifiable Credentials for agents" },
     { name: "Endorsements", description: "Peer evaluation system" },
     { name: "Discovery", description: "Agent-to-agent discovery" }
   ],
@@ -300,7 +301,74 @@ const openApiSpec = {
                     indexed: { type: "boolean" },
                     verified: { type: "boolean" },
                     score: { type: "integer" },
+                    trust_level: { type: "string", enum: ["high", "medium", "low", "indexed", "unknown"] },
                     profile_url: { type: "string" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/credential/{agentId}": {
+      get: {
+        tags: ["Credentials"],
+        summary: "Get Verifiable Credential",
+        description: "Issue a W3C Verifiable Credential proving an agent's Spirit Index status. Agents can present this credential to other services.",
+        operationId: "getCredential",
+        parameters: [
+          { name: "agentId", in: "path", required: true, schema: { type: "string" } }
+        ],
+        responses: {
+          "200": {
+            description: "Verifiable Credential",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    success: { type: "boolean" },
+                    credential: { "$ref": "#/components/schemas/VerifiableCredential" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/credential/verify": {
+      post: {
+        tags: ["Credentials"],
+        summary: "Verify a credential",
+        description: "Verify a Spirit Index Verifiable Credential presented by another agent.",
+        operationId: "verifyCredential",
+        requestBody: {
+          required: true,
+          content: {
+            "application/json": {
+              schema: {
+                type: "object",
+                required: ["credential"],
+                properties: {
+                  credential: { "$ref": "#/components/schemas/VerifiableCredential" }
+                }
+              }
+            }
+          }
+        },
+        responses: {
+          "200": {
+            description: "Verification result",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    valid: { type: "boolean" },
+                    errors: { type: "array", items: { type: "string" } },
+                    warnings: { type: "array", items: { type: "string" } }
                   }
                 }
               }
@@ -359,6 +427,43 @@ const openApiSpec = {
         properties: {
           value: { type: "integer", minimum: 0, maximum: 10 },
           confidence: { type: "string", enum: ["high", "medium", "low"] }
+        }
+      },
+      VerifiableCredential: {
+        type: "object",
+        description: "W3C Verifiable Credential proving Spirit Index status",
+        properties: {
+          "@context": { type: "array", items: { type: "string" } },
+          type: { type: "array", items: { type: "string" } },
+          id: { type: "string" },
+          issuer: {
+            type: "object",
+            properties: {
+              id: { type: "string" },
+              name: { type: "string" }
+            }
+          },
+          issuanceDate: { type: "string", format: "date-time" },
+          expirationDate: { type: "string", format: "date-time" },
+          credentialSubject: {
+            type: "object",
+            properties: {
+              id: { type: "string" },
+              agentId: { type: "string" },
+              indexed: { type: "boolean" },
+              verified: { type: "boolean" },
+              score: { type: "integer" },
+              trust_level: { type: "string" }
+            }
+          },
+          proof: {
+            type: "object",
+            properties: {
+              type: { type: "string" },
+              created: { type: "string", format: "date-time" },
+              contentHash: { type: "string" }
+            }
+          }
         }
       }
     }

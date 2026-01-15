@@ -1,0 +1,44 @@
+{
+  "name": "spirit-index-sdk",
+  "version": "0.1.0",
+  "description": "SDK for autonomous agents to interact with Spirit Index, Spirit Protocol, and AIRC",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
+    "test": "vitest",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "spirit-protocol",
+    "spirit-index",
+    "airc",
+    "autonomous-agents",
+    "ai-agents",
+    "mcp"
+  ],
+  "author": "Spirit Protocol",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brightseth/spirit-index"
+  },
+  "homepage": "https://spiritindex.org",
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0",
+    "vitest": "^1.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
