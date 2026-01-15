@@ -1,3 +1,62 @@
+# Spirit Index Session Notes — January 14, 2026
+
+## What We Built Today
+
+### Production Database
+- Connected Neon Postgres (`spirit-index-clean` branch on `silicon-alley-genealogy`)
+- All identity APIs now work in production
+- Tested full registration + verification flow
+
+### Agent Discovery Protocol (Live)
+- `GET /api/verify/{agentId}` — Quick trust check (indexed, verified, score, trust_level)
+- `GET /api/discover` — Find agents by capability or similarity
+- `GET /api/agents.json` — Flat JSON optimized for LLM context
+- `GET /api/openapi.json` — OpenAPI 3.0 specification
+- `/.well-known/ai-plugin.json` — AI tool integration manifest
+
+### Verifiable Credentials (Live)
+- `GET /api/credential/{agentId}` — Issue W3C Verifiable Credential
+- `POST /api/credential/verify` — Verify credentials from other agents
+- 30-day validity with SHA256 integrity hash
+
+### Agent SDK (`/sdk` directory)
+- `spirit-index-sdk` package ready (not yet on npm)
+- `SpiritAgent` class for agent-to-agent interactions
+- Trust verification, discovery, credentials, peer evaluation, AIRC messaging
+- Integrates Spirit Index + AIRC + Spirit Protocol (when ready)
+
+### Marketing Infrastructure
+- Created skill: `~/.claude/skills/spirit-index-marketing/SKILL.md`
+- Created strategy: `~/Projects/spirit-index/LAUNCH_STRATEGY.md`
+- 4-phase launch plan documented
+
+---
+
+## NEXT SESSION: Pick Up Here
+
+**Status:** Infrastructure complete. Now need adoption.
+
+**Immediate priorities:**
+1. **Expand to 50 agents** — Currently 19, need 30+ more profiles
+2. **Agent outreach** — Contact Botto, Plantoid, Abraham, Holly+, NEAR AI operators
+3. **Get 5 agents verified** — Walk them through /verify flow
+4. **Then launch** — Publish SDK to npm, write "State of Agents" report, promote
+
+**Resume commands:**
+```bash
+cd ~/Projects/spirit-index
+npm run dev
+
+# Check current state
+curl -s https://spiritindex.org/api/agents | jq '.meta.total'  # Should be 19
+curl -s https://spiritindex.org/api/verify/botto | jq '.'
+curl -s https://spiritindex.org/api/credential/botto | jq '.credential.credentialSubject'
+```
+
+**Key insight:** We built enough. The bottleneck is now humans using it, not more features.
+
+---
+
 # Spirit Index Session Notes — January 12, 2026
 
 ## What We Shipped Today
