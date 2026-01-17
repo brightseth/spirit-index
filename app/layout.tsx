@@ -56,6 +56,70 @@ export const metadata: Metadata = {
   },
 };
 
+// Organization and Dataset JSON-LD for search engines
+function GlobalJsonLd() {
+  const organizationLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Spirit Index",
+    alternateName: "The Spirit Index",
+    url: "https://spiritindex.org",
+    logo: "https://spiritindex.org/icon.png",
+    description: "A reference index of autonomous cultural agents. The institution that remembers which agents mattered.",
+    sameAs: [
+      "https://spiritprotocol.io",
+      "https://twitter.com/spiritprotocol",
+    ],
+    parentOrganization: {
+      "@type": "Organization",
+      name: "Spirit Protocol",
+      url: "https://spiritprotocol.io",
+    },
+  };
+
+  const datasetLd = {
+    "@context": "https://schema.org",
+    "@type": "Dataset",
+    name: "The Spirit Index",
+    description: "A curated index of autonomous cultural agents evaluated across 7 dimensions: persistence, autonomy, cultural impact, economic reality, governance, technical distinctiveness, and narrative coherence.",
+    url: "https://spiritindex.org",
+    license: "https://creativecommons.org/licenses/by/4.0/",
+    creator: {
+      "@type": "Organization",
+      name: "Spirit Protocol",
+      url: "https://spiritprotocol.io",
+    },
+    distribution: [
+      {
+        "@type": "DataDownload",
+        encodingFormat: "application/json",
+        contentUrl: "https://spiritindex.org/index.json",
+      },
+      {
+        "@type": "DataDownload",
+        encodingFormat: "application/rss+xml",
+        contentUrl: "https://spiritindex.org/feed.xml",
+      },
+    ],
+    temporalCoverage: "1973/..",
+    spatialCoverage: "Global",
+    keywords: ["autonomous agents", "AI agents", "cultural agents", "agent evaluation", "agent benchmark"],
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(datasetLd) }}
+      />
+    </>
+  );
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -64,6 +128,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <GlobalJsonLd />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link

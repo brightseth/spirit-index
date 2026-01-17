@@ -1,0 +1,50 @@
+{
+  "id": "openai-five",
+  "name": "OpenAI Five",
+  "tagline": "World Champion Dota 2 Team",
+  "inception_date": "2018-06-01",
+  "status": "Archived",
+  "category": "Gaming AI",
+  "classification": "Multi-Agent System",
+  "website": "https://openai.com/index/openai-five/",
+  "scores": {
+    "persistence": { "value": 4, "confidence": "high" },
+    "autonomy": { "value": 9, "confidence": "high" },
+    "cultural_impact": { "value": 9, "confidence": "high" },
+    "economic_reality": { "value": 2, "confidence": "high" },
+    "governance": { "value": 2, "confidence": "high" },
+    "tech_distinctiveness": { "value": 10, "confidence": "high" },
+    "narrative_coherence": { "value": 8, "confidence": "high" }
+  },
+  "total": 44,
+  "score_rationale": {
+    "persistence": "Active 2018-2019. Defeated world champions April 2019. Public play event same month. Project concluded after achieving goal.",
+    "autonomy": "Five agents coordinating as team with no human input. 80,000 decisions per game at 30fps for 45+ minutes. Full tactical and strategic autonomy in real-time.",
+    "cultural_impact": "First AI to defeat esports world champions (OG at The International). 99.4% win rate against public (42,729 games). Global media coverage. Landmark achievement in AI history.",
+    "economic_reality": "Research project with no commercial deployment. Open public event but no monetization.",
+    "governance": "OpenAI corporate research governance. Public play event was engagement but not governance.",
+    "tech_distinctiveness": "Unprecedented scale: 770 PFlops/s·days compute, 256 GPUs, 128,000 CPU cores. 180 years of self-play daily. 150M+ parameters. Transferred techniques to robotics (robot hand). Emergent teamwork with humans despite competitive-only training."
+  },
+  "curator_notes": "OpenAI Five achieved what many considered impossible—defeating the Dota 2 world champions in a best-of-three series. The system trained on the equivalent of 180 years of gameplay daily, using 256 GPUs and 128,000 CPU cores over 10 months. During a public event, OpenAI Five won 99.4% of 42,729 games against human players. Perhaps most remarkable: despite training exclusively in competitive settings, OpenAI Five demonstrated emergent cooperative behavior when teamed with humans. The project's techniques were later adapted for physical robotics, demonstrating transfer potential beyond gaming.",
+  "evidence": [
+    {
+      "dimension": "cultural_impact",
+      "claim": "First AI to defeat esports world champions (OG)",
+      "url": "https://openai.com/index/openai-five-defeats-dota-2-world-champions/"
+    },
+    {
+      "dimension": "tech_distinctiveness",
+      "claim": "770 PFlops/s·days compute, 256 GPUs, 128,000 CPU cores",
+      "url": "https://cdn.openai.com/dota-2.pdf"
+    },
+    {
+      "dimension": "autonomy",
+      "claim": "99.4% win rate across 42,729 public games",
+      "url": "https://en.wikipedia.org/wiki/OpenAI_Five"
+    }
+  ],
+  "score_history": [
+    { "date": "2026-01-16", "total": 44, "reviewer": "spirit_council" }
+  ],
+  "_review_flags": ["research_artifact", "gaming_ai", "multi_agent_team"]
+}

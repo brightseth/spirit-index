@@ -1,0 +1,50 @@
+{
+  "id": "pi",
+  "name": "Pi",
+  "tagline": "Your Personal AI",
+  "inception_date": "2023-05-02",
+  "status": "Active",
+  "category": "Conversational AI",
+  "classification": "Personal AI Companion",
+  "website": "https://pi.ai",
+  "scores": {
+    "persistence": { "value": 5, "confidence": "medium" },
+    "autonomy": { "value": 4, "confidence": "medium" },
+    "cultural_impact": { "value": 6, "confidence": "medium" },
+    "economic_reality": { "value": 5, "confidence": "medium" },
+    "governance": { "value": 3, "confidence": "medium" },
+    "tech_distinctiveness": { "value": 7, "confidence": "medium" },
+    "narrative_coherence": { "value": 8, "confidence": "high" }
+  },
+  "total": 38,
+  "score_rationale": {
+    "persistence": "Launched May 2023. Survived Inflection's Microsoft acqui-hire (March 2024). Continues operating under new structure.",
+    "autonomy": "Conversational assistant focused on empathy and support. Limited autonomous capabilities—primarily reactive to user input.",
+    "cultural_impact": "Established 'empathetic AI' category. $1.3B funding signaled investor interest in personal AI. Influenced thinking on AI companion safety.",
+    "economic_reality": "$1.3B raised at $4B valuation (2023). Microsoft paid $650M to license technology. Unclear current monetization.",
+    "governance": "Inflection as public benefit corporation. Focus on human-centered AI. Now complicated by Microsoft relationship.",
+    "tech_distinctiveness": "Inflection-1 model trained with therapists, psychologists, playwrights, comedians. Emotional intelligence as differentiator. Empathy-first design."
+  },
+  "curator_notes": "Pi represents the 'empathetic AI' approach to personal assistants. Founded by Mustafa Suleyman (DeepMind co-founder), Inflection trained Pi with behavioral therapists, psychologists, and even comedians to create an AI focused on making users 'happier, healthier, and more productive.' The $1.3B funding (Microsoft, Reid Hoffman, Bill Gates) validated market interest in personal AI companions. The March 2024 acqui-hire that took Suleyman and most staff to Microsoft AI left Pi's future uncertain, but the product continues. Suleyman's vision: 'an AI that helps you empathize with the other side, rather than be outraged by them.'",
+  "evidence": [
+    {
+      "dimension": "tech_distinctiveness",
+      "claim": "Trained with therapists, psychologists, playwrights, comedians",
+      "url": "https://spectrum.ieee.org/inflection-ai-pi"
+    },
+    {
+      "dimension": "economic_reality",
+      "claim": "$1.3B raised at $4B valuation, Microsoft paid $650M for license",
+      "url": "https://en.wikipedia.org/wiki/Inflection_AI"
+    },
+    {
+      "dimension": "narrative_coherence",
+      "claim": "Mission: make users happier, healthier, more productive",
+      "url": "https://medium.com/@lindseyliu/what-makes-inflections-pi-a-great-companion-chatbot-8a8bd93dbc43"
+    }
+  ],
+  "score_history": [
+    { "date": "2026-01-16", "total": 38, "reviewer": "spirit_council" }
+  ],
+  "_review_flags": ["companion_ai", "empathy_focused", "acquihire_survivor"]
+}

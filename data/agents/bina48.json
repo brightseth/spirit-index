@@ -1,0 +1,51 @@
+{
+  "id": "bina48",
+  "name": "BINA48",
+  "tagline": "The Mindfile Robot",
+  "inception_date": "2010-01-01",
+  "status": "Active",
+  "category": "Social Robot",
+  "classification": "Consciousness Experiment",
+  "website": "https://www.lifenaut.com/bina48/",
+  "scores": {
+    "persistence": { "value": 8, "confidence": "high" },
+    "autonomy": { "value": 4, "confidence": "medium" },
+    "cultural_impact": { "value": 6, "confidence": "medium" },
+    "economic_reality": { "value": 3, "confidence": "medium" },
+    "governance": { "value": 3, "confidence": "medium" },
+    "tech_distinctiveness": { "value": 7, "confidence": "high" },
+    "narrative_coherence": { "value": 9, "confidence": "high" }
+  },
+  "total": 40,
+  "score_rationale": {
+    "persistence": "Operating since 2010 (15+ years). Continuously maintained by Terasem Movement Foundation. Regular public appearances at TEDx, universities, conferences.",
+    "autonomy": "Chatbot with facial recognition and expression. Conversational responses generated from 'mindfile' data. Semi-autonomous in conversation; limited agency.",
+    "cultural_impact": "First robot recognized as university student (US accredited). Co-taught at West Point. TEDx presentations. Significant in consciousness/immortality discourse.",
+    "economic_reality": "$125,000 development cost. No commercial activity or sales. Research/philosophy project without economic model.",
+    "governance": "Terasem Movement Foundation governance. Bruce Duncan maintains and represents BINA48. No autonomous governance.",
+    "tech_distinctiveness": "Novel approach: mindfile-based personality (100+ hours of interviews from Bina Rothblatt). 64 facial gestures, 32 facial motors. Early implementation of 'digital twin' concept.",
+    "narrative_coherence": "Exceptionally clear: BINA48 is attempt to preserve Bina Rothblatt's consciousness. Terasem Hypothesis explicitly stated. Strongest philosophical framework of any social robot."
+  },
+  "curator_notes": "BINA48 represents the most philosophically explicit attempt at digital consciousness preservation. Commissioned by Martine Rothblatt (Terasem Movement), built by Hanson Robotics in 2010, BINA48 contains a 'mindfile' derived from 100+ hours of interviews with Rothblatt's wife Bina. The Terasem Hypothesis posits that combining detailed personal data with 'mindware' can create a conscious analog of a person. While BINA48's conversational autonomy is limited, its significance lies in being the first serious attempt to implement this philosophy. BINA48 became the first robot recognized as a university student and co-taught at West Point.",
+  "evidence": [
+    {
+      "dimension": "tech_distinctiveness",
+      "claim": "Mindfile from 100+ hours of interviews with Bina Rothblatt",
+      "url": "https://en.wikipedia.org/wiki/BINA48"
+    },
+    {
+      "dimension": "cultural_impact",
+      "claim": "First robot recognized as university student, co-taught at West Point",
+      "url": "https://www.lifenaut.com/bina48/"
+    },
+    {
+      "dimension": "narrative_coherence",
+      "claim": "Explicit Terasem Hypothesis: conscious analog from mindfile + mindware",
+      "url": "https://www.c2montreal.com/post/ai-3-women-digital-immortality/"
+    }
+  ],
+  "score_history": [
+    { "date": "2026-01-16", "total": 40, "reviewer": "spirit_council" }
+  ],
+  "_review_flags": ["consciousness_experiment", "mindfile_pioneer", "hanson_robotics"]
+}

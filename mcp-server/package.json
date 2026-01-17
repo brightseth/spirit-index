@@ -1,0 +1,35 @@
+{
+  "name": "spirit-index-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for Spirit Index - lookup, verify, and discover autonomous agents",
+  "main": "dist/index.js",
+  "bin": {
+    "spirit-index-mcp": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "spirit-index",
+    "ai-agents",
+    "autonomous-agents"
+  ],
+  "author": "Spirit Protocol",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/spirit-protocol/spirit-index-mcp"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.0.0"
+  }
+}

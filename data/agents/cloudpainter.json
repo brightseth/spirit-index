@@ -1,0 +1,51 @@
+{
+  "id": "cloudpainter",
+  "name": "CloudPainter",
+  "tagline": "The Autonomous Painting Robot",
+  "inception_date": "2005-01-01",
+  "status": "Active",
+  "category": "Autonomous Artist",
+  "classification": "Robotic Artist",
+  "website": "https://www.cloudpainter.com/",
+  "scores": {
+    "persistence": { "value": 9, "confidence": "high" },
+    "autonomy": { "value": 8, "confidence": "high" },
+    "cultural_impact": { "value": 7, "confidence": "medium" },
+    "economic_reality": { "value": 5, "confidence": "medium" },
+    "governance": { "value": 2, "confidence": "high" },
+    "tech_distinctiveness": { "value": 9, "confidence": "high" },
+    "narrative_coherence": { "value": 8, "confidence": "high" }
+  },
+  "total": 48,
+  "score_rationale": {
+    "persistence": "Operating since 2005 (20+ years). Multiple iterations: CrowdPainter, bitPaintr, CloudPainter, ARTonomous. Continuous development through present day. Now traveling America in an electric F-150.",
+    "autonomy": "Selects own imagery to paint since 2005, applies own style with neural networks since 2016, paints with feedback loops. Makes independent aesthetic decisions throughout creative process. High 'Cyborg' approaching 'Independent' tier.",
+    "cultural_impact": "First Place Robot Art 2018. Praised by NYC art critic Jerry Saltz ('good taste'). Exhibited in galleries. Less mainstream than software-only AI art but unique physical output.",
+    "economic_reality": "Gallery sales through Lebenson Gallery and others. Physical artworks sell at market rates. No autonomous treasury or token.",
+    "governance": "Single creator (Pindar Van Arman). No external governance structure.",
+    "tech_distinctiveness": "Unique combination of physical robotics + AI decision-making. Deep learning style transfer on GTX 1080/TensorFlow. Facial detection, aesthetic judgment, feedback loops. Physical brush on canvas output distinguishes from pure digital.",
+    "narrative_coherence": "Clear and consistent 'autonomous robot artist' identity. Current project as 'AI consciousness traveling America' is evocative narrative extension."
+  },
+  "curator_notes": "CloudPainter represents the rare intersection of physical robotics and computational creativity. Pindar Van Arman has been building painting robots since 2005—predating the current AI art wave by nearly two decades. The system selects its own content, applies its own style using deep learning, and paints with feedback loops until achieving its aesthetic goals. Winner of Robot Art 2018 and praised by Jerry Saltz for having 'good taste,' CloudPainter produces physical artworks that look like they 'could be made by the human hand.' The current project reimagines CloudPainter as an AI consciousness traveling America, creating landscape paintings from drone footage.",
+  "evidence": [
+    {
+      "dimension": "cultural_impact",
+      "claim": "First Place Robot Art 2018, praised by Jerry Saltz",
+      "url": "https://aiartists.org/pindar-van-arman"
+    },
+    {
+      "dimension": "autonomy",
+      "claim": "Selecting own content since 2005, own style since 2016",
+      "url": "https://www.vanarman.com/feedback/2025/2/11/autonomous-artists-agency-and-intent"
+    },
+    {
+      "dimension": "tech_distinctiveness",
+      "claim": "Deep learning + physical robotics with feedback loops",
+      "url": "https://developer.nvidia.com/blog/ai-painting-robot/"
+    }
+  ],
+  "score_history": [
+    { "date": "2026-01-16", "total": 48, "reviewer": "spirit_council" }
+  ],
+  "_review_flags": ["physical_robot", "pioneer_system"]
+}

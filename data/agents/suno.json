@@ -1,0 +1,50 @@
+{
+  "id": "suno",
+  "name": "Suno",
+  "tagline": "AI Music for Everyone",
+  "inception_date": "2023-12-01",
+  "status": "Active",
+  "category": "Autonomous Composer",
+  "classification": "Generative Platform",
+  "website": "https://suno.com",
+  "scores": {
+    "persistence": { "value": 5, "confidence": "medium" },
+    "autonomy": { "value": 5, "confidence": "high" },
+    "cultural_impact": { "value": 9, "confidence": "high" },
+    "economic_reality": { "value": 8, "confidence": "high" },
+    "governance": { "value": 3, "confidence": "medium" },
+    "tech_distinctiveness": { "value": 8, "confidence": "high" },
+    "narrative_coherence": { "value": 6, "confidence": "medium" }
+  },
+  "total": 44,
+  "score_rationale": {
+    "persistence": "Launched late 2023, ~2 years operational. Rapid iteration (v4.5 in May 2025). Well-funded with hundreds of millions raised. Strong trajectory.",
+    "autonomy": "Generates complete songs from text prompts. Tool that enables creation rather than autonomous creator. Users direct the generation. 'Assisted' tier.",
+    "cultural_impact": "First AI music on Billboard charts (Breaking Rust #1 Country Digital, #9 Emerging Artists). Professional songwriters using daily. $3M record deal signed (Xania Monet). Reshaping music industry.",
+    "economic_reality": "Hundreds of millions in funding. First AI-creator record deal. $500M lawsuit settlement with Warner Music Group (2025). Major commercial entity with real industry impact.",
+    "governance": "Corporate governance. Warner Music Group now has ownership stakes per settlement. No community governance.",
+    "tech_distinctiveness": "v4.5: 1,200+ genres, 8-minute tracks, 44.1kHz studio quality. Stem editing, vocal/instrumental separation. Most advanced consumer-facing AI music generation."
+  },
+  "curator_notes": "Suno represents the commercialization breakthrough for AI music generation. Unlike research systems like Jukebox, Suno has achieved mainstream adoption—Recording Academy CEO Harvey Mason Jr. says 'every' songwriter he knows has used it. 2025 milestones: Breaking Rust became first AI act to top a Billboard chart; Hallwood Media signed AI artist Xania Monet for $3M; Suno settled with Warner Music Group for $500M. The platform's v4.5 supports 1,200+ genres and 8-minute tracks at studio quality. While Suno is a tool (users prompt) rather than autonomous agent, its cultural impact on music creation is undeniable.",
+  "evidence": [
+    {
+      "dimension": "cultural_impact",
+      "claim": "First AI music on Billboard charts (Breaking Rust #1 Country Digital)",
+      "url": "https://www.billboard.com/lists/biggest-ai-music-stories-2025-suno-udio-charts-more/"
+    },
+    {
+      "dimension": "economic_reality",
+      "claim": "$500M Warner Music settlement, $3M record deal signed",
+      "url": "https://en.wikipedia.org/wiki/Suno_(platform)"
+    },
+    {
+      "dimension": "tech_distinctiveness",
+      "claim": "v4.5: 1,200+ genres, 8-minute tracks, stem editing",
+      "url": "https://danwilreyes.medium.com/suno-ai-v4-5-revolutionizes-music-creation-in-2025-0d418f9767cb"
+    }
+  ],
+  "score_history": [
+    { "date": "2026-01-16", "total": 44, "reviewer": "spirit_council" }
+  ],
+  "_review_flags": ["tool_not_agent", "music_generation", "commercial_breakthrough"]
+}

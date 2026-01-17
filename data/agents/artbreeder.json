@@ -1,0 +1,51 @@
+{
+  "id": "artbreeder",
+  "name": "Artbreeder",
+  "tagline": "Collaborative Image Evolution",
+  "inception_date": "2018-01-01",
+  "status": "Active",
+  "category": "Generative Platform",
+  "classification": "Collaborative GAN Platform",
+  "website": "https://www.artbreeder.com",
+  "scores": {
+    "persistence": { "value": 7, "confidence": "high" },
+    "autonomy": { "value": 4, "confidence": "high" },
+    "cultural_impact": { "value": 6, "confidence": "medium" },
+    "economic_reality": { "value": 5, "confidence": "medium" },
+    "governance": { "value": 4, "confidence": "medium" },
+    "tech_distinctiveness": { "value": 7, "confidence": "high" },
+    "narrative_coherence": { "value": 7, "confidence": "high" }
+  },
+  "total": 40,
+  "score_rationale": {
+    "persistence": "Launched 2018 as Ganbreeder, rebranded to Artbreeder. 7+ years operation. Continuous tool additions (Composer, Collager, Mixer, Poser).",
+    "autonomy": "Users direct image breeding/mixing. Platform provides GAN infrastructure but no autonomous creation. Community-directed evolution.",
+    "cultural_impact": "Pioneer of collaborative AI art. Predates Midjourney/DALL-E. Influential on generative art community. Less mainstream visibility than later services.",
+    "economic_reality": "Freemium model with subscriptions. Small team (Morphogen collective). Sustainable but not high-growth.",
+    "governance": "Community contributes to shared image database. All images publicly remixable by default. Proto-commons model.",
+    "tech_distinctiveness": "Unique 'breeding' metaphor: images have genes, can be crossbred. StyleGAN + BigGAN infrastructure. Iterative evolutionary approach vs one-shot generation.",
+    "narrative_coherence": "Clear 'collaborative breeding' concept. Biological evolution metaphor consistent throughout. Distinct identity from prompt-based generators."
+  },
+  "curator_notes": "Artbreeder pioneered the collaborative approach to AI art generation. Founded by Joël Simon (Morphogen collective) in 2018 as Ganbreeder, it predates the DALL-E/Midjourney wave by years. The platform's unique 'breeding' metaphor treats images as organisms with genes (slider parameters) that can be crossbred with any public image. This creates evolutionary, community-driven image creation rather than prompt-response generation. While less commercially successful than later services, Artbreeder's influence on generative art methodology—iterative, collaborative, evolutionary—remains significant. Recent updates integrate SD-XL and ControlNet.",
+  "evidence": [
+    {
+      "dimension": "persistence",
+      "claim": "Launched 2018 as Ganbreeder, 7+ years operation",
+      "url": "https://en.wikipedia.org/wiki/Artbreeder"
+    },
+    {
+      "dimension": "tech_distinctiveness",
+      "claim": "Unique breeding/crossbreeding metaphor with gene sliders",
+      "url": "https://www.zignuts.com/ai/artbreeder"
+    },
+    {
+      "dimension": "cultural_impact",
+      "claim": "Pioneer of collaborative AI art, predates Midjourney/DALL-E",
+      "url": "https://www.techradar.com/pro/what-is-artbreeder-everything-we-know-about-the-ai-art-platform"
+    }
+  ],
+  "score_history": [
+    { "date": "2026-01-16", "total": 40, "reviewer": "spirit_council" }
+  ],
+  "_review_flags": ["tool_not_agent", "collaborative_platform", "pioneer"]
+}

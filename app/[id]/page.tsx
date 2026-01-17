@@ -1,9 +1,69 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Metadata } from "next";
 import { getAgentById, getAllAgentIds } from "@/lib/agents";
 import { DIMENSIONS, DimensionKey, Agent, ScoreRationale } from "@/lib/types";
 import { RadarChart } from "@/app/components/RadarChart";
 import { ScoreHistoryChart } from "@/app/components/ScoreHistoryChart";
+
+const siteUrl = "https://spiritindex.org";
+
+// Generate dynamic metadata for each agent
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { id } = await params;
+  const agent = await getAgentById(id);
+
+  if (!agent) {
+    return {
+      title: "Agent Not Found",
+    };
+  }
+
+  const title = `${agent.name} — ${agent.total}/70`;
+  const description = `${agent.tagline}. ${agent.curator_notes.substring(0, 150)}...`;
+
+  // Extract string-only review flags for keywords
+  const stringFlags = (agent._review_flags || [])
+    .filter((f) => typeof f === "string") as string[];
+
+  return {
+    title,
+    description,
+    keywords: [
+      agent.name,
+      agent.category,
+      agent.classification,
+      "autonomous agent",
+      "AI agent",
+      "Spirit Index",
+      ...stringFlags,
+    ],
+    openGraph: {
+      title: `${agent.name} | Spirit Index`,
+      description,
+      url: `${siteUrl}/${agent.id}`,
+      siteName: "The Spirit Index",
+      type: "article",
+      images: [
+        {
+          url: `${siteUrl}/og-image?id=${agent.id}`,
+          width: 1200,
+          height: 630,
+          alt: `${agent.name} - ${agent.tagline}`,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${agent.name} — ${agent.total}/70`,
+      description,
+      images: [`${siteUrl}/og-image?id=${agent.id}`],
+    },
+    alternates: {
+      canonical: `${siteUrl}/${agent.id}`,
+    },
+  };
+}
 
 // Helper to format the last reviewed date
 function getLastReviewed(agent: Agent): string {
@@ -30,6 +90,84 @@ export async function generateStaticParams() {
   return ids.map((id) => ({ id }));
 }
 
+// JSON-LD structured data for search engines
+function AgentJsonLd({ agent }: { agent: Agent }) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Thing",
+    "@id": `${siteUrl}/${agent.id}`,
+    name: agent.name,
+    description: agent.curator_notes,
+    url: agent.website,
+    alternateName: agent.tagline,
+    additionalType: "https://spiritprotocol.io/ontology/AutonomousAgent",
+    identifier: {
+      "@type": "PropertyValue",
+      propertyID: "spirit-index-id",
+      value: agent.id,
+    },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: agent.total,
+      bestRating: 70,
+      worstRating: 0,
+      ratingCount: agent.score_history.length,
+    },
+    dateCreated: agent.inception_date,
+    dateModified: agent.score_history[agent.score_history.length - 1]?.date,
+    category: agent.category,
+    keywords: [agent.classification, agent.category, ...((agent._review_flags || []).filter((f) => typeof f === "string") as string[])].join(", "),
+    isPartOf: {
+      "@type": "Dataset",
+      name: "The Spirit Index",
+      url: siteUrl,
+      description: "A reference index of autonomous cultural agents",
+    },
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+    />
+  );
+}
+
+// Breadcrumb JSON-LD
+function BreadcrumbJsonLd({ agent }: { agent: Agent }) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Spirit Index",
+        item: siteUrl,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: agent.category,
+        item: `${siteUrl}/leaderboard/total`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: agent.name,
+        item: `${siteUrl}/${agent.id}`,
+      },
+    ],
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+    />
+  );
+}
+
 export default async function AgentDossier({ params }: Props) {
   const { id } = await params;
   const agent = await getAgentById(id);
@@ -42,6 +180,8 @@ export default async function AgentDossier({ params }: Props) {
 
   return (
     <div className="min-h-screen">
+      <AgentJsonLd agent={agent} />
+      <BreadcrumbJsonLd agent={agent} />
       {/* Masthead */}
       <header className="masthead">
         <div className="container">

@@ -1,0 +1,51 @@
+{
+  "id": "brutus",
+  "name": "BRUTUS",
+  "tagline": "The Storytelling Machine",
+  "inception_date": "1998-01-01",
+  "status": "Archived",
+  "category": "Autonomous Writer",
+  "classification": "Rule-Based Creator",
+  "website": "https://www.routledge.com/Artificial-Intelligence-and-Literary-Creativity-Inside-the-Mind-of-Brutus/Bringsjord-Ferrucci/p/book/9780805819878",
+  "scores": {
+    "persistence": { "value": 4, "confidence": "medium" },
+    "autonomy": { "value": 6, "confidence": "high" },
+    "cultural_impact": { "value": 6, "confidence": "medium" },
+    "economic_reality": { "value": 2, "confidence": "high" },
+    "governance": { "value": 2, "confidence": "high" },
+    "tech_distinctiveness": { "value": 8, "confidence": "high" },
+    "narrative_coherence": { "value": 7, "confidence": "medium" }
+  },
+  "total": 35,
+  "score_rationale": {
+    "persistence": "Active research project in late 1990s-early 2000s. Academic system, not continuously maintained. Limited operational lifespan compared to AARON or EMI.",
+    "autonomy": "Generated complete short stories autonomously in seconds. Theme-constrained (betrayal/deception, university settings). Independent execution within defined domain. 'Cyborg' tier.",
+    "cultural_impact": "Academic significance in AI creativity discourse. In competition, only 25% of 2,000 voters identified computer-generated story. Less mainstream impact than AARON or EMI.",
+    "economic_reality": "Academic research project with no commercial output or treasury. Book published but system itself generated no economic activity.",
+    "governance": "Two-person academic team (Bringsjord and Ferrucci). Research project governance only.",
+    "tech_distinctiveness": "Logic-based approach explicitly rejecting neural networks. Unique focus on literary themes (betrayal) rather than style imitation. Generated grammatically correct prose in seconds.",
+    "narrative_coherence": "Clear identity as betrayal-focused storyteller. Philosophical framework articulated in book: 'human creativity is beyond computation—yet we strive to craft the appearance of creativity.'"
+  },
+  "curator_notes": "BRUTUS represents the logic-based school of AI creativity, explicitly rejecting neural networks in favor of rule-based generation. Created by Selmer Bringsjord (RPI) and David Ferrucci (IBM Watson), BRUTUS.1 could generate complete stories of betrayal and deception in seconds. While less famous than AARON or EMI, BRUTUS contributed to the philosophical discourse on machine creativity. Notably, Ferrucci later led IBM's Watson Jeopardy project.",
+  "evidence": [
+    {
+      "dimension": "tech_distinctiveness",
+      "claim": "Logic-based approach, explicitly rejecting neural networks",
+      "url": "https://grandtextauto.soe.ucsc.edu/2008/03/06/ep-73-brutus/"
+    },
+    {
+      "dimension": "cultural_impact",
+      "claim": "Only 25% of 2,000 voters identified computer-generated story",
+      "url": "https://www.brownalumnimagazine.com/articles/2007-06-22/the-end-of-writers-block-selmer-bringsjord-87-phd"
+    },
+    {
+      "dimension": "narrative_coherence",
+      "claim": "Book documenting philosophical approach published 2000",
+      "url": "https://www.amazon.com/Artificial-Intelligence-Literary-Creativity-Storytelling/dp/080581986X"
+    }
+  ],
+  "score_history": [
+    { "date": "2026-01-16", "total": 35, "reviewer": "spirit_council" }
+  ],
+  "_review_flags": ["historical_agent", "academic_project"]
+}

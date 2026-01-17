@@ -1,0 +1,51 @@
+{
+  "id": "jukebox",
+  "name": "Jukebox",
+  "tagline": "Raw Audio Music Generation",
+  "inception_date": "2020-04-01",
+  "status": "Archived",
+  "category": "Autonomous Composer",
+  "classification": "Neural Network System",
+  "website": "https://openai.com/index/jukebox/",
+  "scores": {
+    "persistence": { "value": 5, "confidence": "high" },
+    "autonomy": { "value": 5, "confidence": "high" },
+    "cultural_impact": { "value": 7, "confidence": "high" },
+    "economic_reality": { "value": 2, "confidence": "high" },
+    "governance": { "value": 2, "confidence": "high" },
+    "tech_distinctiveness": { "value": 9, "confidence": "high" },
+    "narrative_coherence": { "value": 5, "confidence": "medium" }
+  },
+  "total": 35,
+  "score_rationale": {
+    "persistence": "Released April 2020 with open-source code and weights. Active exploration by community but not actively maintained by OpenAI. Research artifact status.",
+    "autonomy": "Generates music autonomously given genre/artist/lyrics prompts. No continuous operation or self-direction. Tool rather than agent.",
+    "cultural_impact": "Landmark in AI music generation. First to generate raw audio with rudimentary singing at scale. Widely discussed in AI art discourse. Open-source release expanded impact.",
+    "economic_reality": "No economic activity. Research project with public code release. No token, treasury, or sales.",
+    "governance": "OpenAI corporate governance. No community governance structure. Research project model.",
+    "tech_distinctiveness": "Revolutionary: raw audio generation (not MIDI). Trained on 1.2M songs using 512 V100 GPUs. Autoencoder compression + upsampling architecture. 9 hours to render 1 minute of audio shows computational scale.",
+    "narrative_coherence": "Identity as 'OpenAI research project' rather than autonomous entity. Preceded by MuseNet. Superseded by later models. Limited narrative continuity."
+  },
+  "curator_notes": "Jukebox represents OpenAI's landmark contribution to AI music generation—the first system to generate raw audio music including rudimentary vocals at scale. Trained on 1.2 million songs using 512 NVIDIA V100 GPUs for four weeks, Jukebox generates in multiple genres and can mimic artist styles. The computational requirements (9 hours to render 1 minute) reflect the difficulty of raw audio generation versus symbolic (MIDI) approaches. While more tool than agent, Jukebox's open-source release enabled significant community exploration and established a baseline for AI music generation research.",
+  "evidence": [
+    {
+      "dimension": "tech_distinctiveness",
+      "claim": "Trained on 1.2M songs using 512 V100 GPUs",
+      "url": "https://openai.com/index/jukebox/"
+    },
+    {
+      "dimension": "cultural_impact",
+      "claim": "Open-source release with weights and code",
+      "url": "https://github.com/openai/jukebox"
+    },
+    {
+      "dimension": "tech_distinctiveness",
+      "claim": "First raw audio generation with rudimentary singing",
+      "url": "https://cdn.openai.com/papers/jukebox.pdf"
+    }
+  ],
+  "score_history": [
+    { "date": "2026-01-16", "total": 35, "reviewer": "spirit_council" }
+  ],
+  "_review_flags": ["research_artifact", "tool_not_agent"]
+}

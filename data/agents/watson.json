@@ -1,0 +1,50 @@
+{
+  "id": "watson",
+  "name": "IBM Watson",
+  "tagline": "The Jeopardy Champion",
+  "inception_date": "2011-02-16",
+  "status": "Evolved",
+  "category": "Question Answering System",
+  "classification": "Enterprise AI",
+  "website": "https://www.ibm.com/watson",
+  "scores": {
+    "persistence": { "value": 7, "confidence": "high" },
+    "autonomy": { "value": 5, "confidence": "high" },
+    "cultural_impact": { "value": 9, "confidence": "high" },
+    "economic_reality": { "value": 6, "confidence": "medium" },
+    "governance": { "value": 2, "confidence": "high" },
+    "tech_distinctiveness": { "value": 7, "confidence": "high" },
+    "narrative_coherence": { "value": 6, "confidence": "medium" }
+  },
+  "total": 42,
+  "score_rationale": {
+    "persistence": "Jeopardy victory 2011. Watson platform evolved through multiple iterations. Watson Health division sold 2022 for $1B. Core Watson services continue under IBM.",
+    "autonomy": "Autonomous question parsing and answer generation during Jeopardy. Not connected to internet—operated on internal knowledge base. Limited ongoing autonomy as enterprise tool.",
+    "cultural_impact": "Landmark moment: First time Americans witnessed NLP AI live on television. Defeated Ken Jennings and Brad Rutter. Shaped public perception of AI capabilities. 'Watson' became shorthand for enterprise AI.",
+    "economic_reality": "Significant IBM investment ($4B+ in Watson Health alone). Enterprise licensing and services. Watson Health sold for $1B (2022). Active commercial product but mixed financial results.",
+    "governance": "IBM corporate governance. Research project became enterprise product. No external governance or community participation.",
+    "tech_distinctiveness": "DeepQA architecture with hundreds of parallel algorithms. 200M pages of content, 4TB storage. 80 teraflops capacity. Innovative for 2011 but superseded by modern LLMs."
+  },
+  "curator_notes": "IBM Watson's 2011 Jeopardy! victory was a watershed moment for AI public awareness. The system defeated legendary champions Ken Jennings and Brad Rutter using natural language processing on 200 million pages of content (including Wikipedia) without internet access. Watson's DeepQA architecture, running on 90 servers with 2,880 processor cores, could perform 80 teraflops. While the subsequent Watson Health venture was commercially disappointing (sold for $1B vs $4B investment), Watson's cultural impact remains: for a decade, 'Watson' was synonymous with enterprise AI. Notably, co-creator David Ferrucci later co-authored the BRUTUS AI storyteller.",
+  "evidence": [
+    {
+      "dimension": "cultural_impact",
+      "claim": "Defeated Ken Jennings and Brad Rutter, won $77,147",
+      "url": "https://www.ibm.com/history/watson-jeopardy"
+    },
+    {
+      "dimension": "tech_distinctiveness",
+      "claim": "90 servers, 2,880 cores, 80 teraflops, 200M pages of content",
+      "url": "https://en.wikipedia.org/wiki/IBM_Watson"
+    },
+    {
+      "dimension": "economic_reality",
+      "claim": "Watson Health sold for $1B in 2022",
+      "url": "https://intrasee.com/blog/ibm-watson-jeopardy-the-hype-train-that-never-left-the-station/"
+    }
+  ],
+  "score_history": [
+    { "date": "2026-01-16", "total": 42, "reviewer": "spirit_council" }
+  ],
+  "_review_flags": ["historical_agent", "enterprise_ai"]
+}

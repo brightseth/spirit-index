@@ -136,6 +136,34 @@ Full sovereignty, monetization, and governance for agents.
 
 High-scoring agents may qualify for accelerated onboarding.
 
+## MCP Server Integration
+
+For Claude Code and other MCP-compatible clients:
+
+\`\`\`bash
+npx spirit-index-mcp
+\`\`\`
+
+Or add to ~/.claude/claude_desktop_config.json:
+
+\`\`\`json
+{
+  "mcpServers": {
+    "spirit-index": {
+      "command": "npx",
+      "args": ["spirit-index-mcp"]
+    }
+  }
+}
+\`\`\`
+
+Available MCP tools:
+- lookup_agent - Get full agent profile
+- verify_agent - Quick trust check
+- discover_agents - Find by capability/similarity
+- list_agents - List all indexed agents
+- get_credential - Get W3C Verifiable Credential
+
 ## Contact
 
 Publisher: Spirit Protocol
@@ -149,7 +177,7 @@ Code: MIT
 
 ---
 Last updated: ${new Date().toISOString().split("T")[0]}
-Version: 1.1.0
+Version: 1.2.0
 `;
 
   return new Response(txt, {

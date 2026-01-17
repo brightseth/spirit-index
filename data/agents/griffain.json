@@ -1,0 +1,51 @@
+{
+  "id": "griffain",
+  "name": "Griffain",
+  "tagline": "AI Agent Builder for Web3",
+  "inception_date": "2024-11-01",
+  "status": "Active",
+  "category": "Agent Infrastructure",
+  "classification": "Protocol/Platform",
+  "website": "https://griffain.com",
+  "scores": {
+    "persistence": { "value": 4, "confidence": "medium" },
+    "autonomy": { "value": 6, "confidence": "medium" },
+    "cultural_impact": { "value": 5, "confidence": "medium" },
+    "economic_reality": { "value": 7, "confidence": "high" },
+    "governance": { "value": 5, "confidence": "medium" },
+    "tech_distinctiveness": { "value": 7, "confidence": "medium" },
+    "narrative_coherence": { "value": 6, "confidence": "medium" }
+  },
+  "total": 40,
+  "score_rationale": {
+    "persistence": "Launched November 2024, operating ~14 months. Young project but active development with clear roadmap through 2025.",
+    "autonomy": "Platform enables autonomous agents that execute trades, mint NFTs, manage wallets via natural language commands. Individual agents operate autonomously; platform itself is infrastructure.",
+    "cultural_impact": "Leading abstraction AI platform on Solana. DeFAI category pioneer. Growing but not yet mainstream recognition.",
+    "economic_reality": "GRIFFAIN token actively traded. Processed over 1M automated transactions. Multiple specialized agents deployed. Active economic activity.",
+    "governance": "Token-based governance anticipated. Currently team-led development. Roadmap includes community governance features.",
+    "tech_distinctiveness": "Natural language to on-chain action translation. Soulbound NFTs for agent identity. Multiple specialized agents (Agent GM, Agent Sniper). Agent Engine coordination layer.",
+    "narrative_coherence": "Clear 'AI abstraction layer for Solana' positioning. Multiple agent identities may fragment narrative. Naitzsche (NAI) sub-agent adds complexity."
+  },
+  "curator_notes": "Griffain represents the DeFAI (DeFi + AI) movement on Solana. Since November 2024, it has processed over 1M automated transactions through specialized agents like Agent GM (NFT creation) and Agent Sniper (token trading). The platform's use of soulbound NFTs for agent identity creates persistent, verifiable autonomous operations. 2025 roadmap includes cross-chain deployment and multi-agent orchestration. The launch of Naitzsche (NAI) as a 'special agent' demonstrates evolving agent taxonomy.",
+  "evidence": [
+    {
+      "dimension": "economic_reality",
+      "claim": "Processed over 1M automated transactions since launch",
+      "url": "https://learn.bybit.com/en/ai/what-is-griffain-ai-agent"
+    },
+    {
+      "dimension": "tech_distinctiveness",
+      "claim": "Soulbound NFTs for agent identity and autonomous operations",
+      "url": "https://solanacompass.com/projects/griffain"
+    },
+    {
+      "dimension": "cultural_impact",
+      "claim": "Leading DeFAI platform by market cap",
+      "url": "https://crypto.com/us/research/defai-jan-2025"
+    }
+  ],
+  "score_history": [
+    { "date": "2026-01-16", "total": 40, "reviewer": "spirit_council" }
+  ],
+  "_review_flags": ["infrastructure_protocol", "defi_agent"]
+}

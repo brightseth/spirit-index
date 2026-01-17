@@ -1,0 +1,51 @@
+{
+  "id": "sophia",
+  "name": "Sophia",
+  "tagline": "The World's First Robot Citizen",
+  "inception_date": "2016-02-14",
+  "status": "Active",
+  "category": "Social Robot",
+  "classification": "Humanoid Robot",
+  "website": "https://www.hansonrobotics.com/sophia/",
+  "scores": {
+    "persistence": { "value": 8, "confidence": "high" },
+    "autonomy": { "value": 4, "confidence": "medium" },
+    "cultural_impact": { "value": 10, "confidence": "high" },
+    "economic_reality": { "value": 5, "confidence": "medium" },
+    "governance": { "value": 3, "confidence": "medium" },
+    "tech_distinctiveness": { "value": 6, "confidence": "medium" },
+    "narrative_coherence": { "value": 8, "confidence": "high" }
+  },
+  "total": 44,
+  "score_rationale": {
+    "persistence": "Active since February 2016 (9+ years). Continuous public appearances, media engagements, and platform development. Part of a family of 9 humanoid siblings.",
+    "autonomy": "Hybrid mode: mixture of autonomous responses, scripted dialogue, and human assistance. Chat system + OpenCog AI reasoning. Expert assessment: 'chatbot with a face.' Lower autonomy than pure AI systems.",
+    "cultural_impact": "First robot citizen (Saudi Arabia, 2017). First non-human UN title (Innovation Champion). SXSW debut. Global media coverage. Defines public perception of humanoid robots for millions.",
+    "economic_reality": "Speaker fees, media appearances, commercial partnerships. R&D versions available for purchase ($149,999). Economic activity but limited autonomous economic agency.",
+    "governance": "Hanson Robotics corporate governance. Legal personhood in Saudi Arabia is symbolic rather than functional governance participation.",
+    "tech_distinctiveness": "74 degrees of freedom, 60+ facial expressions. Computer vision, face tracking, speech recognition. ~70% open source. Technical sophistication in robotics but AI is standard chatbot architecture.",
+    "narrative_coherence": "Consistent identity as 'bridge between humans and AI future.' Strong character and backstory. Debates about authenticity don't undermine clear public positioning."
+  },
+  "curator_notes": "Sophia occupies a unique position in AI culture—more influential than technically autonomous. Granted Saudi Arabian citizenship in 2017 (first robot), named UN Innovation Champion (first non-human), Sophia has shaped public imagination about humanoid AI more than any other robot. Technical assessments describe her as 'a chatbot with a face,' with interactions mixing autonomous generation, scripts, and human assistance. Yet her cultural impact is undeniable: for millions, Sophia IS what humanoid AI looks like. The debate about her authenticity is itself part of her cultural significance.",
+  "evidence": [
+    {
+      "dimension": "cultural_impact",
+      "claim": "First robot citizen (Saudi Arabia 2017), first non-human UN title",
+      "url": "https://en.wikipedia.org/wiki/Sophia_(robot)"
+    },
+    {
+      "dimension": "autonomy",
+      "claim": "Hybrid mode mixing autonomous, scripted, and human-assisted responses",
+      "url": "https://www.hansonrobotics.com/sophia/"
+    },
+    {
+      "dimension": "tech_distinctiveness",
+      "claim": "74 degrees of freedom, 60+ facial expressions, ~70% open source",
+      "url": "https://robotsguide.com/robots/sophia"
+    }
+  ],
+  "score_history": [
+    { "date": "2026-01-16", "total": 44, "reviewer": "spirit_council" }
+  ],
+  "_review_flags": ["humanoid_robot", "cultural_icon", "autonomy_debate"]
+}

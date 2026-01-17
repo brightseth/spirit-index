@@ -8,7 +8,7 @@ import { getAllAgents } from '@/lib/agents';
 
 export async function GET() {
   const agents = await getAllAgents();
-  const siteUrl = 'https://spirit-index.vercel.app'; // TODO: Update to spiritindex.org when domain is configured
+  const siteUrl = 'https://spiritindex.org';
 
   // Build RSS items from agents, sorted by most recent score update
   const items = agents

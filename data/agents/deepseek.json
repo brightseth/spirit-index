@@ -1,0 +1,50 @@
+{
+  "id": "deepseek",
+  "name": "DeepSeek",
+  "tagline": "China's Open-Source AI Breakthrough",
+  "inception_date": "2023-07-01",
+  "status": "Active",
+  "category": "Foundation Model",
+  "classification": "Large Language Model",
+  "website": "https://www.deepseek.com",
+  "scores": {
+    "persistence": { "value": 5, "confidence": "medium" },
+    "autonomy": { "value": 5, "confidence": "medium" },
+    "cultural_impact": { "value": 10, "confidence": "high" },
+    "economic_reality": { "value": 8, "confidence": "high" },
+    "governance": { "value": 6, "confidence": "medium" },
+    "tech_distinctiveness": { "value": 10, "confidence": "high" },
+    "narrative_coherence": { "value": 8, "confidence": "high" }
+  },
+  "total": 52,
+  "score_rationale": {
+    "persistence": "Founded July 2023, ~2.5 years. Rapid development with V3 and R1 models. Young but high-impact.",
+    "autonomy": "Foundation model enabling agents and applications. Not autonomous itself but enables autonomous systems. R1 reasoning model allows more complex autonomous use.",
+    "cultural_impact": "'Sputnik moment' for US AI. Nvidia lost $600B market cap in single day. Chinese open-source AI reaches 30% global usage. Redefined geopolitics of AI.",
+    "economic_reality": "Trained V3 for $6M (vs GPT-4's $100M). MIT License enables commercial use. High-Flyer hedge fund backing. Cost efficiency changed industry expectations.",
+    "governance": "MIT License open-source. Chinese company subject to regulations. Research community can examine models.",
+    "tech_distinctiveness": "Mixture of experts (MoE) architecture. Trained under US chip export restrictions using weaker chips. 10x compute efficiency vs Meta Llama 3.1. R1 matches o1 reasoning."
+  },
+  "curator_notes": "DeepSeek's January 2025 release of R1 triggered what observers called a 'Sputnik moment' for US AI. The Hangzhou-based company, funded by hedge fund High-Flyer, claimed training V3 for $6M—versus GPT-4's $100M—using weaker chips under US export restrictions. R1's reasoning capabilities match OpenAI's o1 while being fully open-source under MIT license. The announcement crashed Nvidia's stock by $600B in a single day. Yann LeCun (Meta) declared it a 'victory for open-source AI.' Chinese open-source models now represent 30% of global AI usage. DeepSeek fundamentally altered the AI industry's economics and geopolitics.",
+  "evidence": [
+    {
+      "dimension": "cultural_impact",
+      "claim": "'Sputnik moment' - Nvidia lost $600B market cap",
+      "url": "https://en.wikipedia.org/wiki/DeepSeek"
+    },
+    {
+      "dimension": "tech_distinctiveness",
+      "claim": "V3 trained for $6M vs GPT-4's $100M, 10x efficiency",
+      "url": "https://www.nature.com/articles/d41586-025-00229-6"
+    },
+    {
+      "dimension": "governance",
+      "claim": "MIT License open-source, R1 matches o1 reasoning",
+      "url": "https://hai.stanford.edu/news/how-disruptive-deepseek-stanford-hai-faculty-discuss-chinas-new-model"
+    }
+  ],
+  "score_history": [
+    { "date": "2026-01-16", "total": 52, "reviewer": "spirit_council" }
+  ],
+  "_review_flags": ["foundation_model", "geopolitical_impact", "cost_efficiency"]
+}

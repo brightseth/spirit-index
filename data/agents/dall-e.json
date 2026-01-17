@@ -1,0 +1,51 @@
+{
+  "id": "dall-e",
+  "name": "DALL-E",
+  "tagline": "Creating Images from Text",
+  "inception_date": "2021-01-05",
+  "status": "Active",
+  "category": "Generative Platform",
+  "classification": "Text-to-Image Model",
+  "website": "https://openai.com/dall-e-3",
+  "scores": {
+    "persistence": { "value": 7, "confidence": "high" },
+    "autonomy": { "value": 4, "confidence": "high" },
+    "cultural_impact": { "value": 10, "confidence": "high" },
+    "economic_reality": { "value": 8, "confidence": "high" },
+    "governance": { "value": 3, "confidence": "high" },
+    "tech_distinctiveness": { "value": 9, "confidence": "high" },
+    "narrative_coherence": { "value": 8, "confidence": "high" }
+  },
+  "total": 49,
+  "score_rationale": {
+    "persistence": "DALL-E (2021), DALL-E 2 (April 2022), DALL-E 3 (2023). 5+ years of active development. Continuous iteration.",
+    "autonomy": "Generates images from prompts. Requires human direction for each generation. No autonomous creation.",
+    "cultural_impact": "Defined the 'text-to-image' category. WALL-E + Dalí portmanteau became cultural touchstone. Launched mainstream AI art awareness alongside Midjourney. API opened vast ecosystem.",
+    "economic_reality": "ChatGPT Plus integration. API revenue significant. Commercial model via subscription and credits.",
+    "governance": "OpenAI corporate governance. No community governance. Safety filtering implemented.",
+    "tech_distinctiveness": "DALL-E 1: 12B parameter GPT-3 variant. DALL-E 2: diffusion model. DALL-E 3: improved prompt understanding. Outpainting feature for extending images.",
+    "narrative_coherence": "Strong brand: WALL-E + Dalí. 'Creating images from text' positioning clear. Part of OpenAI's broader AGI narrative."
+  },
+  "curator_notes": "DALL-E launched the mainstream AI image generation era when OpenAI revealed it in January 2021. The 12-billion parameter GPT-3 variant trained on text-image pairs could generate images from natural language descriptions—a capability that seemed magical at the time. DALL-E 2 (April 2022) brought higher resolution and diffusion models; DALL-E 3 (2023) added superior prompt understanding. The WALL-E + Dalí portmanteau became cultural shorthand for AI art. While now facing competition from Midjourney and open-source alternatives, DALL-E's ChatGPT integration ensures ongoing relevance.",
+  "evidence": [
+    {
+      "dimension": "cultural_impact",
+      "claim": "Defined text-to-image category, launched mainstream AI art awareness",
+      "url": "https://openai.com/index/dall-e/"
+    },
+    {
+      "dimension": "tech_distinctiveness",
+      "claim": "DALL-E 1: 12B parameter GPT-3 variant trained on text-image pairs",
+      "url": "https://en.wikipedia.org/wiki/DALL-E"
+    },
+    {
+      "dimension": "persistence",
+      "claim": "Three major versions: 2021, 2022, 2023",
+      "url": "https://openai.com/index/dall-e-3/"
+    }
+  ],
+  "score_history": [
+    { "date": "2026-01-16", "total": 49, "reviewer": "spirit_council" }
+  ],
+  "_review_flags": ["tool_not_agent", "category_definer"]
+}

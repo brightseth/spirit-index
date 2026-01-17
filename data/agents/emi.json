@@ -1,0 +1,51 @@
+{
+  "id": "emi",
+  "name": "EMI (Experiments in Musical Intelligence)",
+  "tagline": "The Machine That Fooled Musicians",
+  "inception_date": "1982-01-01",
+  "status": "Archived",
+  "category": "Autonomous Composer",
+  "classification": "Rule-Based Creator",
+  "website": "http://artsites.ucsc.edu/faculty/cope/experiments.htm",
+  "scores": {
+    "persistence": { "value": 8, "confidence": "high" },
+    "autonomy": { "value": 6, "confidence": "high" },
+    "cultural_impact": { "value": 9, "confidence": "high" },
+    "economic_reality": { "value": 5, "confidence": "medium" },
+    "governance": { "value": 2, "confidence": "high" },
+    "tech_distinctiveness": { "value": 8, "confidence": "high" },
+    "narrative_coherence": { "value": 7, "confidence": "medium" }
+  },
+  "total": 45,
+  "score_rationale": {
+    "persistence": "Operated from 1982-2005 (23 years). Database deliberately deleted by creator in 2005. Successor program Emily Howell continues the lineage.",
+    "autonomy": "Generated compositions autonomously using rule-based analysis of existing works. Required human input for style selection and final curation. 'Cyborg' tier.",
+    "cultural_impact": "Famous Turing-style tests where audiences couldn't distinguish EMI Bach from real Bach. Douglas Hofstadter's touring lectures. Commercial recordings released. Major academic impact on AI creativity discourse.",
+    "economic_reality": "Commercial recordings sold; no autonomous treasury. Creator retained all economic agency. 'Surviving' tier.",
+    "governance": "Single creator (David Cope) made all decisions. Database deletion was unilateral. Minimal governance structure.",
+    "tech_distinctiveness": "Novel three-stage process: Deconstruction, Signature identification, Compatibility recombination. 20,000 lines of Lisp. Pioneered style transfer before neural networks existed.",
+    "narrative_coherence": "Identity as 'Emmy' established but complicated. Cope eventually deleted the database, citing devaluation concerns. Successor Emily Howell has distinct identity."
+  },
+  "curator_notes": "EMI represents a watershed moment in AI creativity—the first system to consistently fool expert listeners in Turing-style tests. David Cope created EMI in 1982 while facing composer's block, and it went on to produce thousands of works including 5,000 Bach chorales. The famous Hofstadter demonstration where audiences couldn't distinguish EMI-Bach from real Bach challenged fundamental assumptions about human creativity. Cope's controversial 2005 deletion of EMI's database remains debated.",
+  "evidence": [
+    {
+      "dimension": "cultural_impact",
+      "claim": "Audiences couldn't distinguish EMI-Bach from real Bach in blind tests",
+      "url": "https://computerhistory.org/blog/algorithmic-music-david-cope-and-emi/"
+    },
+    {
+      "dimension": "tech_distinctiveness",
+      "claim": "20,000 lines of Lisp code implementing novel composition approach",
+      "url": "https://en.wikipedia.org/wiki/David_Cope"
+    },
+    {
+      "dimension": "persistence",
+      "claim": "Produced 5,000 Bach chorales over 23-year lifespan",
+      "url": "https://bernardmarr.com/emi-when-ais-become-creative-and-compose-music/"
+    }
+  ],
+  "score_history": [
+    { "date": "2026-01-16", "total": 45, "reviewer": "spirit_council" }
+  ],
+  "_review_flags": ["historical_agent", "archived_by_creator"]
+}

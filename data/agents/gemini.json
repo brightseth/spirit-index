@@ -1,0 +1,50 @@
+{
+  "id": "gemini",
+  "name": "Google Gemini",
+  "tagline": "Built for the Agentic Era",
+  "inception_date": "2023-12-06",
+  "status": "Active",
+  "category": "Foundation Model",
+  "classification": "Multimodal AI System",
+  "website": "https://gemini.google.com",
+  "scores": {
+    "persistence": { "value": 5, "confidence": "high" },
+    "autonomy": { "value": 7, "confidence": "medium" },
+    "cultural_impact": { "value": 9, "confidence": "high" },
+    "economic_reality": { "value": 10, "confidence": "high" },
+    "governance": { "value": 3, "confidence": "high" },
+    "tech_distinctiveness": { "value": 9, "confidence": "high" },
+    "narrative_coherence": { "value": 7, "confidence": "medium" }
+  },
+  "total": 50,
+  "score_rationale": {
+    "persistence": "Gemini 1.0 (Dec 2023), 1.5 Pro (Feb 2024), 2.0 (Dec 2024), 3.0 (2025). ~2.5 years, rapid iteration.",
+    "autonomy": "Project Astra: universal AI agent. Project Mariner: autonomous browser actions. Jules: AI coding agent for GitHub. Designed for agentic era with tool use.",
+    "cultural_impact": "Google's flagship AI. Replaced Bard brand. Integrated across Google products. Competing directly with GPT-4/Claude for AI leadership.",
+    "economic_reality": "Google's core AI strategy. Integrated into Android (replacing Assistant), Gmail, Search. Massive distribution advantage. Alphabet resources behind it.",
+    "governance": "Google corporate governance. No constitutional approach. Standard Google privacy and safety policies.",
+    "tech_distinctiveness": "Native multimodality (not bolted on). 1M+ token context window (1.5 Pro). Native image/audio generation in 2.0. Deep Google Search/Maps integration."
+  },
+  "curator_notes": "Google Gemini represents the tech giant's flagship AI system, designed explicitly for the 'agentic era.' Launched December 2023, Gemini unified Google's AI efforts (replacing Bard) and introduced native multimodality—images, audio, and video processed together, not separately. Gemini 1.5 Pro's 1M+ token context window set new standards. Gemini 2.0 (December 2024) introduced Project Astra (universal AI agent), Project Mariner (autonomous browser control), and Jules (AI coding agent). The system's integration across Google products—Android, Gmail, Search—provides unmatched distribution.",
+  "evidence": [
+    {
+      "dimension": "autonomy",
+      "claim": "Project Astra, Mariner, Jules for agentic capabilities",
+      "url": "https://blog.google/technology/google-deepmind/google-gemini-ai-update-december-2024/"
+    },
+    {
+      "dimension": "tech_distinctiveness",
+      "claim": "Native multimodality, 1M+ token context in 1.5 Pro",
+      "url": "https://en.wikipedia.org/wiki/Gemini_(language_model)"
+    },
+    {
+      "dimension": "cultural_impact",
+      "claim": "Unified Google AI brand, replaced Assistant on Android",
+      "url": "https://en.wikipedia.org/wiki/Google_Gemini"
+    }
+  ],
+  "score_history": [
+    { "date": "2026-01-16", "total": 50, "reviewer": "spirit_council" }
+  ],
+  "_review_flags": ["foundation_model", "multimodal", "agentic_era"]
+}

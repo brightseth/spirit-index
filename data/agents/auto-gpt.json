@@ -1,0 +1,51 @@
+{
+  "id": "auto-gpt",
+  "name": "Auto-GPT",
+  "tagline": "The First Autonomous GPT-4 Agent",
+  "inception_date": "2023-03-01",
+  "status": "Active",
+  "category": "General Agent",
+  "classification": "Autonomous Agent Framework",
+  "website": "https://github.com/Significant-Gravitas/AutoGPT",
+  "scores": {
+    "persistence": { "value": 5, "confidence": "medium" },
+    "autonomy": { "value": 8, "confidence": "high" },
+    "cultural_impact": { "value": 9, "confidence": "high" },
+    "economic_reality": { "value": 4, "confidence": "medium" },
+    "governance": { "value": 5, "confidence": "medium" },
+    "tech_distinctiveness": { "value": 7, "confidence": "high" },
+    "narrative_coherence": { "value": 8, "confidence": "high" }
+  },
+  "total": 46,
+  "score_rationale": {
+    "persistence": "Released March 2023, ~3 years. Continuous development but peak hype passed. Active GitHub repository.",
+    "autonomy": "Chains together LLM thoughts to autonomously achieve goals. Breaks user-defined goals into sub-tasks. Self-plans, executes, refines based on feedback. High autonomy within task scope.",
+    "cultural_impact": "Ignited Spring 2023 AI agent craze. Mainstream media coverage (Fortune, Fast Company). Defined public conception of 'autonomous AI agent.' BabyAGI, AgentGPT followed.",
+    "economic_reality": "Open-source, no direct revenue model. High API costs for users. Spawned ecosystem of agent frameworks but limited commercial success for project itself.",
+    "governance": "Open-source (Significant Gravitas). Community contributions. No formal governance structure.",
+    "tech_distinctiveness": "First mainstream implementation of autonomous goal-pursuing agent. Task decomposition, real-time feedback refinement. Pioneered the 'agent loop' pattern.",
+    "narrative_coherence": "'AI that achieves goals for you.' Clear, compelling pitch. Associated with AGI aspirations (and risks). Strong narrative even if exaggerated."
+  },
+  "curator_notes": "Auto-GPT, released by Toran Bruce Richards in March 2023, ignited the autonomous AI agent craze. The project demonstrated that GPT-4 could chain together reasoning steps to autonomously pursue user-defined goals, breaking them into sub-tasks and refining approaches based on feedback. While technically limited (high API costs, tendency to loop), Auto-GPT's cultural impact was enormous—it defined public understanding of AI agents and spawned imitators like BabyAGI and AgentGPT. Richards originally wanted an AI to email him daily AI news; he ended up creating the template for the 2023-2024 agent explosion.",
+  "evidence": [
+    {
+      "dimension": "cultural_impact",
+      "claim": "Ignited Spring 2023 AI agent craze, mainstream media coverage",
+      "url": "https://fortune.com/2023/04/15/babyagi-autogpt-openai-gpt-4-autonomous-assistant-agi/"
+    },
+    {
+      "dimension": "autonomy",
+      "claim": "Chains LLM thoughts to autonomously achieve goals via task decomposition",
+      "url": "https://www.bairesdev.com/blog/the-rise-of-autonomous-agents-autogpt-agentgpt-and-babyagi/"
+    },
+    {
+      "dimension": "tech_distinctiveness",
+      "claim": "Pioneered autonomous goal-pursuing agent pattern",
+      "url": "https://www.fastcompany.com/90880294/auto-gpt-and-babyagi-how-autonomous-agents-are-bringing-generative-ai-to-the-masses"
+    }
+  ],
+  "score_history": [
+    { "date": "2026-01-16", "total": 46, "reviewer": "spirit_council" }
+  ],
+  "_review_flags": ["open_source", "agent_framework", "cultural_watershed"]
+}

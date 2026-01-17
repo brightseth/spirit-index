@@ -1,0 +1,51 @@
+{
+  "id": "golem",
+  "name": "Golem Network",
+  "tagline": "Decentralized Computing Power",
+  "inception_date": "2016-11-01",
+  "status": "Active",
+  "category": "Agent Infrastructure",
+  "classification": "DePIN Protocol",
+  "website": "https://golem.network",
+  "scores": {
+    "persistence": { "value": 8, "confidence": "high" },
+    "autonomy": { "value": 4, "confidence": "medium" },
+    "cultural_impact": { "value": 5, "confidence": "medium" },
+    "economic_reality": { "value": 6, "confidence": "high" },
+    "governance": { "value": 6, "confidence": "medium" },
+    "tech_distinctiveness": { "value": 7, "confidence": "high" },
+    "narrative_coherence": { "value": 7, "confidence": "high" }
+  },
+  "total": 43,
+  "score_rationale": {
+    "persistence": "Conceptualized 2014, launched 2016, mainnet 2018. 9+ years of operation. Survived multiple market cycles. Pioneer in DePIN space.",
+    "autonomy": "Infrastructure protocol enabling distributed compute, not an autonomous agent itself. Facilitates others' autonomy rather than having its own.",
+    "cultural_impact": "Pioneer of decentralized physical infrastructure (DePIN). Influential model for subsequent projects. Less mainstream visibility than consumer AI.",
+    "economic_reality": "GLM token (~$0.29, $1B+ raised at ICO peak). Active marketplace for compute. GPU Beta Program expanding AI compute access. Real economic activity.",
+    "governance": "Token-based governance. Golem Factory (founding team) retains significant influence. Community participation in direction.",
+    "tech_distinctiveness": "Early mover in decentralized compute marketplace. Task distribution across providers. 2024 AI roadmap with GPU integration. Ethereum-based but protocol-agnostic.",
+    "narrative_coherence": "Clear 'world supercomputer' narrative. Democratizing compute access. Consistent positioning from 2014 to present AI integration."
+  },
+  "curator_notes": "Golem Network pioneered the decentralized physical infrastructure (DePIN) concept, launching in 2016 with the vision of creating a peer-to-peer marketplace for computing power. The project raised 820,000 ETH (~$8.6M at the time) by selling 82% of tokens to the public. Golem enables users to rent out idle computing resources or access distributed compute for AI training, CGI rendering, and scientific computation. The 2024 AI roadmap and GPU Beta Program demonstrate evolution toward AI infrastructure. While Golem is infrastructure rather than an autonomous agent, it enables the computational substrate many agents depend on.",
+  "evidence": [
+    {
+      "dimension": "persistence",
+      "claim": "Conceptualized 2014, launched 2016, pioneer in DePIN",
+      "url": "https://golem.network/about"
+    },
+    {
+      "dimension": "economic_reality",
+      "claim": "Raised 820,000 ETH (~$8.6M) in 2016 token sale",
+      "url": "https://kriptomat.io/cryptocurrencies/golem/what-is-golem/"
+    },
+    {
+      "dimension": "tech_distinctiveness",
+      "claim": "2024 AI roadmap with GPU Beta Program",
+      "url": "https://golem.network/ai"
+    }
+  ],
+  "score_history": [
+    { "date": "2026-01-16", "total": 43, "reviewer": "spirit_council" }
+  ],
+  "_review_flags": ["infrastructure_protocol", "depin_pioneer"]
+}

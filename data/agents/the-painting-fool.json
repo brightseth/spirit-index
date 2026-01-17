@@ -1,0 +1,51 @@
+{
+  "id": "the-painting-fool",
+  "name": "The Painting Fool",
+  "tagline": "An Aspiring Painter Taken Seriously",
+  "inception_date": "2001-01-01",
+  "status": "Active",
+  "category": "Autonomous Artist",
+  "classification": "Academic Research System",
+  "website": "http://www.thepaintingfool.com/",
+  "scores": {
+    "persistence": { "value": 9, "confidence": "high" },
+    "autonomy": { "value": 7, "confidence": "high" },
+    "cultural_impact": { "value": 7, "confidence": "medium" },
+    "economic_reality": { "value": 3, "confidence": "medium" },
+    "governance": { "value": 2, "confidence": "high" },
+    "tech_distinctiveness": { "value": 9, "confidence": "high" },
+    "narrative_coherence": { "value": 8, "confidence": "high" }
+  },
+  "total": 45,
+  "score_rationale": {
+    "persistence": "Operating since 2001 (24+ years). Continuous development through multiple university positions. Won British Computing Society Machine Intelligence Award 2007. Active residencies including Cardiff University CUBRIC.",
+    "autonomy": "Creates portraits based on its 'mood,' assesses its own work, learns from mistakes. Uses context-aware decision-making. Higher autonomy than pure rule-following systems.",
+    "cultural_impact": "Academic landmark in computational creativity. Exhibited in science museums, art galleries, painted celebrities. Less mainstream recognition than commercial AI art.",
+    "economic_reality": "Academic research project without autonomous treasury or market activity. Artworks produced but not systematically sold.",
+    "governance": "Single creator (Simon Colton) directs development. Academic research governance only.",
+    "tech_distinctiveness": "Pioneer of 'computational creativity'—software being creative, not just a tool. Mood-based creation, self-assessment, evolutionary techniques for novel object generation. Landmark methodology.",
+    "narrative_coherence": "Clear and ambitious identity: aspiring to be 'accepted as an artist in its own right.' Strong philosophical framework distinguishing creativity from mere generation."
+  },
+  "curator_notes": "The Painting Fool represents the academic vanguard of computational creativity research. Simon Colton's explicit goal—having software 'taken seriously as a creative artist'—distinguishes it from tools or generators. The system creates portraits based on mood, assesses its work, and learns from mistakes. Its 2007 Machine Intelligence Award and ongoing artist residencies (including Cardiff's CUBRIC brain imaging center) demonstrate sustained academic and cultural engagement. The Painting Fool bridges AARON's rule-based approach and modern generative AI.",
+  "evidence": [
+    {
+      "dimension": "persistence",
+      "claim": "Operating since 2001, won BCS Machine Intelligence Award 2007",
+      "url": "https://en.wikipedia.org/wiki/Simon_Colton"
+    },
+    {
+      "dimension": "cultural_impact",
+      "claim": "Artist in residence at Cardiff University CUBRIC",
+      "url": "https://www.cardiff.ac.uk/news/view/1128669-painting-fool-at-cubric"
+    },
+    {
+      "dimension": "tech_distinctiveness",
+      "claim": "Context-aware mood-based creation with self-assessment",
+      "url": "http://www.thepaintingfool.com/about/"
+    }
+  ],
+  "score_history": [
+    { "date": "2026-01-16", "total": 45, "reviewer": "spirit_council" }
+  ],
+  "_review_flags": ["academic_project", "computational_creativity_pioneer"]
+}

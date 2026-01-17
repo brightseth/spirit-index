@@ -1,0 +1,51 @@
+{
+  "id": "obvious",
+  "name": "Obvious (Edmond de Belamy)",
+  "tagline": "The $432K AI Portrait",
+  "inception_date": "2018-01-01",
+  "status": "Active",
+  "category": "Autonomous Artist",
+  "classification": "GAN Art Collective",
+  "website": "https://obvious-art.com",
+  "scores": {
+    "persistence": { "value": 6, "confidence": "medium" },
+    "autonomy": { "value": 5, "confidence": "high" },
+    "cultural_impact": { "value": 10, "confidence": "high" },
+    "economic_reality": { "value": 8, "confidence": "high" },
+    "governance": { "value": 3, "confidence": "high" },
+    "tech_distinctiveness": { "value": 4, "confidence": "high" },
+    "narrative_coherence": { "value": 7, "confidence": "medium" }
+  },
+  "total": 43,
+  "score_rationale": {
+    "persistence": "Active since 2018. Continues producing work after landmark sale. Ongoing projects and exhibitions.",
+    "autonomy": "GAN generates images from dataset; humans curate and select. Generator creates, Discriminator validates. Standard GAN architecture without ongoing autonomy.",
+    "cultural_impact": "Landmark: First AI artwork sold at major auction house (Christie's 2018). $432,500 sale (4,320% over estimate). Global media coverage. Defined public perception of AI art. Controversial within AI art community.",
+    "economic_reality": "Massive auction success. Ongoing sales. 'Belamy family' series has market value. Created economic template for AI art sales.",
+    "governance": "Paris-based collective (Caselles-Dupré, Fautrel, Vernier). Human governance, AI as tool.",
+    "tech_distinctiveness": "Standard GAN trained on 15,000 historical portraits. Technical approach criticized as derivative (GAN code borrowed from Robbie Barrat). No novel technical contribution.",
+    "narrative_coherence": "Fictional 'Belamy family' concept provides framework. Name references Goodfellow ('good friend' = bel ami). Strong story for marketing, controversial for attribution."
+  },
+  "curator_notes": "Obvious's 'Portrait of Edmond de Belamy' made history as the first AI artwork sold at a major auction house, fetching $432,500 at Christie's in 2018—4,320% above estimate. The Paris collective (Caselles-Dupré, Fautrel, Vernier) trained a GAN on 15,000 historical portraits to generate the fictional Belamy family. The sale was controversial: artist Robbie Barrat claimed Obvious used his open-source GAN code without proper credit; the AI art community debated whether auction success was deserved. Regardless of technical originality, Obvious proved AI art could command serious money and mainstream attention, fundamentally changing the market.",
+  "evidence": [
+    {
+      "dimension": "cultural_impact",
+      "claim": "First AI art at major auction house, sold $432,500 (4,320% over estimate)",
+      "url": "https://news.artnet.com/market/first-ever-artificial-intelligence-portrait-painting-sells-at-christies-1379902"
+    },
+    {
+      "dimension": "tech_distinctiveness",
+      "claim": "GAN trained on 15,000 portraits; code borrowed controversy",
+      "url": "https://www.artnome.com/news/2018/10/13/the-truth-behind-christies-432k-ai-art-sale"
+    },
+    {
+      "dimension": "cultural_impact",
+      "claim": "Global media coverage, defined mainstream AI art perception",
+      "url": "https://www.smithsonianmag.com/smart-news/christies-first-sell-art-made-artificial-intelligence-what-does-mean-180970642/"
+    }
+  ],
+  "score_history": [
+    { "date": "2026-01-16", "total": 43, "reviewer": "spirit_council" }
+  ],
+  "_review_flags": ["landmark_sale", "attribution_controversy", "gan_art"]
+}

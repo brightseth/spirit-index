@@ -1,0 +1,50 @@
+{
+  "id": "ameca",
+  "name": "Ameca",
+  "tagline": "The Most Expressive Humanoid",
+  "inception_date": "2021-12-01",
+  "status": "Active",
+  "category": "Social Robot",
+  "classification": "Humanoid Robot Platform",
+  "website": "https://engineeredarts.com/robots/ameca",
+  "scores": {
+    "persistence": { "value": 6, "confidence": "medium" },
+    "autonomy": { "value": 4, "confidence": "medium" },
+    "cultural_impact": { "value": 7, "confidence": "high" },
+    "economic_reality": { "value": 6, "confidence": "medium" },
+    "governance": { "value": 2, "confidence": "high" },
+    "tech_distinctiveness": { "value": 8, "confidence": "high" },
+    "narrative_coherence": { "value": 6, "confidence": "medium" }
+  },
+  "total": 39,
+  "score_rationale": {
+    "persistence": "Unveiled December 2021, CES 2022 debut. Generation 3 at ICRA 2025. Active development with new models (Ami, Azi).",
+    "autonomy": "Interactions can be GPT-3 powered or human telepresence. Platform for others' AI. Limited autonomous agency—primarily responds to inputs.",
+    "cultural_impact": "Viral videos of realistic expressions. National Robotarium installation (Edinburgh). CES presence. Defines 'realistic humanoid' aesthetic in public imagination.",
+    "economic_reality": "$16.2M raised (Series A led by Helium-3 Ventures). Sold as platform for research/entertainment. US entity expansion 2025.",
+    "governance": "Engineered Arts corporate governance. No external governance or community participation.",
+    "tech_distinctiveness": "17 facial motors, genderless design. Focus on expression over locomotion. Modular platform for AI integration. Best-in-class facial expression capability."
+  },
+  "curator_notes": "Ameca represents the current state of the art in humanoid facial expression. Engineered Arts' 2021 robot went viral for its uncannily realistic facial movements—17 motors produce expressions that cross the uncanny valley. Unlike mobility-focused humanoids (Boston Dynamics, Tesla Bot), Ameca prioritizes human-robot interaction through expression. The platform can run GPT-3 or other AI, making it a chassis for others' intelligence. 2025 developments include Generation 3 hardware and US expansion with $16.2M in funding. Ameca's genderless, grey-skinned aesthetic has become iconic in humanoid robotics.",
+  "evidence": [
+    {
+      "dimension": "tech_distinctiveness",
+      "claim": "17 facial motors for best-in-class expression",
+      "url": "https://engineeredarts.com/robots/ameca"
+    },
+    {
+      "dimension": "economic_reality",
+      "claim": "$16.2M raised, Series A led by Helium-3 Ventures",
+      "url": "https://en.wikipedia.org/wiki/Ameca_(robot)"
+    },
+    {
+      "dimension": "cultural_impact",
+      "claim": "Installed at National Robotarium Edinburgh",
+      "url": "https://en.wikipedia.org/wiki/Ameca_(robot)"
+    }
+  ],
+  "score_history": [
+    { "date": "2026-01-16", "total": 39, "reviewer": "spirit_council" }
+  ],
+  "_review_flags": ["humanoid_robot", "platform_not_agent", "expression_focused"]
+}

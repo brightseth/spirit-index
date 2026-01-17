@@ -1,0 +1,51 @@
+{
+  "id": "heyanon",
+  "name": "HeyAnon",
+  "tagline": "The DeFAI Protocol",
+  "inception_date": "2024-12-01",
+  "status": "Active",
+  "category": "Agent Infrastructure",
+  "classification": "Protocol/Platform",
+  "website": "https://heyanon.ai",
+  "scores": {
+    "persistence": { "value": 3, "confidence": "medium" },
+    "autonomy": { "value": 7, "confidence": "medium" },
+    "cultural_impact": { "value": 6, "confidence": "medium" },
+    "economic_reality": { "value": 6, "confidence": "high" },
+    "governance": { "value": 5, "confidence": "medium" },
+    "tech_distinctiveness": { "value": 7, "confidence": "medium" },
+    "narrative_coherence": { "value": 7, "confidence": "high" }
+  },
+  "total": 41,
+  "score_rationale": {
+    "persistence": "Launched late 2024, ~13 months old. Young but well-funded with DWF Labs partnership ($20M AI Agent fund).",
+    "autonomy": "Agents manage wallets and execute multi-step strategies autonomously. Condition-based execution allows rebalancing even when users offline. Higher autonomy than simple tools.",
+    "cultural_impact": "Coined the term 'DeFAI' (Daniele Sestagalli). Leading abstraction platform by market cap alongside Griffain. Influential in shaping narrative around AI + DeFi convergence.",
+    "economic_reality": "ANON token traded (~$15M market cap). DWF Labs strategic partnership. Active trading volume. Protocol fees from operations.",
+    "governance": "Vision includes DAAIOs (Decentralized Autonomous AI Organizations) where token holders define strategies. Currently team-led development.",
+    "tech_distinctiveness": "AUTOMATE TypeScript framework for protocol integration. Deterministic logic with on-chain validation. Real-time information aggregation across protocols. DeFAI superapp vision.",
+    "narrative_coherence": "Strong 'DeFAI' narrative positioning. Founder Daniele Sestagalli (Wonderland fame) provides clear vision. 'Superapp' concept unifies diverse functions."
+  },
+  "curator_notes": "HeyAnon is notable for coining 'DeFAI'—the AI + DeFi convergence category—through founder Daniele Sestagalli's 2024 article 'DeFAI and the Dawn of AI-Powered DAOs.' The protocol enables autonomous agents to manage wallets, execute complex DeFi strategies, and operate even when users are offline. The AUTOMATE framework allows developers to integrate new protocols, while the long-term vision includes DAAIOs where token holders set strategies and AI agents handle execution. The January 2025 DWF Labs partnership brought $20M in backing for the DeFAI space.",
+  "evidence": [
+    {
+      "dimension": "cultural_impact",
+      "claim": "Coined term 'DeFAI' through founder's article",
+      "url": "https://cryptobriefing.com/ai-driven-defi-innovation/"
+    },
+    {
+      "dimension": "economic_reality",
+      "claim": "DWF Labs strategic partnership with $20M AI Agent fund",
+      "url": "https://www.dwf-labs.com/news/526-heyanon-ai-and-dwf-labs-announce-strategic-partnership-to-pioneer-defai-the-future-of-decentralised-finance"
+    },
+    {
+      "dimension": "tech_distinctiveness",
+      "claim": "AUTOMATE framework with deterministic on-chain validation",
+      "url": "https://messari.io/report/heyanon-introduces-ai-to-trading-with-defai"
+    }
+  ],
+  "score_history": [
+    { "date": "2026-01-16", "total": 41, "reviewer": "spirit_council" }
+  ],
+  "_review_flags": ["defi_agent", "infrastructure_protocol"]
+}

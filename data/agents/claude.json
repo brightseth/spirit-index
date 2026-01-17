@@ -1,0 +1,50 @@
+{
+  "id": "claude",
+  "name": "Claude",
+  "tagline": "Helpful, Harmless, Honest",
+  "inception_date": "2023-03-14",
+  "status": "Active",
+  "category": "Foundation Model",
+  "classification": "Large Language Model",
+  "website": "https://www.anthropic.com/claude",
+  "scores": {
+    "persistence": { "value": 5, "confidence": "high" },
+    "autonomy": { "value": 6, "confidence": "medium" },
+    "cultural_impact": { "value": 9, "confidence": "high" },
+    "economic_reality": { "value": 9, "confidence": "high" },
+    "governance": { "value": 7, "confidence": "high" },
+    "tech_distinctiveness": { "value": 9, "confidence": "high" },
+    "narrative_coherence": { "value": 10, "confidence": "high" }
+  },
+  "total": 55,
+  "score_rationale": {
+    "persistence": "Claude 1 (2023), Claude 2 (2023), Claude 3 family (2024), Claude 4 (2025). ~3 years continuous development.",
+    "autonomy": "Claude Code runs autonomously for up to 8 hours with automatic scaling. Claude 3.7 Sonnet enables agentic applications with hybrid reasoning. Moving toward multi-day autonomous projects.",
+    "cultural_impact": "Established as leading alternative to GPT-4. 'Constitutional AI' influenced industry safety thinking. 200K context window set new standards. Claude Code and VS Code integration drove developer adoption.",
+    "economic_reality": "Anthropic valued at $60B+. API revenue, enterprise contracts. Amazon and Google as major investors. Strong commercial traction.",
+    "governance": "Constitutional AI: explicit values via constitution rather than implicit RLHF. Model trained on written principles. 'Collective Constitutional AI' incorporates public input.",
+    "tech_distinctiveness": "Constitutional AI methodology. Hybrid reasoning in 3.7 Sonnet. Model Context Protocol (MCP). Industry-leading context windows. Safety-first approach distinguishes from competitors."
+  },
+  "curator_notes": "Claude represents Anthropic's attempt to build AI that is 'principled before powerful.' The Constitutional AI approach trains models on explicit written principles rather than relying solely on human feedback—a methodological innovation that influenced industry thinking on alignment. Claude 3 introduced the Opus/Sonnet/Haiku tiering; Claude 4 (May 2025) brought Claude Code from research preview to general availability with 8-hour autonomous runs. The Model Context Protocol (MCP) enables Claude to connect with external tools. Anthropic's 'helpful, harmless, honest' framing provides arguably the strongest narrative identity of any major AI assistant.",
+  "evidence": [
+    {
+      "dimension": "governance",
+      "claim": "Constitutional AI trains on explicit written principles",
+      "url": "https://www.anthropic.com/research/constitutional-ai-harmlessness-from-ai-feedback"
+    },
+    {
+      "dimension": "autonomy",
+      "claim": "Claude Code runs autonomously for up to 8 hours",
+      "url": "https://www.anthropic.com/news/claudes-constitution"
+    },
+    {
+      "dimension": "tech_distinctiveness",
+      "claim": "Model Context Protocol, hybrid reasoning in 3.7 Sonnet",
+      "url": "https://en.wikipedia.org/wiki/Anthropic"
+    }
+  ],
+  "score_history": [
+    { "date": "2026-01-16", "total": 55, "reviewer": "spirit_council" }
+  ],
+  "_review_flags": ["foundation_model", "constitutional_ai", "safety_focused"]
+}
