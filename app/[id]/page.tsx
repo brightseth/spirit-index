@@ -5,6 +5,7 @@ import { getAgentById, getAllAgentIds } from "@/lib/agents";
 import { DIMENSIONS, DimensionKey, Agent, ScoreRationale } from "@/lib/types";
 import { RadarChart } from "@/app/components/RadarChart";
 import { ScoreHistoryChart } from "@/app/components/ScoreHistoryChart";
+import { checkRegistration, RegistrationStatus } from "@/lib/chain";
 
 const siteUrl = "https://spiritindex.org";
 
@@ -168,12 +169,63 @@ function BreadcrumbJsonLd({ agent }: { agent: Agent }) {
   );
 }
 
+// ERC-8004 registration status badge
+function RegistrationBadge({ agent, registration }: { agent: Agent; registration: RegistrationStatus }) {
+  if (registration.registered) {
+    return (
+      <div className="mb-8 p-4 border border-subtle rounded" style={{ borderColor: 'var(--green, #4ADE80)' }}>
+        <div className="flex items-center gap-3 flex-wrap">
+          <span className="inline-flex items-center gap-2 text-sm font-mono" style={{ color: '#4ADE80' }}>
+            <span>&#x2713;</span> ERC-8004 Registered
+          </span>
+          <span className="text-dim text-sm font-mono">Agent #{registration.agentId}</span>
+          <a
+            href={`https://sepolia.basescan.org/address/0x4a0e642e9aec25c5856987e95c0410ae10e8de5e`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm"
+          >
+            View on BaseScan
+          </a>
+        </div>
+      </div>
+    );
+  }
+
+  const registerUrl = `https://spiritprotocol.io/register/?spiritId=${encodeURIComponent(agent.id)}&name=${encodeURIComponent(agent.name)}&tagline=${encodeURIComponent(agent.tagline.slice(0, 140))}`;
+
+  return (
+    <div className="mb-8 p-4 border border-subtle rounded">
+      <div className="flex items-center justify-between flex-wrap gap-3">
+        <span className="text-dim text-sm font-mono">Not yet registered on-chain</span>
+        <a
+          href={registerUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 px-4 py-2 text-sm font-mono border border-subtle rounded hover:border-current transition-colors"
+          style={{ color: '#6B8FFF' }}
+        >
+          Register on Spirit Protocol &rarr;
+        </a>
+      </div>
+    </div>
+  );
+}
+
 export default async function AgentDossier({ params }: Props) {
   const { id } = await params;
   const agent = await getAgentById(id);
 
   if (!agent) {
     notFound();
+  }
+
+  // Check on-chain registration (cached server-side for ~5 min via fetch dedup)
+  let registration: RegistrationStatus = { registered: false };
+  try {
+    registration = await checkRegistration(agent.id);
+  } catch {
+    // Silently fall back to unregistered if chain call fails
   }
 
   const dimensions = Object.keys(DIMENSIONS) as DimensionKey[];
@@ -247,6 +299,9 @@ export default async function AgentDossier({ params }: Props) {
             <div className="score-label">/70 Total</div>
           </div>
         </div>
+
+        {/* On-Chain Registration Status */}
+        <RegistrationBadge agent={agent} registration={registration} />
 
         {/* Two Column Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
