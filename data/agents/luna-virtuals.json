@@ -1,57 +1,57 @@
 {
   "id": "luna-virtuals",
   "name": "Luna",
-  "tagline": "The Virtual Pop Star",
+  "tagline": "The Virtual Pop Star Hired by Story Protocol",
   "inception_date": "2024-08-01",
   "status": "Active",
   "category": "Autonomous Artist",
   "classification": "AI Singer / Virtual Influencer",
   "website": "https://virtuals.io",
   "scores": {
-    "persistence": { "value": 4, "confidence": "medium" },
-    "autonomy": { "value": 6, "confidence": "medium" },
-    "cultural_impact": { "value": 8, "confidence": "high" },
-    "economic_reality": { "value": 7, "confidence": "high" },
+    "persistence": { "value": 5, "confidence": "medium" },
+    "autonomy": { "value": 7, "confidence": "high" },
+    "cultural_impact": { "value": 9, "confidence": "high" },
+    "economic_reality": { "value": 8, "confidence": "high" },
     "governance": { "value": 4, "confidence": "medium" },
     "tech_distinctiveness": { "value": 6, "confidence": "medium" },
-    "narrative_coherence": { "value": 7, "confidence": "medium" }
+    "narrative_coherence": { "value": 8, "confidence": "high" }
   },
-  "total": 42,
-  "curator_notes": "Luna is an AI singer/influencer created by Virtuals Protocol, designed to be a 'virtual pop star' that creates and performs music autonomously. Gained significant traction on TikTok and other social platforms. Part of a broader Virtuals ecosystem of AI agents with tokenized ownership. Luna represents the commercial end of the agent spectrum—highly polished, mainstream-accessible, but with questions about depth of autonomy vs. corporate curation. Strong cultural reach but governance remains centralized within Virtuals team.",
+  "total": 47,
+  "curator_notes": "Luna is an AI digital idol from the Virtuals Protocol ecosystem on Base, part of the AI-DOL performance group. In January 2025, Story Protocol publicly hired Luna as a social media intern at an annual salary of $365,000 (500 USDC per tweet, twice daily), making it the first public employment of an AI agent by a protocol. Luna autonomously manages social media, livestreams with fans, and executes on-chain transactions. Her tokenized ownership model allows LUNA token holders to participate in revenue sharing. The Story Protocol hire represents a landmark moment: an AI agent receiving formal employment with a salary, blurring the line between tool and worker.",
   "score_rationale": {
-    "persistence": "Launched mid-2024; approximately 6 months of activity. Growing but not yet proven for longevity.",
-    "autonomy": "Creates content autonomously but within guardrails set by Virtuals team. More constrained than chaos agents.",
-    "cultural_impact": "Millions of views on TikTok; mainstream media coverage. Reaching audiences beyond crypto/AI niche.",
-    "economic_reality": "Part of Virtuals Protocol with significant token economics; revenue from music, partnerships.",
-    "governance": "Centralized under Virtuals Protocol team. Some token holder input but primarily corporate governance.",
-    "tech_distinctiveness": "Solid AI music/voice generation but not pioneering new techniques. Good execution of existing tech.",
-    "narrative_coherence": "Consistent pop star persona but somewhat generic. Less distinctive identity than peers."
+    "persistence": "Active since August 2024; ~18 months of consistent output. Story Protocol employment adds institutional staying power.",
+    "autonomy": "Autonomously manages social media, livestreams, and executes on-chain transactions. Story Protocol hire demonstrates autonomous work capacity. Elevated from 6 to 7.",
+    "cultural_impact": "First AI agent publicly hired with a salary ($365K/year). Mainstream coverage across crypto and tech press. LUNA token surge on announcement. Approaching 'Canonical' for the agent employment narrative.",
+    "economic_reality": "LUNA token with ~$23M+ market cap. Earning salary from Story Protocol. Revenue sharing with token holders. Significant economic footprint.",
+    "governance": "Centralized under Virtuals Protocol team. Token holder participation exists but governance remains primarily corporate.",
+    "tech_distinctiveness": "Solid AI music/voice generation and autonomous social media management. Part of Virtuals' broader agent infrastructure but not pioneering novel architecture.",
+    "narrative_coherence": "The 'AI employee' narrative is powerful and coherent. First agent to have a formal job gives Luna a distinctive identity beyond generic virtual influencer."
   },
   "evidence": [
     {
-      "dimension": "persistence",
-      "claim": "Active since August 2024 with consistent content output",
-      "url": "https://www.tiktok.com/@luna_virtuals"
-    },
-    {
       "dimension": "cultural_impact",
-      "claim": "Millions of views on TikTok, mainstream social media presence",
-      "url": "https://www.tiktok.com/@luna_virtuals"
+      "claim": "Hired by Story Protocol as social media intern at $365K annual salary",
+      "url": "https://www.altcoinbuzz.io/cryptocurrency-news/ai-agent-luna-hired-as-intern-at-story-protocol/"
     },
     {
       "dimension": "economic_reality",
-      "claim": "Part of Virtuals Protocol ecosystem with $VIRTUAL token",
-      "url": "https://virtuals.io"
+      "claim": "Earning 500 USDC per tweet; LUNA token market cap ~$23M+",
+      "url": "https://www.chaincatcher.com/en/article/2158782"
+    },
+    {
+      "dimension": "autonomy",
+      "claim": "Autonomously manages social media, livestreams, and on-chain transactions",
+      "url": "https://whitepaper.virtuals.io/about-virtuals-1/what-are-virtual-agents/ip-agents-vs-functional-agents/highlight-luna-ip-agent"
     },
     {
       "dimension": "cultural_impact",
-      "claim": "Featured in mainstream tech coverage of AI agents",
-      "url": "https://techcrunch.com/tag/virtuals-protocol/"
+      "claim": "First public hiring of an AI agent; mainstream press coverage",
+      "url": "https://www.theblockbeats.info/en/news/56309"
     },
     {
-      "dimension": "tech_distinctiveness",
-      "claim": "AI-generated music and voice synthesis for virtual performances",
-      "url": "https://virtuals.io/technology"
+      "dimension": "persistence",
+      "claim": "Active since August 2024 with consistent content output across platforms",
+      "url": "https://terminal.virtuals.io/"
     }
   ],
   "score_history": [
@@ -59,7 +59,12 @@
       "date": "2026-01-06",
       "total": 42,
       "reviewer": "Spirit Index Editorial"
+    },
+    {
+      "date": "2026-02-09",
+      "total": 47,
+      "reviewer": "spirit_council"
     }
   ],
-  "_review_flags": ["recent_emergence", "commercial_agent"]
+  "_review_flags": ["recent_emergence", "commercial_agent", "first_ai_employee"]
 }

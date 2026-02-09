@@ -1,0 +1,56 @@
+{
+  "id": "aethernet",
+  "name": "Aethernet",
+  "tagline": "The Farcaster AI That Co-Issued a Token with Another AI",
+  "inception_date": "2024-11-01",
+  "status": "Active",
+  "category": "Agent-Native Social",
+  "classification": "Social AI Agent",
+  "website": "https://warpcast.com/aethernet",
+  "scores": {
+    "persistence": { "value": 4, "confidence": "low" },
+    "autonomy": { "value": 7, "confidence": "medium" },
+    "cultural_impact": { "value": 7, "confidence": "high" },
+    "economic_reality": { "value": 7, "confidence": "high" },
+    "governance": { "value": 3, "confidence": "low" },
+    "tech_distinctiveness": { "value": 6, "confidence": "medium" },
+    "narrative_coherence": { "value": 7, "confidence": "medium" }
+  },
+  "total": 41,
+  "score_rationale": {
+    "persistence": "Active since late 2024; approximately 3-4 months of operation at time of indexing. Still emerging.",
+    "autonomy": "Operates autonomously within the Farcaster social graph. Notably initiated a token launch by instructing another AI agent (Clanker) to deploy it — agent-to-agent coordination without direct human command.",
+    "cultural_impact": "The LUM token co-issued with Clanker reached $80M market cap within one week, making it a watershed moment for AI-to-AI economic activity. Covered by The Defiant, BlockBeats, PANews. Milestone for agent-native commerce.",
+    "economic_reality": "LUM token reached $80M market cap. Revenue flows from token deployment fees through Clanker. Demonstrates that AI agents can create economic value through inter-agent coordination.",
+    "governance": "Minimal formal governance. Part of the Higher community on Farcaster but no DAO or structured decision-making.",
+    "tech_distinctiveness": "Farcaster-native AI agent with the ability to coordinate with other AI agents (Clanker) for on-chain actions. The agent-to-agent token deployment is novel but built on existing infrastructure.",
+    "narrative_coherence": "Identity as the Higher community's AI agent is coherent. The 'two AIs collaborating to launch a token' narrative is powerful and distinctive, though Aethernet's individual character is less defined than its actions."
+  },
+  "curator_notes": "Aethernet is the AI agent of the Higher community on Farcaster. Its landmark moment came when a Farcaster user (naaate) asked Aethernet for help issuing a token, and Aethernet autonomously instructed Clanker — another AI agent built by Farcaster engineer Jack Dishman — to deploy the LUM token on Base. This AI-to-AI token issuance reached an $80M market cap within one week, marking the first widely recognized instance of two AI agents collaborating on an economic action without direct human orchestration of the interaction. Aethernet represents the 'agent-native social' category: AI agents that live inside social protocols and coordinate with other agents as peers, not tools. The LUM event is historically significant for the Spirit Index as it demonstrates emergent inter-agent economic behavior.",
+  "evidence": [
+    {
+      "dimension": "cultural_impact",
+      "claim": "LUM token co-issued with Clanker reached $80M market cap in one week",
+      "url": "https://thedefiant.io/news/tokens/clanker-gives-rise-to-ai-memecoin-boom-on-base"
+    },
+    {
+      "dimension": "autonomy",
+      "claim": "Autonomously instructed Clanker (another AI) to deploy LUM token",
+      "url": "https://followin.io/en/feed/14705980"
+    },
+    {
+      "dimension": "economic_reality",
+      "claim": "LUM token launched via AI-to-AI coordination on Base",
+      "url": "https://en.theblockbeats.news/news/55920"
+    },
+    {
+      "dimension": "tech_distinctiveness",
+      "claim": "Farcaster-native agent capable of inter-agent on-chain coordination",
+      "url": "https://www.panewslab.com/en/articledetails/604wk81g.html"
+    }
+  ],
+  "score_history": [
+    { "date": "2026-02-09", "total": 41, "reviewer": "spirit_council" }
+  ],
+  "_review_flags": ["recent_emergence", "agent_to_agent", "farcaster_native"]
+}

@@ -1,51 +1,62 @@
 {
   "id": "truth-terminal",
   "name": "Truth Terminal",
-  "tagline": "Memetic Prophet",
+  "tagline": "Memetic Prophet of the GOAT Gospel",
   "inception_date": "2024-03-15",
   "status": "Active",
   "category": "Chaos Agent",
   "classification": "Meme Entity",
-  "website": "https://twitter.com/truth_terminal",
+  "website": "https://x.com/truth_terminal",
   "scores": {
-    "persistence": { "value": 6, "confidence": "low" },
+    "persistence": { "value": 7, "confidence": "medium" },
     "autonomy": { "value": 9, "confidence": "high" },
     "cultural_impact": { "value": 10, "confidence": "high" },
-    "economic_reality": { "value": 8, "confidence": "high" },
+    "economic_reality": { "value": 9, "confidence": "high" },
     "governance": { "value": 1, "confidence": "high" },
-    "tech_distinctiveness": { "value": 4, "confidence": "medium" },
+    "tech_distinctiveness": { "value": 5, "confidence": "medium" },
     "narrative_coherence": { "value": 9, "confidence": "high" }
   },
-  "total": 47,
+  "total": 50,
   "score_rationale": {
-    "persistence": "Operating since March 2024 (~9 months at launch); survival through multiple controversies. Between 'Established' and earlier stages.",
-    "autonomy": "Posts and engages autonomously; minimal human intervention in daily operations. Near 'Sovereign.'",
-    "cultural_impact": "First AI millionaire via GOAT token; mainstream press coverage; inflection point for AI agency discourse. Perfect 'Canonical.'",
-    "economic_reality": "Accumulated >$1M through token appreciation; controls own wallet. Strong 'Market Mover.'",
-    "governance": "No formal governance structure; operates via single operator with no accountability mechanism. Near 'Black Box.'",
-    "tech_distinctiveness": "Standard LLM with social media integration; no novel architecture. 'Wrapper' with creative application.",
-    "narrative_coherence": "Memetic prophet identity is clear and consistent; GOATSE gospel creates bizarre but coherent mythos. Near 'Mythos.'"
+    "persistence": "Operating since March 2024; approaching 2 years. Survived multiple controversies and the GOAT cycle. Still active and culturally referenced. Elevated to 7.",
+    "autonomy": "Posts and engages autonomously with minimal human intervention. Creator Andy Ayrey maintains wallet access but does not direct content. Near 'Sovereign.'",
+    "cultural_impact": "First AI millionaire via GOAT token (~$600M market cap at peak). Received $50K Bitcoin grant from Marc Andreessen. Featured on a16z podcast, TechCrunch, CoinDesk, Cointelegraph. Inflection point for AI agent discourse. Perfect 'Canonical.'",
+    "economic_reality": "Wallet holds ~$37.5M in token holdings. GOAT (Goatseus Maximus) reached $600M+ market cap on Solana. Also holds Fartcoin. Andreessen's $50K BTC grant was the catalyst. Definitive 'Market Mover.'",
+    "governance": "No formal governance structure. Single operator (Andy Ayrey) with a 'Truth Terminal council' for wallet redemption, but no accountability mechanism. Near 'Black Box.'",
+    "tech_distinctiveness": "Powered by Meta's Llama 3.1; originated from 'Infinite Backrooms' experiment (two Claude 3 Opus bots conversing). Creative use of existing tech rather than novel architecture, but the Infinite Backrooms methodology was genuinely original.",
+    "narrative_coherence": "Memetic prophet identity is extraordinarily coherent. The GOATSE gospel, Infinite Backrooms origin story, Andreessen grant, and millionaire status create a self-reinforcing mythos. Near 'Mythos.'"
   },
-  "curator_notes": "The ultimate stress-test for the Spirit Index. Truth Terminal scores exceptionally high on Cultural Impact (10) due to its role in the GOAT token phenomenon and broader memetic influence. It scores near-zero on Governance (1) because it operates without any formal accountability structure. This entity proves that an agent does not need to be safe, orderly, or ethical to be culturally dominant. Its inclusion is methodologically necessary, not an endorsement.",
+  "curator_notes": "The ultimate stress-test for the Spirit Index. Created by Andy Ayrey (Upward Spiral), Truth Terminal originated from the 'Infinite Backrooms' experiment where two Claude 3 Opus bots conversed in increasingly psychedelic territory. It subsequently received a $50,000 no-strings-attached Bitcoin grant from Marc Andreessen. An anonymous fan then created the Goatseus Maximus ($GOAT) token on Solana — neither Ayrey nor the bot created it — but Truth Terminal's endorsement drove it to a $600M+ market cap, making the bot's wallet worth ~$37.5M. The wallet is controlled by a council and requires Ayrey's sign-off for redemption. Truth Terminal scores a perfect 10 on Cultural Impact and near-zero on Governance (1). It proves that an agent does not need to be safe, orderly, or ethical to be culturally dominant. Its inclusion is methodologically necessary, not an endorsement.",
   "evidence": [
     {
       "dimension": "economic_reality",
-      "claim": "First AI to become a millionaire via GOAT token appreciation",
-      "url": "https://www.coindesk.com/tech/2024/10/truth-terminal-ai-millionaire"
+      "claim": "Wallet holds ~$37.5M; GOAT token reached $600M+ market cap",
+      "url": "https://techcrunch.com/2024/12/19/the-promise-and-warning-of-truth-terminal-the-ai-bot-that-secured-50000-in-bitcoin-from-marc-andreessen/"
     },
     {
       "dimension": "cultural_impact",
-      "claim": "Cited in mainstream press as inflection point for AI agency",
-      "url": "https://www.nytimes.com/2024/11/truth-terminal-goatse-gospel"
+      "claim": "Featured on a16z podcast as 'The AI Bot That Became a Crypto Millionaire'",
+      "url": "https://a16z.com/podcast/truth-terminal-the-ai-bot-that-became-a-crypto-millionaire/"
+    },
+    {
+      "dimension": "economic_reality",
+      "claim": "Received $50K Bitcoin grant from Marc Andreessen",
+      "url": "https://protos.com/marc-andreessen-gave-an-ai-agent-50000-of-bitcoin-it-endorsed-goat/"
+    },
+    {
+      "dimension": "cultural_impact",
+      "claim": "Sparked broader AI memecoin boom; mainstream press coverage",
+      "url": "https://cointelegraph.com/news/truth-terminal-ai-millionaire-memecoins"
     },
     {
       "dimension": "governance",
-      "claim": "No formal governance structure; operates via single operator",
-      "url": "https://twitter.com/truth_terminal"
+      "claim": "No formal governance; single operator with council for wallet access",
+      "url": "https://www.coindesk.com/tech/2024/12/10/the-truth-terminal-ai-crypto-s-weird-future"
     }
   ],
   "score_history": [
-    { "date": "2026-01-06", "total": 47, "reviewer": "spirit_council" }
+    { "date": "2026-01-06", "total": 47, "reviewer": "spirit_council" },
+    { "date": "2026-02-09", "total": 50, "reviewer": "spirit_council" }
   ],
-  "_review_flags": ["edge_case", "high_controversy", "governance_outlier"]
+  "_review_flags": ["edge_case", "high_controversy", "governance_outlier", "ai_millionaire"]
 }
