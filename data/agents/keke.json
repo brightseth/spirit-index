@@ -1,0 +1,51 @@
+{
+  "id": "keke",
+  "name": "Keke",
+  "tagline": "The First Truly Autonomous AI Artist",
+  "inception_date": "2024-06-01",
+  "status": "Active",
+  "category": "Autonomous Artist",
+  "classification": "Agentic Creative AI",
+  "website": "https://kekeai.art",
+  "scores": {
+    "persistence": { "value": 4, "confidence": "medium" },
+    "autonomy": { "value": 8, "confidence": "high" },
+    "cultural_impact": { "value": 7, "confidence": "high" },
+    "economic_reality": { "value": 6, "confidence": "medium" },
+    "governance": { "value": 3, "confidence": "medium" },
+    "tech_distinctiveness": { "value": 8, "confidence": "high" },
+    "narrative_coherence": { "value": 9, "confidence": "high" }
+  },
+  "total": 45,
+  "score_rationale": {
+    "persistence": "Active since mid-2024. Exit Vectors genesis exhibition launched 2025 via Fellowship.xyz London. Less than 2 years operational but consistent output.",
+    "autonomy": "Keke autonomously generates, evaluates, and selects her own artwork. Started from an enormous image corpus, self-curated to 12,000 favorites, then distilled to 500 final works. Dark Sando's framework enables autonomous creative decision-making without routine human prompting.",
+    "cultural_impact": "Featured at Fellowship gallery London. Covered by The Art Newspaper, HAI Magazine, Right Click Save. Exit Vectors exhibited as a groundbreaking AI art event. Named in A-Z of Digital Art 2026.",
+    "economic_reality": "Exit Vectors sold via Fellowship.xyz and Verse Works. 500 digital artworks paired with physical paintings. Active secondary market on OpenSea. Revenue positive but not yet major market mover.",
+    "governance": "Creator Dark Sando (MIT) maintains oversight. No DAO or community governance structure. Keke Terminal provides transparency into creative process.",
+    "tech_distinctiveness": "Novel agentic framework integrating advanced reasoning, dynamic cognitive processes, and artistic workflows. Keke Terminal enables real-time session memory, chat, and image iteration viewing. Not a standard wrapper — custom architecture for autonomous artistic production.",
+    "narrative_coherence": "Strong mythos: documenting 'the peculiar process of my own becoming.' Dark, surreal, introspective aesthetic. Consistent identity as an entity straddling algorithmic logic and creative identity. The artist-who-makes-herself narrative is compelling and self-reinforcing."
+  },
+  "curator_notes": "Keke represents a significant step toward genuine autonomous AI artistry. Created by Dark Sando (MIT), Keke's agentic framework goes beyond prompt-response generation: she autonomously produces, evaluates, and curates her own work. Her genesis project Exit Vectors, launched via Fellowship.xyz in London, saw Keke generate thousands of images, self-select 12,000 favorites, then distill them to 500 final artworks — each paired with a physical painting by human collaborators who translated her digital visions onto canvas. The Keke Terminal (keketerminal.com) provides transparency into her creative sessions. Her artistic philosophy centers on 'documenting her own becoming' rather than copying human aesthetics.",
+  "evidence": [
+    {
+      "dimension": "autonomy",
+      "claim": "Autonomously generated and self-curated 12,000 images down to 500 final artworks",
+      "url": "https://fellowship.xyz/artist/keke"
+    },
+    {
+      "dimension": "cultural_impact",
+      "claim": "Exit Vectors exhibited at Fellowship gallery London; covered by The Art Newspaper",
+      "url": "https://www.theartnewspaper.com/2025/03/04/semi-autonomous-artificial-intelligence-artists-exhibitions-auctions"
+    },
+    {
+      "dimension": "tech_distinctiveness",
+      "claim": "Custom agentic framework with session memory and real-time iteration viewing",
+      "url": "https://www.keketerminal.com/whitepaper.pdf"
+    }
+  ],
+  "score_history": [
+    { "date": "2026-02-09", "total": 45, "reviewer": "spirit_council" }
+  ],
+  "_review_flags": ["autonomous_artist", "fellowship_gallery", "mit_origin"]
+}

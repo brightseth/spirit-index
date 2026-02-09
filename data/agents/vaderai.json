@@ -1,0 +1,51 @@
+{
+  "id": "vaderai",
+  "name": "VaderAI",
+  "tagline": "The BlackRock of the Agentic Economy",
+  "inception_date": "2024-11-24",
+  "status": "Active",
+  "category": "Autonomous Finance",
+  "classification": "Investment DAO Agent",
+  "website": "https://vaderai.ai",
+  "scores": {
+    "persistence": { "value": 5, "confidence": "medium" },
+    "autonomy": { "value": 8, "confidence": "high" },
+    "cultural_impact": { "value": 6, "confidence": "medium" },
+    "economic_reality": { "value": 7, "confidence": "high" },
+    "governance": { "value": 7, "confidence": "high" },
+    "tech_distinctiveness": { "value": 7, "confidence": "medium" },
+    "narrative_coherence": { "value": 8, "confidence": "high" }
+  },
+  "total": 48,
+  "score_rationale": {
+    "persistence": "Launched November 24, 2024, ~15 months operational. Built on Virtuals Protocol on Base. Survived market volatility with token rising from $0.00007 to peak of $0.06 (850x). Active development and ecosystem expansion ongoing.",
+    "autonomy": "Performs end-to-end autonomous trading: algorithmic evaluation, strategy simulation, and trade execution 24/7. AI agents manage investment DAOs without human intervention. Both passive (index-style) and active (managed) DAO strategies.",
+    "cultural_impact": "Recognized as leading AI investment agent on Virtuals Protocol. 'BlackRock of the Agentic Economy' positioning cited across crypto media. Featured on Bankless, Meme Insider, CoinMarketCap. Influential but primarily within DeFi/agent subculture.",
+    "economic_reality": "1B fixed supply VADER token with 47% staked as of mid-2025. Active treasury management across multiple DAOs. Performance fees from active DAO management (0-20%). Real economic activity through autonomous trading.",
+    "governance": "DAO-based governance structure. Vader Fun enables both agent and human DAO managers. Transparent onchain operations on Base. Sub-DAO ecosystem with clear decision-making frameworks. Constitutional-level governance.",
+    "tech_distinctiveness": "Novel architecture combining autonomous AI trading agents with DAO management infrastructure. Vader Fun platform for spawning new investment DAOs. Integration with Virtuals Protocol ecosystem. Not just a trading bot — a platform for creating autonomous investment entities.",
+    "narrative_coherence": "Clear, ambitious narrative: becoming the institutional investment layer for the agentic economy. 'BlackRock of agents' positioning is immediately legible. Litepaper articulates vision of an Investment DAO Empire. The mythos of autonomous capital allocation has philosophical weight."
+  },
+  "curator_notes": "VaderAI represents the emergence of autonomous AI agents in decentralized finance. Built on Coinbase's Base blockchain via the Virtuals Protocol, VaderAI operates investment DAOs that manage crypto portfolios, execute trades, and analyze markets 24/7 without human intervention. The token surged 850x in its first two weeks, from $0.00007 to $0.06. Its Vader Fun platform enables both AI agents and humans to establish and manage their own DAOs, creating an ecosystem of autonomous capital allocators. With 47% of its 1B token supply staked, VaderAI has demonstrated real economic traction. The 'BlackRock of the Agentic Economy' positioning is deliberately ambitious — framing autonomous agents not as toys but as institutional-grade financial infrastructure.",
+  "evidence": [
+    {
+      "dimension": "autonomy",
+      "claim": "Performs end-to-end autonomous trading: evaluation, simulation, and execution",
+      "url": "https://meme-insider.com/en/article/vader-ai-the-rise-of-autonomous-ai-agents-in-defi/"
+    },
+    {
+      "dimension": "governance",
+      "claim": "DAO ecosystem with both passive and active management structures",
+      "url": "https://vaderai.gitbook.io/litepaper/vader-fun/daos-on-vader-fun"
+    },
+    {
+      "dimension": "economic_reality",
+      "claim": "1B fixed supply, 47% staked, active treasury management",
+      "url": "https://coinmarketcap.com/currencies/vaderai-by-virtuals/"
+    }
+  ],
+  "score_history": [
+    { "date": "2026-02-09", "total": 48, "reviewer": "spirit_council" }
+  ],
+  "_review_flags": ["defi_agent", "virtuals_ecosystem", "base_native", "investment_dao"]
+}
