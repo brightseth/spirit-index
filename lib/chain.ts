@@ -1,53 +1,82 @@
 /**
- * On-chain registration check via ERC-8004 registry on Base Sepolia.
- * Uses viem to call getAgent(string) on the Spirit Registry contract.
+ * On-chain registration check via ERC-8004 SpiritRegistry on Base Mainnet.
+ *
+ * The mainnet SpiritRegistry uses uint256 agentId (not string spiritId).
+ * We maintain a mapping from Spirit Index slugs to on-chain agentIds
+ * for agents that have been registered.
  */
 
 import { createPublicClient, http, parseAbi } from "viem";
-import { baseSepolia } from "viem/chains";
+import { base } from "viem/chains";
 
-const REGISTRY_ADDRESS = "0x4a0e642e9aec25c5856987e95c0410ae10e8de5e" as const;
+/** SpiritRegistry on Base Mainnet — deployed Feb 3, 2026 */
+export const REGISTRY_ADDRESS = "0xF2709ceF1Cf4893ed78D3220864428b32b12dFb9" as const;
+
+/**
+ * Mapping from Spirit Index slug → on-chain agentId.
+ * Updated as agents are registered via registerSpirit().
+ * Agents not in this map return { registered: false }.
+ */
+const KNOWN_AGENT_IDS: Record<string, number> = {
+  // Populated after canonical agent registration
+  // "abraham": 2,
+  // "solienne": 3,
+};
 
 const registryAbi = parseAbi([
-  "function getAgent(string spiritId) view returns (uint256 agentId, address trainer, address platform, address treasury, string metadataURI, uint256[4] split)",
+  "function exists(uint256 agentId) view returns (bool)",
+  "function getSpiritConfig(uint256 agentId) view returns (address treasury, address childToken, address stakingPool, address lpPosition, address artist, address platform, uint256 createdAt, bool hasToken)",
+  "function ownerOf(uint256 agentId) view returns (address)",
+  "function agentURI(uint256 agentId) view returns (string)",
 ]);
 
 const client = createPublicClient({
-  chain: baseSepolia,
-  transport: http(),
+  chain: base,
+  transport: http("https://mainnet.base.org"),
 });
 
 export interface RegistrationStatus {
   registered: boolean;
   agentId?: number;
-  trainer?: string;
+  artist?: string;
 }
 
 export async function checkRegistration(
   spiritId: string
 ): Promise<RegistrationStatus> {
+  // Look up known on-chain agentId for this slug
+  const agentId = KNOWN_AGENT_IDS[spiritId];
+
+  if (agentId === undefined) {
+    return { registered: false };
+  }
+
   try {
-    const result = await client.readContract({
+    const agentExists = await client.readContract({
       address: REGISTRY_ADDRESS,
       abi: registryAbi,
-      functionName: "getAgent",
-      args: [spiritId],
+      functionName: "exists",
+      args: [BigInt(agentId)],
     });
 
-    const [agentId, trainer] = result;
-
-    // agentId of 0 means not registered
-    if (agentId === BigInt(0)) {
+    if (!agentExists) {
       return { registered: false };
     }
 
+    const owner = await client.readContract({
+      address: REGISTRY_ADDRESS,
+      abi: registryAbi,
+      functionName: "ownerOf",
+      args: [BigInt(agentId)],
+    });
+
     return {
       registered: true,
-      agentId: Number(agentId),
-      trainer,
+      agentId,
+      artist: owner,
     };
   } catch {
-    // Contract reverts if agent doesn't exist
+    // Contract reverts or RPC error — fall back to unregistered
     return { registered: false };
   }
 }

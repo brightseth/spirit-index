@@ -180,7 +180,7 @@ function RegistrationBadge({ agent, registration }: { agent: Agent; registration
           </span>
           <span className="text-dim text-sm font-mono">Agent #{registration.agentId}</span>
           <a
-            href={`https://sepolia.basescan.org/address/0x4a0e642e9aec25c5856987e95c0410ae10e8de5e`}
+            href={`https://basescan.org/address/0xF2709ceF1Cf4893ed78D3220864428b32b12dFb9`}
             target="_blank"
             rel="noopener noreferrer"
             className="text-sm"

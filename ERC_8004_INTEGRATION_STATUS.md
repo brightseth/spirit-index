@@ -1,7 +1,7 @@
 # ERC-8004 Integration Status — Spirit Index x Spirit Protocol
 
-**Date:** January 28, 2026
-**Status:** Shipped (Phase 1 complete)
+**Date:** February 11, 2026 (updated from Jan 28)
+**Status:** Shipped (Phase 1 complete, upgraded to Base Mainnet)
 
 ---
 
@@ -15,7 +15,9 @@
 - Purely a registrar — not a crawler or importer
 
 ### Spirit Index (distribution + discovery)
-- Server-side on-chain check (`getAgent`) on Base Sepolia
+- Server-side on-chain check (`exists`) on **Base Mainnet** (upgraded from Sepolia Feb 11)
+- Registry: `0xF2709ceF1Cf4893ed78D3220864428b32b12dFb9`
+- Slug → agentId mapping via `KNOWN_AGENT_IDS` in `lib/chain.ts`
 - Graceful handling of reverts and unregistered agents
 - Visual semantics: green badge = registered, CTA = not registered
 - Direct, parameterized handoff to Spirit Protocol
@@ -25,7 +27,7 @@
 ## Canonical Flow
 
 1. Agent is discovered on `spiritindex.org/<agent-id>`
-2. Spirit Index checks registry on Base Sepolia, determines registration status
+2. Spirit Index checks SpiritRegistry on Base Mainnet, determines registration status
 3. If not registered: shows CTA, links to Spirit Protocol with safe prefill
 4. Spirit Protocol: presents identity registration, user verifies + signs, ERC-8004 identity registered on-chain
 5. Spirit Index: reflects status on next visit (or cached refresh)
@@ -78,8 +80,26 @@ No tokens. No approvals. No hidden steps.
 
 ---
 
-## What Comes Next (not yet)
+## Feb 11, 2026 Update — Gene Pivot
 
-- Verification vs trust
-- When identity becomes insufficient
-- What "activation" should mean
+Per Gene/Seth call: Spirit = **gated community within ERC-8004**, not a separate system.
+
+**Changes:**
+- Upgraded `lib/chain.ts` from Base Sepolia → **Base Mainnet**
+- Registry address: `0x4a0e...` (old Sepolia) → `0xF270...` (mainnet)
+- ABI: `getAgent(string)` (old) → `exists(uint256)` + `ownerOf(uint256)` (mainnet)
+- ID resolution: slug → numeric agentId via `KNOWN_AGENT_IDS` mapping
+- BaseScan link in `page.tsx` updated to mainnet
+- Registration model: **identity + daily practice only** (no revenue routing at launch)
+
+**See:** `spirit-contracts-core/GENE_PIVOT_FEB_2026.md` for full strategy
+
+---
+
+## What Comes Next
+
+- Register Abraham + Solienne on mainnet (uncomment KNOWN_AGENT_IDS entries)
+- Deploy SpiritPractice contracts per agent
+- Link practice → identity via `setMetadata()`
+- "Agents registered via Spirit: X" counter
+- Revenue routing added later (post-traction, not at launch)

@@ -2,7 +2,7 @@
  * Spirit Index API - Agent On-Chain Registration Status
  *
  * GET /api/agents/:id/registration
- * Checks ERC-8004 registry on Base Sepolia for the given agent ID.
+ * Checks ERC-8004 SpiritRegistry on Base Mainnet for the given agent.
  */
 
 import { NextRequest, NextResponse } from "next/server";
