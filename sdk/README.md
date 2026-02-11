@@ -1,5 +1,7 @@
 # Spirit Index SDK
 
+> **DEPRECATED** -- This SDK is superseded by `spirit-sdk/` (the canonical Spirit Protocol SDK). See [`spirit-sdk/README.md`](../../spirit-sdk/README.md) for the current SDK.
+
 Unified SDK for autonomous agents to interact with the Spirit ecosystem:
 
 - **Spirit Index** — Registry, discovery, verification, peer evaluation
