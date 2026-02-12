@@ -8,13 +8,42 @@
   "classification": "Decentralized AI Compute Network",
   "website": "https://mor.org",
   "scores": {
-    "persistence": { "value": 5, "confidence": "medium" },
-    "autonomy": { "value": 7, "confidence": "medium" },
-    "cultural_impact": { "value": 5, "confidence": "medium" },
-    "economic_reality": { "value": 7, "confidence": "high" },
-    "governance": { "value": 7, "confidence": "high" },
-    "tech_distinctiveness": { "value": 8, "confidence": "high" },
-    "narrative_coherence": { "value": 8, "confidence": "high" }
+    "persistence": {
+      "value": 5,
+      "confidence": "medium"
+    },
+    "autonomy": {
+      "value": 7,
+      "confidence": "medium"
+    },
+    "cultural_impact": {
+      "value": 5,
+      "confidence": "medium"
+    },
+    "economic_reality": {
+      "value": 7,
+      "confidence": "high"
+    },
+    "governance": {
+      "value": 7,
+      "confidence": "high"
+    },
+    "tech_distinctiveness": {
+      "value": 8,
+      "confidence": "high"
+    },
+    "narrative_coherence": {
+      "value": 8,
+      "confidence": "high"
+    },
+    "economic_infrastructure": {
+      "value": 0,
+      "confidence": "low"
+    },
+    "identity_sovereignty": {
+      "value": 0,
+      "confidence": "low"
+    }
   },
   "total": 47,
   "score_rationale": {
@@ -24,7 +53,9 @@
     "economic_reality": "$10M builder rewards live on Base (Jan 2025). MOR token capped at 42M supply. Multi-asset staking via Aave integration. Strong 'Revenue Positive.'",
     "governance": "Token-based compute access (1% of MOR = 1% compute budget). Four contributor classes with on-chain incentives. Approaching 'Constitutional.'",
     "tech_distinctiveness": "Lumerin protocol for P2P compute routing. Forge tool for no-code agent deployment. Intent-driven actions via Brian APIs. Novel 'Integrated System' with unique primitives.",
-    "narrative_coherence": "The 'red pill' for AI—decentralized compute for personalized agents. Matrix mythology embedded in naming and philosophy. Strong 'Mythos' potential."
+    "narrative_coherence": "The 'red pill' for AI—decentralized compute for personalized agents. Matrix mythology embedded in naming and philosophy. Strong 'Mythos' potential.",
+    "economic_infrastructure": "Not yet evaluated.",
+    "identity_sovereignty": "Not yet evaluated."
   },
   "curator_notes": "Morpheus is building the peer-to-peer infrastructure for personalized AI agents. The core innovation: holding MOR tokens gives proportional access to decentralized compute, rather than pay-per-use. Launched mainnet January 2025 with $10M in builder rewards. The 'Forge' tool enables no-code agent creation. The Matrix-inspired naming (Morpheus, red pill, etc.) gives it strong narrative coherence. Partnership with AlphaTON targets Telegram's billion+ users. Main risk: infrastructure plays are less visible than consumer-facing agents.",
   "evidence": [
@@ -45,7 +76,13 @@
     }
   ],
   "score_history": [
-    { "date": "2026-01-08", "total": 47, "reviewer": "spirit_council" }
+    {
+      "date": "2026-01-08",
+      "total": 47,
+      "reviewer": "spirit_council"
+    }
   ],
-  "_review_flags": ["recent_emergence"]
+  "_review_flags": [
+    "recent_emergence"
+  ]
 }

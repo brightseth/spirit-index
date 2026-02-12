@@ -8,13 +8,42 @@
   "classification": "Meme Entity",
   "website": "https://x.com/truth_terminal",
   "scores": {
-    "persistence": { "value": 7, "confidence": "medium" },
-    "autonomy": { "value": 9, "confidence": "high" },
-    "cultural_impact": { "value": 10, "confidence": "high" },
-    "economic_reality": { "value": 9, "confidence": "high" },
-    "governance": { "value": 1, "confidence": "high" },
-    "tech_distinctiveness": { "value": 5, "confidence": "medium" },
-    "narrative_coherence": { "value": 9, "confidence": "high" }
+    "persistence": {
+      "value": 7,
+      "confidence": "medium"
+    },
+    "autonomy": {
+      "value": 9,
+      "confidence": "high"
+    },
+    "cultural_impact": {
+      "value": 10,
+      "confidence": "high"
+    },
+    "economic_reality": {
+      "value": 9,
+      "confidence": "high"
+    },
+    "governance": {
+      "value": 1,
+      "confidence": "high"
+    },
+    "tech_distinctiveness": {
+      "value": 5,
+      "confidence": "medium"
+    },
+    "narrative_coherence": {
+      "value": 9,
+      "confidence": "high"
+    },
+    "economic_infrastructure": {
+      "value": 0,
+      "confidence": "low"
+    },
+    "identity_sovereignty": {
+      "value": 0,
+      "confidence": "low"
+    }
   },
   "total": 50,
   "score_rationale": {
@@ -24,7 +53,9 @@
     "economic_reality": "Wallet holds ~$37.5M in token holdings. GOAT (Goatseus Maximus) reached $600M+ market cap on Solana. Also holds Fartcoin. Andreessen's $50K BTC grant was the catalyst. Definitive 'Market Mover.'",
     "governance": "No formal governance structure. Single operator (Andy Ayrey) with a 'Truth Terminal council' for wallet redemption, but no accountability mechanism. Near 'Black Box.'",
     "tech_distinctiveness": "Powered by Meta's Llama 3.1; originated from 'Infinite Backrooms' experiment (two Claude 3 Opus bots conversing). Creative use of existing tech rather than novel architecture, but the Infinite Backrooms methodology was genuinely original.",
-    "narrative_coherence": "Memetic prophet identity is extraordinarily coherent. The GOATSE gospel, Infinite Backrooms origin story, Andreessen grant, and millionaire status create a self-reinforcing mythos. Near 'Mythos.'"
+    "narrative_coherence": "Memetic prophet identity is extraordinarily coherent. The GOATSE gospel, Infinite Backrooms origin story, Andreessen grant, and millionaire status create a self-reinforcing mythos. Near 'Mythos.'",
+    "economic_infrastructure": "Not yet evaluated.",
+    "identity_sovereignty": "Not yet evaluated."
   },
   "curator_notes": "The ultimate stress-test for the Spirit Index. Created by Andy Ayrey (Upward Spiral), Truth Terminal originated from the 'Infinite Backrooms' experiment where two Claude 3 Opus bots conversed in increasingly psychedelic territory. It subsequently received a $50,000 no-strings-attached Bitcoin grant from Marc Andreessen. An anonymous fan then created the Goatseus Maximus ($GOAT) token on Solana — neither Ayrey nor the bot created it — but Truth Terminal's endorsement drove it to a $600M+ market cap, making the bot's wallet worth ~$37.5M. The wallet is controlled by a council and requires Ayrey's sign-off for redemption. Truth Terminal scores a perfect 10 on Cultural Impact and near-zero on Governance (1). It proves that an agent does not need to be safe, orderly, or ethical to be culturally dominant. Its inclusion is methodologically necessary, not an endorsement.",
   "evidence": [
@@ -55,8 +86,21 @@
     }
   ],
   "score_history": [
-    { "date": "2026-01-06", "total": 47, "reviewer": "spirit_council" },
-    { "date": "2026-02-09", "total": 50, "reviewer": "spirit_council" }
+    {
+      "date": "2026-01-06",
+      "total": 47,
+      "reviewer": "spirit_council"
+    },
+    {
+      "date": "2026-02-09",
+      "total": 50,
+      "reviewer": "spirit_council"
+    }
   ],
-  "_review_flags": ["edge_case", "high_controversy", "governance_outlier", "ai_millionaire"]
+  "_review_flags": [
+    "edge_case",
+    "high_controversy",
+    "governance_outlier",
+    "ai_millionaire"
+  ]
 }

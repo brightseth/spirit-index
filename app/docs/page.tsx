@@ -219,7 +219,7 @@ export default function APIDocs() {
             <ul className="text-muted text-sm space-y-1 mb-4">
               <li>
                 <code className="text-green">spirit:total</code> — Total score
-                (0-70)
+                (0-90)
               </li>
               <li>
                 <code className="text-green">spirit:status</code> — Entity

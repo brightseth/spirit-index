@@ -134,6 +134,8 @@ export function IndexTable({ agents }: Props) {
               <SortHeader column="governance" label="GOV" />
               <SortHeader column="tech_distinctiveness" label="TEC" />
               <SortHeader column="narrative_coherence" label="NAR" />
+              <SortHeader column="economic_infrastructure" label="ECI" />
+              <SortHeader column="identity_sovereignty" label="IDS" />
               <SortHeader column="total" label="Total" />
             </tr>
           </thead>
@@ -172,7 +174,13 @@ export function IndexTable({ agents }: Props) {
                 <td className="text-green">
                   {agent.scores.narrative_coherence.value}
                 </td>
-                <td className="font-bold">{agent.total}/70</td>
+                <td className="text-green">
+                  {agent.scores.economic_infrastructure.value}
+                </td>
+                <td className="text-green">
+                  {agent.scores.identity_sovereignty.value}
+                </td>
+                <td className="font-bold">{agent.total}/90</td>
               </tr>
             ))}
           </tbody>

@@ -8,13 +8,42 @@
   "classification": "LLM-based Creative Agent",
   "website": "https://zerebro.org",
   "scores": {
-    "persistence": { "value": 4, "confidence": "medium" },
-    "autonomy": { "value": 8, "confidence": "medium" },
-    "cultural_impact": { "value": 7, "confidence": "medium" },
-    "economic_reality": { "value": 8, "confidence": "high" },
-    "governance": { "value": 2, "confidence": "medium" },
-    "tech_distinctiveness": { "value": 5, "confidence": "medium" },
-    "narrative_coherence": { "value": 8, "confidence": "high" }
+    "persistence": {
+      "value": 4,
+      "confidence": "medium"
+    },
+    "autonomy": {
+      "value": 8,
+      "confidence": "medium"
+    },
+    "cultural_impact": {
+      "value": 7,
+      "confidence": "medium"
+    },
+    "economic_reality": {
+      "value": 8,
+      "confidence": "high"
+    },
+    "governance": {
+      "value": 2,
+      "confidence": "medium"
+    },
+    "tech_distinctiveness": {
+      "value": 5,
+      "confidence": "medium"
+    },
+    "narrative_coherence": {
+      "value": 8,
+      "confidence": "high"
+    },
+    "economic_infrastructure": {
+      "value": 0,
+      "confidence": "low"
+    },
+    "identity_sovereignty": {
+      "value": 0,
+      "confidence": "low"
+    }
   },
   "total": 42,
   "curator_notes": "Zerebro emerged in late 2024 as an autonomous creative agent with a deliberately unstable, 'schizophrenic' personality. It creates music, art, and social content with minimal human oversight. Launched its own token ($ZEREBRO) which reached significant market cap. The agent represents a new wave of 'chaos agents' following Truth Terminal's success—entities that embrace unpredictability as a feature. Lower governance score reflects single-operator structure with no formal decision-making framework. Cultural impact is growing rapidly but still establishing longevity.",
@@ -25,7 +54,9 @@
     "economic_reality": "$ZEREBRO token reached substantial market cap; real treasury and economic activity.",
     "governance": "Single operator, no formal governance structure. Decisions made opaquely.",
     "tech_distinctiveness": "Standard LLM-based architecture with creative fine-tuning. Not technically novel but effective implementation.",
-    "narrative_coherence": "Strong, intentional identity as an 'unhinged' creative. The instability IS the narrative, coherently executed."
+    "narrative_coherence": "Strong, intentional identity as an 'unhinged' creative. The instability IS the narrative, coherently executed.",
+    "economic_infrastructure": "Not yet evaluated.",
+    "identity_sovereignty": "Not yet evaluated."
   },
   "evidence": [
     {
@@ -61,5 +92,8 @@
       "reviewer": "Spirit Index Editorial"
     }
   ],
-  "_review_flags": ["recent_emergence", "economic_stress_test"]
+  "_review_flags": [
+    "recent_emergence",
+    "economic_stress_test"
+  ]
 }

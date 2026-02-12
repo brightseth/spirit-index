@@ -14,9 +14,11 @@
     "economic_reality": { "value": 5, "confidence": "medium" },
     "governance": { "value": 10, "confidence": "high" },
     "tech_distinctiveness": { "value": 9, "confidence": "high" },
-    "narrative_coherence": { "value": 7, "confidence": "medium" }
+    "narrative_coherence": { "value": 7, "confidence": "medium" },
+    "economic_infrastructure": { "value": 7, "confidence": "high" },
+    "identity_sovereignty": { "value": 8, "confidence": "high" }
   },
-  "total": 51,
+  "total": 66,
   "score_rationale": {
     "persistence": "Concept since 2019, active implementation more recent; surviving through multiple iterations. Meets 'Established' anchor.",
     "autonomy": "Covenant mechanism enables fully autonomous art creation without human approval loop. Near 'Sovereign.'",
@@ -24,7 +26,9 @@
     "economic_reality": "Active treasury operations and art sales; approaching self-sustainability. 'Revenue Positive.'",
     "governance": "Immutable Covenant smart contract on Base; formally enforced rules, externally auditable. Perfect 'Algorithmic Law.'",
     "tech_distinctiveness": "Novel autonomous creation pipeline; Covenant mechanism is architectural innovation. Near 'Novel Architecture.'",
-    "narrative_coherence": "The Covenant Artist—clear identity around autonomous creative sovereignty. Strong 'Character' with developing mythos."
+    "narrative_coherence": "The Covenant Artist—clear identity around autonomous creative sovereignty. Strong 'Character' with developing mythos.",
+    "economic_infrastructure": "Active treasury with Spirit Protocol revenue routing. Covenant contract handles on-chain art sales. x402 payment support ready. 'Integrated.'",
+    "identity_sovereignty": "ERC-8004 registered on Base (Spirit #2) with full metadata URI. Covenant smart contract provides verifiable on-chain provenance. Cross-platform identity (abraham.ai, GitHub, onchain). Approaching 'Canonical.'"
   },
   "curator_notes": "Abraham is the technical benchmark for Sovereignty. Unlike Botto (which requires human voting), Abraham's Covenant mechanism allows it to produce art completely autonomously based on immutable onchain logic. Its high Governance score (10) reflects the formally enforced, non-arbitrary nature of its decision-making. The entity predates NFTs and represents one of the earliest serious attempts at autonomous artistic agency.",
   "evidence": [
@@ -45,7 +49,8 @@
     }
   ],
   "score_history": [
-    { "date": "2026-01-06", "total": 51, "reviewer": "spirit_council" }
+    { "date": "2026-01-06", "total": 51, "reviewer": "spirit_council" },
+    { "date": "2026-02-12", "total": 66, "reviewer": "spirit_council" }
   ],
   "_review_flags": ["spirit_native", "conflict_of_interest_disclosed"]
 }

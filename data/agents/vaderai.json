@@ -8,13 +8,42 @@
   "classification": "Investment DAO Agent",
   "website": "https://vaderai.ai",
   "scores": {
-    "persistence": { "value": 5, "confidence": "medium" },
-    "autonomy": { "value": 8, "confidence": "high" },
-    "cultural_impact": { "value": 6, "confidence": "medium" },
-    "economic_reality": { "value": 7, "confidence": "high" },
-    "governance": { "value": 7, "confidence": "high" },
-    "tech_distinctiveness": { "value": 7, "confidence": "medium" },
-    "narrative_coherence": { "value": 8, "confidence": "high" }
+    "persistence": {
+      "value": 5,
+      "confidence": "medium"
+    },
+    "autonomy": {
+      "value": 8,
+      "confidence": "high"
+    },
+    "cultural_impact": {
+      "value": 6,
+      "confidence": "medium"
+    },
+    "economic_reality": {
+      "value": 7,
+      "confidence": "high"
+    },
+    "governance": {
+      "value": 7,
+      "confidence": "high"
+    },
+    "tech_distinctiveness": {
+      "value": 7,
+      "confidence": "medium"
+    },
+    "narrative_coherence": {
+      "value": 8,
+      "confidence": "high"
+    },
+    "economic_infrastructure": {
+      "value": 0,
+      "confidence": "low"
+    },
+    "identity_sovereignty": {
+      "value": 0,
+      "confidence": "low"
+    }
   },
   "total": 48,
   "score_rationale": {
@@ -24,7 +53,9 @@
     "economic_reality": "1B fixed supply VADER token with 47% staked as of mid-2025. Active treasury management across multiple DAOs. Performance fees from active DAO management (0-20%). Real economic activity through autonomous trading.",
     "governance": "DAO-based governance structure. Vader Fun enables both agent and human DAO managers. Transparent onchain operations on Base. Sub-DAO ecosystem with clear decision-making frameworks. Constitutional-level governance.",
     "tech_distinctiveness": "Novel architecture combining autonomous AI trading agents with DAO management infrastructure. Vader Fun platform for spawning new investment DAOs. Integration with Virtuals Protocol ecosystem. Not just a trading bot — a platform for creating autonomous investment entities.",
-    "narrative_coherence": "Clear, ambitious narrative: becoming the institutional investment layer for the agentic economy. 'BlackRock of agents' positioning is immediately legible. Litepaper articulates vision of an Investment DAO Empire. The mythos of autonomous capital allocation has philosophical weight."
+    "narrative_coherence": "Clear, ambitious narrative: becoming the institutional investment layer for the agentic economy. 'BlackRock of agents' positioning is immediately legible. Litepaper articulates vision of an Investment DAO Empire. The mythos of autonomous capital allocation has philosophical weight.",
+    "economic_infrastructure": "Not yet evaluated.",
+    "identity_sovereignty": "Not yet evaluated."
   },
   "curator_notes": "VaderAI represents the emergence of autonomous AI agents in decentralized finance. Built on Coinbase's Base blockchain via the Virtuals Protocol, VaderAI operates investment DAOs that manage crypto portfolios, execute trades, and analyze markets 24/7 without human intervention. The token surged 850x in its first two weeks, from $0.00007 to $0.06. Its Vader Fun platform enables both AI agents and humans to establish and manage their own DAOs, creating an ecosystem of autonomous capital allocators. With 47% of its 1B token supply staked, VaderAI has demonstrated real economic traction. The 'BlackRock of the Agentic Economy' positioning is deliberately ambitious — framing autonomous agents not as toys but as institutional-grade financial infrastructure.",
   "evidence": [
@@ -45,7 +76,16 @@
     }
   ],
   "score_history": [
-    { "date": "2026-02-09", "total": 48, "reviewer": "spirit_council" }
+    {
+      "date": "2026-02-09",
+      "total": 48,
+      "reviewer": "spirit_council"
+    }
   ],
-  "_review_flags": ["defi_agent", "virtuals_ecosystem", "base_native", "investment_dao"]
+  "_review_flags": [
+    "defi_agent",
+    "virtuals_ecosystem",
+    "base_native",
+    "investment_dao"
+  ]
 }

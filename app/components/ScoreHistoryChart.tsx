@@ -22,7 +22,7 @@ export function ScoreHistoryChart({ history, currentTotal }: Props) {
     return (
       <div className="text-center py-8 text-dim text-sm">
         <p>Score history will appear here after future reviews.</p>
-        <p className="text-muted mt-2">Current score: {currentTotal}/70</p>
+        <p className="text-muted mt-2">Current score: {currentTotal}/90</p>
       </div>
     );
   }
@@ -52,11 +52,11 @@ export function ScoreHistoryChart({ history, currentTotal }: Props) {
             tickLine={{ stroke: "#374151" }}
           />
           <YAxis
-            domain={[0, 70]}
+            domain={[0, 90]}
             tick={{ fill: "#6b7280", fontSize: 12 }}
             axisLine={{ stroke: "#374151" }}
             tickLine={{ stroke: "#374151" }}
-            ticks={[0, 35, 70]}
+            ticks={[0, 45, 90]}
           />
           <Tooltip
             contentStyle={{
@@ -66,10 +66,10 @@ export function ScoreHistoryChart({ history, currentTotal }: Props) {
               fontSize: "12px",
             }}
             labelStyle={{ color: "#9ca3af" }}
-            formatter={(value) => [`${value}/70`, "Score"]}
+            formatter={(value) => [`${value}/90`, "Score"]}
           />
           <ReferenceLine
-            y={35}
+            y={45}
             stroke="#374151"
             strokeDasharray="3 3"
             label={{

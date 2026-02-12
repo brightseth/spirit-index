@@ -47,7 +47,7 @@ export function ScoreTable({ scores, total, layout = 'vertical' }: ScoreTablePro
       ))}
       <div className="pt-3 border-t border-subtle flex justify-between items-center">
         <span className="score-label">Total Score</span>
-        <span className="score-total">{total}/70</span>
+        <span className="score-total">{total}/90</span>
       </div>
     </div>
   );

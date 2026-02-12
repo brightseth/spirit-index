@@ -163,7 +163,7 @@ export default async function DimensionLeaderboard({ params }: Props) {
                       />
                     </td>
                     <td className="py-4 px-4 text-center text-muted">
-                      {agent.total}/70
+                      {agent.total}/90
                     </td>
                     <td className="py-4 text-dim text-xs max-w-[300px]">
                       {rationale ? (

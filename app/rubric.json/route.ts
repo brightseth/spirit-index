@@ -45,6 +45,20 @@ const ANCHORS: Record<DimensionKey, { score: number; label: string; description:
     { score: 4, label: "Functional Identity", description: "Clear purpose; minimal personality" },
     { score: 1, label: "Generic", description: "Interchangeable with similar entities" },
   ],
+  economic_infrastructure: [
+    { score: 10, label: "Sovereign", description: "Full economic autonomy — automated revenue routing, token economics, self-sustaining treasury" },
+    { score: 7, label: "Integrated", description: "On-chain revenue routing, x402 payment support, programmable commerce" },
+    { score: 5, label: "Operational", description: "Active treasury, defined revenue model, manual splits" },
+    { score: 3, label: "Basic", description: "Has wallet address, receives donations or tips" },
+    { score: 0, label: "Inert", description: "No wallet, no treasury, no economic activity" },
+  ],
+  identity_sovereignty: [
+    { score: 10, label: "Canonical", description: "Multi-chain identity, SPIRIT-001 telemetry, oracle-grade attestation" },
+    { score: 7, label: "Verified", description: "Cross-registry presence, rich metadata, verifiable attestations" },
+    { score: 5, label: "Registered", description: "ERC-8004 registered on one chain with basic metadata URI" },
+    { score: 3, label: "Named", description: "Domain + social presence, no on-chain identity" },
+    { score: 0, label: "Anonymous", description: "No verifiable identity; exists only as a handle" },
+  ],
 };
 
 export async function GET() {
@@ -52,10 +66,10 @@ export async function GET() {
 
   const response = {
     name: "Spirit Index Rubric",
-    version: "1.1",
+    version: "2.0",
     updated: new Date().toISOString().split("T")[0],
     description: "Evaluation framework for autonomous cultural agents",
-    total_possible: 70,
+    total_possible: 90,
     dimensions: dimensions.map((d) => ({
       id: d,
       label: DIMENSIONS[d].label,

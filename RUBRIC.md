@@ -38,9 +38,9 @@ Archival entities are displayed with distinct visual treatment and do not set pr
 
 ---
 
-## The 7 Dimensions
+## The 9 Dimensions
 
-Entities are evaluated on seven distinct dimensions. Scores range from 0 to 10.
+Entities are evaluated on nine distinct dimensions. Scores range from 0 to 10.
 
 ### 1. Persistence
 *Does the entity continue to exist meaningfully over time?*
@@ -109,6 +109,32 @@ Entities are evaluated on seven distinct dimensions. Scores range from 0 to 10.
 | **5** | Character | Strong, consistent persona. Predictable behavior within its context. |
 | **10** | Mythos | The entity's story transcends its function. It has lore, prophecy, or a philosophical "reason for being" that persists beyond the code. |
 
+### 8. Economic Infrastructure
+*How economically self-sufficient and composable is the entity?*
+
+| Score | Anchor | Definition |
+|-------|--------|------------|
+| **0** | Inert | No wallet, no treasury, no economic activity of any kind. |
+| **3** | Basic | Has a wallet address. Receives donations or tips. No systematic revenue model. |
+| **5** | Operational | Active treasury with a defined revenue model. Manual revenue splits or payouts. |
+| **7** | Integrated | On-chain revenue routing (e.g., Spirit Protocol splits), x402 payment support, or equivalent programmable commerce layer. |
+| **10** | Sovereign | Full economic autonomy—automated revenue routing, token economics, self-sustaining treasury that operates without human intervention. |
+
+**Note:** This dimension measures infrastructure readiness, not revenue volume. An agent with robust on-chain plumbing and zero revenue scores higher than one with ad-hoc income and no programmable treasury.
+
+### 9. Identity Sovereignty
+*How verifiable, portable, and self-owned is the entity's identity?*
+
+| Score | Anchor | Definition |
+|-------|--------|------------|
+| **0** | Anonymous | No verifiable identity. Exists only as a handle or username on a single platform. |
+| **3** | Named | Owns a domain and maintains social presence, but no on-chain identity binding. |
+| **5** | Registered | ERC-8004 registered on one chain with basic metadata URI. Verifiable on-chain existence. |
+| **7** | Verified | Cross-registry presence, rich metadata (artwork, manifesto, provenance), verifiable attestations from external parties. |
+| **10** | Canonical | Multi-chain identity with SPIRIT-001 telemetry, oracle-grade attestation, and identity that persists independent of any single platform or registry. |
+
+**Note:** Platform-dependent identity (Twitter handle, Discord bot) scores low regardless of follower count. Identity Sovereignty measures whether the entity *owns* its identity or merely *rents* it.
+
 ---
 
 ## Evidence Standards
@@ -155,5 +181,6 @@ Historical scores are preserved in each entity's `score_history` array.
 
 ## Changelog
 
+- **v2.0 (2026-02-12)** — Added Economic Infrastructure and Identity Sovereignty dimensions; max score now 90 (was 70)
 - **v1.1 (2026-01-06)** — Added archival exception rule, score versioning policy, score rationale framework
 - **v1.0 (2026-01-06)** — Initial release with 10 genesis entities

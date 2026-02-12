@@ -8,13 +8,42 @@
   "classification": "Rule-Based Creator",
   "website": "http://artsites.ucsc.edu/faculty/cope/experiments.htm",
   "scores": {
-    "persistence": { "value": 8, "confidence": "high" },
-    "autonomy": { "value": 6, "confidence": "high" },
-    "cultural_impact": { "value": 9, "confidence": "high" },
-    "economic_reality": { "value": 5, "confidence": "medium" },
-    "governance": { "value": 2, "confidence": "high" },
-    "tech_distinctiveness": { "value": 8, "confidence": "high" },
-    "narrative_coherence": { "value": 7, "confidence": "medium" }
+    "persistence": {
+      "value": 8,
+      "confidence": "high"
+    },
+    "autonomy": {
+      "value": 6,
+      "confidence": "high"
+    },
+    "cultural_impact": {
+      "value": 9,
+      "confidence": "high"
+    },
+    "economic_reality": {
+      "value": 5,
+      "confidence": "medium"
+    },
+    "governance": {
+      "value": 2,
+      "confidence": "high"
+    },
+    "tech_distinctiveness": {
+      "value": 8,
+      "confidence": "high"
+    },
+    "narrative_coherence": {
+      "value": 7,
+      "confidence": "medium"
+    },
+    "economic_infrastructure": {
+      "value": 0,
+      "confidence": "low"
+    },
+    "identity_sovereignty": {
+      "value": 0,
+      "confidence": "low"
+    }
   },
   "total": 45,
   "score_rationale": {
@@ -24,7 +53,9 @@
     "economic_reality": "Commercial recordings sold; no autonomous treasury. Creator retained all economic agency. 'Surviving' tier.",
     "governance": "Single creator (David Cope) made all decisions. Database deletion was unilateral. Minimal governance structure.",
     "tech_distinctiveness": "Novel three-stage process: Deconstruction, Signature identification, Compatibility recombination. 20,000 lines of Lisp. Pioneered style transfer before neural networks existed.",
-    "narrative_coherence": "Identity as 'Emmy' established but complicated. Cope eventually deleted the database, citing devaluation concerns. Successor Emily Howell has distinct identity."
+    "narrative_coherence": "Identity as 'Emmy' established but complicated. Cope eventually deleted the database, citing devaluation concerns. Successor Emily Howell has distinct identity.",
+    "economic_infrastructure": "Not yet evaluated.",
+    "identity_sovereignty": "Not yet evaluated."
   },
   "curator_notes": "EMI represents a watershed moment in AI creativity—the first system to consistently fool expert listeners in Turing-style tests. David Cope created EMI in 1982 while facing composer's block, and it went on to produce thousands of works including 5,000 Bach chorales. The famous Hofstadter demonstration where audiences couldn't distinguish EMI-Bach from real Bach challenged fundamental assumptions about human creativity. Cope's controversial 2005 deletion of EMI's database remains debated.",
   "evidence": [
@@ -45,7 +76,14 @@
     }
   ],
   "score_history": [
-    { "date": "2026-01-16", "total": 45, "reviewer": "spirit_council" }
+    {
+      "date": "2026-01-16",
+      "total": 45,
+      "reviewer": "spirit_council"
+    }
   ],
-  "_review_flags": ["historical_agent", "archived_by_creator"]
+  "_review_flags": [
+    "historical_agent",
+    "archived_by_creator"
+  ]
 }

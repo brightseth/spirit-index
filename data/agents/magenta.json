@@ -8,13 +8,42 @@
   "classification": "Research Project",
   "website": "https://magenta.tensorflow.org",
   "scores": {
-    "persistence": { "value": 9, "confidence": "high" },
-    "autonomy": { "value": 6, "confidence": "medium" },
-    "cultural_impact": { "value": 7, "confidence": "medium" },
-    "economic_reality": { "value": 3, "confidence": "high" },
-    "governance": { "value": 2, "confidence": "high" },
-    "tech_distinctiveness": { "value": 8, "confidence": "high" },
-    "narrative_coherence": { "value": 8, "confidence": "high" }
+    "persistence": {
+      "value": 9,
+      "confidence": "high"
+    },
+    "autonomy": {
+      "value": 6,
+      "confidence": "medium"
+    },
+    "cultural_impact": {
+      "value": 7,
+      "confidence": "medium"
+    },
+    "economic_reality": {
+      "value": 3,
+      "confidence": "high"
+    },
+    "governance": {
+      "value": 2,
+      "confidence": "high"
+    },
+    "tech_distinctiveness": {
+      "value": 8,
+      "confidence": "high"
+    },
+    "narrative_coherence": {
+      "value": 8,
+      "confidence": "high"
+    },
+    "economic_infrastructure": {
+      "value": 0,
+      "confidence": "low"
+    },
+    "identity_sovereignty": {
+      "value": 0,
+      "confidence": "low"
+    }
   },
   "total": 43,
   "score_rationale": {
@@ -24,7 +53,9 @@
     "economic_reality": "Google-funded research project. Open-source with no direct monetization. Professional tools available but not commercial focus.",
     "governance": "Google Brain team governance. Open-source contributions. No community governance.",
     "tech_distinctiveness": "RNN/LSTM for composition, VAE (MusicVAE, GrooVAE) for interpolation, WaveNet for audio. Magenta RealTime: first open model for real-time continuous music generation.",
-    "narrative_coherence": "Consistent 'extend not replace' philosophy. Goal: enable and enhance creative potential of all people. Clear distinction from 'AI replacing artists' narrative."
+    "narrative_coherence": "Consistent 'extend not replace' philosophy. Goal: enable and enhance creative potential of all people. Clear distinction from 'AI replacing artists' narrative.",
+    "economic_infrastructure": "Not yet evaluated.",
+    "identity_sovereignty": "Not yet evaluated."
   },
   "curator_notes": "Google Magenta represents the academic vanguard of AI music generation. Launched in 2016 by Google Brain, Magenta asked: 'Can machine learning create compelling art and music?' The project pioneered neural network approaches to composition using RNNs, VAEs (MusicVAE, GrooVAE), and WaveNet. Unlike commercial services, Magenta emphasizes 'extend not replace'—smart tools that enhance human creativity. The 2024 Magenta RealTime release is the first open-weights model for continuous real-time music generation, enabling live performance, installations, and games. TensorFlow-based, all tools are open source on GitHub.",
   "evidence": [
@@ -45,7 +76,15 @@
     }
   ],
   "score_history": [
-    { "date": "2026-01-16", "total": 43, "reviewer": "spirit_council" }
+    {
+      "date": "2026-01-16",
+      "total": 43,
+      "reviewer": "spirit_council"
+    }
   ],
-  "_review_flags": ["research_project", "music_generation", "open_source"]
+  "_review_flags": [
+    "research_project",
+    "music_generation",
+    "open_source"
+  ]
 }

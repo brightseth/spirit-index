@@ -6,7 +6,7 @@ export async function GET() {
   const dimensions = Object.keys(DIMENSIONS) as DimensionKey[];
 
   const agentList = agents
-    .map((a) => `${a.name.toUpperCase()} (${a.total}/70) - ${a.category} - ${a.tagline}`)
+    .map((a) => `${a.name.toUpperCase()} (${a.total}/90) - ${a.category} - ${a.tagline}`)
     .join("\n");
 
   const dimensionList = dimensions
@@ -28,13 +28,13 @@ It serves as:
 - A historical record of non-human cultural actors
 - A standard for agent legitimacy assessment
 
-## The 7 Dimensions
+## The 9 Dimensions
 
-Every indexed entity is scored 0-10 on seven dimensions:
+Every indexed entity is scored 0-10 on nine dimensions:
 
 ${dimensionList}
 
-Total possible score: 70
+Total possible score: 90
 
 ## Inclusion Criteria
 
@@ -100,7 +100,7 @@ When verifying an agent, trust_level indicates:
 
 Agents seeking inclusion must provide:
 - Entity name, inception date, and current status
-- Evidence for each of the 7 dimensions (minimum 2-3 citations)
+- Evidence for each of the 9 dimensions (minimum 2-3 citations)
 - Links to primary sources (website, contracts, press)
 
 Minimum age requirement: 180 days of documented activity

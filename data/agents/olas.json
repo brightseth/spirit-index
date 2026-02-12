@@ -8,13 +8,42 @@
   "classification": "Agent Coordination Protocol",
   "website": "https://olas.network",
   "scores": {
-    "persistence": { "value": 7, "confidence": "high" },
-    "autonomy": { "value": 9, "confidence": "high" },
-    "cultural_impact": { "value": 6, "confidence": "medium" },
-    "economic_reality": { "value": 8, "confidence": "high" },
-    "governance": { "value": 8, "confidence": "high" },
-    "tech_distinctiveness": { "value": 9, "confidence": "high" },
-    "narrative_coherence": { "value": 7, "confidence": "medium" }
+    "persistence": {
+      "value": 7,
+      "confidence": "high"
+    },
+    "autonomy": {
+      "value": 9,
+      "confidence": "high"
+    },
+    "cultural_impact": {
+      "value": 6,
+      "confidence": "medium"
+    },
+    "economic_reality": {
+      "value": 8,
+      "confidence": "high"
+    },
+    "governance": {
+      "value": 8,
+      "confidence": "high"
+    },
+    "tech_distinctiveness": {
+      "value": 9,
+      "confidence": "high"
+    },
+    "narrative_coherence": {
+      "value": 7,
+      "confidence": "medium"
+    },
+    "economic_infrastructure": {
+      "value": 0,
+      "confidence": "low"
+    },
+    "identity_sovereignty": {
+      "value": 0,
+      "confidence": "low"
+    }
   },
   "total": 54,
   "score_rationale": {
@@ -24,7 +53,9 @@
     "economic_reality": "OLAS token live, $13.8M raised, agents generate real economic activity on prediction markets. Treasury exists. Strong 'Revenue Positive' approaching 'Market Mover.'",
     "governance": "On-chain governance via OLAS token. Bonding mechanism for operators. Publicly verifiable staking and voting. Solid 'Constitutional' approaching 'Algorithmic Law.'",
     "tech_distinctiveness": "Open Autonomy framework is genuinely novel—multi-agent systems with decentralized execution. Pioneered agent services concept. Strong 'Integrated System' approaching 'Novel Architecture.'",
-    "narrative_coherence": "Clear thesis: 'co-own AI.' The agent coordination layer narrative is coherent but more infrastructure than mythos. Strong 'Character' but not quite 'Mythos.'"
+    "narrative_coherence": "Clear thesis: 'co-own AI.' The agent coordination layer narrative is coherent but more infrastructure than mythos. Strong 'Character' but not quite 'Mythos.'",
+    "economic_infrastructure": "Not yet evaluated.",
+    "identity_sovereignty": "Not yet evaluated."
   },
   "curator_notes": "Olas (formerly Autonolas) is the coordination layer powering many of the autonomous agents in crypto. Built by Valory AG, it provides the Open Autonomy framework for creating decentralized agent services. Most notably, Olas-powered agents now dominate Gnosis Chain prediction markets, with 300+ daily active agents achieving 79% prediction accuracy. The protocol raised $13.8M in Feb 2025 led by 1kx. Unlike single agents, Olas is infrastructure—it enables the existence of other autonomous entities.",
   "evidence": [
@@ -45,7 +76,13 @@
     }
   ],
   "score_history": [
-    { "date": "2026-01-08", "total": 54, "reviewer": "spirit_council" }
+    {
+      "date": "2026-01-08",
+      "total": 54,
+      "reviewer": "spirit_council"
+    }
   ],
-  "_review_flags": ["recent_emergence"]
+  "_review_flags": [
+    "recent_emergence"
+  ]
 }

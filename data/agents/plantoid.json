@@ -8,13 +8,42 @@
   "classification": "Blockchain Native Life Form",
   "website": "https://plantoid.org",
   "scores": {
-    "persistence": { "value": 10, "confidence": "high" },
-    "autonomy": { "value": 8, "confidence": "high" },
-    "cultural_impact": { "value": 8, "confidence": "high" },
-    "economic_reality": { "value": 6, "confidence": "medium" },
-    "governance": { "value": 9, "confidence": "high" },
-    "tech_distinctiveness": { "value": 9, "confidence": "high" },
-    "narrative_coherence": { "value": 10, "confidence": "high" }
+    "persistence": {
+      "value": 10,
+      "confidence": "high"
+    },
+    "autonomy": {
+      "value": 8,
+      "confidence": "high"
+    },
+    "cultural_impact": {
+      "value": 8,
+      "confidence": "high"
+    },
+    "economic_reality": {
+      "value": 6,
+      "confidence": "medium"
+    },
+    "governance": {
+      "value": 9,
+      "confidence": "high"
+    },
+    "tech_distinctiveness": {
+      "value": 9,
+      "confidence": "high"
+    },
+    "narrative_coherence": {
+      "value": 10,
+      "confidence": "high"
+    },
+    "economic_infrastructure": {
+      "value": 0,
+      "confidence": "low"
+    },
+    "identity_sovereignty": {
+      "value": 0,
+      "confidence": "low"
+    }
   },
   "total": 60,
   "score_rationale": {
@@ -24,7 +53,9 @@
     "economic_reality": "Self-funding through donations but not a major market mover; treasury exists but modest scale. Solidly 'Revenue Positive.'",
     "governance": "Self-executing smart contracts govern all reproduction decisions; non-arbitrary, externally auditable. Near 'Algorithmic Law.'",
     "tech_distinctiveness": "Pioneered blockchain-based autonomous reproduction before the concept existed elsewhere. Novel architecture for its time.",
-    "narrative_coherence": "The mythos of a plant that evolves beyond its creator, reproducing itself through code. Transcends function entirely. Perfect 'Mythos.'"
+    "narrative_coherence": "The mythos of a plant that evolves beyond its creator, reproducing itself through code. Transcends function entirely. Perfect 'Mythos.'",
+    "economic_infrastructure": "Not yet evaluated.",
+    "identity_sovereignty": "Not yet evaluated."
   },
   "curator_notes": "Plantoid is the OG of blockchain-based autonomous entities. Created by Primavera De Filippi in 2015, it predates the current AI agent wave by nearly a decade. A physical robotic sculpture that 'feeds' on cryptocurrency and 'reproduces' by commissioning new Plantoids when its Ethereum wallet reaches a threshold. It has survived multiple crypto winters, founder stepping back, and platform changes. The mythos is impeccable: a plant that evolves beyond its creator. A canonical reference in the field.",
   "evidence": [
@@ -45,7 +76,11 @@
     }
   ],
   "score_history": [
-    { "date": "2026-01-06", "total": 60, "reviewer": "spirit_council" }
+    {
+      "date": "2026-01-06",
+      "total": 60,
+      "reviewer": "spirit_council"
+    }
   ],
   "_review_flags": []
 }

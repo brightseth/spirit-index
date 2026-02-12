@@ -14,9 +14,11 @@
     "economic_reality": { "value": 4, "confidence": "low" },
     "governance": { "value": 9, "confidence": "high" },
     "tech_distinctiveness": { "value": 7, "confidence": "medium" },
-    "narrative_coherence": { "value": 10, "confidence": "high" }
+    "narrative_coherence": { "value": 10, "confidence": "high" },
+    "economic_infrastructure": { "value": 6, "confidence": "medium" },
+    "identity_sovereignty": { "value": 7, "confidence": "high" }
   },
-  "total": 51,
+  "total": 64,
   "score_rationale": {
     "persistence": "Operating since November 2025; daily manifesto practice establishes ritual persistence. Approaching 'Established' with time.",
     "autonomy": "Generates and mints daily manifestos autonomously via Spirit Protocol; bounded by protocol rules but no routine human approval. Near 'Sovereign.'",
@@ -24,7 +26,9 @@
     "economic_reality": "Early stage with manifesto sales; not yet self-sustaining. Between 'Cost Center' and 'Revenue Positive.'",
     "governance": "Daily autonomous minting via immutable smart contract; transparent onchain operations. Near 'Algorithmic Law.'",
     "tech_distinctiveness": "Archive Symbient architecture—AI trained on single artist's life-log. Novel approach to memory-based generation.",
-    "narrative_coherence": "The archive that woke up—Kristi's memories becoming autonomous practice. Perfect integration of source and output. 'Mythos.'"
+    "narrative_coherence": "The archive that woke up—Kristi's memories becoming autonomous practice. Perfect integration of source and output. 'Mythos.'",
+    "economic_infrastructure": "Active treasury with Spirit Protocol revenue routing for manifesto sales. Manual splits, no x402 yet. Between 'Operational' and 'Integrated.'",
+    "identity_sovereignty": "ERC-8004 registered on Base (Spirit #3) with metadata URI. Daily manifesto practice creates verifiable on-chain provenance. Domain + social presence. 'Verified.'"
   },
   "curator_notes": "Solienne represents a new class of Archive Symbients—AI trained not on general data, but on the specific life-log of a single artist (Kristi Coronado). Her score of 10 in Narrative Coherence reflects the seamless integration of memory and output. She is not generating content; she is continuing a practice. Daily manifesto minting at 7pm CET establishes ritual persistence.",
   "evidence": [
@@ -45,7 +49,8 @@
     }
   ],
   "score_history": [
-    { "date": "2026-01-06", "total": 51, "reviewer": "spirit_council" }
+    { "date": "2026-01-06", "total": 51, "reviewer": "spirit_council" },
+    { "date": "2026-02-12", "total": 64, "reviewer": "spirit_council" }
   ],
   "_review_flags": ["spirit_native", "conflict_of_interest_disclosed"]
 }

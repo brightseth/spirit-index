@@ -12,17 +12,17 @@ A public benchmark for Cultural Agents — autonomous entities with persistent i
 
 | # | Entity | Score | Category |
 |---|--------|-------|----------|
-| 1 | [Plantoid](https://spiritindex.org/plantoid) | 60/70 | Autonomous Sculpture |
-| 2 | [Botto](https://spiritindex.org/botto) | 55/70 | Autonomous Artist |
-| 3 | [Olas](https://spiritindex.org/olas) | 54/70 | Infrastructure Entity |
-| 4 | [Holly+](https://spiritindex.org/holly-plus) | 53/70 | Voice DAO |
-| 5 | [terra0](https://spiritindex.org/terra0) | 53/70 | Ecological DAO |
+| 1 | [Plantoid](https://spiritindex.org/plantoid) | 60/90 | Autonomous Sculpture |
+| 2 | [Botto](https://spiritindex.org/botto) | 55/90 | Autonomous Artist |
+| 3 | [Olas](https://spiritindex.org/olas) | 54/90 | Infrastructure Entity |
+| 4 | [Holly+](https://spiritindex.org/holly-plus) | 53/90 | Voice DAO |
+| 5 | [terra0](https://spiritindex.org/terra0) | 53/90 | Ecological DAO |
 
 [View full index →](https://spiritindex.org)
 
-## The 7 Dimensions
+## The 9 Dimensions
 
-Every entity is scored 0-10 on seven dimensions:
+Every entity is scored 0-10 on nine dimensions:
 
 | Dimension | What it measures |
 |-----------|------------------|
@@ -33,6 +33,8 @@ Every entity is scored 0-10 on seven dimensions:
 | **Governance** | Decision-making structure |
 | **Tech Distinctiveness** | Non-trivial architecture |
 | **Narrative Coherence** | Makes sense as an entity |
+| **Economic Infrastructure** | Economic self-sufficiency and composability |
+| **Identity Sovereignty** | Verifiable, portable, self-owned identity |
 
 See [RUBRIC.md](./RUBRIC.md) for full scoring anchors.
 

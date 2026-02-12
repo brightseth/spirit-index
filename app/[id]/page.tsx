@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
-  const title = `${agent.name} — ${agent.total}/70`;
+  const title = `${agent.name} — ${agent.total}/90`;
   const description = `${agent.tagline}. ${agent.curator_notes.substring(0, 150)}...`;
 
   // Extract string-only review flags for keywords
@@ -56,7 +56,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     twitter: {
       card: "summary_large_image",
-      title: `${agent.name} — ${agent.total}/70`,
+      title: `${agent.name} — ${agent.total}/90`,
       description,
       images: [`${siteUrl}/og-image?id=${agent.id}`],
     },
@@ -110,7 +110,7 @@ function AgentJsonLd({ agent }: { agent: Agent }) {
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: agent.total,
-      bestRating: 70,
+      bestRating: 90,
       worstRating: 0,
       ratingCount: agent.score_history.length,
     },
@@ -296,7 +296,7 @@ export default async function AgentDossier({ params }: Props) {
           </div>
           <div className="text-right">
             <div className="score-total">{agent.total}</div>
-            <div className="score-label">/70 Total</div>
+            <div className="score-label">/90 Total</div>
           </div>
         </div>
 

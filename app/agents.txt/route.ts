@@ -22,7 +22,7 @@ export async function GET() {
     "# Web: https://spiritindex.org",
     "",
     ...agents.map(
-      (a) => `${a.id} | ${a.total}/70 | ${a.name} | ${a.category} | ${a.status}`
+      (a) => `${a.id} | ${a.total}/90 | ${a.name} | ${a.category} | ${a.status}`
     ),
     "",
     "# Submit: https://spiritindex.org/submit",

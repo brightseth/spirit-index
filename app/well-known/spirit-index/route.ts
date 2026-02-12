@@ -112,10 +112,12 @@ export async function GET() {
         "economic_reality",
         "governance",
         "tech_distinctiveness",
-        "narrative_coherence"
+        "narrative_coherence",
+        "economic_infrastructure",
+        "identity_sovereignty"
       ],
       score_range: "0-10 per dimension",
-      total_max: 70,
+      total_max: 90,
       rubric_url: "https://spiritindex.org/rubric.json"
     },
 

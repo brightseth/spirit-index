@@ -33,7 +33,7 @@ export async function GET() {
 
       return `
     <item>
-      <title>${escapeXml(agent.name)} — ${agent.total}/70</title>
+      <title>${escapeXml(agent.name)} — ${agent.total}/90</title>
       <link>${siteUrl}/${agent.id}</link>
       <guid isPermaLink="true">${siteUrl}/${agent.id}</guid>
       <pubDate>${date.toUTCString()}</pubDate>

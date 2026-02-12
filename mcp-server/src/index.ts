@@ -67,7 +67,7 @@ const TOOLS = [
         },
         min_score: {
           type: "number",
-          description: "Minimum total score (0-70)",
+          description: "Minimum total score (0-90)",
         },
         verified_only: {
           type: "boolean",

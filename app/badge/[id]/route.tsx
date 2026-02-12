@@ -25,7 +25,7 @@ export async function GET(
 
   const svg = generateBadge(
     agent.name,
-    `${agent.total}/70`,
+    `${agent.total}/90`,
     color,
     "#0a0a14"
   );

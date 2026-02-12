@@ -27,7 +27,7 @@ export function AgentCard({ agent, showRadar = false }: AgentCardProps) {
           </div>
           <div className="text-right">
             <div className="score-total">{agent.total}</div>
-            <div className="score-label">/70</div>
+            <div className="score-label">/90</div>
           </div>
         </div>
 

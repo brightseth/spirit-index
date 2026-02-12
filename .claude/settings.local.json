@@ -8,7 +8,20 @@
       "Bash(npm run build:*)",
       "Bash(npm run dev)",
       "Bash(curl:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nExpand index to 50 agents and add SEO/LLM discoverability\n\n- Add 31 new agent profiles \\(historical, gaming, crypto, foundation models\\)\n- Add robots.txt with AI crawler directives\n- Add per-agent dynamic meta tags and JSON-LD structured data\n- Add Organization and Dataset JSON-LD to layout\n- Fix feed.xml domain to spiritindex.org\n- Add MCP server skeleton with 5 tools\n- Update llm.txt with MCP integration docs\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git push:*)",
+      "Bash(vercel ls:*)",
+      "Bash(gh api:*)",
+      "Bash(vercel --version:*)",
+      "Bash(vercel inspect:*)",
+      "Bash(vercel:*)",
+      "Bash(npm install)",
+      "Bash(timeout 3 node:*)",
+      "Bash(npm whoami:*)",
+      "Bash(npm login)",
+      "Bash(npm publish:*)",
+      "Bash(npm profile:*)"
     ]
   }
 }

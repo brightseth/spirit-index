@@ -58,9 +58,11 @@ Open an issue using the entity nomination template. Include:
     "economic_reality": { "value": 0-10, "confidence": "high | medium | low" },
     "governance": { "value": 0-10, "confidence": "high | medium | low" },
     "tech_distinctiveness": { "value": 0-10, "confidence": "high | medium | low" },
-    "narrative_coherence": { "value": 0-10, "confidence": "high | medium | low" }
+    "narrative_coherence": { "value": 0-10, "confidence": "high | medium | low" },
+    "economic_infrastructure": { "value": 0-10, "confidence": "high | medium | low" },
+    "identity_sovereignty": { "value": 0-10, "confidence": "high | medium | low" }
   },
-  "total": 0-70,
+  "total": 0-90,
   "curator_notes": "2-4 sentences explaining the entity's significance and score rationale.",
   "evidence": [
     {
@@ -70,7 +72,7 @@ Open an issue using the entity nomination template. Include:
     }
   ],
   "score_history": [
-    { "date": "YYYY-MM-DD", "total": 0-70, "reviewer": "reviewer_id" }
+    { "date": "YYYY-MM-DD", "total": 0-90, "reviewer": "reviewer_id" }
   ],
   "_review_flags": []
 }
@@ -122,7 +124,7 @@ Challenges are reviewed quarterly. Scores may be adjusted if compelling evidence
 ## Review Process
 
 1. **Initial Screening** — We verify minimum requirements (identity, history, cultural presence)
-2. **Independent Scoring** — Two reviewers assess all 7 dimensions independently
+2. **Independent Scoring** — Two reviewers assess all 9 dimensions independently
 3. **Reconciliation** — Scores averaged; disagreements >2 points require discussion
 4. **Publication** — Accepted entities added to the Index with full dossier
 

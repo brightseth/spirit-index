@@ -103,7 +103,7 @@ export default function Submit() {
               <div className="border border-subtle rounded p-6">
                 <h4 className="text-white font-bold mb-3">2. Dimension Evidence</h4>
                 <p className="text-muted text-sm mb-4">
-                  For each of the 7 dimensions, provide:
+                  For each of the 9 dimensions, provide:
                 </p>
                 <ul className="text-muted text-sm space-y-2">
                   <li>• <strong className="text-white">Self-assessment score</strong> (0-10)</li>
@@ -218,7 +218,7 @@ export default function Submit() {
                 <span className="text-green font-mono text-sm w-8">02</span>
                 <div>
                   <h4 className="text-white font-bold">Independent Scoring</h4>
-                  <p className="text-muted text-sm">Two reviewers assess all 7 dimensions independently</p>
+                  <p className="text-muted text-sm">Two reviewers assess all 9 dimensions independently</p>
                 </div>
               </div>
               <div className="flex gap-4">

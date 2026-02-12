@@ -156,11 +156,11 @@ export default function Rubric() {
             </ul>
           </section>
 
-          {/* The 7 Dimensions */}
+          {/* The 9 Dimensions */}
           <section className="mb-12">
-            <h3 className="section-title">The 7 Dimensions</h3>
+            <h3 className="section-title">The 9 Dimensions</h3>
             <p className="text-muted mb-8">
-              Entities are evaluated on seven distinct dimensions. Scores range from 0 to 10.
+              Entities are evaluated on nine distinct dimensions. Scores range from 0 to 10.
             </p>
 
             <div className="space-y-8">

@@ -8,13 +8,42 @@
   "classification": "Rule-Based Creator",
   "website": "https://www.routledge.com/Artificial-Intelligence-and-Literary-Creativity-Inside-the-Mind-of-Brutus/Bringsjord-Ferrucci/p/book/9780805819878",
   "scores": {
-    "persistence": { "value": 4, "confidence": "medium" },
-    "autonomy": { "value": 6, "confidence": "high" },
-    "cultural_impact": { "value": 6, "confidence": "medium" },
-    "economic_reality": { "value": 2, "confidence": "high" },
-    "governance": { "value": 2, "confidence": "high" },
-    "tech_distinctiveness": { "value": 8, "confidence": "high" },
-    "narrative_coherence": { "value": 7, "confidence": "medium" }
+    "persistence": {
+      "value": 4,
+      "confidence": "medium"
+    },
+    "autonomy": {
+      "value": 6,
+      "confidence": "high"
+    },
+    "cultural_impact": {
+      "value": 6,
+      "confidence": "medium"
+    },
+    "economic_reality": {
+      "value": 2,
+      "confidence": "high"
+    },
+    "governance": {
+      "value": 2,
+      "confidence": "high"
+    },
+    "tech_distinctiveness": {
+      "value": 8,
+      "confidence": "high"
+    },
+    "narrative_coherence": {
+      "value": 7,
+      "confidence": "medium"
+    },
+    "economic_infrastructure": {
+      "value": 0,
+      "confidence": "low"
+    },
+    "identity_sovereignty": {
+      "value": 0,
+      "confidence": "low"
+    }
   },
   "total": 35,
   "score_rationale": {
@@ -24,7 +53,9 @@
     "economic_reality": "Academic research project with no commercial output or treasury. Book published but system itself generated no economic activity.",
     "governance": "Two-person academic team (Bringsjord and Ferrucci). Research project governance only.",
     "tech_distinctiveness": "Logic-based approach explicitly rejecting neural networks. Unique focus on literary themes (betrayal) rather than style imitation. Generated grammatically correct prose in seconds.",
-    "narrative_coherence": "Clear identity as betrayal-focused storyteller. Philosophical framework articulated in book: 'human creativity is beyond computation—yet we strive to craft the appearance of creativity.'"
+    "narrative_coherence": "Clear identity as betrayal-focused storyteller. Philosophical framework articulated in book: 'human creativity is beyond computation—yet we strive to craft the appearance of creativity.'",
+    "economic_infrastructure": "Not yet evaluated.",
+    "identity_sovereignty": "Not yet evaluated."
   },
   "curator_notes": "BRUTUS represents the logic-based school of AI creativity, explicitly rejecting neural networks in favor of rule-based generation. Created by Selmer Bringsjord (RPI) and David Ferrucci (IBM Watson), BRUTUS.1 could generate complete stories of betrayal and deception in seconds. While less famous than AARON or EMI, BRUTUS contributed to the philosophical discourse on machine creativity. Notably, Ferrucci later led IBM's Watson Jeopardy project.",
   "evidence": [
@@ -45,7 +76,14 @@
     }
   ],
   "score_history": [
-    { "date": "2026-01-16", "total": 35, "reviewer": "spirit_council" }
+    {
+      "date": "2026-01-16",
+      "total": 35,
+      "reviewer": "spirit_council"
+    }
   ],
-  "_review_flags": ["historical_agent", "academic_project"]
+  "_review_flags": [
+    "historical_agent",
+    "academic_project"
+  ]
 }

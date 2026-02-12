@@ -39,7 +39,7 @@ export interface DimensionScore {
   confidence: Confidence;
 }
 
-// The 7 dimensions
+// The 9 dimensions
 export interface Scores {
   persistence: DimensionScore;
   autonomy: DimensionScore;
@@ -48,6 +48,8 @@ export interface Scores {
   governance: DimensionScore;
   tech_distinctiveness: DimensionScore;
   narrative_coherence: DimensionScore;
+  economic_infrastructure: DimensionScore;
+  identity_sovereignty: DimensionScore;
 }
 
 // Evidence citation
@@ -66,6 +68,8 @@ export interface ScoreRationale {
   governance: string;
   tech_distinctiveness: string;
   narrative_coherence: string;
+  economic_infrastructure: string;
+  identity_sovereignty: string;
 }
 
 // Score history entry (for time-series tracking)
@@ -127,6 +131,8 @@ export function scoresToRadarData(scores: Scores): RadarDataPoint[] {
     { subject: "Governance", value: scores.governance.value, fullMark: 10 },
     { subject: "Tech", value: scores.tech_distinctiveness.value, fullMark: 10 },
     { subject: "Narrative", value: scores.narrative_coherence.value, fullMark: 10 },
+    { subject: "Econ Infra", value: scores.economic_infrastructure.value, fullMark: 10 },
+    { subject: "Identity", value: scores.identity_sovereignty.value, fullMark: 10 },
   ];
 }
 
@@ -139,7 +145,9 @@ export function calculateTotal(scores: Scores): number {
     scores.economic_reality.value +
     scores.governance.value +
     scores.tech_distinctiveness.value +
-    scores.narrative_coherence.value
+    scores.narrative_coherence.value +
+    scores.economic_infrastructure.value +
+    scores.identity_sovereignty.value
   );
 }
 
@@ -179,6 +187,16 @@ export const DIMENSIONS = {
     label: "Narrative Coherence",
     shortLabel: "NAR",
     description: "Does this entity make sense as an entity?",
+  },
+  economic_infrastructure: {
+    label: "Economic Infrastructure",
+    shortLabel: "ECI",
+    description: "How economically self-sufficient and composable is the entity?",
+  },
+  identity_sovereignty: {
+    label: "Identity Sovereignty",
+    shortLabel: "IDS",
+    description: "How verifiable, portable, and self-owned is the entity's identity?",
   },
 } as const;
 

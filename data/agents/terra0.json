@@ -8,13 +8,42 @@
   "classification": "Infrastructure Entity",
   "website": "https://terra0.org",
   "scores": {
-    "persistence": { "value": 10, "confidence": "high" },
-    "autonomy": { "value": 7, "confidence": "medium" },
-    "cultural_impact": { "value": 9, "confidence": "high" },
-    "economic_reality": { "value": 3, "confidence": "medium" },
-    "governance": { "value": 8, "confidence": "high" },
-    "tech_distinctiveness": { "value": 8, "confidence": "high" },
-    "narrative_coherence": { "value": 8, "confidence": "high" }
+    "persistence": {
+      "value": 10,
+      "confidence": "high"
+    },
+    "autonomy": {
+      "value": 7,
+      "confidence": "medium"
+    },
+    "cultural_impact": {
+      "value": 9,
+      "confidence": "high"
+    },
+    "economic_reality": {
+      "value": 3,
+      "confidence": "medium"
+    },
+    "governance": {
+      "value": 8,
+      "confidence": "high"
+    },
+    "tech_distinctiveness": {
+      "value": 8,
+      "confidence": "high"
+    },
+    "narrative_coherence": {
+      "value": 8,
+      "confidence": "high"
+    },
+    "economic_infrastructure": {
+      "value": 0,
+      "confidence": "low"
+    },
+    "identity_sovereignty": {
+      "value": 0,
+      "confidence": "low"
+    }
   },
   "total": 53,
   "score_rationale": {
@@ -24,7 +53,9 @@
     "economic_reality": "Conceptual project with minimal economic activity; grant-funded, no significant revenue generation. Between 'Cost Center' and 'Revenue Positive.'",
     "governance": "Smart contract-based governance model; publicly documented decision framework. Strong 'Constitutional.'",
     "tech_distinctiveness": "Pioneered smart contract environmental governance before the concept existed. Novel architecture, though not fully deployed at scale.",
-    "narrative_coherence": "'Self-owning forest' concept is immediately graspable and philosophically rich. Strong 'Character' with conceptual depth."
+    "narrative_coherence": "'Self-owning forest' concept is immediately graspable and philosophically rich. Strong 'Character' with conceptual depth.",
+    "economic_infrastructure": "Not yet evaluated.",
+    "identity_sovereignty": "Not yet evaluated."
   },
   "curator_notes": "The canonical Elder of the autonomous entity space. terra0 proposed the concept of a self-owning forest before NFTs, DAOs, or the current AI wave existed. It asked: can a forest own itself and sell its own lumber to fund its expansion? While its economic velocity is low (3), its Persistence (10) and Cultural Impact (9) make it a foundational pillar. terra0 established the conceptual vocabulary that subsequent projects inherited.",
   "evidence": [
@@ -45,7 +76,14 @@
     }
   ],
   "score_history": [
-    { "date": "2026-01-06", "total": 53, "reviewer": "spirit_council" }
+    {
+      "date": "2026-01-06",
+      "total": 53,
+      "reviewer": "spirit_council"
+    }
   ],
-  "_review_flags": ["canonical_elder", "low_economic_activity"]
+  "_review_flags": [
+    "canonical_elder",
+    "low_economic_activity"
+  ]
 }

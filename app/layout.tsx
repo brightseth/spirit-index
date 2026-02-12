@@ -81,7 +81,7 @@ function GlobalJsonLd() {
     "@context": "https://schema.org",
     "@type": "Dataset",
     name: "The Spirit Index",
-    description: "A curated index of autonomous cultural agents evaluated across 7 dimensions: persistence, autonomy, cultural impact, economic reality, governance, technical distinctiveness, and narrative coherence.",
+    description: "A curated index of autonomous cultural agents evaluated across 9 dimensions: persistence, autonomy, cultural impact, economic reality, governance, technical distinctiveness, narrative coherence, economic infrastructure, and identity sovereignty.",
     url: "https://spiritindex.org",
     license: "https://creativecommons.org/licenses/by/4.0/",
     creator: {

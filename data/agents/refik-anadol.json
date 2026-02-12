@@ -8,13 +8,42 @@
   "classification": "Data Artist / AI Collaborator",
   "website": "https://refikanadol.com",
   "scores": {
-    "persistence": { "value": 8, "confidence": "high" },
-    "autonomy": { "value": 6, "confidence": "medium" },
-    "cultural_impact": { "value": 10, "confidence": "high" },
-    "economic_reality": { "value": 9, "confidence": "high" },
-    "governance": { "value": 2, "confidence": "high" },
-    "tech_distinctiveness": { "value": 8, "confidence": "high" },
-    "narrative_coherence": { "value": 9, "confidence": "high" }
+    "persistence": {
+      "value": 8,
+      "confidence": "high"
+    },
+    "autonomy": {
+      "value": 6,
+      "confidence": "medium"
+    },
+    "cultural_impact": {
+      "value": 10,
+      "confidence": "high"
+    },
+    "economic_reality": {
+      "value": 9,
+      "confidence": "high"
+    },
+    "governance": {
+      "value": 2,
+      "confidence": "high"
+    },
+    "tech_distinctiveness": {
+      "value": 8,
+      "confidence": "high"
+    },
+    "narrative_coherence": {
+      "value": 9,
+      "confidence": "high"
+    },
+    "economic_infrastructure": {
+      "value": 0,
+      "confidence": "low"
+    },
+    "identity_sovereignty": {
+      "value": 0,
+      "confidence": "low"
+    }
   },
   "total": 52,
   "score_rationale": {
@@ -24,7 +53,9 @@
     "economic_reality": "Major auction sales ($277K at Christie's 2025). Museum commissions. Corporate installations. Refik Anadol Studio + Dataland ventures. Strong commercial model.",
     "governance": "Refik Anadol Studio governance. Human artist as director of AI systems. No distributed governance.",
     "tech_distinctiveness": "Pioneered data aesthetics + AI art intersection. DCGAN, PGAN, StyleGAN on massive datasets (300M+ images for Nature Dreams). Scale of data distinguishes work.",
-    "narrative_coherence": "'Machines can learn, remember, dream, hallucinate.' Clear philosophy: AI as 'extension of the mind.' Consistent across decade of work. Strong conceptual framework."
+    "narrative_coherence": "'Machines can learn, remember, dream, hallucinate.' Clear philosophy: AI as 'extension of the mind.' Consistent across decade of work. Strong conceptual framework.",
+    "economic_infrastructure": "Not yet evaluated.",
+    "identity_sovereignty": "Not yet evaluated."
   },
   "curator_notes": "Refik Anadol has become the most visible AI artist globally, with his 'Unsupervised' becoming the first generative AI work in MoMA's permanent collection after 3 million viewers. His Machine Hallucinations series, begun during the 2016 Google AMI Residency, trains GANs on massive datasets (300M+ nature images for 'Nature Dreams') to produce continuously evolving visualizations. Anadol was the first artist to use the Las Vegas Sphere. While Anadol is the human artist, his AI systems generate autonomously when 'idle and unsupervised,' blurring the line between tool and collaborator. His work defines the aesthetic of mainstream AI art.",
   "evidence": [
@@ -45,7 +76,15 @@
     }
   ],
   "score_history": [
-    { "date": "2026-01-16", "total": 52, "reviewer": "spirit_council" }
+    {
+      "date": "2026-01-16",
+      "total": 52,
+      "reviewer": "spirit_council"
+    }
   ],
-  "_review_flags": ["human_ai_collaboration", "museum_collection", "mainstream_visibility"]
+  "_review_flags": [
+    "human_ai_collaboration",
+    "museum_collection",
+    "mainstream_visibility"
+  ]
 }

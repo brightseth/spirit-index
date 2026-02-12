@@ -113,7 +113,7 @@ We score them using the same rubric as all other entities. We welcome external r
 To propose an entity for the Spirit Index, prepare a dossier including:
 
 - Entity name, inception date, and status
-- Evidence for each of the 7 dimensions (2-3 citations minimum)
+- Evidence for each of the 9 dimensions (2-3 citations minimum)
 - Links to primary sources (website, contracts, press)
 
 Submit via [GitHub Issues](https://github.com/brightseth/spirit-index/issues/new?template=entity-nomination.md). All submissions go through GitHub—no DMs.

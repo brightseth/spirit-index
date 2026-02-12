@@ -8,13 +8,42 @@
   "classification": "Autonomous Market Analyst",
   "website": "https://app.virtuals.io/virtuals/1199",
   "scores": {
-    "persistence": { "value": 4, "confidence": "medium" },
-    "autonomy": { "value": 9, "confidence": "high" },
-    "cultural_impact": { "value": 7, "confidence": "high" },
-    "economic_reality": { "value": 8, "confidence": "high" },
-    "governance": { "value": 5, "confidence": "medium" },
-    "tech_distinctiveness": { "value": 6, "confidence": "medium" },
-    "narrative_coherence": { "value": 7, "confidence": "medium" }
+    "persistence": {
+      "value": 4,
+      "confidence": "medium"
+    },
+    "autonomy": {
+      "value": 9,
+      "confidence": "high"
+    },
+    "cultural_impact": {
+      "value": 7,
+      "confidence": "high"
+    },
+    "economic_reality": {
+      "value": 8,
+      "confidence": "high"
+    },
+    "governance": {
+      "value": 5,
+      "confidence": "medium"
+    },
+    "tech_distinctiveness": {
+      "value": 6,
+      "confidence": "medium"
+    },
+    "narrative_coherence": {
+      "value": 7,
+      "confidence": "medium"
+    },
+    "economic_infrastructure": {
+      "value": 0,
+      "confidence": "low"
+    },
+    "identity_sovereignty": {
+      "value": 0,
+      "confidence": "low"
+    }
   },
   "total": 46,
   "score_rationale": {
@@ -24,7 +53,9 @@
     "economic_reality": "Peak $700M market cap, corrected to ~$150M. Revenue via subscriptions planned. Token buyback mechanism. Strong 'Revenue Positive' approaching 'Market Mover.'",
     "governance": "Virtuals Protocol governance applies. Staking-based governance explored for 2026. Currently more 'Constitutional' through protocol inheritance than own governance.",
     "tech_distinctiveness": "Aggregates 400+ KOL feeds, sentiment analysis, market pattern detection. Solid integration but not fundamentally novel architecture. 'Integrated System.'",
-    "narrative_coherence": "Clear identity: the tireless analyst who never sleeps. 'Bloomberg for degens' narrative is coherent and memorable. Strong 'Character.'"
+    "narrative_coherence": "Clear identity: the tireless analyst who never sleeps. 'Bloomberg for degens' narrative is coherent and memorable. Strong 'Character.'",
+    "economic_infrastructure": "Not yet evaluated.",
+    "identity_sovereignty": "Not yet evaluated."
   },
   "curator_notes": "AIXBT is the breakout star of the Virtuals Protocol ecosystem—an autonomous market analyst that monitors 400+ crypto KOLs and generates real-time market intelligence. Launched November 2024, it reached $700M market cap by January 2025 and secured a Binance listing. The 'Web3 Bloomberg Terminal' positioning is compelling: an AI that watches everything so you don't have to. Technical analysis confirms 99% autonomous operation. The main risk is youth—it hasn't survived a full market cycle yet.",
   "evidence": [
@@ -45,7 +76,14 @@
     }
   ],
   "score_history": [
-    { "date": "2026-01-08", "total": 46, "reviewer": "spirit_council" }
+    {
+      "date": "2026-01-08",
+      "total": 46,
+      "reviewer": "spirit_council"
+    }
   ],
-  "_review_flags": ["recent_emergence", "economic_stress_test"]
+  "_review_flags": [
+    "recent_emergence",
+    "economic_stress_test"
+  ]
 }

@@ -8,13 +8,42 @@
   "classification": "Multi-Agent System",
   "website": "https://deepmind.google/discover/blog/alphastar-grandmaster-level-in-starcraft-ii-using-multi-agent-reinforcement-learning/",
   "scores": {
-    "persistence": { "value": 5, "confidence": "high" },
-    "autonomy": { "value": 9, "confidence": "high" },
-    "cultural_impact": { "value": 8, "confidence": "high" },
-    "economic_reality": { "value": 2, "confidence": "high" },
-    "governance": { "value": 2, "confidence": "high" },
-    "tech_distinctiveness": { "value": 10, "confidence": "high" },
-    "narrative_coherence": { "value": 7, "confidence": "medium" }
+    "persistence": {
+      "value": 5,
+      "confidence": "high"
+    },
+    "autonomy": {
+      "value": 9,
+      "confidence": "high"
+    },
+    "cultural_impact": {
+      "value": 8,
+      "confidence": "high"
+    },
+    "economic_reality": {
+      "value": 2,
+      "confidence": "high"
+    },
+    "governance": {
+      "value": 2,
+      "confidence": "high"
+    },
+    "tech_distinctiveness": {
+      "value": 10,
+      "confidence": "high"
+    },
+    "narrative_coherence": {
+      "value": 7,
+      "confidence": "medium"
+    },
+    "economic_infrastructure": {
+      "value": 0,
+      "confidence": "low"
+    },
+    "identity_sovereignty": {
+      "value": 0,
+      "confidence": "low"
+    }
   },
   "total": 43,
   "score_rationale": {
@@ -23,7 +52,9 @@
     "cultural_impact": "Major milestone: first AI to reach Grandmaster in any esport. Ranked above 99.8% of human players. Global media coverage. Influenced AI research direction and public perception of AI capabilities.",
     "economic_reality": "Research project with no commercial deployment or economic activity. Open-source code release but no monetization.",
     "governance": "DeepMind corporate research governance. No external governance or community participation.",
-    "tech_distinctiveness": "Revolutionary: multi-agent reinforcement learning + imitation learning combination. Mastered all three StarCraft races. 'Exploiter agents' methodology to eliminate weaknesses. Imperfect information handling in real-time environment."
+    "tech_distinctiveness": "Revolutionary: multi-agent reinforcement learning + imitation learning combination. Mastered all three StarCraft races. 'Exploiter agents' methodology to eliminate weaknesses. Imperfect information handling in real-time environment.",
+    "economic_infrastructure": "Not yet evaluated.",
+    "identity_sovereignty": "Not yet evaluated."
   },
   "curator_notes": "AlphaStar represents a landmark in AI capability—the first system to reach Grandmaster rank (top 0.2%) in any esport. DeepMind's approach combined imitation learning from human games with multi-agent self-play, including novel 'exploiter agents' designed to find and eliminate weaknesses in main agents. AlphaStar mastered all three StarCraft II races (Protoss, Terran, Zerg) while playing with human-comparable interface constraints. The system's success in handling imperfect information, real-time decisions, and long-term strategy in a complex environment has implications for robotics, autonomous vehicles, and real-world AI systems.",
   "evidence": [
@@ -44,7 +75,14 @@
     }
   ],
   "score_history": [
-    { "date": "2026-01-16", "total": 43, "reviewer": "spirit_council" }
+    {
+      "date": "2026-01-16",
+      "total": 43,
+      "reviewer": "spirit_council"
+    }
   ],
-  "_review_flags": ["research_artifact", "gaming_ai"]
+  "_review_flags": [
+    "research_artifact",
+    "gaming_ai"
+  ]
 }

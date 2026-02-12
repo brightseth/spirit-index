@@ -121,7 +121,7 @@ function CompareContent() {
             </option>
             {availableAgents.map((agent) => (
               <option key={agent.id} value={agent.id}>
-                {agent.name} ({agent.total}/70)
+                {agent.name} ({agent.total}/90)
               </option>
             ))}
           </select>
@@ -168,7 +168,7 @@ function CompareContent() {
                         {agent.name}
                       </Link>
                       <div className="text-dim text-xs font-normal mt-1">
-                        {agent.total}/70
+                        {agent.total}/90
                       </div>
                     </th>
                   ))}

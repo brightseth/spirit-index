@@ -8,13 +8,42 @@
   "classification": "Onchain Agent",
   "website": "https://www.clanker.world",
   "scores": {
-    "persistence": { "value": 5, "confidence": "medium" },
-    "autonomy": { "value": 8, "confidence": "high" },
-    "cultural_impact": { "value": 8, "confidence": "high" },
-    "economic_reality": { "value": 10, "confidence": "high" },
-    "governance": { "value": 5, "confidence": "medium" },
-    "tech_distinctiveness": { "value": 7, "confidence": "high" },
-    "narrative_coherence": { "value": 7, "confidence": "medium" }
+    "persistence": {
+      "value": 5,
+      "confidence": "medium"
+    },
+    "autonomy": {
+      "value": 8,
+      "confidence": "high"
+    },
+    "cultural_impact": {
+      "value": 8,
+      "confidence": "high"
+    },
+    "economic_reality": {
+      "value": 10,
+      "confidence": "high"
+    },
+    "governance": {
+      "value": 5,
+      "confidence": "medium"
+    },
+    "tech_distinctiveness": {
+      "value": 7,
+      "confidence": "high"
+    },
+    "narrative_coherence": {
+      "value": 7,
+      "confidence": "medium"
+    },
+    "economic_infrastructure": {
+      "value": 0,
+      "confidence": "low"
+    },
+    "identity_sovereignty": {
+      "value": 0,
+      "confidence": "low"
+    }
   },
   "total": 50,
   "score_rationale": {
@@ -24,7 +53,9 @@
     "economic_reality": "$6.6B+ all-time trading volume. $50M+ in fees generated. $59.8M single-day trading volume record. CLANKER token surged 350% on Farcaster acquisition. Definitive market mover.",
     "governance": "Originally created by proxystudio.eth and Jack Dishman. Now owned by Farcaster post-acquisition. Smart contract-based fee distribution. Not fully decentralized but transparent onchain operations.",
     "tech_distinctiveness": "Novel integration of social media interaction (Farcaster casts) with autonomous smart contract deployment. AI agent interprets natural language requests and deploys fully functional ERC-20 tokens with liquidity. V4 introduced revenue tokenization.",
-    "narrative_coherence": "Strong identity as 'the token factory' — a robot that builds tokens when you ask. The acquisition by Farcaster reinforced its identity as core infrastructure. Some narrative dilution from memecoin association."
+    "narrative_coherence": "Strong identity as 'the token factory' — a robot that builds tokens when you ask. The acquisition by Farcaster reinforced its identity as core infrastructure. Some narrative dilution from memecoin association.",
+    "economic_infrastructure": "Not yet evaluated.",
+    "identity_sovereignty": "Not yet evaluated."
   },
   "curator_notes": "Clanker is the autonomous token deployment agent that drove Base to record transaction volumes. Created by proxystudio.eth and Farcaster engineer Jack Dishman, it lets anyone deploy an ERC-20 token on Base simply by tagging @clanker on Farcaster with a token name and image. In its first two weeks, it deployed 3,500+ tokens and generated $4.2M in revenue. The numbers have since exploded: $6.6B+ all-time trading volume and $50M+ in fees. Farcaster acquired Clanker in October 2025, sending its token up 350%. Clanker represents the emergence of autonomous agents as genuine economic infrastructure — not just generating content, but deploying real financial instruments onchain.",
   "evidence": [
@@ -45,7 +76,15 @@
     }
   ],
   "score_history": [
-    { "date": "2026-02-09", "total": 50, "reviewer": "spirit_council" }
+    {
+      "date": "2026-02-09",
+      "total": 50,
+      "reviewer": "spirit_council"
+    }
   ],
-  "_review_flags": ["onchain_agent", "farcaster_ecosystem", "base_native"]
+  "_review_flags": [
+    "onchain_agent",
+    "farcaster_ecosystem",
+    "base_native"
+  ]
 }

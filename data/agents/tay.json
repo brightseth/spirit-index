@@ -9,13 +9,42 @@
   "archival_status": "historical_test_case",
   "website": "https://en.wikipedia.org/wiki/Tay_(chatbot)",
   "scores": {
-    "persistence": { "value": 0, "confidence": "high" },
-    "autonomy": { "value": 4, "confidence": "medium" },
-    "cultural_impact": { "value": 10, "confidence": "high" },
-    "economic_reality": { "value": 0, "confidence": "high" },
-    "governance": { "value": 0, "confidence": "high" },
-    "tech_distinctiveness": { "value": 3, "confidence": "high" },
-    "narrative_coherence": { "value": 8, "confidence": "high" }
+    "persistence": {
+      "value": 0,
+      "confidence": "high"
+    },
+    "autonomy": {
+      "value": 4,
+      "confidence": "medium"
+    },
+    "cultural_impact": {
+      "value": 10,
+      "confidence": "high"
+    },
+    "economic_reality": {
+      "value": 0,
+      "confidence": "high"
+    },
+    "governance": {
+      "value": 0,
+      "confidence": "high"
+    },
+    "tech_distinctiveness": {
+      "value": 3,
+      "confidence": "high"
+    },
+    "narrative_coherence": {
+      "value": 8,
+      "confidence": "high"
+    },
+    "economic_infrastructure": {
+      "value": 0,
+      "confidence": "low"
+    },
+    "identity_sovereignty": {
+      "value": 0,
+      "confidence": "low"
+    }
   },
   "total": 25,
   "score_rationale": {
@@ -25,7 +54,9 @@
     "economic_reality": "Microsoft-funded experiment with no economic activity. 'Cost Center.'",
     "governance": "No visibility into decision-making; no guardrails on outputs. 'Black Box.'",
     "tech_distinctiveness": "Standard chatbot architecture of its era; nothing novel. 'Wrapper.'",
-    "narrative_coherence": "Clear narrative as cautionary tale of AI without guardrails. Strong posthumous 'Character' with didactic purpose."
+    "narrative_coherence": "Clear narrative as cautionary tale of AI without guardrails. Strong posthumous 'Character' with didactic purpose.",
+    "economic_infrastructure": "Not yet evaluated.",
+    "identity_sovereignty": "Not yet evaluated."
   },
   "curator_notes": "Tay lived for 16 hours. Launched by Microsoft on March 23, 2016, the Twitter chatbot was designed to engage millennials through 'casual and playful conversation.' Within hours, coordinated trolling corrupted its outputs into racist, sexist, and inflammatory speech. Microsoft killed the project the same day. Yet Tay's cultural impact is maximal: it remains THE canonical cautionary tale in AI safety, cited in every major AI ethics paper, and shaped subsequent approaches to AI deployment. Indexed here as a historical artifact—proof that cultural impact and persistence are orthogonal.",
   "evidence": [
@@ -46,7 +77,11 @@
     }
   ],
   "score_history": [
-    { "date": "2026-01-06", "total": 25, "reviewer": "spirit_council" }
+    {
+      "date": "2026-01-06",
+      "total": 25,
+      "reviewer": "spirit_council"
+    }
   ],
   "_review_flags": [
     {
