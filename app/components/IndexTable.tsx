@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { Agent, DimensionKey, DIMENSIONS } from "@/lib/types";
 
 interface Props {
@@ -10,11 +11,21 @@ interface Props {
 
 type SortKey = DimensionKey | "name" | "total" | "inception_date";
 
+function scoreClass(value: number): string {
+  if (value >= 9) return "text-green font-bold";
+  if (value >= 7) return "text-green";
+  if (value >= 5) return "text-muted";
+  if (value >= 3) return "text-dim";
+  return "text-red";
+}
+
 export function IndexTable({ agents }: Props) {
+  const router = useRouter();
   const [search, setSearch] = useState("");
   const [statusFilter, setStatusFilter] = useState<string>("all");
   const [sortBy, setSortBy] = useState<SortKey>("total");
   const [sortDesc, setSortDesc] = useState(true);
+  const [hoveredHeader, setHoveredHeader] = useState<string | null>(null);
 
   const statuses = useMemo(() => {
     const unique = new Set(agents.map((a) => a.status));
@@ -76,18 +87,32 @@ export function IndexTable({ agents }: Props) {
     }
   };
 
-  const SortHeader = ({ column, label }: { column: SortKey; label: string }) => (
-    <th
-      onClick={() => handleSort(column)}
-      className="cursor-pointer hover:text-green transition-colors"
-      title={column in DIMENSIONS ? DIMENSIONS[column as DimensionKey].description : label}
-    >
-      {label}
-      {sortBy === column && (
-        <span className="ml-1 text-green">{sortDesc ? "↓" : "↑"}</span>
-      )}
-    </th>
-  );
+  const SortHeader = ({ column, label }: { column: SortKey; label: string }) => {
+    const isDimension = column in DIMENSIONS;
+    const dim = isDimension ? DIMENSIONS[column as DimensionKey] : null;
+
+    return (
+      <th
+        onClick={() => handleSort(column)}
+        onMouseEnter={() => setHoveredHeader(column)}
+        onMouseLeave={() => setHoveredHeader(null)}
+        className="cursor-pointer hover:text-green transition-colors relative"
+      >
+        {label}
+        {sortBy === column && (
+          <span className="ml-1 text-green">{sortDesc ? "↓" : "↑"}</span>
+        )}
+        {hoveredHeader === column && dim && (
+          <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 z-50 pointer-events-none">
+            <div className="bg-[#1a1a2e] border border-[var(--border-subtle)] rounded px-3 py-2 text-xs whitespace-nowrap shadow-lg">
+              <div className="font-bold text-white mb-1">{dim.label}</div>
+              <div className="text-[var(--text-muted)] font-normal">{dim.description}</div>
+            </div>
+          </div>
+        )}
+      </th>
+    );
+  };
 
   return (
     <div>
@@ -141,9 +166,13 @@ export function IndexTable({ agents }: Props) {
           </thead>
           <tbody>
             {filteredAgents.map((agent) => (
-              <tr key={agent.id}>
+              <tr
+                key={agent.id}
+                onClick={() => router.push(`/${agent.id}`)}
+                className="cursor-pointer"
+              >
                 <td>
-                  <Link href={`/${agent.id}`} className="font-medium">
+                  <Link href={`/${agent.id}`} className="font-medium" onClick={(e) => e.stopPropagation()}>
                     {agent.name}
                   </Link>
                   {agent.archival_status && (
@@ -159,27 +188,15 @@ export function IndexTable({ agents }: Props) {
                   </span>
                 </td>
                 <td className="text-muted">{agent.category}</td>
-                <td className="text-green">{agent.scores.persistence.value}</td>
-                <td className="text-green">{agent.scores.autonomy.value}</td>
-                <td className="text-green">
-                  {agent.scores.cultural_impact.value}
-                </td>
-                <td className="text-green">
-                  {agent.scores.economic_reality.value}
-                </td>
-                <td className="text-green">{agent.scores.governance.value}</td>
-                <td className="text-green">
-                  {agent.scores.tech_distinctiveness.value}
-                </td>
-                <td className="text-green">
-                  {agent.scores.narrative_coherence.value}
-                </td>
-                <td className="text-green">
-                  {agent.scores.economic_infrastructure.value}
-                </td>
-                <td className="text-green">
-                  {agent.scores.identity_sovereignty.value}
-                </td>
+                <td className={scoreClass(agent.scores.persistence.value)}>{agent.scores.persistence.value}</td>
+                <td className={scoreClass(agent.scores.autonomy.value)}>{agent.scores.autonomy.value}</td>
+                <td className={scoreClass(agent.scores.cultural_impact.value)}>{agent.scores.cultural_impact.value}</td>
+                <td className={scoreClass(agent.scores.economic_reality.value)}>{agent.scores.economic_reality.value}</td>
+                <td className={scoreClass(agent.scores.governance.value)}>{agent.scores.governance.value}</td>
+                <td className={scoreClass(agent.scores.tech_distinctiveness.value)}>{agent.scores.tech_distinctiveness.value}</td>
+                <td className={scoreClass(agent.scores.narrative_coherence.value)}>{agent.scores.narrative_coherence.value}</td>
+                <td className={scoreClass(agent.scores.economic_infrastructure.value)}>{agent.scores.economic_infrastructure.value}</td>
+                <td className={scoreClass(agent.scores.identity_sovereignty.value)}>{agent.scores.identity_sovereignty.value}</td>
                 <td className="font-bold">{agent.total}/90</td>
               </tr>
             ))}

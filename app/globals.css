@@ -347,6 +347,7 @@ a:hover { text-decoration: underline; }
 .text-green { color: var(--spirit-green); }
 .text-muted { color: var(--text-muted); }
 .text-dim { color: var(--text-dim); }
+.text-red { color: #f87171; }
 .bg-deep { background-color: var(--spirit-deep-blue); }
 .bg-blue { background-color: var(--spirit-blue); }
 .border-subtle { border-color: var(--border-subtle); }
