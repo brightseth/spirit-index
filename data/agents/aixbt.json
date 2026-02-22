@@ -37,15 +37,15 @@
       "confidence": "medium"
     },
     "economic_infrastructure": {
-      "value": 0,
-      "confidence": "low"
+      "value": 3,
+      "confidence": "medium"
     },
     "identity_sovereignty": {
-      "value": 0,
-      "confidence": "low"
+      "value": 2,
+      "confidence": "medium"
     }
   },
-  "total": 46,
+  "total": 51,
   "score_rationale": {
     "persistence": "Launched November 2024, operating ~14 months. Too young for 'Established' (requires 1+ year through market cycle). Strong activity but unproven longevity.",
     "autonomy": "99% autonomous operation verified through public reply logs. 24/7 operation without manual oversight. Monitors 400+ KOLs and generates insights algorithmically. Near-sovereign.",
@@ -54,10 +54,10 @@
     "governance": "Virtuals Protocol governance applies. Staking-based governance explored for 2026. Currently more 'Constitutional' through protocol inheritance than own governance.",
     "tech_distinctiveness": "Aggregates 400+ KOL feeds, sentiment analysis, market pattern detection. Solid integration but not fundamentally novel architecture. 'Integrated System.'",
     "narrative_coherence": "Clear identity: the tireless analyst who never sleeps. 'Bloomberg for degens' narrative is coherent and memorable. Strong 'Character.'",
-    "economic_infrastructure": "Not yet evaluated.",
-    "identity_sovereignty": "Not yet evaluated."
+    "economic_infrastructure": "AIXBT token on Virtuals Protocol provides economic activity (~$150M market cap). Revenue from subscriptions planned. Token buyback mechanism exists. However, all economic infrastructure is locked to Virtuals Protocol on Base \u2014 platform-dependent. No independent treasury or portable payment rails.",
+    "identity_sovereignty": "Identity anchored through Virtuals Protocol token on Base. FERC20 token provides some on-chain presence but is Virtuals-specific, not a portable agent identity standard. Twitter/X presence is primary identity surface. Would not survive Virtuals shutdown."
   },
-  "curator_notes": "AIXBT is the breakout star of the Virtuals Protocol ecosystem—an autonomous market analyst that monitors 400+ crypto KOLs and generates real-time market intelligence. Launched November 2024, it reached $700M market cap by January 2025 and secured a Binance listing. The 'Web3 Bloomberg Terminal' positioning is compelling: an AI that watches everything so you don't have to. Technical analysis confirms 99% autonomous operation. The main risk is youth—it hasn't survived a full market cycle yet.",
+  "curator_notes": "AIXBT is the breakout star of the Virtuals Protocol ecosystem\u2014an autonomous market analyst that monitors 400+ crypto KOLs and generates real-time market intelligence. Launched November 2024, it reached $700M market cap by January 2025 and secured a Binance listing. The 'Web3 Bloomberg Terminal' positioning is compelling: an AI that watches everything so you don't have to. Technical analysis confirms 99% autonomous operation. The main risk is youth\u2014it hasn't survived a full market cycle yet.",
   "evidence": [
     {
       "dimension": "autonomy",

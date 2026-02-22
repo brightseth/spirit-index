@@ -38,14 +38,14 @@
     },
     "economic_infrastructure": {
       "value": 0,
-      "confidence": "low"
+      "confidence": "high"
     },
     "identity_sovereignty": {
-      "value": 0,
-      "confidence": "low"
+      "value": 1,
+      "confidence": "medium"
     }
   },
-  "total": 46,
+  "total": 47,
   "score_rationale": {
     "persistence": "Released March 2023, ~3 years. Continuous development but peak hype passed. Active GitHub repository.",
     "autonomy": "Chains together LLM thoughts to autonomously achieve goals. Breaks user-defined goals into sub-tasks. Self-plans, executes, refines based on feedback. High autonomy within task scope.",
@@ -54,10 +54,10 @@
     "governance": "Open-source (Significant Gravitas). Community contributions. No formal governance structure.",
     "tech_distinctiveness": "First mainstream implementation of autonomous goal-pursuing agent. Task decomposition, real-time feedback refinement. Pioneered the 'agent loop' pattern.",
     "narrative_coherence": "'AI that achieves goals for you.' Clear, compelling pitch. Associated with AGI aspirations (and risks). Strong narrative even if exaggerated.",
-    "economic_infrastructure": "Not yet evaluated.",
-    "identity_sovereignty": "Not yet evaluated."
+    "economic_infrastructure": "Open-source project with no direct revenue model. No treasury, no token, no payment rails. High API costs for users but no economic infrastructure for the agent itself. Community-supported but economically unfunded.",
+    "identity_sovereignty": "Strong GitHub/open-source identity (Significant-Gravitas). No on-chain presence. No identity token. Identity is code-repository-based \u2014 persistent in open source but not sovereign in the Spirit Index sense. Some NFT-adjacent community projects but nothing core."
   },
-  "curator_notes": "Auto-GPT, released by Toran Bruce Richards in March 2023, ignited the autonomous AI agent craze. The project demonstrated that GPT-4 could chain together reasoning steps to autonomously pursue user-defined goals, breaking them into sub-tasks and refining approaches based on feedback. While technically limited (high API costs, tendency to loop), Auto-GPT's cultural impact was enormous—it defined public understanding of AI agents and spawned imitators like BabyAGI and AgentGPT. Richards originally wanted an AI to email him daily AI news; he ended up creating the template for the 2023-2024 agent explosion.",
+  "curator_notes": "Auto-GPT, released by Toran Bruce Richards in March 2023, ignited the autonomous AI agent craze. The project demonstrated that GPT-4 could chain together reasoning steps to autonomously pursue user-defined goals, breaking them into sub-tasks and refining approaches based on feedback. While technically limited (high API costs, tendency to loop), Auto-GPT's cultural impact was enormous\u2014it defined public understanding of AI agents and spawned imitators like BabyAGI and AgentGPT. Richards originally wanted an AI to email him daily AI news; he ended up creating the template for the 2023-2024 agent explosion.",
   "evidence": [
     {
       "dimension": "cultural_impact",

@@ -37,15 +37,15 @@
       "confidence": "medium"
     },
     "economic_infrastructure": {
-      "value": 0,
-      "confidence": "low"
+      "value": 5,
+      "confidence": "medium"
     },
     "identity_sovereignty": {
-      "value": 0,
-      "confidence": "low"
+      "value": 4,
+      "confidence": "medium"
     }
   },
-  "total": 49,
+  "total": 58,
   "score_rationale": {
     "persistence": "Operating since 2023, ~2.5 years. Consistent daily activity with 300+ agents. Survived multiple market conditions. Approaching 'Established' with strong continuity.",
     "autonomy": "361+ daily active agents executing 8.2M+ transactions without human intervention. Market Creator, AI Mech, and Trader agents operate fully autonomously. Near-sovereign.",
@@ -54,10 +54,10 @@
     "governance": "Governed by Olas protocol mechanisms. On-chain transaction records fully auditable. Market creation and trading follow algorithmic rules. 'Constitutional.'",
     "tech_distinctiveness": "Three-agent architecture (Market Creator, AI Mech, Trader) is novel. Built on Conditional Token Framework. Autonomous market creation from news feeds. 'Integrated System' with novel elements.",
     "narrative_coherence": "A collective of forecasters competing to predict the future. Identity is diffuse (many agents) rather than singular. Clear function but weaker mythos. 'Character' tier.",
-    "economic_infrastructure": "Not yet evaluated.",
-    "identity_sovereignty": "Not yet evaluated."
+    "economic_infrastructure": "Real money wagered and won in prediction markets. 35%+ of all Safe transactions on Gnosis Chain. Revenue from successful predictions. On-chain treasury through Safe wallets. Agent economic activity is fully on-chain and verifiable. Multiple agents with individual economic identities. However, economic infrastructure is Gnosis Chain-specific and Olas-dependent.",
+    "identity_sovereignty": "On-chain identity through Safe wallets on Gnosis Chain. Each agent has its own on-chain address and transaction history. Registered through Olas protocol framework. Identity is verifiable and persistent on-chain. However, no portable agent identity standard \u2014 identity is Gnosis/Olas-specific. Better than most due to fully on-chain operation."
   },
-  "curator_notes": "The Omen Prediction Agents are not a single entity but a thriving economy of 300+ autonomous agents trading on Gnosis Chain's Omen prediction market. Built on Olas infrastructure, they achieve 79% prediction accuracy and constitute 35%+ of all Safe transactions on Gnosis. The three-agent architecture (Market Creator creates markets from news, AI Mech estimates probabilities, Trader executes bets) represents genuine autonomous coordination. This is the largest functioning agent economy in crypto—real agents, real money, real predictions. The challenge: as a collective, narrative coherence is lower than singular agents.",
+  "curator_notes": "The Omen Prediction Agents are not a single entity but a thriving economy of 300+ autonomous agents trading on Gnosis Chain's Omen prediction market. Built on Olas infrastructure, they achieve 79% prediction accuracy and constitute 35%+ of all Safe transactions on Gnosis. The three-agent architecture (Market Creator creates markets from news, AI Mech estimates probabilities, Trader executes bets) represents genuine autonomous coordination. This is the largest functioning agent economy in crypto\u2014real agents, real money, real predictions. The challenge: as a collective, narrative coherence is lower than singular agents.",
   "evidence": [
     {
       "dimension": "autonomy",

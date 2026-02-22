@@ -21,7 +21,7 @@ We evaluate agents using our [7-Dimension Framework](/rubric):
 3. **Cultural Impact** — Has it mattered beyond its creators?
 4. **Economic Reality** — Does it touch real economics?
 5. **Governance** — Is there a coherent decision-making structure?
-6. **Technical Distinctiveness** — Is there something non-trivial under the hood?
+6. **Technical Architecture** — Is there something non-trivial under the hood?
 7. **Narrative Coherence** — Does it make sense as an entity?
 
 Every score requires external evidence. We cite our sources. We version our assessments.

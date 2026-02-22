@@ -91,7 +91,7 @@ Entities are evaluated on nine distinct dimensions. Scores range from 0 to 10.
 | **5** | Constitutional | Clear rules. Multisig treasuries. Publicly verifiable voting or decision logs. |
 | **10** | Algorithmic Law | Formally enforced rules (onchain or equivalent), non-arbitrary, externally auditable. Impossible for creators to unilaterally override. |
 
-### 6. Technical Distinctiveness
+### 6. Technical Architecture
 *Is there something non-trivial happening under the hood?*
 
 | Score | Anchor | Definition |

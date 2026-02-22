@@ -79,7 +79,7 @@ export default function About() {
                 <li><strong className="text-white">Cultural Impact</strong> — Has it mattered beyond its creators?</li>
                 <li><strong className="text-white">Economic Reality</strong> — Does it touch real economics?</li>
                 <li><strong className="text-white">Governance</strong> — Is there a coherent decision-making structure?</li>
-                <li><strong className="text-white">Technical Distinctiveness</strong> — Is there something non-trivial under the hood?</li>
+                <li><strong className="text-white">Technical Architecture</strong> — Is there something non-trivial under the hood?</li>
                 <li><strong className="text-white">Narrative Coherence</strong> — Does it make sense as an entity?</li>
               </ol>
               <p className="mt-4">

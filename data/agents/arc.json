@@ -37,15 +37,15 @@
       "confidence": "medium"
     },
     "economic_infrastructure": {
-      "value": 0,
-      "confidence": "low"
+      "value": 4,
+      "confidence": "medium"
     },
     "identity_sovereignty": {
-      "value": 0,
-      "confidence": "low"
+      "value": 3,
+      "confidence": "medium"
     }
   },
-  "total": 37,
+  "total": 44,
   "score_rationale": {
     "persistence": "Launched December 2024, ~13 months old. Survived initial volatility. Active development with Polygon expansion in February 2025.",
     "autonomy": "Framework enables AI agents to interact with blockchain, analyze on-chain data, execute DeFi transactions. Platform is infrastructure rather than autonomous agent itself.",
@@ -54,8 +54,8 @@
     "governance": "Each AI agent managed by independent DAO. Transparent governance model for updates and integrations. Progressive decentralization underway.",
     "tech_distinctiveness": "Rust-based modular framework (unusual in AI space). Supports multiple LLMs (DeepSeek, Gemini, OpenAI, Anthropic). Multi-chain (Solana + Polygon). GPU compute tokenization in development.",
     "narrative_coherence": "Clear 'open, secure, decentralized AI' vision. Multiple components (DAO, Proxy NFT, FOMO Tokens) may fragment identity.",
-    "economic_infrastructure": "Not yet evaluated.",
-    "identity_sovereignty": "Not yet evaluated."
+    "economic_infrastructure": "ARC token (~$51M market cap) with 45K+ holders. 90% public distribution at launch. Arc Forge platform enables token launches. DAO governance for individual agents provides economic structure. Multi-chain (Solana + Polygon). Revenue from ecosystem fees. Infrastructure-level economic model but still evolving.",
+    "identity_sovereignty": "On-chain token presence on Solana and Polygon. DAO-managed agents have on-chain governance identity. No agent-specific identity standard like ERC-8004. Identity tied to token and GitHub presence. Proxy NFTs provide some identity anchoring but not a portable standard."
   },
   "curator_notes": "AI Rig Complex represents the Rust-native approach to AI agent infrastructure. Built by Playgrounds Analytics Inc., ARC's Rig framework supports multiple LLMs and emphasizes modularity. The project's 90% public token distribution at launch signals commitment to decentralization. Each AI agent is managed by an independent DAO, creating a unique governance model. 2025 developments include multi-chain expansion (Solana + Polygon) and GPU compute tokenization for decentralized AI training.",
   "evidence": [

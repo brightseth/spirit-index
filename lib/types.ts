@@ -179,7 +179,7 @@ export const DIMENSIONS = {
     description: "Is there a coherent structure for decision-making?",
   },
   tech_distinctiveness: {
-    label: "Technical Distinctiveness",
+    label: "Technical Architecture",
     shortLabel: "TEC",
     description: "Is there something non-trivial happening under the hood?",
   },

@@ -38,11 +38,11 @@
     },
     "economic_infrastructure": {
       "value": 0,
-      "confidence": "low"
+      "confidence": "high"
     },
     "identity_sovereignty": {
       "value": 0,
-      "confidence": "low"
+      "confidence": "high"
     }
   },
   "total": 35,
@@ -53,9 +53,9 @@
     "economic_reality": "Academic research project with no commercial output or treasury. Book published but system itself generated no economic activity.",
     "governance": "Two-person academic team (Bringsjord and Ferrucci). Research project governance only.",
     "tech_distinctiveness": "Logic-based approach explicitly rejecting neural networks. Unique focus on literary themes (betrayal) rather than style imitation. Generated grammatically correct prose in seconds.",
-    "narrative_coherence": "Clear identity as betrayal-focused storyteller. Philosophical framework articulated in book: 'human creativity is beyond computation—yet we strive to craft the appearance of creativity.'",
-    "economic_infrastructure": "Not yet evaluated.",
-    "identity_sovereignty": "Not yet evaluated."
+    "narrative_coherence": "Clear identity as betrayal-focused storyteller. Philosophical framework articulated in book: 'human creativity is beyond computation\u2014yet we strive to craft the appearance of creativity.'",
+    "economic_infrastructure": "Academic research project from late 1990s. No treasury, no revenue, no payment rails. Book published (traditional publishing) but system generated no economic activity.",
+    "identity_sovereignty": "Historical academic project. Identity exists only in published book and academic citations. No digital presence beyond archival references. Pre-dates all digital identity infrastructure."
   },
   "curator_notes": "BRUTUS represents the logic-based school of AI creativity, explicitly rejecting neural networks in favor of rule-based generation. Created by Selmer Bringsjord (RPI) and David Ferrucci (IBM Watson), BRUTUS.1 could generate complete stories of betrayal and deception in seconds. While less famous than AARON or EMI, BRUTUS contributed to the philosophical discourse on machine creativity. Notably, Ferrucci later led IBM's Watson Jeopardy project.",
   "evidence": [

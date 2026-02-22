@@ -96,7 +96,7 @@ Split dimensions into **verified** (on-chain/data-derived) and **reviewed** (hum
 |-----------|------------------|
 | **Cultural Impact** | Requires qualitative judgment |
 | **Narrative Coherence** | Subjective interpretation |
-| **Technical Distinctiveness** | Architectural assessment |
+| **Technical Architecture** | Architectural assessment |
 | **Autonomy** | Hybrid (can be verified if telemetry exists) |
 
 ### Display Format

@@ -55,7 +55,7 @@ const dimensions = [
   },
   {
     id: "tech_distinctiveness",
-    name: "Technical Distinctiveness",
+    name: "Technical Architecture",
     question: "Is there something non-trivial happening under the hood?",
     anchors: [
       { score: 0, label: "Wrapper", description: "Standard LLM wrapper or basic image generation script." },

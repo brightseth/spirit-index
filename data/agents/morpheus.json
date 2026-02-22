@@ -37,15 +37,15 @@
       "confidence": "high"
     },
     "economic_infrastructure": {
-      "value": 0,
-      "confidence": "low"
+      "value": 5,
+      "confidence": "medium"
     },
     "identity_sovereignty": {
-      "value": 0,
-      "confidence": "low"
+      "value": 3,
+      "confidence": "medium"
     }
   },
-  "total": 47,
+  "total": 55,
   "score_rationale": {
     "persistence": "Operating since early 2024 (~2 years). Mainnet launched January 2025. Survived initial phase but hasn't been through extended bear market. 'Established' threshold.",
     "autonomy": "Network enables autonomous agent execution; Smart Agents run locally and execute complex on-chain tasks via natural language. Above 'Cyborg' but network itself is infrastructure.",
@@ -53,9 +53,9 @@
     "economic_reality": "$10M builder rewards live on Base (Jan 2025). MOR token capped at 42M supply. Multi-asset staking via Aave integration. Strong 'Revenue Positive.'",
     "governance": "Token-based compute access (1% of MOR = 1% compute budget). Four contributor classes with on-chain incentives. Approaching 'Constitutional.'",
     "tech_distinctiveness": "Lumerin protocol for P2P compute routing. Forge tool for no-code agent deployment. Intent-driven actions via Brian APIs. Novel 'Integrated System' with unique primitives.",
-    "narrative_coherence": "The 'red pill' for AI—decentralized compute for personalized agents. Matrix mythology embedded in naming and philosophy. Strong 'Mythos' potential.",
-    "economic_infrastructure": "Not yet evaluated.",
-    "identity_sovereignty": "Not yet evaluated."
+    "narrative_coherence": "The 'red pill' for AI\u2014decentralized compute for personalized agents. Matrix mythology embedded in naming and philosophy. Strong 'Mythos' potential.",
+    "economic_infrastructure": "MOR token with 42M supply cap. $10M builder rewards live on Base. Multi-asset staking via Aave integration. Lumerin protocol for P2P compute routing generates real economic activity. Token-based compute access model. On-chain treasury on Ethereum and Base. Multiple revenue sources. Infrastructure-level economic model with real activity. Still evolving but substantive.",
+    "identity_sovereignty": "On-chain token identity on Ethereum and Base. Smart Agent deployment on-chain. Forge tool creates agents with some on-chain presence. No ERC-8004 or agent-specific identity standard. Identity distributed across token, protocol, and social channels. Protocol-level identity rather than individual agent identity."
   },
   "curator_notes": "Morpheus is building the peer-to-peer infrastructure for personalized AI agents. The core innovation: holding MOR tokens gives proportional access to decentralized compute, rather than pay-per-use. Launched mainnet January 2025 with $10M in builder rewards. The 'Forge' tool enables no-code agent creation. The Matrix-inspired naming (Morpheus, red pill, etc.) gives it strong narrative coherence. Partnership with AlphaTON targets Telegram's billion+ users. Main risk: infrastructure plays are less visible than consumer-facing agents.",
   "evidence": [

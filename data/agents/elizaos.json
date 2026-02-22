@@ -37,15 +37,15 @@
       "confidence": "medium"
     },
     "economic_infrastructure": {
-      "value": 0,
-      "confidence": "low"
+      "value": 4,
+      "confidence": "medium"
     },
     "identity_sovereignty": {
-      "value": 0,
-      "confidence": "low"
+      "value": 3,
+      "confidence": "medium"
     }
   },
-  "total": 45,
+  "total": 52,
   "score_rationale": {
     "persistence": "Launched October 2024, ~15 months old. Rapid development with V2 in early 2025. Young but well-funded and actively developed.",
     "autonomy": "Framework enables autonomous agent creation. Agents built on ElizaOS operate independently across platforms. Framework itself is infrastructure.",
@@ -53,9 +53,9 @@
     "economic_reality": "ELIZAOS token (formerly AI16Z). Auto.fun platform for no-code agent creation. Chainlink CCIP integration. Active commercial ecosystem.",
     "governance": "Eliza Labs leads development. Open-source with community contributions. Token provides some governance rights. Progressive decentralization.",
     "tech_distinctiveness": "TypeScript framework for Web3 agents. 90+ official plugins. Hierarchical Task Networks (V2). Multi-chain (Solana, Ethereum, Base, BNB). Memory system for learning from interactions.",
-    "narrative_coherence": "Clear 'autonomous agents for everyone' positioning. Some confusion from AI16Z → ElizaOS rebrand. Multiple identity layers (framework vs DAO vs token).",
-    "economic_infrastructure": "Not yet evaluated.",
-    "identity_sovereignty": "Not yet evaluated."
+    "narrative_coherence": "Clear 'autonomous agents for everyone' positioning. Some confusion from AI16Z \u2192 ElizaOS rebrand. Multiple identity layers (framework vs DAO vs token).",
+    "economic_infrastructure": "ELIZAOS token (formerly AI16Z) provides economic backbone. Auto.fun platform generates revenue from agent creation. Chainlink CCIP integration enables cross-chain operations. Active commercial ecosystem. Treasury exists but concentrated in Solana ecosystem. Framework generates economic value but the ElizaOS entity itself has distributed, hard-to-measure economic infrastructure.",
+    "identity_sovereignty": "Strong open-source identity (GitHub, npm ecosystem). ELIZAOS token provides on-chain anchoring on Solana. Cross-chain via Chainlink CCIP. No agent-specific identity standard. Identity fragmented across framework, token, and DAO \u2014 recognizable but not registered in any portable agent identity system."
   },
   "curator_notes": "ElizaOS is the most influential open-source framework for building autonomous AI agents in crypto. Originally launched as AI16Z in October 2024 (referencing a16z), it was the first DAO led by an AI agent. The framework enables agents with persistent memory, multi-platform deployment (Discord, Twitter, Telegram), and blockchain integration. ElizaOS hit #2 trending on GitHub with 2,800+ forks by January 2025. The V2 release introduced Hierarchical Task Networks for complex task decomposition. The November 2025 Chainlink CCIP integration enabled cross-chain agent operations. ElizaOS essentially created the infrastructure layer for the 2024-2025 crypto AI agent explosion.",
   "evidence": [

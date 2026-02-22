@@ -38,26 +38,26 @@
     },
     "economic_infrastructure": {
       "value": 0,
-      "confidence": "low"
+      "confidence": "high"
     },
     "identity_sovereignty": {
       "value": 0,
-      "confidence": "low"
+      "confidence": "high"
     }
   },
   "total": 43,
   "score_rationale": {
     "persistence": "Launched June 2016 by Google Brain. 9+ years continuous development. Magenta RealTime (2024) shows ongoing investment.",
-    "autonomy": "Can create original music without human intervention—becomes 'autonomous composer.' Generates endless soundscapes. Higher autonomy than prompt-response tools.",
+    "autonomy": "Can create original music without human intervention\u2014becomes 'autonomous composer.' Generates endless soundscapes. Higher autonomy than prompt-response tools.",
     "cultural_impact": "Pioneer of neural network music generation. Academic influence significant. Used by artists and producers. Less mainstream visibility than Suno/AIVA.",
     "economic_reality": "Google-funded research project. Open-source with no direct monetization. Professional tools available but not commercial focus.",
     "governance": "Google Brain team governance. Open-source contributions. No community governance.",
     "tech_distinctiveness": "RNN/LSTM for composition, VAE (MusicVAE, GrooVAE) for interpolation, WaveNet for audio. Magenta RealTime: first open model for real-time continuous music generation.",
     "narrative_coherence": "Consistent 'extend not replace' philosophy. Goal: enable and enhance creative potential of all people. Clear distinction from 'AI replacing artists' narrative.",
-    "economic_infrastructure": "Not yet evaluated.",
-    "identity_sovereignty": "Not yet evaluated."
+    "economic_infrastructure": "Google-funded research project. Open-source with no direct monetization. No treasury, no token, no payment rails. Professional tools available but no economic infrastructure for the entity itself. Google absorbs all costs.",
+    "identity_sovereignty": "Identity exists on Google/TensorFlow ecosystem (magenta.tensorflow.org) and GitHub. No on-chain presence. No identity token. Entirely dependent on Google infrastructure for identity persistence."
   },
-  "curator_notes": "Google Magenta represents the academic vanguard of AI music generation. Launched in 2016 by Google Brain, Magenta asked: 'Can machine learning create compelling art and music?' The project pioneered neural network approaches to composition using RNNs, VAEs (MusicVAE, GrooVAE), and WaveNet. Unlike commercial services, Magenta emphasizes 'extend not replace'—smart tools that enhance human creativity. The 2024 Magenta RealTime release is the first open-weights model for continuous real-time music generation, enabling live performance, installations, and games. TensorFlow-based, all tools are open source on GitHub.",
+  "curator_notes": "Google Magenta represents the academic vanguard of AI music generation. Launched in 2016 by Google Brain, Magenta asked: 'Can machine learning create compelling art and music?' The project pioneered neural network approaches to composition using RNNs, VAEs (MusicVAE, GrooVAE), and WaveNet. Unlike commercial services, Magenta emphasizes 'extend not replace'\u2014smart tools that enhance human creativity. The 2024 Magenta RealTime release is the first open-weights model for continuous real-time music generation, enabling live performance, installations, and games. TensorFlow-based, all tools are open source on GitHub.",
   "evidence": [
     {
       "dimension": "persistence",

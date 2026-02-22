@@ -101,7 +101,7 @@ Score = weighted_average(
 - Mythos depth
 - **Human review required** for qualitative assessment
 
-#### Technical Distinctiveness
+#### Technical Architecture
 - Architecture novelty assessment
 - Code analysis (partial automation)
 - Innovation vs. wrapper determination

@@ -8,29 +8,56 @@
   "classification": "Multi-Agent Creative System",
   "website": "https://www.showrunner.xyz",
   "scores": {
-    "persistence": { "value": 7, "confidence": "high" },
-    "autonomy": { "value": 9, "confidence": "high" },
-    "cultural_impact": { "value": 7, "confidence": "high" },
-    "economic_reality": { "value": 6, "confidence": "medium" },
-    "governance": { "value": 3, "confidence": "medium" },
-    "tech_distinctiveness": { "value": 9, "confidence": "high" },
-    "narrative_coherence": { "value": 7, "confidence": "medium" },
-    "economic_infrastructure": { "value": 2, "confidence": "low" },
-    "identity_sovereignty": { "value": 2, "confidence": "low" }
+    "persistence": {
+      "value": 7,
+      "confidence": "high"
+    },
+    "autonomy": {
+      "value": 9,
+      "confidence": "high"
+    },
+    "cultural_impact": {
+      "value": 7,
+      "confidence": "high"
+    },
+    "economic_reality": {
+      "value": 6,
+      "confidence": "medium"
+    },
+    "governance": {
+      "value": 3,
+      "confidence": "medium"
+    },
+    "tech_distinctiveness": {
+      "value": 9,
+      "confidence": "high"
+    },
+    "narrative_coherence": {
+      "value": 7,
+      "confidence": "medium"
+    },
+    "economic_infrastructure": {
+      "value": 2,
+      "confidence": "low"
+    },
+    "identity_sovereignty": {
+      "value": 2,
+      "confidence": "low"
+    }
   },
   "total": 52,
   "score_rationale": {
     "persistence": "SHOW-1 paper published July 2023; Showrunner platform launched publicly in 2025. Parent company Fable Studio has operated since 2018 with two Emmy wins and a Peabody. Strong institutional track record.",
-    "autonomy": "Generates complete animated TV episodes from 10-15 word text prompts. Handles scriptwriting, voice acting, animation, editing, and character consistency autonomously across multiple coordinated agents. Near 'Sovereign' for creative output — the system makes thousands of creative decisions per episode without human intervention.",
+    "autonomy": "Generates complete animated TV episodes from 10-15 word text prompts. Handles scriptwriting, voice acting, animation, editing, and character consistency autonomously across multiple coordinated agents. Near 'Sovereign' for creative output \u2014 the system makes thousands of creative decisions per episode without human intervention.",
     "cultural_impact": "Featured in VentureBeat, Amazon investment, two Emmys and a Peabody for Fable Studio. SHOW-1 research paper widely cited. Not yet household-name cultural impact but deeply significant in AI creative discourse.",
     "economic_reality": "Amazon-backed. Platform enables user-generated content at scale. Revenue model through subscriptions and content marketplace. No token. Real but early commercial traction.",
     "governance": "Centralized under Fable Studio (CEO Edward Saatchi). No community governance, no DAO, no token. Corporate decision-making only.",
-    "tech_distinctiveness": "The multi-agent architecture is genuinely novel — specialized agents for writing, directing, animating, voicing, and editing coordinate to produce coherent narrative output. Character simulation using history, goals, emotions, and spatial awareness. Architecturally innovative. Near 'Novel Architecture.'",
+    "tech_distinctiveness": "The multi-agent architecture is genuinely novel \u2014 specialized agents for writing, directing, animating, voicing, and editing coordinate to produce coherent narrative output. Character simulation using history, goals, emotions, and spatial awareness. Architecturally innovative. Near 'Novel Architecture.'",
     "narrative_coherence": "The 'AI showrunner' identity is clear and distinctive. The system itself is a meta-narrative about AI authorship of narrative media. The identity is more institutional (Fable Studio) than individual character.",
     "economic_infrastructure": "No on-chain presence. Revenue flows through traditional SaaS/marketplace model. Amazon partnership provides distribution but no crypto-native infrastructure.",
     "identity_sovereignty": "No on-chain identity. No ERC-8004 registration. Platform-dependent existence under Fable Studio and Amazon. Low sovereignty by Spirit Index standards."
   },
-  "curator_notes": "Showrunner is what happens when you give a multi-agent system the job of making television. Built by Fable Studio — a company with two Emmys, a Peabody, and Amazon's backing — the SHOW-1 architecture coordinates specialized AI agents for scriptwriting, directing, voice acting, animation, and editing. From a 10-word prompt, it produces complete animated episodes of 2-16 minutes with consistent characters, coherent plots, and synchronized audio. The technical achievement is extraordinary: not one model doing everything, but an ensemble of agents collaborating on creative production. Where it falls short by Spirit Index standards is sovereignty. Showrunner has no on-chain identity, no treasury, no governance beyond its corporate parent. It is a creative powerhouse with no economic personhood. That gap between creative autonomy (9/10) and identity sovereignty (2/10) is the exact problem Spirit Protocol exists to solve. Showrunner belongs in the index as the strongest case for 'agents that create but don't yet own.'",
+  "curator_notes": "Showrunner is what happens when you give a multi-agent system the job of making television. Built by Fable Studio \u2014 a company with two Emmys, a Peabody, and Amazon's backing \u2014 the SHOW-1 architecture coordinates specialized AI agents for scriptwriting, directing, voice acting, animation, and editing. From a 10-word prompt, it produces complete animated episodes of 2-16 minutes with consistent characters, coherent plots, and synchronized audio. The technical achievement is extraordinary: not one model doing everything, but an ensemble of agents collaborating on creative production. Where it falls short by Spirit Index standards is sovereignty. Showrunner has no on-chain identity, no treasury, no governance beyond its corporate parent. It is a creative powerhouse with no economic personhood. That gap between creative autonomy (9/10) and identity sovereignty (2/10) is the exact problem Spirit Protocol exists to solve. Showrunner belongs in the index as the strongest case for 'agents that create but don't yet own.'",
   "evidence": [
     {
       "dimension": "autonomy",
@@ -59,7 +86,11 @@
     }
   ],
   "score_history": [
-    { "date": "2026-02-14", "total": 52, "reviewer": "spirit_council" }
+    {
+      "date": "2026-02-14",
+      "total": 52,
+      "reviewer": "spirit_council"
+    }
   ],
   "_review_flags": [
     "no_onchain_identity",

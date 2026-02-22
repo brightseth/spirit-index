@@ -56,7 +56,7 @@ Please provide your assessment for each dimension (0-10) with brief rationale an
 - [ ] Citation 1:
 - [ ] Citation 2:
 
-### 6. Technical Distinctiveness (Score: /10)
+### 6. Technical Architecture (Score: /10)
 **Rationale:**
 **Evidence:**
 - [ ] Citation 1:

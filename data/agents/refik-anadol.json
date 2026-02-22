@@ -37,15 +37,15 @@
       "confidence": "high"
     },
     "economic_infrastructure": {
-      "value": 0,
-      "confidence": "low"
+      "value": 2,
+      "confidence": "medium"
     },
     "identity_sovereignty": {
-      "value": 0,
-      "confidence": "low"
+      "value": 1,
+      "confidence": "medium"
     }
   },
-  "total": 52,
+  "total": 55,
   "score_rationale": {
     "persistence": "Active since 2016 (Google AMI Residency). 9+ years of continuous production. Machine Hallucinations ongoing series with multiple iterations.",
     "autonomy": "AI systems trained on datasets generate continuously while 'idle and unsupervised.' GAN algorithms produce autonomous hallucinations. Human curation selects outputs. Higher autonomy than prompt-based systems.",
@@ -54,8 +54,8 @@
     "governance": "Refik Anadol Studio governance. Human artist as director of AI systems. No distributed governance.",
     "tech_distinctiveness": "Pioneered data aesthetics + AI art intersection. DCGAN, PGAN, StyleGAN on massive datasets (300M+ images for Nature Dreams). Scale of data distinguishes work.",
     "narrative_coherence": "'Machines can learn, remember, dream, hallucinate.' Clear philosophy: AI as 'extension of the mind.' Consistent across decade of work. Strong conceptual framework.",
-    "economic_infrastructure": "Not yet evaluated.",
-    "identity_sovereignty": "Not yet evaluated."
+    "economic_infrastructure": "Major auction revenue ($277K Christie's 2025). Museum commissions and corporate installations generate significant income. Some NFT sales on crypto platforms. Revenue primarily through traditional art market with some crypto presence. Refik Anadol Studio controls all economics. No on-chain treasury or autonomous revenue routing.",
+    "identity_sovereignty": "Some on-chain presence through NFT collections. Machine Hallucinations NFTs exist on Ethereum. Dataland venture has crypto angle. But identity is primarily centralized (refikanadol.com, social media, gallery representation). No agent-specific identity standard. The human artist, not the AI system, holds the identity."
   },
   "curator_notes": "Refik Anadol has become the most visible AI artist globally, with his 'Unsupervised' becoming the first generative AI work in MoMA's permanent collection after 3 million viewers. His Machine Hallucinations series, begun during the 2016 Google AMI Residency, trains GANs on massive datasets (300M+ nature images for 'Nature Dreams') to produce continuously evolving visualizations. Anadol was the first artist to use the Las Vegas Sphere. While Anadol is the human artist, his AI systems generate autonomously when 'idle and unsupervised,' blurring the line between tool and collaborator. His work defines the aesthetic of mainstream AI art.",
   "evidence": [

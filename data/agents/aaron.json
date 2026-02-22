@@ -38,24 +38,24 @@
     },
     "economic_infrastructure": {
       "value": 0,
-      "confidence": "low"
+      "confidence": "high"
     },
     "identity_sovereignty": {
       "value": 0,
-      "confidence": "low"
+      "confidence": "high"
     }
   },
   "total": 53,
   "score_rationale": {
     "persistence": "Operated continuously from 1973-2016 (43 years). One of the longest-running AI systems in history. Creator Harold Cohen maintained and evolved it until his death. Definitive 'Canonical' status.",
-    "autonomy": "Made independent decisions on composition and color palette within hand-coded rules. Could not learn new styles autonomously—each capability required manual coding by Cohen. Higher than 'Cyborg' due to execution independence.",
+    "autonomy": "Made independent decisions on composition and color palette within hand-coded rules. Could not learn new styles autonomously\u2014each capability required manual coding by Cohen. Higher than 'Cyborg' due to execution independence.",
     "cultural_impact": "Works in Victoria & Albert Museum, Stedelijk Museum, Tate Gallery. Whitney retrospective in 2024. Foundational reference for all subsequent AI art. Canonical status in art history.",
     "economic_reality": "Cohen sold AARON works throughout career, but no autonomous treasury or market-making. Artworks valuable but system itself doesn't transact. 'Surviving' tier.",
     "governance": "Single creator (Harold Cohen) made all decisions. No DAO, no voting, no external governance. Minimal governance score.",
     "tech_distinctiveness": "Pioneer of rule-based generative art. Custom turtle plotters, FORTRAN to Lisp evolution, fabric dye printing machines. Entirely original technical approach predating modern AI by decades.",
-    "narrative_coherence": "Consistent identity maintained for 43 years. Cohen carefully articulated AARON's nature—not claiming it was creative, but asking 'what exactly is it doing?' Strong philosophical framework.",
-    "economic_infrastructure": "Not yet evaluated.",
-    "identity_sovereignty": "Not yet evaluated."
+    "narrative_coherence": "Consistent identity maintained for 43 years. Cohen carefully articulated AARON's nature\u2014not claiming it was creative, but asking 'what exactly is it doing?' Strong philosophical framework.",
+    "economic_infrastructure": "Historical agent (1973-2016). No treasury, no revenue routing, no payment rails. Works sold by human creator Harold Cohen through traditional art market channels. Pre-dates crypto entirely.",
+    "identity_sovereignty": "No on-chain presence whatsoever. Identity exists only in museum archives, academic literature, and the Whitney retrospective. Pre-dates digital identity standards by decades."
   },
   "curator_notes": "AARON is the ur-text of autonomous art systems. Harold Cohen began developing AARON at UCSD in 1973, making it the first long-running AI art system in history. Unlike modern generative AI, AARON used hand-coded rules to autonomously compose and color images. Cohen compared their relationship to a Renaissance painter and studio assistant. The Whitney Museum's 2024 retrospective cemented AARON's place as the historical foundation for AI art discourse.",
   "evidence": [

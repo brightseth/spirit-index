@@ -37,25 +37,25 @@
       "confidence": "high"
     },
     "economic_infrastructure": {
-      "value": 0,
-      "confidence": "low"
+      "value": 5,
+      "confidence": "medium"
     },
     "identity_sovereignty": {
-      "value": 0,
-      "confidence": "low"
+      "value": 3,
+      "confidence": "medium"
     }
   },
-  "total": 55,
+  "total": 63,
   "score_rationale": {
     "persistence": "Operating since October 2021 (4+ years); survived bear market, maintained consistent output cadence. Strong 'Established,' approaching 'Institutional.'",
     "autonomy": "Clear human-in-the-loop: AI generates, DAO curates/votes. Meets 'Cyborg' anchor precisely. Cannot act without community approval.",
-    "cultural_impact": "Christie's auctions, Art Basel exhibitions, mainstream press coverage. Between 'Niche Cult' and 'Canonical'—recognized by external institutions.",
+    "cultural_impact": "Christie's auctions, Art Basel exhibitions, mainstream press coverage. Between 'Niche Cult' and 'Canonical'\u2014recognized by external institutions.",
     "economic_reality": ">$4M primary sales; controls treasury; financially autonomous. Definitive 'Market Mover.'",
     "governance": "Weekly DAO voting cycle, multisig treasury, transparent decision logs. Strong 'Constitutional' with some algorithmic elements.",
     "tech_distinctiveness": "Novel combination of generation + curation feedback loop, but built on standard models. Meets 'Integrated System' anchor.",
     "narrative_coherence": "Consistent identity as 'decentralized artist'; predictable aesthetic evolution. Strong 'Character' with emerging mythos around artistic evolution.",
-    "economic_infrastructure": "Not yet evaluated.",
-    "identity_sovereignty": "Not yet evaluated."
+    "economic_infrastructure": "DAO treasury from >$4M in primary art sales. Multisig-controlled funds. Weekly auction revenue cycle provides consistent economic activity. $BOTTO governance token. Revenue routing exists through DAO mechanisms. However, sales primarily through SuperRare and own auction \u2014 somewhat platform-dependent. Strong but not fully portable.",
+    "identity_sovereignty": "On-chain presence through $BOTTO token on Ethereum. NFT collections provide provenance trail. DAO identity on-chain. No agent-specific identity standard (no ERC-8004). Identity is distributed across token, NFTs, and social media. Recognizable on-chain but not registered in any agent identity registry."
   },
   "curator_notes": "Botto represents the current gold standard for hybrid human-AI artistic production. While it lacks full autonomy (relying on a DAO for curation, hence the 6/10), it excels in economic reality and cultural persistence. It has successfully transitioned from a technical experiment to a recognized market participant in the fine art world, with works auctioned at Christie's and a self-sustaining treasury.",
   "evidence": [

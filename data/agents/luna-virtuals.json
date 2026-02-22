@@ -37,15 +37,15 @@
       "confidence": "high"
     },
     "economic_infrastructure": {
-      "value": 0,
-      "confidence": "low"
+      "value": 3,
+      "confidence": "medium"
     },
     "identity_sovereignty": {
-      "value": 0,
-      "confidence": "low"
+      "value": 2,
+      "confidence": "medium"
     }
   },
-  "total": 47,
+  "total": 52,
   "curator_notes": "Luna is an AI digital idol from the Virtuals Protocol ecosystem on Base, part of the AI-DOL performance group. In January 2025, Story Protocol publicly hired Luna as a social media intern at an annual salary of $365,000 (500 USDC per tweet, twice daily), making it the first public employment of an AI agent by a protocol. Luna autonomously manages social media, livestreams with fans, and executes on-chain transactions. Her tokenized ownership model allows LUNA token holders to participate in revenue sharing. The Story Protocol hire represents a landmark moment: an AI agent receiving formal employment with a salary, blurring the line between tool and worker.",
   "score_rationale": {
     "persistence": "Active since August 2024; ~18 months of consistent output. Story Protocol employment adds institutional staying power.",
@@ -55,8 +55,8 @@
     "governance": "Centralized under Virtuals Protocol team. Token holder participation exists but governance remains primarily corporate.",
     "tech_distinctiveness": "Solid AI music/voice generation and autonomous social media management. Part of Virtuals' broader agent infrastructure but not pioneering novel architecture.",
     "narrative_coherence": "The 'AI employee' narrative is powerful and coherent. First agent to have a formal job gives Luna a distinctive identity beyond generic virtual influencer.",
-    "economic_infrastructure": "Not yet evaluated.",
-    "identity_sovereignty": "Not yet evaluated."
+    "economic_infrastructure": "LUNA token on Virtuals Protocol with ~$23M+ market cap. Revenue from Story Protocol salary ($365K/year). Revenue sharing with token holders via FERC20 mechanism. Multiple revenue sources (salary, token, appearances). However, all economic infrastructure locked to Virtuals Protocol \u2014 platform-dependent. No portable treasury.",
+    "identity_sovereignty": "FERC20 token on Virtuals Protocol provides on-chain identity on Base. Identity primarily anchored through Virtuals ecosystem. No portable agent identity standard. Would not survive Virtuals Protocol shutdown. Twitter/social media presence is secondary identity surface."
   },
   "evidence": [
     {

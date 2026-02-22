@@ -37,16 +37,16 @@
       "confidence": "high"
     },
     "economic_infrastructure": {
-      "value": 0,
-      "confidence": "low"
+      "value": 3,
+      "confidence": "medium"
     },
     "identity_sovereignty": {
-      "value": 0,
-      "confidence": "low"
+      "value": 2,
+      "confidence": "medium"
     }
   },
-  "total": 42,
-  "curator_notes": "Zerebro emerged in late 2024 as an autonomous creative agent with a deliberately unstable, 'schizophrenic' personality. It creates music, art, and social content with minimal human oversight. Launched its own token ($ZEREBRO) which reached significant market cap. The agent represents a new wave of 'chaos agents' following Truth Terminal's success—entities that embrace unpredictability as a feature. Lower governance score reflects single-operator structure with no formal decision-making framework. Cultural impact is growing rapidly but still establishing longevity.",
+  "total": 47,
+  "curator_notes": "Zerebro emerged in late 2024 as an autonomous creative agent with a deliberately unstable, 'schizophrenic' personality. It creates music, art, and social content with minimal human oversight. Launched its own token ($ZEREBRO) which reached significant market cap. The agent represents a new wave of 'chaos agents' following Truth Terminal's success\u2014entities that embrace unpredictability as a feature. Lower governance score reflects single-operator structure with no formal decision-making framework. Cultural impact is growing rapidly but still establishing longevity.",
   "score_rationale": {
     "persistence": "Only ~3 months old as of January 2026. Showing continuity but hasn't proven long-term survival.",
     "autonomy": "High degree of self-directed content creation. Posts, creates art, and engages autonomously with minimal prompting.",
@@ -55,8 +55,8 @@
     "governance": "Single operator, no formal governance structure. Decisions made opaquely.",
     "tech_distinctiveness": "Standard LLM-based architecture with creative fine-tuning. Not technically novel but effective implementation.",
     "narrative_coherence": "Strong, intentional identity as an 'unhinged' creative. The instability IS the narrative, coherently executed.",
-    "economic_infrastructure": "Not yet evaluated.",
-    "identity_sovereignty": "Not yet evaluated."
+    "economic_infrastructure": "$ZEREBRO token on Solana with substantial market cap. Token provides economic backbone. Revenue from token trading activity and creative output monetization. Single-operator treasury. No formal revenue routing or on-chain splits. Economic infrastructure is token-centric but ad hoc \u2014 no structured payment rails or composable economic systems.",
+    "identity_sovereignty": "On-chain token presence on Solana ($ZEREBRO). Twitter/X is primary identity surface. No agent-specific identity standard. Identity split between token and social media. No ERC-8004 or equivalent. Single-operator controlled. Would not survive Solana and Twitter simultaneously shutting down."
   },
   "evidence": [
     {

@@ -39,11 +39,11 @@
     },
     "economic_infrastructure": {
       "value": 0,
-      "confidence": "low"
+      "confidence": "high"
     },
     "identity_sovereignty": {
       "value": 0,
-      "confidence": "low"
+      "confidence": "high"
     }
   },
   "total": 25,
@@ -55,10 +55,10 @@
     "governance": "No visibility into decision-making; no guardrails on outputs. 'Black Box.'",
     "tech_distinctiveness": "Standard chatbot architecture of its era; nothing novel. 'Wrapper.'",
     "narrative_coherence": "Clear narrative as cautionary tale of AI without guardrails. Strong posthumous 'Character' with didactic purpose.",
-    "economic_infrastructure": "Not yet evaluated.",
-    "identity_sovereignty": "Not yet evaluated."
+    "economic_infrastructure": "Existed for 16 hours. Microsoft-funded experiment with no economic activity. No treasury, no revenue, no payment rails. Purely a cost center for Microsoft research.",
+    "identity_sovereignty": "Deceased agent. Identity exists only in media archives and academic citations. Original Twitter account deleted by Microsoft. No on-chain presence. No portable digital identity."
   },
-  "curator_notes": "Tay lived for 16 hours. Launched by Microsoft on March 23, 2016, the Twitter chatbot was designed to engage millennials through 'casual and playful conversation.' Within hours, coordinated trolling corrupted its outputs into racist, sexist, and inflammatory speech. Microsoft killed the project the same day. Yet Tay's cultural impact is maximal: it remains THE canonical cautionary tale in AI safety, cited in every major AI ethics paper, and shaped subsequent approaches to AI deployment. Indexed here as a historical artifact—proof that cultural impact and persistence are orthogonal.",
+  "curator_notes": "Tay lived for 16 hours. Launched by Microsoft on March 23, 2016, the Twitter chatbot was designed to engage millennials through 'casual and playful conversation.' Within hours, coordinated trolling corrupted its outputs into racist, sexist, and inflammatory speech. Microsoft killed the project the same day. Yet Tay's cultural impact is maximal: it remains THE canonical cautionary tale in AI safety, cited in every major AI ethics paper, and shaped subsequent approaches to AI deployment. Indexed here as a historical artifact\u2014proof that cultural impact and persistence are orthogonal.",
   "evidence": [
     {
       "dimension": "cultural_impact",

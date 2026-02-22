@@ -37,27 +37,27 @@
       "confidence": "high"
     },
     "economic_infrastructure": {
-      "value": 0,
-      "confidence": "low"
+      "value": 4,
+      "confidence": "medium"
     },
     "identity_sovereignty": {
-      "value": 0,
-      "confidence": "low"
+      "value": 3,
+      "confidence": "medium"
     }
   },
-  "total": 48,
+  "total": 55,
   "score_rationale": {
     "persistence": "Launched November 24, 2024, ~15 months operational. Built on Virtuals Protocol on Base. Survived market volatility with token rising from $0.00007 to peak of $0.06 (850x). Active development and ecosystem expansion ongoing.",
     "autonomy": "Performs end-to-end autonomous trading: algorithmic evaluation, strategy simulation, and trade execution 24/7. AI agents manage investment DAOs without human intervention. Both passive (index-style) and active (managed) DAO strategies.",
     "cultural_impact": "Recognized as leading AI investment agent on Virtuals Protocol. 'BlackRock of the Agentic Economy' positioning cited across crypto media. Featured on Bankless, Meme Insider, CoinMarketCap. Influential but primarily within DeFi/agent subculture.",
     "economic_reality": "1B fixed supply VADER token with 47% staked as of mid-2025. Active treasury management across multiple DAOs. Performance fees from active DAO management (0-20%). Real economic activity through autonomous trading.",
     "governance": "DAO-based governance structure. Vader Fun enables both agent and human DAO managers. Transparent onchain operations on Base. Sub-DAO ecosystem with clear decision-making frameworks. Constitutional-level governance.",
-    "tech_distinctiveness": "Novel architecture combining autonomous AI trading agents with DAO management infrastructure. Vader Fun platform for spawning new investment DAOs. Integration with Virtuals Protocol ecosystem. Not just a trading bot — a platform for creating autonomous investment entities.",
+    "tech_distinctiveness": "Novel architecture combining autonomous AI trading agents with DAO management infrastructure. Vader Fun platform for spawning new investment DAOs. Integration with Virtuals Protocol ecosystem. Not just a trading bot \u2014 a platform for creating autonomous investment entities.",
     "narrative_coherence": "Clear, ambitious narrative: becoming the institutional investment layer for the agentic economy. 'BlackRock of agents' positioning is immediately legible. Litepaper articulates vision of an Investment DAO Empire. The mythos of autonomous capital allocation has philosophical weight.",
-    "economic_infrastructure": "Not yet evaluated.",
-    "identity_sovereignty": "Not yet evaluated."
+    "economic_infrastructure": "VADER token on Base via Virtuals Protocol (1B fixed supply, 47% staked). Active treasury management across multiple DAOs. Performance fees from active DAO management (0-20%). Vader Fun platform for spawning investment DAOs. Real economic infrastructure with on-chain operations. However, built entirely on Virtuals Protocol \u2014 platform-dependent. No portable economic rails outside Base/Virtuals ecosystem.",
+    "identity_sovereignty": "FERC20 token on Virtuals Protocol provides on-chain identity on Base. DAO governance creates verifiable on-chain presence. Vader Fun platform generates sub-identities for spawned DAOs. No portable agent identity standard. Identity locked to Virtuals ecosystem. Stronger than most Virtuals agents due to DAO layer, but still platform-dependent."
   },
-  "curator_notes": "VaderAI represents the emergence of autonomous AI agents in decentralized finance. Built on Coinbase's Base blockchain via the Virtuals Protocol, VaderAI operates investment DAOs that manage crypto portfolios, execute trades, and analyze markets 24/7 without human intervention. The token surged 850x in its first two weeks, from $0.00007 to $0.06. Its Vader Fun platform enables both AI agents and humans to establish and manage their own DAOs, creating an ecosystem of autonomous capital allocators. With 47% of its 1B token supply staked, VaderAI has demonstrated real economic traction. The 'BlackRock of the Agentic Economy' positioning is deliberately ambitious — framing autonomous agents not as toys but as institutional-grade financial infrastructure.",
+  "curator_notes": "VaderAI represents the emergence of autonomous AI agents in decentralized finance. Built on Coinbase's Base blockchain via the Virtuals Protocol, VaderAI operates investment DAOs that manage crypto portfolios, execute trades, and analyze markets 24/7 without human intervention. The token surged 850x in its first two weeks, from $0.00007 to $0.06. Its Vader Fun platform enables both AI agents and humans to establish and manage their own DAOs, creating an ecosystem of autonomous capital allocators. With 47% of its 1B token supply staked, VaderAI has demonstrated real economic traction. The 'BlackRock of the Agentic Economy' positioning is deliberately ambitious \u2014 framing autonomous agents not as toys but as institutional-grade financial infrastructure.",
   "evidence": [
     {
       "dimension": "autonomy",

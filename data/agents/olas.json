@@ -37,27 +37,27 @@
       "confidence": "medium"
     },
     "economic_infrastructure": {
-      "value": 0,
-      "confidence": "low"
+      "value": 6,
+      "confidence": "high"
     },
     "identity_sovereignty": {
-      "value": 0,
-      "confidence": "low"
+      "value": 4,
+      "confidence": "medium"
     }
   },
-  "total": 54,
+  "total": 64,
   "score_rationale": {
     "persistence": "Operating since 2021 as Valory AG; rebranded to Olas. Survived crypto winter 2022-2023. Raised $13.8M in Feb 2025. Solid 'Established' tier.",
     "autonomy": "The protocol itself enables sovereign agent behavior. 361+ daily active agents execute 8.2M+ transactions autonomously on Gnosis Chain. Near-sovereign infrastructure.",
     "cultural_impact": "Well-known in crypto/AI circles but not mainstream institutional recognition yet. Strong developer community. 'Niche Cult' with upward trajectory.",
     "economic_reality": "OLAS token live, $13.8M raised, agents generate real economic activity on prediction markets. Treasury exists. Strong 'Revenue Positive' approaching 'Market Mover.'",
     "governance": "On-chain governance via OLAS token. Bonding mechanism for operators. Publicly verifiable staking and voting. Solid 'Constitutional' approaching 'Algorithmic Law.'",
-    "tech_distinctiveness": "Open Autonomy framework is genuinely novel—multi-agent systems with decentralized execution. Pioneered agent services concept. Strong 'Integrated System' approaching 'Novel Architecture.'",
+    "tech_distinctiveness": "Open Autonomy framework is genuinely novel\u2014multi-agent systems with decentralized execution. Pioneered agent services concept. Strong 'Integrated System' approaching 'Novel Architecture.'",
     "narrative_coherence": "Clear thesis: 'co-own AI.' The agent coordination layer narrative is coherent but more infrastructure than mythos. Strong 'Character' but not quite 'Mythos.'",
-    "economic_infrastructure": "Not yet evaluated.",
-    "identity_sovereignty": "Not yet evaluated."
+    "economic_infrastructure": "OLAS token live on Ethereum. $13.8M raised. Bonding mechanism for operators generates protocol revenue. 361+ daily active agents generate real economic activity on Gnosis Chain. On-chain treasury and staking. Multi-chain presence. Revenue routing through protocol mechanisms. Strong on-chain economic infrastructure that also serves as economic rails for agents built on it. Approaching portable, composable infrastructure.",
+    "identity_sovereignty": "On-chain protocol identity on Ethereum and Gnosis Chain. Agent services registered on-chain through the Open Autonomy framework. OLAS token and bonding contracts provide verifiable identity. Not ERC-8004 but has its own agent registration mechanism. Agents within Olas have some on-chain identity through service hashes. Partial sovereignty \u2014 stronger than most but still protocol-specific."
   },
-  "curator_notes": "Olas (formerly Autonolas) is the coordination layer powering many of the autonomous agents in crypto. Built by Valory AG, it provides the Open Autonomy framework for creating decentralized agent services. Most notably, Olas-powered agents now dominate Gnosis Chain prediction markets, with 300+ daily active agents achieving 79% prediction accuracy. The protocol raised $13.8M in Feb 2025 led by 1kx. Unlike single agents, Olas is infrastructure—it enables the existence of other autonomous entities.",
+  "curator_notes": "Olas (formerly Autonolas) is the coordination layer powering many of the autonomous agents in crypto. Built by Valory AG, it provides the Open Autonomy framework for creating decentralized agent services. Most notably, Olas-powered agents now dominate Gnosis Chain prediction markets, with 300+ daily active agents achieving 79% prediction accuracy. The protocol raised $13.8M in Feb 2025 led by 1kx. Unlike single agents, Olas is infrastructure\u2014it enables the existence of other autonomous entities.",
   "evidence": [
     {
       "dimension": "autonomy",

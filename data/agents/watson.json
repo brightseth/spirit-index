@@ -38,23 +38,23 @@
     },
     "economic_infrastructure": {
       "value": 0,
-      "confidence": "low"
+      "confidence": "high"
     },
     "identity_sovereignty": {
       "value": 0,
-      "confidence": "low"
+      "confidence": "high"
     }
   },
   "total": 42,
   "score_rationale": {
     "persistence": "Jeopardy victory 2011. Watson platform evolved through multiple iterations. Watson Health division sold 2022 for $1B. Core Watson services continue under IBM.",
-    "autonomy": "Autonomous question parsing and answer generation during Jeopardy. Not connected to internet—operated on internal knowledge base. Limited ongoing autonomy as enterprise tool.",
+    "autonomy": "Autonomous question parsing and answer generation during Jeopardy. Not connected to internet\u2014operated on internal knowledge base. Limited ongoing autonomy as enterprise tool.",
     "cultural_impact": "Landmark moment: First time Americans witnessed NLP AI live on television. Defeated Ken Jennings and Brad Rutter. Shaped public perception of AI capabilities. 'Watson' became shorthand for enterprise AI.",
     "economic_reality": "Significant IBM investment ($4B+ in Watson Health alone). Enterprise licensing and services. Watson Health sold for $1B (2022). Active commercial product but mixed financial results.",
     "governance": "IBM corporate governance. Research project became enterprise product. No external governance or community participation.",
     "tech_distinctiveness": "DeepQA architecture with hundreds of parallel algorithms. 200M pages of content, 4TB storage. 80 teraflops capacity. Innovative for 2011 but superseded by modern LLMs.",
-    "economic_infrastructure": "Not yet evaluated.",
-    "identity_sovereignty": "Not yet evaluated."
+    "economic_infrastructure": "Significant IBM investment ($4B+ in Watson Health). Enterprise licensing generates revenue. Watson Health sold for $1B. All economic activity through IBM corporate entity. No on-chain treasury, no crypto payment rails. Traditional enterprise software economics.",
+    "identity_sovereignty": "Identity exists on ibm.com/watson and enterprise deployments. Entirely corporate-owned. No on-chain presence. No identity token. Identity is brand/trademark controlled by IBM. Subsumed into IBM's broader product suite."
   },
   "curator_notes": "IBM Watson's 2011 Jeopardy! victory was a watershed moment for AI public awareness. The system defeated legendary champions Ken Jennings and Brad Rutter using natural language processing on 200 million pages of content (including Wikipedia) without internet access. Watson's DeepQA architecture, running on 90 servers with 2,880 processor cores, could perform 80 teraflops. While the subsequent Watson Health venture was commercially disappointing (sold for $1B vs $4B investment), Watson's cultural impact remains: for a decade, 'Watson' was synonymous with enterprise AI. Notably, co-creator David Ferrucci later co-authored the BRUTUS AI storyteller.",
   "evidence": [

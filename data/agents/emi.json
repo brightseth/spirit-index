@@ -38,11 +38,11 @@
     },
     "economic_infrastructure": {
       "value": 0,
-      "confidence": "low"
+      "confidence": "high"
     },
     "identity_sovereignty": {
       "value": 0,
-      "confidence": "low"
+      "confidence": "high"
     }
   },
   "total": 45,
@@ -54,10 +54,10 @@
     "governance": "Single creator (David Cope) made all decisions. Database deletion was unilateral. Minimal governance structure.",
     "tech_distinctiveness": "Novel three-stage process: Deconstruction, Signature identification, Compatibility recombination. 20,000 lines of Lisp. Pioneered style transfer before neural networks existed.",
     "narrative_coherence": "Identity as 'Emmy' established but complicated. Cope eventually deleted the database, citing devaluation concerns. Successor Emily Howell has distinct identity.",
-    "economic_infrastructure": "Not yet evaluated.",
-    "identity_sovereignty": "Not yet evaluated."
+    "economic_infrastructure": "Academic project from 1982-2005. Commercial recordings sold through traditional music publishing. Creator retained all economic agency. Database deliberately deleted in 2005. No treasury, no on-chain activity, no payment rails.",
+    "identity_sovereignty": "Historical/archived agent. Identity exists in academic literature, commercial recordings, and Wikipedia. No on-chain presence. Pre-dates all digital identity standards."
   },
-  "curator_notes": "EMI represents a watershed moment in AI creativity—the first system to consistently fool expert listeners in Turing-style tests. David Cope created EMI in 1982 while facing composer's block, and it went on to produce thousands of works including 5,000 Bach chorales. The famous Hofstadter demonstration where audiences couldn't distinguish EMI-Bach from real Bach challenged fundamental assumptions about human creativity. Cope's controversial 2005 deletion of EMI's database remains debated.",
+  "curator_notes": "EMI represents a watershed moment in AI creativity\u2014the first system to consistently fool expert listeners in Turing-style tests. David Cope created EMI in 1982 while facing composer's block, and it went on to produce thousands of works including 5,000 Bach chorales. The famous Hofstadter demonstration where audiences couldn't distinguish EMI-Bach from real Bach challenged fundamental assumptions about human creativity. Cope's controversial 2005 deletion of EMI's database remains debated.",
   "evidence": [
     {
       "dimension": "cultural_impact",

@@ -38,11 +38,11 @@
     },
     "economic_infrastructure": {
       "value": 0,
-      "confidence": "low"
+      "confidence": "high"
     },
     "identity_sovereignty": {
       "value": 0,
-      "confidence": "low"
+      "confidence": "high"
     }
   },
   "total": 40,
@@ -54,10 +54,10 @@
     "governance": "Community contributes to shared image database. All images publicly remixable by default. Proto-commons model.",
     "tech_distinctiveness": "Unique 'breeding' metaphor: images have genes, can be crossbred. StyleGAN + BigGAN infrastructure. Iterative evolutionary approach vs one-shot generation.",
     "narrative_coherence": "Clear 'collaborative breeding' concept. Biological evolution metaphor consistent throughout. Distinct identity from prompt-based generators.",
-    "economic_infrastructure": "Not yet evaluated.",
-    "identity_sovereignty": "Not yet evaluated."
+    "economic_infrastructure": "Freemium SaaS model with subscriptions. All revenue through traditional web payments. No on-chain treasury, no crypto payment rails. Small team (Morphogen collective) operating traditional web business.",
+    "identity_sovereignty": "Identity exists entirely on centralized platform (artbreeder.com). No on-chain presence. No NFT collections for identity. Community contributes to shared database but no portable digital identity."
   },
-  "curator_notes": "Artbreeder pioneered the collaborative approach to AI art generation. Founded by Joël Simon (Morphogen collective) in 2018 as Ganbreeder, it predates the DALL-E/Midjourney wave by years. The platform's unique 'breeding' metaphor treats images as organisms with genes (slider parameters) that can be crossbred with any public image. This creates evolutionary, community-driven image creation rather than prompt-response generation. While less commercially successful than later services, Artbreeder's influence on generative art methodology—iterative, collaborative, evolutionary—remains significant. Recent updates integrate SD-XL and ControlNet.",
+  "curator_notes": "Artbreeder pioneered the collaborative approach to AI art generation. Founded by Jo\u00ebl Simon (Morphogen collective) in 2018 as Ganbreeder, it predates the DALL-E/Midjourney wave by years. The platform's unique 'breeding' metaphor treats images as organisms with genes (slider parameters) that can be crossbred with any public image. This creates evolutionary, community-driven image creation rather than prompt-response generation. While less commercially successful than later services, Artbreeder's influence on generative art methodology\u2014iterative, collaborative, evolutionary\u2014remains significant. Recent updates integrate SD-XL and ControlNet.",
   "evidence": [
     {
       "dimension": "persistence",

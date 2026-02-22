@@ -12,17 +12,17 @@
  */
 
 import { createPublicClient, http, parseAbi, type Log } from "viem";
-import { baseSepolia } from "viem/chains";
+import { base } from "viem/chains";
 
 // ---------------------------------------------------------------------------
-// Contract addresses — update after deployment
+// Contract addresses — Base Mainnet (deployed Feb 20, 2026)
 // ---------------------------------------------------------------------------
 
-/** DailyPractice contract on Base Sepolia */
-export const DAILY_PRACTICE_ADDRESS = "" as `0x${string}`;
+/** DailyPractice contract on Base Mainnet — deployed Feb 20, 2026 */
+export const DAILY_PRACTICE_ADDRESS = "0x8d8cd4a00695E3775268d446e8ea632305869b5F" as `0x${string}`;
 
-/** PracticeCuration contract on Base Sepolia */
-export const PRACTICE_CURATION_ADDRESS = "" as `0x${string}`;
+/** PracticeCuration contract on Base Mainnet — deployed Feb 20, 2026 */
+export const PRACTICE_CURATION_ADDRESS = "0x6f9013F3821d24E8aEE0717F80b7644304A7fE4F" as `0x${string}`;
 
 // ---------------------------------------------------------------------------
 // ABIs (event signatures only — minimal for log parsing)
@@ -48,8 +48,8 @@ const curationAbi = parseAbi([
 // ---------------------------------------------------------------------------
 
 const client = createPublicClient({
-  chain: baseSepolia,
-  transport: http("https://sepolia.base.org"),
+  chain: base,
+  transport: http("https://mainnet.base.org"),
 });
 
 // ---------------------------------------------------------------------------

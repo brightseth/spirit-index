@@ -38,11 +38,11 @@
     },
     "economic_infrastructure": {
       "value": 0,
-      "confidence": "low"
+      "confidence": "high"
     },
     "identity_sovereignty": {
       "value": 0,
-      "confidence": "low"
+      "confidence": "high"
     }
   },
   "total": 43,
@@ -53,10 +53,10 @@
     "economic_reality": "Research project with no commercial deployment or economic activity. Open-source code release but no monetization.",
     "governance": "DeepMind corporate research governance. No external governance or community participation.",
     "tech_distinctiveness": "Revolutionary: multi-agent reinforcement learning + imitation learning combination. Mastered all three StarCraft races. 'Exploiter agents' methodology to eliminate weaknesses. Imperfect information handling in real-time environment.",
-    "economic_infrastructure": "Not yet evaluated.",
-    "identity_sovereignty": "Not yet evaluated."
+    "economic_infrastructure": "Research project with no commercial deployment, no revenue, no treasury. Open-source code release but no economic infrastructure. DeepMind bore all costs internally.",
+    "identity_sovereignty": "Identity exists only in DeepMind research papers, blog posts, and Wikipedia. No on-chain presence. No identity token. Archived research artifact."
   },
-  "curator_notes": "AlphaStar represents a landmark in AI capability—the first system to reach Grandmaster rank (top 0.2%) in any esport. DeepMind's approach combined imitation learning from human games with multi-agent self-play, including novel 'exploiter agents' designed to find and eliminate weaknesses in main agents. AlphaStar mastered all three StarCraft II races (Protoss, Terran, Zerg) while playing with human-comparable interface constraints. The system's success in handling imperfect information, real-time decisions, and long-term strategy in a complex environment has implications for robotics, autonomous vehicles, and real-world AI systems.",
+  "curator_notes": "AlphaStar represents a landmark in AI capability\u2014the first system to reach Grandmaster rank (top 0.2%) in any esport. DeepMind's approach combined imitation learning from human games with multi-agent self-play, including novel 'exploiter agents' designed to find and eliminate weaknesses in main agents. AlphaStar mastered all three StarCraft II races (Protoss, Terran, Zerg) while playing with human-comparable interface constraints. The system's success in handling imperfect information, real-time decisions, and long-term strategy in a complex environment has implications for robotics, autonomous vehicles, and real-world AI systems.",
   "evidence": [
     {
       "dimension": "tech_distinctiveness",
