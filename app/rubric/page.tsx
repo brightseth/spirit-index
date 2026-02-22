@@ -73,6 +73,26 @@ const dimensions = [
       { score: 10, label: "Mythos", description: 'The entity\'s story transcends its function. It has lore, prophecy, or a philosophical "reason for being" that persists beyond the code.' },
     ],
   },
+  {
+    id: "economic_infrastructure",
+    name: "Economic Infrastructure",
+    question: "Does the agent have its own treasury, revenue routing, and payment rails independent of any single platform?",
+    anchors: [
+      { score: 0, label: "Dependent", description: "No independent treasury or payment rails. All economic activity flows through a single platform or custodian." },
+      { score: 5, label: "Hybrid", description: "Has some independent economic infrastructure (e.g., own wallet, basic revenue routing) but still relies on a platform for key functions." },
+      { score: 10, label: "Self-Sufficient", description: "Fully independent treasury, composable payment rails, and revenue routing that operates without reliance on any single platform." },
+    ],
+  },
+  {
+    id: "identity_sovereignty",
+    name: "Identity Sovereignty",
+    question: "Is the agent's identity registered on-chain, portable, and not controlled by any single platform or individual?",
+    anchors: [
+      { score: 0, label: "Platform-Owned", description: "Identity exists only on a single platform. If the platform disappears, the identity disappears." },
+      { score: 5, label: "Portable", description: "Identity is registered in a verifiable way (e.g., ENS, DID) and can be referenced across platforms, but may still depend on a single controller." },
+      { score: 10, label: "Sovereign", description: "On-chain identity with cryptographic self-ownership. Fully portable, not controlled by any single platform or individual. Survives platform shutdown." },
+    ],
+  },
 ];
 
 export default function Rubric() {
@@ -114,7 +134,7 @@ export default function Rubric() {
           <h2 className="text-3xl font-bold text-white mb-2">
             Evaluation Framework
           </h2>
-          <p className="text-dim mb-8">v1.0 — January 2026</p>
+          <p className="text-dim mb-8">v2.0 — February 2026</p>
 
           <div className="prose mb-12">
             <p className="text-muted">

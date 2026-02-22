@@ -1,11 +1,12 @@
 /**
  * Spirit Index Type Definitions
- * v1.0 - January 2026
+ * v1.1 - February 2026
  */
 
 // Entity status classifications
 export type EntityStatus =
   | "Active"
+  | "Archived"
   | "Dormant"
   | "Deceased"
   | "Subsumed"
@@ -13,19 +14,33 @@ export type EntityStatus =
 
 // Category classifications (descriptive, not scored)
 export type EntityCategory =
-  | "Autonomous Artist"
+  | "Agent Infrastructure"
+  | "Agent-Native Social"
+  | "AI Companion"
   | "Archive Symbient"
-  | "Sovereign Artist"
+  | "Autonomous Artist"
+  | "Autonomous Composer"
+  | "Autonomous Finance"
+  | "Autonomous Infrastructure"
+  | "Autonomous Sculpture"
+  | "Autonomous Writer"
   | "Chaos Agent"
+  | "Commercial Agent"
+  | "Conversational Agent"
+  | "Conversational AI"
+  | "DAO / Fund"
   | "Ecological DAO"
   | "Game Agent"
-  | "Token Agent"
+  | "Gaming AI"
+  | "General Agent"
+  | "General-Purpose Agent"
+  | "Generative Platform"
   | "Infrastructure Entity"
-  | "Commercial Agent"
-  | "DAO / Fund"
-  | "Autonomous Sculpture"
-  | "Conversational Agent"
-  | "AI Companion";
+  | "Question Answering System"
+  | "Social Robot"
+  | "Sovereign Agent"
+  | "Sovereign Artist"
+  | "Token Agent";
 
 // Archival status for entities that don't meet threshold but have historical significance
 export type ArchivalStatus = "historical_test_case" | "canonical_failure" | "cultural_artifact";

@@ -43,7 +43,7 @@ export default async function Home() {
         <IndexTable agents={agents} />
 
         <p className="text-muted text-sm mt-8">
-          Click column headers to sort. Last updated: January 2026.
+          Click column headers to sort. Last updated: February 2026.
         </p>
       </main>
 

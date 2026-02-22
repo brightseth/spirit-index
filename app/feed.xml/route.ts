@@ -29,6 +29,8 @@ export async function GET() {
         `Governance: ${agent.scores.governance.value}`,
         `Tech: ${agent.scores.tech_distinctiveness.value}`,
         `Narrative: ${agent.scores.narrative_coherence.value}`,
+        `Econ Infra: ${agent.scores.economic_infrastructure.value}`,
+        `Identity: ${agent.scores.identity_sovereignty.value}`,
       ].join(' | ');
 
       return `

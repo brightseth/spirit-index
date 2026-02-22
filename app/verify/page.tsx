@@ -52,7 +52,7 @@ export default function VerifyPage() {
   useEffect(() => {
     fetch("/api/agents")
       .then((res) => res.json())
-      .then((data) => setAgents(data.agents || []))
+      .then((data) => setAgents(data.data || []))
       .catch(() => setError("Failed to load agents"));
   }, []);
 
@@ -499,7 +499,7 @@ export default function VerifyPage() {
 {`{
   "agentId": "${selectedAgent.id}",
   "primaryWallet": "${identity.primaryWallet}",
-  "spiritIndexUrl": "https://spiritindex.org/agents/${selectedAgent.id}"
+  "spiritIndexUrl": "https://spiritindex.org/${selectedAgent.id}"
 }`}
                       </code>
                     </pre>
@@ -548,7 +548,7 @@ export default function VerifyPage() {
                   <div>
                     <p className="text-dim text-xs uppercase tracking-wider mb-2">Required Link</p>
                     <code className="text-green text-sm">
-                      https://spiritindex.org/agents/{selectedAgent.id}
+                      https://spiritindex.org/{selectedAgent.id}
                     </code>
                   </div>
 
@@ -564,7 +564,7 @@ export default function VerifyPage() {
                     <h4 className="text-white text-sm font-bold mb-3">Example HTML</h4>
                     <pre className="p-4 bg-spirit-deep-blue rounded text-xs overflow-x-auto">
                       <code className="text-green">
-{`<a href="https://spiritindex.org/agents/${selectedAgent.id}">
+{`<a href="https://spiritindex.org/${selectedAgent.id}">
   Verified on Spirit Index
 </a>`}
                       </code>
@@ -634,7 +634,7 @@ export default function VerifyPage() {
 
                 <div className="flex gap-4 mt-6">
                   <Link
-                    href={`/agents/${selectedAgent.id}`}
+                    href={`/${selectedAgent.id}`}
                     className="px-6 py-2 bg-green text-black font-bold rounded hover:opacity-90 transition-opacity"
                   >
                     View Dossier →

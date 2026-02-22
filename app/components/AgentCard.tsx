@@ -68,6 +68,8 @@ function MiniScorePreview({ scores }: MiniScorePreviewProps) {
     { key: 'governance', label: 'G' },
     { key: 'tech_distinctiveness', label: 'T' },
     { key: 'narrative_coherence', label: 'N' },
+    { key: 'economic_infrastructure', label: 'EI' },
+    { key: 'identity_sovereignty', label: 'IS' },
   ] as const;
 
   return (

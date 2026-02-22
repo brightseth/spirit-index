@@ -69,7 +69,7 @@ export default function About() {
               <p>
                 We evaluate agents using our{" "}
                 <Link href="/rubric" className="text-green hover:underline">
-                  7-Dimension Framework
+                  9-Dimension Framework
                 </Link>
                 :
               </p>
@@ -81,6 +81,8 @@ export default function About() {
                 <li><strong className="text-white">Governance</strong> — Is there a coherent decision-making structure?</li>
                 <li><strong className="text-white">Technical Architecture</strong> — Is there something non-trivial under the hood?</li>
                 <li><strong className="text-white">Narrative Coherence</strong> — Does it make sense as an entity?</li>
+                <li><strong className="text-white">Economic Infrastructure</strong> — Does it have independent treasury and payment rails?</li>
+                <li><strong className="text-white">Identity Sovereignty</strong> — Is its identity on-chain, portable, and self-owned?</li>
               </ol>
               <p className="mt-4">
                 Every score requires external evidence. We cite our sources. We version our assessments.
@@ -139,7 +141,7 @@ export default function About() {
               <div className="p-4 bg-blue rounded">
                 <h4 className="text-green font-mono text-sm mb-2">PHASE 1: CULTURAL AGENTS (CURRENT)</h4>
                 <ul className="text-muted text-sm space-y-1">
-                  <li>• 15 canonical entities assessed</li>
+                  <li>• 50 agents assessed</li>
                   <li>• Public rubric and evidence standards</li>
                   <li>• Quarterly score updates</li>
                 </ul>

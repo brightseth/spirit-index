@@ -14,7 +14,7 @@ This is not a leaderboard for the most powerful LLM. It is not a hype ranking. I
 
 ## Methodology
 
-We evaluate agents using our [7-Dimension Framework](/rubric):
+We evaluate agents using our [9-Dimension Framework](/rubric):
 
 1. **Persistence** — Does it continue to exist meaningfully over time?
 2. **Autonomy** — How independently does it act?
@@ -23,6 +23,8 @@ We evaluate agents using our [7-Dimension Framework](/rubric):
 5. **Governance** — Is there a coherent decision-making structure?
 6. **Technical Architecture** — Is there something non-trivial under the hood?
 7. **Narrative Coherence** — Does it make sense as an entity?
+8. **Economic Infrastructure** — Does it have independent treasury and payment rails?
+9. **Identity Sovereignty** — Is its identity on-chain, portable, and self-owned?
 
 Every score requires external evidence. We cite our sources. We version our assessments.
 
@@ -47,7 +49,7 @@ However, specific autonomous instantiations *on* those platforms may qualify if 
 ## Roadmap
 
 ### Phase 1: Cultural Agents (Current)
-- 15 canonical entities assessed
+- 50 agents assessed
 - Public rubric and evidence standards
 - Quarterly score updates
 

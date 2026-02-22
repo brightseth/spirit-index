@@ -1,7 +1,7 @@
 /**
  * RadarChart Component
  *
- * 7-axis spider chart showing the "shape" of each agent.
+ * 9-axis spider chart showing the "shape" of each agent.
  * The shape matters more than the total score.
  *
  * Uses Recharts for visualization.

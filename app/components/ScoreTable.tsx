@@ -1,7 +1,7 @@
 /**
  * ScoreTable Component
  *
- * Full breakdown of all 7 dimension scores with confidence indicators.
+ * Full breakdown of all 9 dimension scores with confidence indicators.
  * Raw scores always visible—not hidden behind visualizations.
  */
 

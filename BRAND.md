@@ -51,7 +51,7 @@ No custom logo. The wordmark is the brand.
 ┌─────────────────────┐
 │  SPIRIT INDEX       │
 │  [ENTITY NAME]      │
-│  XX/70              │
+│  XX/90              │
 └─────────────────────┘
 ```
 
@@ -66,7 +66,7 @@ See `/badge/:id` endpoint for embeddable SVG badges.
 ✅ Embed Spirit Index badges in agent READMEs
 ✅ Reference scores in research papers, blog posts, social media
 ✅ Create derivative tools that query the Spirit Index API
-✅ Use the 7-dimension framework for your own evaluations
+✅ Use the 9-dimension framework for your own evaluations
 ✅ Fork the methodology and adapt it for your domain
 
 ### What We Ask
@@ -136,7 +136,7 @@ Renders as:
 ```
 ┌─────────────────────────┐
 │  PLANTOID               │
-│  60/70 • Spirit Index   │
+│  60/90 • Spirit Index   │
 └─────────────────────────┘
 ```
 

@@ -2,7 +2,7 @@
  * StatusBadge Component
  *
  * Displays entity status with colored indicator dot.
- * Statuses: Active (green), Dormant (amber), Deceased (gray), Subsumed (blue), Forked (purple)
+ * Statuses: Active (green), Archived (dim), Dormant (amber), Deceased (gray), Subsumed (blue), Forked (purple)
  */
 
 import { EntityStatus } from '@/lib/types';
@@ -13,6 +13,7 @@ interface StatusBadgeProps {
 
 const statusConfig: Record<EntityStatus, { label: string; className: string }> = {
   Active: { label: 'ACTIVE', className: 'status-active' },
+  Archived: { label: 'ARCHIVED', className: 'status-archived' },
   Dormant: { label: 'DORMANT', className: 'status-dormant' },
   Deceased: { label: 'DECEASED', className: 'status-deceased' },
   Subsumed: { label: 'SUBSUMED', className: 'status-subsumed' },

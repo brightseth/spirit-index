@@ -31,7 +31,8 @@ export async function GET(request: NextRequest) {
     const validSortFields = [
       'total', 'persistence', 'autonomy', 'cultural_impact',
       'economic_reality', 'governance', 'tech_distinctiveness',
-      'narrative_coherence', 'name', 'inception_date'
+      'narrative_coherence', 'economic_infrastructure',
+      'identity_sovereignty', 'name', 'inception_date'
     ];
 
     if (validSortFields.includes(sort)) {

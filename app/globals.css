@@ -33,6 +33,7 @@
   --status-active: #00FF00;
   --status-dormant: #F59E0B;
   --status-deceased: #6B7280;
+  --status-archived: #9CA3AF;
   --status-subsumed: #3B82F6;
   --status-forked: #A855F7;
 
@@ -146,6 +147,7 @@ body {
 }
 
 .status-active .status-dot { background-color: var(--status-active); }
+.status-archived .status-dot { background-color: var(--status-archived); }
 .status-dormant .status-dot { background-color: var(--status-dormant); }
 .status-deceased .status-dot { background-color: var(--status-deceased); }
 .status-subsumed .status-dot { background-color: var(--status-subsumed); }

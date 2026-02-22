@@ -97,7 +97,7 @@ function CompareContent() {
       <main className="container section">
         <h2 className="text-3xl font-bold text-white mb-2">Compare Entities</h2>
         <p className="text-muted mb-8">
-          Select up to 4 entities to compare side-by-side across all 7
+          Select up to 4 entities to compare side-by-side across all 9
           dimensions.
         </p>
 

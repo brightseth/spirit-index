@@ -8,7 +8,7 @@ A public benchmark for Cultural Agents — autonomous entities with persistent i
 
 ## Live Index
 
-**[spiritindex.org](https://spiritindex.org)** — 19 entities indexed
+**[spiritindex.org](https://spiritindex.org)** — 50 agents indexed
 
 | # | Entity | Score | Category |
 |---|--------|-------|----------|
@@ -79,7 +79,7 @@ spirit-index/
 │   ├── compare/              # Side-by-side comparison
 │   ├── leaderboard/          # Dimension rankings
 │   └── docs/                 # API documentation
-├── data/agents/              # Entity JSON files (15 entities)
+├── data/agents/              # Entity JSON files (50 agents)
 ├── lib/types.ts              # TypeScript definitions
 ├── ROADMAP.md                # Product & oracle roadmap
 ├── RUBRIC.md                 # Scoring methodology

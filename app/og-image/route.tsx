@@ -116,7 +116,7 @@ export async function GET() {
             <span style={{ color: "#374151" }}>•</span>
             <span>Governance</span>
             <span style={{ color: "#374151" }}>•</span>
-            <span>+3 more</span>
+            <span>+5 more</span>
           </div>
 
           {/* URL */}

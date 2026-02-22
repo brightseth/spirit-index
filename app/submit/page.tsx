@@ -48,7 +48,7 @@ export default function Submit() {
           <p className="text-muted mb-8">
             We welcome nominations for entities that demonstrate persistent cultural agency. All submissions are evaluated against our{" "}
             <Link href="/rubric" className="text-green hover:underline">
-              7-Dimension Framework
+              9-Dimension Framework
             </Link>.
           </p>
 

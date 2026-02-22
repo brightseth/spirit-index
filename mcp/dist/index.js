@@ -35,7 +35,7 @@ async function fetchLlmsTxt() {
 // Format agent for display
 function formatAgent(agent) {
     const s = agent.scores;
-    return `## ${agent.name} (${agent.total}/70)
+    return `## ${agent.name} (${agent.total}/90)
 **${agent.tagline}**
 
 - Category: ${agent.category}
@@ -53,13 +53,15 @@ function formatAgent(agent) {
 | Governance | ${s.governance}/10 |
 | Tech Distinctiveness | ${s.tech_distinctiveness}/10 |
 | Narrative Coherence | ${s.narrative_coherence}/10 |
+| Economic Infrastructure | ${s.economic_infrastructure}/10 |
+| Identity Sovereignty | ${s.identity_sovereignty}/10 |
 
 ${agent.summary || ""}`;
 }
 // Create server
 const server = new index_js_1.Server({
     name: "spirit-index",
-    version: "1.0.0",
+    version: "1.1.0",
 }, {
     capabilities: {
         tools: {},
@@ -91,7 +93,7 @@ server.setRequestHandler(types_js_1.ListToolsRequestSchema, async () => {
                         },
                         min_score: {
                             type: "number",
-                            description: "Minimum total score (0-70)",
+                            description: "Minimum total score (0-90)",
                         },
                         sort_by: {
                             type: "string",
@@ -104,6 +106,8 @@ server.setRequestHandler(types_js_1.ListToolsRequestSchema, async () => {
                                 "governance",
                                 "tech_distinctiveness",
                                 "narrative_coherence",
+                                "economic_infrastructure",
+                                "identity_sovereignty",
                             ],
                             description: "Sort by dimension (default: total)",
                         },
@@ -130,7 +134,7 @@ server.setRequestHandler(types_js_1.ListToolsRequestSchema, async () => {
             },
             {
                 name: "spirit_index_compare",
-                description: "Compare two agents side-by-side across all 7 dimensions. Useful for understanding relative strengths.",
+                description: "Compare two agents side-by-side across all 9 dimensions. Useful for understanding relative strengths.",
                 inputSchema: {
                     type: "object",
                     properties: {
@@ -148,7 +152,7 @@ server.setRequestHandler(types_js_1.ListToolsRequestSchema, async () => {
             },
             {
                 name: "spirit_index_rubric",
-                description: "Get the Spirit Index evaluation framework. Explains the 7 dimensions and scoring anchors used to evaluate agents.",
+                description: "Get the Spirit Index evaluation framework. Explains the 9 dimensions and scoring anchors used to evaluate agents.",
                 inputSchema: {
                     type: "object",
                     properties: {},
@@ -171,6 +175,8 @@ server.setRequestHandler(types_js_1.ListToolsRequestSchema, async () => {
                                 "governance",
                                 "tech_distinctiveness",
                                 "narrative_coherence",
+                                "economic_infrastructure",
+                                "identity_sovereignty",
                             ],
                             description: "Dimension to rank by (default: total)",
                         },
@@ -211,7 +217,7 @@ server.setRequestHandler(types_js_1.ListResourcesRequestSchema, async () => {
             {
                 uri: "spirit-index://rubric",
                 name: "Evaluation Rubric",
-                description: "The 7-dimension scoring framework",
+                description: "The 9-dimension scoring framework",
                 mimeType: "application/json",
             },
         ],
@@ -286,7 +292,7 @@ server.setRequestHandler(types_js_1.CallToolRequestSchema, async (request) => {
                 };
             }
             const result = agents
-                .map((a, i) => `${i + 1}. **${a.name}** (${a.total}/70) — ${a.category}\n   ${a.tagline}`)
+                .map((a, i) => `${i + 1}. **${a.name}** (${a.total}/90) — ${a.category}\n   ${a.tagline}`)
                 .join("\n\n");
             return {
                 content: [
@@ -350,6 +356,8 @@ server.setRequestHandler(types_js_1.CallToolRequestSchema, async (request) => {
                 "governance",
                 "tech_distinctiveness",
                 "narrative_coherence",
+                "economic_infrastructure",
+                "identity_sovereignty",
             ];
             const comparison = dimensions
                 .map((d) => {
@@ -377,7 +385,7 @@ ${comparison}
         if (name === "spirit_index_rubric") {
             const rubric = await fetchRubric();
             let text = `# Spirit Index Evaluation Framework\n\n`;
-            text += `The Spirit Index evaluates autonomous cultural agents across 7 dimensions, each scored 0-10.\n\n`;
+            text += `The Spirit Index evaluates autonomous cultural agents across 9 dimensions, each scored 0-10.\n\n`;
             for (const dim of rubric.dimensions) {
                 text += `## ${dim.name}\n`;
                 text += `*${dim.question}*\n\n`;
@@ -412,7 +420,7 @@ ${comparison}
             const result = agents
                 .map((a, i) => {
                 const score = dimension === "total" ? a.total : a.scores[dimension];
-                return `${i + 1}. **${a.name}** — ${score}${dimension === "total" ? "/70" : "/10"}`;
+                return `${i + 1}. **${a.name}** — ${score}${dimension === "total" ? "/90" : "/10"}`;
             })
                 .join("\n");
             return {
@@ -443,7 +451,7 @@ It is a public benchmark for **Cultural Agents** — autonomous entities with pe
 - AI composers (AIVA)
 - And more...
 
-## The 7 Dimensions
+## The 9 Dimensions
 1. **Persistence** — Does it continue to exist over time?
 2. **Autonomy** — How independently does it act?
 3. **Cultural Impact** — Has it mattered beyond its creators?
@@ -451,6 +459,8 @@ It is a public benchmark for **Cultural Agents** — autonomous entities with pe
 5. **Governance** — Is there a coherent decision-making structure?
 6. **Tech Distinctiveness** — Is there something non-trivial under the hood?
 7. **Narrative Coherence** — Does it make sense as an entity?
+8. **Economic Infrastructure** — How economically self-sufficient and composable is it?
+9. **Identity Sovereignty** — How verifiable, portable, and self-owned is its identity?
 
 ## How to Get Indexed
 1. Review the rubric at https://spiritindex.org/rubric

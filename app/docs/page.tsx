@@ -91,6 +91,8 @@ export default function APIDocs() {
                       <code className="text-white">governance</code>,{" "}
                       <code className="text-white">tech_distinctiveness</code>,{" "}
                       <code className="text-white">narrative_coherence</code>,{" "}
+                      <code className="text-white">economic_infrastructure</code>,{" "}
+                      <code className="text-white">identity_sovereignty</code>,{" "}
                       <code className="text-white">name</code>,{" "}
                       <code className="text-white">inception_date</code>
                     </td>
@@ -101,8 +103,10 @@ export default function APIDocs() {
                     <td className="py-2 text-muted">
                       Filter by status:{" "}
                       <code className="text-white">Active</code>,{" "}
+                      <code className="text-white">Archived</code>,{" "}
                       <code className="text-white">Dormant</code>,{" "}
-                      <code className="text-white">Deceased</code>
+                      <code className="text-white">Deceased</code>,{" "}
+                      <code className="text-white">Subsumed</code>
                     </td>
                   </tr>
                   <tr className="border-b border-subtle/50">
@@ -226,7 +230,7 @@ export default function APIDocs() {
                 status
               </li>
               <li>
-                <code className="text-green">spirit:dimensions</code> — All 7
+                <code className="text-green">spirit:dimensions</code> — All 9
                 dimension scores
               </li>
             </ul>

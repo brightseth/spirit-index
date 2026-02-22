@@ -26,6 +26,8 @@ interface Agent {
     governance: number;
     tech_distinctiveness: number;
     narrative_coherence: number;
+    economic_infrastructure: number;
+    identity_sovereignty: number;
   };
   total: number;
   website: string;
@@ -79,6 +81,8 @@ function formatAgent(agent: Agent): string {
 | Governance | ${s.governance}/10 |
 | Tech Distinctiveness | ${s.tech_distinctiveness}/10 |
 | Narrative Coherence | ${s.narrative_coherence}/10 |
+| Economic Infrastructure | ${s.economic_infrastructure}/10 |
+| Identity Sovereignty | ${s.identity_sovereignty}/10 |
 
 ${agent.summary || ""}`;
 }
@@ -87,7 +91,7 @@ ${agent.summary || ""}`;
 const server = new Server(
   {
     name: "spirit-index",
-    version: "1.0.0",
+    version: "1.1.0",
   },
   {
     capabilities: {
@@ -137,6 +141,8 @@ server.setRequestHandler(ListToolsRequestSchema, async () => {
                 "governance",
                 "tech_distinctiveness",
                 "narrative_coherence",
+                "economic_infrastructure",
+                "identity_sovereignty",
               ],
               description: "Sort by dimension (default: total)",
             },
@@ -209,6 +215,8 @@ server.setRequestHandler(ListToolsRequestSchema, async () => {
                 "governance",
                 "tech_distinctiveness",
                 "narrative_coherence",
+                "economic_infrastructure",
+                "identity_sovereignty",
               ],
               description: "Dimension to rank by (default: total)",
             },
@@ -251,7 +259,7 @@ server.setRequestHandler(ListResourcesRequestSchema, async () => {
       {
         uri: "spirit-index://rubric",
         name: "Evaluation Rubric",
-        description: "The 7-dimension scoring framework",
+        description: "The 9-dimension scoring framework",
         mimeType: "application/json",
       },
     ],
@@ -419,6 +427,8 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
         "governance",
         "tech_distinctiveness",
         "narrative_coherence",
+        "economic_infrastructure",
+        "identity_sovereignty",
       ];
 
       const comparison = dimensions
