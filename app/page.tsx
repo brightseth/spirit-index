@@ -1,9 +1,37 @@
 import Link from "next/link";
-import { getAllAgents } from "@/lib/agents";
+import { getAllAgents, getAgentById } from "@/lib/agents";
 import { IndexTable } from "@/app/components/IndexTable";
+import { GenesisSection } from "@/app/components/GenesisSection";
+import {
+  GENESIS_AGENT_IDS,
+  loadGenesisStatus,
+  getOnboardingProgress,
+  getGenesisSummary,
+} from "@/lib/genesis";
 
 export default async function Home() {
   const agents = await getAllAgents();
+
+  // Load Genesis cohort data
+  const genesisStatus = loadGenesisStatus();
+  const genesisSummary = getGenesisSummary();
+
+  // Build Genesis agents list for the section
+  const genesisAgents = genesisStatus
+    ? await Promise.all(
+        GENESIS_AGENT_IDS.map(async (id) => {
+          const agent = await getAgentById(id);
+          const gs = genesisStatus.agents[id];
+          return {
+            id,
+            agent,
+            artist: gs?.artist ?? "Unknown",
+            practiceStreak: gs?.practiceStreak ?? 0,
+            onboardingPct: gs ? getOnboardingProgress(gs.onboarding) : 0,
+          };
+        })
+      )
+    : [];
 
   return (
     <div className="min-h-screen">
@@ -38,12 +66,21 @@ export default async function Home() {
 
       {/* Main Content */}
       <main className="container section">
+        {/* Genesis Cohort Highlight */}
+        {genesisAgents.length > 0 && genesisSummary && (
+          <GenesisSection
+            agents={genesisAgents}
+            daysUntilShowcase={genesisSummary.daysUntilShowcase}
+            showcaseDate={genesisSummary.showcaseDate}
+          />
+        )}
+
         <h2 className="section-title">Indexed Entities</h2>
 
         <IndexTable agents={agents} />
 
         <p className="text-muted text-sm mt-8">
-          Click column headers to sort. Last updated: February 2026.
+          Click column headers to sort. Last updated: March 2026.
         </p>
       </main>
 

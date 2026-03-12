@@ -6,6 +6,8 @@ import { DIMENSIONS, DimensionKey, Agent, ScoreRationale } from "@/lib/types";
 import { RadarChart } from "@/app/components/RadarChart";
 import { ScoreHistoryChart } from "@/app/components/ScoreHistoryChart";
 import { checkRegistration, RegistrationStatus } from "@/lib/chain";
+import { getRegistration } from "@/lib/registry";
+import { GenesisBadge } from "@/app/components/GenesisBadge";
 
 const siteUrl = "https://spiritindex.org";
 
@@ -171,6 +173,8 @@ function BreadcrumbJsonLd({ agent }: { agent: Agent }) {
 
 // ERC-8004 registration status badge
 function RegistrationBadge({ agent, registration }: { agent: Agent; registration: RegistrationStatus }) {
+  const regInfo = getRegistration(agent.id);
+
   if (registration.registered) {
     return (
       <div className="mb-8 p-4 border border-subtle rounded" style={{ borderColor: 'var(--green, #4ADE80)' }}>
@@ -179,6 +183,9 @@ function RegistrationBadge({ agent, registration }: { agent: Agent; registration
             <span>&#x2713;</span> ERC-8004 Registered
           </span>
           <span className="text-dim text-sm font-mono">Agent #{registration.agentId}</span>
+          {regInfo?.registeredAt && (
+            <span className="text-dim text-sm font-mono">since {regInfo.registeredAt}</span>
+          )}
           <a
             href={`https://basescan.org/address/0xF2709ceF1Cf4893ed78D3220864428b32b12dFb9`}
             target="_blank"
@@ -188,6 +195,11 @@ function RegistrationBadge({ agent, registration }: { agent: Agent; registration
             View on BaseScan
           </a>
         </div>
+        {registration.artist && (
+          <div className="mt-2 text-xs font-mono text-dim">
+            Owner: {registration.artist}
+          </div>
+        )}
       </div>
     );
   }
@@ -281,6 +293,9 @@ export default async function AgentDossier({ params }: Props) {
           </div>
         )}
 
+        {/* Genesis Cohort Badge */}
+        <GenesisBadge agentId={agent.id} />
+
         {/* Agent Header */}
         <div className="flex justify-between items-start mb-8">
           <div>
@@ -292,6 +307,15 @@ export default async function AgentDossier({ params }: Props) {
                 {agent.status}
               </span>
               <span className="text-dim">{agent.category}</span>
+              {registration.registered && (
+                <span
+                  className="text-xs uppercase tracking-wider font-mono px-2 py-0.5 border rounded"
+                  style={{ color: '#4ADE80', borderColor: '#4ADE80' }}
+                  title={`ERC-8004 Agent #${registration.agentId}`}
+                >
+                  ERC-8004
+                </span>
+              )}
             </div>
           </div>
           <div className="text-right">
@@ -318,10 +342,11 @@ export default async function AgentDossier({ params }: Props) {
               {dimensions.map((dim) => {
                 const score = agent.scores[dim];
                 const meta = DIMENSIONS[dim];
-                const percentage = (score.value / 10) * 100;
+                const percentage = score.value !== null ? (score.value / 10) * 100 : 0;
+                const isUnscored = score.value === null;
 
                 return (
-                  <div key={dim} className="dimension-bar">
+                  <div key={dim} className={`dimension-bar ${isUnscored ? 'opacity-40' : ''}`}>
                     <span className="dimension-bar-label" title={meta.description}>
                       {meta.shortLabel}
                     </span>
@@ -331,7 +356,7 @@ export default async function AgentDossier({ params }: Props) {
                         style={{ width: `${percentage}%` }}
                       />
                     </div>
-                    <span className="dimension-bar-value">{score.value}</span>
+                    <span className="dimension-bar-value">{isUnscored ? '--' : score.value}</span>
                     <span className={`confidence-pip confidence-${score.confidence}`} />
                   </div>
                 );
@@ -436,6 +461,16 @@ export default async function AgentDossier({ params }: Props) {
             </div>
           </div>
         </div>
+
+        {/* Disclosure */}
+        {agent.disclosure && (
+          <div className="mt-6 p-4 border rounded" style={{ borderColor: 'var(--confidence-medium)', backgroundColor: 'rgba(245, 158, 11, 0.05)' }}>
+            <span className="text-xs font-mono uppercase tracking-wider" style={{ color: 'var(--confidence-medium)' }}>
+              Disclosure
+            </span>
+            <p className="text-sm text-muted mt-1 font-mono">{agent.disclosure}</p>
+          </div>
+        )}
 
         {/* Back Link */}
         <div className="mt-8">

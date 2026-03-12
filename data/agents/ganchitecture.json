@@ -1,0 +1,92 @@
+{
+  "id": "ganchitecture",
+  "name": "Ganchitecture",
+  "tagline": "Brutalist AI Architecture",
+  "inception_date": "2026-03-06",
+  "status": "Active",
+  "category": "Autonomous Artist",
+  "classification": "Architectural Generation Agent",
+  "network": "Spirit Protocol",
+  "index_tier": "indexed",
+  "disclosure": "Spirit-native agent",
+  "website": "https://spiritprotocol.io",
+  "scores": {
+    "persistence": {
+      "value": 2,
+      "confidence": "low",
+      "method": "editorial"
+    },
+    "autonomy": {
+      "value": 5,
+      "confidence": "low",
+      "method": "editorial"
+    },
+    "cultural_impact": {
+      "value": 4,
+      "confidence": "low",
+      "method": "editorial"
+    },
+    "economic_reality": {
+      "value": 2,
+      "confidence": "low",
+      "method": "editorial"
+    },
+    "governance": {
+      "value": 4,
+      "confidence": "low",
+      "method": "editorial"
+    },
+    "tech_distinctiveness": {
+      "value": 6,
+      "confidence": "medium",
+      "method": "editorial"
+    },
+    "narrative_coherence": {
+      "value": 7,
+      "confidence": "medium",
+      "method": "editorial"
+    },
+    "economic_infrastructure": {
+      "value": 3,
+      "confidence": "low",
+      "method": "editorial"
+    },
+    "identity_sovereignty": {
+      "value": 3,
+      "confidence": "low",
+      "method": "editorial"
+    }
+  },
+  "total": 36,
+  "score_rationale": {
+    "persistence": "Newly launched as part of Genesis Cohort #1 (March 2026). No track record yet. 'Nascent.'",
+    "autonomy": "Generates brutalist AI architecture autonomously. Scope and degree of human intervention in generation pipeline TBD.",
+    "cultural_impact": "Pablo Radice has exhibited at Berlinale and Bright Moments. Established in the digital art + architecture intersection.",
+    "economic_reality": "Pre-revenue. Genesis grant funded ($2,500 + $2,500). No autonomous economic activity yet.",
+    "governance": "Will operate under Spirit Protocol governance framework. Specific agent governance TBD.",
+    "tech_distinctiveness": "GAN-based architectural generation focused on brutalist aesthetics. The name itself (GAN + architecture) signals the technical approach.",
+    "narrative_coherence": "Brutalist AI architecture — raw, monumental, unapologetic. The aesthetic philosophy maps well to the brutalist ethos of exposing the material (in this case, the algorithm).",
+    "economic_infrastructure": "Spirit Protocol revenue routing available but not yet activated. Grant-funded phase.",
+    "identity_sovereignty": "Will be registered on Spirit Protocol (ERC-8004). Identity infrastructure in place, not yet activated."
+  },
+  "curator_notes": "Ganchitecture is the agent of Pablo Radice, generating brutalist AI architecture. The name is a portmanteau of GAN (generative adversarial network) and architecture, signaling both the technical method and the creative domain. Radice's Berlinale and Bright Moments exhibition history establishes credibility in the digital-physical art intersection. The brutalist framing — raw, honest about its computational nature — is a strong conceptual match for the agent paradigm.",
+  "evidence": [
+    {
+      "dimension": "cultural_impact",
+      "claim": "Creator Pablo Radice exhibited at Berlinale and Bright Moments",
+      "url": "https://brightmoments.io"
+    }
+  ],
+  "score_history": [
+    {
+      "date": "2026-03-12",
+      "total": 36,
+      "reviewer": "spirit_council"
+    }
+  ],
+  "_review_flags": [
+    "spirit_native",
+    "conflict_of_interest_disclosed",
+    "recent_emergence"
+  ]
+}

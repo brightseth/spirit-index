@@ -6,43 +6,53 @@
   "status": "Subsumed",
   "category": "General-Purpose Agent",
   "classification": "Autonomous Task Executor",
+  "network": "Independent",
   "website": "https://manus.im",
   "scores": {
     "persistence": {
       "value": 5,
-      "confidence": "medium"
+      "confidence": "medium",
+      "method": "editorial"
     },
     "autonomy": {
       "value": 8,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "cultural_impact": {
       "value": 8,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "economic_reality": {
       "value": 10,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "governance": {
       "value": 2,
-      "confidence": "medium"
+      "confidence": "medium",
+      "method": "editorial"
     },
     "tech_distinctiveness": {
       "value": 7,
-      "confidence": "medium"
+      "confidence": "medium",
+      "method": "editorial"
     },
     "narrative_coherence": {
       "value": 6,
-      "confidence": "medium"
+      "confidence": "medium",
+      "method": "editorial"
     },
     "economic_infrastructure": {
       "value": 0,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "identity_sovereignty": {
       "value": 0,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     }
   },
   "total": 46,
@@ -50,14 +60,14 @@
     "persistence": "Debuted spring 2025; acquired by Meta in December 2025 after less than a year of independent operation. Short independent lifespan but will persist within Meta's ecosystem.",
     "autonomy": "Demonstrated genuine autonomous task execution: screening job candidates, planning vacations, analyzing stock portfolios, and other multi-step tasks with minimal human guidance. Strong 'Sentient' anchor.",
     "cultural_impact": "Most expensive AI agent acquisition in history ($2B+). Fastest startup to reach $100M ARR. Widely covered by CNBC, TechCrunch, CBC, TechRadar. Landmark moment for the agent economy.",
-    "economic_reality": "$100M+ ARR from millions of subscribers. Acquired for $2B+ by Meta. Perfect 'Market Mover' \u2014 the highest economic score in the index. Definitive proof that autonomous agents are valued as enterprise assets.",
+    "economic_reality": "$100M+ ARR from millions of subscribers. Acquired for $2B+ by Meta. Perfect 'Market Mover' — the highest economic score in the index. Definitive proof that autonomous agents are valued as enterprise assets.",
     "governance": "Centralized corporate governance under Singapore-based startup, now absorbed into Meta. No community governance, no token, no DAO. Chinese operations wound down post-acquisition.",
     "tech_distinctiveness": "General-purpose agent capable of complex multi-step task execution across domains. Integrated into Meta's consumer products (Facebook, Instagram, WhatsApp). Advanced execution layer but architecture details are proprietary.",
-    "narrative_coherence": "Identity is less distinctive than cultural agents \u2014 Manus is a utility, not a character. The acquisition narrative is powerful but the agent itself lacks a mythos or personality.",
+    "narrative_coherence": "Identity is less distinctive than cultural agents — Manus is a utility, not a character. The acquisition narrative is powerful but the agent itself lacks a mythos or personality.",
     "economic_infrastructure": "Massive revenue ($100M+ ARR) but all through traditional SaaS subscription model. Acquired by Meta for $2B+. No on-chain treasury, no crypto payment rails, no token. Purely corporate economic infrastructure through Singapore entity and now Meta. No decentralized economic rails whatsoever.",
     "identity_sovereignty": "Identity subsumed into Meta's product suite. No on-chain identity. No agent identity standard. Identity exists through manus.im website and Meta integration. Corporate-owned entity with no portable digital identity. The opposite of sovereign."
   },
-  "curator_notes": "Manus represents the corporate-enterprise pole of the agent spectrum. A Singapore-based startup that debuted in spring 2025 with demos showing autonomous job screening, vacation planning, and portfolio analysis, it rapidly scaled to millions of users and $100M+ ARR. Meta acquired Manus in December 2025 for over $2 billion, making it the most expensive AI agent acquisition in history. Post-acquisition, Manus will be integrated into Meta's consumer products while maintaining independent operations. The deal also had geopolitical significance: Manus wound down its Chinese business operations as a condition of the acquisition. Status is 'Subsumed' per Spirit Index rubric \u2014 the agent continues to exist but is no longer an independent entity. Historically significant as proof that the agent economy has arrived at enterprise scale.",
+  "curator_notes": "Manus represents the corporate-enterprise pole of the agent spectrum. A Singapore-based startup that debuted in spring 2025 with demos showing autonomous job screening, vacation planning, and portfolio analysis, it rapidly scaled to millions of users and $100M+ ARR. Meta acquired Manus in December 2025 for over $2 billion, making it the most expensive AI agent acquisition in history. Post-acquisition, Manus will be integrated into Meta's consumer products while maintaining independent operations. The deal also had geopolitical significance: Manus wound down its Chinese business operations as a condition of the acquisition. Status is 'Subsumed' per Spirit Index rubric — the agent continues to exist but is no longer an independent entity. Historically significant as proof that the agent economy has arrived at enterprise scale.",
   "evidence": [
     {
       "dimension": "economic_reality",
@@ -96,5 +106,6 @@
     "subsumed",
     "corporate_acquisition",
     "highest_economic_value"
-  ]
+  ],
+  "index_tier": "indexed"
 }

@@ -9,7 +9,7 @@ import { Confidence, DIMENSIONS, DimensionKey } from '@/lib/types';
 
 interface DimensionBarProps {
   dimension: DimensionKey;
-  value: number;
+  value: number | null;
   confidence: Confidence;
   showLabel?: boolean;
 }
@@ -21,7 +21,8 @@ export function DimensionBar({
   showLabel = true,
 }: DimensionBarProps) {
   const meta = DIMENSIONS[dimension];
-  const percentage = (value / 10) * 100;
+  const displayValue = value ?? 0;
+  const percentage = (displayValue / 10) * 100;
 
   return (
     <div className="dimension-bar">
@@ -36,7 +37,7 @@ export function DimensionBar({
           style={{ width: `${percentage}%` }}
         />
       </div>
-      <span className="dimension-bar-value">{value}</span>
+      <span className="dimension-bar-value">{value !== null ? value : '—'}</span>
       <ConfidencePip confidence={confidence} />
     </div>
   );

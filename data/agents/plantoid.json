@@ -6,43 +6,53 @@
   "status": "Active",
   "category": "Autonomous Sculpture",
   "classification": "Blockchain Native Life Form",
+  "network": "Ethereum Native",
   "website": "https://plantoid.org",
   "scores": {
     "persistence": {
       "value": 10,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "autonomy": {
       "value": 8,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "cultural_impact": {
       "value": 8,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "economic_reality": {
       "value": 6,
-      "confidence": "medium"
+      "confidence": "medium",
+      "method": "editorial"
     },
     "governance": {
       "value": 9,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "tech_distinctiveness": {
       "value": 9,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "narrative_coherence": {
       "value": 10,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "economic_infrastructure": {
       "value": 5,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "identity_sovereignty": {
       "value": 5,
-      "confidence": "medium"
+      "confidence": "medium",
+      "method": "editorial"
     }
   },
   "total": 70,
@@ -55,7 +65,7 @@
     "tech_distinctiveness": "Pioneered blockchain-based autonomous reproduction before the concept existed elsewhere. Novel architecture for its time.",
     "narrative_coherence": "The mythos of a plant that evolves beyond its creator, reproducing itself through code. Transcends function entirely. Perfect 'Mythos.'",
     "economic_infrastructure": "Self-funding through Ethereum donations. Smart contract governs treasury and reproduction threshold. On-chain treasury on Ethereum. Revenue routing through smart contract-based reproduction mechanism. When wallet reaches threshold, funds are used to commission new Plantoids. Genuine autonomous economic infrastructure, but modest in scale and single-source (donations only).",
-    "identity_sovereignty": "On-chain smart contract identity on Ethereum. Each Plantoid has its own Ethereum address and verifiable on-chain provenance. Smart contract serves as both identity and governance artifact. Predates ERC-8004 but implements similar concepts \u2014 verifiable on-chain entity with autonomous operation. Partial sovereignty \u2014 on-chain and persistent, but no portable agent identity standard."
+    "identity_sovereignty": "On-chain smart contract identity on Ethereum. Each Plantoid has its own Ethereum address and verifiable on-chain provenance. Smart contract serves as both identity and governance artifact. Predates ERC-8004 but implements similar concepts — verifiable on-chain entity with autonomous operation. Partial sovereignty — on-chain and persistent, but no portable agent identity standard."
   },
   "curator_notes": "Plantoid is the OG of blockchain-based autonomous entities. Created by Primavera De Filippi in 2015, it predates the current AI agent wave by nearly a decade. A physical robotic sculpture that 'feeds' on cryptocurrency and 'reproduces' by commissioning new Plantoids when its Ethereum wallet reaches a threshold. It has survived multiple crypto winters, founder stepping back, and platform changes. The mythos is impeccable: a plant that evolves beyond its creator. A canonical reference in the field.",
   "evidence": [
@@ -82,5 +92,6 @@
       "reviewer": "spirit_council"
     }
   ],
-  "_review_flags": []
+  "_review_flags": [],
+  "index_tier": "indexed"
 }

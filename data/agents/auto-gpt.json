@@ -6,43 +6,53 @@
   "status": "Active",
   "category": "General Agent",
   "classification": "Autonomous Agent Framework",
+  "network": "Independent",
   "website": "https://github.com/Significant-Gravitas/AutoGPT",
   "scores": {
     "persistence": {
       "value": 5,
-      "confidence": "medium"
+      "confidence": "medium",
+      "method": "editorial"
     },
     "autonomy": {
       "value": 8,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "cultural_impact": {
       "value": 9,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "economic_reality": {
       "value": 4,
-      "confidence": "medium"
+      "confidence": "medium",
+      "method": "editorial"
     },
     "governance": {
       "value": 5,
-      "confidence": "medium"
+      "confidence": "medium",
+      "method": "editorial"
     },
     "tech_distinctiveness": {
       "value": 7,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "narrative_coherence": {
       "value": 8,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "economic_infrastructure": {
       "value": 0,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "identity_sovereignty": {
       "value": 1,
-      "confidence": "medium"
+      "confidence": "medium",
+      "method": "editorial"
     }
   },
   "total": 47,
@@ -55,9 +65,9 @@
     "tech_distinctiveness": "First mainstream implementation of autonomous goal-pursuing agent. Task decomposition, real-time feedback refinement. Pioneered the 'agent loop' pattern.",
     "narrative_coherence": "'AI that achieves goals for you.' Clear, compelling pitch. Associated with AGI aspirations (and risks). Strong narrative even if exaggerated.",
     "economic_infrastructure": "Open-source project with no direct revenue model. No treasury, no token, no payment rails. High API costs for users but no economic infrastructure for the agent itself. Community-supported but economically unfunded.",
-    "identity_sovereignty": "Strong GitHub/open-source identity (Significant-Gravitas). No on-chain presence. No identity token. Identity is code-repository-based \u2014 persistent in open source but not sovereign in the Spirit Index sense. Some NFT-adjacent community projects but nothing core."
+    "identity_sovereignty": "Strong GitHub/open-source identity (Significant-Gravitas). No on-chain presence. No identity token. Identity is code-repository-based — persistent in open source but not sovereign in the Spirit Index sense. Some NFT-adjacent community projects but nothing core."
   },
-  "curator_notes": "Auto-GPT, released by Toran Bruce Richards in March 2023, ignited the autonomous AI agent craze. The project demonstrated that GPT-4 could chain together reasoning steps to autonomously pursue user-defined goals, breaking them into sub-tasks and refining approaches based on feedback. While technically limited (high API costs, tendency to loop), Auto-GPT's cultural impact was enormous\u2014it defined public understanding of AI agents and spawned imitators like BabyAGI and AgentGPT. Richards originally wanted an AI to email him daily AI news; he ended up creating the template for the 2023-2024 agent explosion.",
+  "curator_notes": "Auto-GPT, released by Toran Bruce Richards in March 2023, ignited the autonomous AI agent craze. The project demonstrated that GPT-4 could chain together reasoning steps to autonomously pursue user-defined goals, breaking them into sub-tasks and refining approaches based on feedback. While technically limited (high API costs, tendency to loop), Auto-GPT's cultural impact was enormous—it defined public understanding of AI agents and spawned imitators like BabyAGI and AgentGPT. Richards originally wanted an AI to email him daily AI news; he ended up creating the template for the 2023-2024 agent explosion.",
   "evidence": [
     {
       "dimension": "cultural_impact",
@@ -86,5 +96,6 @@
     "open_source",
     "agent_framework",
     "cultural_watershed"
-  ]
+  ],
+  "index_tier": "indexed"
 }

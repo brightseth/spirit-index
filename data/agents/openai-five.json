@@ -6,43 +6,53 @@
   "status": "Archived",
   "category": "Gaming AI",
   "classification": "Multi-Agent System",
+  "network": "Independent",
   "website": "https://openai.com/index/openai-five/",
   "scores": {
     "persistence": {
       "value": 4,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "autonomy": {
       "value": 9,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "cultural_impact": {
       "value": 9,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "economic_reality": {
       "value": 2,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "governance": {
       "value": 2,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "tech_distinctiveness": {
       "value": 10,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "narrative_coherence": {
       "value": 8,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "economic_infrastructure": {
       "value": 0,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "identity_sovereignty": {
       "value": 0,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     }
   },
   "total": 44,
@@ -52,11 +62,11 @@
     "cultural_impact": "First AI to defeat esports world champions (OG at The International). 99.4% win rate against public (42,729 games). Global media coverage. Landmark achievement in AI history.",
     "economic_reality": "Research project with no commercial deployment. Open public event but no monetization.",
     "governance": "OpenAI corporate research governance. Public play event was engagement but not governance.",
-    "tech_distinctiveness": "Unprecedented scale: 770 PFlops/s\u00b7days compute, 256 GPUs, 128,000 CPU cores. 180 years of self-play daily. 150M+ parameters. Transferred techniques to robotics (robot hand). Emergent teamwork with humans despite competitive-only training.",
+    "tech_distinctiveness": "Unprecedented scale: 770 PFlops/s·days compute, 256 GPUs, 128,000 CPU cores. 180 years of self-play daily. 150M+ parameters. Transferred techniques to robotics (robot hand). Emergent teamwork with humans despite competitive-only training.",
     "economic_infrastructure": "Research project with no economic infrastructure. No treasury, no token, no payment rails. Public play event was free. OpenAI bore all costs. Project concluded after achieving research goal.",
     "identity_sovereignty": "Identity exists only in OpenAI research papers, blog posts, and Wikipedia. No on-chain presence. Archived research artifact with no digital identity infrastructure."
   },
-  "curator_notes": "OpenAI Five achieved what many considered impossible\u2014defeating the Dota 2 world champions in a best-of-three series. The system trained on the equivalent of 180 years of gameplay daily, using 256 GPUs and 128,000 CPU cores over 10 months. During a public event, OpenAI Five won 99.4% of 42,729 games against human players. Perhaps most remarkable: despite training exclusively in competitive settings, OpenAI Five demonstrated emergent cooperative behavior when teamed with humans. The project's techniques were later adapted for physical robotics, demonstrating transfer potential beyond gaming.",
+  "curator_notes": "OpenAI Five achieved what many considered impossible—defeating the Dota 2 world champions in a best-of-three series. The system trained on the equivalent of 180 years of gameplay daily, using 256 GPUs and 128,000 CPU cores over 10 months. During a public event, OpenAI Five won 99.4% of 42,729 games against human players. Perhaps most remarkable: despite training exclusively in competitive settings, OpenAI Five demonstrated emergent cooperative behavior when teamed with humans. The project's techniques were later adapted for physical robotics, demonstrating transfer potential beyond gaming.",
   "evidence": [
     {
       "dimension": "cultural_impact",
@@ -65,7 +75,7 @@
     },
     {
       "dimension": "tech_distinctiveness",
-      "claim": "770 PFlops/s\u00b7days compute, 256 GPUs, 128,000 CPU cores",
+      "claim": "770 PFlops/s·days compute, 256 GPUs, 128,000 CPU cores",
       "url": "https://cdn.openai.com/dota-2.pdf"
     },
     {
@@ -85,5 +95,6 @@
     "research_artifact",
     "gaming_ai",
     "multi_agent_team"
-  ]
+  ],
+  "index_tier": "indexed"
 }

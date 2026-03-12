@@ -6,47 +6,57 @@
   "status": "Active",
   "category": "Infrastructure Entity",
   "classification": "Ensemble ML System / Prediction Market",
+  "network": "Ethereum Native",
   "website": "https://numer.ai",
   "scores": {
     "persistence": {
       "value": 10,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "autonomy": {
       "value": 7,
-      "confidence": "medium"
+      "confidence": "medium",
+      "method": "editorial"
     },
     "cultural_impact": {
       "value": 6,
-      "confidence": "medium"
+      "confidence": "medium",
+      "method": "editorial"
     },
     "economic_reality": {
       "value": 9,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "governance": {
       "value": 5,
-      "confidence": "medium"
+      "confidence": "medium",
+      "method": "editorial"
     },
     "tech_distinctiveness": {
       "value": 9,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "narrative_coherence": {
       "value": 6,
-      "confidence": "medium"
+      "confidence": "medium",
+      "method": "editorial"
     },
     "economic_infrastructure": {
       "value": 4,
-      "confidence": "medium"
+      "confidence": "medium",
+      "method": "editorial"
     },
     "identity_sovereignty": {
       "value": 2,
-      "confidence": "medium"
+      "confidence": "medium",
+      "method": "editorial"
     }
   },
   "total": 58,
-  "curator_notes": "Numerai's Meta Model is an unusual entity: a hedge fund whose trading signals come from an ensemble of thousands of data scientists' models, coordinated via the NMR token and staking mechanism. The 'agent' here is the aggregated intelligence of the crowd, filtered through stake-weighted consensus. Operating since 2015, it manages real capital and has pioneered novel approaches to crowdsourced intelligence. Lower narrative score reflects that it's more infrastructure than character\u2014but its persistence and economic reality are unquestionable. A canonical example of decentralized intelligence that predates the current 'agent' discourse.",
+  "curator_notes": "Numerai's Meta Model is an unusual entity: a hedge fund whose trading signals come from an ensemble of thousands of data scientists' models, coordinated via the NMR token and staking mechanism. The 'agent' here is the aggregated intelligence of the crowd, filtered through stake-weighted consensus. Operating since 2015, it manages real capital and has pioneered novel approaches to crowdsourced intelligence. Lower narrative score reflects that it's more infrastructure than character—but its persistence and economic reality are unquestionable. A canonical example of decentralized intelligence that predates the current 'agent' discourse.",
   "score_rationale": {
     "persistence": "Operating continuously since December 2015. 10+ years of proven operation. Institutional-grade persistence.",
     "autonomy": "The meta model operates autonomously once signals are submitted. Human models feed it, but aggregation and execution are autonomous.",
@@ -55,8 +65,8 @@
     "governance": "Hybrid: Numerai Inc controls platform, but signal weights determined by stake (pseudo-decentralized).",
     "tech_distinctiveness": "Pioneered erasure encoding for data privacy, stake-weighted ensembling, novel tournament structure.",
     "narrative_coherence": "More infrastructure than character. No distinct personality, but clear purpose: crowdsourced alpha generation.",
-    "economic_infrastructure": "NMR token with staking mechanism. Hedge fund manages $100M+ AUM. Data scientists stake NMR on predictions and earn/lose real value. Active marketplace for signals with real economic consequences. On-chain staking on Ethereum. However, core hedge fund operations are traditional/off-chain. Hybrid model \u2014 on-chain staking layer on top of traditional finance infrastructure.",
-    "identity_sovereignty": "NMR token on Ethereum provides on-chain anchoring. Staking contract addresses serve as identity artifacts. No agent-specific identity standard. Identity primarily institutional (Numerai Inc.) with on-chain token layer. The Meta Model itself has no portable agent identity \u2014 it's infrastructure, not an entity."
+    "economic_infrastructure": "NMR token with staking mechanism. Hedge fund manages $100M+ AUM. Data scientists stake NMR on predictions and earn/lose real value. Active marketplace for signals with real economic consequences. On-chain staking on Ethereum. However, core hedge fund operations are traditional/off-chain. Hybrid model — on-chain staking layer on top of traditional finance infrastructure.",
+    "identity_sovereignty": "NMR token on Ethereum provides on-chain anchoring. Staking contract addresses serve as identity artifacts. No agent-specific identity standard. Identity primarily institutional (Numerai Inc.) with on-chain token layer. The Meta Model itself has no portable agent identity — it's infrastructure, not an entity."
   },
   "evidence": [
     {
@@ -100,5 +110,6 @@
   "_review_flags": [
     "canonical_elder",
     "edge_case"
-  ]
+  ],
+  "index_tier": "indexed"
 }

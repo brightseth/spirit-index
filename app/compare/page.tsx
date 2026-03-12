@@ -121,7 +121,7 @@ function CompareContent() {
             </option>
             {availableAgents.map((agent) => (
               <option key={agent.id} value={agent.id}>
-                {agent.name} ({agent.total}/90)
+                {agent.name} ({(agent as any).comparable_pct !== undefined ? `${(agent as any).comparable_pct}%` : `${agent.total}/90`})
               </option>
             ))}
           </select>
@@ -147,6 +147,19 @@ function CompareContent() {
           </div>
         )}
 
+        {/* Mixed tier warning */}
+        {selectedAgents.length > 1 && (() => {
+          const tiers = new Set(selectedAgents.map(a => a.index_tier));
+          if (tiers.size > 1) {
+            return (
+              <p className="text-xs font-mono text-[var(--text-dim)] mb-4 p-3 border border-subtle rounded">
+                Comparing agents with different scoring coverage. Tracked agents may have fewer scored dimensions.
+              </p>
+            );
+          }
+          return null;
+        })()}
+
         {/* Comparison Table */}
         {selectedAgents.length > 0 ? (
           <div className="overflow-x-auto">
@@ -168,8 +181,15 @@ function CompareContent() {
                         {agent.name}
                       </Link>
                       <div className="text-dim text-xs font-normal mt-1">
-                        {agent.total}/90
+                        {(agent as any).comparable_score !== undefined
+                          ? `${(agent as any).comparable_score}/${(agent as any).comparable_max} (${(agent as any).comparable_pct}%)`
+                          : `${agent.total}/90`}
                       </div>
+                      {agent.index_tier && (
+                        <span className={`tier-badge ${agent.index_tier === "indexed" ? "tier-indexed" : "tier-tracked"} mt-1 inline-block`}>
+                          {agent.index_tier}
+                        </span>
+                      )}
                     </th>
                   ))}
                 </tr>
@@ -180,22 +200,37 @@ function CompareContent() {
                   <td className="py-3 pr-4 text-white font-bold sticky left-0 bg-blue/30">
                     TOTAL
                   </td>
-                  {selectedAgents.map((agent) => (
-                    <td
-                      key={agent.id}
-                      className="py-3 px-4 text-center text-green font-bold text-lg"
-                    >
-                      {agent.total}
-                    </td>
-                  ))}
+                  {selectedAgents.map((agent) => {
+                    const pct = (agent as any).comparable_pct;
+                    const score = (agent as any).comparable_score;
+                    const max = (agent as any).comparable_max;
+                    return (
+                      <td
+                        key={agent.id}
+                        className={`py-3 px-4 text-center font-bold text-lg ${
+                          agent.index_tier === "tracked" ? "text-dim" : "text-green"
+                        }`}
+                      >
+                        {score !== undefined ? (
+                          <>
+                            {score}/{max}
+                            <span className="text-dim text-xs ml-1">{pct}%</span>
+                          </>
+                        ) : (
+                          agent.total
+                        )}
+                      </td>
+                    );
+                  })}
                 </tr>
 
                 {/* Dimension Rows */}
                 {dimensions.map((dim) => {
                   const meta = DIMENSIONS[dim];
-                  const maxScore = Math.max(
-                    ...selectedAgents.map((a) => a.scores[dim].value)
-                  );
+                  const scoredValues = selectedAgents
+                    .map(a => a.scores[dim].value)
+                    .filter((v): v is number => v !== null);
+                  const maxScore = scoredValues.length > 0 ? Math.max(...scoredValues) : 0;
 
                   return (
                     <tr key={dim} className="border-b border-subtle/50">
@@ -212,21 +247,28 @@ function CompareContent() {
                       </td>
                       {selectedAgents.map((agent) => {
                         const score = agent.scores[dim];
+                        const isNull = score.value === null;
                         const isMax =
-                          score.value === maxScore && selectedAgents.length > 1;
+                          !isNull && score.value === maxScore && selectedAgents.length > 1;
 
                         return (
                           <td
                             key={agent.id}
                             className={`py-3 px-4 text-center ${
-                              isMax ? "text-green font-bold" : "text-muted"
+                              isNull
+                                ? "score-unscored"
+                                : isMax
+                                ? "text-green font-bold"
+                                : "text-muted"
                             }`}
                           >
-                            <span className="text-lg">{score.value}</span>
-                            <span
-                              className={`ml-2 inline-block w-2 h-2 rounded-full confidence-${score.confidence}`}
-                              title={`Confidence: ${score.confidence}`}
-                            />
+                            <span className="text-lg">{isNull ? "--" : score.value}</span>
+                            {!isNull && (
+                              <span
+                                className={`ml-2 inline-block w-2 h-2 rounded-full confidence-${score.confidence}`}
+                                title={`Confidence: ${score.confidence}`}
+                              />
+                            )}
                           </td>
                         );
                       })}

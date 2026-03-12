@@ -6,49 +6,59 @@
   "status": "Active",
   "category": "Conversational AI",
   "classification": "Personal AI Companion",
+  "network": "Independent",
   "website": "https://pi.ai",
   "scores": {
     "persistence": {
       "value": 5,
-      "confidence": "medium"
+      "confidence": "medium",
+      "method": "editorial"
     },
     "autonomy": {
       "value": 4,
-      "confidence": "medium"
+      "confidence": "medium",
+      "method": "editorial"
     },
     "cultural_impact": {
       "value": 6,
-      "confidence": "medium"
+      "confidence": "medium",
+      "method": "editorial"
     },
     "economic_reality": {
       "value": 5,
-      "confidence": "medium"
+      "confidence": "medium",
+      "method": "editorial"
     },
     "governance": {
       "value": 3,
-      "confidence": "medium"
+      "confidence": "medium",
+      "method": "editorial"
     },
     "tech_distinctiveness": {
       "value": 7,
-      "confidence": "medium"
+      "confidence": "medium",
+      "method": "editorial"
     },
     "narrative_coherence": {
       "value": 8,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "economic_infrastructure": {
       "value": 0,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "identity_sovereignty": {
       "value": 0,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     }
   },
   "total": 38,
   "score_rationale": {
     "persistence": "Launched May 2023. Survived Inflection's Microsoft acqui-hire (March 2024). Continues operating under new structure.",
-    "autonomy": "Conversational assistant focused on empathy and support. Limited autonomous capabilities\u2014primarily reactive to user input.",
+    "autonomy": "Conversational assistant focused on empathy and support. Limited autonomous capabilities—primarily reactive to user input.",
     "cultural_impact": "Established 'empathetic AI' category. $1.3B funding signaled investor interest in personal AI. Influenced thinking on AI companion safety.",
     "economic_reality": "$1.3B raised at $4B valuation (2023). Microsoft paid $650M to license technology. Unclear current monetization.",
     "governance": "Inflection as public benefit corporation. Focus on human-centered AI. Now complicated by Microsoft relationship.",
@@ -85,5 +95,6 @@
     "companion_ai",
     "empathy_focused",
     "acquihire_survivor"
-  ]
+  ],
+  "index_tier": "indexed"
 }

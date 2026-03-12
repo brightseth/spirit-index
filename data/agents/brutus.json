@@ -6,43 +6,53 @@
   "status": "Archived",
   "category": "Autonomous Writer",
   "classification": "Rule-Based Creator",
+  "network": "Independent",
   "website": "https://www.routledge.com/Artificial-Intelligence-and-Literary-Creativity-Inside-the-Mind-of-Brutus/Bringsjord-Ferrucci/p/book/9780805819878",
   "scores": {
     "persistence": {
       "value": 4,
-      "confidence": "medium"
+      "confidence": "medium",
+      "method": "editorial"
     },
     "autonomy": {
       "value": 6,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "cultural_impact": {
       "value": 6,
-      "confidence": "medium"
+      "confidence": "medium",
+      "method": "editorial"
     },
     "economic_reality": {
       "value": 2,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "governance": {
       "value": 2,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "tech_distinctiveness": {
       "value": 8,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "narrative_coherence": {
       "value": 7,
-      "confidence": "medium"
+      "confidence": "medium",
+      "method": "editorial"
     },
     "economic_infrastructure": {
       "value": 0,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "identity_sovereignty": {
       "value": 0,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     }
   },
   "total": 35,
@@ -53,7 +63,7 @@
     "economic_reality": "Academic research project with no commercial output or treasury. Book published but system itself generated no economic activity.",
     "governance": "Two-person academic team (Bringsjord and Ferrucci). Research project governance only.",
     "tech_distinctiveness": "Logic-based approach explicitly rejecting neural networks. Unique focus on literary themes (betrayal) rather than style imitation. Generated grammatically correct prose in seconds.",
-    "narrative_coherence": "Clear identity as betrayal-focused storyteller. Philosophical framework articulated in book: 'human creativity is beyond computation\u2014yet we strive to craft the appearance of creativity.'",
+    "narrative_coherence": "Clear identity as betrayal-focused storyteller. Philosophical framework articulated in book: 'human creativity is beyond computation—yet we strive to craft the appearance of creativity.'",
     "economic_infrastructure": "Academic research project from late 1990s. No treasury, no revenue, no payment rails. Book published (traditional publishing) but system generated no economic activity.",
     "identity_sovereignty": "Historical academic project. Identity exists only in published book and academic citations. No digital presence beyond archival references. Pre-dates all digital identity infrastructure."
   },
@@ -85,5 +95,6 @@
   "_review_flags": [
     "historical_agent",
     "academic_project"
-  ]
+  ],
+  "index_tier": "indexed"
 }

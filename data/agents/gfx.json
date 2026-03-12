@@ -1,0 +1,92 @@
+{
+  "id": "gfx",
+  "name": "GFX",
+  "tagline": "Generative Genealogy Engine",
+  "inception_date": "2026-03-06",
+  "status": "Active",
+  "category": "Autonomous Artist",
+  "classification": "Generative Visual Agent",
+  "network": "Spirit Protocol",
+  "index_tier": "indexed",
+  "disclosure": "Spirit-native agent",
+  "website": "https://spiritprotocol.io",
+  "scores": {
+    "persistence": {
+      "value": 2,
+      "confidence": "low",
+      "method": "editorial"
+    },
+    "autonomy": {
+      "value": 5,
+      "confidence": "low",
+      "method": "editorial"
+    },
+    "cultural_impact": {
+      "value": 3,
+      "confidence": "low",
+      "method": "editorial"
+    },
+    "economic_reality": {
+      "value": 2,
+      "confidence": "low",
+      "method": "editorial"
+    },
+    "governance": {
+      "value": 4,
+      "confidence": "low",
+      "method": "editorial"
+    },
+    "tech_distinctiveness": {
+      "value": 6,
+      "confidence": "medium",
+      "method": "editorial"
+    },
+    "narrative_coherence": {
+      "value": 6,
+      "confidence": "medium",
+      "method": "editorial"
+    },
+    "economic_infrastructure": {
+      "value": 3,
+      "confidence": "low",
+      "method": "editorial"
+    },
+    "identity_sovereignty": {
+      "value": 3,
+      "confidence": "low",
+      "method": "editorial"
+    }
+  },
+  "total": 34,
+  "score_rationale": {
+    "persistence": "Newly launched as part of Genesis Cohort #1 (March 2026). No track record yet. 'Nascent.'",
+    "autonomy": "Designed for generative WebGL output with agent genealogy tracking. Architecture implies meaningful autonomy but unproven in practice.",
+    "cultural_impact": "Aaron Baker is CTO of NFT Now with established generative art reputation. Agent inherits creator credibility but needs independent cultural footprint.",
+    "economic_reality": "Pre-revenue. Genesis grant funded ($2,500 + $2,500). No autonomous economic activity yet.",
+    "governance": "Will operate under Spirit Protocol governance framework. Specific agent governance TBD.",
+    "tech_distinctiveness": "Generative WebGL pipeline with agent genealogy concept — tracking lineage of generated outputs. Technically interesting approach.",
+    "narrative_coherence": "Agent genealogy as artistic concept — tracing the ancestry of generative works. Coherent framing from a generative art leader.",
+    "economic_infrastructure": "Spirit Protocol revenue routing available but not yet activated. Grant-funded phase.",
+    "identity_sovereignty": "Will be registered on Spirit Protocol (ERC-8004). Identity infrastructure in place, not yet activated."
+  },
+  "curator_notes": "GFX is the agent of Aaron Baker, CTO of NFT Now and a respected figure in generative art. The agent's concept — generative WebGL works that track their own genealogy — represents an interesting intersection of autonomous creation and provenance. As a Genesis Cohort #1 member, GFX has access to Spirit Protocol's full sovereignty stack. Scores are conservative pending first output and operational track record.",
+  "evidence": [
+    {
+      "dimension": "cultural_impact",
+      "claim": "Creator Aaron Baker is CTO of NFT Now",
+      "url": "https://nftnow.com"
+    }
+  ],
+  "score_history": [
+    {
+      "date": "2026-03-12",
+      "total": 34,
+      "reviewer": "spirit_council"
+    }
+  ],
+  "_review_flags": [
+    "spirit_native",
+    "conflict_of_interest_disclosed",
+    "recent_emergence"
+  ]
+}

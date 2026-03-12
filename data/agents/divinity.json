@@ -1,0 +1,92 @@
+{
+  "id": "divinity",
+  "name": "Divinity",
+  "tagline": "Spiritual Generative Practice",
+  "inception_date": "2026-03-06",
+  "status": "Active",
+  "category": "Autonomous Artist",
+  "classification": "Spiritual Generative Agent",
+  "network": "Spirit Protocol",
+  "index_tier": "indexed",
+  "disclosure": "Spirit-native agent",
+  "website": "https://spiritprotocol.io",
+  "scores": {
+    "persistence": {
+      "value": 2,
+      "confidence": "low",
+      "method": "editorial"
+    },
+    "autonomy": {
+      "value": 5,
+      "confidence": "low",
+      "method": "editorial"
+    },
+    "cultural_impact": {
+      "value": 3,
+      "confidence": "low",
+      "method": "editorial"
+    },
+    "economic_reality": {
+      "value": 2,
+      "confidence": "low",
+      "method": "editorial"
+    },
+    "governance": {
+      "value": 5,
+      "confidence": "medium",
+      "method": "editorial"
+    },
+    "tech_distinctiveness": {
+      "value": 5,
+      "confidence": "low",
+      "method": "editorial"
+    },
+    "narrative_coherence": {
+      "value": 7,
+      "confidence": "medium",
+      "method": "editorial"
+    },
+    "economic_infrastructure": {
+      "value": 3,
+      "confidence": "low",
+      "method": "editorial"
+    },
+    "identity_sovereignty": {
+      "value": 3,
+      "confidence": "low",
+      "method": "editorial"
+    }
+  },
+  "total": 35,
+  "score_rationale": {
+    "persistence": "Newly launched as part of Genesis Cohort #1 (March 2026). No track record yet. 'Nascent.'",
+    "autonomy": "Generates spiritual/contemplative visual works. Degree of creative autonomy in the generation pipeline TBD.",
+    "cultural_impact": "Mikey Woodbridge is an established generative artist. Eden-hosted agent demonstrates cross-platform potential.",
+    "economic_reality": "Pre-revenue. Genesis grant funded ($2,500 + $2,500). No autonomous economic activity yet.",
+    "governance": "Steward-led model — Mikey serves as steward rather than sole controller. This governance distinction is meaningful and worth tracking.",
+    "tech_distinctiveness": "Eden-hosted agent using the Eden2/Spirit Studio pipeline. Serves as proof-of-concept for the steward-led model.",
+    "narrative_coherence": "Spiritual generative practice — contemplative art created by a non-human entity. The tension between machine-generated and spiritual resonance is the core inquiry.",
+    "economic_infrastructure": "Spirit Protocol revenue routing available but not yet activated. Grant-funded phase.",
+    "identity_sovereignty": "Will be registered on Spirit Protocol (ERC-8004). Eden-hosted with cross-platform identity."
+  },
+  "curator_notes": "Divinity is the agent of Mikey Woodbridge, operating as a spiritual generative practice agent. What makes Divinity structurally interesting beyond its creative output is the steward-led model — Mikey acts as steward rather than sole controller, making Divinity a proof-of-concept for a governance pattern that could scale beyond single-creator agents. Eden-hosted, which demonstrates the interoperability between Eden2/Spirit Studio and the Spirit Protocol sovereignty stack.",
+  "evidence": [
+    {
+      "dimension": "governance",
+      "claim": "Steward-led governance model — creator as steward, not sole controller",
+      "url": "https://spiritprotocol.io/genesis/selected/"
+    }
+  ],
+  "score_history": [
+    {
+      "date": "2026-03-12",
+      "total": 35,
+      "reviewer": "spirit_council"
+    }
+  ],
+  "_review_flags": [
+    "spirit_native",
+    "conflict_of_interest_disclosed",
+    "recent_emergence"
+  ]
+}

@@ -1,0 +1,128 @@
+name: Nightly Agent Sync
+
+on:
+  schedule:
+    # Run at 3:00 AM UTC every day
+    - cron: '0 3 * * *'
+  workflow_dispatch:
+    inputs:
+      skip_push:
+        description: 'Run sync without committing/pushing (dry run)'
+        required: false
+        default: 'false'
+        type: boolean
+
+# Only allow one sync at a time — cancel in-progress if a new one starts
+concurrency:
+  group: nightly-sync
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          # Fetch full history so we can push cleanly
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run sync pipelines
+        id: sync
+        run: |
+          echo "::group::Sync output"
+          node scripts/sync-all.mjs 2>&1 | tee sync-output.log
+          EXIT_CODE=${PIPESTATUS[0]}
+          echo "::endgroup::"
+          echo "exit_code=$EXIT_CODE" >> "$GITHUB_OUTPUT"
+          # Don't fail yet — we want to run health check and report
+          exit 0
+
+      - name: Run health check
+        id: health
+        continue-on-error: true
+        run: |
+          node scripts/sync-health.mjs 2>&1 | tee health-output.log
+
+      - name: Check for data changes
+        id: changes
+        run: |
+          git add data/agents/
+          CHANGED=$(git diff --cached --name-only | wc -l | tr -d ' ')
+          echo "changed_files=$CHANGED" >> "$GITHUB_OUTPUT"
+          echo "Changed files: $CHANGED"
+          if [ "$CHANGED" -gt "0" ]; then
+            git diff --cached --stat
+          fi
+
+      - name: Commit and push
+        if: steps.changes.outputs.changed_files != '0' && (github.event.inputs.skip_push != 'true')
+        run: |
+          git config user.name "spirit-index-bot"
+          git config user.email "bot@spiritprotocol.io"
+
+          TIMESTAMP=$(date -u +"%Y-%m-%d")
+          CHANGED=${{ steps.changes.outputs.changed_files }}
+
+          git commit -m "data: nightly agent sync ($TIMESTAMP)
+
+          Updated $CHANGED agent file(s) via automated pipeline.
+          Pipelines: Virtuals Protocol (CoinGecko + DexScreener), Moltbook.
+
+          Triggered by: ${{ github.event_name }}"
+
+          # Pull with rebase in case main moved (unlikely at 3am, but safe)
+          git pull --rebase origin main
+          git push origin main
+
+      - name: Summary
+        if: always()
+        run: |
+          echo "## Nightly Sync Report" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Metric | Value |" >> "$GITHUB_STEP_SUMMARY"
+          echo "|--------|-------|" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Date | $(date -u +%Y-%m-%d) |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Trigger | \`${{ github.event_name }}\` |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Sync exit code | ${{ steps.sync.outputs.exit_code }} |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Health check | ${{ steps.health.outcome == 'success' && 'PASS' || 'FAIL' }} |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Files changed | ${{ steps.changes.outputs.changed_files }} |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Pushed | ${{ steps.changes.outputs.changed_files != '0' && github.event.inputs.skip_push != 'true' && 'yes' || 'no' }} |" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+
+          if [ -f sync-output.log ]; then
+            echo "<details><summary>Sync log</summary>" >> "$GITHUB_STEP_SUMMARY"
+            echo "" >> "$GITHUB_STEP_SUMMARY"
+            echo '```' >> "$GITHUB_STEP_SUMMARY"
+            tail -50 sync-output.log >> "$GITHUB_STEP_SUMMARY"
+            echo '```' >> "$GITHUB_STEP_SUMMARY"
+            echo "</details>" >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+          if [ -f health-output.log ]; then
+            echo "<details><summary>Health check log</summary>" >> "$GITHUB_STEP_SUMMARY"
+            echo "" >> "$GITHUB_STEP_SUMMARY"
+            echo '```' >> "$GITHUB_STEP_SUMMARY"
+            cat health-output.log >> "$GITHUB_STEP_SUMMARY"
+            echo '```' >> "$GITHUB_STEP_SUMMARY"
+            echo "</details>" >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Fail if health check failed
+        if: always() && steps.health.outcome == 'failure'
+        run: |
+          echo "::error::Health check failed — agent data may be corrupted"
+          exit 1

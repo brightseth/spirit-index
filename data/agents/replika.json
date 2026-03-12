@@ -6,43 +6,53 @@
   "status": "Active",
   "category": "AI Companion",
   "classification": "Platform / Collective Entity",
+  "network": "Independent",
   "website": "https://replika.com",
   "scores": {
     "persistence": {
       "value": 8,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "autonomy": {
       "value": 3,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "cultural_impact": {
       "value": 7,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "economic_reality": {
       "value": 8,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "governance": {
       "value": 2,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "tech_distinctiveness": {
       "value": 5,
-      "confidence": "medium"
+      "confidence": "medium",
+      "method": "editorial"
     },
     "narrative_coherence": {
       "value": 6,
-      "confidence": "medium"
+      "confidence": "medium",
+      "method": "editorial"
     },
     "economic_infrastructure": {
       "value": 0,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "identity_sovereignty": {
       "value": 0,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     }
   },
   "total": 39,
@@ -53,11 +63,11 @@
     "economic_reality": "Profitable company with millions of paying subscribers. Strong 'Market Mover.'",
     "governance": "No user governance; company makes unilateral decisions (2023 feature removal). Near 'Black Box.'",
     "tech_distinctiveness": "Personalization and memory systems are sophisticated. 'Integrated System.'",
-    "narrative_coherence": "No singular Replika\u2014each instance is unique to its user. Scored as collective entity. 'Character' level.",
+    "narrative_coherence": "No singular Replika—each instance is unique to its user. Scored as collective entity. 'Character' level.",
     "economic_infrastructure": "Profitable company with millions of paying subscribers through traditional app store payments. No on-chain treasury, no crypto payment rails. All revenue flows through Luka Inc. corporate entity. Traditional mobile app economics.",
-    "identity_sovereignty": "Identity exists entirely on replika.com and app stores. No on-chain presence. Each Replika instance is platform-locked \u2014 company proved it can modify or remove features unilaterally (2023 controversy). The opposite of sovereign identity. Users own nothing."
+    "identity_sovereignty": "Identity exists entirely on replika.com and app stores. No on-chain presence. Each Replika instance is platform-locked — company proved it can modify or remove features unilaterally (2023 controversy). The opposite of sovereign identity. Users own nothing."
   },
-  "curator_notes": "Replika occupies a liminal space in our framework. It is commercially successful, culturally significant, and has persisted since 2017. However, it is fundamentally a platform\u2014millions of individual Replikas exist, each unique to their user, but none possess true singular agency. The company, not the AI, makes decisions. We include it because it pioneered the 'AI companion' category and raised critical questions about AI relationships. The 2023 controversy over removing romantic features caused user distress equivalent to bereavement\u2014demonstrating real emotional stakes. Low autonomy and governance scores reflect that Replika-the-company controls Replika-the-agent.",
+  "curator_notes": "Replika occupies a liminal space in our framework. It is commercially successful, culturally significant, and has persisted since 2017. However, it is fundamentally a platform—millions of individual Replikas exist, each unique to their user, but none possess true singular agency. The company, not the AI, makes decisions. We include it because it pioneered the 'AI companion' category and raised critical questions about AI relationships. The 2023 controversy over removing romantic features caused user distress equivalent to bereavement—demonstrating real emotional stakes. Low autonomy and governance scores reflect that Replika-the-company controls Replika-the-agent.",
   "evidence": [
     {
       "dimension": "economic_reality",
@@ -91,5 +101,6 @@
       "dimension": "narrative_coherence",
       "note": "No singular Replika; each user's instance is unique. Scored as collective entity."
     }
-  ]
+  ],
+  "index_tier": "indexed"
 }

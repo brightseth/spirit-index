@@ -12,6 +12,31 @@ export type EntityStatus =
   | "Subsumed"
   | "Forked";
 
+// Network/platform affiliation (for Metacritic-style filtering)
+export type NetworkAffiliation =
+  | "Virtuals Protocol"
+  | "Spirit Protocol"
+  | "Farcaster"
+  | "Olas"
+  | "Solana Ecosystem"
+  | "Ethereum Native"
+  | "Multi-chain"
+  | "Moltbook"
+  | "Independent";
+
+// Network metadata for UI rendering
+export const NETWORKS: Record<NetworkAffiliation, { label: string; shortLabel: string; color: string }> = {
+  "Virtuals Protocol": { label: "Virtuals Protocol", shortLabel: "VIRT", color: "#8B5CF6" },
+  "Spirit Protocol": { label: "Spirit Protocol", shortLabel: "SPRT", color: "#00FF00" },
+  "Farcaster": { label: "Farcaster", shortLabel: "FC", color: "#855DCD" },
+  "Olas": { label: "Olas", shortLabel: "OLAS", color: "#22D1EE" },
+  "Solana Ecosystem": { label: "Solana Ecosystem", shortLabel: "SOL", color: "#9945FF" },
+  "Ethereum Native": { label: "Ethereum Native", shortLabel: "ETH", color: "#627EEA" },
+  "Multi-chain": { label: "Multi-chain", shortLabel: "MULTI", color: "#F59E0B" },
+  "Moltbook": { label: "Moltbook", shortLabel: "MOLT", color: "#FF6B35" },
+  "Independent": { label: "Independent", shortLabel: "INDP", color: "#9CA3AF" },
+};
+
 // Category classifications (descriptive, not scored)
 export type EntityCategory =
   | "Agent Infrastructure"
@@ -48,10 +73,24 @@ export type ArchivalStatus = "historical_test_case" | "canonical_failure" | "cul
 // Confidence levels for scores
 export type Confidence = "high" | "medium" | "low";
 
+// Index tier — editorial vs auto-scored
+export type IndexTier = "indexed" | "tracked";
+
+// How a dimension was scored
+export type ScoringMethod = "editorial" | "auto" | "unscored";
+
+// Data source for tracked agents
+export interface DataSource {
+  provider: "dexscreener" | "coingecko" | "moltbook" | "virtuals_api" | "basescan" | "manual";
+  url?: string;
+  last_fetched: string; // ISO date
+}
+
 // Individual dimension score with confidence
 export interface DimensionScore {
-  value: number; // 0-10
+  value: number | null; // 0-10, or null if unscored
   confidence: Confidence;
+  method: ScoringMethod;
 }
 
 // The 9 dimensions
@@ -117,6 +156,10 @@ export interface Agent {
   status: EntityStatus;
   category: EntityCategory;
   classification: string;
+  network: NetworkAffiliation;
+  index_tier: IndexTier;
+  data_sources?: DataSource[];
+  last_auto_scored?: string; // ISO date
   archival_status?: ArchivalStatus; // For entities below threshold with historical significance
   disclosure?: string; // Conflict of interest disclosure (e.g., "Spirit-native agent")
   website: string;
@@ -138,7 +181,7 @@ export interface RadarDataPoint {
 
 // Helper function to convert scores to radar data
 export function scoresToRadarData(scores: Scores): RadarDataPoint[] {
-  return [
+  const all = [
     { subject: "Persistence", value: scores.persistence.value, fullMark: 10 },
     { subject: "Autonomy", value: scores.autonomy.value, fullMark: 10 },
     { subject: "Impact", value: scores.cultural_impact.value, fullMark: 10 },
@@ -149,21 +192,30 @@ export function scoresToRadarData(scores: Scores): RadarDataPoint[] {
     { subject: "Econ Infra", value: scores.economic_infrastructure.value, fullMark: 10 },
     { subject: "Identity", value: scores.identity_sovereignty.value, fullMark: 10 },
   ];
+  return all.filter(d => d.value !== null) as RadarDataPoint[];
 }
 
-// Helper to calculate total from scores
+// Calculate total (nulls treated as 0 for backwards compat)
 export function calculateTotal(scores: Scores): number {
-  return (
-    scores.persistence.value +
-    scores.autonomy.value +
-    scores.cultural_impact.value +
-    scores.economic_reality.value +
-    scores.governance.value +
-    scores.tech_distinctiveness.value +
-    scores.narrative_coherence.value +
-    scores.economic_infrastructure.value +
-    scores.identity_sovereignty.value
-  );
+  return Object.values(scores).reduce((sum, s) => sum + (s.value ?? 0), 0);
+}
+
+// Calculate comparable score metrics
+export function calculateComparable(scores: Scores): {
+  score: number;
+  max: number;
+  pct: number;
+  coverage: number;
+} {
+  const scored = Object.values(scores).filter(s => s.value !== null);
+  const score = scored.reduce((sum, s) => sum + (s.value as number), 0);
+  const max = scored.length * 10;
+  return {
+    score,
+    max,
+    pct: max > 0 ? Math.round((score / max) * 100) : 0,
+    coverage: scored.length,
+  };
 }
 
 // Dimension metadata for UI rendering

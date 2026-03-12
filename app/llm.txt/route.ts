@@ -6,7 +6,7 @@ export async function GET() {
   const dimensions = Object.keys(DIMENSIONS) as DimensionKey[];
 
   const agentList = agents
-    .map((a) => `${a.name.toUpperCase()} (${a.total}/90) - ${a.category} - ${a.tagline}`)
+    .map((a) => `${a.name.toUpperCase()} (${a.comparable_score}/${a.comparable_max}, ${a.comparable_pct}%) [${a.index_tier.toUpperCase()}] - ${a.category} - ${a.network} - ${a.tagline}`)
     .join("\n");
 
   const dimensionList = dimensions

@@ -6,47 +6,57 @@
   "status": "Active",
   "category": "Autonomous Artist",
   "classification": "Generative Music AI",
+  "network": "Independent",
   "website": "https://aiva.ai",
   "scores": {
     "persistence": {
       "value": 10,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "autonomy": {
       "value": 5,
-      "confidence": "medium"
+      "confidence": "medium",
+      "method": "editorial"
     },
     "cultural_impact": {
       "value": 7,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "economic_reality": {
       "value": 7,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "governance": {
       "value": 3,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "tech_distinctiveness": {
       "value": 7,
-      "confidence": "medium"
+      "confidence": "medium",
+      "method": "editorial"
     },
     "narrative_coherence": {
       "value": 6,
-      "confidence": "medium"
+      "confidence": "medium",
+      "method": "editorial"
     },
     "economic_infrastructure": {
       "value": 1,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "identity_sovereignty": {
       "value": 0,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     }
   },
   "total": 46,
-  "curator_notes": "AIVA (Artificial Intelligence Virtual Artist) was one of the first AI systems to be officially recognized as a composer, registered with SACEM (French professional association of composers) in 2016. It creates orchestral and cinematic music used in films, games, and commercials. AIVA represents the 'corporate AI artist' model\u2014technically sophisticated, commercially successful, but operating as a tool/service rather than an autonomous cultural entity. Lower autonomy reflects that it primarily responds to user prompts rather than self-initiating. Lower governance reflects traditional corporate structure. Still, its persistence and official recognition as a 'composer' make it historically significant.",
+  "curator_notes": "AIVA (Artificial Intelligence Virtual Artist) was one of the first AI systems to be officially recognized as a composer, registered with SACEM (French professional association of composers) in 2016. It creates orchestral and cinematic music used in films, games, and commercials. AIVA represents the 'corporate AI artist' model—technically sophisticated, commercially successful, but operating as a tool/service rather than an autonomous cultural entity. Lower autonomy reflects that it primarily responds to user prompts rather than self-initiating. Lower governance reflects traditional corporate structure. Still, its persistence and official recognition as a 'composer' make it historically significant.",
   "score_rationale": {
     "persistence": "Operating since 2016, nearly 10 years of continuous operation. First AI registered as composer with SACEM.",
     "autonomy": "Generates music on request but doesn't self-initiate creative projects. Tool-like operation model.",
@@ -95,5 +105,6 @@
   "_review_flags": [
     "canonical_elder",
     "commercial_agent"
-  ]
+  ],
+  "index_tier": "indexed"
 }

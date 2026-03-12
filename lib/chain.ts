@@ -2,26 +2,16 @@
  * On-chain registration check via ERC-8004 SpiritRegistry on Base Mainnet.
  *
  * The mainnet SpiritRegistry uses uint256 agentId (not string spiritId).
- * We maintain a mapping from Spirit Index slugs to on-chain agentIds
- * for agents that have been registered.
+ * Agent ID mappings are loaded from data/registry-map.json (maintained by
+ * scripts/sync-registry.mjs) instead of a hardcoded constant.
  */
 
 import { createPublicClient, http, parseAbi } from "viem";
 import { base } from "viem/chains";
+import { getRegistryId } from "./registry";
 
 /** SpiritRegistry on Base Mainnet — deployed Feb 3, 2026 */
 export const REGISTRY_ADDRESS = "0xF2709ceF1Cf4893ed78D3220864428b32b12dFb9" as const;
-
-/**
- * Mapping from Spirit Index slug → on-chain agentId.
- * Updated as agents are registered via registerSpirit().
- * Agents not in this map return { registered: false }.
- */
-const KNOWN_AGENT_IDS: Record<string, number> = {
-  // Populated after canonical agent registration
-  // "abraham": 2,
-  // "solienne": 3,
-};
 
 const registryAbi = parseAbi([
   "function exists(uint256 agentId) view returns (bool)",
@@ -44,8 +34,8 @@ export interface RegistrationStatus {
 export async function checkRegistration(
   spiritId: string
 ): Promise<RegistrationStatus> {
-  // Look up known on-chain agentId for this slug
-  const agentId = KNOWN_AGENT_IDS[spiritId];
+  // Look up on-chain agentId from registry map (replaces hardcoded KNOWN_AGENT_IDS)
+  const agentId = getRegistryId(spiritId);
 
   if (agentId === undefined) {
     return { registered: false };

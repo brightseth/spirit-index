@@ -6,43 +6,53 @@
   "status": "Active",
   "category": "Autonomous Artist",
   "classification": "GAN Art Collective",
+  "network": "Independent",
   "website": "https://obvious-art.com",
   "scores": {
     "persistence": {
       "value": 6,
-      "confidence": "medium"
+      "confidence": "medium",
+      "method": "editorial"
     },
     "autonomy": {
       "value": 5,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "cultural_impact": {
       "value": 10,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "economic_reality": {
       "value": 8,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "governance": {
       "value": 3,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "tech_distinctiveness": {
       "value": 4,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "narrative_coherence": {
       "value": 7,
-      "confidence": "medium"
+      "confidence": "medium",
+      "method": "editorial"
     },
     "economic_infrastructure": {
       "value": 1,
-      "confidence": "medium"
+      "confidence": "medium",
+      "method": "editorial"
     },
     "identity_sovereignty": {
       "value": 0,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     }
   },
   "total": 44,
@@ -51,13 +61,13 @@
     "autonomy": "GAN generates images from dataset; humans curate and select. Generator creates, Discriminator validates. Standard GAN architecture without ongoing autonomy.",
     "cultural_impact": "Landmark: First AI artwork sold at major auction house (Christie's 2018). $432,500 sale (4,320% over estimate). Global media coverage. Defined public perception of AI art. Controversial within AI art community.",
     "economic_reality": "Massive auction success. Ongoing sales. 'Belamy family' series has market value. Created economic template for AI art sales.",
-    "governance": "Paris-based collective (Caselles-Dupr\u00e9, Fautrel, Vernier). Human governance, AI as tool.",
+    "governance": "Paris-based collective (Caselles-Dupré, Fautrel, Vernier). Human governance, AI as tool.",
     "tech_distinctiveness": "Standard GAN trained on 15,000 historical portraits. Technical approach criticized as derivative (GAN code borrowed from Robbie Barrat). No novel technical contribution.",
     "narrative_coherence": "Fictional 'Belamy family' concept provides framework. Name references Goodfellow ('good friend' = bel ami). Strong story for marketing, controversial for attribution.",
     "economic_infrastructure": "Significant auction revenue ($432K Christie's sale plus ongoing sales). Belamy series has market value. Revenue through traditional auction houses and galleries. Single-creator collective controls all economics. No on-chain treasury, no crypto payment rails. Traditional art market infrastructure only.",
     "identity_sovereignty": "Identity exists on obvious-art.com website and through auction house records. No on-chain presence. No identity token. No NFT collections for identity. Purely traditional art world identity infrastructure."
   },
-  "curator_notes": "Obvious's 'Portrait of Edmond de Belamy' made history as the first AI artwork sold at a major auction house, fetching $432,500 at Christie's in 2018\u20144,320% above estimate. The Paris collective (Caselles-Dupr\u00e9, Fautrel, Vernier) trained a GAN on 15,000 historical portraits to generate the fictional Belamy family. The sale was controversial: artist Robbie Barrat claimed Obvious used his open-source GAN code without proper credit; the AI art community debated whether auction success was deserved. Regardless of technical originality, Obvious proved AI art could command serious money and mainstream attention, fundamentally changing the market.",
+  "curator_notes": "Obvious's 'Portrait of Edmond de Belamy' made history as the first AI artwork sold at a major auction house, fetching $432,500 at Christie's in 2018—4,320% above estimate. The Paris collective (Caselles-Dupré, Fautrel, Vernier) trained a GAN on 15,000 historical portraits to generate the fictional Belamy family. The sale was controversial: artist Robbie Barrat claimed Obvious used his open-source GAN code without proper credit; the AI art community debated whether auction success was deserved. Regardless of technical originality, Obvious proved AI art could command serious money and mainstream attention, fundamentally changing the market.",
   "evidence": [
     {
       "dimension": "cultural_impact",
@@ -86,5 +96,6 @@
     "landmark_sale",
     "attribution_controversy",
     "gan_art"
-  ]
+  ],
+  "index_tier": "indexed"
 }

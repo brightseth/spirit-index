@@ -6,43 +6,53 @@
   "status": "Active",
   "category": "Agent Infrastructure",
   "classification": "Protocol/Platform",
+  "network": "Multi-chain",
   "website": "https://heyanon.ai",
   "scores": {
     "persistence": {
       "value": 3,
-      "confidence": "medium"
+      "confidence": "medium",
+      "method": "editorial"
     },
     "autonomy": {
       "value": 7,
-      "confidence": "medium"
+      "confidence": "medium",
+      "method": "editorial"
     },
     "cultural_impact": {
       "value": 6,
-      "confidence": "medium"
+      "confidence": "medium",
+      "method": "editorial"
     },
     "economic_reality": {
       "value": 6,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "governance": {
       "value": 5,
-      "confidence": "medium"
+      "confidence": "medium",
+      "method": "editorial"
     },
     "tech_distinctiveness": {
       "value": 7,
-      "confidence": "medium"
+      "confidence": "medium",
+      "method": "editorial"
     },
     "narrative_coherence": {
       "value": 7,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "economic_infrastructure": {
       "value": 3,
-      "confidence": "medium"
+      "confidence": "medium",
+      "method": "editorial"
     },
     "identity_sovereignty": {
       "value": 2,
-      "confidence": "medium"
+      "confidence": "medium",
+      "method": "editorial"
     }
   },
   "total": 46,
@@ -57,7 +67,7 @@
     "economic_infrastructure": "ANON token (~$15M market cap). DWF Labs strategic partnership ($20M fund). Revenue from protocol operations. AUTOMATE framework provides infrastructure for economic activity. Treasury exists but modest scale. Early-stage economic infrastructure on Ethereum/Solana.",
     "identity_sovereignty": "On-chain token presence on Solana. AUTOMATE framework provides some protocol-level identity. No agent-specific identity standard. Identity tied to token and heyanon.ai platform. DAAIOs vision includes agent identity but not yet implemented. Early and platform-dependent."
   },
-  "curator_notes": "HeyAnon is notable for coining 'DeFAI'\u2014the AI + DeFi convergence category\u2014through founder Daniele Sestagalli's 2024 article 'DeFAI and the Dawn of AI-Powered DAOs.' The protocol enables autonomous agents to manage wallets, execute complex DeFi strategies, and operate even when users are offline. The AUTOMATE framework allows developers to integrate new protocols, while the long-term vision includes DAAIOs where token holders set strategies and AI agents handle execution. The January 2025 DWF Labs partnership brought $20M in backing for the DeFAI space.",
+  "curator_notes": "HeyAnon is notable for coining 'DeFAI'—the AI + DeFi convergence category—through founder Daniele Sestagalli's 2024 article 'DeFAI and the Dawn of AI-Powered DAOs.' The protocol enables autonomous agents to manage wallets, execute complex DeFi strategies, and operate even when users are offline. The AUTOMATE framework allows developers to integrate new protocols, while the long-term vision includes DAAIOs where token holders set strategies and AI agents handle execution. The January 2025 DWF Labs partnership brought $20M in backing for the DeFAI space.",
   "evidence": [
     {
       "dimension": "cultural_impact",
@@ -85,5 +95,6 @@
   "_review_flags": [
     "defi_agent",
     "infrastructure_protocol"
-  ]
+  ],
+  "index_tier": "indexed"
 }

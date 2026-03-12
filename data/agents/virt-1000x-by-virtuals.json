@@ -1,0 +1,88 @@
+{
+  "id": "virt-1000x-by-virtuals",
+  "name": "1000x by Virtuals",
+  "tagline": "Virtuals Protocol agent -- 1000X",
+  "inception_date": "2024-12-13",
+  "status": "Active",
+  "category": "Token Agent",
+  "classification": "Virtuals Protocol Agent",
+  "network": "Virtuals Protocol",
+  "index_tier": "tracked",
+  "data_sources": [
+    {
+      "provider": "coingecko",
+      "coingecko_id": "1000x-by-virtuals",
+      "url": "https://www.coingecko.com/en/coins/1000x-by-virtuals",
+      "last_fetched": "2026-03-12"
+    }
+  ],
+  "last_auto_scored": "2026-03-12",
+  "website": "https://app.virtuals.io",
+  "scores": {
+    "persistence": {
+      "value": 5,
+      "confidence": "high",
+      "method": "auto"
+    },
+    "autonomy": {
+      "value": 6,
+      "confidence": "low",
+      "method": "auto"
+    },
+    "cultural_impact": {
+      "value": null,
+      "confidence": "low",
+      "method": "unscored"
+    },
+    "economic_reality": {
+      "value": 4,
+      "confidence": "medium",
+      "method": "auto"
+    },
+    "governance": {
+      "value": null,
+      "confidence": "low",
+      "method": "unscored"
+    },
+    "tech_distinctiveness": {
+      "value": null,
+      "confidence": "low",
+      "method": "unscored"
+    },
+    "narrative_coherence": {
+      "value": null,
+      "confidence": "low",
+      "method": "unscored"
+    },
+    "economic_infrastructure": {
+      "value": 5,
+      "confidence": "low",
+      "method": "auto"
+    },
+    "identity_sovereignty": {
+      "value": 1,
+      "confidence": "medium",
+      "method": "auto"
+    }
+  },
+  "total": 21,
+  "curator_notes": "Auto-tracked Virtuals Protocol agent. 1000x by Virtuals (1000X) has a market cap of $1.6M. This agent has not yet been editorially reviewed -- scores reflect automated assessment of on-chain and market data only.",
+  "evidence": [
+    {
+      "dimension": "economic_reality",
+      "claim": "Market cap: $1.6M, 24h volume: $0.0M",
+      "url": "https://www.coingecko.com/en/coins/1000x-by-virtuals"
+    }
+  ],
+  "score_history": [
+    {
+      "date": "2026-03-12",
+      "total": 21,
+      "reviewer": "auto_pipeline"
+    }
+  ],
+  "_review_flags": [
+    "auto_tracked",
+    "virtuals_protocol"
+  ]
+}

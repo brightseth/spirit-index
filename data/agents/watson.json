@@ -6,49 +6,59 @@
   "status": "Subsumed",
   "category": "Question Answering System",
   "classification": "Enterprise AI",
+  "network": "Independent",
   "website": "https://www.ibm.com/watson",
   "scores": {
     "persistence": {
       "value": 7,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "autonomy": {
       "value": 5,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "cultural_impact": {
       "value": 9,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "economic_reality": {
       "value": 6,
-      "confidence": "medium"
+      "confidence": "medium",
+      "method": "editorial"
     },
     "governance": {
       "value": 2,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "tech_distinctiveness": {
       "value": 7,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "narrative_coherence": {
       "value": 6,
-      "confidence": "medium"
+      "confidence": "medium",
+      "method": "editorial"
     },
     "economic_infrastructure": {
       "value": 0,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "identity_sovereignty": {
       "value": 0,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     }
   },
   "total": 42,
   "score_rationale": {
     "persistence": "Jeopardy victory 2011. Watson platform evolved through multiple iterations. Watson Health division sold 2022 for $1B. Core Watson services continue under IBM.",
-    "autonomy": "Autonomous question parsing and answer generation during Jeopardy. Not connected to internet\u2014operated on internal knowledge base. Limited ongoing autonomy as enterprise tool.",
+    "autonomy": "Autonomous question parsing and answer generation during Jeopardy. Not connected to internet—operated on internal knowledge base. Limited ongoing autonomy as enterprise tool.",
     "cultural_impact": "Landmark moment: First time Americans witnessed NLP AI live on television. Defeated Ken Jennings and Brad Rutter. Shaped public perception of AI capabilities. 'Watson' became shorthand for enterprise AI.",
     "economic_reality": "Significant IBM investment ($4B+ in Watson Health alone). Enterprise licensing and services. Watson Health sold for $1B (2022). Active commercial product but mixed financial results.",
     "governance": "IBM corporate governance. Research project became enterprise product. No external governance or community participation.",
@@ -84,5 +94,6 @@
   "_review_flags": [
     "historical_agent",
     "enterprise_ai"
-  ]
+  ],
+  "index_tier": "indexed"
 }

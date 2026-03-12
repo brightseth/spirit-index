@@ -10,12 +10,13 @@
 
 :root {
   /* Primary Palette - Inherited from Spirit Protocol, shifted darker */
-  --spirit-deep-blue: #150b6b;
-  --spirit-blue: #1c0f8a;
-  --spirit-blue-light: #2a1aa3;
+  --spirit-deep-blue: #0d0a2e;
+  --spirit-blue: #141040;
+  --spirit-blue-light: #1a1455;
 
   /* Accent - Neon Green (use sparingly) */
   --spirit-green: #00FF00;
+  --spirit-green-warm: #39FF14;
   --spirit-green-muted: #00FF0033;
   --spirit-green-dim: #00FF0066;
 
@@ -50,6 +51,10 @@
 /* Base Styles */
 html {
   background-color: var(--spirit-deep-blue);
+  background-image:
+    linear-gradient(rgba(0, 255, 0, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 0, 0.02) 1px, transparent 1px);
+  background-size: 40px 40px;
   color: var(--text-body);
 }
 
@@ -65,16 +70,17 @@ body {
 /* Masthead - No Logo, Typography Only */
 .masthead {
   padding: 2rem 0;
-  border-bottom: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--spirit-green-dim);
 }
 
 .masthead-title {
   font-family: var(--font-mono);
   font-size: 1.5rem;
   font-weight: 400;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.4em;
   text-transform: uppercase;
   color: var(--text-primary);
+  text-shadow: 0 0 40px rgba(0, 255, 0, 0.1);
   margin: 0;
 }
 
@@ -116,6 +122,10 @@ body {
   color: var(--text-primary);
 }
 
+.score-glow {
+  text-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+}
+
 /* Confidence Pips */
 .confidence-pip {
   display: inline-block;
@@ -152,6 +162,19 @@ body {
 .status-deceased .status-dot { background-color: var(--status-deceased); }
 .status-subsumed .status-dot { background-color: var(--status-subsumed); }
 .status-forked .status-dot { background-color: var(--status-forked); }
+
+/* Network Badge */
+.network-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid;
+}
 
 /* Archival Badge */
 .archival-badge {
@@ -200,13 +223,21 @@ body {
 .data-table th:hover { color: var(--spirit-green); }
 .data-table th.sorted { color: var(--spirit-green); }
 
+.data-table thead {
+  position: sticky;
+  top: 0;
+  background-color: var(--spirit-deep-blue);
+  z-index: 10;
+}
+
 .data-table td {
   padding: 0.75rem 1rem;
   border-bottom: 1px solid var(--border-subtle);
   vertical-align: middle;
 }
 
-.data-table tr:hover { background-color: var(--spirit-blue); }
+.data-table tr:nth-child(even) { background-color: rgba(0, 0, 0, 0.15); }
+.data-table tr:hover { background-color: var(--spirit-blue); border-left: 2px solid var(--spirit-green); }
 .data-table a { color: var(--text-primary); text-decoration: none; }
 .data-table a:hover { color: var(--spirit-green); }
 
@@ -304,6 +335,40 @@ a:hover { text-decoration: underline; }
 .nav-link:hover { color: var(--text-primary); text-decoration: none; }
 .nav-link.active { color: var(--spirit-green); }
 
+/* Network Chips */
+.network-chip {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.375rem 0.75rem;
+  border: 1px solid var(--border-default);
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.network-chip:hover {
+  border-color: var(--spirit-green-dim);
+  color: var(--text-primary);
+}
+
+.network-chip.active {
+  border-color: var(--spirit-green);
+  background: var(--spirit-green);
+  color: #000;
+}
+
+.network-chip .chip-count {
+  color: var(--text-dim);
+  margin-left: 0.25rem;
+}
+
+.network-chip.active .chip-count {
+  color: rgba(0, 0, 0, 0.6);
+}
+
 /* Dimension Bar */
 .dimension-bar {
   display: flex;
@@ -331,7 +396,7 @@ a:hover { text-decoration: underline; }
 
 .dimension-bar-fill {
   height: 100%;
-  background-color: var(--spirit-green);
+  background: linear-gradient(90deg, var(--spirit-green-dim), var(--spirit-green));
   transition: width 0.3s ease;
 }
 
@@ -410,6 +475,52 @@ details summary::before {
 
 details[open] summary::before {
   content: '−';
+}
+
+/* Page Transition */
+main {
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Tier indicators */
+.tier-badge {
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  padding: 0.125rem 0.5rem;
+  border: 1px solid;
+}
+
+.tier-indexed {
+  border-color: var(--spirit-green);
+  color: var(--spirit-green);
+}
+
+.tier-tracked {
+  border-color: var(--text-dim);
+  color: var(--text-dim);
+}
+
+/* Unscored dimension display */
+.score-unscored {
+  color: var(--text-dim);
+  opacity: 0.4;
+  font-style: normal;
+}
+
+/* Tracked agent row subtle treatment */
+.data-table tr.tracked-row {
+  opacity: 0.85;
+}
+
+.data-table tr.tracked-row:hover {
+  opacity: 1;
 }
 
 /* Responsive */

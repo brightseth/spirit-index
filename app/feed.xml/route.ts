@@ -22,15 +22,15 @@ export async function GET() {
     .sort((a, b) => b.date.getTime() - a.date.getTime())
     .map(({ agent, date }) => {
       const dimensionSummary = [
-        `Persistence: ${agent.scores.persistence.value}`,
-        `Autonomy: ${agent.scores.autonomy.value}`,
-        `Cultural Impact: ${agent.scores.cultural_impact.value}`,
-        `Economic Reality: ${agent.scores.economic_reality.value}`,
-        `Governance: ${agent.scores.governance.value}`,
-        `Tech: ${agent.scores.tech_distinctiveness.value}`,
-        `Narrative: ${agent.scores.narrative_coherence.value}`,
-        `Econ Infra: ${agent.scores.economic_infrastructure.value}`,
-        `Identity: ${agent.scores.identity_sovereignty.value}`,
+        `Persistence: ${agent.scores.persistence.value ?? '—'}`,
+        `Autonomy: ${agent.scores.autonomy.value ?? '—'}`,
+        `Cultural Impact: ${agent.scores.cultural_impact.value ?? '—'}`,
+        `Economic Reality: ${agent.scores.economic_reality.value ?? '—'}`,
+        `Governance: ${agent.scores.governance.value ?? '—'}`,
+        `Tech: ${agent.scores.tech_distinctiveness.value ?? '—'}`,
+        `Narrative: ${agent.scores.narrative_coherence.value ?? '—'}`,
+        `Econ Infra: ${agent.scores.economic_infrastructure.value ?? '—'}`,
+        `Identity: ${agent.scores.identity_sovereignty.value ?? '—'}`,
       ].join(' | ');
 
       return `

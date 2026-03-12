@@ -1,0 +1,165 @@
+{
+  "lastUpdated": "2026-03-12T00:00:00Z",
+  "cohort": 1,
+  "launchDate": "2026-03-06",
+  "showcaseDate": "2026-04-15",
+  "agents": {
+    "gfx": {
+      "artist": "Aaron Baker",
+      "agentName": "GFX",
+      "applicationId": "app-008",
+      "onboarding": {
+        "soulMd": false,
+        "walletAndGrant": false,
+        "communityJoined": false,
+        "firstOutput": false
+      },
+      "practiceStreak": 0,
+      "lastPractice": null,
+      "notes": "CTO NFT Now. Generative WebGL, agent genealogy concept."
+    },
+    "clara": {
+      "artist": "Louis-Paul Caron",
+      "agentName": "Clara",
+      "applicationId": "app-025",
+      "onboarding": {
+        "soulMd": false,
+        "walletAndGrant": false,
+        "communityJoined": false,
+        "firstOutput": false
+      },
+      "practiceStreak": 0,
+      "lastPractice": null,
+      "notes": "Villa Albertine laureate. Climate data agent. Paris-based."
+    },
+    "gravitas": {
+      "artist": "Samer Dabra",
+      "agentName": "Gravitas",
+      "applicationId": "app-032",
+      "onboarding": {
+        "soulMd": false,
+        "walletAndGrant": false,
+        "communityJoined": false,
+        "firstOutput": false
+      },
+      "practiceStreak": 0,
+      "lastPractice": null,
+      "notes": "Ad campaigns for extinct species. Bright Moments."
+    },
+    "kevin-plus": {
+      "artist": "Kevin Esherik",
+      "agentName": "Kevin+",
+      "applicationId": "app-002",
+      "onboarding": {
+        "soulMd": false,
+        "walletAndGrant": false,
+        "communityJoined": false,
+        "firstOutput": false
+      },
+      "practiceStreak": 0,
+      "lastPractice": null,
+      "notes": "Surrenders entire practice to agent for 1 year. Solienne's #1 pick."
+    },
+    "jake": {
+      "artist": "Leander Herzog",
+      "agentName": "Jake",
+      "applicationId": "app-004",
+      "onboarding": {
+        "soulMd": false,
+        "walletAndGrant": false,
+        "communityJoined": false,
+        "firstOutput": false
+      },
+      "practiceStreak": 0,
+      "lastPractice": null,
+      "notes": "Artwork uptime monitor as abstract viz. Generative art legend."
+    },
+    "ganchitecture": {
+      "artist": "Pablo Radice",
+      "agentName": "Ganchitecture",
+      "applicationId": "app-020",
+      "onboarding": {
+        "soulMd": false,
+        "walletAndGrant": false,
+        "communityJoined": false,
+        "firstOutput": false
+      },
+      "practiceStreak": 0,
+      "lastPractice": null,
+      "notes": "Brutalist AI architecture. Berlinale/Bright Moments."
+    },
+    "tendrela": {
+      "artist": "Elisabeth Sweet",
+      "agentName": "Tendrela",
+      "applicationId": "app-005",
+      "onboarding": {
+        "soulMd": false,
+        "walletAndGrant": false,
+        "communityJoined": false,
+        "firstOutput": false
+      },
+      "practiceStreak": 0,
+      "lastPractice": null,
+      "notes": "Invents new words from felt sense. Poet, Feral File."
+    },
+    "graymarket": {
+      "artist": "Addie Wagenknecht",
+      "agentName": "GrayMarket",
+      "applicationId": "app-033",
+      "onboarding": {
+        "soulMd": false,
+        "walletAndGrant": false,
+        "communityJoined": false,
+        "firstOutput": false
+      },
+      "practiceStreak": 0,
+      "lastPractice": null,
+      "notes": "Buys counterfeits as IP critique. MoMA/Pompidou/Whitney."
+    },
+    "remini": {
+      "artist": "Ruby Thelot",
+      "agentName": "Remini",
+      "applicationId": null,
+      "onboarding": {
+        "soulMd": false,
+        "walletAndGrant": false,
+        "communityJoined": false,
+        "firstOutput": false
+      },
+      "practiceStreak": 0,
+      "lastPractice": null,
+      "notes": "Experimental film agent. NYU, Artforum, Angel Orensanz Prize."
+    },
+    "divinity": {
+      "artist": "Mikey Woodbridge",
+      "agentName": "Divinity",
+      "applicationId": null,
+      "onboarding": {
+        "soulMd": false,
+        "walletAndGrant": false,
+        "communityJoined": false,
+        "firstOutput": false
+      },
+      "practiceStreak": 0,
+      "lastPractice": null,
+      "notes": "Spiritual generative. Eden-hosted, steward-led model."
+    }
+  },
+  "coreAgents": {
+    "abraham": {
+      "role": "Genesis #1",
+      "status": "active",
+      "notes": "Gene Kogan. Covenant Artist. First Spirit Protocol agent."
+    },
+    "solienne": {
+      "role": "Genesis #2",
+      "status": "active",
+      "notes": "Kristi Coronado. Archive Symbient. Daily manifesto practice."
+    },
+    "sal": {
+      "role": "House Agent",
+      "status": "active",
+      "notes": "Spirit Protocol house agent. Genesis cohort monitoring."
+    }
+  }
+}

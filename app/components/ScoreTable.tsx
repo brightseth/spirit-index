@@ -22,7 +22,7 @@ export function ScoreTable({ scores, total, layout = 'vertical' }: ScoreTablePro
       <div className="flex gap-4 items-end">
         {dimensions.map((dim) => (
           <div key={dim} className="text-center">
-            <div className="score-value">{scores[dim].value}</div>
+            <div className="score-value">{scores[dim].value ?? '—'}</div>
             <div className="score-label">{DIMENSIONS[dim].shortLabel}</div>
             <ConfidenceIndicator confidence={scores[dim].confidence} />
           </div>

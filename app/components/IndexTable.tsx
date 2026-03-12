@@ -3,15 +3,23 @@
 import { useState, useMemo } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { Agent, DimensionKey, DIMENSIONS } from "@/lib/types";
+import { Agent, DimensionKey, DIMENSIONS, NETWORKS, NetworkAffiliation, IndexTier } from "@/lib/types";
 
-interface Props {
-  agents: Agent[];
+interface AgentWithComparable extends Agent {
+  scoring_coverage: number;
+  comparable_score: number;
+  comparable_max: number;
+  comparable_pct: number;
 }
 
-type SortKey = DimensionKey | "name" | "total" | "inception_date";
+interface Props {
+  agents: AgentWithComparable[];
+}
 
-function scoreClass(value: number): string {
+type SortKey = DimensionKey | "name" | "total" | "inception_date" | "network";
+
+function scoreClass(value: number | null): string {
+  if (value === null) return "text-dim";
   if (value >= 9) return "text-green font-bold";
   if (value >= 7) return "text-green";
   if (value >= 5) return "text-muted";
@@ -23,6 +31,8 @@ export function IndexTable({ agents }: Props) {
   const router = useRouter();
   const [search, setSearch] = useState("");
   const [statusFilter, setStatusFilter] = useState<string>("all");
+  const [networkFilter, setNetworkFilter] = useState<string>("all");
+  const [tierFilter, setTierFilter] = useState<string>("all");
   const [sortBy, setSortBy] = useState<SortKey>("total");
   const [sortDesc, setSortDesc] = useState(true);
   const [hoveredHeader, setHoveredHeader] = useState<string | null>(null);
@@ -30,6 +40,22 @@ export function IndexTable({ agents }: Props) {
   const statuses = useMemo(() => {
     const unique = new Set(agents.map((a) => a.status));
     return Array.from(unique);
+  }, [agents]);
+
+  const networkCounts = useMemo(() => {
+    const counts: Record<string, number> = {};
+    for (const a of agents) {
+      counts[a.network] = (counts[a.network] || 0) + 1;
+    }
+    return counts;
+  }, [agents]);
+
+  const tierCounts = useMemo(() => {
+    const counts: Record<string, number> = { indexed: 0, tracked: 0 };
+    for (const a of agents) {
+      counts[a.index_tier] = (counts[a.index_tier] || 0) + 1;
+    }
+    return counts;
   }, [agents]);
 
   const filteredAgents = useMemo(() => {
@@ -51,6 +77,16 @@ export function IndexTable({ agents }: Props) {
       result = result.filter((a) => a.status === statusFilter);
     }
 
+    // Network filter
+    if (networkFilter !== "all") {
+      result = result.filter((a) => a.network === networkFilter);
+    }
+
+    // Tier filter
+    if (tierFilter !== "all") {
+      result = result.filter((a) => a.index_tier === tierFilter);
+    }
+
     // Sort
     result.sort((a, b) => {
       let aVal: number | string;
@@ -59,15 +95,18 @@ export function IndexTable({ agents }: Props) {
       if (sortBy === "name") {
         aVal = a.name.toLowerCase();
         bVal = b.name.toLowerCase();
+      } else if (sortBy === "network") {
+        aVal = a.network.toLowerCase();
+        bVal = b.network.toLowerCase();
       } else if (sortBy === "total") {
-        aVal = a.total;
-        bVal = b.total;
+        aVal = a.comparable_pct;
+        bVal = b.comparable_pct;
       } else if (sortBy === "inception_date") {
         aVal = a.inception_date;
         bVal = b.inception_date;
       } else {
-        aVal = a.scores[sortBy].value;
-        bVal = b.scores[sortBy].value;
+        aVal = a.scores[sortBy].value ?? 0;
+        bVal = b.scores[sortBy].value ?? 0;
       }
 
       if (aVal < bVal) return sortDesc ? 1 : -1;
@@ -76,7 +115,7 @@ export function IndexTable({ agents }: Props) {
     });
 
     return result;
-  }, [agents, search, statusFilter, sortBy, sortDesc]);
+  }, [agents, search, statusFilter, networkFilter, tierFilter, sortBy, sortDesc]);
 
   const handleSort = (key: SortKey) => {
     if (sortBy === key) {
@@ -86,6 +125,47 @@ export function IndexTable({ agents }: Props) {
       setSortDesc(true);
     }
   };
+
+  const networkInsight = useMemo(() => {
+    if (networkFilter === "all") return null;
+    const networkAgents = agents.filter((a) => a.network === networkFilter);
+    if (networkAgents.length === 0) return null;
+
+    const dimKeys = Object.keys(DIMENSIONS) as DimensionKey[];
+
+    // Compute per-dimension averages for the selected network
+    const networkAvgs: Record<DimensionKey, number> = {} as Record<DimensionKey, number>;
+    const overallAvgs: Record<DimensionKey, number> = {} as Record<DimensionKey, number>;
+
+    for (const dk of dimKeys) {
+      const netScored = networkAgents.filter(a => a.scores[dk].value !== null);
+      const allScored = agents.filter(a => a.scores[dk].value !== null);
+      networkAvgs[dk] = netScored.length > 0
+        ? netScored.reduce((sum, a) => sum + (a.scores[dk].value as number), 0) / netScored.length
+        : 0;
+      overallAvgs[dk] = allScored.length > 0
+        ? allScored.reduce((sum, a) => sum + (a.scores[dk].value as number), 0) / allScored.length
+        : 0;
+    }
+
+    // Find the dimension with the largest absolute deviation
+    let maxDev = 0;
+    let maxDim: DimensionKey = dimKeys[0];
+    for (const dk of dimKeys) {
+      const dev = Math.abs(networkAvgs[dk] - overallAvgs[dk]);
+      if (dev > maxDev) {
+        maxDev = dev;
+        maxDim = dk;
+      }
+    }
+
+    return {
+      network: NETWORKS[networkFilter as NetworkAffiliation].label,
+      dimension: DIMENSIONS[maxDim].label,
+      networkAvg: networkAvgs[maxDim].toFixed(1),
+      overallAvg: overallAvgs[maxDim].toFixed(1),
+    };
+  }, [agents, networkFilter]);
 
   const SortHeader = ({ column, label }: { column: SortKey; label: string }) => {
     const isDimension = column in DIMENSIONS;
@@ -139,6 +219,67 @@ export function IndexTable({ agents }: Props) {
         </select>
       </div>
 
+      {/* Network filter chips */}
+      <div className="flex flex-wrap gap-2 mb-4">
+        <button
+          onClick={() => setNetworkFilter("all")}
+          className={`px-3 py-1 text-xs uppercase tracking-wider font-mono border transition-colors ${
+            networkFilter === "all"
+              ? "border-[var(--spirit-green)] text-black bg-[var(--spirit-green)]"
+              : "border-[var(--border-default)] text-[var(--text-muted)] bg-transparent hover:border-[var(--spirit-green-dim)] hover:text-[var(--text-primary)]"
+          }`}
+        >
+          All ({agents.length})
+        </button>
+        {(Object.keys(NETWORKS) as NetworkAffiliation[]).map((net) => {
+          const count = networkCounts[net] || 0;
+          if (count === 0) return null;
+          const isSelected = networkFilter === net;
+          return (
+            <button
+              key={net}
+              onClick={() => setNetworkFilter(net)}
+              className={`px-3 py-1 text-xs uppercase tracking-wider font-mono border transition-colors ${
+                isSelected
+                  ? "border-[var(--spirit-green)] text-black bg-[var(--spirit-green)]"
+                  : "border-[var(--border-default)] text-[var(--text-muted)] bg-transparent hover:border-[var(--spirit-green-dim)] hover:text-[var(--text-primary)]"
+              }`}
+            >
+              {NETWORKS[net].shortLabel} ({count})
+            </button>
+          );
+        })}
+      </div>
+
+      {/* Tier filter chips */}
+      <div className="flex flex-wrap gap-2 mb-4">
+        {(["all", "indexed", "tracked"] as const).map((tier) => {
+          const label = tier === "all" ? "All" : tier === "indexed" ? "Indexed" : "Tracked";
+          const count = tier === "all" ? agents.length : tierCounts[tier] || 0;
+          const isSelected = tierFilter === tier;
+          return (
+            <button
+              key={tier}
+              onClick={() => setTierFilter(tier)}
+              className={`px-3 py-1 text-xs uppercase tracking-wider font-mono border transition-colors ${
+                isSelected
+                  ? "border-[var(--spirit-green)] text-black bg-[var(--spirit-green)]"
+                  : "border-[var(--border-default)] text-[var(--text-muted)] bg-transparent hover:border-[var(--spirit-green-dim)] hover:text-[var(--text-primary)]"
+              }`}
+            >
+              {label} ({count})
+            </button>
+          );
+        })}
+      </div>
+
+      {/* Network insight */}
+      {networkInsight && (
+        <p className="text-xs font-mono text-[var(--text-dim)] mb-4">
+          {networkInsight.network} agents average {networkInsight.networkAvg}/10 on {networkInsight.dimension} (cross-network avg: {networkInsight.overallAvg})
+        </p>
+      )}
+
       {/* Results count */}
       <p className="text-dim text-sm mb-4">
         Showing {filteredAgents.length} of {agents.length} entities
@@ -152,6 +293,7 @@ export function IndexTable({ agents }: Props) {
               <SortHeader column="name" label="Name" />
               <th>Status</th>
               <th>Category</th>
+              <SortHeader column="network" label="NET" />
               <SortHeader column="persistence" label="PER" />
               <SortHeader column="autonomy" label="AUT" />
               <SortHeader column="cultural_impact" label="IMP" />
@@ -165,41 +307,65 @@ export function IndexTable({ agents }: Props) {
             </tr>
           </thead>
           <tbody>
-            {filteredAgents.map((agent) => (
-              <tr
-                key={agent.id}
-                onClick={() => router.push(`/${agent.id}`)}
-                className="cursor-pointer"
-              >
-                <td>
-                  <Link href={`/${agent.id}`} className="font-medium" onClick={(e) => e.stopPropagation()}>
-                    {agent.name}
-                  </Link>
-                  {agent.archival_status && (
-                    <span className="ml-2 text-dim text-xs">†</span>
-                  )}
-                </td>
-                <td>
-                  <span
-                    className={`status-badge status-${agent.status.toLowerCase()}`}
-                  >
-                    <span className="status-dot" />
-                    {agent.status}
-                  </span>
-                </td>
-                <td className="text-muted">{agent.category}</td>
-                <td className={scoreClass(agent.scores.persistence.value)}>{agent.scores.persistence.value}</td>
-                <td className={scoreClass(agent.scores.autonomy.value)}>{agent.scores.autonomy.value}</td>
-                <td className={scoreClass(agent.scores.cultural_impact.value)}>{agent.scores.cultural_impact.value}</td>
-                <td className={scoreClass(agent.scores.economic_reality.value)}>{agent.scores.economic_reality.value}</td>
-                <td className={scoreClass(agent.scores.governance.value)}>{agent.scores.governance.value}</td>
-                <td className={scoreClass(agent.scores.tech_distinctiveness.value)}>{agent.scores.tech_distinctiveness.value}</td>
-                <td className={scoreClass(agent.scores.narrative_coherence.value)}>{agent.scores.narrative_coherence.value}</td>
-                <td className={scoreClass(agent.scores.economic_infrastructure.value)}>{agent.scores.economic_infrastructure.value}</td>
-                <td className={scoreClass(agent.scores.identity_sovereignty.value)}>{agent.scores.identity_sovereignty.value}</td>
-                <td className="font-bold">{agent.total}/90</td>
-              </tr>
-            ))}
+            {filteredAgents.map((agent) => {
+              const isTracked = agent.index_tier === "tracked";
+              const dimKeys: DimensionKey[] = [
+                "persistence", "autonomy", "cultural_impact", "economic_reality",
+                "governance", "tech_distinctiveness", "narrative_coherence",
+                "economic_infrastructure", "identity_sovereignty"
+              ];
+
+              return (
+                <tr
+                  key={agent.id}
+                  onClick={() => router.push(`/${agent.id}`)}
+                  className={`cursor-pointer ${isTracked ? "tracked-row" : ""}`}
+                >
+                  <td>
+                    <Link href={`/${agent.id}`} className="font-medium" onClick={(e) => e.stopPropagation()}>
+                      {agent.name}
+                    </Link>
+                    {agent.archival_status && (
+                      <span className="ml-2 text-dim text-xs">&dagger;</span>
+                    )}
+                  </td>
+                  <td>
+                    <span
+                      className={`status-badge status-${agent.status.toLowerCase()}`}
+                    >
+                      <span className="status-dot" />
+                      {agent.status}
+                    </span>
+                  </td>
+                  <td className="text-muted">{agent.category}</td>
+                  <td>
+                    <span
+                      className="text-xs font-mono"
+                      style={{ color: NETWORKS[agent.network]?.color }}
+                    >
+                      {NETWORKS[agent.network]?.shortLabel ?? agent.network}
+                    </span>
+                  </td>
+                  {dimKeys.map((dk) => {
+                    const val = agent.scores[dk].value;
+                    return (
+                      <td
+                        key={dk}
+                        className={val === null ? "score-unscored" : scoreClass(val)}
+                      >
+                        {val === null ? "--" : val}
+                      </td>
+                    );
+                  })}
+                  <td className="font-bold">
+                    <span className={isTracked ? "text-dim" : "text-green"}>
+                      {agent.comparable_score}/{agent.comparable_max}
+                    </span>
+                    <span className="text-dim text-xs ml-1">{agent.comparable_pct}%</span>
+                  </td>
+                </tr>
+              );
+            })}
           </tbody>
         </table>
       </div>

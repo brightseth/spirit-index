@@ -3,9 +3,11 @@
  *
  * GET /api/agents - Returns all indexed agents
  * Query params:
- *   - sort: 'total' | 'persistence' | 'autonomy' | 'cultural_impact' | 'economic_reality' | 'governance' | 'tech_distinctiveness' | 'narrative_coherence' | 'name' | 'inception_date'
+ *   - sort: 'total' | 'comparable_pct' | 'persistence' | 'autonomy' | 'cultural_impact' | 'economic_reality' | 'governance' | 'tech_distinctiveness' | 'narrative_coherence' | 'name' | 'inception_date'
  *   - status: 'Active' | 'Dormant' | 'Deceased' | 'Subsumed' | 'Forked'
+ *   - tier: 'indexed' | 'tracked'
  *   - category: filter by category
+ *   - network: filter by network affiliation (e.g., 'Spirit Protocol', 'Virtuals Protocol', 'Independent')
  *   - limit: number of results (default: all)
  *   - fields: comma-separated list of fields to include (default: all)
  */
@@ -20,7 +22,9 @@ export async function GET(request: NextRequest) {
   // Parse query parameters
   const sort = searchParams.get('sort') || 'total';
   const status = searchParams.get('status');
+  const tier = searchParams.get('tier');
   const category = searchParams.get('category');
+  const network = searchParams.get('network');
   const limit = searchParams.get('limit');
   const fields = searchParams.get('fields');
 
@@ -29,7 +33,7 @@ export async function GET(request: NextRequest) {
     let agents: Agent[];
 
     const validSortFields = [
-      'total', 'persistence', 'autonomy', 'cultural_impact',
+      'total', 'comparable_pct', 'persistence', 'autonomy', 'cultural_impact',
       'economic_reality', 'governance', 'tech_distinctiveness',
       'narrative_coherence', 'economic_infrastructure',
       'identity_sovereignty', 'name', 'inception_date'
@@ -41,15 +45,30 @@ export async function GET(request: NextRequest) {
       agents = await getAllAgents();
     }
 
+    // Keep a reference to all agents for meta counts
+    const allAgents = agents;
+
     // Filter by status
     if (status) {
       agents = agents.filter(a => a.status.toLowerCase() === status.toLowerCase());
+    }
+
+    // Filter by tier
+    if (tier) {
+      agents = agents.filter(a => a.index_tier === tier);
     }
 
     // Filter by category
     if (category) {
       agents = agents.filter(a =>
         a.category.toLowerCase().includes(category.toLowerCase())
+      );
+    }
+
+    // Filter by network
+    if (network) {
+      agents = agents.filter(a =>
+        a.network.toLowerCase() === network.toLowerCase()
       );
     }
 
@@ -76,6 +95,8 @@ export async function GET(request: NextRequest) {
     const response = {
       meta: {
         total: agents.length,
+        indexed: allAgents.filter(a => a.index_tier === 'indexed').length,
+        tracked: allAgents.filter(a => a.index_tier === 'tracked').length,
         sort,
         generated_at: new Date().toISOString(),
         api_version: 'v1',

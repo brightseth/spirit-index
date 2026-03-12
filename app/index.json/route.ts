@@ -31,6 +31,7 @@ export async function GET() {
       tagline: a.tagline,
       status: a.status,
       category: a.category,
+      network: a.network,
       inception_date: a.inception_date,
       website: a.website,
       scores: Object.fromEntries(

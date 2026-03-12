@@ -1,0 +1,88 @@
+{
+  "id": "virt-dessalinesai-by-virtuals",
+  "name": "DessalinesAI by Virtuals",
+  "tagline": "Virtuals Protocol agent -- DESSAI",
+  "inception_date": "2025-03-24",
+  "status": "Active",
+  "category": "Token Agent",
+  "classification": "Virtuals Protocol Agent",
+  "network": "Virtuals Protocol",
+  "index_tier": "tracked",
+  "data_sources": [
+    {
+      "provider": "coingecko",
+      "coingecko_id": "dessalinesai-by-virtuals",
+      "url": "https://www.coingecko.com/en/coins/dessalinesai-by-virtuals",
+      "last_fetched": "2026-03-12"
+    }
+  ],
+  "last_auto_scored": "2026-03-12",
+  "website": "https://app.virtuals.io",
+  "scores": {
+    "persistence": {
+      "value": 4,
+      "confidence": "high",
+      "method": "auto"
+    },
+    "autonomy": {
+      "value": 6,
+      "confidence": "low",
+      "method": "auto"
+    },
+    "cultural_impact": {
+      "value": null,
+      "confidence": "low",
+      "method": "unscored"
+    },
+    "economic_reality": {
+      "value": 2,
+      "confidence": "medium",
+      "method": "auto"
+    },
+    "governance": {
+      "value": null,
+      "confidence": "low",
+      "method": "unscored"
+    },
+    "tech_distinctiveness": {
+      "value": null,
+      "confidence": "low",
+      "method": "unscored"
+    },
+    "narrative_coherence": {
+      "value": null,
+      "confidence": "low",
+      "method": "unscored"
+    },
+    "economic_infrastructure": {
+      "value": 4,
+      "confidence": "low",
+      "method": "auto"
+    },
+    "identity_sovereignty": {
+      "value": 1,
+      "confidence": "medium",
+      "method": "auto"
+    }
+  },
+  "total": 17,
+  "curator_notes": "Auto-tracked Virtuals Protocol agent. DessalinesAI by Virtuals (DESSAI) has a market cap of $0.4M. This agent has not yet been editorially reviewed -- scores reflect automated assessment of on-chain and market data only.",
+  "evidence": [
+    {
+      "dimension": "economic_reality",
+      "claim": "Market cap: $0.4M, 24h volume: $0.0M",
+      "url": "https://www.coingecko.com/en/coins/dessalinesai-by-virtuals"
+    }
+  ],
+  "score_history": [
+    {
+      "date": "2026-03-12",
+      "total": 17,
+      "reviewer": "auto_pipeline"
+    }
+  ],
+  "_review_flags": [
+    "auto_tracked",
+    "virtuals_protocol"
+  ]
+}

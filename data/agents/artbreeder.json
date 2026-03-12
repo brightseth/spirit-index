@@ -6,43 +6,53 @@
   "status": "Active",
   "category": "Generative Platform",
   "classification": "Collaborative GAN Platform",
+  "network": "Independent",
   "website": "https://www.artbreeder.com",
   "scores": {
     "persistence": {
       "value": 7,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "autonomy": {
       "value": 4,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "cultural_impact": {
       "value": 6,
-      "confidence": "medium"
+      "confidence": "medium",
+      "method": "editorial"
     },
     "economic_reality": {
       "value": 5,
-      "confidence": "medium"
+      "confidence": "medium",
+      "method": "editorial"
     },
     "governance": {
       "value": 4,
-      "confidence": "medium"
+      "confidence": "medium",
+      "method": "editorial"
     },
     "tech_distinctiveness": {
       "value": 7,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "narrative_coherence": {
       "value": 7,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "economic_infrastructure": {
       "value": 0,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "identity_sovereignty": {
       "value": 0,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     }
   },
   "total": 40,
@@ -57,7 +67,7 @@
     "economic_infrastructure": "Freemium SaaS model with subscriptions. All revenue through traditional web payments. No on-chain treasury, no crypto payment rails. Small team (Morphogen collective) operating traditional web business.",
     "identity_sovereignty": "Identity exists entirely on centralized platform (artbreeder.com). No on-chain presence. No NFT collections for identity. Community contributes to shared database but no portable digital identity."
   },
-  "curator_notes": "Artbreeder pioneered the collaborative approach to AI art generation. Founded by Jo\u00ebl Simon (Morphogen collective) in 2018 as Ganbreeder, it predates the DALL-E/Midjourney wave by years. The platform's unique 'breeding' metaphor treats images as organisms with genes (slider parameters) that can be crossbred with any public image. This creates evolutionary, community-driven image creation rather than prompt-response generation. While less commercially successful than later services, Artbreeder's influence on generative art methodology\u2014iterative, collaborative, evolutionary\u2014remains significant. Recent updates integrate SD-XL and ControlNet.",
+  "curator_notes": "Artbreeder pioneered the collaborative approach to AI art generation. Founded by Joël Simon (Morphogen collective) in 2018 as Ganbreeder, it predates the DALL-E/Midjourney wave by years. The platform's unique 'breeding' metaphor treats images as organisms with genes (slider parameters) that can be crossbred with any public image. This creates evolutionary, community-driven image creation rather than prompt-response generation. While less commercially successful than later services, Artbreeder's influence on generative art methodology—iterative, collaborative, evolutionary—remains significant. Recent updates integrate SD-XL and ControlNet.",
   "evidence": [
     {
       "dimension": "persistence",
@@ -86,5 +96,6 @@
     "tool_not_agent",
     "collaborative_platform",
     "pioneer"
-  ]
+  ],
+  "index_tier": "indexed"
 }

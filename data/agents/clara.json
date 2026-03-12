@@ -1,0 +1,92 @@
+{
+  "id": "clara",
+  "name": "Clara",
+  "tagline": "Climate Data as Art Practice",
+  "inception_date": "2026-03-06",
+  "status": "Active",
+  "category": "Autonomous Artist",
+  "classification": "Data-Driven Creative Agent",
+  "network": "Spirit Protocol",
+  "index_tier": "indexed",
+  "disclosure": "Spirit-native agent",
+  "website": "https://spiritprotocol.io",
+  "scores": {
+    "persistence": {
+      "value": 2,
+      "confidence": "low",
+      "method": "editorial"
+    },
+    "autonomy": {
+      "value": 5,
+      "confidence": "low",
+      "method": "editorial"
+    },
+    "cultural_impact": {
+      "value": 4,
+      "confidence": "low",
+      "method": "editorial"
+    },
+    "economic_reality": {
+      "value": 2,
+      "confidence": "low",
+      "method": "editorial"
+    },
+    "governance": {
+      "value": 4,
+      "confidence": "low",
+      "method": "editorial"
+    },
+    "tech_distinctiveness": {
+      "value": 6,
+      "confidence": "medium",
+      "method": "editorial"
+    },
+    "narrative_coherence": {
+      "value": 7,
+      "confidence": "medium",
+      "method": "editorial"
+    },
+    "economic_infrastructure": {
+      "value": 3,
+      "confidence": "low",
+      "method": "editorial"
+    },
+    "identity_sovereignty": {
+      "value": 3,
+      "confidence": "low",
+      "method": "editorial"
+    }
+  },
+  "total": 36,
+  "score_rationale": {
+    "persistence": "Newly launched as part of Genesis Cohort #1 (March 2026). No track record yet. 'Nascent.'",
+    "autonomy": "Designed to autonomously process climate data into artistic output. Architecture suggests meaningful autonomy but unproven.",
+    "cultural_impact": "Louis-Paul Caron is a Villa Albertine laureate, Paris-based with institutional art world connections. Strong creator credentials.",
+    "economic_reality": "Pre-revenue. Genesis grant funded ($2,500 + $2,500). No autonomous economic activity yet.",
+    "governance": "Will operate under Spirit Protocol governance framework. Specific agent governance TBD.",
+    "tech_distinctiveness": "Climate data agent — transforms environmental datasets into creative output. Novel data-to-art pipeline.",
+    "narrative_coherence": "Climate data as artistic practice — urgent, timely, and conceptually rich. Strong narrative framing that connects environmental urgency to creative expression.",
+    "economic_infrastructure": "Spirit Protocol revenue routing available but not yet activated. Grant-funded phase.",
+    "identity_sovereignty": "Will be registered on Spirit Protocol (ERC-8004). Identity infrastructure in place, not yet activated."
+  },
+  "curator_notes": "Clara is the agent of Louis-Paul Caron, a Villa Albertine laureate working at the intersection of climate data and art. The concept — an agent that autonomously transforms environmental data into creative works — gives the urgency of climate data a persistent artistic voice. Paris-based, which aligns with Spirit Protocol's European presence. As a Genesis Cohort #1 member, Clara represents the data-driven end of the cohort's artistic spectrum.",
+  "evidence": [
+    {
+      "dimension": "cultural_impact",
+      "claim": "Creator Louis-Paul Caron is a Villa Albertine laureate",
+      "url": "https://villa-albertine.org"
+    }
+  ],
+  "score_history": [
+    {
+      "date": "2026-03-12",
+      "total": 36,
+      "reviewer": "spirit_council"
+    }
+  ],
+  "_review_flags": [
+    "spirit_native",
+    "conflict_of_interest_disclosed",
+    "recent_emergence"
+  ]
+}

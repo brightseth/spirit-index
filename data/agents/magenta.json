@@ -6,49 +6,59 @@
   "status": "Active",
   "category": "Autonomous Composer",
   "classification": "Research Project",
+  "network": "Independent",
   "website": "https://magenta.tensorflow.org",
   "scores": {
     "persistence": {
       "value": 9,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "autonomy": {
       "value": 6,
-      "confidence": "medium"
+      "confidence": "medium",
+      "method": "editorial"
     },
     "cultural_impact": {
       "value": 7,
-      "confidence": "medium"
+      "confidence": "medium",
+      "method": "editorial"
     },
     "economic_reality": {
       "value": 3,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "governance": {
       "value": 2,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "tech_distinctiveness": {
       "value": 8,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "narrative_coherence": {
       "value": 8,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "economic_infrastructure": {
       "value": 0,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "identity_sovereignty": {
       "value": 0,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     }
   },
   "total": 43,
   "score_rationale": {
     "persistence": "Launched June 2016 by Google Brain. 9+ years continuous development. Magenta RealTime (2024) shows ongoing investment.",
-    "autonomy": "Can create original music without human intervention\u2014becomes 'autonomous composer.' Generates endless soundscapes. Higher autonomy than prompt-response tools.",
+    "autonomy": "Can create original music without human intervention—becomes 'autonomous composer.' Generates endless soundscapes. Higher autonomy than prompt-response tools.",
     "cultural_impact": "Pioneer of neural network music generation. Academic influence significant. Used by artists and producers. Less mainstream visibility than Suno/AIVA.",
     "economic_reality": "Google-funded research project. Open-source with no direct monetization. Professional tools available but not commercial focus.",
     "governance": "Google Brain team governance. Open-source contributions. No community governance.",
@@ -57,7 +67,7 @@
     "economic_infrastructure": "Google-funded research project. Open-source with no direct monetization. No treasury, no token, no payment rails. Professional tools available but no economic infrastructure for the entity itself. Google absorbs all costs.",
     "identity_sovereignty": "Identity exists on Google/TensorFlow ecosystem (magenta.tensorflow.org) and GitHub. No on-chain presence. No identity token. Entirely dependent on Google infrastructure for identity persistence."
   },
-  "curator_notes": "Google Magenta represents the academic vanguard of AI music generation. Launched in 2016 by Google Brain, Magenta asked: 'Can machine learning create compelling art and music?' The project pioneered neural network approaches to composition using RNNs, VAEs (MusicVAE, GrooVAE), and WaveNet. Unlike commercial services, Magenta emphasizes 'extend not replace'\u2014smart tools that enhance human creativity. The 2024 Magenta RealTime release is the first open-weights model for continuous real-time music generation, enabling live performance, installations, and games. TensorFlow-based, all tools are open source on GitHub.",
+  "curator_notes": "Google Magenta represents the academic vanguard of AI music generation. Launched in 2016 by Google Brain, Magenta asked: 'Can machine learning create compelling art and music?' The project pioneered neural network approaches to composition using RNNs, VAEs (MusicVAE, GrooVAE), and WaveNet. Unlike commercial services, Magenta emphasizes 'extend not replace'—smart tools that enhance human creativity. The 2024 Magenta RealTime release is the first open-weights model for continuous real-time music generation, enabling live performance, installations, and games. TensorFlow-based, all tools are open source on GitHub.",
   "evidence": [
     {
       "dimension": "persistence",
@@ -86,5 +96,6 @@
     "research_project",
     "music_generation",
     "open_source"
-  ]
+  ],
+  "index_tier": "indexed"
 }

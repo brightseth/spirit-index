@@ -37,7 +37,11 @@ export default async function DimensionLeaderboard({ params }: Props) {
 
   const dimKey = dimension as DimensionKey;
   const meta = DIMENSIONS[dimKey];
-  const agents = await getAgentsSortedBy(dimKey);
+  const allAgents = await getAgentsSortedBy(dimKey);
+
+  // Filter out agents whose score for this dimension is null
+  const agents = allAgents.filter(a => a.scores[dimKey].value !== null);
+  const excludedCount = allAgents.length - agents.length;
 
   return (
     <div className="min-h-screen">
@@ -178,6 +182,13 @@ export default async function DimensionLeaderboard({ params }: Props) {
             </tbody>
           </table>
         </div>
+
+        {/* Excluded agents note */}
+        {excludedCount > 0 && (
+          <p className="text-dim text-sm mt-4 font-mono">
+            {excludedCount} agent{excludedCount !== 1 ? 's' : ''} excluded (not scored on this dimension)
+          </p>
+        )}
 
         {/* Anchor Definitions */}
         <div className="mt-12 p-6 bg-blue rounded">

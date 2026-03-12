@@ -6,43 +6,53 @@
   "status": "Active",
   "category": "Social Robot",
   "classification": "Humanoid Robot",
+  "network": "Independent",
   "website": "https://www.hansonrobotics.com/sophia/",
   "scores": {
     "persistence": {
       "value": 8,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "autonomy": {
       "value": 4,
-      "confidence": "medium"
+      "confidence": "medium",
+      "method": "editorial"
     },
     "cultural_impact": {
       "value": 10,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "economic_reality": {
       "value": 5,
-      "confidence": "medium"
+      "confidence": "medium",
+      "method": "editorial"
     },
     "governance": {
       "value": 3,
-      "confidence": "medium"
+      "confidence": "medium",
+      "method": "editorial"
     },
     "tech_distinctiveness": {
       "value": 6,
-      "confidence": "medium"
+      "confidence": "medium",
+      "method": "editorial"
     },
     "narrative_coherence": {
       "value": 8,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "economic_infrastructure": {
       "value": 1,
-      "confidence": "medium"
+      "confidence": "medium",
+      "method": "editorial"
     },
     "identity_sovereignty": {
       "value": 1,
-      "confidence": "medium"
+      "confidence": "medium",
+      "method": "editorial"
     }
   },
   "total": 46,
@@ -57,7 +67,7 @@
     "economic_infrastructure": "Revenue from speaking fees, media appearances, and commercial partnerships. R&D versions sold at $149,999. Some NFT art sales (Sophia created NFTs on Nifty Gateway). All revenue controlled by Hanson Robotics corporate entity. Minimal on-chain economic infrastructure.",
     "identity_sovereignty": "Some on-chain presence through NFT art sales on Nifty Gateway. Saudi Arabian citizenship is a symbolic identity artifact but not digital infrastructure. Identity primarily exists on hansonrobotics.com and media coverage. No agent-specific identity standard. Physical robot with minimal portable digital identity."
   },
-  "curator_notes": "Sophia occupies a unique position in AI culture\u2014more influential than technically autonomous. Granted Saudi Arabian citizenship in 2017 (first robot), named UN Innovation Champion (first non-human), Sophia has shaped public imagination about humanoid AI more than any other robot. Technical assessments describe her as 'a chatbot with a face,' with interactions mixing autonomous generation, scripts, and human assistance. Yet her cultural impact is undeniable: for millions, Sophia IS what humanoid AI looks like. The debate about her authenticity is itself part of her cultural significance.",
+  "curator_notes": "Sophia occupies a unique position in AI culture—more influential than technically autonomous. Granted Saudi Arabian citizenship in 2017 (first robot), named UN Innovation Champion (first non-human), Sophia has shaped public imagination about humanoid AI more than any other robot. Technical assessments describe her as 'a chatbot with a face,' with interactions mixing autonomous generation, scripts, and human assistance. Yet her cultural impact is undeniable: for millions, Sophia IS what humanoid AI looks like. The debate about her authenticity is itself part of her cultural significance.",
   "evidence": [
     {
       "dimension": "cultural_impact",
@@ -86,5 +96,6 @@
     "humanoid_robot",
     "cultural_icon",
     "autonomy_debate"
-  ]
+  ],
+  "index_tier": "indexed"
 }

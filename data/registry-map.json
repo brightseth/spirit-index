@@ -1,0 +1,18 @@
+{
+  "lastUpdated": "2026-03-12T00:00:00Z",
+  "contractAddress": "0xF2709ceF1Cf4893ed78D3220864428b32b12dFb9",
+  "chain": "base",
+  "chainId": 8453,
+  "registrations": {
+    "abraham": {
+      "registryId": 2,
+      "wallet": "0x2fC0f360160fAA281420B3f2F0e13767B4789CEe",
+      "registeredAt": "2026-02-03"
+    },
+    "solienne": {
+      "registryId": 3,
+      "wallet": "0x2fC0f360160fAA281420B3f2F0e13767B4789CEe",
+      "registeredAt": "2026-02-03"
+    }
+  }
+}

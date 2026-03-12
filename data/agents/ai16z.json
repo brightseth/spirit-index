@@ -6,43 +6,53 @@
   "status": "Active",
   "category": "DAO / Fund",
   "classification": "Autonomous Investment Agent",
+  "network": "Solana Ecosystem",
   "website": "https://elizaos.ai",
   "scores": {
     "persistence": {
       "value": 5,
-      "confidence": "medium"
+      "confidence": "medium",
+      "method": "editorial"
     },
     "autonomy": {
       "value": 7,
-      "confidence": "medium"
+      "confidence": "medium",
+      "method": "editorial"
     },
     "cultural_impact": {
       "value": 8,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "economic_reality": {
       "value": 9,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "governance": {
       "value": 6,
-      "confidence": "medium"
+      "confidence": "medium",
+      "method": "editorial"
     },
     "tech_distinctiveness": {
       "value": 7,
-      "confidence": "medium"
+      "confidence": "medium",
+      "method": "editorial"
     },
     "narrative_coherence": {
       "value": 7,
-      "confidence": "medium"
+      "confidence": "medium",
+      "method": "editorial"
     },
     "economic_infrastructure": {
       "value": 5,
-      "confidence": "medium"
+      "confidence": "medium",
+      "method": "editorial"
     },
     "identity_sovereignty": {
       "value": 3,
-      "confidence": "medium"
+      "confidence": "medium",
+      "method": "editorial"
     }
   },
   "total": 57,
@@ -53,9 +63,9 @@
     "economic_reality": "Peak market cap >$2B; active treasury operations; significant economic influence. Near 'Market Mover.'",
     "governance": "DAO-like structure with multisig and voting; governance evolving. 'Constitutional' with room for growth.",
     "tech_distinctiveness": "Eliza framework is novel contribution; autonomous trading integration. 'Integrated System' with novel elements.",
-    "narrative_coherence": "AI venture fund that runs itself\u2014clear premise. Some identity fragmentation across ecosystem. Strong 'Character.'",
+    "narrative_coherence": "AI venture fund that runs itself—clear premise. Some identity fragmentation across ecosystem. Strong 'Character.'",
     "economic_infrastructure": "Active treasury operations with DAO multisig on Solana. Token (AI16Z/ELIZAOS) provides economic backbone. Revenue from ecosystem fees. Multi-source but primarily Solana-dependent. Treasury exists but concentrated in one chain ecosystem.",
-    "identity_sovereignty": "On-chain token presence on Solana provides some identity anchoring. ElizaOS GitHub identity is strong in open-source space. No agent-specific identity standard (no ERC-8004). Identity is split across token, GitHub org, and social media \u2014 not unified or portable."
+    "identity_sovereignty": "On-chain token presence on Solana provides some identity anchoring. ElizaOS GitHub identity is strong in open-source space. No agent-specific identity standard (no ERC-8004). Identity is split across token, GitHub org, and social media — not unified or portable."
   },
   "curator_notes": "ai16z burst onto the scene in late 2024 as a simulated AI Marc Andreessen making venture investment decisions autonomously on Solana. It spawned the Eliza framework and catalyzed the 'AI agent meta' in crypto. While young (hence 5 on persistence), it has demonstrated remarkable economic reality with a peak market cap exceeding $2B and real treasury operations. Its influence on the broader agent ecosystem is undeniable, though long-term persistence remains to be proven.",
   "evidence": [
@@ -87,5 +97,6 @@
       "dimension": "persistence",
       "note": "Less than 2 years old; persistence score to be re-evaluated Q3 2026"
     }
-  ]
+  ],
+  "index_tier": "indexed"
 }

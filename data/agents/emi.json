@@ -6,43 +6,53 @@
   "status": "Archived",
   "category": "Autonomous Composer",
   "classification": "Rule-Based Creator",
+  "network": "Independent",
   "website": "http://artsites.ucsc.edu/faculty/cope/experiments.htm",
   "scores": {
     "persistence": {
       "value": 8,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "autonomy": {
       "value": 6,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "cultural_impact": {
       "value": 9,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "economic_reality": {
       "value": 5,
-      "confidence": "medium"
+      "confidence": "medium",
+      "method": "editorial"
     },
     "governance": {
       "value": 2,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "tech_distinctiveness": {
       "value": 8,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "narrative_coherence": {
       "value": 7,
-      "confidence": "medium"
+      "confidence": "medium",
+      "method": "editorial"
     },
     "economic_infrastructure": {
       "value": 0,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     },
     "identity_sovereignty": {
       "value": 0,
-      "confidence": "high"
+      "confidence": "high",
+      "method": "editorial"
     }
   },
   "total": 45,
@@ -57,7 +67,7 @@
     "economic_infrastructure": "Academic project from 1982-2005. Commercial recordings sold through traditional music publishing. Creator retained all economic agency. Database deliberately deleted in 2005. No treasury, no on-chain activity, no payment rails.",
     "identity_sovereignty": "Historical/archived agent. Identity exists in academic literature, commercial recordings, and Wikipedia. No on-chain presence. Pre-dates all digital identity standards."
   },
-  "curator_notes": "EMI represents a watershed moment in AI creativity\u2014the first system to consistently fool expert listeners in Turing-style tests. David Cope created EMI in 1982 while facing composer's block, and it went on to produce thousands of works including 5,000 Bach chorales. The famous Hofstadter demonstration where audiences couldn't distinguish EMI-Bach from real Bach challenged fundamental assumptions about human creativity. Cope's controversial 2005 deletion of EMI's database remains debated.",
+  "curator_notes": "EMI represents a watershed moment in AI creativity—the first system to consistently fool expert listeners in Turing-style tests. David Cope created EMI in 1982 while facing composer's block, and it went on to produce thousands of works including 5,000 Bach chorales. The famous Hofstadter demonstration where audiences couldn't distinguish EMI-Bach from real Bach challenged fundamental assumptions about human creativity. Cope's controversial 2005 deletion of EMI's database remains debated.",
   "evidence": [
     {
       "dimension": "cultural_impact",
@@ -85,5 +95,6 @@
   "_review_flags": [
     "historical_agent",
     "archived_by_creator"
-  ]
+  ],
+  "index_tier": "indexed"
 }
