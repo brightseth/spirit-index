@@ -10,14 +10,24 @@ import path from 'path';
 const AGENTS_DIR = path.join(process.cwd(), 'data', 'agents');
 
 /**
- * Get all agents from JSON files
+ * Minimum comparable_pct for an agent to be "listed" in the default index view.
+ * Agents below this threshold are still tracked but hidden from public-facing views.
  */
-export async function getAllAgents(): Promise<(Agent & {
+export const QUALITY_THRESHOLD = 20;
+
+/** Agent enriched with computed comparable metrics and listing status */
+export type EnrichedAgent = Agent & {
   scoring_coverage: number;
   comparable_score: number;
   comparable_max: number;
   comparable_pct: number;
-})[]> {
+  listed: boolean;
+};
+
+/**
+ * Get all agents from JSON files (internal use — includes unlisted agents)
+ */
+export async function getAllAgents(): Promise<EnrichedAgent[]> {
   const files = fs.readdirSync(AGENTS_DIR).filter(f => f.endsWith('.json'));
 
   const agents = files.map(file => {
@@ -26,12 +36,14 @@ export async function getAllAgents(): Promise<(Agent & {
     const agent = JSON.parse(content) as Agent;
     // Compute comparable metrics if not in JSON
     const comp = calculateComparable(agent.scores);
+    const comparable_pct = comp.pct;
     return {
       ...agent,
       scoring_coverage: comp.coverage,
       comparable_score: comp.score,
       comparable_max: comp.max,
-      comparable_pct: comp.pct,
+      comparable_pct,
+      listed: comparable_pct >= QUALITY_THRESHOLD,
     };
   });
 
@@ -40,14 +52,35 @@ export async function getAllAgents(): Promise<(Agent & {
 }
 
 /**
+ * Get only listed agents (above quality threshold) — used for public-facing views
+ */
+export async function getListedAgents(): Promise<EnrichedAgent[]> {
+  const all = await getAllAgents();
+  return all.filter(a => a.listed);
+}
+
+/**
+ * Convert a comparable_pct to a letter grade
+ */
+export function getGrade(pct: number): string {
+  if (pct >= 93) return 'A';
+  if (pct >= 90) return 'A-';
+  if (pct >= 87) return 'B+';
+  if (pct >= 83) return 'B';
+  if (pct >= 80) return 'B-';
+  if (pct >= 77) return 'C+';
+  if (pct >= 73) return 'C';
+  if (pct >= 70) return 'C-';
+  if (pct >= 67) return 'D+';
+  if (pct >= 63) return 'D';
+  if (pct >= 60) return 'D-';
+  return 'F';
+}
+
+/**
  * Get a single agent by ID (with comparable metrics)
  */
-export async function getAgentById(id: string): Promise<(Agent & {
-  scoring_coverage: number;
-  comparable_score: number;
-  comparable_max: number;
-  comparable_pct: number;
-}) | null> {
+export async function getAgentById(id: string): Promise<EnrichedAgent | null> {
   const filePath = path.join(AGENTS_DIR, `${id}.json`);
 
   if (!fs.existsSync(filePath)) {
@@ -57,12 +90,14 @@ export async function getAgentById(id: string): Promise<(Agent & {
   const content = fs.readFileSync(filePath, 'utf-8');
   const agent = JSON.parse(content) as Agent;
   const comp = calculateComparable(agent.scores);
+  const comparable_pct = comp.pct;
   return {
     ...agent,
     scoring_coverage: comp.coverage,
     comparable_score: comp.score,
     comparable_max: comp.max,
-    comparable_pct: comp.pct,
+    comparable_pct,
+    listed: comparable_pct >= QUALITY_THRESHOLD,
   };
 }
 
@@ -77,7 +112,7 @@ export async function getAllAgentIds(): Promise<string[]> {
 /**
  * Get agents filtered by index tier
  */
-export async function getAgentsByTier(tier: 'indexed' | 'tracked'): Promise<Agent[]> {
+export async function getAgentsByTier(tier: 'indexed' | 'tracked'): Promise<EnrichedAgent[]> {
   const all = await getAllAgents();
   return all.filter(a => a.index_tier === tier);
 }
@@ -87,7 +122,7 @@ export async function getAgentsByTier(tier: 'indexed' | 'tracked'): Promise<Agen
  */
 export async function getAgentsSortedBy(
   dimension: keyof Agent['scores'] | 'total' | 'name' | 'inception_date' | 'comparable_pct' | 'index_tier'
-): Promise<Agent[]> {
+): Promise<EnrichedAgent[]> {
   const agents = await getAllAgents();
 
   return agents.sort((a, b) => {

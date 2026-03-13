@@ -43,7 +43,8 @@ export default function APIDocs() {
         <h2 className="text-3xl font-bold text-white mb-2">API Documentation</h2>
         <p className="text-muted mb-8">
           Programmatic access to Spirit Index data for agents, dashboards, and
-          integrations.
+          integrations. The Spirit Index is the quality/curation layer for autonomous agents
+          &mdash; designed for external platforms to consume.
         </p>
 
         {/* Base URL */}
@@ -52,18 +53,35 @@ export default function APIDocs() {
           <span className="text-green">https://spiritindex.org</span>
         </div>
 
-        {/* Endpoints */}
-        <section className="space-y-8">
-          {/* List Agents */}
+        {/* Attribution */}
+        <div className="mb-8 p-4 border border-[var(--spirit-green-dim)] rounded">
+          <h4 className="text-white font-bold text-sm mb-2">Attribution</h4>
+          <p className="text-muted text-sm">
+            When displaying Spirit Index data in your application, please include
+            attribution: <code className="text-green">&quot;Powered by Spirit Index&quot;</code> with
+            a link to <code className="text-white">https://spiritindex.org</code>.
+          </p>
+        </div>
+
+        {/* v1 Data Feed API */}
+        <section className="space-y-8 mb-12">
+          <h3 className="section-title">Data Feed API (v1)</h3>
+          <p className="text-muted mb-6">
+            Clean, CORS-enabled endpoints designed for external consumption.
+            All responses include version info and caching headers.
+          </p>
+
+          {/* GET /api/v1/scores */}
           <div className="border border-subtle rounded p-6">
             <div className="flex items-center gap-3 mb-4">
               <span className="px-2 py-1 bg-green text-black text-xs font-bold rounded">
                 GET
               </span>
-              <code className="text-white font-mono">/api/agents</code>
+              <code className="text-white font-mono">/api/v1/scores</code>
             </div>
             <p className="text-muted mb-4">
-              Returns all indexed agents with optional filtering and sorting.
+              Returns all listed agents with scores, grades, and dimensions.
+              By default only shows agents above the quality threshold (20%).
             </p>
 
             <h4 className="text-white font-bold text-sm mb-2">
@@ -80,6 +98,260 @@ export default function APIDocs() {
                 </thead>
                 <tbody>
                   <tr className="border-b border-subtle/50">
+                    <td className="py-2 pr-4 text-green font-mono">network</td>
+                    <td className="py-2 pr-4 text-muted">string</td>
+                    <td className="py-2 text-muted">
+                      Filter by network: <code className="text-white">Virtuals Protocol</code>,{" "}
+                      <code className="text-white">Ethereum Native</code>,{" "}
+                      <code className="text-white">Moltbook</code>, etc.
+                    </td>
+                  </tr>
+                  <tr className="border-b border-subtle/50">
+                    <td className="py-2 pr-4 text-green font-mono">tier</td>
+                    <td className="py-2 pr-4 text-muted">string</td>
+                    <td className="py-2 text-muted">
+                      Filter by tier: <code className="text-white">indexed</code> (editorial) or{" "}
+                      <code className="text-white">tracked</code> (auto-scored)
+                    </td>
+                  </tr>
+                  <tr className="border-b border-subtle/50">
+                    <td className="py-2 pr-4 text-green font-mono">min_score</td>
+                    <td className="py-2 pr-4 text-muted">number</td>
+                    <td className="py-2 text-muted">
+                      Minimum score percentage (0-100)
+                    </td>
+                  </tr>
+                  <tr className="border-b border-subtle/50">
+                    <td className="py-2 pr-4 text-green font-mono">sort</td>
+                    <td className="py-2 pr-4 text-muted">string</td>
+                    <td className="py-2 text-muted">
+                      Sort by: <code className="text-white">score</code> (default),{" "}
+                      <code className="text-white">name</code>,{" "}
+                      <code className="text-white">inception_date</code>
+                    </td>
+                  </tr>
+                  <tr className="border-b border-subtle/50">
+                    <td className="py-2 pr-4 text-green font-mono">include</td>
+                    <td className="py-2 pr-4 text-muted">string</td>
+                    <td className="py-2 text-muted">
+                      Set to <code className="text-white">all</code> to include agents below quality threshold
+                    </td>
+                  </tr>
+                  <tr className="border-b border-subtle/50">
+                    <td className="py-2 pr-4 text-green font-mono">limit</td>
+                    <td className="py-2 pr-4 text-muted">number</td>
+                    <td className="py-2 text-muted">
+                      Limit number of results
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h4 className="text-white font-bold text-sm mb-2">Example</h4>
+            <pre className="bg-black p-4 rounded text-sm overflow-x-auto">
+              <code className="text-green">
+{`GET /api/v1/scores?tier=indexed&min_score=50&sort=score
+
+{
+  "version": "1.0",
+  "updated": "2026-03-12T...",
+  "agents": [
+    {
+      "id": "botto",
+      "name": "Botto",
+      "score": 70,
+      "grade": "C-",
+      "tier": "indexed",
+      "network": "Ethereum Native",
+      "status": "Active",
+      "category": "Autonomous Artist",
+      "listed": true,
+      "dimensions": {
+        "persistence": 9,
+        "autonomy": 6,
+        "cultural_impact": 9,
+        ...
+      },
+      "url": "https://spiritindex.org/botto",
+      "badge": "https://spiritindex.org/badge/botto"
+    }
+  ],
+  "meta": {
+    "total": 168,
+    "listed": 153,
+    "indexed": 60,
+    "tracked": 108,
+    "threshold": 20
+  }
+}`}
+              </code>
+            </pre>
+          </div>
+
+          {/* GET /api/v1/scores/:id */}
+          <div className="border border-subtle rounded p-6">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="px-2 py-1 bg-green text-black text-xs font-bold rounded">
+                GET
+              </span>
+              <code className="text-white font-mono">/api/v1/scores/:id</code>
+            </div>
+            <p className="text-muted mb-4">
+              Returns full score data for a single agent including all dimensions
+              with rationale, evidence citations, and score history.
+            </p>
+
+            <h4 className="text-white font-bold text-sm mb-2">Example</h4>
+            <pre className="bg-black p-4 rounded text-sm overflow-x-auto">
+              <code className="text-green">
+{`GET /api/v1/scores/plantoid
+
+{
+  "version": "1.0",
+  "updated": "2026-03-12T...",
+  "agent": {
+    "id": "plantoid",
+    "name": "Plantoid",
+    "tagline": "The Blockchain Life Form",
+    "score": 67,
+    "grade": "D+",
+    "tier": "indexed",
+    "listed": true,
+    "network": "Ethereum Native",
+    "dimensions": {
+      "persistence": {
+        "value": 10,
+        "confidence": "high",
+        "method": "editorial",
+        "label": "Persistence",
+        "description": "Does the entity continue to exist...",
+        "rationale": "Operating since 2015..."
+      },
+      ...
+    },
+    "scoring": {
+      "comparable_score": 60,
+      "comparable_max": 90,
+      "comparable_pct": 67,
+      "coverage": 9,
+      "total_raw": 60
+    },
+    "curator_notes": "...",
+    "evidence": [ ... ],
+    "score_history": [ ... ],
+    "url": "https://spiritindex.org/plantoid",
+    "badge": "https://spiritindex.org/badge/plantoid"
+  },
+  "meta": { "threshold": 20 }
+}`}
+              </code>
+            </pre>
+
+            <h4 className="text-white font-bold text-sm mt-4 mb-2">404 Response</h4>
+            <pre className="bg-black p-4 rounded text-sm overflow-x-auto">
+              <code className="text-red">
+{`{
+  "error": "Agent not found",
+  "id": "unknown-agent",
+  "hint": "No agent with ID \\"unknown-agent\\" exists..."
+}`}
+              </code>
+            </pre>
+          </div>
+
+          {/* POST /api/v1/lookup */}
+          <div className="border border-subtle rounded p-6">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="px-2 py-1 bg-[#F59E0B] text-black text-xs font-bold rounded">
+                POST
+              </span>
+              <code className="text-white font-mono">/api/v1/lookup</code>
+            </div>
+            <p className="text-muted mb-4">
+              Batch lookup scores for multiple agents by ID. Useful for platforms
+              displaying multiple agents at once. Maximum 100 IDs per request.
+            </p>
+
+            <h4 className="text-white font-bold text-sm mb-2">Request Body</h4>
+            <pre className="bg-black p-4 rounded text-sm overflow-x-auto mb-4">
+              <code className="text-green">
+{`POST /api/v1/lookup
+Content-Type: application/json
+
+{
+  "ids": ["botto", "aixbt", "luna", "nonexistent"]
+}`}
+              </code>
+            </pre>
+
+            <h4 className="text-white font-bold text-sm mb-2">Response</h4>
+            <pre className="bg-black p-4 rounded text-sm overflow-x-auto">
+              <code className="text-green">
+{`{
+  "version": "1.0",
+  "updated": "2026-03-12T...",
+  "agents": [
+    { "id": "botto", "name": "Botto", "score": 70, "grade": "C-", ... },
+    { "id": "aixbt", "name": "aixbt", "score": 42, "grade": "F", ... },
+    { "id": "luna", "name": "Luna", "score": 62, "grade": "D-", ... }
+  ],
+  "not_found": ["nonexistent"],
+  "meta": {
+    "requested": 4,
+    "found": 3,
+    "not_found_count": 1,
+    "threshold": 20
+  }
+}`}
+              </code>
+            </pre>
+          </div>
+        </section>
+
+        {/* Legacy API */}
+        <section className="space-y-8 mb-12">
+          <h3 className="section-title">Internal API</h3>
+          <p className="text-muted mb-6">
+            The original agent endpoints. Still supported but the v1 data feed
+            above is preferred for external integrations.
+          </p>
+
+          {/* List Agents */}
+          <div className="border border-subtle rounded p-6">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="px-2 py-1 bg-green text-black text-xs font-bold rounded">
+                GET
+              </span>
+              <code className="text-white font-mono">/api/agents</code>
+            </div>
+            <p className="text-muted mb-4">
+              Returns agents with optional filtering and sorting.
+              Defaults to listed agents only; use <code className="text-white">?include=all</code> to
+              include agents below the quality threshold.
+            </p>
+
+            <h4 className="text-white font-bold text-sm mb-2">
+              Query Parameters
+            </h4>
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm mb-4">
+                <thead>
+                  <tr className="border-b border-subtle">
+                    <th className="text-left py-2 pr-4 text-dim">Parameter</th>
+                    <th className="text-left py-2 pr-4 text-dim">Type</th>
+                    <th className="text-left py-2 text-dim">Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-b border-subtle/50">
+                    <td className="py-2 pr-4 text-green font-mono">include</td>
+                    <td className="py-2 pr-4 text-muted">string</td>
+                    <td className="py-2 text-muted">
+                      Set to <code className="text-white">all</code> to include unlisted agents
+                    </td>
+                  </tr>
+                  <tr className="border-b border-subtle/50">
                     <td className="py-2 pr-4 text-green font-mono">sort</td>
                     <td className="py-2 pr-4 text-muted">string</td>
                     <td className="py-2 text-muted">
@@ -91,8 +363,6 @@ export default function APIDocs() {
                       <code className="text-white">governance</code>,{" "}
                       <code className="text-white">tech_distinctiveness</code>,{" "}
                       <code className="text-white">narrative_coherence</code>,{" "}
-                      <code className="text-white">economic_infrastructure</code>,{" "}
-                      <code className="text-white">identity_sovereignty</code>,{" "}
                       <code className="text-white">name</code>,{" "}
                       <code className="text-white">inception_date</code>
                     </td>
@@ -103,10 +373,23 @@ export default function APIDocs() {
                     <td className="py-2 text-muted">
                       Filter by status:{" "}
                       <code className="text-white">Active</code>,{" "}
-                      <code className="text-white">Archived</code>,{" "}
                       <code className="text-white">Dormant</code>,{" "}
-                      <code className="text-white">Deceased</code>,{" "}
-                      <code className="text-white">Subsumed</code>
+                      <code className="text-white">Deceased</code>
+                    </td>
+                  </tr>
+                  <tr className="border-b border-subtle/50">
+                    <td className="py-2 pr-4 text-green font-mono">tier</td>
+                    <td className="py-2 pr-4 text-muted">string</td>
+                    <td className="py-2 text-muted">
+                      Filter by tier: <code className="text-white">indexed</code>,{" "}
+                      <code className="text-white">tracked</code>
+                    </td>
+                  </tr>
+                  <tr className="border-b border-subtle/50">
+                    <td className="py-2 pr-4 text-green font-mono">network</td>
+                    <td className="py-2 pr-4 text-muted">string</td>
+                    <td className="py-2 text-muted">
+                      Filter by network affiliation
                     </td>
                   </tr>
                   <tr className="border-b border-subtle/50">
@@ -142,8 +425,13 @@ export default function APIDocs() {
 {
   "meta": {
     "total": 5,
+    "indexed": 60,
+    "tracked": 108,
+    "total_tracked": 168,
+    "below_threshold": 15,
+    "threshold": 20,
     "sort": "governance",
-    "generated_at": "2026-01-06T...",
+    "generated_at": "2026-03-12T...",
     "api_version": "v1"
   },
   "data": [
@@ -151,6 +439,7 @@ export default function APIDocs() {
       "id": "abraham",
       "name": "Abraham",
       "total": 51,
+      "listed": true,
       "scores": { ... }
     },
     ...
@@ -179,7 +468,7 @@ export default function APIDocs() {
 
 {
   "meta": {
-    "generated_at": "2026-01-06T...",
+    "generated_at": "2026-03-12T...",
     "api_version": "v1"
   },
   "data": {
@@ -187,6 +476,7 @@ export default function APIDocs() {
     "name": "Plantoid",
     "tagline": "The Blockchain Life Form",
     "total": 60,
+    "listed": true,
     "scores": {
       "persistence": { "value": 10, "confidence": "high" },
       ...
@@ -240,7 +530,7 @@ export default function APIDocs() {
               target="_blank"
               className="text-green hover:underline text-sm"
             >
-              View feed →
+              View feed
             </a>
           </div>
 
@@ -369,24 +659,42 @@ export default function APIDocs() {
             <div className="p-4 bg-blue rounded">
               <h4 className="text-white font-bold mb-2">Caching</h4>
               <p className="text-muted text-sm">
-                API responses are cached for 1 hour with stale-while-revalidate.
+                API responses are cached with <code className="text-white">max-age=3600</code> (1 hour browser)
+                and <code className="text-white">s-maxage=86400</code> (24 hours CDN).
                 Static exports update on each deployment.
               </p>
             </div>
             <div className="p-4 bg-blue rounded">
               <h4 className="text-white font-bold mb-2">Rate Limits</h4>
               <p className="text-muted text-sm">
-                No rate limits currently. Please be respectful. If you need
-                high-volume access, contact us.
+                Rate limits follow Vercel&apos;s defaults. For the batch lookup endpoint,
+                requests are capped at 100 IDs. If you need high-volume access, contact us.
               </p>
             </div>
+          </div>
+        </section>
+
+        {/* Quality Threshold */}
+        <section className="mt-12">
+          <h3 className="section-title">Quality Threshold</h3>
+          <div className="p-4 bg-blue rounded">
+            <p className="text-muted text-sm mb-3">
+              The Spirit Index applies a <strong className="text-white">quality threshold of 20%</strong> comparable score.
+              Agents below this threshold are still tracked internally but are hidden from the
+              default index view and API responses.
+            </p>
+            <p className="text-muted text-sm">
+              To include unlisted agents, add <code className="text-white">?include=all</code> to any
+              listing endpoint. The <code className="text-white">listed</code> boolean on each agent
+              indicates whether it meets the threshold.
+            </p>
           </div>
         </section>
 
         {/* Back Link */}
         <div className="mt-12">
           <Link href="/" className="nav-link">
-            ← Back to Index
+            &larr; Back to Index
           </Link>
         </div>
       </main>

@@ -8,6 +8,7 @@ import { ScoreHistoryChart } from "@/app/components/ScoreHistoryChart";
 import { checkRegistration, RegistrationStatus } from "@/lib/chain";
 import { getRegistration } from "@/lib/registry";
 import { GenesisBadge } from "@/app/components/GenesisBadge";
+import { EmbedSection } from "@/app/components/EmbedSection";
 
 const siteUrl = "https://spiritindex.org";
 
@@ -471,6 +472,9 @@ export default async function AgentDossier({ params }: Props) {
             <p className="text-sm text-muted mt-1 font-mono">{agent.disclosure}</p>
           </div>
         )}
+
+        {/* Embed Badge */}
+        <EmbedSection agentId={agent.id} agentName={agent.name} />
 
         {/* Back Link */}
         <div className="mt-8">

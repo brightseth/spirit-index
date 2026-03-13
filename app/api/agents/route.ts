@@ -1,8 +1,9 @@
 /**
  * Spirit Index API - Agents Endpoint
  *
- * GET /api/agents - Returns all indexed agents
+ * GET /api/agents - Returns listed agents (above quality threshold) by default
  * Query params:
+ *   - include: 'all' to include agents below quality threshold (default: listed only)
  *   - sort: 'total' | 'comparable_pct' | 'persistence' | 'autonomy' | 'cultural_impact' | 'economic_reality' | 'governance' | 'tech_distinctiveness' | 'narrative_coherence' | 'name' | 'inception_date'
  *   - status: 'Active' | 'Dormant' | 'Deceased' | 'Subsumed' | 'Forked'
  *   - tier: 'indexed' | 'tracked'
@@ -13,13 +14,14 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server';
-import { getAllAgents, getAgentsSortedBy } from '@/lib/agents';
+import { getAllAgents, getListedAgents, getAgentsSortedBy, QUALITY_THRESHOLD, EnrichedAgent } from '@/lib/agents';
 import { Agent } from '@/lib/types';
 
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
 
   // Parse query parameters
+  const include = searchParams.get('include');
   const sort = searchParams.get('sort') || 'total';
   const status = searchParams.get('status');
   const tier = searchParams.get('tier');
@@ -30,7 +32,7 @@ export async function GET(request: NextRequest) {
 
   try {
     // Get agents with sorting
-    let agents: Agent[];
+    let agents: EnrichedAgent[];
 
     const validSortFields = [
       'total', 'comparable_pct', 'persistence', 'autonomy', 'cultural_impact',
@@ -47,6 +49,11 @@ export async function GET(request: NextRequest) {
 
     // Keep a reference to all agents for meta counts
     const allAgents = agents;
+
+    // Default: listed only. Use ?include=all to get everything.
+    if (include !== 'all') {
+      agents = agents.filter(a => a.listed);
+    }
 
     // Filter by status
     if (status) {
@@ -78,16 +85,17 @@ export async function GET(request: NextRequest) {
     }
 
     // Filter fields if specified
+    let responseData: any[] = agents;
     if (fields) {
       const fieldList = fields.split(',').map(f => f.trim());
-      agents = agents.map(agent => {
-        const filtered: Partial<Agent> = {};
+      responseData = agents.map(agent => {
+        const filtered: Record<string, unknown> = {};
         fieldList.forEach(field => {
           if (field in agent) {
-            (filtered as any)[field] = (agent as any)[field];
+            filtered[field] = (agent as any)[field];
           }
         });
-        return filtered as Agent;
+        return filtered;
       });
     }
 
@@ -97,11 +105,14 @@ export async function GET(request: NextRequest) {
         total: agents.length,
         indexed: allAgents.filter(a => a.index_tier === 'indexed').length,
         tracked: allAgents.filter(a => a.index_tier === 'tracked').length,
+        total_tracked: allAgents.length,
+        below_threshold: allAgents.filter(a => !a.listed).length,
+        threshold: QUALITY_THRESHOLD,
         sort,
         generated_at: new Date().toISOString(),
         api_version: 'v1',
       },
-      data: agents,
+      data: responseData,
     };
 
     return NextResponse.json(response, {

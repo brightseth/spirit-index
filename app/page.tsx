@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getAllAgents, getAgentById } from "@/lib/agents";
+import { getAllAgents, getListedAgents, getAgentById, QUALITY_THRESHOLD } from "@/lib/agents";
 import { IndexTable } from "@/app/components/IndexTable";
 import { GenesisSection } from "@/app/components/GenesisSection";
 import {
@@ -10,7 +10,10 @@ import {
 } from "@/lib/genesis";
 
 export default async function Home() {
-  const agents = await getAllAgents();
+  const allAgents = await getAllAgents();
+  const agents = await getListedAgents();
+  const totalTracked = allAgents.length;
+  const belowThreshold = allAgents.filter(a => !a.listed).length;
 
   // Load Genesis cohort data
   const genesisStatus = loadGenesisStatus();
@@ -77,7 +80,12 @@ export default async function Home() {
 
         <h2 className="section-title">Indexed Entities</h2>
 
-        <IndexTable agents={agents} />
+        <IndexTable
+          agents={agents}
+          totalTracked={totalTracked}
+          belowThreshold={belowThreshold}
+          qualityThreshold={QUALITY_THRESHOLD}
+        />
 
         <p className="text-muted text-sm mt-8">
           Click column headers to sort. Last updated: March 2026.

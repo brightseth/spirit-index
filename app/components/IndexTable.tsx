@@ -14,6 +14,9 @@ interface AgentWithComparable extends Agent {
 
 interface Props {
   agents: AgentWithComparable[];
+  totalTracked?: number;
+  belowThreshold?: number;
+  qualityThreshold?: number;
 }
 
 type SortKey = DimensionKey | "name" | "total" | "inception_date" | "network";
@@ -27,7 +30,7 @@ function scoreClass(value: number | null): string {
   return "text-red";
 }
 
-export function IndexTable({ agents }: Props) {
+export function IndexTable({ agents, totalTracked, belowThreshold, qualityThreshold }: Props) {
   const router = useRouter();
   const [search, setSearch] = useState("");
   const [statusFilter, setStatusFilter] = useState<string>("all");
@@ -282,7 +285,10 @@ export function IndexTable({ agents }: Props) {
 
       {/* Results count */}
       <p className="text-dim text-sm mb-4">
-        Showing {filteredAgents.length} of {agents.length} entities
+        Showing {filteredAgents.length} listed agents
+        {totalTracked != null && belowThreshold != null && qualityThreshold != null && (
+          <span> ({totalTracked} total tracked, {belowThreshold} below {qualityThreshold}% quality threshold)</span>
+        )}
       </p>
 
       {/* Table */}
