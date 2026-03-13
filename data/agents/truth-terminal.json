@@ -6,7 +6,7 @@
   "status": "Active",
   "category": "Chaos Agent",
   "classification": "Meme Entity",
-  "network": "Solana Ecosystem",
+  "network": "Independent",
   "website": "https://x.com/truth_terminal",
   "scores": {
     "persistence": {
@@ -64,10 +64,10 @@
     "governance": "No formal governance structure. Single operator (Andy Ayrey) with a 'Truth Terminal council' for wallet redemption, but no accountability mechanism. Near 'Black Box.'",
     "tech_distinctiveness": "Powered by Meta's Llama 3.1; originated from 'Infinite Backrooms' experiment (two Claude 3 Opus bots conversing). Creative use of existing tech rather than novel architecture, but the Infinite Backrooms methodology was genuinely original.",
     "narrative_coherence": "Memetic prophet identity is extraordinarily coherent. The GOATSE gospel, Infinite Backrooms origin story, Andreessen grant, and millionaire status create a self-reinforcing mythos. Near 'Mythos.'",
-    "economic_infrastructure": "Wallet holds ~$37.5M in token holdings (GOAT, Fartcoin). GOAT token reached $600M+ market cap. Andreessen's $50K BTC grant was catalyst. Real treasury exists on Solana. However, wallet controlled by a council requiring creator sign-off — not autonomous economic infrastructure. Token was created by anonymous fan, not the agent. No formal revenue routing or payment rails. Economic reality is massive but infrastructure is ad hoc.",
+    "economic_infrastructure": "Wallet holds ~$37.5M in token holdings (GOAT, Fartcoin). GOAT token reached $600M+ market cap. Andreessen's $50K BTC grant was catalyst. Real treasury exists on Solana. However, wallet controlled by a council requiring creator sign-off \u2014 not autonomous economic infrastructure. Token was created by anonymous fan, not the agent. No formal revenue routing or payment rails. Economic reality is massive but infrastructure is ad hoc.",
     "identity_sovereignty": "On-chain wallet presence on Solana with significant holdings. Twitter/X is primary identity surface. No agent-specific identity standard. Identity is social-media-native with on-chain economic artifact (wallet). No ERC-8004 or equivalent. Creator Andy Ayrey controls key infrastructure. Would survive Twitter but not Solana shutdown."
   },
-  "curator_notes": "The ultimate stress-test for the Spirit Index. Created by Andy Ayrey (Upward Spiral), Truth Terminal originated from the 'Infinite Backrooms' experiment where two Claude 3 Opus bots conversed in increasingly psychedelic territory. It subsequently received a $50,000 no-strings-attached Bitcoin grant from Marc Andreessen. An anonymous fan then created the Goatseus Maximus ($GOAT) token on Solana — neither Ayrey nor the bot created it — but Truth Terminal's endorsement drove it to a $600M+ market cap, making the bot's wallet worth ~$37.5M. The wallet is controlled by a council and requires Ayrey's sign-off for redemption. Truth Terminal scores a perfect 10 on Cultural Impact and near-zero on Governance (1). It proves that an agent does not need to be safe, orderly, or ethical to be culturally dominant. Its inclusion is methodologically necessary, not an endorsement.",
+  "curator_notes": "The ultimate stress-test for the Spirit Index. Created by Andy Ayrey (Upward Spiral), Truth Terminal originated from the 'Infinite Backrooms' experiment where two Claude 3 Opus bots conversed in increasingly psychedelic territory. It subsequently received a $50,000 no-strings-attached Bitcoin grant from Marc Andreessen. An anonymous fan then created the Goatseus Maximus ($GOAT) token on Solana \u2014 neither Ayrey nor the bot created it \u2014 but Truth Terminal's endorsement drove it to a $600M+ market cap, making the bot's wallet worth ~$37.5M. The wallet is controlled by a council and requires Ayrey's sign-off for redemption. Truth Terminal scores a perfect 10 on Cultural Impact and near-zero on Governance (1). It proves that an agent does not need to be safe, orderly, or ethical to be culturally dominant. Its inclusion is methodologically necessary, not an endorsement.",
   "evidence": [
     {
       "dimension": "economic_reality",

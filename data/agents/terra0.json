@@ -6,7 +6,7 @@
   "status": "Active",
   "category": "Ecological DAO",
   "classification": "Infrastructure Entity",
-  "network": "Ethereum Native",
+  "network": "Independent",
   "website": "https://terra0.org",
   "scores": {
     "persistence": {
@@ -65,7 +65,7 @@
     "tech_distinctiveness": "Pioneered smart contract environmental governance before the concept existed. Novel architecture, though not fully deployed at scale.",
     "narrative_coherence": "'Self-owning forest' concept is immediately graspable and philosophically rich. Strong 'Character' with conceptual depth.",
     "economic_infrastructure": "Smart contract-based governance model for forest economics. Conceptual framework for self-owning forest selling lumber to fund expansion. On-chain smart contracts on Ethereum. Grant-funded with minimal commercial revenue. The economic infrastructure design is visionary but implementation is primarily research/exhibition stage. Real smart contracts but modest actual economic activity.",
-    "identity_sovereignty": "On-chain smart contract identity on Ethereum. Publicly documented governance framework on-chain. Each terra0 instance has verifiable blockchain presence. Pioneered the concept of non-human on-chain identity before it was a category. No ERC-8004 but conceptually aligned with agent identity standards. Partial sovereignty — strong conceptual foundation with real on-chain presence but research-stage implementation."
+    "identity_sovereignty": "On-chain smart contract identity on Ethereum. Publicly documented governance framework on-chain. Each terra0 instance has verifiable blockchain presence. Pioneered the concept of non-human on-chain identity before it was a category. No ERC-8004 but conceptually aligned with agent identity standards. Partial sovereignty \u2014 strong conceptual foundation with real on-chain presence but research-stage implementation."
   },
   "curator_notes": "The canonical Elder of the autonomous entity space. terra0 proposed the concept of a self-owning forest before NFTs, DAOs, or the current AI wave existed. It asked: can a forest own itself and sell its own lumber to fund its expansion? While its economic velocity is low (3), its Persistence (10) and Cultural Impact (9) make it a foundational pillar. terra0 established the conceptual vocabulary that subsequent projects inherited.",
   "evidence": [

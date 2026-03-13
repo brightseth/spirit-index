@@ -6,7 +6,7 @@
   "status": "Active",
   "category": "Agent Infrastructure",
   "classification": "Protocol/Platform",
-  "network": "Solana Ecosystem",
+  "network": "Independent",
   "website": "https://griffain.com",
   "scores": {
     "persistence": {
@@ -65,7 +65,7 @@
     "tech_distinctiveness": "Natural language to on-chain action translation. Soulbound NFTs for agent identity. Multiple specialized agents (Agent GM, Agent Sniper). Agent Engine coordination layer.",
     "narrative_coherence": "Clear 'AI abstraction layer for Solana' positioning. Multiple agent identities may fragment narrative. Naitzsche (NAI) sub-agent adds complexity.",
     "economic_infrastructure": "GRIFFAIN token actively traded on Solana. Processed over 1M automated transactions. Revenue from platform operations. Soulbound NFTs used for agent identity (economic artifact). Treasury exists through token economics. However, concentrated in Solana ecosystem and still evolving economic model.",
-    "identity_sovereignty": "Soulbound NFTs for agent identity on Solana is a notable approach — creates persistent, verifiable identity artifacts. GRIFFAIN token provides on-chain presence. No ERC-8004 but soulbound NFTs serve a similar identity-anchoring function within the Griffain ecosystem. Platform-specific but architecturally interesting for identity sovereignty."
+    "identity_sovereignty": "Soulbound NFTs for agent identity on Solana is a notable approach \u2014 creates persistent, verifiable identity artifacts. GRIFFAIN token provides on-chain presence. No ERC-8004 but soulbound NFTs serve a similar identity-anchoring function within the Griffain ecosystem. Platform-specific but architecturally interesting for identity sovereignty."
   },
   "curator_notes": "Griffain represents the DeFAI (DeFi + AI) movement on Solana. Since November 2024, it has processed over 1M automated transactions through specialized agents like Agent GM (NFT creation) and Agent Sniper (token trading). The platform's use of soulbound NFTs for agent identity creates persistent, verifiable autonomous operations. 2025 roadmap includes cross-chain deployment and multi-agent orchestration. The launch of Naitzsche (NAI) as a 'special agent' demonstrates evolving agent taxonomy.",
   "evidence": [

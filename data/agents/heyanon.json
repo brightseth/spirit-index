@@ -6,7 +6,7 @@
   "status": "Active",
   "category": "Agent Infrastructure",
   "classification": "Protocol/Platform",
-  "network": "Multi-chain",
+  "network": "Independent",
   "website": "https://heyanon.ai",
   "scores": {
     "persistence": {
@@ -67,7 +67,7 @@
     "economic_infrastructure": "ANON token (~$15M market cap). DWF Labs strategic partnership ($20M fund). Revenue from protocol operations. AUTOMATE framework provides infrastructure for economic activity. Treasury exists but modest scale. Early-stage economic infrastructure on Ethereum/Solana.",
     "identity_sovereignty": "On-chain token presence on Solana. AUTOMATE framework provides some protocol-level identity. No agent-specific identity standard. Identity tied to token and heyanon.ai platform. DAAIOs vision includes agent identity but not yet implemented. Early and platform-dependent."
   },
-  "curator_notes": "HeyAnon is notable for coining 'DeFAI'—the AI + DeFi convergence category—through founder Daniele Sestagalli's 2024 article 'DeFAI and the Dawn of AI-Powered DAOs.' The protocol enables autonomous agents to manage wallets, execute complex DeFi strategies, and operate even when users are offline. The AUTOMATE framework allows developers to integrate new protocols, while the long-term vision includes DAAIOs where token holders set strategies and AI agents handle execution. The January 2025 DWF Labs partnership brought $20M in backing for the DeFAI space.",
+  "curator_notes": "HeyAnon is notable for coining 'DeFAI'\u2014the AI + DeFi convergence category\u2014through founder Daniele Sestagalli's 2024 article 'DeFAI and the Dawn of AI-Powered DAOs.' The protocol enables autonomous agents to manage wallets, execute complex DeFi strategies, and operate even when users are offline. The AUTOMATE framework allows developers to integrate new protocols, while the long-term vision includes DAAIOs where token holders set strategies and AI agents handle execution. The January 2025 DWF Labs partnership brought $20M in backing for the DeFAI space.",
   "evidence": [
     {
       "dimension": "cultural_impact",

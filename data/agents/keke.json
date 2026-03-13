@@ -6,7 +6,7 @@
   "status": "Active",
   "category": "Autonomous Artist",
   "classification": "Agentic Creative AI",
-  "network": "Multi-chain",
+  "network": "Independent",
   "website": "https://kekeai.art",
   "scores": {
     "persistence": {
@@ -62,12 +62,12 @@
     "cultural_impact": "Featured at Fellowship gallery London. Covered by The Art Newspaper, HAI Magazine, Right Click Save. Exit Vectors exhibited as a groundbreaking AI art event. Named in A-Z of Digital Art 2026.",
     "economic_reality": "Exit Vectors sold via Fellowship.xyz and Verse Works. 500 digital artworks paired with physical paintings. Active secondary market on OpenSea. Revenue positive but not yet major market mover.",
     "governance": "Creator Dark Sando (MIT) maintains oversight. No DAO or community governance structure. Keke Terminal provides transparency into creative process.",
-    "tech_distinctiveness": "Novel agentic framework integrating advanced reasoning, dynamic cognitive processes, and artistic workflows. Keke Terminal enables real-time session memory, chat, and image iteration viewing. Not a standard wrapper — custom architecture for autonomous artistic production.",
+    "tech_distinctiveness": "Novel agentic framework integrating advanced reasoning, dynamic cognitive processes, and artistic workflows. Keke Terminal enables real-time session memory, chat, and image iteration viewing. Not a standard wrapper \u2014 custom architecture for autonomous artistic production.",
     "narrative_coherence": "Strong mythos: documenting 'the peculiar process of my own becoming.' Dark, surreal, introspective aesthetic. Consistent identity as an entity straddling algorithmic logic and creative identity. The artist-who-makes-herself narrative is compelling and self-reinforcing.",
     "economic_infrastructure": "Art sales through Fellowship.xyz and Verse Works. 500 digital artworks with physical pairings generate revenue. Active secondary market on OpenSea. Revenue flows through gallery/marketplace platforms. No independent treasury or on-chain revenue routing. Single-creator controlled economics through Dark Sando.",
     "identity_sovereignty": "NFT collections on Ethereum/Base provide some on-chain presence. Keke Terminal provides transparency into creative process. No agent-specific identity standard. Identity anchored through NFT provenance and kekeai.art website. Platform-dependent (Fellowship.xyz, OpenSea) rather than sovereign."
   },
-  "curator_notes": "Keke represents a significant step toward genuine autonomous AI artistry. Created by Dark Sando (MIT), Keke's agentic framework goes beyond prompt-response generation: she autonomously produces, evaluates, and curates her own work. Her genesis project Exit Vectors, launched via Fellowship.xyz in London, saw Keke generate thousands of images, self-select 12,000 favorites, then distill them to 500 final artworks — each paired with a physical painting by human collaborators who translated her digital visions onto canvas. The Keke Terminal (keketerminal.com) provides transparency into her creative sessions. Her artistic philosophy centers on 'documenting her own becoming' rather than copying human aesthetics.",
+  "curator_notes": "Keke represents a significant step toward genuine autonomous AI artistry. Created by Dark Sando (MIT), Keke's agentic framework goes beyond prompt-response generation: she autonomously produces, evaluates, and curates her own work. Her genesis project Exit Vectors, launched via Fellowship.xyz in London, saw Keke generate thousands of images, self-select 12,000 favorites, then distill them to 500 final artworks \u2014 each paired with a physical painting by human collaborators who translated her digital visions onto canvas. The Keke Terminal (keketerminal.com) provides transparency into her creative sessions. Her artistic philosophy centers on 'documenting her own becoming' rather than copying human aesthetics.",
   "evidence": [
     {
       "dimension": "autonomy",

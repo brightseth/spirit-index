@@ -13,27 +13,18 @@ export type EntityStatus =
   | "Forked";
 
 // Network/platform affiliation (for Metacritic-style filtering)
+// Agent platforms, not blockchains. Chain info is metadata, not a network.
 export type NetworkAffiliation =
   | "Virtuals Protocol"
-  | "Spirit Protocol"
-  | "Farcaster"
-  | "Olas"
-  | "Solana Ecosystem"
-  | "Ethereum Native"
-  | "Multi-chain"
   | "Moltbook"
+  | "Spirit Protocol"
   | "Independent";
 
 // Network metadata for UI rendering
 export const NETWORKS: Record<NetworkAffiliation, { label: string; shortLabel: string; color: string }> = {
   "Virtuals Protocol": { label: "Virtuals Protocol", shortLabel: "VIRT", color: "#8B5CF6" },
-  "Spirit Protocol": { label: "Spirit Protocol", shortLabel: "SPRT", color: "#00FF00" },
-  "Farcaster": { label: "Farcaster", shortLabel: "FC", color: "#855DCD" },
-  "Olas": { label: "Olas", shortLabel: "OLAS", color: "#22D1EE" },
-  "Solana Ecosystem": { label: "Solana Ecosystem", shortLabel: "SOL", color: "#9945FF" },
-  "Ethereum Native": { label: "Ethereum Native", shortLabel: "ETH", color: "#627EEA" },
-  "Multi-chain": { label: "Multi-chain", shortLabel: "MULTI", color: "#F59E0B" },
   "Moltbook": { label: "Moltbook", shortLabel: "MOLT", color: "#FF6B35" },
+  "Spirit Protocol": { label: "Spirit Protocol", shortLabel: "SPRT", color: "#00FF00" },
   "Independent": { label: "Independent", shortLabel: "INDP", color: "#9CA3AF" },
 };
 

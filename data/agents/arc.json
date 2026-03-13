@@ -6,7 +6,7 @@
   "status": "Active",
   "category": "Agent Infrastructure",
   "classification": "Protocol/Platform",
-  "network": "Multi-chain",
+  "network": "Independent",
   "website": "https://arc.fun",
   "scores": {
     "persistence": {

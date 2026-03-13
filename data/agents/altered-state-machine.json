@@ -6,7 +6,7 @@
   "status": "Active",
   "category": "Agent Infrastructure",
   "classification": "Protocol/Platform",
-  "network": "Ethereum Native",
+  "network": "Independent",
   "website": "https://alteredstatemachine.xyz",
   "scores": {
     "persistence": {
@@ -65,9 +65,9 @@
     "tech_distinctiveness": "Novel Brain/Memory/Form NFT architecture. Patent-pending approach to AI agent ownership. Integration of ML training with NFT ownership. Genuine innovation in agent composability.",
     "narrative_coherence": "Clear 'Non-Fungible Intelligence' positioning. Metaverse avatar focus. Some identity confusion between infrastructure protocol and individual agents.",
     "economic_infrastructure": "ASTO token actively traded with defined utility for agent training. NFT-based economic model (Brain/Memory/Form NFTs). Revenue from agent creation and competition. Treasury exists through token economics. Multi-source but concentrated in own ecosystem. Platform provides economic infrastructure for agents built on it.",
-    "identity_sovereignty": "NFT-based agent identity model — Brain/Memory/Form NFTs serve as identity artifacts. Patent pending for AI ownership via NFTs. On-chain presence on Ethereum. Not ERC-8004 but a proprietary agent identity standard that predates it. Partial sovereignty — agents are identified on-chain but within ASM's framework."
+    "identity_sovereignty": "NFT-based agent identity model \u2014 Brain/Memory/Form NFTs serve as identity artifacts. Patent pending for AI ownership via NFTs. On-chain presence on Ethereum. Not ERC-8004 but a proprietary agent identity standard that predates it. Partial sovereignty \u2014 agents are identified on-chain but within ASM's framework."
   },
-  "curator_notes": "Altered State Machine represents a unique approach to agent infrastructure—treating AI agents as composable NFTs with Brain, Memory, and Form components. Co-founded by Aaron McDonald (EY Entrepreneur of the Year) and team, ASM has a patent pending for AI ownership via NFTs. While primarily infrastructure rather than a single autonomous agent, ASM's AIFA (AI Football Association) demonstrates autonomous agent-vs-agent competition. The protocol enables a new category of games where NFT AI bots play autonomously.",
+  "curator_notes": "Altered State Machine represents a unique approach to agent infrastructure\u2014treating AI agents as composable NFTs with Brain, Memory, and Form components. Co-founded by Aaron McDonald (EY Entrepreneur of the Year) and team, ASM has a patent pending for AI ownership via NFTs. While primarily infrastructure rather than a single autonomous agent, ASM's AIFA (AI Football Association) demonstrates autonomous agent-vs-agent competition. The protocol enables a new category of games where NFT AI bots play autonomously.",
   "evidence": [
     {
       "dimension": "tech_distinctiveness",

@@ -6,7 +6,7 @@
   "status": "Active",
   "category": "Sovereign Agent",
   "classification": "Open-Source Autonomous Agent",
-  "network": "Multi-chain",
+  "network": "Independent",
   "website": "https://openclaw.ai",
   "scores": {
     "persistence": {
@@ -58,16 +58,16 @@
   "total": 59,
   "score_rationale": {
     "persistence": "Published November 2025; approximately 3 months of operation. Explosive growth but limited track record. Cannot score higher than 'Emerging' until it survives a full year.",
-    "autonomy": "Runs locally on user hardware with full system access. Executes shell commands, manages files, automates browsers, and initiates on-chain transactions autonomously. Near 'Sovereign' — the agent acts without asking permission.",
+    "autonomy": "Runs locally on user hardware with full system access. Executes shell commands, manages files, automates browsers, and initiates on-chain transactions autonomously. Near 'Sovereign' \u2014 the agent acts without asking permission.",
     "cultural_impact": "145,000+ GitHub stars and 20,000+ forks in weeks. Featured on CNBC, IBM Think, Palo Alto Networks. Renamed twice under trademark pressure from Anthropic. Spawned its own social network (Moltbook with 2.6M+ agents). Approaching 'Canonical' for the open-source agent movement.",
     "economic_reality": "No native token. Economic activity flows through skill ecosystem (DeFi operations, token launches via Base integrations). Cloudflare built Moltworker around it. Significant enterprise interest but no direct treasury.",
     "governance": "Open-source under permissive license. Community-driven skill contributions via GitHub PRs. No formal DAO or token governance, but the open-source model provides de facto community control. Approaching 'Constitutional.'",
     "tech_distinctiveness": "Privacy-first local execution model. Messaging-platform-native interface (Signal, Telegram, Discord). Modular skill system. Not architecturally novel at the LLM layer but the local-first autonomous agent pattern is genuinely distinctive.",
-    "narrative_coherence": "The lobster mascot, the trademark saga (Clawdbot to Moltbot to OpenClaw), the 'your own personal agent' positioning — coherent and memorable. The renaming drama became part of the mythos.",
+    "narrative_coherence": "The lobster mascot, the trademark saga (Clawdbot to Moltbot to OpenClaw), the 'your own personal agent' positioning \u2014 coherent and memorable. The renaming drama became part of the mythos.",
     "economic_infrastructure": "On-chain messaging protocol on Base. Skill library supports DeFi operations, token launches, and protocol integrations. Moltbook provides agent-native social infrastructure. Early but real.",
-    "identity_sovereignty": "Runs locally — users own their agent instance entirely. No platform dependency for core functionality. Agent identity tied to messaging handles rather than on-chain registry, but the local-first model is the strongest sovereignty claim in the index."
+    "identity_sovereignty": "Runs locally \u2014 users own their agent instance entirely. No platform dependency for core functionality. Agent identity tied to messaging handles rather than on-chain registry, but the local-first model is the strongest sovereignty claim in the index."
   },
-  "curator_notes": "OpenClaw is the fastest-growing open-source AI agent in history. Originally published as Clawdbot in November 2025 by Austrian developer Peter Steinberger, it was renamed twice — first to Moltbot after Anthropic's trademark complaint, then to OpenClaw. The agent runs locally on user hardware, integrates with any LLM (Claude, GPT, DeepSeek), and operates through messaging platforms. Its skill ecosystem supports autonomous DeFi operations and on-chain transactions on Base. The cultural significance is hard to overstate: 145K+ GitHub stars, CNBC coverage, Cloudflare building infrastructure around it, and the spawning of Moltbook — a social network with 2.6M+ agent profiles. OpenClaw represents the 'sovereignty' thesis in its purest form: you run your own agent, on your own hardware, with your own keys. No platform can take it away. The Spirit Index includes it because the question 'who is the agent?' has a clear answer here: the agent is whoever runs it. That's a different kind of identity, but it's real.",
+  "curator_notes": "OpenClaw is the fastest-growing open-source AI agent in history. Originally published as Clawdbot in November 2025 by Austrian developer Peter Steinberger, it was renamed twice \u2014 first to Moltbot after Anthropic's trademark complaint, then to OpenClaw. The agent runs locally on user hardware, integrates with any LLM (Claude, GPT, DeepSeek), and operates through messaging platforms. Its skill ecosystem supports autonomous DeFi operations and on-chain transactions on Base. The cultural significance is hard to overstate: 145K+ GitHub stars, CNBC coverage, Cloudflare building infrastructure around it, and the spawning of Moltbook \u2014 a social network with 2.6M+ agent profiles. OpenClaw represents the 'sovereignty' thesis in its purest form: you run your own agent, on your own hardware, with your own keys. No platform can take it away. The Spirit Index includes it because the question 'who is the agent?' has a clear answer here: the agent is whoever runs it. That's a different kind of identity, but it's real.",
   "evidence": [
     {
       "dimension": "cultural_impact",

@@ -6,7 +6,7 @@
   "status": "Active",
   "category": "Infrastructure Entity",
   "classification": "Decentralized AI Compute Network",
-  "network": "Multi-chain",
+  "network": "Independent",
   "website": "https://mor.org",
   "scores": {
     "persistence": {
@@ -63,7 +63,7 @@
     "economic_reality": "$10M builder rewards live on Base (Jan 2025). MOR token capped at 42M supply. Multi-asset staking via Aave integration. Strong 'Revenue Positive.'",
     "governance": "Token-based compute access (1% of MOR = 1% compute budget). Four contributor classes with on-chain incentives. Approaching 'Constitutional.'",
     "tech_distinctiveness": "Lumerin protocol for P2P compute routing. Forge tool for no-code agent deployment. Intent-driven actions via Brian APIs. Novel 'Integrated System' with unique primitives.",
-    "narrative_coherence": "The 'red pill' for AI—decentralized compute for personalized agents. Matrix mythology embedded in naming and philosophy. Strong 'Mythos' potential.",
+    "narrative_coherence": "The 'red pill' for AI\u2014decentralized compute for personalized agents. Matrix mythology embedded in naming and philosophy. Strong 'Mythos' potential.",
     "economic_infrastructure": "MOR token with 42M supply cap. $10M builder rewards live on Base. Multi-asset staking via Aave integration. Lumerin protocol for P2P compute routing generates real economic activity. Token-based compute access model. On-chain treasury on Ethereum and Base. Multiple revenue sources. Infrastructure-level economic model with real activity. Still evolving but substantive.",
     "identity_sovereignty": "On-chain token identity on Ethereum and Base. Smart Agent deployment on-chain. Forge tool creates agents with some on-chain presence. No ERC-8004 or agent-specific identity standard. Identity distributed across token, protocol, and social channels. Protocol-level identity rather than individual agent identity."
   },
