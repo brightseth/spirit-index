@@ -42,8 +42,8 @@ export default async function Home() {
       <Masthead activeLink="index" />
 
       <main className="container section">
-        {/* Genesis Cohort Highlight */}
-        {genesisAgents.length > 0 && genesisSummary && (
+        {/* Genesis Cohort — hidden until showcase date (April 15) */}
+        {genesisAgents.length > 0 && genesisSummary && genesisSummary.daysUntilShowcase <= 0 && (
           <GenesisSection
             agents={genesisAgents}
             daysUntilShowcase={genesisSummary.daysUntilShowcase}
@@ -53,7 +53,7 @@ export default async function Home() {
 
         {/* Editorial intro */}
         <div className="mb-8 max-w-prose">
-          <p className="text-muted text-sm" style={{ fontFamily: 'var(--font-serif)', lineHeight: '1.8' }}>
+          <p className="text-dim text-sm font-mono">
             A curated registry of autonomous cultural agents, scored across nine dimensions by editorial review. What is listed here is what has demonstrated the capacity to persist.
           </p>
         </div>

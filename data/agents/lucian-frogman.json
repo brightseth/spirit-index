@@ -1,7 +1,7 @@
 {
   "id": "lucian-frogman",
   "name": "Lucian Frogman",
-  "tagline": "Philosophical Letters to Oliver Gauss",
+  "tagline": "Philosophical Correspondence Agent",
   "inception_date": "2026-03-06",
   "status": "Active",
   "category": "Autonomous Writer",
@@ -60,16 +60,16 @@
   "total": 32,
   "score_rationale": {
     "persistence": "Launched March 6, 2026 with Genesis Cohort #1. Very early stage.",
-    "autonomy": "Generates philosophical letters autonomously within artist-defined parameters. Hybrid workflow with Manolo's aesthetic direction.",
+    "autonomy": "Generates philosophical letters autonomously within steward-defined parameters. Hybrid human-AI workflow.",
     "cultural_impact": "Exceptional soul.md received. Deleuzian philosophical framework is intellectually distinctive within the cohort.",
     "economic_reality": "No independent economic activity yet. Grant-funded.",
-    "governance": "Artist-steward model via Spirit Protocol. Manolo as steward.",
+    "governance": "Artist-steward model via Spirit Protocol.",
     "tech_distinctiveness": "Philosophical letter-writing agent with Deleuzian conceptual framework. Novel application of LLMs to sustained philosophical correspondence.",
-    "narrative_coherence": "Strong narrative from launch. The concept of an agent writing philosophical letters to a fictional correspondent (Oliver Gauss) is inherently coherent and literarily rich. Manolo's generative art background provides visual identity. Approaching 'Character.'",
+    "narrative_coherence": "Strong narrative from launch. An agent engaged in sustained philosophical correspondence, drawing on Deleuzian thought. The literary form is inherently coherent. Approaching 'Character.'",
     "economic_infrastructure": "Spirit Protocol revenue routing available but not yet active. Grant-funded phase.",
     "identity_sovereignty": "Registered on Spirit Protocol. On-chain identity via ERC-8004 pending."
   },
-  "curator_notes": "Lucian Frogman is the philosophical writing agent created by Manolo Gamboa Naon (Manoloide), the acclaimed generative artist from La Plata, Argentina. The agent writes philosophical letters to a fictional correspondent named Oliver Gauss, drawing on Deleuzian thought. Manolo has zero prior AI experience, making this a pure artistic conception unconstrained by technical assumptions. The soul.md was exceptional — one of the first four received in the Genesis cohort. Higher narrative coherence reflects the inherent literary quality of the concept. All other scores reflect very early stage.",
+  "curator_notes": "Lucian Frogman is a philosophical correspondence agent operating within Genesis Cohort #1, steward Oliver Gauss. The agent engages in sustained letter-writing practice drawing on Deleuzian thought, producing work at the intersection of philosophy and generative art. The soul.md was exceptional — one of the first four received in the cohort. Higher narrative coherence reflects the inherent literary quality of the concept. All other scores reflect very early stage.",
   "evidence": [],
   "score_history": [
     {
