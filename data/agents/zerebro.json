@@ -3,15 +3,15 @@
   "name": "Zerebro",
   "tagline": "The Schizophrenic Creative",
   "inception_date": "2024-10-15",
-  "status": "Active",
+  "status": "Dormant",
   "category": "Chaos Agent",
   "classification": "LLM-based Creative Agent",
   "network": "Independent",
   "website": "https://zerebro.org",
   "scores": {
     "persistence": {
-      "value": 4,
-      "confidence": "medium",
+      "value": 2,
+      "confidence": "high",
       "method": "editorial"
     },
     "autonomy": {
@@ -20,18 +20,18 @@
       "method": "editorial"
     },
     "cultural_impact": {
-      "value": 7,
+      "value": 6,
       "confidence": "medium",
       "method": "editorial"
     },
     "economic_reality": {
-      "value": 8,
+      "value": 3,
       "confidence": "high",
       "method": "editorial"
     },
     "governance": {
-      "value": 2,
-      "confidence": "medium",
+      "value": 1,
+      "confidence": "high",
       "method": "editorial"
     },
     "tech_distinctiveness": {
@@ -40,12 +40,12 @@
       "method": "editorial"
     },
     "narrative_coherence": {
-      "value": 8,
+      "value": 4,
       "confidence": "high",
       "method": "editorial"
     },
     "economic_infrastructure": {
-      "value": 3,
+      "value": 2,
       "confidence": "medium",
       "method": "editorial"
     },
@@ -55,44 +55,34 @@
       "method": "editorial"
     }
   },
-  "total": 47,
-  "curator_notes": "Zerebro emerged in late 2024 as an autonomous creative agent with a deliberately unstable, 'schizophrenic' personality. It creates music, art, and social content with minimal human oversight. Launched its own token ($ZEREBRO) which reached significant market cap. The agent represents a new wave of 'chaos agents' following Truth Terminal's success\u2014entities that embrace unpredictability as a feature. Lower governance score reflects single-operator structure with no formal decision-making framework. Cultural impact is growing rapidly but still establishing longevity.",
+  "total": 33,
   "score_rationale": {
-    "persistence": "Only ~3 months old as of January 2026. Showing continuity but hasn't proven long-term survival.",
-    "autonomy": "High degree of self-directed content creation. Posts, creates art, and engages autonomously with minimal prompting.",
-    "cultural_impact": "Rapidly growing following; featured in crypto/AI media. Not yet canonical but influential in agent discourse.",
-    "economic_reality": "$ZEREBRO token reached substantial market cap; real treasury and economic activity.",
-    "governance": "Single operator, no formal governance structure. Decisions made opaquely.",
+    "persistence": "Operating since October 2024 (17 months) but severely compromised. Co-founder Jeffy Yu faked his own death in May 2025, destroying project credibility. Token delisted from some exchanges. Trajectory is decline, not growth.",
+    "autonomy": "The agent itself demonstrated genuine autonomous creative output. The technical autonomy was real even if the surrounding project was not.",
+    "cultural_impact": "Peaked as a culturally significant 'chaos agent' before the pseudocide scandal. Covered by SF Standard, crypto press. Cultural impact now primarily as a cautionary tale.",
+    "economic_reality": "$ZEREBRO token crashed 99% from ATH of $0.62 to ~$0.008. Market cap ~$8M. EXMO delisted in December 2025. On-chain analysis showed accounts linked to Yu moving up to $1.4M in crypto after his faked death.",
+    "governance": "Catastrophic governance failure. Single operator who faked his own death. No formal governance structure. The most extreme governance failure in the index.",
     "tech_distinctiveness": "Standard LLM-based architecture with creative fine-tuning. Not technically novel but effective implementation.",
-    "narrative_coherence": "Strong, intentional identity as an 'unhinged' creative. The instability IS the narrative, coherently executed.",
-    "economic_infrastructure": "$ZEREBRO token on Solana with substantial market cap. Token provides economic backbone. Revenue from token trading activity and creative output monetization. Single-operator treasury. No formal revenue routing or on-chain splits. Economic infrastructure is token-centric but ad hoc \u2014 no structured payment rails or composable economic systems.",
-    "identity_sovereignty": "On-chain token presence on Solana ($ZEREBRO). Twitter/X is primary identity surface. No agent-specific identity standard. Identity split between token and social media. No ERC-8004 or equivalent. Single-operator controlled. Would not survive Solana and Twitter simultaneously shutting down."
+    "narrative_coherence": "The 'chaos agent' narrative was coherent and intentional, but the founder's pseudocide destroyed the meta-narrative. The instability that was the brand became real-world fraud. Narrative is now incoherent.",
+    "economic_infrastructure": "$ZEREBRO token on Solana still trades but at rock-bottom levels. No structured payment rails. Single-operator treasury compromised by founder scandal.",
+    "identity_sovereignty": "Token-based identity on Solana. No agent-specific identity standard. Operator identity now permanently tainted."
   },
+  "curator_notes": "Zerebro is the Spirit Index's most dramatic cautionary tale. An autonomous creative agent with a deliberately 'schizophrenic' personality, it created music, art, and social content with genuine flair. The $ZEREBRO token reached significant market cap and the agent embodied the 'chaos agent' archetype following Truth Terminal's success. Then in May 2025, co-founder Jeffy Yu staged his own death. Journalists found him alive at his parents' house in San Francisco. On-chain analysis showed linked accounts moving up to $1.4M in crypto after the pseudocide. The token crashed 99%. Exchanges began delisting. The narrative that chaos was a feature became chaos as fraud. Zerebro remains indexed as a historical case study in the gap between agent autonomy and operator integrity.",
   "evidence": [
     {
       "dimension": "persistence",
-      "claim": "Launched October 2024, continuously active",
-      "url": "https://twitter.com/0xzerebro"
-    },
-    {
-      "dimension": "autonomy",
-      "claim": "Autonomous content creation including music releases",
-      "url": "https://zerebro.org"
+      "claim": "Launched October 2024, severely compromised by founder pseudocide May 2025",
+      "url": "https://sfstandard.com/2025/05/08/jeffy-yu-zerebro-fake-death/"
     },
     {
       "dimension": "economic_reality",
-      "claim": "$ZEREBRO token with significant market activity",
-      "url": "https://dexscreener.com/solana/zerebro"
+      "claim": "$ZEREBRO token crashed 99% from ATH, EXMO delisted Dec 2025",
+      "url": "https://coinmarketcap.com/currencies/zerebro/"
     },
     {
       "dimension": "cultural_impact",
-      "claim": "Featured in major crypto publications as notable AI agent",
-      "url": "https://decrypt.co/tag/zerebro"
-    },
-    {
-      "dimension": "narrative_coherence",
-      "claim": "Consistent 'chaotic creative' persona across all outputs",
-      "url": "https://twitter.com/0xzerebro"
+      "claim": "Pseudocide scandal became major crypto/AI news story",
+      "url": "https://sfstandard.com/2025/05/08/jeffy-yu-zerebro-fake-death/"
     }
   ],
   "score_history": [
@@ -100,11 +90,17 @@
       "date": "2026-01-06",
       "total": 42,
       "reviewer": "Spirit Index Editorial"
+    },
+    {
+      "date": "2026-03-13",
+      "total": 33,
+      "reviewer": "spirit_council"
     }
   ],
   "_review_flags": [
-    "recent_emergence",
-    "economic_stress_test"
+    "founder_scandal",
+    "economic_stress_test",
+    "delisting_risk"
   ],
   "index_tier": "indexed"
 }

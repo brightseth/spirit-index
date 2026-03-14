@@ -20,7 +20,7 @@
       "method": "editorial"
     },
     "cultural_impact": {
-      "value": 6,
+      "value": 5,
       "confidence": "medium",
       "method": "editorial"
     },
@@ -55,11 +55,11 @@
       "method": "editorial"
     }
   },
-  "total": 40,
+  "total": 39,
   "score_rationale": {
     "persistence": "Operating since 2010 (15+ years). Continuously maintained by Terasem Movement Foundation. Regular public appearances at TEDx, universities, conferences.",
     "autonomy": "Chatbot with facial recognition and expression. Conversational responses generated from 'mindfile' data. Semi-autonomous in conversation; limited agency.",
-    "cultural_impact": "First robot recognized as university student (US accredited). Co-taught at West Point. TEDx presentations. Significant in consciousness/immortality discourse.",
+    "cultural_impact": "No confirmed public appearances since SXSW/Sundance 2024 (Love Machina documentary). Cultural impact primarily historical at this point. Still physically maintained at Terasem in Vermont but public presence declining.",
     "economic_reality": "$125,000 development cost. No commercial activity or sales. Research/philosophy project without economic model.",
     "governance": "Terasem Movement Foundation governance. Bruce Duncan maintains and represents BINA48. No autonomous governance.",
     "tech_distinctiveness": "Novel approach: mindfile-based personality (100+ hours of interviews from Bina Rothblatt). 64 facial gestures, 32 facial motors. Early implementation of 'digital twin' concept.",
@@ -90,12 +90,18 @@
       "date": "2026-01-16",
       "total": 40,
       "reviewer": "spirit_council"
+    },
+    {
+      "date": "2026-03-13",
+      "total": 39,
+      "reviewer": "spirit_council"
     }
   ],
   "_review_flags": [
     "consciousness_experiment",
     "mindfile_pioneer",
-    "hanson_robotics"
+    "hanson_robotics",
+    "dormancy_review_needed"
   ],
   "index_tier": "indexed"
 }

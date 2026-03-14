@@ -2,7 +2,7 @@
  * Genesis Cohort Integration
  *
  * Helpers for accessing Genesis cohort data within the Spirit Index.
- * Genesis Cohort #1: 10 selected artists + core agents (Abraham, Solienne, SAL).
+ * Genesis Cohort #1: 12 selected artists + core agents (Abraham, Solienne, SAL).
  * Launch: March 6, 2026. Showcase: April 15, 2026 (Paris).
  */
 
@@ -53,13 +53,15 @@ export interface GenesisStatusData {
   coreAgents: Record<string, GenesisCoreAgent>;
 }
 
-// IDs of the 10 Genesis Cohort #1 agents
+// IDs of the 12 Genesis Cohort #1 agents
 export const GENESIS_AGENT_IDS: string[] = [
   "gfx",
   "clara",
   "gravitas",
+  "johnny-rico",
   "kevin-plus",
   "jake",
+  "lucian-frogman",
   "ganchitecture",
   "tendrela",
   "graymarket",

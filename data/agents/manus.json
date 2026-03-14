@@ -25,7 +25,7 @@
       "method": "editorial"
     },
     "economic_reality": {
-      "value": 10,
+      "value": 8,
       "confidence": "high",
       "method": "editorial"
     },
@@ -55,12 +55,12 @@
       "method": "editorial"
     }
   },
-  "total": 46,
+  "total": 44,
   "score_rationale": {
     "persistence": "Debuted spring 2025; acquired by Meta in December 2025 after less than a year of independent operation. Short independent lifespan but will persist within Meta's ecosystem.",
     "autonomy": "Demonstrated genuine autonomous task execution: screening job candidates, planning vacations, analyzing stock portfolios, and other multi-step tasks with minimal human guidance. Strong 'Sentient' anchor.",
     "cultural_impact": "Most expensive AI agent acquisition in history ($2B+). Fastest startup to reach $100M ARR. Widely covered by CNBC, TechCrunch, CBC, TechRadar. Landmark moment for the agent economy.",
-    "economic_reality": "$100M+ ARR from millions of subscribers. Acquired for $2B+ by Meta. Perfect 'Market Mover' — the highest economic score in the index. Definitive proof that autonomous agents are valued as enterprise assets.",
+    "economic_reality": "$100M+ ARR from millions of subscribers. Acquired for $2B+ by Meta. However, post-acquisition the entity no longer independently generates or controls its economics. A subsumed entity cannot hold the maximum economic sovereignty score.",
     "governance": "Centralized corporate governance under Singapore-based startup, now absorbed into Meta. No community governance, no token, no DAO. Chinese operations wound down post-acquisition.",
     "tech_distinctiveness": "General-purpose agent capable of complex multi-step task execution across domains. Integrated into Meta's consumer products (Facebook, Instagram, WhatsApp). Advanced execution layer but architecture details are proprietary.",
     "narrative_coherence": "Identity is less distinctive than cultural agents — Manus is a utility, not a character. The acquisition narrative is powerful but the agent itself lacks a mythos or personality.",
@@ -99,6 +99,11 @@
     {
       "date": "2026-02-09",
       "total": 46,
+      "reviewer": "spirit_council"
+    },
+    {
+      "date": "2026-03-13",
+      "total": 44,
       "reviewer": "spirit_council"
     }
   ],

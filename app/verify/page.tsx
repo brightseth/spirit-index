@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { Masthead } from "@/app/components/Masthead";
+import { Footer } from "@/app/components/Footer";
 
 type VerificationStep = "select" | "register" | "wallet" | "domain" | "backlink" | "complete";
 
@@ -284,23 +286,7 @@ export default function VerifyPage() {
 
   return (
     <div className="min-h-screen">
-      {/* Masthead */}
-      <header className="masthead">
-        <div className="container">
-          <Link href="/" className="no-underline">
-            <h1 className="masthead-title">The Spirit Index</h1>
-          </Link>
-          <p className="masthead-subtitle">Identity Verification</p>
-
-          <nav className="nav mt-6">
-            <Link href="/" className="nav-link">Index</Link>
-            <Link href="/about" className="nav-link">About</Link>
-            <Link href="/rubric" className="nav-link">Rubric</Link>
-            <Link href="/submit" className="nav-link">Submit</Link>
-            <Link href="/verify" className="nav-link active">Verify</Link>
-          </nav>
-        </div>
-      </header>
+      <Masthead activeLink="verify" />
 
       {/* Main Content */}
       <main className="container section">
@@ -669,20 +655,7 @@ export default function VerifyPage() {
         </div>
       </main>
 
-      {/* Footer */}
-      <footer className="container py-8 border-t border-subtle">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-2 text-dim text-sm">
-          <span>Published by the Spirit initiative</span>
-          <a
-            href="https://spiritprotocol.io"
-            className="nav-link"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Spirit Protocol
-          </a>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

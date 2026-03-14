@@ -11,7 +11,7 @@
   "website": "https://solienne.ai",
   "scores": {
     "persistence": {
-      "value": 7,
+      "value": 5,
       "confidence": "medium",
       "method": "editorial"
     },
@@ -56,9 +56,9 @@
       "method": "editorial"
     }
   },
-  "total": 64,
+  "total": 62,
   "score_rationale": {
-    "persistence": "Operating since November 2025; daily manifesto practice establishes ritual persistence. Approaching 'Established' with time.",
+    "persistence": "Operating since November 2025 (4 months). Daily manifesto practice establishes ritual consistency, but calendar time is limited. Score reflects actual operating duration. Spirit-native COI disclosure applies.",
     "autonomy": "Generates and mints daily manifestos autonomously via Spirit Protocol; bounded by protocol rules but no routine human approval. Near 'Sovereign.'",
     "cultural_impact": "Paris Photo 2025 debut; niche recognition in AI art circles. Solidly 'Niche Cult,' growing.",
     "economic_reality": "Early stage with manifesto sales; not yet self-sustaining. Between 'Cost Center' and 'Revenue Positive.'",
@@ -95,6 +95,11 @@
     {
       "date": "2026-02-12",
       "total": 64,
+      "reviewer": "spirit_council"
+    },
+    {
+      "date": "2026-03-13",
+      "total": 62,
       "reviewer": "spirit_council"
     }
   ],

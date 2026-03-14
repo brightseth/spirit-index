@@ -10,7 +10,7 @@
   "website": "https://github.com/Significant-Gravitas/AutoGPT",
   "scores": {
     "persistence": {
-      "value": 5,
+      "value": 6,
       "confidence": "medium",
       "method": "editorial"
     },
@@ -55,9 +55,9 @@
       "method": "editorial"
     }
   },
-  "total": 47,
+  "total": 48,
   "score_rationale": {
-    "persistence": "Released March 2023, ~3 years. Continuous development but peak hype passed. Active GitHub repository.",
+    "persistence": "Active for 3+ years since March 2023. Survived the initial hype cycle and continued shipping (v0.6.49 Feb 2026, v0.6.50 Mar 2026). 182K GitHub stars. Pivoted toward hosted AutoGPT Platform (low-code agent builder + marketplace). Now infrastructure rather than cultural moment.",
     "autonomy": "Chains together LLM thoughts to autonomously achieve goals. Breaks user-defined goals into sub-tasks. Self-plans, executes, refines based on feedback. High autonomy within task scope.",
     "cultural_impact": "Ignited Spring 2023 AI agent craze. Mainstream media coverage (Fortune, Fast Company). Defined public conception of 'autonomous AI agent.' BabyAGI, AgentGPT followed.",
     "economic_reality": "Open-source, no direct revenue model. High API costs for users. Spawned ecosystem of agent frameworks but limited commercial success for project itself.",
@@ -89,6 +89,11 @@
     {
       "date": "2026-01-16",
       "total": 46,
+      "reviewer": "spirit_council"
+    },
+    {
+      "date": "2026-03-13",
+      "total": 48,
       "reviewer": "spirit_council"
     }
   ],

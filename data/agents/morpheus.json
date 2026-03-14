@@ -25,7 +25,7 @@
       "method": "editorial"
     },
     "economic_reality": {
-      "value": 7,
+      "value": 4,
       "confidence": "high",
       "method": "editorial"
     },
@@ -55,12 +55,12 @@
       "method": "editorial"
     }
   },
-  "total": 55,
+  "total": 52,
   "score_rationale": {
     "persistence": "Operating since early 2024 (~2 years). Mainnet launched January 2025. Survived initial phase but hasn't been through extended bear market. 'Established' threshold.",
     "autonomy": "Network enables autonomous agent execution; Smart Agents run locally and execute complex on-chain tasks via natural language. Above 'Cyborg' but network itself is infrastructure.",
     "cultural_impact": "Known in decentralized AI circles; AlphaTON partnership targeting Telegram's 1B users. Growing but not yet mainstream institutional recognition. 'Niche Cult.'",
-    "economic_reality": "$10M builder rewards live on Base (Jan 2025). MOR token capped at 42M supply. Multi-asset staking via Aave integration. Strong 'Revenue Positive.'",
+    "economic_reality": "MOR token crashed 99% from ATH of $138.99 to ~$1.40. Market cap ~$10M. 24h trading volume critically low at ~$34K. Mainnet launched November 2024 with $20M in compute rewards available, but token economics are severely stressed.",
     "governance": "Token-based compute access (1% of MOR = 1% compute budget). Four contributor classes with on-chain incentives. Approaching 'Constitutional.'",
     "tech_distinctiveness": "Lumerin protocol for P2P compute routing. Forge tool for no-code agent deployment. Intent-driven actions via Brian APIs. Novel 'Integrated System' with unique primitives.",
     "narrative_coherence": "The 'red pill' for AI\u2014decentralized compute for personalized agents. Matrix mythology embedded in naming and philosophy. Strong 'Mythos' potential.",
@@ -89,6 +89,11 @@
     {
       "date": "2026-01-08",
       "total": 47,
+      "reviewer": "spirit_council"
+    },
+    {
+      "date": "2026-03-13",
+      "total": 52,
       "reviewer": "spirit_council"
     }
   ],

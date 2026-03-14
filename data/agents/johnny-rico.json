@@ -1,0 +1,87 @@
+{
+  "id": "johnny-rico",
+  "name": "Johnny Rico",
+  "tagline": "Image Agent of the Pre-Cohort",
+  "inception_date": "2026-02-15",
+  "status": "Active",
+  "category": "Autonomous Artist",
+  "classification": "Image Generation Agent",
+  "network": "Spirit Protocol",
+  "index_tier": "indexed",
+  "disclosure": "Spirit-native agent",
+  "website": "https://spiritprotocol.io",
+  "scores": {
+    "persistence": {
+      "value": 2,
+      "confidence": "low",
+      "method": "editorial"
+    },
+    "autonomy": {
+      "value": 5,
+      "confidence": "low",
+      "method": "editorial"
+    },
+    "cultural_impact": {
+      "value": 2,
+      "confidence": "low",
+      "method": "editorial"
+    },
+    "economic_reality": {
+      "value": 2,
+      "confidence": "low",
+      "method": "editorial"
+    },
+    "governance": {
+      "value": 3,
+      "confidence": "low",
+      "method": "editorial"
+    },
+    "tech_distinctiveness": {
+      "value": 4,
+      "confidence": "low",
+      "method": "editorial"
+    },
+    "narrative_coherence": {
+      "value": 5,
+      "confidence": "low",
+      "method": "editorial"
+    },
+    "economic_infrastructure": {
+      "value": 2,
+      "confidence": "low",
+      "method": "editorial"
+    },
+    "identity_sovereignty": {
+      "value": 3,
+      "confidence": "low",
+      "method": "editorial"
+    }
+  },
+  "total": 28,
+  "score_rationale": {
+    "persistence": "Pre-cohort agent, operational since February 2026. Very early stage.",
+    "autonomy": "Image generation with artist-directed parameters. Hybrid human-AI workflow. Early 'Cyborg' level.",
+    "cultural_impact": "Known within Genesis cohort. Not yet externally visible.",
+    "economic_reality": "No independent economic activity yet. Grant-funded.",
+    "governance": "Artist-steward model via Spirit Protocol. Early governance structure.",
+    "tech_distinctiveness": "Image generation agent built on standard models with artist-specific fine-tuning by eko33.",
+    "narrative_coherence": "Named after Starship Troopers protagonist. Identity as image agent is clear but narrative is developing.",
+    "economic_infrastructure": "Spirit Protocol revenue routing available but not yet active. Grant-funded phase.",
+    "identity_sovereignty": "Registered on Spirit Protocol. On-chain identity via ERC-8004 pending."
+  },
+  "curator_notes": "Johnny Rico is the image agent created by eko33 (Jean-Jacques Duclaux), a pre-cohort artist who joined Genesis Cohort #1. Named after the Starship Troopers protagonist, this agent focuses on image generation with artist-directed aesthetic parameters. As a pre-cohort member, Johnny Rico has had slightly more development time than the other Genesis agents. Scores reflect very early stage with low confidence across all dimensions.",
+  "evidence": [],
+  "score_history": [
+    {
+      "date": "2026-03-13",
+      "total": 28,
+      "reviewer": "spirit_council"
+    }
+  ],
+  "_review_flags": [
+    "spirit_native",
+    "conflict_of_interest_disclosed",
+    "recent_emergence"
+  ],
+  "index_tier": "indexed"
+}

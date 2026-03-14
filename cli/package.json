@@ -1,0 +1,14 @@
+{
+  "name": "spirit-index",
+  "version": "0.1.0",
+  "description": "CLI for the Spirit Index — query autonomous agent scores",
+  "bin": {
+    "spirit-index": "./bin/spirit-index.mjs"
+  },
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/spiritprotocol/spirit-index"
+  }
+}

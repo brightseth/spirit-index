@@ -10,7 +10,7 @@
   "website": "https://arc.fun",
   "scores": {
     "persistence": {
-      "value": 3,
+      "value": 4,
       "confidence": "medium",
       "method": "editorial"
     },
@@ -55,9 +55,9 @@
       "method": "editorial"
     }
   },
-  "total": 44,
+  "total": 45,
   "score_rationale": {
-    "persistence": "Launched December 2024, ~13 months old. Survived initial volatility. Active development with Polygon expansion in February 2025.",
+    "persistence": "Operating since late 2024 (15 months). Token extremely volatile with surges and crashes, but platform remains active. Nearly full token distribution (999.98M of 999.99M circulating). Survived despite high speculation-to-usage ratio.",
     "autonomy": "Framework enables AI agents to interact with blockchain, analyze on-chain data, execute DeFi transactions. Platform is infrastructure rather than autonomous agent itself.",
     "cultural_impact": "Open-source ecosystem with growing developer adoption. 200% activity surge on Solana in August 2025. Niche but active community.",
     "economic_reality": "ARC token traded with ~$51M market cap. 45K+ holders. 90% of supply released to public at launch. Arc Forge platform launched for token launches.",
@@ -89,6 +89,11 @@
     {
       "date": "2026-01-16",
       "total": 37,
+      "reviewer": "spirit_council"
+    },
+    {
+      "date": "2026-03-13",
+      "total": 45,
       "reviewer": "spirit_council"
     }
   ],

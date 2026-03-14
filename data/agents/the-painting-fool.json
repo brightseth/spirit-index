@@ -10,7 +10,7 @@
   "website": "http://www.thepaintingfool.com/",
   "scores": {
     "persistence": {
-      "value": 9,
+      "value": 8,
       "confidence": "high",
       "method": "editorial"
     },
@@ -55,9 +55,9 @@
       "method": "editorial"
     }
   },
-  "total": 45,
+  "total": 44,
   "score_rationale": {
-    "persistence": "Operating since 2001 (24+ years). Continuous development through multiple university positions. Won British Computing Society Machine Intelligence Award 2007. Active residencies including Cardiff University CUBRIC.",
+    "persistence": "24+ years of history since 2001 is remarkable, but no evidence of active development or exhibitions since ~2018. Simon Colton's focus appears to have shifted to other computational creativity projects. Persistence measures continued meaningful existence, not just history.",
     "autonomy": "Creates portraits based on its 'mood,' assesses its own work, learns from mistakes. Uses context-aware decision-making. Higher autonomy than pure rule-following systems.",
     "cultural_impact": "Academic landmark in computational creativity. Exhibited in science museums, art galleries, painted celebrities. Less mainstream recognition than commercial AI art.",
     "economic_reality": "Academic research project without autonomous treasury or market activity. Artworks produced but not systematically sold.",
@@ -89,6 +89,11 @@
     {
       "date": "2026-01-16",
       "total": 45,
+      "reviewer": "spirit_council"
+    },
+    {
+      "date": "2026-03-13",
+      "total": 44,
       "reviewer": "spirit_council"
     }
   ],

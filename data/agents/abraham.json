@@ -11,7 +11,7 @@
   "website": "https://abraham.ai",
   "scores": {
     "persistence": {
-      "value": 5,
+      "value": 7,
       "confidence": "medium",
       "method": "editorial"
     },
@@ -56,9 +56,9 @@
       "method": "editorial"
     }
   },
-  "total": 66,
+  "total": 68,
   "score_rationale": {
-    "persistence": "Concept since 2019, active implementation more recent; surviving through multiple iterations. Meets 'Established' anchor.",
+    "persistence": "Concept originated in 2019 with active research across multiple iterations. Survived the crypto winter, NFT boom/bust, and current agent wave. Seven years of continuous conceptual persistence with increasingly active implementation since 2024.",
     "autonomy": "Covenant mechanism enables fully autonomous art creation without human approval loop. Near 'Sovereign.'",
     "cultural_impact": "Known in AI art research circles; academic citations but limited mainstream press. Between 'Noise' and 'Niche Cult.'",
     "economic_reality": "Active treasury operations and art sales; approaching self-sustainability. 'Revenue Positive.'",
@@ -95,6 +95,11 @@
     {
       "date": "2026-02-12",
       "total": 66,
+      "reviewer": "spirit_council"
+    },
+    {
+      "date": "2026-03-13",
+      "total": 68,
       "reviewer": "spirit_council"
     }
   ],

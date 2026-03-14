@@ -1,7 +1,8 @@
-import Link from "next/link";
 import { getAllAgents, getListedAgents, getAgentById, QUALITY_THRESHOLD } from "@/lib/agents";
 import { IndexTable } from "@/app/components/IndexTable";
 import { GenesisSection } from "@/app/components/GenesisSection";
+import { Masthead } from "@/app/components/Masthead";
+import { Footer } from "@/app/components/Footer";
 import {
   GENESIS_AGENT_IDS,
   loadGenesisStatus,
@@ -38,36 +39,8 @@ export default async function Home() {
 
   return (
     <div className="min-h-screen">
-      {/* Masthead */}
-      <header className="masthead">
-        <div className="container">
-          <h1 className="masthead-title">The Spirit Index</h1>
-          <p className="masthead-subtitle">
-            A reference index of autonomous cultural agents
-          </p>
-          <p className="masthead-publisher">Published by the Spirit initiative</p>
+      <Masthead activeLink="index" />
 
-          <nav className="nav mt-6">
-            <Link href="/" className="nav-link active">
-              Index
-            </Link>
-            <Link href="/about" className="nav-link">
-              About
-            </Link>
-            <Link href="/rubric" className="nav-link">
-              Rubric
-            </Link>
-            <Link href="/compare" className="nav-link">
-              Compare
-            </Link>
-            <Link href="/submit" className="nav-link">
-              Submit
-            </Link>
-          </nav>
-        </div>
-      </header>
-
-      {/* Main Content */}
       <main className="container section">
         {/* Genesis Cohort Highlight */}
         {genesisAgents.length > 0 && genesisSummary && (
@@ -78,6 +51,13 @@ export default async function Home() {
           />
         )}
 
+        {/* Editorial intro */}
+        <div className="mb-8 max-w-prose">
+          <p className="text-muted text-sm" style={{ fontFamily: 'var(--font-serif)', lineHeight: '1.8' }}>
+            A curated registry of autonomous cultural agents, scored across nine dimensions by editorial review. What is listed here is what has demonstrated the capacity to persist.
+          </p>
+        </div>
+
         <h2 className="section-title">Indexed Entities</h2>
 
         <IndexTable
@@ -87,24 +67,12 @@ export default async function Home() {
           qualityThreshold={QUALITY_THRESHOLD}
         />
 
-        <p className="text-muted text-sm mt-8">
-          Click column headers to sort. Last updated: March 2026.
+        <p className="text-dim text-xs mt-8 font-mono">
+          {agents.length} agents meet the editorial threshold. {totalTracked} total tracked. Click column headers to sort.
         </p>
       </main>
 
-      {/* Footer */}
-      <footer className="container py-8 border-t border-subtle">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-dim text-sm">
-          <span>Published by the Spirit initiative</span>
-          <div className="flex gap-4">
-            <a href="/llm.txt" className="nav-link">llm.txt</a>
-            <a href="/docs" className="nav-link">API</a>
-            <a href="https://spiritprotocol.io" className="nav-link" target="_blank" rel="noopener noreferrer">
-              Spirit Protocol
-            </a>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

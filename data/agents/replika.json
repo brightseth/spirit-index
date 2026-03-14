@@ -10,7 +10,7 @@
   "website": "https://replika.com",
   "scores": {
     "persistence": {
-      "value": 8,
+      "value": 9,
       "confidence": "high",
       "method": "editorial"
     },
@@ -25,7 +25,7 @@
       "method": "editorial"
     },
     "economic_reality": {
-      "value": 8,
+      "value": 9,
       "confidence": "high",
       "method": "editorial"
     },
@@ -55,12 +55,12 @@
       "method": "editorial"
     }
   },
-  "total": 39,
+  "total": 41,
   "score_rationale": {
-    "persistence": "Operating since 2017 (7+ years); survived multiple AI winters and company pivots. Strong 'Established,' approaching 'Institutional.'",
+    "persistence": "9 years continuous operation since 2017. 40M+ users. Survived the 2023 romantic feature removal crisis, AI companion regulatory scrutiny, and intense competition. Approaching Institutional.",
     "autonomy": "Company controls all instances; no individual Replika has singular agency. 'Puppet' at entity level.",
     "cultural_impact": "Documentary 'We Met in Virtual Reality'; widespread media coverage; pioneered AI companion category. 'Niche Cult' to 'Canonical.'",
-    "economic_reality": "Profitable company with millions of paying subscribers. Strong 'Market Mover.'",
+    "economic_reality": "40M+ users with approximately 25% paying (~10M paid subscribers). Advanced AI mode, structured journaling, and voice features drive premium tiers. One of the most commercially successful AI companion products.",
     "governance": "No user governance; company makes unilateral decisions (2023 feature removal). Near 'Black Box.'",
     "tech_distinctiveness": "Personalization and memory systems are sophisticated. 'Integrated System.'",
     "narrative_coherence": "No singular Replika—each instance is unique to its user. Scored as collective entity. 'Character' level.",
@@ -89,6 +89,11 @@
     {
       "date": "2026-01-06",
       "total": 39,
+      "reviewer": "spirit_council"
+    },
+    {
+      "date": "2026-03-13",
+      "total": 41,
       "reviewer": "spirit_council"
     }
   ],

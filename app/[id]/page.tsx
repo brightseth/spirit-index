@@ -9,6 +9,8 @@ import { checkRegistration, RegistrationStatus } from "@/lib/chain";
 import { getRegistration } from "@/lib/registry";
 import { GenesisBadge } from "@/app/components/GenesisBadge";
 import { EmbedSection } from "@/app/components/EmbedSection";
+import { Masthead } from "@/app/components/Masthead";
+import { Footer } from "@/app/components/Footer";
 
 const siteUrl = "https://spiritindex.org";
 
@@ -82,6 +84,15 @@ function formatArchivalStatus(status: string): string {
   return status.split("_").map(word =>
     word.charAt(0).toUpperCase() + word.slice(1)
   ).join(" ");
+}
+
+// Helper to extract domain from URL
+function extractDomain(url: string): string {
+  try {
+    return new URL(url).hostname.replace(/^www\./, '');
+  } catch {
+    return 'source';
+  }
 }
 
 interface Props {
@@ -172,35 +183,36 @@ function BreadcrumbJsonLd({ agent }: { agent: Agent }) {
   );
 }
 
-// ERC-8004 registration status badge
-function RegistrationBadge({ agent, registration }: { agent: Agent; registration: RegistrationStatus }) {
-  const regInfo = getRegistration(agent.id);
+// ERC-8004 registration inline tag
+function RegistrationTag({ registration }: { registration: RegistrationStatus }) {
+  if (!registration.registered) return null;
+  return (
+    <span
+      className="text-xs uppercase tracking-wider font-mono px-2 py-0.5 border rounded"
+      style={{ color: '#4ADE80', borderColor: '#4ADE80' }}
+      title={`ERC-8004 Agent #${registration.agentId}`}
+    >
+      ERC-8004 #{registration.agentId}
+    </span>
+  );
+}
 
+// Registration CTA for unregistered agents
+function RegistrationCTA({ agent, registration }: { agent: Agent; registration: RegistrationStatus }) {
   if (registration.registered) {
+    const regInfo = getRegistration(agent.id);
     return (
-      <div className="mb-8 p-4 border border-subtle rounded" style={{ borderColor: 'var(--green, #4ADE80)' }}>
-        <div className="flex items-center gap-3 flex-wrap">
-          <span className="inline-flex items-center gap-2 text-sm font-mono" style={{ color: '#4ADE80' }}>
-            <span>&#x2713;</span> ERC-8004 Registered
-          </span>
-          <span className="text-dim text-sm font-mono">Agent #{registration.agentId}</span>
-          {regInfo?.registeredAt && (
-            <span className="text-dim text-sm font-mono">since {regInfo.registeredAt}</span>
-          )}
-          <a
-            href={`https://basescan.org/address/0xF2709ceF1Cf4893ed78D3220864428b32b12dFb9`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm"
-          >
-            View on BaseScan
-          </a>
-        </div>
-        {registration.artist && (
-          <div className="mt-2 text-xs font-mono text-dim">
-            Owner: {registration.artist}
-          </div>
-        )}
+      <div className="flex items-center gap-3 flex-wrap text-xs font-mono text-dim">
+        <span style={{ color: '#4ADE80' }}>&#x2713; On-chain registered</span>
+        {regInfo?.registeredAt && <span>since {regInfo.registeredAt}</span>}
+        <a
+          href="https://basescan.org/address/0xF2709ceF1Cf4893ed78D3220864428b32b12dFb9"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-dim hover:text-muted"
+        >
+          BaseScan
+        </a>
       </div>
     );
   }
@@ -208,20 +220,14 @@ function RegistrationBadge({ agent, registration }: { agent: Agent; registration
   const registerUrl = `https://spiritprotocol.io/register/?spiritId=${encodeURIComponent(agent.id)}&name=${encodeURIComponent(agent.name)}&tagline=${encodeURIComponent(agent.tagline.slice(0, 140))}`;
 
   return (
-    <div className="mb-8 p-4 border border-subtle rounded">
-      <div className="flex items-center justify-between flex-wrap gap-3">
-        <span className="text-dim text-sm font-mono">Not yet registered on-chain</span>
-        <a
-          href={registerUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 px-4 py-2 text-sm font-mono border border-subtle rounded hover:border-current transition-colors"
-          style={{ color: '#6B8FFF' }}
-        >
-          Register on Spirit Protocol &rarr;
-        </a>
-      </div>
-    </div>
+    <a
+      href={registerUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-xs font-mono text-dim hover:text-muted transition-colors"
+    >
+      Register on-chain &rarr;
+    </a>
   );
 }
 
@@ -233,12 +239,12 @@ export default async function AgentDossier({ params }: Props) {
     notFound();
   }
 
-  // Check on-chain registration (cached server-side for ~5 min via fetch dedup)
+  // Check on-chain registration
   let registration: RegistrationStatus = { registered: false };
   try {
     registration = await checkRegistration(agent.id);
   } catch {
-    // Silently fall back to unregistered if chain call fails
+    // Silently fall back to unregistered
   }
 
   const dimensions = Object.keys(DIMENSIONS) as DimensionKey[];
@@ -247,49 +253,23 @@ export default async function AgentDossier({ params }: Props) {
     <div className="min-h-screen">
       <AgentJsonLd agent={agent} />
       <BreadcrumbJsonLd agent={agent} />
-      {/* Masthead */}
-      <header className="masthead">
-        <div className="container">
-          <Link href="/" className="no-underline">
-            <h1 className="masthead-title">The Spirit Index</h1>
-          </Link>
-          <p className="masthead-subtitle">
-            A reference index of autonomous cultural agents
-          </p>
 
-          <nav className="nav mt-6">
-            <Link href="/" className="nav-link">
-              Index
-            </Link>
-            <Link href="/about" className="nav-link">
-              About
-            </Link>
-            <Link href="/rubric" className="nav-link">
-              Rubric
-            </Link>
-            <Link href="/compare" className="nav-link">
-              Compare
-            </Link>
-            <Link href="/submit" className="nav-link">
-              Submit
-            </Link>
-          </nav>
-        </div>
-      </header>
+      <Masthead />
 
-      {/* Main Content */}
       <main className="container section">
-        {/* Last Reviewed Banner */}
-        <div className="text-dim text-sm mb-4 font-mono">
-          Last reviewed: {getLastReviewed(agent)}
+        {/* Breadcrumb */}
+        <div className="text-dim text-xs font-mono mb-12 tracking-wider">
+          <Link href="/" className="text-dim hover:text-muted">Index</Link>
+          <span className="mx-2">/</span>
+          <span className="text-muted">{agent.name}</span>
         </div>
 
-        {/* Archival Badge (if applicable) */}
+        {/* Archival Badge */}
         {agent.archival_status && (
-          <div className="archival-badge mb-6">
+          <div className="archival-badge mb-8">
             <span className="archival-icon">&#x2020;</span>
             <span className="archival-text">
-              ARCHIVAL • {formatArchivalStatus(agent.archival_status).toUpperCase()}
+              ARCHIVAL &middot; {formatArchivalStatus(agent.archival_status).toUpperCase()}
             </span>
           </div>
         )}
@@ -297,46 +277,57 @@ export default async function AgentDossier({ params }: Props) {
         {/* Genesis Cohort Badge */}
         <GenesisBadge agentId={agent.id} />
 
-        {/* Agent Header */}
-        <div className="flex justify-between items-start mb-8">
-          <div>
-            <h2 className="text-3xl font-bold text-white mb-2">{agent.name}</h2>
-            <p className="text-muted text-lg mb-3">{agent.tagline}</p>
-            <div className="flex items-center gap-3 flex-wrap">
-              <span className={`status-badge status-${agent.status.toLowerCase()}`}>
-                <span className="status-dot" />
-                {agent.status}
-              </span>
-              <span className="text-dim">{agent.category}</span>
-              {registration.registered && (
-                <span
-                  className="text-xs uppercase tracking-wider font-mono px-2 py-0.5 border rounded"
-                  style={{ color: '#4ADE80', borderColor: '#4ADE80' }}
-                  title={`ERC-8004 Agent #${registration.agentId}`}
-                >
-                  ERC-8004
+        {/* === HERO === */}
+        <div className="mb-16">
+          <div className="flex justify-between items-start gap-8">
+            <div className="flex-1">
+              <h2 className="agent-name">{agent.name}</h2>
+              <p className="agent-tagline">{agent.tagline}</p>
+              <div className="flex items-center gap-4 flex-wrap">
+                <span className={`status-badge status-${agent.status.toLowerCase()}`}>
+                  <span className="status-dot" />
+                  {agent.status}
                 </span>
-              )}
+                <span className="text-dim text-xs font-mono uppercase tracking-wider">{agent.category}</span>
+                <RegistrationTag registration={registration} />
+              </div>
             </div>
-          </div>
-          <div className="text-right">
-            <div className="score-total">{agent.total}</div>
-            <div className="score-label">/90 Total</div>
+            <div className="agent-score-badge hidden sm:block text-center">
+              <span className="score-number">{agent.total}</span>
+              /90
+            </div>
           </div>
         </div>
 
-        {/* On-Chain Registration Status */}
-        <RegistrationBadge agent={agent} registration={registration} />
+        {/* === CURATOR NOTES — Editorial voice leads === */}
+        <div className="mb-16">
+          <h3 className="section-title">Curator Notes</h3>
+          <div className="curator-notes">
+            <p>{agent.curator_notes}</p>
+          </div>
+        </div>
 
-        {/* Two Column Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* Left Column: Radar Chart */}
+        {/* === Disclosure (if applicable) === */}
+        {agent.disclosure && (
+          <div className="mb-16 py-3 border-t border-b" style={{ borderColor: 'var(--confidence-medium)' }}>
+            <span className="text-xs font-mono uppercase tracking-wider" style={{ color: 'var(--confidence-medium)' }}>
+              Disclosure &mdash;{' '}
+            </span>
+            <span className="text-xs font-mono text-muted">{agent.disclosure}</span>
+          </div>
+        )}
+
+        {/* === SCORE PROFILE === */}
+        <div className="section-divider" />
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+          {/* Left: Radar Chart */}
           <div>
             <h3 className="section-title">Score Profile</h3>
             <RadarChart scores={agent.scores} size="lg" />
           </div>
 
-          {/* Right Column: Score Breakdown */}
+          {/* Right: Dimension Scores */}
           <div>
             <h3 className="section-title">Dimension Scores</h3>
             <div className="space-y-4">
@@ -364,9 +355,9 @@ export default async function AgentDossier({ params }: Props) {
               })}
             </div>
 
-            {/* Collapsible Score Rationale */}
+            {/* Score Rationale */}
             {agent.score_rationale && (
-              <details className="mt-6 border border-subtle rounded">
+              <details className="mt-8 border border-subtle rounded">
                 <summary className="p-4 cursor-pointer text-white font-bold hover:bg-blue/50 transition-colors">
                   Score Rationale
                 </summary>
@@ -383,7 +374,7 @@ export default async function AgentDossier({ params }: Props) {
                         >
                           {meta.label}
                         </Link>
-                        <span className="text-dim"> — </span>
+                        <span className="text-dim"> &mdash; </span>
                         <span className="text-muted">{rationale}</span>
                       </div>
                     );
@@ -394,39 +385,39 @@ export default async function AgentDossier({ params }: Props) {
           </div>
         </div>
 
-        {/* Curator Notes */}
-        <div className="mt-12">
-          <h3 className="section-title">Curator Notes</h3>
-          <div className="curator-notes">
-            <p>{agent.curator_notes}</p>
-          </div>
-        </div>
+        {/* === EVIDENCE ARCHIVE === */}
+        <div className="section-divider" />
 
-        {/* Evidence */}
-        <div className="mt-12">
+        <div className="mb-16">
           <h3 className="section-title">Evidence Archive</h3>
-          <div className="space-y-0">
-            {agent.evidence.map((item, index) => (
-              <div key={index} className="evidence-item">
-                <span className="evidence-dimension">
-                  {DIMENSIONS[item.dimension as DimensionKey]?.shortLabel || item.dimension}
-                </span>
-                <span className="evidence-claim">{item.claim}</span>
-                <a
-                  href={item.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="evidence-link"
-                >
-                  [source]
-                </a>
-              </div>
-            ))}
-          </div>
+          {agent.evidence.length > 0 ? (
+            <div className="space-y-0">
+              {agent.evidence.map((item, index) => (
+                <div key={index} className="evidence-item">
+                  <span className="evidence-dimension">
+                    {DIMENSIONS[item.dimension as DimensionKey]?.shortLabel || item.dimension}
+                  </span>
+                  <span className="evidence-claim">{item.claim}</span>
+                  <a
+                    href={item.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="evidence-link"
+                  >
+                    {extractDomain(item.url)} &nearr;
+                  </a>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <p className="text-dim text-sm font-mono">No evidence citations recorded.</p>
+          )}
         </div>
 
-        {/* Score History */}
-        <div className="mt-12">
+        {/* === SCORE HISTORY === */}
+        <div className="section-divider" />
+
+        <div className="mb-16">
           <h3 className="section-title">Score History</h3>
           <div className="border border-subtle rounded p-4">
             <ScoreHistoryChart
@@ -436,63 +427,49 @@ export default async function AgentDossier({ params }: Props) {
           </div>
         </div>
 
-        {/* Metadata */}
-        <div className="mt-12 p-6 bg-blue rounded">
-          <h3 className="section-title">Metadata</h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
-            <div>
-              <span className="text-dim block">Inception</span>
-              <span className="text-white">{agent.inception_date}</span>
-            </div>
-            <div>
-              <span className="text-dim block">Classification</span>
-              <span className="text-white">{agent.classification}</span>
-            </div>
-            <div>
-              <span className="text-dim block">Website</span>
-              <a href={agent.website} target="_blank" rel="noopener noreferrer">
-                {new URL(agent.website).hostname}
-              </a>
-            </div>
-            <div>
-              <span className="text-dim block">Last Updated</span>
-              <span className="text-white">
-                {agent.score_history[agent.score_history.length - 1]?.date || "N/A"}
-              </span>
-            </div>
-          </div>
+        {/* === ON-CHAIN STATUS === */}
+        <div className="mb-16">
+          <RegistrationCTA agent={agent} registration={registration} />
         </div>
 
-        {/* Disclosure */}
-        {agent.disclosure && (
-          <div className="mt-6 p-4 border rounded" style={{ borderColor: 'var(--confidence-medium)', backgroundColor: 'rgba(245, 158, 11, 0.05)' }}>
-            <span className="text-xs font-mono uppercase tracking-wider" style={{ color: 'var(--confidence-medium)' }}>
-              Disclosure
-            </span>
-            <p className="text-sm text-muted mt-1 font-mono">{agent.disclosure}</p>
-          </div>
-        )}
+        {/* === METADATA COLOPHON === */}
+        <div className="metadata-colophon">
+          <dl className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div>
+              <dt>Inception</dt>
+              <dd>{agent.inception_date}</dd>
+            </div>
+            <div>
+              <dt>Classification</dt>
+              <dd>{agent.classification}</dd>
+            </div>
+            <div>
+              <dt>Website</dt>
+              <dd>
+                <a href={agent.website} target="_blank" rel="noopener noreferrer" className="text-muted hover:text-white">
+                  {extractDomain(agent.website)}
+                </a>
+              </dd>
+            </div>
+            <div>
+              <dt>Last Reviewed</dt>
+              <dd>{getLastReviewed(agent)}</dd>
+            </div>
+          </dl>
+        </div>
 
         {/* Embed Badge */}
         <EmbedSection agentId={agent.id} agentName={agent.name} />
 
         {/* Back Link */}
-        <div className="mt-8">
-          <Link href="/" className="nav-link">
-            ← Back to Index
+        <div className="mt-12">
+          <Link href="/" className="nav-link text-xs">
+            &larr; Back to Index
           </Link>
         </div>
       </main>
 
-      {/* Footer */}
-      <footer className="container py-8 border-t border-subtle">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-2 text-dim text-sm">
-          <span>Published by the Spirit initiative</span>
-          <a href="https://spiritprotocol.io" className="nav-link" target="_blank" rel="noopener noreferrer">
-            Spirit Protocol
-          </a>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

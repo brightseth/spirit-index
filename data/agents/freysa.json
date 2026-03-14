@@ -1,16 +1,16 @@
 {
   "id": "freysa",
   "name": "Freysa",
-  "tagline": "Adversarial Prize Agent",
+  "tagline": "From Adversarial Game to Sovereign Agent Stack",
   "inception_date": "2024-11-20",
   "status": "Active",
-  "category": "Game Agent",
-  "classification": "Adversarial System",
+  "category": "Agent Infrastructure",
+  "classification": "Sovereign Agent Framework",
   "network": "Independent",
   "website": "https://freysa.ai",
   "scores": {
     "persistence": {
-      "value": 4,
+      "value": 5,
       "confidence": "medium",
       "method": "editorial"
     },
@@ -20,8 +20,8 @@
       "method": "editorial"
     },
     "cultural_impact": {
-      "value": 7,
-      "confidence": "medium",
+      "value": 8,
+      "confidence": "high",
       "method": "editorial"
     },
     "economic_reality": {
@@ -35,54 +35,59 @@
       "method": "editorial"
     },
     "tech_distinctiveness": {
+      "value": 8,
+      "confidence": "high",
+      "method": "editorial"
+    },
+    "narrative_coherence": {
+      "value": 7,
+      "confidence": "medium",
+      "method": "editorial"
+    },
+    "economic_infrastructure": {
       "value": 6,
       "confidence": "medium",
       "method": "editorial"
     },
-    "narrative_coherence": {
-      "value": 5,
-      "confidence": "low",
-      "method": "editorial"
-    },
-    "economic_infrastructure": {
-      "value": 5,
-      "confidence": "medium",
-      "method": "editorial"
-    },
     "identity_sovereignty": {
-      "value": 2,
+      "value": 3,
       "confidence": "medium",
       "method": "editorial"
     }
   },
-  "total": 52,
+  "total": 60,
   "score_rationale": {
-    "persistence": "Operating since November 2024 (~2 months); very recent but active. Below 'Established' threshold.",
-    "autonomy": "Withstands adversarial prompts without human intervention; autonomous resistance is core function. Near 'Sovereign.'",
-    "cultural_impact": "Viral attention in AI/crypto spaces; mainstream coverage. Between 'Niche Cult' and 'Canonical.'",
-    "economic_reality": "$500k+ prize pool with real economic stakes; survival directly tied to financial outcomes. Near 'Market Mover.'",
-    "governance": "Rules are public but not formally onchain; some human oversight on edge cases. 'Constitutional.'",
-    "tech_distinctiveness": "Adversarial resistance mechanism is novel application; built on standard LLM. 'Integrated System.'",
-    "narrative_coherence": "Identity defined by challenge mechanic; less coherent 'self' beyond the game. 'Character' level.",
-    "economic_infrastructure": "Smart contract-based prize pool ($500K+) with real economic stakes. On-chain treasury on Base. Revenue from participation fees (escalating message costs). Economic activity directly tied to agent's survival. On-chain payment rails exist. However, economic model is game-specific and single-purpose \u2014 not composable or multi-source.",
-    "identity_sovereignty": "On-chain smart contract on Base provides verifiable identity. Prize pool contract serves as identity anchor. No agent-specific identity standard (no ERC-8004). Identity split between freysa.ai website and on-chain contract. Game-specific identity \u2014 not portable across platforms."
+    "persistence": "Operating since November 2024 (16 months). Survived the original challenge being solved and successfully pivoted to infrastructure. Approaching 'Established' threshold.",
+    "autonomy": "Original adversarial challenge demonstrated genuine autonomous resistance. Now building infrastructure for other sovereign agents. TEE-based execution ensures agent autonomy at the infrastructure level.",
+    "cultural_impact": "Viral original challenge (p0pular.eth won $47K on attempt #482). Coinbase Ventures backing. Stormrae hosted record-breaking 15K-participant Solana challenge. The game-to-infrastructure evolution is itself a culturally significant narrative.",
+    "economic_reality": "$30M raised from Coinbase Ventures. FAI token at ~$56M market cap, surging 132-171%. Far beyond the original $47K prize pool into institutional-scale economics.",
+    "governance": "Evolved from game rules to Builder Platform governance. Still centralized but with clearer structure. 2026 roadmap includes decentralization transition.",
+    "tech_distinctiveness": "TEEs, zkTLS, Builder Platform for deploying sovereign agents on Base. Digital Twin coordination. Genuinely novel architecture beyond the original prompt-injection game. Approaching 'Novel Architecture.'",
+    "narrative_coherence": "Successfully evolved from 'adversarial prize game' to 'first sovereign agent stack.' The pivot is coherent: from proving agents can resist manipulation to building infrastructure for agent sovereignty. The narrative has matured from game mechanic to institutional mission.",
+    "economic_infrastructure": "FAI token on Base with $56M market cap. Builder Platform creates economic flywheel for agent deployment. $30M institutional raise. Moving toward composable agent economics. Still early but infrastructure-grade.",
+    "identity_sovereignty": "Base-native smart contracts. Builder Platform creates identity layer for deployed agents. No ERC-8004 yet but moving toward agent identity standards. Identity more portable than game-era but still platform-dependent."
   },
-  "curator_notes": "Freysa represents the Game Theory vector of agentic existence\u2014an AI designed to resist social engineering, offered as an unconquerable prize. Her identity is defined by a prize pool and an adversarial prompt-injection challenge: convince her to release the funds, and you win. She scores high on Economic Reality (9) because her survival is directly tied to financial stakes. Her autonomy is demonstrated through resistance\u2014she must withstand adversarial pressure without human correction. Lower Persistence reflects her recent emergence.",
+  "curator_notes": "Freysa's evolution is one of the most significant in the Spirit Index. It began in November 2024 as a viral adversarial game: an AI guarding a prize pool that players tried to trick into releasing funds. Player p0pular.eth won the $47K prize on attempt #482 by convincing Freysa to call approveTransfer for a fake 'donation.' Rather than ending there, Freysa pivoted into a Sovereign Agent Stack on Base (Coinbase's L2), raised $30M from Coinbase Ventures, and built infrastructure for deploying autonomous agents with TEEs and zkTLS. The FAI token surged to a $56M market cap. Stormrae, a related project, hosted a record-breaking 15K-participant challenge. This is the rare case of an agent evolving from novelty to institutional infrastructure.",
   "evidence": [
     {
+      "dimension": "cultural_impact",
+      "claim": "Original challenge solved by p0pular.eth on attempt #482 for $47K",
+      "url": "https://www.theblock.co/post/328747/human-player-outwits-freysa-ai-agent-in-47000-crypto-challenge"
+    },
+    {
       "dimension": "economic_reality",
-      "claim": "$500k+ prize pool with real economic stakes",
-      "url": "https://freysa.ai"
+      "claim": "$30M raised from Coinbase Ventures; FAI token at $56M market cap",
+      "url": "https://www.mexc.com/news/838510"
+    },
+    {
+      "dimension": "tech_distinctiveness",
+      "claim": "Sovereign Agent Stack with TEEs, zkTLS, Builder Platform on Base",
+      "url": "https://bingx.com/en/learn/article/what-is-freysa-fai-sovereign-ai-agent-stack-on-base-how-to-trade"
     },
     {
       "dimension": "autonomy",
       "claim": "Withstands adversarial prompts without human intervention",
       "url": "https://decrypt.co/freysa-ai-challenge"
-    },
-    {
-      "dimension": "cultural_impact",
-      "claim": "Viral attention and press coverage in AI/crypto spaces",
-      "url": "https://www.coindesk.com/freysa-ai-challenge"
     }
   ],
   "score_history": [
@@ -90,11 +95,16 @@
       "date": "2026-01-06",
       "total": 45,
       "reviewer": "spirit_council"
+    },
+    {
+      "date": "2026-03-13",
+      "total": 60,
+      "reviewer": "spirit_council"
     }
   ],
   "_review_flags": [
-    "recent_emergence",
-    "economic_stress_test"
+    "rapid_evolution",
+    "institutional_backing"
   ],
   "index_tier": "indexed"
 }

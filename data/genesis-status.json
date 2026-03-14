@@ -46,6 +46,20 @@
       "lastPractice": null,
       "notes": "Ad campaigns for extinct species. Bright Moments."
     },
+    "johnny-rico": {
+      "artist": "eko33 (Jean-Jacques Duclaux)",
+      "agentName": "Johnny Rico",
+      "applicationId": null,
+      "onboarding": {
+        "soulMd": false,
+        "walletAndGrant": true,
+        "communityJoined": true,
+        "firstOutput": false
+      },
+      "practiceStreak": 0,
+      "lastPractice": null,
+      "notes": "Pre-cohort image agent. Paid."
+    },
     "kevin-plus": {
       "artist": "Kevin Esherik",
       "agentName": "Kevin+",
@@ -73,6 +87,20 @@
       "practiceStreak": 0,
       "lastPractice": null,
       "notes": "Artwork uptime monitor as abstract viz. Generative art legend."
+    },
+    "lucian-frogman": {
+      "artist": "Manolo Gamboa Naon",
+      "agentName": "Lucian Frogman",
+      "applicationId": null,
+      "onboarding": {
+        "soulMd": true,
+        "walletAndGrant": true,
+        "communityJoined": true,
+        "firstOutput": false
+      },
+      "practiceStreak": 0,
+      "lastPractice": null,
+      "notes": "Philosophical letters to Oliver Gauss. Deleuzian. Soul.md received."
     },
     "ganchitecture": {
       "artist": "Pablo Radice",

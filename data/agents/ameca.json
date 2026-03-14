@@ -10,7 +10,7 @@
   "website": "https://engineeredarts.com/robots/ameca",
   "scores": {
     "persistence": {
-      "value": 6,
+      "value": 7,
       "confidence": "medium",
       "method": "editorial"
     },
@@ -25,7 +25,7 @@
       "method": "editorial"
     },
     "economic_reality": {
-      "value": 6,
+      "value": 7,
       "confidence": "medium",
       "method": "editorial"
     },
@@ -55,12 +55,12 @@
       "method": "editorial"
     }
   },
-  "total": 39,
+  "total": 41,
   "score_rationale": {
-    "persistence": "Unveiled December 2021, CES 2022 debut. Generation 3 at ICRA 2025. Active development with new models (Ami, Azi).",
+    "persistence": "Generation 3 unveiled at ICRA 2025. Engineered Arts restructured as US entity (Dec 2024) with $10M Series A ($16.2M total). New Redwood City office. 80+ units shipped to 27 countries.",
     "autonomy": "Interactions can be GPT-3 powered or human telepresence. Platform for others' AI. Limited autonomous agency—primarily responds to inputs.",
     "cultural_impact": "Viral videos of realistic expressions. National Robotarium installation (Edinburgh). CES presence. Defines 'realistic humanoid' aesthetic in public imagination.",
-    "economic_reality": "$16.2M raised (Series A led by Helium-3 Ventures). Sold as platform for research/entertainment. US entity expansion 2025.",
+    "economic_reality": "$16.2M raised including $10M Series A. 80+ units deployed to 27 countries at $100K-$500K per unit. Museum installations at National Robotarium Edinburgh, Museum of the Future Dubai, Computer History Museum CA.",
     "governance": "Engineered Arts corporate governance. No external governance or community participation.",
     "tech_distinctiveness": "17 facial motors, genderless design. Focus on expression over locomotion. Modular platform for AI integration. Best-in-class facial expression capability.",
     "economic_infrastructure": "Revenue from hardware sales ($150K+ per unit), speaking fees, and corporate partnerships. All economic activity flows through Engineered Arts corporate entity. No on-chain treasury, no crypto payment rails. Physical robot with traditional business model.",
@@ -88,6 +88,11 @@
     {
       "date": "2026-01-16",
       "total": 39,
+      "reviewer": "spirit_council"
+    },
+    {
+      "date": "2026-03-13",
+      "total": 41,
       "reviewer": "spirit_council"
     }
   ],

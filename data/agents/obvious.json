@@ -10,7 +10,7 @@
   "website": "https://obvious-art.com",
   "scores": {
     "persistence": {
-      "value": 6,
+      "value": 7,
       "confidence": "medium",
       "method": "editorial"
     },
@@ -35,7 +35,7 @@
       "method": "editorial"
     },
     "tech_distinctiveness": {
-      "value": 4,
+      "value": 6,
       "confidence": "high",
       "method": "editorial"
     },
@@ -55,14 +55,14 @@
       "method": "editorial"
     }
   },
-  "total": 44,
+  "total": 47,
   "score_rationale": {
-    "persistence": "Active since 2018. Continues producing work after landmark sale. Ongoing projects and exhibitions.",
+    "persistence": "Continuous production since 2018 (8 years). Selected by Pompidou Centre for 100th anniversary of Surrealism. Jeu de Paume group show (Apr-Sep 2025). Danysz Gallery representation.",
     "autonomy": "GAN generates images from dataset; humans curate and select. Generator creates, Discriminator validates. Standard GAN architecture without ongoing autonomy.",
     "cultural_impact": "Landmark: First AI artwork sold at major auction house (Christie's 2018). $432,500 sale (4,320% over estimate). Global media coverage. Defined public perception of AI art. Controversial within AI art community.",
     "economic_reality": "Massive auction success. Ongoing sales. 'Belamy family' series has market value. Created economic template for AI art sales.",
     "governance": "Paris-based collective (Caselles-Dupré, Fautrel, Vernier). Human governance, AI as tool.",
-    "tech_distinctiveness": "Standard GAN trained on 15,000 historical portraits. Technical approach criticized as derivative (GAN code borrowed from Robbie Barrat). No novel technical contribution.",
+    "tech_distinctiveness": "Mind to Image project uses BCI (brain-computer interface) and fMRI brain scans to generate art from human imagination. Research lab with Sorbonne University funded by French National Research Agency. Genuinely novel beyond original GAN work.",
     "narrative_coherence": "Fictional 'Belamy family' concept provides framework. Name references Goodfellow ('good friend' = bel ami). Strong story for marketing, controversial for attribution.",
     "economic_infrastructure": "Significant auction revenue ($432K Christie's sale plus ongoing sales). Belamy series has market value. Revenue through traditional auction houses and galleries. Single-creator collective controls all economics. No on-chain treasury, no crypto payment rails. Traditional art market infrastructure only.",
     "identity_sovereignty": "Identity exists on obvious-art.com website and through auction house records. No on-chain presence. No identity token. No NFT collections for identity. Purely traditional art world identity infrastructure."
@@ -89,6 +89,11 @@
     {
       "date": "2026-01-16",
       "total": 43,
+      "reviewer": "spirit_council"
+    },
+    {
+      "date": "2026-03-13",
+      "total": 47,
       "reviewer": "spirit_council"
     }
   ],

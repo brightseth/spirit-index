@@ -10,7 +10,7 @@
   "website": "https://pi.ai",
   "scores": {
     "persistence": {
-      "value": 5,
+      "value": 4,
       "confidence": "medium",
       "method": "editorial"
     },
@@ -25,7 +25,7 @@
       "method": "editorial"
     },
     "economic_reality": {
-      "value": 5,
+      "value": 3,
       "confidence": "medium",
       "method": "editorial"
     },
@@ -35,12 +35,12 @@
       "method": "editorial"
     },
     "tech_distinctiveness": {
-      "value": 7,
+      "value": 5,
       "confidence": "medium",
       "method": "editorial"
     },
     "narrative_coherence": {
-      "value": 8,
+      "value": 6,
       "confidence": "high",
       "method": "editorial"
     },
@@ -55,14 +55,15 @@
       "method": "editorial"
     }
   },
-  "total": 38,
+  "total": 31,
   "score_rationale": {
-    "persistence": "Launched May 2023. Survived Inflection's Microsoft acqui-hire (March 2024). Continues operating under new structure.",
+    "persistence": "Launched May 2023. Survived Inflection's Microsoft acqui-hire (March 2024) but rate-capped and feature-degraded. WhatsApp and Messenger support dropped. Creators have left. Persists in diminished state.",
     "autonomy": "Conversational assistant focused on empathy and support. Limited autonomous capabilities—primarily reactive to user input.",
     "cultural_impact": "Established 'empathetic AI' category. $1.3B funding signaled investor interest in personal AI. Influenced thinking on AI companion safety.",
-    "economic_reality": "$1.3B raised at $4B valuation (2023). Microsoft paid $650M to license technology. Unclear current monetization.",
+    "economic_reality": "Enterprise pivot means consumer Pi generates minimal revenue. The $650M was a one-time licensing deal. Inflection now an API-first enterprise company with 13,000+ organizations interested. Consumer Pi is a cost center.",
     "governance": "Inflection as public benefit corporation. Focus on human-centered AI. Now complicated by Microsoft relationship.",
-    "tech_distinctiveness": "Inflection-1 model trained with therapists, psychologists, playwrights, comedians. Emotional intelligence as differentiator. Empathy-first design.",
+    "tech_distinctiveness": "The Inflection-1 model team is at Microsoft. Pi runs on legacy tech with no significant updates since the acqui-hire. No longer technically distinctive in a field that has advanced rapidly.",
+    "narrative_coherence": "'Your personal AI' narrative undermined by creator abandonment, feature degradation, and rate caps. The story is now about survival rather than aspiration.",
     "economic_infrastructure": "Revenue through traditional subscription model (Inflection AI). $1.3B raised through VC funding, $650M Microsoft license deal. No on-chain treasury, no crypto payment rails. Purely corporate economic infrastructure. Microsoft acqui-hire further centralizes economics.",
     "identity_sovereignty": "Identity exists on pi.ai website and app. Entirely centralized under Inflection AI / Microsoft. No on-chain presence. No identity token. Each Pi instance is user-specific with no collective agent identity. No portable digital identity."
   },
@@ -89,12 +90,18 @@
       "date": "2026-01-16",
       "total": 38,
       "reviewer": "spirit_council"
+    },
+    {
+      "date": "2026-03-13",
+      "total": 31,
+      "reviewer": "spirit_council"
     }
   ],
   "_review_flags": [
     "companion_ai",
     "empathy_focused",
-    "acquihire_survivor"
+    "acquihire_survivor",
+    "sunset_risk"
   ],
   "index_tier": "indexed"
 }

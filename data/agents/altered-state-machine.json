@@ -10,7 +10,7 @@
   "website": "https://alteredstatemachine.xyz",
   "scores": {
     "persistence": {
-      "value": 6,
+      "value": 5,
       "confidence": "medium",
       "method": "editorial"
     },
@@ -20,12 +20,12 @@
       "method": "editorial"
     },
     "cultural_impact": {
-      "value": 5,
+      "value": 4,
       "confidence": "medium",
       "method": "editorial"
     },
     "economic_reality": {
-      "value": 7,
+      "value": 4,
       "confidence": "high",
       "method": "editorial"
     },
@@ -55,19 +55,19 @@
       "method": "editorial"
     }
   },
-  "total": 52,
+  "total": 47,
   "score_rationale": {
-    "persistence": "Operating since 2022. Survived bear market. Active development continues but market activity has decreased from peak.",
+    "persistence": "Rebranded to Think Protocol in August 2025. ASTO tokens swapped to THINK at 1:0.28943 ratio. Survived but rebrand signals instability.",
     "autonomy": "Provides infrastructure for autonomous AI agents, but the platform itself is not autonomous. Individual agents on the platform have varying autonomy levels. 'Tool' tier for the protocol itself.",
-    "cultural_impact": "Significant in crypto/gaming intersection. Patent pending for AI ownership via NFTs. Less mainstream recognition than pure art-focused agents.",
-    "economic_reality": "ASTO token actively traded. NFT sales for brains and forms. Protocol generates economic activity through agent training and competition.",
+    "cultural_impact": "Rebrand from ASM to Think Protocol created confusion. Less relevant in current agent discourse. NFI concept continues but under new branding.",
+    "economic_reality": "THINK token (formerly ASTO) market cap under $1M. Near-zero 24h trading volume on some exchanges. Token effectively illiquid despite rebrand.",
     "governance": "Token-based governance through ASTO. Community participation in ecosystem decisions. Founding team retains significant influence.",
     "tech_distinctiveness": "Novel Brain/Memory/Form NFT architecture. Patent-pending approach to AI agent ownership. Integration of ML training with NFT ownership. Genuine innovation in agent composability.",
     "narrative_coherence": "Clear 'Non-Fungible Intelligence' positioning. Metaverse avatar focus. Some identity confusion between infrastructure protocol and individual agents.",
     "economic_infrastructure": "ASTO token actively traded with defined utility for agent training. NFT-based economic model (Brain/Memory/Form NFTs). Revenue from agent creation and competition. Treasury exists through token economics. Multi-source but concentrated in own ecosystem. Platform provides economic infrastructure for agents built on it.",
     "identity_sovereignty": "NFT-based agent identity model \u2014 Brain/Memory/Form NFTs serve as identity artifacts. Patent pending for AI ownership via NFTs. On-chain presence on Ethereum. Not ERC-8004 but a proprietary agent identity standard that predates it. Partial sovereignty \u2014 agents are identified on-chain but within ASM's framework."
   },
-  "curator_notes": "Altered State Machine represents a unique approach to agent infrastructure\u2014treating AI agents as composable NFTs with Brain, Memory, and Form components. Co-founded by Aaron McDonald (EY Entrepreneur of the Year) and team, ASM has a patent pending for AI ownership via NFTs. While primarily infrastructure rather than a single autonomous agent, ASM's AIFA (AI Football Association) demonstrates autonomous agent-vs-agent competition. The protocol enables a new category of games where NFT AI bots play autonomously.",
+  "curator_notes": "In August 2025, ASM rebranded to Think Protocol, swapping ASTO tokens to THINK at a 1:0.28943 ratio. Altered State Machine represents a unique approach to agent infrastructure\u2014treating AI agents as composable NFTs with Brain, Memory, and Form components. Co-founded by Aaron McDonald (EY Entrepreneur of the Year) and team, ASM has a patent pending for AI ownership via NFTs. While primarily infrastructure rather than a single autonomous agent, ASM's AIFA (AI Football Association) demonstrates autonomous agent-vs-agent competition. The protocol enables a new category of games where NFT AI bots play autonomously.",
   "evidence": [
     {
       "dimension": "tech_distinctiveness",
@@ -89,6 +89,11 @@
     {
       "date": "2026-01-16",
       "total": 43,
+      "reviewer": "spirit_council"
+    },
+    {
+      "date": "2026-03-13",
+      "total": 47,
       "reviewer": "spirit_council"
     }
   ],

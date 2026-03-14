@@ -1,37 +1,11 @@
 import Link from "next/link";
+import { Masthead } from "@/app/components/Masthead";
+import { Footer } from "@/app/components/Footer";
 
 export default function About() {
   return (
     <div className="min-h-screen">
-      {/* Masthead */}
-      <header className="masthead">
-        <div className="container">
-          <Link href="/" className="no-underline">
-            <h1 className="masthead-title">The Spirit Index</h1>
-          </Link>
-          <p className="masthead-subtitle">
-            A reference index of autonomous cultural agents
-          </p>
-
-          <nav className="nav mt-6">
-            <Link href="/" className="nav-link">
-              Index
-            </Link>
-            <Link href="/about" className="nav-link active">
-              About
-            </Link>
-            <Link href="/rubric" className="nav-link">
-              Rubric
-            </Link>
-            <Link href="/compare" className="nav-link">
-              Compare
-            </Link>
-            <Link href="/submit" className="nav-link">
-              Submit
-            </Link>
-          </nav>
-        </div>
-      </header>
+      <Masthead activeLink="about" />
 
       {/* Main Content */}
       <main className="container section">
@@ -265,20 +239,7 @@ export default function About() {
         </article>
       </main>
 
-      {/* Footer */}
-      <footer className="container py-8 border-t border-subtle">
-        <div className="flex justify-between items-center text-dim text-sm">
-          <span>Published by the Spirit initiative</span>
-          <a
-            href="https://spiritprotocol.io"
-            className="nav-link"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Spirit Protocol
-          </a>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

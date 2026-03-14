@@ -63,10 +63,10 @@ export function GenesisSection({
       </div>
 
       <p className="text-sm text-muted mb-4 font-mono">
-        Ten artists building sovereign AI agents on Spirit Protocol. Showcase: April 15, Paris.
+        Twelve artists building sovereign AI agents on Spirit Protocol. Showcase: April 15, Paris.
       </p>
 
-      <div className="grid grid-cols-2 sm:grid-cols-5 gap-3">
+      <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-3">
         {agents.map((ga) => (
           <Link
             key={ga.id}

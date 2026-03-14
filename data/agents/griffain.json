@@ -10,7 +10,7 @@
   "website": "https://griffain.com",
   "scores": {
     "persistence": {
-      "value": 4,
+      "value": 5,
       "confidence": "medium",
       "method": "editorial"
     },
@@ -25,7 +25,7 @@
       "method": "editorial"
     },
     "economic_reality": {
-      "value": 7,
+      "value": 5,
       "confidence": "high",
       "method": "editorial"
     },
@@ -55,12 +55,12 @@
       "method": "editorial"
     }
   },
-  "total": 48,
+  "total": 47,
   "score_rationale": {
-    "persistence": "Launched November 2024, operating ~14 months. Young project but active development with clear roadmap through 2025.",
+    "persistence": "Operating since December 2024 (15 months). Survived through severe 96.8% token drawdown while maintaining platform operations. Platform functional despite economic stress.",
     "autonomy": "Platform enables autonomous agents that execute trades, mint NFTs, manage wallets via natural language commands. Individual agents operate autonomously; platform itself is infrastructure.",
     "cultural_impact": "Leading abstraction AI platform on Solana. DeFAI category pioneer. Growing but not yet mainstream recognition.",
-    "economic_reality": "GRIFFAIN token actively traded. Processed over 1M automated transactions. Multiple specialized agents deployed. Active economic activity.",
+    "economic_reality": "GRIFFAIN token crashed 96.8% from ATH ($0.62 to ~$0.02). Saga Genesis Token launched (soulbound NFT for agent access). Platform still processing automated transactions on Solana. The DeFAI category broadly suffered severe token depreciation.",
     "governance": "Token-based governance anticipated. Currently team-led development. Roadmap includes community governance features.",
     "tech_distinctiveness": "Natural language to on-chain action translation. Soulbound NFTs for agent identity. Multiple specialized agents (Agent GM, Agent Sniper). Agent Engine coordination layer.",
     "narrative_coherence": "Clear 'AI abstraction layer for Solana' positioning. Multiple agent identities may fragment narrative. Naitzsche (NAI) sub-agent adds complexity.",
@@ -89,6 +89,11 @@
     {
       "date": "2026-01-16",
       "total": 40,
+      "reviewer": "spirit_council"
+    },
+    {
+      "date": "2026-03-13",
+      "total": 47,
       "reviewer": "spirit_council"
     }
   ],
