@@ -186,10 +186,10 @@ export function IndexTable({ agents, totalTracked, belowThreshold, qualityThresh
           <span className="ml-1 text-green">{sortDesc ? "↓" : "↑"}</span>
         )}
         {hoveredHeader === column && dim && (
-          <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 z-50 pointer-events-none">
-            <div className="bg-[#1a1a2e] border border-[var(--border-subtle)] rounded px-3 py-2 text-xs whitespace-nowrap shadow-lg">
-              <div className="font-bold text-white mb-1">{dim.label}</div>
-              <div className="text-[var(--text-muted)] font-normal">{dim.description}</div>
+          <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 z-50 pointer-events-none">
+            <div className="bg-[#0d0a2e] border border-[var(--border-default)] rounded px-3 py-2 text-xs whitespace-nowrap shadow-lg shadow-black/40">
+              <div className="font-bold text-white mb-0.5">{dim.label}</div>
+              <div className="text-[var(--text-dim)] font-normal">{dim.description}</div>
             </div>
           </div>
         )}
@@ -222,12 +222,12 @@ export function IndexTable({ agents, totalTracked, belowThreshold, qualityThresh
         </select>
       </div>
 
-      {/* Network filter chips */}
-      <div className="flex flex-wrap gap-2 mb-4">
+      {/* Filter chips — single row */}
+      <div className="flex flex-wrap items-center gap-2 mb-6">
         <button
-          onClick={() => setNetworkFilter("all")}
+          onClick={() => { setNetworkFilter("all"); setTierFilter("all"); }}
           className={`px-3 py-1 text-xs uppercase tracking-wider font-mono border transition-colors ${
-            networkFilter === "all"
+            networkFilter === "all" && tierFilter === "all"
               ? "border-[var(--spirit-green)] text-black bg-[var(--spirit-green)]"
               : "border-[var(--border-default)] text-[var(--text-muted)] bg-transparent hover:border-[var(--spirit-green-dim)] hover:text-[var(--text-primary)]"
           }`}
@@ -241,7 +241,7 @@ export function IndexTable({ agents, totalTracked, belowThreshold, qualityThresh
           return (
             <button
               key={net}
-              onClick={() => setNetworkFilter(net)}
+              onClick={() => setNetworkFilter(isSelected ? "all" : net)}
               className={`px-3 py-1 text-xs uppercase tracking-wider font-mono border transition-colors ${
                 isSelected
                   ? "border-[var(--spirit-green)] text-black bg-[var(--spirit-green)]"
@@ -252,18 +252,15 @@ export function IndexTable({ agents, totalTracked, belowThreshold, qualityThresh
             </button>
           );
         })}
-      </div>
-
-      {/* Tier filter chips */}
-      <div className="flex flex-wrap gap-2 mb-4">
-        {(["all", "indexed", "tracked"] as const).map((tier) => {
-          const label = tier === "all" ? "All" : tier === "indexed" ? "Indexed" : "Tracked";
-          const count = tier === "all" ? agents.length : tierCounts[tier] || 0;
+        <span className="text-[var(--border-default)] mx-1">|</span>
+        {(["indexed", "tracked"] as const).map((tier) => {
+          const label = tier === "indexed" ? "Indexed" : "Tracked";
+          const count = tierCounts[tier] || 0;
           const isSelected = tierFilter === tier;
           return (
             <button
               key={tier}
-              onClick={() => setTierFilter(tier)}
+              onClick={() => setTierFilter(isSelected ? "all" : tier)}
               className={`px-3 py-1 text-xs uppercase tracking-wider font-mono border transition-colors ${
                 isSelected
                   ? "border-[var(--spirit-green)] text-black bg-[var(--spirit-green)]"
@@ -279,16 +276,13 @@ export function IndexTable({ agents, totalTracked, belowThreshold, qualityThresh
       {/* Network insight */}
       {networkInsight && (
         <p className="text-xs font-mono text-[var(--text-dim)] mb-4">
-          {networkInsight.network} agents average {networkInsight.networkAvg}/10 on {networkInsight.dimension} (cross-network avg: {networkInsight.overallAvg})
+          {networkInsight.network} agents average {networkInsight.networkAvg}/10 on {networkInsight.dimension} (index avg: {networkInsight.overallAvg})
         </p>
       )}
 
-      {/* Results count */}
-      <p className="text-dim text-sm mb-4">
-        Showing {filteredAgents.length} listed agents
-        {totalTracked != null && belowThreshold != null && qualityThreshold != null && (
-          <span> ({totalTracked} total tracked, {belowThreshold} below {qualityThreshold}% quality threshold)</span>
-        )}
+      {/* Results count — minimal */}
+      <p className="text-dim text-xs mb-4 font-mono">
+        {filteredAgents.length} of {totalTracked ?? agents.length} agents
       </p>
 
       {/* Table */}

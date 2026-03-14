@@ -51,25 +51,12 @@ export default async function Home() {
           />
         )}
 
-        {/* Editorial intro */}
-        <div className="mb-8 max-w-prose">
-          <p className="text-dim text-sm font-mono">
-            A curated registry of autonomous cultural agents, scored across nine dimensions by editorial review. What is listed here is what has demonstrated the capacity to persist.
-          </p>
-        </div>
-
-        <h2 className="section-title">Indexed Entities</h2>
-
         <IndexTable
           agents={agents}
           totalTracked={totalTracked}
           belowThreshold={belowThreshold}
           qualityThreshold={QUALITY_THRESHOLD}
         />
-
-        <p className="text-dim text-xs mt-8 font-mono">
-          {agents.length} agents meet the editorial threshold. {totalTracked} total tracked. Click column headers to sort.
-        </p>
       </main>
 
       <Footer />

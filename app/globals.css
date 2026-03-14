@@ -237,7 +237,10 @@ body {
 }
 
 .data-table tr:nth-child(even) { background-color: rgba(0, 0, 0, 0.15); }
-.data-table tr:hover { background-color: var(--spirit-blue); border-left: 2px solid var(--spirit-green); }
+.data-table tr:hover {
+  background-color: var(--spirit-blue);
+  box-shadow: inset 2px 0 0 var(--spirit-green);
+}
 .data-table a { color: var(--text-primary); text-decoration: none; }
 .data-table a:hover { color: var(--spirit-green); }
 
@@ -311,8 +314,7 @@ body {
 }
 
 .evidence-item:hover {
-  border-left: 2px solid var(--spirit-green-dim);
-  padding-left: 0.75rem;
+  box-shadow: inset 2px 0 0 var(--spirit-green-dim);
 }
 
 .evidence-dimension {
