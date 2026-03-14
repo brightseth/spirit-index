@@ -3,7 +3,7 @@
 import { useState, useMemo } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { Agent, DimensionKey, DIMENSIONS, NETWORKS, NetworkAffiliation, IndexTier } from "@/lib/types";
+import { Agent, DimensionKey, DIMENSIONS, NETWORKS, NetworkAffiliation } from "@/lib/types";
 
 interface AgentWithComparable extends Agent {
   scoring_coverage: number;
@@ -21,6 +21,9 @@ interface Props {
 
 type SortKey = DimensionKey | "name" | "total" | "inception_date" | "network";
 
+// Dimension keys in render order — single source of truth
+const DIM_KEYS = Object.keys(DIMENSIONS) as DimensionKey[];
+
 function scoreClass(value: number | null): string {
   if (value === null) return "text-dim";
   if (value >= 9) return "text-green font-bold";
@@ -28,6 +31,56 @@ function scoreClass(value: number | null): string {
   if (value >= 5) return "text-muted";
   if (value >= 3) return "text-dim";
   return "text-red";
+}
+
+function chipClass(selected: boolean): string {
+  return selected
+    ? "border-[var(--spirit-green)] text-black bg-[var(--spirit-green)]"
+    : "border-[var(--border-default)] text-[var(--text-muted)] bg-transparent hover:border-[var(--spirit-green-dim)] hover:text-[var(--text-primary)]";
+}
+
+// SortHeader — outside component to avoid re-creation on every render
+function SortHeader({
+  column,
+  label,
+  sortBy,
+  sortDesc,
+  hoveredHeader,
+  onSort,
+  onHover,
+}: {
+  column: SortKey;
+  label: string;
+  sortBy: SortKey;
+  sortDesc: boolean;
+  hoveredHeader: string | null;
+  onSort: (key: SortKey) => void;
+  onHover: (key: string | null) => void;
+}) {
+  const isDimension = column in DIMENSIONS;
+  const dim = isDimension ? DIMENSIONS[column as DimensionKey] : null;
+
+  return (
+    <th
+      onClick={() => onSort(column)}
+      onMouseEnter={() => onHover(column)}
+      onMouseLeave={() => onHover(null)}
+      className="cursor-pointer hover:text-green transition-colors relative"
+    >
+      {label}
+      {sortBy === column && (
+        <span className="ml-1 text-green">{sortDesc ? "↓" : "↑"}</span>
+      )}
+      {hoveredHeader === column && dim && (
+        <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 z-50 pointer-events-none">
+          <div className="bg-[#0d0a2e] border border-[var(--border-default)] rounded px-3 py-2 text-xs whitespace-nowrap shadow-lg shadow-black/40">
+            <div className="font-bold text-white mb-0.5">{dim.label}</div>
+            <div className="text-[var(--text-dim)] font-normal">{dim.description}</div>
+          </div>
+        </div>
+      )}
+    </th>
+  );
 }
 
 export function IndexTable({ agents, totalTracked, belowThreshold, qualityThreshold }: Props) {
@@ -64,7 +117,6 @@ export function IndexTable({ agents, totalTracked, belowThreshold, qualityThresh
   const filteredAgents = useMemo(() => {
     let result = [...agents];
 
-    // Search filter
     if (search) {
       const q = search.toLowerCase();
       result = result.filter(
@@ -75,22 +127,18 @@ export function IndexTable({ agents, totalTracked, belowThreshold, qualityThresh
       );
     }
 
-    // Status filter
     if (statusFilter !== "all") {
       result = result.filter((a) => a.status === statusFilter);
     }
 
-    // Network filter
     if (networkFilter !== "all") {
       result = result.filter((a) => a.network === networkFilter);
     }
 
-    // Tier filter
     if (tierFilter !== "all") {
       result = result.filter((a) => a.index_tier === tierFilter);
     }
 
-    // Sort
     result.sort((a, b) => {
       let aVal: number | string;
       let bVal: number | string;
@@ -134,13 +182,10 @@ export function IndexTable({ agents, totalTracked, belowThreshold, qualityThresh
     const networkAgents = agents.filter((a) => a.network === networkFilter);
     if (networkAgents.length === 0) return null;
 
-    const dimKeys = Object.keys(DIMENSIONS) as DimensionKey[];
-
-    // Compute per-dimension averages for the selected network
     const networkAvgs: Record<DimensionKey, number> = {} as Record<DimensionKey, number>;
     const overallAvgs: Record<DimensionKey, number> = {} as Record<DimensionKey, number>;
 
-    for (const dk of dimKeys) {
+    for (const dk of DIM_KEYS) {
       const netScored = networkAgents.filter(a => a.scores[dk].value !== null);
       const allScored = agents.filter(a => a.scores[dk].value !== null);
       networkAvgs[dk] = netScored.length > 0
@@ -151,10 +196,9 @@ export function IndexTable({ agents, totalTracked, belowThreshold, qualityThresh
         : 0;
     }
 
-    // Find the dimension with the largest absolute deviation
     let maxDev = 0;
-    let maxDim: DimensionKey = dimKeys[0];
-    for (const dk of dimKeys) {
+    let maxDim: DimensionKey = DIM_KEYS[0];
+    for (const dk of DIM_KEYS) {
       const dev = Math.abs(networkAvgs[dk] - overallAvgs[dk]);
       if (dev > maxDev) {
         maxDev = dev;
@@ -170,32 +214,7 @@ export function IndexTable({ agents, totalTracked, belowThreshold, qualityThresh
     };
   }, [agents, networkFilter]);
 
-  const SortHeader = ({ column, label }: { column: SortKey; label: string }) => {
-    const isDimension = column in DIMENSIONS;
-    const dim = isDimension ? DIMENSIONS[column as DimensionKey] : null;
-
-    return (
-      <th
-        onClick={() => handleSort(column)}
-        onMouseEnter={() => setHoveredHeader(column)}
-        onMouseLeave={() => setHoveredHeader(null)}
-        className="cursor-pointer hover:text-green transition-colors relative"
-      >
-        {label}
-        {sortBy === column && (
-          <span className="ml-1 text-green">{sortDesc ? "↓" : "↑"}</span>
-        )}
-        {hoveredHeader === column && dim && (
-          <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 z-50 pointer-events-none">
-            <div className="bg-[#0d0a2e] border border-[var(--border-default)] rounded px-3 py-2 text-xs whitespace-nowrap shadow-lg shadow-black/40">
-              <div className="font-bold text-white mb-0.5">{dim.label}</div>
-              <div className="text-[var(--text-dim)] font-normal">{dim.description}</div>
-            </div>
-          </div>
-        )}
-      </th>
-    );
-  };
+  const chipBase = "px-3 py-1 text-xs uppercase tracking-wider font-mono border transition-colors";
 
   return (
     <div>
@@ -215,22 +234,16 @@ export function IndexTable({ agents, totalTracked, belowThreshold, qualityThresh
         >
           <option value="all">All Status</option>
           {statuses.map((s) => (
-            <option key={s} value={s}>
-              {s}
-            </option>
+            <option key={s} value={s}>{s}</option>
           ))}
         </select>
       </div>
 
-      {/* Filter chips — single row */}
+      {/* Filter chips */}
       <div className="flex flex-wrap items-center gap-2 mb-6">
         <button
           onClick={() => { setNetworkFilter("all"); setTierFilter("all"); }}
-          className={`px-3 py-1 text-xs uppercase tracking-wider font-mono border transition-colors ${
-            networkFilter === "all" && tierFilter === "all"
-              ? "border-[var(--spirit-green)] text-black bg-[var(--spirit-green)]"
-              : "border-[var(--border-default)] text-[var(--text-muted)] bg-transparent hover:border-[var(--spirit-green-dim)] hover:text-[var(--text-primary)]"
-          }`}
+          className={`${chipBase} ${chipClass(networkFilter === "all" && tierFilter === "all")}`}
         >
           All ({agents.length})
         </button>
@@ -242,11 +255,7 @@ export function IndexTable({ agents, totalTracked, belowThreshold, qualityThresh
             <button
               key={net}
               onClick={() => setNetworkFilter(isSelected ? "all" : net)}
-              className={`px-3 py-1 text-xs uppercase tracking-wider font-mono border transition-colors ${
-                isSelected
-                  ? "border-[var(--spirit-green)] text-black bg-[var(--spirit-green)]"
-                  : "border-[var(--border-default)] text-[var(--text-muted)] bg-transparent hover:border-[var(--spirit-green-dim)] hover:text-[var(--text-primary)]"
-              }`}
+              className={`${chipBase} ${chipClass(isSelected)}`}
             >
               {NETWORKS[net].shortLabel} ({count})
             </button>
@@ -261,11 +270,7 @@ export function IndexTable({ agents, totalTracked, belowThreshold, qualityThresh
             <button
               key={tier}
               onClick={() => setTierFilter(isSelected ? "all" : tier)}
-              className={`px-3 py-1 text-xs uppercase tracking-wider font-mono border transition-colors ${
-                isSelected
-                  ? "border-[var(--spirit-green)] text-black bg-[var(--spirit-green)]"
-                  : "border-[var(--border-default)] text-[var(--text-muted)] bg-transparent hover:border-[var(--spirit-green-dim)] hover:text-[var(--text-primary)]"
-              }`}
+              className={`${chipBase} ${chipClass(isSelected)}`}
             >
               {label} ({count})
             </button>
@@ -280,7 +285,7 @@ export function IndexTable({ agents, totalTracked, belowThreshold, qualityThresh
         </p>
       )}
 
-      {/* Results count — minimal */}
+      {/* Results count */}
       <p className="text-dim text-xs mb-4 font-mono">
         {filteredAgents.length} of {totalTracked ?? agents.length} agents
       </p>
@@ -290,31 +295,19 @@ export function IndexTable({ agents, totalTracked, belowThreshold, qualityThresh
         <table className="data-table">
           <thead>
             <tr>
-              <SortHeader column="name" label="Name" />
+              <SortHeader column="name" label="Name" sortBy={sortBy} sortDesc={sortDesc} hoveredHeader={hoveredHeader} onSort={handleSort} onHover={setHoveredHeader} />
               <th>Status</th>
               <th>Category</th>
-              <SortHeader column="network" label="NET" />
-              <SortHeader column="persistence" label="PER" />
-              <SortHeader column="autonomy" label="AUT" />
-              <SortHeader column="cultural_impact" label="IMP" />
-              <SortHeader column="economic_reality" label="ECO" />
-              <SortHeader column="governance" label="GOV" />
-              <SortHeader column="tech_distinctiveness" label="TEC" />
-              <SortHeader column="narrative_coherence" label="NAR" />
-              <SortHeader column="economic_infrastructure" label="ECI" />
-              <SortHeader column="identity_sovereignty" label="IDS" />
-              <SortHeader column="total" label="Total" />
+              <SortHeader column="network" label="NET" sortBy={sortBy} sortDesc={sortDesc} hoveredHeader={hoveredHeader} onSort={handleSort} onHover={setHoveredHeader} />
+              {DIM_KEYS.map((dk) => (
+                <SortHeader key={dk} column={dk} label={DIMENSIONS[dk].shortLabel} sortBy={sortBy} sortDesc={sortDesc} hoveredHeader={hoveredHeader} onSort={handleSort} onHover={setHoveredHeader} />
+              ))}
+              <SortHeader column="total" label="Total" sortBy={sortBy} sortDesc={sortDesc} hoveredHeader={hoveredHeader} onSort={handleSort} onHover={setHoveredHeader} />
             </tr>
           </thead>
           <tbody>
             {filteredAgents.map((agent) => {
               const isTracked = agent.index_tier === "tracked";
-              const dimKeys: DimensionKey[] = [
-                "persistence", "autonomy", "cultural_impact", "economic_reality",
-                "governance", "tech_distinctiveness", "narrative_coherence",
-                "economic_infrastructure", "identity_sovereignty"
-              ];
-
               return (
                 <tr
                   key={agent.id}
@@ -330,9 +323,7 @@ export function IndexTable({ agents, totalTracked, belowThreshold, qualityThresh
                     )}
                   </td>
                   <td>
-                    <span
-                      className={`status-badge status-${agent.status.toLowerCase()}`}
-                    >
+                    <span className={`status-badge status-${agent.status.toLowerCase()}`}>
                       <span className="status-dot" />
                       {agent.status}
                     </span>
@@ -346,13 +337,10 @@ export function IndexTable({ agents, totalTracked, belowThreshold, qualityThresh
                       {NETWORKS[agent.network]?.shortLabel ?? agent.network}
                     </span>
                   </td>
-                  {dimKeys.map((dk) => {
+                  {DIM_KEYS.map((dk) => {
                     const val = agent.scores[dk].value;
                     return (
-                      <td
-                        key={dk}
-                        className={val === null ? "score-unscored" : scoreClass(val)}
-                      >
+                      <td key={dk} className={val === null ? "score-unscored" : scoreClass(val)}>
                         {val === null ? "--" : val}
                       </td>
                     );

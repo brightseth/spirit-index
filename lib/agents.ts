@@ -24,17 +24,21 @@ export type EnrichedAgent = Agent & {
   listed: boolean;
 };
 
+// Module-level cache — agents are read once per process lifetime
+let _cachedAgents: EnrichedAgent[] | null = null;
+
 /**
  * Get all agents from JSON files (internal use — includes unlisted agents)
  */
 export async function getAllAgents(): Promise<EnrichedAgent[]> {
+  if (_cachedAgents) return _cachedAgents;
+
   const files = fs.readdirSync(AGENTS_DIR).filter(f => f.endsWith('.json'));
 
   const agents = files.map(file => {
     const filePath = path.join(AGENTS_DIR, file);
     const content = fs.readFileSync(filePath, 'utf-8');
     const agent = JSON.parse(content) as Agent;
-    // Compute comparable metrics if not in JSON
     const comp = calculateComparable(agent.scores);
     const comparable_pct = comp.pct;
     return {
@@ -47,8 +51,8 @@ export async function getAllAgents(): Promise<EnrichedAgent[]> {
     };
   });
 
-  // Sort by comparable_pct descending by default
-  return agents.sort((a, b) => b.comparable_pct - a.comparable_pct);
+  _cachedAgents = agents.sort((a, b) => b.comparable_pct - a.comparable_pct);
+  return _cachedAgents;
 }
 
 /**

@@ -43,6 +43,9 @@
   --confidence-medium: #F59E0B;
   --confidence-low: #6B7280;
 
+  /* Semantic Colors */
+  --color-on-chain: #4ADE80;
+
   /* Typography */
   --font-mono: 'JetBrains Mono', 'Fira Code', 'SF Mono', ui-monospace, monospace;
   --font-serif: 'Libre Caslon Text', 'EB Garamond', Georgia, serif;

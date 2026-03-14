@@ -11,6 +11,7 @@ import { GenesisBadge } from "@/app/components/GenesisBadge";
 import { EmbedSection } from "@/app/components/EmbedSection";
 import { Masthead } from "@/app/components/Masthead";
 import { Footer } from "@/app/components/Footer";
+import { extractDomain, formatArchivalStatus, formatReviewDate } from "@/lib/utils";
 
 const siteUrl = "https://spiritindex.org";
 
@@ -71,28 +72,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-// Helper to format the last reviewed date
 function getLastReviewed(agent: Agent): string {
   const lastEntry = agent.score_history[agent.score_history.length - 1];
   if (!lastEntry) return "N/A";
-  const date = new Date(lastEntry.date);
-  return date.toLocaleDateString("en-US", { month: "long", year: "numeric" });
-}
-
-// Helper to format archival status for display
-function formatArchivalStatus(status: string): string {
-  return status.split("_").map(word =>
-    word.charAt(0).toUpperCase() + word.slice(1)
-  ).join(" ");
-}
-
-// Helper to extract domain from URL
-function extractDomain(url: string): string {
-  try {
-    return new URL(url).hostname.replace(/^www\./, '');
-  } catch {
-    return 'source';
-  }
+  return formatReviewDate(lastEntry.date);
 }
 
 interface Props {
@@ -189,7 +172,7 @@ function RegistrationTag({ registration }: { registration: RegistrationStatus })
   return (
     <span
       className="text-xs uppercase tracking-wider font-mono px-2 py-0.5 border rounded"
-      style={{ color: '#4ADE80', borderColor: '#4ADE80' }}
+      style={{ color: 'var(--color-on-chain)', borderColor: 'var(--color-on-chain)' }}
       title={`ERC-8004 Agent #${registration.agentId}`}
     >
       ERC-8004 #{registration.agentId}
@@ -203,7 +186,7 @@ function RegistrationCTA({ agent, registration }: { agent: Agent; registration: 
     const regInfo = getRegistration(agent.id);
     return (
       <div className="flex items-center gap-3 flex-wrap text-xs font-mono text-dim">
-        <span style={{ color: '#4ADE80' }}>&#x2713; On-chain registered</span>
+        <span style={{ color: 'var(--color-on-chain)' }}>&#x2713; On-chain registered</span>
         {regInfo?.registeredAt && <span>since {regInfo.registeredAt}</span>}
         <a
           href="https://basescan.org/address/0xF2709ceF1Cf4893ed78D3220864428b32b12dFb9"
