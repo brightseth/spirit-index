@@ -572,6 +572,48 @@ Content-Type: application/json
           </div>
         </section>
 
+        {/* CLI */}
+        <section className="mt-12">
+          <h3 className="section-title">Command Line Interface</h3>
+          <p className="text-muted mb-6">
+            Query the Spirit Index from your terminal. Zero dependencies, Node.js 18+.
+          </p>
+
+          <div className="border border-subtle rounded p-6 mb-6">
+            <h4 className="text-white font-bold text-sm mb-3">Install</h4>
+            <pre className="bg-black p-3 rounded text-sm overflow-x-auto mb-6">
+              <code className="text-green">{`npm install -g spirit-index`}</code>
+            </pre>
+
+            <h4 className="text-white font-bold text-sm mb-3">Commands</h4>
+            <pre className="bg-black p-4 rounded text-sm overflow-x-auto mb-6">
+              <code className="text-muted">
+{`spirit-index lookup <id>         Look up a single agent
+spirit-index search <query>      Search by name, network, category
+spirit-index top [--limit=N]     Top-scoring agents (default: 10)
+spirit-index compare <id1> <id2> Side-by-side comparison
+spirit-index badge <id>          Badge embed URLs`}
+              </code>
+            </pre>
+
+            <h4 className="text-white font-bold text-sm mb-3">Example</h4>
+            <pre className="bg-black p-4 rounded text-sm overflow-x-auto">
+              <code className="text-green">
+{`$ spirit-index lookup plantoid
+
+  PLANTOID
+  The Blockchain Life Form
+  ──────────────────────────
+  Score: 70/90 (78%) B+
+  Status: Active | Autonomous Sculpture | INDP
+
+  PER  AUT  IMP  ECO  GOV  TEC  NAR  ECI  IDS
+   10    8    8    6    8    9   10    5    6`}
+              </code>
+            </pre>
+          </div>
+        </section>
+
         {/* Badges */}
         <section className="mt-12">
           <h3 className="section-title">Embeddable Badges</h3>
@@ -586,23 +628,61 @@ Content-Type: application/json
               </span>
               <code className="text-white font-mono">/badge/:id</code>
             </div>
-            <p className="text-muted mb-4">
-              Returns an SVG badge for the specified agent.
-            </p>
 
-            <h4 className="text-white font-bold text-sm mb-3">Examples</h4>
-            <div className="space-y-4">
+            <h4 className="text-white font-bold text-sm mb-2">Query Parameters</h4>
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm mb-6">
+                <thead>
+                  <tr className="border-b border-subtle">
+                    <th className="text-left py-2 pr-4 text-dim">Parameter</th>
+                    <th className="text-left py-2 pr-4 text-dim">Values</th>
+                    <th className="text-left py-2 text-dim">Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-b border-subtle/50">
+                    <td className="py-2 pr-4 text-green font-mono">style</td>
+                    <td className="py-2 pr-4 text-muted"><code className="text-white">compact</code> (default), <code className="text-white">minimal</code></td>
+                    <td className="py-2 text-muted">Compact = two-panel shields.io style. Minimal = score only.</td>
+                  </tr>
+                  <tr className="border-b border-subtle/50">
+                    <td className="py-2 pr-4 text-green font-mono">theme</td>
+                    <td className="py-2 pr-4 text-muted"><code className="text-white">dark</code> (default), <code className="text-white">light</code></td>
+                    <td className="py-2 text-muted">Dark = for dark backgrounds. Light = white/gray for light sites.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h4 className="text-white font-bold text-sm mb-3">Variants</h4>
+            <div className="space-y-3 mb-6">
               <div className="flex items-center gap-4">
-                <img src="/badge/plantoid" alt="Plantoid badge" className="h-5" />
-                <code className="text-dim text-sm">https://spiritindex.org/badge/plantoid</code>
+                <div className="p-2 rounded" style={{ backgroundColor: '#0d0a2e' }}>
+                  <img src="/badge/plantoid" alt="compact dark" className="h-5" />
+                </div>
+                <code className="text-dim text-xs">/badge/plantoid</code>
               </div>
               <div className="flex items-center gap-4">
-                <img src="/badge/botto" alt="Botto badge" className="h-5" />
-                <code className="text-dim text-sm">https://spiritindex.org/badge/botto</code>
+                <div className="p-2 rounded" style={{ backgroundColor: '#f5f5f5' }}>
+                  <img src="/badge/plantoid?theme=light" alt="compact light" className="h-5" />
+                </div>
+                <code className="text-dim text-xs">/badge/plantoid?theme=light</code>
+              </div>
+              <div className="flex items-center gap-4">
+                <div className="p-2 rounded" style={{ backgroundColor: '#0d0a2e' }}>
+                  <img src="/badge/plantoid?style=minimal" alt="minimal dark" className="h-5" />
+                </div>
+                <code className="text-dim text-xs">/badge/plantoid?style=minimal</code>
+              </div>
+              <div className="flex items-center gap-4">
+                <div className="p-2 rounded" style={{ backgroundColor: '#f5f5f5' }}>
+                  <img src="/badge/plantoid?style=minimal&theme=light" alt="minimal light" className="h-5" />
+                </div>
+                <code className="text-dim text-xs">/badge/plantoid?style=minimal&amp;theme=light</code>
               </div>
             </div>
 
-            <h4 className="text-white font-bold text-sm mt-6 mb-3">Usage</h4>
+            <h4 className="text-white font-bold text-sm mb-3">Embed</h4>
             <div className="space-y-4">
               <div>
                 <p className="text-dim text-xs mb-2">Markdown</p>

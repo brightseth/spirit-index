@@ -63,11 +63,11 @@
     "economic_reality": "$6.6B+ all-time trading volume. $50M+ in fees generated. $59.8M single-day trading volume record. CLANKER token surged 350% on Farcaster acquisition. Definitive market mover.",
     "governance": "Originally created by proxystudio.eth and Jack Dishman. Now owned by Farcaster post-acquisition. Smart contract-based fee distribution. Not fully decentralized but transparent onchain operations.",
     "tech_distinctiveness": "Novel integration of social media interaction (Farcaster casts) with autonomous smart contract deployment. AI agent interprets natural language requests and deploys fully functional ERC-20 tokens with liquidity. V4 introduced revenue tokenization.",
-    "narrative_coherence": "Strong identity as 'the token factory' \u2014 a robot that builds tokens when you ask. The acquisition by Farcaster reinforced its identity as core infrastructure. Some narrative dilution from memecoin association.",
+    "narrative_coherence": "Strong identity as 'the token factory' — a robot that builds tokens when you ask. The acquisition by Farcaster reinforced its identity as core infrastructure. Some narrative dilution from memecoin association.",
     "economic_infrastructure": "Extraordinary economic infrastructure: $6.6B+ all-time trading volume, $50M+ in fees generated. Smart contract-based fee collection and distribution. Revenue from every token deployed. Autonomous fee routing on Base. Multi-source revenue (deployment fees, trading fees). Now owned by Farcaster but economic rails are on-chain and verifiable. Near the top tier but infrastructure is Base-specific and now corporate-owned.",
-    "identity_sovereignty": "On-chain identity through deployed smart contracts on Base. CLANKER token provides economic identity. Farcaster social identity. Acquired by Farcaster \u2014 identity now corporate-dependent. No agent-specific identity standard. Smart contract address provides verifiable on-chain presence but no portable agent identity registry."
+    "identity_sovereignty": "On-chain identity through deployed smart contracts on Base. CLANKER token provides economic identity. Farcaster social identity. Acquired by Farcaster — identity now corporate-dependent. No agent-specific identity standard. Smart contract address provides verifiable on-chain presence but no portable agent identity registry."
   },
-  "curator_notes": "Clanker is the autonomous token deployment agent that drove Base to record transaction volumes. Created by proxystudio.eth and Farcaster engineer Jack Dishman, it lets anyone deploy an ERC-20 token on Base simply by tagging @clanker on Farcaster with a token name and image. In its first two weeks, it deployed 3,500+ tokens and generated $4.2M in revenue. The numbers have since exploded: $6.6B+ all-time trading volume and $50M+ in fees. Farcaster acquired Clanker in October 2025, sending its token up 350%. Clanker represents the emergence of autonomous agents as genuine economic infrastructure \u2014 not just generating content, but deploying real financial instruments onchain.",
+  "curator_notes": "Clanker is the autonomous token deployment agent that drove Base to record transaction volumes. Created by proxystudio.eth and Farcaster engineer Jack Dishman, it lets anyone deploy an ERC-20 token on Base simply by tagging @clanker on Farcaster with a token name and image. In its first two weeks, it deployed 3,500+ tokens and generated $4.2M in revenue. The numbers have since exploded: $6.6B+ all-time trading volume and $50M+ in fees. Farcaster acquired Clanker in October 2025, sending its token up 350%. Clanker represents the emergence of autonomous agents as genuine economic infrastructure — not just generating content, but deploying real financial instruments onchain.",
   "evidence": [
     {
       "dimension": "economic_reality",
@@ -89,6 +89,11 @@
     {
       "date": "2026-02-09",
       "total": 50,
+      "reviewer": "spirit_council"
+    },
+    {
+      "date": "2026-03-14",
+      "total": 61,
       "reviewer": "spirit_council"
     }
   ],

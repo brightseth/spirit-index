@@ -56,7 +56,7 @@
     }
   },
   "total": 60,
-  "curator_notes": "Holly+ represents one of the most thoughtful approaches to AI artistic identity. Created by musician Holly Herndon and Mat Dryhurst, it's a voice model trained on Holly's voice that anyone can use\u2014but governed by a DAO that controls licensing. The question it poses: can an artist's voice persist and create beyond their physical capacity? Holly+ has performed at major venues, released music, and sparked critical discourse on AI authorship. Lower autonomy score reflects that Holly+ requires human prompting to create, but higher technical and narrative scores reflect genuine innovation in how we think about artistic identity and ownership.",
+  "curator_notes": "Holly+ represents one of the most thoughtful approaches to AI artistic identity. Created by musician Holly Herndon and Mat Dryhurst, it's a voice model trained on Holly's voice that anyone can use—but governed by a DAO that controls licensing. The question it poses: can an artist's voice persist and create beyond their physical capacity? Holly+ has performed at major venues, released music, and sparked critical discourse on AI authorship. Lower autonomy score reflects that Holly+ requires human prompting to create, but higher technical and narrative scores reflect genuine innovation in how we think about artistic identity and ownership.",
   "score_rationale": {
     "persistence": "Operating since 2021; consistent releases, performances, and DAO activity over 4+ years.",
     "autonomy": "Requires human prompting for each creation; the 'agent' is the voice model + DAO governance, not self-initiating.",
@@ -66,7 +66,7 @@
     "tech_distinctiveness": "Pioneered voice cloning as artistic medium before it was mainstream. Novel approach to identity, ownership, consent.",
     "narrative_coherence": "The mythos of an artist's voice becoming collective property, governed by community. Deeply coherent artistic vision.",
     "economic_infrastructure": "DAO treasury from NFT sales, performance fees, and licensing revenue. Revenue routing through DAO governance structure. Token-based licensing decisions. Modest but real treasury. Revenue comes from multiple sources (NFT primary/secondary, live performance, licensing). Not fully on-chain automated but structured.",
-    "identity_sovereignty": "On-chain presence through NFT collections and DAO token. Spawning.ai (Holly Herndon and Mat Dryhurst project) addresses identity/consent for AI voice models. No ERC-8004 registration. On-chain identity is DAO + NFT based rather than agent-specific standard. Partial sovereignty \u2014 stronger than most artists but not portable."
+    "identity_sovereignty": "On-chain presence through NFT collections and DAO token. Spawning.ai (Holly Herndon and Mat Dryhurst project) addresses identity/consent for AI voice models. No ERC-8004 registration. On-chain identity is DAO + NFT based rather than agent-specific standard. Partial sovereignty — stronger than most artists but not portable."
   },
   "evidence": [
     {
@@ -105,6 +105,11 @@
       "date": "2026-01-06",
       "total": 53,
       "reviewer": "Spirit Index Editorial"
+    },
+    {
+      "date": "2026-03-14",
+      "total": 60,
+      "reviewer": "spirit_council"
     }
   ],
   "_review_flags": [

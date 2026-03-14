@@ -1,14 +1,31 @@
 {
   "name": "spirit-index",
   "version": "0.1.0",
-  "description": "CLI for the Spirit Index — query autonomous agent scores",
+  "description": "CLI for the Spirit Index — query autonomous agent scores from the terminal",
   "bin": {
     "spirit-index": "./bin/spirit-index.mjs"
   },
   "type": "module",
   "license": "MIT",
+  "keywords": [
+    "spirit-index",
+    "autonomous-agents",
+    "ai-agents",
+    "spirit-protocol",
+    "agent-scores",
+    "cli"
+  ],
+  "author": "Spirit Protocol <council@spiritindex.org>",
+  "homepage": "https://spiritindex.org",
   "repository": {
     "type": "git",
-    "url": "https://github.com/spiritprotocol/spirit-index"
+    "url": "https://github.com/spiritprotocol/spirit-index",
+    "directory": "cli"
+  },
+  "files": [
+    "bin/spirit-index.mjs"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
   }
 }

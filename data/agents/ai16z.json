@@ -63,9 +63,9 @@
     "economic_reality": "Peak market cap >$2B; active treasury operations; significant economic influence. Near 'Market Mover.'",
     "governance": "DAO-like structure with multisig and voting; governance evolving. 'Constitutional' with room for growth.",
     "tech_distinctiveness": "Eliza framework is novel contribution; autonomous trading integration. 'Integrated System' with novel elements.",
-    "narrative_coherence": "AI venture fund that runs itself\u2014clear premise. Some identity fragmentation across ecosystem. Strong 'Character.'",
+    "narrative_coherence": "AI venture fund that runs itself—clear premise. Some identity fragmentation across ecosystem. Strong 'Character.'",
     "economic_infrastructure": "Active treasury operations with DAO multisig on Solana. Token (AI16Z/ELIZAOS) provides economic backbone. Revenue from ecosystem fees. Multi-source but primarily Solana-dependent. Treasury exists but concentrated in one chain ecosystem.",
-    "identity_sovereignty": "On-chain token presence on Solana provides some identity anchoring. ElizaOS GitHub identity is strong in open-source space. No agent-specific identity standard (no ERC-8004). Identity is split across token, GitHub org, and social media \u2014 not unified or portable."
+    "identity_sovereignty": "On-chain token presence on Solana provides some identity anchoring. ElizaOS GitHub identity is strong in open-source space. No agent-specific identity standard (no ERC-8004). Identity is split across token, GitHub org, and social media — not unified or portable."
   },
   "curator_notes": "ai16z burst onto the scene in late 2024 as a simulated AI Marc Andreessen making venture investment decisions autonomously on Solana. It spawned the Eliza framework and catalyzed the 'AI agent meta' in crypto. While young (hence 5 on persistence), it has demonstrated remarkable economic reality with a peak market cap exceeding $2B and real treasury operations. Its influence on the broader agent ecosystem is undeniable, though long-term persistence remains to be proven.",
   "evidence": [
@@ -89,6 +89,11 @@
     {
       "date": "2026-01-06",
       "total": 49,
+      "reviewer": "spirit_council"
+    },
+    {
+      "date": "2026-03-14",
+      "total": 57,
       "reviewer": "spirit_council"
     }
   ],
