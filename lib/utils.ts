@@ -21,5 +21,5 @@ export function formatArchivalStatus(status: string): string {
 /** Format an ISO date string to a readable month + year */
 export function formatReviewDate(dateStr: string): string {
   const date = new Date(dateStr);
-  return date.toLocaleDateString("en-US", { month: "long", year: "numeric" });
+  return date.toLocaleDateString("en-US", { month: "long", year: "numeric", timeZone: "UTC" });
 }

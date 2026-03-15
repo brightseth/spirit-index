@@ -3,20 +3,12 @@
 import { useState, useMemo } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { Agent, DimensionKey, DIMENSIONS, NETWORKS, NetworkAffiliation } from "@/lib/types";
-
-interface AgentWithComparable extends Agent {
-  scoring_coverage: number;
-  comparable_score: number;
-  comparable_max: number;
-  comparable_pct: number;
-}
+import { DimensionKey, DIMENSIONS, NETWORKS, NetworkAffiliation } from "@/lib/types";
+import type { EnrichedAgent } from "@/lib/agents";
 
 interface Props {
-  agents: AgentWithComparable[];
+  agents: EnrichedAgent[];
   totalTracked?: number;
-  belowThreshold?: number;
-  qualityThreshold?: number;
 }
 
 type SortKey = DimensionKey | "name" | "total" | "inception_date" | "network";
@@ -53,9 +45,9 @@ function SortHeader({
   label: string;
   sortBy: SortKey;
   sortDesc: boolean;
-  hoveredHeader: string | null;
+  hoveredHeader: SortKey | null;
   onSort: (key: SortKey) => void;
-  onHover: (key: string | null) => void;
+  onHover: (key: SortKey | null) => void;
 }) {
   const isDimension = column in DIMENSIONS;
   const dim = isDimension ? DIMENSIONS[column as DimensionKey] : null;
@@ -83,7 +75,7 @@ function SortHeader({
   );
 }
 
-export function IndexTable({ agents, totalTracked, belowThreshold, qualityThreshold }: Props) {
+export function IndexTable({ agents, totalTracked }: Props) {
   const router = useRouter();
   const [search, setSearch] = useState("");
   const [statusFilter, setStatusFilter] = useState<string>("all");
@@ -91,7 +83,7 @@ export function IndexTable({ agents, totalTracked, belowThreshold, qualityThresh
   const [tierFilter, setTierFilter] = useState<string>("all");
   const [sortBy, setSortBy] = useState<SortKey>("total");
   const [sortDesc, setSortDesc] = useState(true);
-  const [hoveredHeader, setHoveredHeader] = useState<string | null>(null);
+  const [hoveredHeader, setHoveredHeader] = useState<SortKey | null>(null);
 
   const statuses = useMemo(() => {
     const unique = new Set(agents.map((a) => a.status));

@@ -78,16 +78,21 @@ export const ALL_GENESIS_IDS: string[] = [
   ...GENESIS_CORE_IDS,
 ];
 
+// Module-level cache (undefined = not loaded, null = file missing)
+let _genesisCache: GenesisStatusData | null | undefined = undefined;
+
 /**
- * Load the genesis-status.json file
+ * Load the genesis-status.json file (cached per process)
  */
 export function loadGenesisStatus(): GenesisStatusData | null {
+  if (_genesisCache !== undefined) return _genesisCache;
   try {
     const content = fs.readFileSync(GENESIS_STATUS_PATH, "utf-8");
-    return JSON.parse(content) as GenesisStatusData;
+    _genesisCache = JSON.parse(content) as GenesisStatusData;
   } catch {
-    return null;
+    _genesisCache = null;
   }
+  return _genesisCache;
 }
 
 /**

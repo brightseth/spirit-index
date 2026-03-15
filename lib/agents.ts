@@ -82,35 +82,19 @@ export function getGrade(pct: number): string {
 }
 
 /**
- * Get a single agent by ID (with comparable metrics)
+ * Get a single agent by ID (reads from cache if available)
  */
 export async function getAgentById(id: string): Promise<EnrichedAgent | null> {
-  const filePath = path.join(AGENTS_DIR, `${id}.json`);
-
-  if (!fs.existsSync(filePath)) {
-    return null;
-  }
-
-  const content = fs.readFileSync(filePath, 'utf-8');
-  const agent = JSON.parse(content) as Agent;
-  const comp = calculateComparable(agent.scores);
-  const comparable_pct = comp.pct;
-  return {
-    ...agent,
-    scoring_coverage: comp.coverage,
-    comparable_score: comp.score,
-    comparable_max: comp.max,
-    comparable_pct,
-    listed: comparable_pct >= QUALITY_THRESHOLD,
-  };
+  const all = await getAllAgents();
+  return all.find(a => a.id === id) ?? null;
 }
 
 /**
  * Get all agent IDs for static generation
  */
 export async function getAllAgentIds(): Promise<string[]> {
-  const files = fs.readdirSync(AGENTS_DIR).filter(f => f.endsWith('.json'));
-  return files.map(f => f.replace('.json', ''));
+  const all = await getAllAgents();
+  return all.map(a => a.id);
 }
 
 /**
@@ -129,7 +113,7 @@ export async function getAgentsSortedBy(
 ): Promise<EnrichedAgent[]> {
   const agents = await getAllAgents();
 
-  return agents.sort((a, b) => {
+  return [...agents].sort((a, b) => {
     if (dimension === 'total') {
       return b.total - a.total;
     }

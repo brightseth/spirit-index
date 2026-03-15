@@ -7,38 +7,38 @@ interface EmbedSectionProps {
   agentName: string;
 }
 
-type BadgeVariant = {
-  label: string;
-  style: string;
-  theme: string;
-  description: string;
-};
-
-const BADGE_VARIANTS: BadgeVariant[] = [
+const BADGE_VARIANTS = [
   { label: "Compact Dark", style: "compact", theme: "dark", description: "Default — for dark backgrounds" },
   { label: "Compact Light", style: "compact", theme: "light", description: "For light backgrounds" },
   { label: "Minimal Dark", style: "minimal", theme: "dark", description: "Score only — dark" },
   { label: "Minimal Light", style: "minimal", theme: "light", description: "Score only — light" },
-];
+] as const;
+
+function buildBadgePath(agentId: string, variant: typeof BADGE_VARIANTS[number]): string {
+  const params = new URLSearchParams();
+  if (variant.style !== "compact") params.set("style", variant.style);
+  if (variant.theme !== "dark") params.set("theme", variant.theme);
+  const qs = params.toString();
+  return `/badge/${agentId}${qs ? `?${qs}` : ""}`;
+}
 
 export function EmbedSection({ agentId, agentName }: EmbedSectionProps) {
   const [copied, setCopied] = useState<string | null>(null);
   const [selectedVariant, setSelectedVariant] = useState(0);
 
   const siteUrl = "https://spiritindex.org";
-  const dossierUrl = `${siteUrl}/${agentId}`;
   const variant = BADGE_VARIANTS[selectedVariant];
+  const badgePath = buildBadgePath(agentId, variant);
+  const badgeUrl = `${siteUrl}${badgePath}`;
+  const dossierUrl = `${siteUrl}/${agentId}`;
 
-  const params = new URLSearchParams();
-  if (variant.style !== "compact") params.set("style", variant.style);
-  if (variant.theme !== "dark") params.set("theme", variant.theme);
-  const qs = params.toString();
-  const badgeUrl = `${siteUrl}/badge/${agentId}${qs ? `?${qs}` : ""}`;
+  const snippets = [
+    { label: "Markdown", key: "md", content: `[![Spirit Index](${badgeUrl})](${dossierUrl})` },
+    { label: "HTML", key: "html", content: `<a href="${dossierUrl}"><img src="${badgeUrl}" alt="Spirit Index Score for ${agentName}" /></a>` },
+    { label: "CLI", key: "cli", content: `npx spirit-index lookup ${agentId}` },
+  ];
 
-  const markdownSnippet = `[![Spirit Index](${badgeUrl})](${dossierUrl})`;
-  const htmlSnippet = `<a href="${dossierUrl}"><img src="${badgeUrl}" alt="Spirit Index Score for ${agentName}" /></a>`;
-
-  async function copyToClipboard(text: string, label: string) {
+  async function copyToClipboard(text: string, key: string) {
     try {
       await navigator.clipboard.writeText(text);
     } catch {
@@ -49,7 +49,7 @@ export function EmbedSection({ agentId, agentName }: EmbedSectionProps) {
       document.execCommand("copy");
       document.body.removeChild(textarea);
     }
-    setCopied(label);
+    setCopied(key);
     setTimeout(() => setCopied(null), 2000);
   }
 
@@ -62,7 +62,7 @@ export function EmbedSection({ agentId, agentName }: EmbedSectionProps) {
         <div className="flex flex-wrap gap-2 mb-4">
           {BADGE_VARIANTS.map((v, i) => (
             <button
-              key={i}
+              key={v.label}
               onClick={() => setSelectedVariant(i)}
               className={`px-3 py-1 text-xs uppercase tracking-wider font-mono border transition-colors ${
                 i === selectedVariant
@@ -84,62 +84,30 @@ export function EmbedSection({ agentId, agentName }: EmbedSectionProps) {
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src={`/badge/${agentId}${qs ? `?${qs}` : ""}`}
+            src={badgePath}
             alt={`Spirit Index Score for ${agentName}`}
             height={20}
           />
         </div>
 
-        {/* Markdown */}
-        <div className="mb-3">
-          <div className="flex items-center justify-between mb-1">
-            <span className="text-xs font-mono text-dim">Markdown</span>
-            <button
-              onClick={() => copyToClipboard(markdownSnippet, "md")}
-              className="text-xs font-mono px-2 py-1 border border-subtle rounded hover:border-current transition-colors"
-              style={{ color: copied === "md" ? "var(--spirit-green)" : "var(--text-dim)" }}
-            >
-              {copied === "md" ? "Copied" : "Copy"}
-            </button>
+        {/* Snippets */}
+        {snippets.map((s) => (
+          <div key={s.key} className="mb-3">
+            <div className="flex items-center justify-between mb-1">
+              <span className="text-xs font-mono text-dim">{s.label}</span>
+              <button
+                onClick={() => copyToClipboard(s.content, s.key)}
+                className="text-xs font-mono px-2 py-1 border border-subtle rounded hover:border-current transition-colors"
+                style={{ color: copied === s.key ? "var(--spirit-green)" : "var(--text-dim)" }}
+              >
+                {copied === s.key ? "Copied" : "Copy"}
+              </button>
+            </div>
+            <pre className="text-xs font-mono p-3 rounded overflow-x-auto" style={{ backgroundColor: "rgba(0,0,0,0.3)", color: "var(--text-dim)" }}>
+              <code>{s.content}</code>
+            </pre>
           </div>
-          <pre className="text-xs font-mono p-3 rounded overflow-x-auto" style={{ backgroundColor: "rgba(0,0,0,0.3)", color: "var(--text-dim)" }}>
-            <code>{markdownSnippet}</code>
-          </pre>
-        </div>
-
-        {/* HTML */}
-        <div className="mb-3">
-          <div className="flex items-center justify-between mb-1">
-            <span className="text-xs font-mono text-dim">HTML</span>
-            <button
-              onClick={() => copyToClipboard(htmlSnippet, "html")}
-              className="text-xs font-mono px-2 py-1 border border-subtle rounded hover:border-current transition-colors"
-              style={{ color: copied === "html" ? "var(--spirit-green)" : "var(--text-dim)" }}
-            >
-              {copied === "html" ? "Copied" : "Copy"}
-            </button>
-          </div>
-          <pre className="text-xs font-mono p-3 rounded overflow-x-auto" style={{ backgroundColor: "rgba(0,0,0,0.3)", color: "var(--text-dim)" }}>
-            <code>{htmlSnippet}</code>
-          </pre>
-        </div>
-
-        {/* CLI */}
-        <div>
-          <div className="flex items-center justify-between mb-1">
-            <span className="text-xs font-mono text-dim">CLI</span>
-            <button
-              onClick={() => copyToClipboard(`npx spirit-index lookup ${agentId}`, "cli")}
-              className="text-xs font-mono px-2 py-1 border border-subtle rounded hover:border-current transition-colors"
-              style={{ color: copied === "cli" ? "var(--spirit-green)" : "var(--text-dim)" }}
-            >
-              {copied === "cli" ? "Copied" : "Copy"}
-            </button>
-          </div>
-          <pre className="text-xs font-mono p-3 rounded overflow-x-auto" style={{ backgroundColor: "rgba(0,0,0,0.3)", color: "var(--text-dim)" }}>
-            <code>{`npx spirit-index lookup ${agentId}`}</code>
-          </pre>
-        </div>
+        ))}
       </div>
     </div>
   );
