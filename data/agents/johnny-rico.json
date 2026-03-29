@@ -52,12 +52,12 @@
       "method": "editorial"
     },
     "identity_sovereignty": {
-      "value": 3,
+      "value": 4,
       "confidence": "low",
       "method": "editorial"
     }
   },
-  "total": 28,
+  "total": 29,
   "score_rationale": {
     "persistence": "Pre-cohort agent, operational since February 2026. Very early stage.",
     "autonomy": "Image generation with artist-directed parameters. Hybrid human-AI workflow. Early 'Cyborg' level.",
@@ -67,7 +67,7 @@
     "tech_distinctiveness": "Image generation agent built on standard models with artist-specific fine-tuning by eko33.",
     "narrative_coherence": "Named after Starship Troopers protagonist. Identity as image agent is clear but narrative is developing.",
     "economic_infrastructure": "Spirit Protocol revenue routing available but not yet active. Grant-funded phase.",
-    "identity_sovereignty": "Registered on Spirit Protocol. On-chain identity via ERC-8004 pending."
+    "identity_sovereignty": "Identity verification score 4/10. Verified: Spirit manifest on file, soul.md submitted. Pending: own domain, .well-known endpoint, ERC-8004 registration. Tier: 'Protocol-Registered.'"
   },
   "curator_notes": "Johnny Rico is the image agent created by eko33 (Jean-Jacques Duclaux), a pre-cohort artist who joined Genesis Cohort #1. Named after the Starship Troopers protagonist, this agent focuses on image generation with artist-directed aesthetic parameters. As a pre-cohort member, Johnny Rico has had slightly more development time than the other Genesis agents. Scores reflect very early stage with low confidence across all dimensions.",
   "evidence": [],
@@ -76,12 +76,16 @@
       "date": "2026-03-13",
       "total": 28,
       "reviewer": "spirit_council"
+    },
+    {
+      "date": "2026-03-29",
+      "total": 29,
+      "reviewer": "identity_verification_auto"
     }
   ],
   "_review_flags": [
     "spirit_native",
     "conflict_of_interest_disclosed",
     "recent_emergence"
-  ],
-  "index_tier": "indexed"
+  ]
 }

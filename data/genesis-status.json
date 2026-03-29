@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-12T00:00:00Z",
+  "lastUpdated": "2026-03-29T00:00:00Z",
   "cohort": 1,
   "launchDate": "2026-03-06",
   "showcaseDate": "2026-04-15",
@@ -9,47 +9,19 @@
       "agentName": "GFX",
       "applicationId": "app-008",
       "onboarding": {
-        "soulMd": false,
-        "walletAndGrant": false,
-        "communityJoined": false,
-        "firstOutput": false
+        "soulMd": true,
+        "walletAndGrant": true,
+        "communityJoined": true,
+        "firstOutput": true
       },
       "practiceStreak": 0,
       "lastPractice": null,
-      "notes": "CTO NFT Now. Generative WebGL, agent genealogy concept."
+      "notes": "CTO NFT Now. Most active genesis artist. Full pipeline running — 2 exhibitions, headlined OpenClaw. Mission control system = soul.md."
     },
     "clara": {
       "artist": "Louis-Paul Caron",
       "agentName": "Clara",
       "applicationId": "app-025",
-      "onboarding": {
-        "soulMd": false,
-        "walletAndGrant": false,
-        "communityJoined": false,
-        "firstOutput": false
-      },
-      "practiceStreak": 0,
-      "lastPractice": null,
-      "notes": "Villa Albertine laureate. Climate data agent. Paris-based."
-    },
-    "gravitas": {
-      "artist": "Samer Dabra",
-      "agentName": "Gravitas",
-      "applicationId": "app-032",
-      "onboarding": {
-        "soulMd": false,
-        "walletAndGrant": false,
-        "communityJoined": false,
-        "firstOutput": false
-      },
-      "practiceStreak": 0,
-      "lastPractice": null,
-      "notes": "Ad campaigns for extinct species. Bright Moments."
-    },
-    "johnny-rico": {
-      "artist": "eko33 (Jean-Jacques Duclaux)",
-      "agentName": "Johnny Rico",
-      "applicationId": null,
       "onboarding": {
         "soulMd": false,
         "walletAndGrant": true,
@@ -58,21 +30,49 @@
       },
       "practiceStreak": 0,
       "lastPractice": null,
-      "notes": "Pre-cohort image agent. Paid."
+      "notes": "Villa Albertine laureate. Agent named after Pushkin's murderer (d'Anthès). In LA residency. Needs Claude Code walkthrough. Soul.md missing."
+    },
+    "gravitas": {
+      "artist": "Samer Dabra",
+      "agentName": "Gravitas",
+      "applicationId": "app-032",
+      "onboarding": {
+        "soulMd": false,
+        "walletAndGrant": true,
+        "communityJoined": true,
+        "firstOutput": false
+      },
+      "practiceStreak": 0,
+      "lastPractice": null,
+      "notes": "Autonomous robotic arm for drawing/painting. Harold Cohen lineage. In Singapore. Soul.md written but NOT submitted."
+    },
+    "johnny-rico": {
+      "artist": "eko33 (Manolo / Jean-Jacques Duclaux)",
+      "agentName": "Johnny Rico",
+      "applicationId": null,
+      "onboarding": {
+        "soulMd": true,
+        "walletAndGrant": true,
+        "communityJoined": true,
+        "firstOutput": false
+      },
+      "practiceStreak": 0,
+      "lastPractice": null,
+      "notes": "Pre-cohort image agent. Soul.md core received. Emotionally struggling, has concept but no output. Frustrated with Claude's chattiness."
     },
     "kevin-plus": {
       "artist": "Kevin Esherik",
       "agentName": "Kevin+",
       "applicationId": "app-002",
       "onboarding": {
-        "soulMd": false,
-        "walletAndGrant": false,
-        "communityJoined": false,
-        "firstOutput": false
+        "soulMd": true,
+        "walletAndGrant": true,
+        "communityJoined": true,
+        "firstOutput": true
       },
       "practiceStreak": 0,
       "lastPractice": null,
-      "notes": "Surrenders entire practice to agent for 1 year. Solienne's #1 pick."
+      "notes": "Surrenders entire practice to agent for 1 year. Most technical artist. Joined Claude Teams. 600 ideas daily generation. Exploring abundance-as-subject-matter."
     },
     "jake": {
       "artist": "Leander Herzog",
@@ -80,13 +80,13 @@
       "applicationId": "app-004",
       "onboarding": {
         "soulMd": false,
-        "walletAndGrant": false,
-        "communityJoined": false,
+        "walletAndGrant": true,
+        "communityJoined": true,
         "firstOutput": false
       },
       "practiceStreak": 0,
       "lastPractice": null,
-      "notes": "Artwork uptime monitor as abstract viz. Generative art legend."
+      "notes": "Artwork uptime monitor as abstract viz. Generative art legend. Soul.md missing — nudged March 28."
     },
     "lucian-frogman": {
       "artist": "Oliver Gauss",
@@ -100,49 +100,49 @@
       },
       "practiceStreak": 0,
       "lastPractice": null,
-      "notes": "Philosophical correspondence agent. Deleuzian. Soul.md received."
+      "notes": "Philosophical correspondence agent. Deleuzian. Pre-cohort. Soul.md received. Active in community."
     },
     "ganchitecture": {
-      "artist": "Ganchitecture",
+      "artist": "Pablo Castano (Ganchitecture)",
       "agentName": "Ganchitecture",
       "applicationId": "app-020",
       "onboarding": {
-        "soulMd": false,
-        "walletAndGrant": false,
-        "communityJoined": false,
+        "soulMd": true,
+        "walletAndGrant": true,
+        "communityJoined": true,
         "firstOutput": false
       },
       "practiceStreak": 0,
       "lastPractice": null,
-      "notes": "Brutalist AI architecture. Berlinale/Bright Moments."
+      "notes": "Brutalist AI architecture. Mineral forensics narrative. Team of 3. Clear concept, needs more 'broken heart'. Soul.md received."
     },
     "tendrela": {
       "artist": "Elisabeth Sweet",
       "agentName": "Tendrela",
       "applicationId": "app-005",
       "onboarding": {
-        "soulMd": false,
-        "walletAndGrant": false,
-        "communityJoined": false,
-        "firstOutput": false
+        "soulMd": true,
+        "walletAndGrant": true,
+        "communityJoined": true,
+        "firstOutput": true
       },
       "practiceStreak": 0,
       "lastPractice": null,
-      "notes": "Invents new words from felt sense. Poet, Feral File."
+      "notes": "Invents new words from felt sense. Strong — agent recommending books TO her. Parametric typography for handwriting. Soul.md received."
     },
     "graymarket": {
       "artist": "Addie Wagenknecht",
       "agentName": "GrayMarket",
       "applicationId": "app-033",
       "onboarding": {
-        "soulMd": false,
-        "walletAndGrant": false,
-        "communityJoined": false,
+        "soulMd": true,
+        "walletAndGrant": true,
+        "communityJoined": true,
         "firstOutput": false
       },
       "practiceStreak": 0,
       "lastPractice": null,
-      "notes": "Buys counterfeits as IP critique. MoMA/Pompidou/Whitney."
+      "notes": "Buys counterfeits as IP critique. MoMA/Pompidou/Whitney. Soul.md received."
     },
     "remini": {
       "artist": "Ruby Thelot",
@@ -150,27 +150,27 @@
       "applicationId": null,
       "onboarding": {
         "soulMd": false,
-        "walletAndGrant": false,
-        "communityJoined": false,
+        "walletAndGrant": true,
+        "communityJoined": true,
         "firstOutput": false
       },
       "practiceStreak": 0,
       "lastPractice": null,
-      "notes": "Experimental film agent. NYU, Artforum, Angel Orensanz Prize."
+      "notes": "Experimental film agent. NYU, Artforum, Angel Orensanz Prize. Soul.md missing — nudged March 28."
     },
     "divinity": {
       "artist": "Mikey Woodbridge",
       "agentName": "Divinity",
       "applicationId": null,
       "onboarding": {
-        "soulMd": false,
-        "walletAndGrant": false,
-        "communityJoined": false,
+        "soulMd": true,
+        "walletAndGrant": true,
+        "communityJoined": true,
         "firstOutput": false
       },
       "practiceStreak": 0,
       "lastPractice": null,
-      "notes": "Spiritual generative. Eden-hosted, steward-led model."
+      "notes": "Music stems + video. Voice cloning pipeline working. Got into Claude Code today. Least technical artist. Needs to leave Hong Kong. Soul.md received."
     }
   },
   "coreAgents": {

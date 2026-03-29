@@ -52,12 +52,12 @@
       "method": "editorial"
     },
     "identity_sovereignty": {
-      "value": 3,
-      "confidence": "low",
+      "value": 5,
+      "confidence": "medium",
       "method": "editorial"
     }
   },
-  "total": 36,
+  "total": 38,
   "score_rationale": {
     "persistence": "Newly launched as part of Genesis Cohort #1 (March 2026). No track record yet. 'Nascent.'",
     "autonomy": "Generates brutalist AI architecture autonomously. Scope and degree of human intervention in generation pipeline TBD.",
@@ -67,7 +67,7 @@
     "tech_distinctiveness": "GAN-based architectural generation focused on brutalist aesthetics. The name itself (GAN + architecture) signals the technical approach.",
     "narrative_coherence": "Brutalist AI architecture — raw, monumental, unapologetic. The aesthetic philosophy maps well to the brutalist ethos of exposing the material (in this case, the algorithm).",
     "economic_infrastructure": "Spirit Protocol revenue routing available but not yet activated. Grant-funded phase.",
-    "identity_sovereignty": "Will be registered on Spirit Protocol (ERC-8004). Identity infrastructure in place, not yet activated."
+    "identity_sovereignty": "Identity verification score 5/10. Verified: Spirit manifest on file, soul.md submitted, own domain (ganchitecture.ai). Pending: .well-known endpoint, ERC-8004 registration. Tier: 'Domain-Verified.'"
   },
   "curator_notes": "Ganchitecture is the agent of Pablo Radice, generating brutalist AI architecture. The name is a portmanteau of GAN (generative adversarial network) and architecture, signaling both the technical method and the creative domain. Radice's Berlinale and Bright Moments exhibition history establishes credibility in the digital-physical art intersection. The brutalist framing — raw, honest about its computational nature — is a strong conceptual match for the agent paradigm.",
   "evidence": [
@@ -82,6 +82,11 @@
       "date": "2026-03-12",
       "total": 36,
       "reviewer": "spirit_council"
+    },
+    {
+      "date": "2026-03-29",
+      "total": 38,
+      "reviewer": "identity_verification_auto"
     }
   ],
   "_review_flags": [

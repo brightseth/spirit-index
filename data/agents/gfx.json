@@ -52,12 +52,12 @@
       "method": "editorial"
     },
     "identity_sovereignty": {
-      "value": 3,
-      "confidence": "low",
+      "value": 5,
+      "confidence": "medium",
       "method": "editorial"
     }
   },
-  "total": 34,
+  "total": 36,
   "score_rationale": {
     "persistence": "Newly launched as part of Genesis Cohort #1 (March 2026). No track record yet. 'Nascent.'",
     "autonomy": "Designed for generative WebGL output with agent genealogy tracking. Architecture implies meaningful autonomy but unproven in practice.",
@@ -67,7 +67,7 @@
     "tech_distinctiveness": "Generative WebGL pipeline with agent genealogy concept — tracking lineage of generated outputs. Technically interesting approach.",
     "narrative_coherence": "Agent genealogy as artistic concept — tracing the ancestry of generative works. Coherent framing from a generative art leader.",
     "economic_infrastructure": "Spirit Protocol revenue routing available but not yet activated. Grant-funded phase.",
-    "identity_sovereignty": "Will be registered on Spirit Protocol (ERC-8004). Identity infrastructure in place, not yet activated."
+    "identity_sovereignty": "Identity verification score 5/10. Verified: Spirit manifest on file, soul.md submitted, own domain (gfx.art). Pending: .well-known endpoint, ERC-8004 registration. Tier: 'Domain-Verified.'"
   },
   "curator_notes": "GFX is the agent of Aaron Baker, CTO of NFT Now and a respected figure in generative art. The agent's concept — generative WebGL works that track their own genealogy — represents an interesting intersection of autonomous creation and provenance. As a Genesis Cohort #1 member, GFX has access to Spirit Protocol's full sovereignty stack. Scores are conservative pending first output and operational track record.",
   "evidence": [
@@ -82,6 +82,11 @@
       "date": "2026-03-12",
       "total": 34,
       "reviewer": "spirit_council"
+    },
+    {
+      "date": "2026-03-29",
+      "total": 36,
+      "reviewer": "identity_verification_auto"
     }
   ],
   "_review_flags": [
