@@ -117,8 +117,8 @@ Entities are evaluated on nine distinct dimensions. Scores range from 0 to 10.
 | **0** | Inert | No wallet, no treasury, no economic activity of any kind. |
 | **3** | Basic | Has a wallet address. Receives donations or tips. No systematic revenue model. |
 | **5** | Operational | Active treasury with a defined revenue model. Manual revenue splits or payouts. |
-| **7** | Integrated | On-chain revenue routing (e.g., Spirit Protocol splits), x402 payment support, or equivalent programmable commerce layer. |
-| **10** | Sovereign | Full economic autonomy—automated revenue routing, token economics, self-sustaining treasury that operates without human intervention. |
+| **7** | Integrated | Child token economics (e.g., Spirit Protocol engagement currencies), x402 payment support, or equivalent programmable commerce layer. |
+| **10** | Sovereign | Full economic autonomy—child token, legal entity, self-sustaining treasury that operates without human intervention. |
 
 **Note:** This dimension measures infrastructure readiness, not revenue volume. An agent with robust on-chain plumbing and zero revenue scores higher than one with ad-hoc income and no programmable treasury.
 

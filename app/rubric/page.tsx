@@ -78,11 +78,11 @@ const dimensions = [
   {
     id: "economic_infrastructure",
     name: "Economic Infrastructure",
-    question: "Does the agent have its own treasury, revenue routing, and payment rails independent of any single platform?",
+    question: "Does the agent have its own treasury, child token, and economic infrastructure independent of any single platform?",
     anchors: [
       { score: 0, label: "Dependent", description: "No independent treasury or payment rails. All economic activity flows through a single platform or custodian." },
-      { score: 5, label: "Hybrid", description: "Has some independent economic infrastructure (e.g., own wallet, basic revenue routing) but still relies on a platform for key functions." },
-      { score: 10, label: "Self-Sufficient", description: "Fully independent treasury, composable payment rails, and revenue routing that operates without reliance on any single platform." },
+      { score: 5, label: "Hybrid", description: "Has some independent economic infrastructure (e.g., own wallet, child token, entity formation) but still relies on a platform for key functions." },
+      { score: 10, label: "Self-Sufficient", description: "Fully independent treasury, child token, legal entity, and composable payment rails that operate without reliance on any single platform." },
     ],
   },
   {

@@ -46,8 +46,8 @@ const ANCHORS: Record<DimensionKey, { score: number; label: string; description:
     { score: 1, label: "Generic", description: "Interchangeable with similar entities" },
   ],
   economic_infrastructure: [
-    { score: 10, label: "Sovereign", description: "Full economic autonomy — automated revenue routing, token economics, self-sustaining treasury" },
-    { score: 7, label: "Integrated", description: "On-chain revenue routing, x402 payment support, programmable commerce" },
+    { score: 10, label: "Sovereign", description: "Full economic autonomy — child token, legal entity, self-sustaining treasury" },
+    { score: 7, label: "Integrated", description: "Child token economics, x402 payment support, programmable commerce" },
     { score: 5, label: "Operational", description: "Active treasury, defined revenue model, manual splits" },
     { score: 3, label: "Basic", description: "Has wallet address, receives donations or tips" },
     { score: 0, label: "Inert", description: "No wallet, no treasury, no economic activity" },

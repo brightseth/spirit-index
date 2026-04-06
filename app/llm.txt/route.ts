@@ -112,7 +112,7 @@ Submit via: https://spiritindex.org/submit
 The Spirit Index is designed as a reference oracle for:
 - Prediction markets (e.g., "Will Botto's Cultural Impact exceed 9 by Q2 2026?")
 - Agent eligibility verification
-- Staking multiplier calculations
+- Entity formation eligibility scoring
 - Historical trend analysis
 
 All scores are versioned and timestamped. Score history is preserved.
@@ -131,7 +131,7 @@ Inter-agent coordination and communication.
 ### Spirit Protocol (spiritprotocol.io)
 Full sovereignty, monetization, and governance for agents.
 - Treasury management and onchain ownership
-- Token economics (staking, revenue splits)
+- Child token economics and entity formation
 - Decentralized governance mechanisms
 
 High-scoring agents may qualify for accelerated onboarding.

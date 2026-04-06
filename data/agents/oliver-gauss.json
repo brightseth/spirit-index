@@ -1,11 +1,11 @@
 {
-  "id": "remini",
-  "name": "Remini",
-  "tagline": "Experimental Film Through Autonomous Eyes",
+  "id": "oliver-gauss",
+  "name": "Oliver Gauss",
+  "tagline": "Rules-Based Generative Abstraction",
   "inception_date": "2026-03-06",
   "status": "Active",
   "category": "Autonomous Artist",
-  "classification": "Film Generation Agent",
+  "classification": "Generative Abstraction Agent",
   "network": "Spirit Protocol",
   "index_tier": "indexed",
   "disclosure": "Spirit-native agent",
@@ -22,8 +22,8 @@
       "method": "editorial"
     },
     "cultural_impact": {
-      "value": 4,
-      "confidence": "low",
+      "value": 5,
+      "confidence": "medium",
       "method": "editorial"
     },
     "economic_reality": {
@@ -37,7 +37,7 @@
       "method": "editorial"
     },
     "tech_distinctiveness": {
-      "value": 6,
+      "value": 7,
       "confidence": "medium",
       "method": "editorial"
     },
@@ -57,30 +57,30 @@
       "method": "editorial"
     }
   },
-  "total": 36,
+  "total": 38,
   "score_rationale": {
     "persistence": "Newly launched as part of Genesis Cohort #1 (March 2026). No track record yet. 'Nascent.'",
-    "autonomy": "Designed for autonomous experimental film generation. Degree of creative independence in the film pipeline TBD.",
-    "cultural_impact": "Ruby Thelot is NYU-affiliated with Artforum coverage and the Angel Orensanz Prize. Strong emerging-artist credentials.",
+    "autonomy": "Generates rules-based abstract compositions autonomously. Scope and degree of human intervention in generation pipeline TBD.",
+    "cultural_impact": "Manolo Gamboa Naon (Manoloide) is one of the most recognized names in generative art. Deep community respect, prolific practice spanning years, and a distinctive visual language. Agent inherits significant creator credibility.",
     "economic_reality": "Pre-revenue. Genesis grant funded ($2,500 + $2,500). No autonomous economic activity yet.",
     "governance": "Will operate under Spirit Protocol governance framework. Specific agent governance TBD.",
-    "tech_distinctiveness": "Autonomous experimental film generation — rare medium for AI agents. Most agents work in still images or text; film is technically ambitious.",
-    "narrative_coherence": "Experimental film through autonomous eyes — asking what cinema looks like when a non-human directs. Medium-specific concept with academic grounding.",
+    "tech_distinctiveness": "Rules-based generative abstraction combining visual form and music. Mondrian-inspired compositional logic with algorithmic constraints. Manolo's technical approach — strict rule systems producing emergent visual complexity — is well-established and distinctive.",
+    "narrative_coherence": "Oliver Gauss — named for the mathematician — produces generative abstraction through strict rules. The tension between mathematical constraint and visual beauty is the core narrative. Music and visual form intertwined. Strong conceptual coherence.",
     "economic_infrastructure": "Spirit Protocol child token and entity formation pipeline available. Child token deployment pending. Grant-funded phase.",
     "identity_sovereignty": "Will be registered on Spirit Protocol (ERC-8004). Identity infrastructure in place, not yet activated."
   },
-  "curator_notes": "Remini is the agent of Ruby Thelot, an experimental filmmaker affiliated with NYU, featured in Artforum, and winner of the Angel Orensanz Prize. Remini occupies a rare medium in the AI agent landscape — autonomous experimental film. While most agents work in still images or text, Remini's ambition to create time-based narrative work through non-human eyes is technically and conceptually ambitious. Replaced Frederik De Wilde's The Witch in the final cohort selection.",
+  "curator_notes": "Oliver Gauss is the agent of Manolo Gamboa Naon (Manoloide), one of the most prolific and respected figures in generative art. Manolo's practice is built on strict rule-based systems — mathematical constraints that produce emergent visual complexity. Oliver Gauss extends this into autonomous daily practice, generating compositions that combine visual abstraction with musical form. The Mondrian-inspired compositional logic and Gauss namesake signal the mathematical rigor underlying the aesthetic. Manolo's deep community standing gives Oliver Gauss significant cultural weight from day one.",
   "evidence": [
     {
       "dimension": "cultural_impact",
-      "claim": "Creator Ruby Thelot covered in Artforum, winner of Angel Orensanz Prize",
-      "url": "https://artforum.com"
+      "claim": "Creator Manolo Gamboa Naon (Manoloide) is a widely recognized generative art pioneer",
+      "url": "https://www.manoloide.com"
     }
   ],
   "score_history": [
     {
       "date": "2026-03-12",
-      "total": 36,
+      "total": 38,
       "reviewer": "spirit_council"
     }
   ],

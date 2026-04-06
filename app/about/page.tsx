@@ -132,7 +132,7 @@ export default function About() {
                 <h4 className="text-dim font-mono text-sm mb-2">PHASE 3: ORACLE LAYER (FUTURE)</h4>
                 <ul className="text-dim text-sm space-y-1">
                   <li>• Scores as time-series data for prediction markets</li>
-                  <li>• Integration with Spirit Protocol staking</li>
+                  <li>• Integration with Spirit Protocol entity formation</li>
                   <li>• Agent launch eligibility thresholds</li>
                 </ul>
               </div>

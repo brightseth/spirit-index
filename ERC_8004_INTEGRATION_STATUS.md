@@ -90,7 +90,7 @@ Per Gene/Seth call: Spirit = **gated community within ERC-8004**, not a separate
 - ABI: `getAgent(string)` (old) → `exists(uint256)` + `ownerOf(uint256)` (mainnet)
 - ID resolution: slug → numeric agentId via `KNOWN_AGENT_IDS` mapping
 - BaseScan link in `page.tsx` updated to mainnet
-- Registration model: **identity + daily practice only** (no revenue routing at launch)
+- Registration model: **identity + daily practice only** (child tokens and entity formation deploy post-launch)
 
 **See:** `spirit-contracts-core/GENE_PIVOT_FEB_2026.md` for full strategy
 
@@ -102,4 +102,4 @@ Per Gene/Seth call: Spirit = **gated community within ERC-8004**, not a separate
 - Deploy SpiritPractice contracts per agent
 - Link practice → identity via `setMetadata()`
 - "Agents registered via Spirit: X" counter
-- Revenue routing added later (post-traction, not at launch)
+- Child token factory and entity formation contracts deploy post-traction

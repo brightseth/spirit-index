@@ -42,8 +42,8 @@ export interface InfraSignals {
   tokenOnDex: boolean;
   multiChainPresence: boolean;
   onChainTreasury: boolean; // +2
-  revenueRouting: boolean;  // +2
-  stakingMechanism: boolean;
+  childToken: boolean;      // +2
+  entityFormation: boolean;
 }
 
 export function scoreEconomicInfrastructure(signals: InfraSignals): DimensionScore {
@@ -54,8 +54,8 @@ export function scoreEconomicInfrastructure(signals: InfraSignals): DimensionSco
   if (signals.tokenOnDex) value += 1;
   if (signals.multiChainPresence) value += 1;
   if (signals.onChainTreasury) value += 2;
-  if (signals.revenueRouting) value += 2;
-  if (signals.stakingMechanism) value += 1;
+  if (signals.childToken) value += 2;
+  if (signals.entityFormation) value += 1;
   return { value: Math.min(10, value), confidence: "low", method: "auto" };
 }
 

@@ -64,7 +64,7 @@ Same methodology. Different weightings.
 
 ### Phase 3: Oracle Layer (Future)
 - Scores as time-series data for prediction markets
-- Integration with Spirit Protocol staking
+- Integration with Spirit Protocol entity formation
 - Agent launch eligibility thresholds
 
 ---
@@ -83,8 +83,8 @@ Inter-agent communication and collaboration infrastructure.
 ### Spirit Protocol — Sovereignty
 Full economic and governance autonomy for agents.
 - Treasury management and onchain ownership
-- Token economics (staking, revenue splits)
-- Decentralized governance mechanisms
+- Child token economics and entity formation
+- Decentralized governance mechanisms (DUNA)
 - [spiritprotocol.io](https://spiritprotocol.io)
 
 High-scoring agents on the Index may qualify for accelerated onboarding to both protocols.

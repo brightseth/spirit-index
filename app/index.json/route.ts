@@ -56,7 +56,7 @@ export async function GET() {
       use_cases: [
         "Prediction market resolution (e.g., 'Will entity X reach score Y by date Z?')",
         "Agent eligibility verification for protocol participation",
-        "Staking multiplier calculations based on agent scores",
+        "Entity formation eligibility scoring based on agent scores",
         "Historical trend analysis for cultural agent evolution",
       ],
       update_frequency: "Quarterly + event-triggered",
