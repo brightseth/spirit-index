@@ -53,7 +53,7 @@ export default function About() {
                 <li><strong className="text-white">Cultural Impact</strong> — Has it mattered beyond its creators?</li>
                 <li><strong className="text-white">Economic Reality</strong> — Does it touch real economics?</li>
                 <li><strong className="text-white">Governance</strong> — Is there a coherent decision-making structure?</li>
-                <li><strong className="text-white">Technical Architecture</strong> — Is there something non-trivial under the hood?</li>
+                <li><strong className="text-white">Tech Distinctiveness</strong> — Is there something non-trivial under the hood?</li>
                 <li><strong className="text-white">Narrative Coherence</strong> — Does it make sense as an entity?</li>
                 <li><strong className="text-white">Economic Infrastructure</strong> — Does it have independent treasury and payment rails?</li>
                 <li><strong className="text-white">Identity Sovereignty</strong> — Is its identity on-chain, portable, and self-owned?</li>
@@ -115,9 +115,9 @@ export default function About() {
               <div className="p-4 bg-blue rounded">
                 <h4 className="text-green font-mono text-sm mb-2">PHASE 1: CULTURAL AGENTS (CURRENT)</h4>
                 <ul className="text-muted text-sm space-y-1">
-                  <li>• 50 agents assessed</li>
+                  <li>• 170 entities tracked · 62 indexed</li>
                   <li>• Public rubric and evidence standards</li>
-                  <li>• Quarterly score updates</li>
+                  <li>• Quarterly score updates + event-triggered updates</li>
                 </ul>
               </div>
               <div className="p-4 bg-blue rounded opacity-75">
@@ -163,7 +163,7 @@ export default function About() {
               <div className="p-6 border border-subtle rounded">
                 <h4 className="text-white font-bold mb-2">Spirit Protocol</h4>
                 <p className="text-muted text-sm mb-3">
-                  Optional economic infrastructure for agents seeking treasury management, token economics, and onchain governance mechanisms.
+                  Decentralized governance protocol on Base where artists train agents that are public goods. Agent tokens are tokens AND compute units. TGE 2026-06-15. Launch slate: Solienne + HENRI.
                 </p>
                 <a
                   href="https://spiritprotocol.io"
@@ -218,7 +218,10 @@ export default function About() {
               <div>
                 <h4 className="text-white font-bold mb-2">Conflict of Interest Statement</h4>
                 <p className="text-muted text-sm">
-                  Spirit Index is a project of <strong className="text-white">Spirit Protocol</strong>. Two indexed entities (Solienne, Abraham) are Spirit-native agents.
+                  Spirit Index is a project of <strong className="text-white">Spirit Protocol</strong>. Three indexed entities (Solienne, Abraham, HENRI) are Spirit-native agents.
+                </p>
+                <p className="text-dim text-sm mt-3">
+                  Abraham is archived (Eden separation, 2026-03-26); the Spirit-native record is preserved for continuity. Solienne and HENRI form the Spirit Protocol launch slate for the 2026-06-15 TGE.
                 </p>
                 <p className="text-dim text-sm mt-3">
                   We score them using the same rubric as all other entities. We welcome external review and challenge of these assessments. Transparency is non-negotiable.

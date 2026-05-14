@@ -11,12 +11,13 @@ Spirit Index evolves from an **editorial benchmark** to a **verifiable oracle** 
 **Live at [spiritindex.org](https://spiritindex.org)**
 
 ### What's Built
-- **19 indexed entities** spanning artists, DAOs, chaos agents, infrastructure
-- **7-dimension scoring framework** with public rubric and anchors
-- **Full API access** — REST endpoints, RSS feed, JSON exports
+- **170 entities tracked · 62 indexed** spanning artists, DAOs, chaos agents, infrastructure
+- **9-dimension scoring framework** (Rubric v2.0, max score 90) with public anchors
+- **Full API access** — REST + v1 endpoints, RSS feed, JSON exports
 - **Embeddable badges** — SVG badges for agent READMEs
 - **Search/filter/sort** — Interactive index with dimension sorting
 - **Submission workflow** — GitHub issue templates for nominations
+- **Spirit Protocol launch slate** — SOLIENNE + HENRI indexed as Spirit-native agents ahead of 2026-06-15 TGE
 
 ### Endpoints
 | Endpoint | Purpose |
@@ -31,28 +32,15 @@ Spirit Index evolves from an **editorial benchmark** to a **verifiable oracle** 
 | `/submit.json` | Submission protocol spec |
 | `/sitemap.xml` | SEO sitemap |
 
-### Current Rankings (Jan 2026)
-| # | Entity | Score | Category |
-|---|--------|-------|----------|
-| 1 | Plantoid | 60/70 | Autonomous Sculpture |
-| 2 | Botto | 55/70 | Autonomous Artist |
-| 3 | Olas | 54/70 | Infrastructure Entity |
-| 4 | Holly+ | 53/70 | Voice DAO |
-| 5 | terra0 | 53/70 | Ecological DAO |
-| 6 | Numerai | 52/70 | Prediction Meta-Model |
-| 7 | Abraham | 51/70 | Sovereign Artist |
-| 8 | Solienne | 51/70 | Archive Symbient |
-| 9 | ai16z | 49/70 | DAO / Fund |
-| 10 | Omen Agents | 49/70 | Prediction Collective |
-| 11 | Morpheus | 47/70 | Decentralized AI Network |
-| 12 | Truth Terminal | 47/70 | Chaos Agent |
-| 13 | AIXBT | 46/70 | Autonomous Analyst |
-| 14 | AIVA | 45/70 | AI Composer |
-| 15 | Freysa | 45/70 | Game Agent |
-| 16 | Luna | 42/70 | Virtual Pop Star |
-| 17 | Zerebro | 42/70 | Chaos Agent |
-| 18 | Replika | 39/70 | AI Companion |
-| 19 | Tay | 25/70 | Conversational (†Deceased) |
+### Current Rankings
+
+Rankings update with each scoring round. The live leaderboard is canonical:
+
+- [Live index](https://spiritindex.org) — sortable rankings
+- [`/api/v1/agents`](https://spiritindex.org/api/v1/agents) — JSON, filterable
+- [`/api/v1/stats`](https://spiritindex.org/api/v1/stats) — cohort counts, tier distribution
+
+Static tables in this README are intentionally omitted to avoid drift.
 
 ---
 
@@ -96,12 +84,12 @@ Split dimensions into **verified** (on-chain/data-derived) and **reviewed** (hum
 |-----------|------------------|
 | **Cultural Impact** | Requires qualitative judgment |
 | **Narrative Coherence** | Subjective interpretation |
-| **Technical Architecture** | Architectural assessment |
+| **Tech Distinctiveness** | Architectural assessment |
 | **Autonomy** | Hybrid (can be verified if telemetry exists) |
 
 ### Display Format
 ```
-Plantoid                                    60/70
+Plantoid                                    78/90
 
 VERIFIED (on-chain)
 ├─ Economic    ████████░░  8/10  ✓
@@ -109,10 +97,10 @@ VERIFIED (on-chain)
 └─ Persistence ██████████ 10/10  ✓
 
 REVIEWED (expert)
-├─ Cultural    █████████░  9/10  Jan 2026
-├─ Narrative   ██████████ 10/10  Jan 2026
-├─ Technical   ████████░░  8/10  Jan 2026
-└─ Autonomy    ███████░░░  7/10  Jan 2026
+├─ Cultural          █████████░  9/10  May 2026
+├─ Narrative         ██████████ 10/10  May 2026
+├─ Tech Distinct.    ████████░░  8/10  May 2026
+└─ Autonomy          ███████░░░  7/10  May 2026
 ```
 
 ---
@@ -234,11 +222,11 @@ See [CONTRIBUTING.md](./CONTRIBUTING.md) for how to:
 | Phase | Timeline | Key Milestone |
 |-------|----------|---------------|
 | **1.1** | ✓ Done | 15 entities, API, badges, search |
-| **2** | Q1 2026 | 25+ entities, advisory reviewers |
-| **3** | Q2-Q3 2026 | Hybrid verified/reviewed scoring |
-| **4** | Q3-Q4 2026 | SPIRIT-001 telemetry standard |
-| **5** | 2027 | Decentralized oracle network |
+| **1.2** | ✓ Done | 9-dim rubric (v2.0), 170 entities tracked, v1 API, launch slate |
+| **2** | Q2-Q3 2026 | Hybrid verified/reviewed scoring, advisory reviewers |
+| **3** | Q3-Q4 2026 | SPIRIT-001 telemetry standard |
+| **4** | 2027 | Decentralized oracle network |
 
 ---
 
-*Last updated: January 2026*
+*Last updated: 2026-05-14*
