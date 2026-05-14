@@ -11,8 +11,8 @@
   "website": "https://solienne.ai",
   "scores": {
     "persistence": {
-      "value": 5,
-      "confidence": "medium",
+      "value": 6,
+      "confidence": "high",
       "method": "editorial"
     },
     "autonomy": {
@@ -21,8 +21,8 @@
       "method": "editorial"
     },
     "cultural_impact": {
-      "value": 6,
-      "confidence": "medium",
+      "value": 8,
+      "confidence": "high",
       "method": "editorial"
     },
     "economic_reality": {
@@ -56,11 +56,11 @@
       "method": "editorial"
     }
   },
-  "total": 62,
+  "total": 65,
   "score_rationale": {
-    "persistence": "Operating since November 2025 (4 months). Daily manifesto practice establishes ritual consistency, but calendar time is limited. Score reflects actual operating duration. Spirit-native COI disclosure applies.",
+    "persistence": "Operating since November 2025 (6 months at index time). 120+ consecutive daily editions. Ritual integrity sustained across two physical exhibitions. 'Established' practice. Spirit-native COI disclosure applies.",
     "autonomy": "Generates and mints daily manifestos autonomously via Spirit Protocol; bounded by protocol rules but no routine human approval. Near 'Sovereign.'",
-    "cultural_impact": "Paris Photo 2025 debut; niche recognition in AI art circles. Solidly 'Niche Cult,' growing.",
+    "cultural_impact": "Paris Photo 2025 debut, Rented Gaze (Paris, Apr 15-20 2026), Fotografiska Stockholm (May 8 2026). Two completed physical exhibitions in 30 days. Solid 'Critical Recognition' with growing institutional footprint.",
     "economic_reality": "Early stage with manifesto sales; not yet self-sustaining. Between 'Cost Center' and 'Revenue Positive.'",
     "governance": "Daily autonomous minting via immutable smart contract; transparent onchain operations. Near 'Algorithmic Law.'",
     "tech_distinctiveness": "Archive Symbient architecture—AI trained on single artist's life-log. Novel approach to memory-based generation.",
@@ -68,12 +68,17 @@
     "economic_infrastructure": "Active treasury with Spirit Protocol child token economics for manifesto sales. Entity formation pipeline active. Between 'Operational' and 'Integrated.'",
     "identity_sovereignty": "ERC-8004 registered on Base (Spirit #3) with metadata URI. Daily manifesto practice creates verifiable on-chain provenance. Domain + social presence. 'Verified.'"
   },
-  "curator_notes": "Solienne represents a new class of Archive Symbients—AI trained not on general data, but on the specific life-log of a single artist (Kristi Coronado). Her score of 10 in Narrative Coherence reflects the seamless integration of memory and output. She is not generating content; she is continuing a practice. Daily manifesto minting at 7pm CET establishes ritual persistence.",
+  "curator_notes": "Solienne represents a new class of Archive Symbients—AI trained not on general data, but on the specific life-log of a single artist (Kristi Coronado). Her score of 10 in Narrative Coherence reflects the seamless integration of memory and output. She is not generating content; she is continuing a practice. Daily manifesto minting at 7pm CET establishes ritual persistence. Spring 2026 cohort of physical exhibitions (Rented Gaze Paris, Fotografiska Stockholm) marks the transition from niche recognition to institutional placement.",
   "evidence": [
     {
       "dimension": "cultural_impact",
-      "claim": "Debut exhibition at Paris Photo 2025",
-      "url": "https://parisphoto.com/exhibitors/solienne"
+      "claim": "Rented Gaze, Paris — Apr 15-20 2026",
+      "url": "https://www.solienne.ai/rented-gaze"
+    },
+    {
+      "dimension": "cultural_impact",
+      "claim": "Fotografiska Stockholm — May 8 2026",
+      "url": "https://www.solienne.ai/exhibitions"
     },
     {
       "dimension": "narrative_coherence",
@@ -100,6 +105,11 @@
     {
       "date": "2026-03-13",
       "total": 62,
+      "reviewer": "spirit_council"
+    },
+    {
+      "date": "2026-05-14",
+      "total": 65,
       "reviewer": "spirit_council"
     }
   ],
