@@ -71,18 +71,69 @@
   "evidence": [
     {
       "dimension": "economic_reality",
-      "claim": ">$4M in primary sales volume",
-      "url": "https://dune.com/botto/stats"
+      "claim": "CNBC reports Botto has generated millions of dollars in art sales as 'the AI machine artist'; profits split between $BOTTO DAO voters and on-chain treasury that funds compute. Mainstream business-press confirmation of market-mover scale.",
+      "url": "https://www.cnbc.com/2024/12/23/botto-the-ai-machine-artist-making-millions-of-dollars.html",
+      "source_type": "press"
+    },
+    {
+      "dimension": "economic_reality",
+      "claim": "Fortune (2023): >$3M primary sales in <2 years on the blockchain — establishes early economic-reality trajectory before the Sotheby's solo exhibition.",
+      "url": "https://fortune.com/crypto/2023/04/25/artist-3-million-less-than-2-years-blockchain-artificial-intelligence/",
+      "source_type": "press"
     },
     {
       "dimension": "cultural_impact",
-      "claim": "Exhibited at Christie's & Art Basel",
-      "url": "https://botto.com/journal"
+      "claim": "Sotheby's solo exhibition 'Exorbitant Stage: Botto, a Decentralized AI Artist' (Oct 2024) grossed $351,600 across six lots — third-party auction-house validation, not creator-controlled venue.",
+      "url": "https://www.businesswire.com/news/home/20241024672914/en/Autonomous-AI-Artist-Botto-Breaks-$350K-in-Sales-at-Sothebys-Solo-Exhibition",
+      "source_type": "institutional"
+    },
+    {
+      "dimension": "cultural_impact",
+      "claim": "Christie's 'Augmented Intelligence' auction (Feb 2025) included Botto's NFT 'Siamese Cycle in Absurdism' alongside Refik Anadol and Holly Herndon — placement among the field's recognized leaders.",
+      "url": "https://news.artnet.com/art-world/christies-ai-art-auction-controversy-artists-weigh-in-2614666",
+      "source_type": "press"
+    },
+    {
+      "dimension": "cultural_impact",
+      "claim": "CNN coverage of Art Basel Hong Kong (Mar 2026) frames Botto as the headline AI-artist exhibitor — top-tier general-press recognition timed to the year's biggest art fair.",
+      "url": "https://edition.cnn.com/2026/03/26/style/botto-ai-artist-art-basel-hong-kong-intl-hnk",
+      "source_type": "press"
+    },
+    {
+      "dimension": "persistence",
+      "claim": "The Art Newspaper (Mar 2025) tracks Botto as a multi-year semi-autonomous AI artist with continuous exhibition and auction history since 2021 — confirms 4+ year operating window with no hard reset.",
+      "url": "https://www.theartnewspaper.com/2025/03/04/semi-autonomous-artificial-intelligence-artists-exhibitions-auctions",
+      "source_type": "press"
     },
     {
       "dimension": "governance",
-      "claim": "Weekly DAO voting cycle active since 2021",
-      "url": "https://app.botto.com/vote"
+      "claim": "Sleek Magazine deep-dive on BottoDAO governance — ~5,000 token-holders, weekly proposal/voting cadence, transparent on-chain decisions. Third-party documentation of the constitutional structure.",
+      "url": "https://www.sleek-mag.com/article/digital-originals-2/",
+      "source_type": "press"
+    },
+    {
+      "dimension": "tech_distinctiveness",
+      "claim": "NeurIPS 2022 Machine Learning for Creativity & Design workshop paper 'Botto: A Decentralized Autonomous Artist' — peer-reviewed venue documenting the generate→taste-filter→DAO-curate pipeline as a novel hybrid architecture.",
+      "url": "https://neuripscreativityworkshop.github.io/2022/papers/ml4cd2022_paper13.pdf",
+      "source_type": "academic"
+    },
+    {
+      "dimension": "narrative_coherence",
+      "claim": "Centre for Postdigital Cultures (Feb 2025) 'Is Botto's art any good?' — academic critical evaluation of Botto's artistic identity, indicating the persona is taken seriously enough by humanities researchers to merit aesthetic critique.",
+      "url": "https://postdigitalcultures.org/24-feb-2025-is-bottos-art-any-good/",
+      "source_type": "academic"
+    },
+    {
+      "dimension": "economic_infrastructure",
+      "claim": "1kx Network analysis 'Botto: Art at the Intersection of AI and Token Networks' — third-party crypto-investor breakdown of $BOTTO token mechanics, revenue split (50% voters / 50% treasury), and weekly auction cycle. Industry validation of programmable-commerce layer.",
+      "url": "https://medium.com/1kxnetwork/botto-art-at-the-intersection-of-ai-and-token-networks-4711d632d30f",
+      "source_type": "industry"
+    },
+    {
+      "dimension": "autonomy",
+      "claim": "Verse Works critical essay 'Generative Art Beyond Autonomy' analyzes Botto's hybrid human-AI agency — supports the Cyborg classification (AI generates, DAO curates) rather than fully sovereign.",
+      "url": "https://verse.works/journal/generative-art-beyond-autonomy-bottos-decentralised-practice",
+      "source_type": "press"
     }
   ],
   "score_history": [
