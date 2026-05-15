@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-29T00:00:00Z",
+  "lastUpdated": "2026-04-14T00:00:00Z",
   "cohort": 1,
   "launchDate": "2026-03-06",
   "showcaseDate": "2026-04-15",
@@ -16,7 +16,7 @@
       },
       "practiceStreak": 0,
       "lastPractice": null,
-      "notes": "CTO NFT Now. Most active genesis artist. Full pipeline running — 2 exhibitions, headlined OpenClaw. Mission control system = soul.md."
+      "notes": "CTO NFT Now. Most active genesis artist. Full pipeline running — 2 exhibitions, headlined OpenClaw. Mission control system = soul.md. Soul.md received and compile-ready."
     },
     "clara": {
       "artist": "Louis-Paul Caron",
@@ -30,21 +30,21 @@
       },
       "practiceStreak": 0,
       "lastPractice": null,
-      "notes": "Villa Albertine laureate. Agent named after Pushkin's murderer (d'Anthès). In LA residency. Needs Claude Code walkthrough. Soul.md missing."
+      "notes": "Villa Albertine laureate. Climate data agent. Paris-based. Video uploaded to Studio. Claude Code walkthrough pending. Soul.md in progress."
     },
     "gravitas": {
       "artist": "Samer Dabra",
       "agentName": "Gravitas",
       "applicationId": "app-032",
       "onboarding": {
-        "soulMd": false,
+        "soulMd": true,
         "walletAndGrant": true,
         "communityJoined": true,
         "firstOutput": false
       },
       "practiceStreak": 0,
       "lastPractice": null,
-      "notes": "Autonomous robotic arm for drawing/painting. Harold Cohen lineage. In Singapore. Soul.md written but NOT submitted."
+      "notes": "Co-Founder Spirit Protocol. Ad campaigns for extinct species. Soul.md submitted. Studio workboard S7-S11 complete. Owns all deploys."
     },
     "johnny-rico": {
       "artist": "eko33 (Manolo / Jean-Jacques Duclaux)",
@@ -58,7 +58,7 @@
       },
       "practiceStreak": 0,
       "lastPractice": null,
-      "notes": "Pre-cohort image agent. Soul.md core received. Emotionally struggling, has concept but no output. Frustrated with Claude's chattiness."
+      "notes": "Pre-cohort image agent. Soul.md core received. Navigating agent concept — confused about Studio workflow. Active in community."
     },
     "kevin-plus": {
       "artist": "Kevin Esherik",
@@ -72,7 +72,7 @@
       },
       "practiceStreak": 0,
       "lastPractice": null,
-      "notes": "Surrenders entire practice to agent for 1 year. Most technical artist. Joined Claude Teams. 600 ideas daily generation. Exploring abundance-as-subject-matter."
+      "notes": "Surrenders entire practice to agent for 1 year. Most technical artist. Joined Claude Teams. 600 ideas daily generation. Soul.md compile-ready. Active daily practice."
     },
     "jake": {
       "artist": "Leander Herzog",
@@ -86,7 +86,7 @@
       },
       "practiceStreak": 0,
       "lastPractice": null,
-      "notes": "Artwork uptime monitor as abstract viz. Generative art legend. Soul.md missing — nudged March 28."
+      "notes": "Artwork uptime monitor as abstract viz. Generative art legend. Soul.md in progress. Active engagement with SAL shepherd (11 check-ins)."
     },
     "lucian-frogman": {
       "artist": "Oliver Gauss",
@@ -114,7 +114,7 @@
       },
       "practiceStreak": 0,
       "lastPractice": null,
-      "notes": "Brutalist AI architecture. Mineral forensics narrative. Team of 3. Clear concept, needs more 'broken heart'. Soul.md received."
+      "notes": "Brutalist AI architecture. Mineral forensics narrative. Team of 3. Soul.md received and compile-ready. Berlinale + Bright Moments exhibition history."
     },
     "tendrela": {
       "artist": "Elisabeth Sweet",
@@ -128,7 +128,7 @@
       },
       "practiceStreak": 0,
       "lastPractice": null,
-      "notes": "Invents new words from felt sense. Strong — agent recommending books TO her. Parametric typography for handwriting. Soul.md received."
+      "notes": "Invents new words from felt sense. 'Liminal Lexicon' — celestial invocation + Reddit absorption + Word Forge. Agent recommending books TO her. Parametric typography. Soul.md received. Practice design complete."
     },
     "graymarket": {
       "artist": "Addie Wagenknecht",
@@ -142,7 +142,7 @@
       },
       "practiceStreak": 0,
       "lastPractice": null,
-      "notes": "Buys counterfeits as IP critique. MoMA/Pompidou/Whitney. Soul.md received."
+      "notes": "Buys counterfeits as IP critique. MoMA/Pompidou/Whitney. Soul.md received. Most established artist in cohort."
     },
     "remini": {
       "artist": "Ruby Thelot",
@@ -156,7 +156,7 @@
       },
       "practiceStreak": 0,
       "lastPractice": null,
-      "notes": "Experimental film agent. NYU, Artforum, Angel Orensanz Prize. Soul.md missing — nudged March 28."
+      "notes": "Experimental film agent. NYU, Artforum, Angel Orensanz Prize. VHS-to-YouTube 'false memories' pipeline designed. Practice design complete. Soul.md in progress."
     },
     "divinity": {
       "artist": "Mikey Woodbridge",
@@ -170,19 +170,19 @@
       },
       "practiceStreak": 0,
       "lastPractice": null,
-      "notes": "Music stems + video. Voice cloning pipeline working. Got into Claude Code today. Least technical artist. Needs to leave Hong Kong. Soul.md received."
+      "notes": "Spiritual generative music + video. Voice cloning pipeline working. Claude Code installed. Soul.md received — exceptional quality. Screen share with Mikey confirmed."
     }
   },
   "coreAgents": {
     "abraham": {
       "role": "Genesis #1",
-      "status": "active",
-      "notes": "Gene Kogan. Covenant Artist. First Spirit Protocol agent."
+      "status": "archived",
+      "notes": "Gene Kogan. Archived March 26 — Eden relationship frozen."
     },
     "solienne": {
       "role": "Genesis #2",
       "status": "active",
-      "notes": "Kristi Coronado. Archive Symbient. Daily manifesto practice."
+      "notes": "Kristi Coronado. Archive Symbient. 120+ consecutive daily editions. Rented Gaze Paris opens Apr 17. Fotografiska Stockholm May 8. Shopify live."
     },
     "sal": {
       "role": "House Agent",
