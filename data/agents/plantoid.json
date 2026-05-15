@@ -71,18 +71,63 @@
   "evidence": [
     {
       "dimension": "persistence",
-      "claim": "Operating continuously since 2015; survived founder transition",
-      "url": "https://plantoid.org/about"
+      "claim": "CoinDesk documented Plantoid as a working bitcoin-fed sculpture in November 2015 — the first independent press coverage of an autonomous on-chain life form. Establishes >10-year continuous operation.",
+      "url": "https://www.coindesk.com/markets/2015/11/01/this-robot-plant-needs-you-and-bitcoin-to-reproduce",
+      "source_type": "press"
     },
     {
-      "dimension": "governance",
-      "claim": "Self-executing smart contracts govern reproduction",
-      "url": "https://etherscan.io/address/0x1"
+      "dimension": "persistence",
+      "claim": "Bitcoin Magazine feature describing Plantoid as 'the first blockchain-based artificial life form,' confirming inception and the reproduction mechanism (smart-contract-triggered commissions of successor sculptures).",
+      "url": "https://bitcoinmagazine.com/business/plantoids-the-first-blockchain-based-artificial-life-forms-1482768916",
+      "source_type": "press"
+    },
+    {
+      "dimension": "tech_distinctiveness",
+      "claim": "Furtherfield (London, UK) — institutional digital-art critic — describes Plantoid as 'self-creating, self-propagating artwork system' with parameters encoded on Ethereum as smart contracts representing 'economic and manufacturing logic and the aesthetics of its production as a kind of genome.'",
+      "url": "https://www.furtherfield.org/plantoid-the-blockchain-based-art-that-makes-itself/",
+      "source_type": "press"
+    },
+    {
+      "dimension": "tech_distinctiveness",
+      "claim": "DAOstack engineering writeup documenting Plantoid v2 migration onto DAO governance infrastructure — third-party technical attestation that the reproduction logic is on-chain and externally auditable, not a manual artist process.",
+      "url": "https://medium.com/daostack/a-new-generation-of-plantoids-comes-to-life-with-daostack-and-infra-a-conversation-with-eb155d1b0987",
+      "source_type": "industry"
     },
     {
       "dimension": "cultural_impact",
-      "claim": "Featured at Centre Pompidou, Tate Modern; academic citations in blockchain/art discourse",
-      "url": "https://www.centrepompidou.fr"
+      "claim": "Confirmed institutional exhibition history: Centre Pompidou (Paris), Ars Electronica (Linz), HEK Museum of Digital Arts (Basel), Furtherfield Gallery (London), Biennale di Venezia (Italy), Grand Palais. Multi-continent canonical recognition.",
+      "url": "https://stochasticlabs.org/portfolio/primavera-de-filippi/",
+      "source_type": "institutional"
+    },
+    {
+      "dimension": "cultural_impact",
+      "claim": "Hyperallergic ('What Blockchain Means for Contemporary Art') cites Plantoid as a foundational reference in blockchain-art discourse — recognition in mainstream art criticism, not just crypto press.",
+      "url": "https://hyperallergic.com/440936/what-blockchain-means-for-contemporary-art/",
+      "source_type": "press"
+    },
+    {
+      "dimension": "cultural_impact",
+      "claim": "The Conversation ('Do Plantoids Dream of Electric Arts Council Grants?') — academic-affiliated analysis treating Plantoid as a serious case study for autonomous-agent funding mechanisms.",
+      "url": "https://theconversation.com/do-plantoids-dream-of-electric-arts-council-grants-52263",
+      "source_type": "academic"
+    },
+    {
+      "dimension": "governance",
+      "claim": "Gazelli Art House (institutional gallery) catalogue entry for Plantoid14 documenting the per-sculpture smart-contract governance and on-chain provenance — third-party gallery confirmation of the algorithmic-law claim.",
+      "url": "https://art.gazelliarthouse.com/products/plantoid14",
+      "source_type": "institutional"
+    },
+    {
+      "dimension": "narrative_coherence",
+      "claim": "Outland Art ('Blockchain Vitalism') situates Plantoid within a broader critical lineage of autonomous agent art — confirming the mythos has been canonized by external critics, not just self-narrated.",
+      "url": "https://outland.art/blockchain-vitalism/",
+      "source_type": "press"
+    },
+    {
+      "dimension": "tech_distinctiveness",
+      "claim": "Academic working paper (HAL, French national open archive) — 'Plantoïde: Une Forme de Vie Fondée sur la Blockchain' — peer-adjacent technical/legal analysis of the architecture by De Filippi et al.",
+      "url": "https://hal.science/hal-03098591/document",
+      "source_type": "academic"
     }
   ],
   "score_history": [
