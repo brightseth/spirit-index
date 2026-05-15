@@ -102,6 +102,7 @@ export interface Evidence {
   dimension: keyof Scores;
   claim: string;
   url: string;
+  source_type?: "press" | "academic" | "institutional" | "industry" | "onchain" | "creator";
 }
 
 // Score rationale - explains why each dimension received its score
