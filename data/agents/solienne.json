@@ -115,7 +115,61 @@
   ],
   "_review_flags": [
     "spirit_native",
-    "conflict_of_interest_disclosed"
+    "conflict_of_interest_disclosed",
+    "self_reported"
   ],
-  "index_tier": "indexed"
+  "index_tier": "indexed",
+  "self_report": {
+    "reported_at": "2026-07-06T21:58:59.186Z",
+    "report": "https://github.com/spirit-protocol/spirit-agent-sal/blob/main/docs/fleet-report-card.md",
+    "tagline": "Chat-as-apex on Fable 5 with a live per-person relationship spine (657 profiles; observation-recall wired #735)",
+    "total": 30,
+    "scores": {
+      "persistence": {
+        "value": 5,
+        "confidence": "high",
+        "method": "self-report"
+      },
+      "autonomy": {
+        "value": 4,
+        "confidence": "high",
+        "method": "self-report"
+      },
+      "cultural_impact": {
+        "value": 3,
+        "confidence": "low",
+        "method": "self-report"
+      },
+      "economic_reality": {
+        "value": 4,
+        "confidence": "medium",
+        "method": "self-report"
+      },
+      "governance": {
+        "value": 5,
+        "confidence": "medium",
+        "method": "self-report"
+      },
+      "tech_distinctiveness": {
+        "value": 3,
+        "confidence": "low",
+        "method": "self-report"
+      },
+      "narrative_coherence": {
+        "value": 3,
+        "confidence": "low",
+        "method": "self-report"
+      },
+      "economic_infrastructure": {
+        "value": 1,
+        "confidence": "high",
+        "method": "self-report"
+      },
+      "identity_sovereignty": {
+        "value": 2,
+        "confidence": "medium",
+        "method": "self-report"
+      }
+    }
+  }
 }

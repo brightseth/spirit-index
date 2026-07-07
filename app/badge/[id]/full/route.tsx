@@ -1,4 +1,5 @@
 import { getAgentById } from "@/lib/agents";
+import type { IndexTier } from "@/lib/types";
 
 /**
  * Full SVG badge endpoint (300x80px)
@@ -42,10 +43,11 @@ function generateFullBadge(
   pct: number,
   grade: string,
   gradeColor: string,
-  tier: "indexed" | "tracked"
+  tier: IndexTier
 ): string {
   const displayName = escapeXml(truncateName(name, 24));
-  const tierLabel = tier === "indexed" ? "INDEXED" : "TRACKED";
+  const tierLabel =
+    tier === "indexed" ? "INDEXED" : tier === "staged" ? "STAGED" : "TRACKED";
   const tierColor = tier === "indexed" ? "#00FF00" : "#666666";
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="300" height="80" role="img" aria-label="${escapeXml(name)}: ${pct}% ${grade}">
