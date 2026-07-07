@@ -47,7 +47,9 @@ export async function getAllAgents(): Promise<EnrichedAgent[]> {
       comparable_score: comp.score,
       comparable_max: comp.max,
       comparable_pct,
-      listed: comparable_pct >= QUALITY_THRESHOLD,
+      // Staged (self-reported, pending editorial review) entries are never
+      // listed in default views regardless of score
+      listed: comparable_pct >= QUALITY_THRESHOLD && agent.index_tier !== 'staged',
     };
   });
 

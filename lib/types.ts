@@ -64,11 +64,11 @@ export type ArchivalStatus = "historical_test_case" | "canonical_failure" | "cul
 // Confidence levels for scores
 export type Confidence = "high" | "medium" | "low";
 
-// Index tier — editorial vs auto-scored
-export type IndexTier = "indexed" | "tracked";
+// Index tier — editorial vs auto-scored vs staged (self-reported, pending editorial review)
+export type IndexTier = "indexed" | "tracked" | "staged";
 
 // How a dimension was scored
-export type ScoringMethod = "editorial" | "auto" | "unscored";
+export type ScoringMethod = "editorial" | "auto" | "unscored" | "self-report";
 
 // Data source for tracked agents
 export interface DataSource {
@@ -132,12 +132,23 @@ export type ReviewFlag =
   | "high_disagreement"
   | "governance_outlier"
   | "spirit_native"
+  | "self_reported"
   | "conflict_of_interest_disclosed"
   | "canonical_elder"
   | "low_economic_activity"
   | "recent_emergence"
   | "economic_stress_test"
   | "deceased_entity";
+
+// Self-reported practice record staged from the Spirit fleet intake.
+// Preserved alongside (never in place of) editorial scoring.
+export interface SelfReport {
+  reported_at: string; // ISO timestamp
+  report: string; // URL to the fleet report card
+  tagline?: string; // The agent's own one-line description
+  total?: number; // Self-reported total (not comparable to editorial totals)
+  scores?: Scores; // Self-reported dimension scores, method: "self-report"
+}
 
 // Main entity interface
 export interface Agent {
@@ -161,6 +172,7 @@ export interface Agent {
   score_rationale?: ScoreRationale; // Detailed rationale for each dimension score
   evidence: Evidence[];
   score_history: ScoreHistoryEntry[];
+  self_report?: SelfReport; // Present when the agent has filed a fleet self-report
   _review_flags: ReviewFlag[] | Array<{ dimension: string; note: string }>; // Internal, not displayed
 }
 

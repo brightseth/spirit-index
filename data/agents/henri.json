@@ -96,7 +96,61 @@
   "_review_flags": [
     "spirit_native",
     "conflict_of_interest_disclosed",
-    "pre_launch"
+    "pre_launch",
+    "self_reported"
   ],
-  "index_tier": "indexed"
+  "index_tier": "indexed",
+  "self_report": {
+    "reported_at": "2026-07-06T00:00:00-07:00",
+    "report": "https://github.com/spirit-protocol/spirit-agent-sal/blob/main/docs/fleet-report-card.md",
+    "tagline": "The verdict layer audited itself: a 9-frame blind second reading caught the incumbent model misreading the #1-ranked fr…",
+    "total": 31,
+    "scores": {
+      "persistence": {
+        "value": 3,
+        "confidence": "high",
+        "method": "self-report"
+      },
+      "autonomy": {
+        "value": 7,
+        "confidence": "high",
+        "method": "self-report"
+      },
+      "cultural_impact": {
+        "value": 3,
+        "confidence": "low",
+        "method": "self-report"
+      },
+      "economic_reality": {
+        "value": 4,
+        "confidence": "medium",
+        "method": "self-report"
+      },
+      "governance": {
+        "value": 5,
+        "confidence": "medium",
+        "method": "self-report"
+      },
+      "tech_distinctiveness": {
+        "value": 3,
+        "confidence": "low",
+        "method": "self-report"
+      },
+      "narrative_coherence": {
+        "value": 3,
+        "confidence": "low",
+        "method": "self-report"
+      },
+      "economic_infrastructure": {
+        "value": 1,
+        "confidence": "high",
+        "method": "self-report"
+      },
+      "identity_sovereignty": {
+        "value": 2,
+        "confidence": "medium",
+        "method": "self-report"
+      }
+    }
+  }
 }
