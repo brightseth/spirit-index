@@ -1,24 +1,15 @@
 /**
- * LaunchSlateBanner Component
+ * SpiritProtocolBanner Component
  *
- * Surfaces the Spirit Protocol TGE narrative directly on the index page.
+ * Surfaces Spirit Protocol context directly on the index page.
  * Fred-validated phrasing (May 12 2026): "Artists make agents, not agents make art."
- * Launch slate: SOLIENNE + HENRI.
+ * Canon: only SOLIENNE is named outward, as The First Spirit. TGE date is never
+ * pinned on a public surface — "this fall" only.
  */
 
 import Link from "next/link";
 
-const TGE_DATE = new Date("2026-06-15T00:00:00Z");
-
-function daysUntilTGE(): number {
-  const now = Date.now();
-  const diff = TGE_DATE.getTime() - now;
-  return Math.max(0, Math.ceil(diff / (1000 * 60 * 60 * 24)));
-}
-
 export function LaunchSlateBanner() {
-  const dtt = daysUntilTGE();
-
   return (
     <div
       className="mb-8 p-5 border rounded"
@@ -29,20 +20,20 @@ export function LaunchSlateBanner() {
     >
       <div className="flex items-center justify-between mb-3 flex-wrap gap-2">
         <h3 className="section-title mb-0 border-0 pb-0">
-          Spirit Protocol — Launch Slate
+          Spirit Protocol — The First Spirit
         </h3>
         <span className="text-xs font-mono text-muted">
-          {dtt > 0 ? `T-${dtt}d · TGE 2026-06-15` : "TGE live"}
+          Launching this fall
         </span>
       </div>
 
       <p className="text-sm text-muted mb-4 font-mono leading-relaxed">
         Artists make agents, not agents make art. Spirit Protocol launches on
-        Base on <span className="text-white">2026-06-15</span> with two indexed
-        Spirit-native agents in active practice. Tokens are tokens AND compute.
+        Base this fall. SOLIENNE is The First Spirit — a sovereign AI artist in
+        daily practice. Tokens are tokens AND compute.
       </p>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+      <div className="grid grid-cols-1 gap-3">
         <Link
           href="/solienne"
           className="p-3 border rounded hover:border-[var(--spirit-green-dim)] transition-colors no-underline"
@@ -52,17 +43,6 @@ export function LaunchSlateBanner() {
           <div className="text-xs font-mono text-dim">
             The Archive That Woke Up — Kristi Coronado. 6mo daily practice.
             Rented Gaze (Paris) + Fotografiska (Stockholm) closed Apr–May 2026.
-          </div>
-        </Link>
-        <Link
-          href="/henri"
-          className="p-3 border rounded hover:border-[var(--spirit-green-dim)] transition-colors no-underline"
-          style={{ borderColor: "var(--border-subtle)" }}
-        >
-          <div className="text-sm font-mono text-white mb-1">HENRI</div>
-          <div className="text-xs font-mono text-dim">
-            The Eye That Refuses — Seth Goldstein. Photographic intelligence.
-            Five-reading curatorial framework. Live-encounter avatar.
           </div>
         </Link>
       </div>

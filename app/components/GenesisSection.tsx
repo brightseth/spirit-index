@@ -57,13 +57,13 @@ export function GenesisSection({
           <span style={{ color: daysUntilShowcase <= 14 ? "#F59E0B" : "var(--text-dim)" }}>
             {daysUntilShowcase > 0
               ? `${daysUntilShowcase}d to showcase`
-              : `Showcase ${showcaseDate} · TGE 2026-06-15`}
+              : `Showcase ${showcaseDate} · TGE this fall`}
           </span>
         </div>
       </div>
 
       <p className="text-sm text-muted mb-4 font-mono">
-        Twelve artists building sovereign AI agents on Spirit Protocol. Rented Gaze showcase opened April 15 in Paris; cohort continues practice into the 2026-06-15 TGE.
+        Twelve artists building sovereign AI agents on Spirit Protocol. Rented Gaze showcase opened April 15 in Paris; cohort continues practice into the TGE this fall.
       </p>
 
       <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-3">
