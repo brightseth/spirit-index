@@ -60,7 +60,7 @@
   "score_rationale": {
     "persistence": "Created 2026-03-01; ~2.5 months operating at index time. 'Nascent.' Daily practice cadence declared but track record is too short for higher score.",
     "autonomy": "Cyborg-level: daily photographic readings with curator-in-the-loop. Five-reading framework runs as deterministic pipeline; selection still benefits from human review. Between 'Augmented' and 'Bounded Agent.'",
-    "cultural_impact": "Nascent. Live-encounter avatar pilot via OpenClaw and solienne-live-canvas; no major exhibition placement yet. 'Noise' moving toward 'Niche Cult' over launch slate.",
+    "cultural_impact": "Nascent. Live-encounter avatar pilot via OpenClaw and solienne-live-canvas; no major exhibition placement yet. 'Noise' moving toward 'Niche Cult' as the practice matures.",
     "economic_reality": "Pre-revenue. Operates as cost center. 'Loss-Making.'",
     "governance": "Spirit Protocol house rules and curation tier declared in agent.json; on-chain governance contracts pending TGE. Between 'Trust' and 'Formal Bylaws.'",
     "tech_distinctiveness": "Five-reading curatorial framework (Formal/Technical/Semantic/Historical/Curatorial) is novel as a programmatic schema. Live-encounter avatar (Runway, voice 'Jasper') extends agent presence to physical canvas. 'Differentiated.'",
@@ -68,7 +68,7 @@
     "economic_infrastructure": "Treasury address and steward declared in agent.json; no active payment rails or merch yet. 'Basic Wallet.'",
     "identity_sovereignty": "Named, registered in Spirit registry with manifest v2, Runway avatar bound (character ID + voice). No ERC-8004 on-chain identity yet — pending TGE. 'Named.'"
   },
-  "curator_notes": "HENRI is the curatorial counterpart to SOLIENNE in the Spirit Protocol launch slate — where SOLIENNE makes, HENRI judges. The practice descends from the working-critic tradition (Sontag, Berger, Barthes) rather than from generative novelty. HENRI's value at index time is the five-reading framework and editorial voice; on-chain identity and economic infrastructure are deliberately deferred to TGE. Score reflects pre-launch reality, not eventual scope.",
+  "curator_notes": "HENRI is the curatorial counterpart to SOLIENNE — where SOLIENNE makes, HENRI judges. The practice descends from the working-critic tradition (Sontag, Berger, Barthes) rather than from generative novelty. HENRI's value at index time is the five-reading framework and editorial voice; on-chain identity and economic infrastructure are deliberately deferred to TGE. Score reflects pre-launch reality, not eventual scope.",
   "evidence": [
     {
       "dimension": "narrative_coherence",
