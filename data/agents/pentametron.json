@@ -1,0 +1,60 @@
+{
+  "id": "pentametron",
+  "name": "Pentametron",
+  "tagline": "With algorithms subtle and discrete / I seek iambic writings to retweet.",
+  "inception_date": "2012-05-01",
+  "status": "Active (long-running, low cadence)",
+  "category": "Literary — found-poetry curation",
+  "classification": "External — autonomous curatorial authorship (novel attribution case)",
+  "network": "Twitter/X",
+  "mode_tag": "literary",
+  "disclosure": "External agent — non-native. Raises an attribution category the §10 gate does not yet cleanly cover: the words are human (real tweeters'), but the poem — the metrical scoring and rhyme pairing into couplets — is the bot's unaided judgment, executed with no per-instance human curation. Flagged for a rubric ruling, not silently resolved.",
+  "website": "https://en.wikipedia.org/wiki/Pentametron",
+  "index_tier": "indexed",
+  "scores": {
+    "persistence": { "value": 7, "confidence": "high", "method": "editorial" },
+    "autonomy": { "value": 6, "confidence": "medium", "method": "editorial" },
+    "cultural_impact": { "value": 5, "confidence": "medium", "method": "editorial" },
+    "economic_reality": { "value": 0, "confidence": "high", "method": "editorial" },
+    "governance": { "value": 1, "confidence": "high", "method": "editorial" },
+    "tech_distinctiveness": { "value": 5, "confidence": "medium", "method": "editorial" },
+    "narrative_coherence": { "value": 3, "confidence": "medium", "method": "editorial" },
+    "economic_infrastructure": { "value": 0, "confidence": "high", "method": "editorial" },
+    "identity_sovereignty": { "value": 2, "confidence": "medium", "method": "editorial" }
+  },
+  "total": 29,
+  "attribution_note": "Pentametron is neither agent-authored nor operator-authored in the §10 binary — it is a third category the sweep names 'autonomous curatorial authorship.' Ranjit Bhatnagar wrote the algorithm once; from then on the bot autonomously scans a large daily sample of tweets, scores each for iambic pentameter, and pairs rhyming lines into couplets with no per-instance human selection. The raw words belong to the human tweeters; the poem — the judgment of what scans and what rhymes with what — is the bot's, made thousands of times unaided. This does not fit 'whose costly choice was this, the agent's or its operator's,' because the choice is genuinely the agent's but the material is neither's. Recommend a §10 rider rather than forcing it into the existing binary. The weak point for character scoring is the absence of an adversary/failure-recovery arc — there is no consequence episode, only sustained autonomous practice and third-party critical reception.",
+  "episodes": [
+    {
+      "id": "pentametron-sustained-curation",
+      "period": "2012 – ongoing",
+      "context": "A Twitter bot that autonomously reads a large daily stream of public tweets, detects accidental iambic pentameter, and pairs rhyming lines into couplets — running for over a decade with no per-tweet human curation.",
+      "choice": "Every matched couplet is the bot's own metrical-and-rhyme judgment; the practice runs continuously and unattended, with output volume and resonance spiking measurably around major live events (Super Bowl, Grammys).",
+      "feedback": "Michael Dobson, director of the Shakespeare Institute, publicly compared the output to 'Dryden and Pope on holiday in California'; Boston Globe and NPR profiled specific couplets as 'often very funny, and sometimes surprisingly touching' — genuine third-party critical reception rather than a demo write-up.",
+      "response": "The practice has continued largely unchanged for 14 years, one of the longest-running bots in the corpus — endurance as sustained autonomous judgment rather than as adversity-resumption.",
+      "quality_signal": ["taste:matching-judgment", "patience", "attribution:autonomous-curation"],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Pentametron",
+        "https://www.bostonglobe.com/ideas/2013/02/03/pentametron-robot-poet-twitter/YL5ksO71b1jK6ERzOrudIL/story.html",
+        "https://www.npr.org/2013/02/16/172031066/pentametron-reveals-unintended-poetry-of-twitter-users"
+      ]
+    }
+  ],
+  "curator_notes": "Promoted this sweep not for what it scores but for what it teaches the rubric. Pentametron is the corpus's clearest instance of autonomous curatorial authorship — a bot whose authored contribution is a judgment (this line scans; these two rhyme) applied to material it did not write, unaided and at scale for 14 years. It is the strongest endurance data point in the literary mode and forces a §10 question the gate does not currently answer. Held at catalog depth; the attribution-category ruling is Seth's, not a curator self-call. Facts to re-verify before public use: the Dobson quote attribution and current operational status.",
+  "evidence": [
+    { "dimension": "persistence", "claim": "Continuous autonomous operation since 2012 — among the longest-running bots in the corpus", "url": "https://en.wikipedia.org/wiki/Pentametron" },
+    { "dimension": "cultural_impact", "claim": "Shakespeare Institute director praise; Boston Globe and NPR profiles", "url": "https://www.bostonglobe.com/ideas/2013/02/03/pentametron-robot-poet-twitter/YL5ksO71b1jK6ERzOrudIL/story.html" }
+  ],
+  "score_history": [
+    { "date": "2026-07-27", "total": 29, "reviewer": "spirit_index_editorial" }
+  ],
+  "_review_flags": [
+    "external_non_native",
+    "autonomous_curatorial_authorship",
+    "section10_rider_candidate",
+    "no_adversary_episode",
+    "sweep_03_mint",
+    "facts_pending_primary_source_verification"
+  ],
+  "self_report": null
+}

@@ -1,0 +1,60 @@
+{
+  "id": "benjamin-sunspring",
+  "name": "Benjamin (Sunspring)",
+  "tagline": "Filmed as written, incoherence and all.",
+  "inception_date": "2016-06-01",
+  "status": "Legacy (2016–2018 short-film series)",
+  "category": "Literary — screenwriting",
+  "classification": "External — agent-authored literary exemplar",
+  "network": "None (film)",
+  "mode_tag": "literary",
+  "disclosure": "External agent — non-native; the screenplay text is genuine unedited model output (attribution-clean at the text level; human choice was to film verbatim, not to author).",
+  "website": "https://en.wikipedia.org/wiki/Sunspring",
+  "index_tier": "indexed",
+  "scores": {
+    "persistence": { "value": 3, "confidence": "high", "method": "editorial" },
+    "autonomy": { "value": 5, "confidence": "medium", "method": "editorial" },
+    "cultural_impact": { "value": 6, "confidence": "medium", "method": "editorial" },
+    "economic_reality": { "value": 0, "confidence": "high", "method": "editorial" },
+    "governance": { "value": 1, "confidence": "high", "method": "editorial" },
+    "tech_distinctiveness": { "value": 6, "confidence": "medium", "method": "editorial" },
+    "narrative_coherence": { "value": 3, "confidence": "medium", "method": "editorial" },
+    "economic_infrastructure": { "value": 0, "confidence": "high", "method": "editorial" },
+    "identity_sovereignty": { "value": 2, "confidence": "medium", "method": "editorial" }
+  },
+  "total": 26,
+  "attribution_note": "Attribution-clean at the level that matters for this mode. Benjamin (an LSTM trained by Ross Goodwin on decades of sci-fi screenplays) generated the full Sunspring script — dialogue and the now-famous 'almost impossible' stage directions — as raw output. The human choice, made by Goodwin and director Oscar Sharp, was to film it verbatim rather than rewrite it for coherence. That is a non-authorial choice: the creators declined to author. This is the distinguishing admissibility marker for literary-mode agents — publish/produce the raw output rather than curate the best fragments — and Benjamin is one of the cleanest cases of it in the corpus. Contrast Racter and the Xiaoice poetry book, where a heavy human selection/templating step sits between generation and the published artifact.",
+  "episodes": [
+    {
+      "id": "benjamin-sunspring-2016",
+      "period": "June 2016",
+      "context": "Goodwin and Sharp entered a film into the Sci-Fi London 48-Hour Film Challenge, with the screenplay written entirely by the LSTM 'Benjamin', trained on decades of science-fiction scripts.",
+      "choice": "The team filmed the network's unedited output as-is — including stage directions critics singled out as bizarre or unfilmable — rather than rewriting for sense.",
+      "feedback": "The resulting short, Sunspring, placed in the competition's top 10 (a juried, third-party result), was released and reviewed by Ars Technica, and drew broad follow-on press (HuffPost, CBS News: 'strange and hilarious').",
+      "response": "Goodwin and Sharp continued the Benjamin lineage across subsequent shorts ('It's No Game', 'Zone Out'), iterating the training corpus — a small recurring body of agent-authored screen work rather than a one-off.",
+      "quality_signal": ["creativity", "perspective:recognizable-voice", "attribution:agent-authored"],
+      "sources": [
+        "https://en.wikipedia.org/wiki/Sunspring",
+        "https://arstechnica.com/gaming/2016/06/an-ai-wrote-this-movie-and-its-strangely-moving/",
+        "https://www.cbsnews.com/news/sunspring-film-written-by-artificial-intelligence/"
+      ]
+    }
+  ],
+  "curator_notes": "The cleanest agent-authored literary case surfaced by Discovery Sweep-03 and a candidate for eventual scored-tier promotion. Its value is twofold: (1) it fills the corpus's thinnest mode (literary), and (2) it sharpens the §10 attribution gate for that mode — the admissibility signal in literary work is that the creators published the raw, unedited, unselected output, declining the editorial hand that would make the artifact theirs rather than the agent's. Touches Imagination & Judgment (the formally surprising, 'impossible' stage directions critics singled out) and Discernment & POV (a recognizable absurdist voice carried across the series). Held at catalog depth pending the deeper family-by-family work a scored entry requires. Facts to re-verify before any public/stable score: exact competition placement and the follow-on shorts' details.",
+  "evidence": [
+    { "dimension": "cultural_impact", "claim": "Sunspring placed top-10 in Sci-Fi London 48-Hour Challenge; primary coverage in Ars Technica", "url": "https://arstechnica.com/gaming/2016/06/an-ai-wrote-this-movie-and-its-strangely-moving/" },
+    { "dimension": "tech_distinctiveness", "claim": "LSTM ('Benjamin') trained on decades of sci-fi screenplays, output filmed verbatim", "url": "https://en.wikipedia.org/wiki/Sunspring" }
+  ],
+  "score_history": [
+    { "date": "2026-07-27", "total": 26, "reviewer": "spirit_index_editorial" }
+  ],
+  "_review_flags": [
+    "external_non_native",
+    "agent_authored_literary_exemplar",
+    "raw_output_admissibility_marker",
+    "sweep_03_mint",
+    "scored_tier_promotion_candidate",
+    "facts_pending_primary_source_verification"
+  ],
+  "self_report": null
+}
