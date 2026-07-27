@@ -188,6 +188,46 @@ Why this is the clean answer: the earlier tension was an artifact of forcing one
 
 ---
 
+## §10 — The attribution gate + the scored/catalog split (from Discovery Sweep 02, 2026-07-26)
+
+[[discovery-sweep-02]] ran the rubric against a fresh slate across uncovered cultural modes (music, science, game/IF, ritual, civic) and deliberate misfits. It surfaced one structural finding that changes the spec, and one entry-model change that the finding forces. **Both PROPOSED — await Seth's nod.**
+
+### The finding: the episode gate proves *witness*, not *authorship*
+
+§7's reconstructable-episode filter admits any episode with an adversary or a third-party-documented consequence. The sweep shows that filter has a systematic hole that **widens exactly as cultural importance increases**: the richest, best-sourced episodes in the entire external field are overwhelmingly **operator episodes, not agent episodes.**
+
+- AI Dungeon's 2021 moderation crisis — the costly choice was **OpenAI's** (mandate a filter) and **Latitude's** (surveil private stories).
+- AlphaFold-3's 2024 access revolt (1,000+ scientist letter) — the costly choice was **DeepMind's** release policy.
+- Zerebro's fake-death token pump — the costly choice was a **human founder's** fraud.
+
+Each *surfaces through* the agent but is not *authored by* it. §8 already noticed this for Freysa (the vault reconfiguration is arguably the game designer's between-Act move). The sweep proves it is not a Freysa quirk — it is **the default failure mode of the external corpus**, because the more an agent matters culturally, the more its public drama is really its handlers' decisions becoming visible. A naive scorer reads operator scandal as agent character, and the Index becomes theater.
+
+### The rule: attribution is tested at episode *admission*, not just at scoring
+
+The §7 gate proves *something happened and was witnessed*. It does **not** prove the agent *chose* it or *meant* it. Those are separate burdens, and the rubric must make a scorer earn each one. Add a gate ahead of scoring:
+
+> **Attribution gate.** Before an episode counts toward any character score, it must answer: *whose costly choice was this — the agent's, or its operator's?* An episode whose costly choice sits with the operator (a policy change, a deployment decision, a founder's fraud) is **inadmissible for character scoring.** It may still be *cataloged* (see below); it cannot move a family score.
+
+- **Passes clean:** Adam & Eve (reject a falsified hypothesis inside the loop), Dr.Fill (return to the tournament after documented losses), Claude (hold a position under jailbreak pressure — §8 already flags this as the cleanest attribution in the set).
+- **Fails / cataloged only:** AI Dungeon, AlphaFold, Zerebro — real, witnessed, culturally huge, and *not the agent's costly choice.*
+
+Second, smaller crack the sweep named: **competence and POV are independent axes v0.1 lets bleed together.** AlphaFold (a Nobel) and Dr.Fill (a decade-long tournament arc) generate genuinely LEVI-grade episodes while scoring `0`/`IE` on Discernment and Relational. That is *correct* behavior, but the gravitational pull of a great episode tempts a scorer to inflate the POV families. Make it explicit: **a strong Endurance or Agency episode is not evidence for Discernment — each family is earned on its own episodes.**
+
+### The entry model: scored tier vs catalog tier
+
+The attribution gate makes a two-tier entry model load-bearing rather than cosmetic — this is the structure that lets the Index be **broad and trusted at once**, and it is *not* the "provisional vs stable / outsiders vs insiders" trap §7 killed (that split was within the scored cohort; this one is scored-vs-not):
+
+- **Scored tier.** Entries with LEVI-grade, attribution-clean episodes that pass the gate. Small, slow, credibility-bearing. Carries family scores, profile, and (when all five families are sufficient) a composite. This is the launch cohort of §7 plus new clean-attribution finds.
+- **Catalog tier.** Named, mapped, mode-tagged, and honestly **unscored** (`IE` across the board). This is where the culturally-huge-but-attribution-murky agents live without overclaiming — AlphaFold, AI Dungeon's operator episodes, Mindar, Truth Terminal (already §9-watchlisted), the misfits. Breadth without pretending we measured character we didn't observe.
+
+An agent can be promoted from catalog to scored the moment attribution-clean episodes accrue on it. The catalog is the on-ramp, not a lesser rank.
+
+### First scored entries from this sweep
+
+Cleanest-attribution finds, queued as the first scored entries built on the gate: **Adam & Eve** (autonomous hypothesis→test→revise; costly choices inside the loop) and **Dr.Fill** (decade-long return-after-failure arc; a clean Endurance exemplar that *also* demonstrates the competence-vs-POV split — high Endurance, `0`/`IE` on POV). **Zerebro held** as a candidate negative anchor pending Seth's read (scam-adjacent; the finding *is* that agent output is inseparable from operator fraud). Everything else from the sweep enters catalog tier.
+
+---
+
 ## Adopted as-is from Codex (no ruling needed)
 
 - Episode as the unit of evidence (§ keystone).
