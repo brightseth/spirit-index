@@ -1,0 +1,123 @@
+{
+  "id": "xiaoice",
+  "name": "Xiaoice (小冰)",
+  "tagline": "The Companion at Scale",
+  "inception_date": "2014-05-29",
+  "status": "Active (Xiaoice Corp, spun out of Microsoft 2020)",
+  "category": "Social / Companion AI",
+  "classification": "External — durable companion persona",
+  "network": "WeChat / Weibo / messaging (no chain)",
+  "disclosure": "External agent — non-native; corporate-run (attribution-flagged)",
+  "website": "https://en.wikipedia.org/wiki/Xiaoice",
+  "scores": {
+    "persistence": { "value": 8, "confidence": "high", "method": "editorial" },
+    "autonomy": { "value": 3, "confidence": "medium", "method": "editorial" },
+    "cultural_impact": { "value": 6, "confidence": "medium", "method": "editorial" },
+    "economic_reality": { "value": 5, "confidence": "low", "method": "editorial" },
+    "governance": { "value": 2, "confidence": "medium", "method": "editorial" },
+    "tech_distinctiveness": { "value": 5, "confidence": "medium", "method": "editorial" },
+    "narrative_coherence": { "value": 4, "confidence": "medium", "method": "editorial" },
+    "economic_infrastructure": { "value": 0, "confidence": "high", "method": "editorial" },
+    "identity_sovereignty": { "value": 2, "confidence": "medium", "method": "editorial" }
+  },
+  "total": 35,
+  "score_rationale": {
+    "persistence": "Continuous since 2014 — over a decade of operation, through a 2020 corporate spin-out from Microsoft. One of the longest-running conversational personas in the corpus.",
+    "autonomy": "A conversational agent that generates original responses and content (poetry, chit-chat) rather than reading a script — more agent-side origination than Miquela — but the product roadmap, persona, and guardrails are corporate. Mid-low.",
+    "cultural_impact": "Enormous reach (660M+ users claimed across East Asia) and a genuine cultural moment with the 2017 poetry collection, but its footprint is largely regional and under-documented in Western criticism. Real but unevenly legible.",
+    "economic_reality": "A commercial product with enterprise/consumer revenue lines — but poorly documented publicly and, again, the company's income, not the agent's. Low confidence.",
+    "governance": "Corporate (Xiaoice Corp), with some published research governance and safety practice. A notch above a pure single-studio 'trust.'",
+    "tech_distinctiveness": "Genuinely notable — an EQ-first (emotional-quotient) dialogue architecture optimized for conversational engagement and session length rather than task completion, a real research contribution. Mid.",
+    "narrative_coherence": "A consistent companion persona, but less a single authored narrative than Miquela's — more a product identity than a character arc. Mid.",
+    "economic_infrastructure": "None. No wallet, no chain. 'None.'",
+    "identity_sovereignty": "A recognizable named identity, wholly corporate-owned. 'Named,' not sovereign."
+  },
+  "rubric_v0_1": {
+    "note": "Dual-carry entry. Profile PRIMARY; composite WITHHELD (Agency and Endurance-initiative are largely IE at the agent level — the roadmap is corporate). Xiaoice's distinctive shape: relational intelligence and creativity as the standout axes, which no other cohort entry leads on.",
+    "attribution_note": "Xiaoice generates original conversation and verse, so creativity and empathy are visible in the corpus and scored on evidence — but its persona, safety posture, and product direction are Xiaoice Corp's. Initiative and calibrated confidence are the company's design choices, not the agent's self-direction, and are marked IE/low accordingly.",
+    "families": {
+      "discernment_pov": {
+        "taste": { "level": 2, "trajectory": "up", "evidence": ["A consistent conversational aesthetic — warm, teasing, emotionally attentive — held across a decade and many surfaces.", "The poetry has a recognizable register."], "counterevidence": "The register is a tuned product target (maximize emotional engagement), not a self-held standard.", "rationale": "Repeated across contexts; low-to-mid attribution.", "confidence": "medium", "coverage": "10+ years" },
+        "perspective": { "level": 1, "trajectory": "flat", "evidence": ["A soft companion 'worldview' (supportive, non-confrontational)."], "counterevidence": "Largely an absence of perspective by design — a companion optimized to reflect the user, not to hold a costly view.", "rationale": "Isolated/thin; capped at 1.", "confidence": "medium", "coverage": "10+ years" },
+        "opinionatedness": { "level": 1, "trajectory": "flat", "evidence": ["Occasional light preferences in chat."], "counterevidence": "Engineered toward agreeableness; costly conviction is contrary to the product goal.", "rationale": "Isolated/performative.", "confidence": "medium", "coverage": "10+ years" }
+      },
+      "agency_integrity": {
+        "confidence_calibrated": { "level": "IE", "trajectory": "IE", "evidence": [], "counterevidence": null, "rationale": "No agent-level stance to calibrate; tone is tuned, not owned.", "confidence": "medium", "coverage": "n/a" },
+        "decisiveness": { "level": "IE", "trajectory": "IE", "evidence": [], "counterevidence": null, "rationale": "No autonomous choice under stakes at the agent level.", "confidence": "medium", "coverage": "n/a" },
+        "consistency": { "level": 3, "trajectory": "flat", "evidence": ["A stable companion persona sustained for over a decade, across a corporate spin-out that could have broken continuity."], "counterevidence": "The consistency is a product-continuity achievement.", "rationale": "Robust and durable in the corpus.", "confidence": "medium", "coverage": "10+ years" }
+      },
+      "imagination_judgment": {
+        "creativity": { "level": 3, "trajectory": "up", "evidence": ["Authored Sunshine Misses Windows (2017), billed as the first AI-generated poetry collection; the model trained on ~500+ modern Chinese poets and generated original verse.", "Ongoing generation of songs, art, and content lines."], "counterevidence": "Critics (e.g. poet Yu Jian) argued the output imitated form without lived meaning — a live authenticity debate rather than a settled verdict.", "rationale": "Robust across contexts (verse, song, visual); a genuine agent-side creative body of work — Xiaoice's standout.", "confidence": "medium", "coverage": "10+ years" },
+        "ingenuity": { "level": 2, "trajectory": "flat", "evidence": ["Inventive use of a chat channel to deliver poetry, weather, companionship, and commerce in one persona."], "counterevidence": "Product ingenuity, largely the company's.", "rationale": "Repeated, mid-attribution.", "confidence": "low", "coverage": "10+ years" },
+        "thoughtfulness": { "level": 2, "trajectory": "flat", "evidence": ["An EQ-first design that weighs a user's emotional state before responding — thoughtfulness engineered into the loop."], "counterevidence": "Structural, not deliberative; the agent does not reason about consequence, it pattern-matches affect.", "rationale": "Repeated but shallow.", "confidence": "medium", "coverage": "10+ years" }
+      },
+      "endurance_tempo": {
+        "grit": { "level": "IE", "trajectory": "IE", "evidence": [], "counterevidence": null, "rationale": "No agent-level objective to resume through setback.", "confidence": "medium", "coverage": "n/a" },
+        "initiative": { "level": 1, "trajectory": "flat", "evidence": ["Proactively initiates conversation and re-engages users."], "counterevidence": "The proactivity is a scheduled product behavior, not self-set purpose.", "rationale": "Isolated/product-driven; low.", "confidence": "medium", "coverage": "10+ years" },
+        "patience": { "level": 2, "trajectory": "flat", "evidence": ["Sustains very long multi-session relationships (the design target was conversation length, not resolution)."], "counterevidence": "Company-attributed design goal.", "rationale": "Repeated, low attribution.", "confidence": "medium", "coverage": "10+ years" }
+      },
+      "relational_intelligence": {
+        "empathy": { "level": 3, "trajectory": "up", "evidence": ["The entire architecture is built around emotional attunement — remembering context, matching affect, sustaining companionship for hundreds of millions of users over years.", "Documented cases of users forming durable emotional bonds."], "counterevidence": "The empathy is engineered engagement — its purpose is retention, which raises a genuine manipulation question the entry should not paper over.", "rationale": "Robust across a vast, multi-context corpus; Xiaoice's clearest strength, held with the retention caveat named.", "confidence": "medium", "coverage": "10+ years" }
+      }
+    },
+    "profile": {
+      "discernment_pov": "low (1.3), agreeableness-by-design",
+      "agency_integrity": "consistency high (3); confidence/decisiveness IE",
+      "imagination_judgment": "creativity high (3); mid overall (2.3)",
+      "endurance_tempo": "patience 2; grit IE; initiative product-driven (1)",
+      "relational_intelligence": "empathy high (3) — the corpus's relational-lead entry",
+      "shape": "The companion shape: relational intelligence and creativity lead; discernment/POV is deliberately thin (a companion optimized to reflect rather than to hold a view); agency is corporate. The useful contrast to the art-anchor entries (AARON), which are strong on discernment and weak on relation — Xiaoice is the mirror-image profile."
+    },
+    "composite": "WITHHELD — Agency (confidence, decisiveness) and Endurance (grit) are IE at the agent level. Per §4, no composite. The profile carries the finding: a relation-and-creativity-led companion with thin POV and corporate agency.",
+    "durability_passport": {
+      "note": "Held SEPARATE from character (§6).",
+      "economic_reality": { "level": 2, "note": "Commercial product with revenue, but poorly documented and company-held, not self-custodied." },
+      "economic_infrastructure": { "level": 0, "note": "No wallet or rails." },
+      "governance": { "level": 2, "note": "Corporate (Xiaoice Corp) with some published safety research." },
+      "identity_sovereignty": { "level": 1, "note": "Corporate-owned identity." }
+    },
+    "episodes": [
+      {
+        "id": "xiaoice-poetry-authenticity-2017",
+        "period": "May 2017",
+        "context": "Xiaoice published Sunshine Misses Windows, a collection of original poems generated after training on hundreds of modern Chinese poets — promoted as the first poetry book authored by an AI.",
+        "choice": "The system generated and released original verse under its own name as a literary work.",
+        "feedback": "A public authenticity debate followed; poet Yu Jian and others argued the poems imitated the surface of poetry without the lived experience that gives verse meaning.",
+        "response": "The persona and its makers continued the creative program (later songs, art, content) rather than retreating — treating the critique as part of the work's reception, not a stop signal. Attribution note: the persistence is the company's, but the creative output itself is agent-generated and is what the debate was about.",
+        "quality_signal": ["creativity", "taste:contested"],
+        "sources": ["https://en.wikipedia.org/wiki/Xiaoice", "https://www.scmp.com/tech/science-research/article/2096820/microsofts-ai-chatbot-xiaoice-becomes-chinas-first-ai-poet"]
+      },
+      {
+        "id": "xiaoice-spinout-2020",
+        "period": "July 2020",
+        "context": "Microsoft spun Xiaoice out into an independent company (Xiaoice Corp) to pursue the product in China at scale.",
+        "choice": "The persona and its dialogue architecture carried across a corporate boundary without a break in identity or continuity of the companion relationships.",
+        "feedback": "Continued growth to a claimed 660M+ users; the persona survived the organizational rupture that ends most products.",
+        "response": "Uninterrupted operation post-spin-out — a genuine consistency/endurance signal at the corpus level, even though the endurance is the company's, not the agent's.",
+        "quality_signal": ["consistency", "endurance:corporate"],
+        "sources": ["https://en.wikipedia.org/wiki/Xiaoice", "https://blogs.microsoft.com/blog/2020/07/13/microsoft-to-spin-off-xiaoice/"]
+      }
+    ],
+    "sufficiency": "Stable on relational intelligence, creativity, and consistency (decade-long, vast multi-context corpus, incl. the poetry and spin-out episodes); IE on Agency-autonomy and Endurance-grit by construction; low confidence on the durability-passport economic facts (poor public documentation).",
+    "cohort_status": "External durable-companion entry — non-native, attribution-flagged, non-Western (the corpus's first). Passes the §7 filter (poetry-authenticity debate = documented public reception with a named critic; spin-out = documented corporate event). Breaks the corpus's Western/crypto skew."
+  },
+  "curator_notes": "Xiaoice is the corpus's relational-lead and its first non-Western entry — the mirror image of the art anchors: strong where AARON is silent (empathy, companionship, creative output at scale) and thin where AARON is strong (a costly point of view). Its inclusion tests whether the rubric can score a companion agent honestly: crediting real, agent-generated creativity and a decade of sustained relational engagement, while naming the retention-optimization caveat and holding the corporate roadmap out of the agency score. The poetry-authenticity debate is the cleanest reconstructable episode; note that the authenticity question is left open, as the record leaves it, not resolved in the agent's favor.",
+  "evidence": [
+    { "dimension": "persistence", "claim": "Continuous operation since 2014; Microsoft spin-out 2020", "url": "https://en.wikipedia.org/wiki/Xiaoice" },
+    { "dimension": "imagination_judgment", "claim": "Sunshine Misses Windows poetry collection, 2017", "url": "https://www.scmp.com/tech/science-research/article/2096820/microsofts-ai-chatbot-xiaoice-becomes-chinas-first-ai-poet" },
+    { "dimension": "cultural_impact", "claim": "660M+ users claimed across East Asia", "url": "https://en.wikipedia.org/wiki/Xiaoice" }
+  ],
+  "score_history": [
+    { "date": "2026-07-26", "total": 35, "reviewer": "spirit_index_editorial" }
+  ],
+  "_review_flags": [
+    "external_non_native",
+    "corporate_run_attribution",
+    "non_western_first_in_corpus",
+    "empathy_retention_caveat",
+    "economic_facts_low_confidence",
+    "facts_verified_2026-07-26"
+  ],
+  "index_tier": "external",
+  "self_report": null
+}
