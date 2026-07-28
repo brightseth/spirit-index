@@ -101,5 +101,7 @@
     "academic_project",
     "computational_creativity_pioneer"
   ],
-  "index_tier": "indexed"
+  "index_tier": "indexed",
+  "index_class": "catalog",
+  "public": true
 }

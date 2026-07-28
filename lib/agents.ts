@@ -47,9 +47,13 @@ export async function getAllAgents(): Promise<EnrichedAgent[]> {
       comparable_score: comp.score,
       comparable_max: comp.max,
       comparable_pct,
-      // Staged (self-reported, pending editorial review) entries are never
-      // listed in default views regardless of score
-      listed: comparable_pct >= QUALITY_THRESHOLD && agent.index_tier !== 'staged',
+      // Not listed in default public views if: below quality threshold, staged
+      // (self-reported, pending editorial review), or explicitly held off public
+      // surfaces (public:false — unlaunched fleet + canon-protected names).
+      listed:
+        comparable_pct >= QUALITY_THRESHOLD &&
+        agent.index_tier !== 'staged' &&
+        agent.public !== false,
     };
   });
 

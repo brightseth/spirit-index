@@ -85,5 +85,7 @@
     "auto_tracked",
     "moltbook",
     "meta_acquisition"
-  ]
+  ],
+  "index_class": "catalog",
+  "public": true
 }

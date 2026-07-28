@@ -99,5 +99,7 @@
       "note": "Tay is indexed as a historical artifact despite not meeting minimum persistence threshold; cultural impact warrants archival status"
     }
   ],
-  "index_tier": "indexed"
+  "index_tier": "indexed",
+  "index_class": "catalog",
+  "public": true
 }

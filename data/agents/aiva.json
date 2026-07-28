@@ -111,5 +111,7 @@
     "canonical_elder",
     "commercial_agent"
   ],
-  "index_tier": "indexed"
+  "index_tier": "indexed",
+  "index_class": "catalog",
+  "public": true
 }

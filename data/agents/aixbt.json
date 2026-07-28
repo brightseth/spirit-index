@@ -101,5 +101,7 @@
     "recent_emergence",
     "economic_stress_test"
   ],
-  "index_tier": "indexed"
+  "index_tier": "indexed",
+  "index_class": "catalog",
+  "public": true
 }

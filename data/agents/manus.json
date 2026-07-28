@@ -112,5 +112,7 @@
     "corporate_acquisition",
     "highest_economic_value"
   ],
-  "index_tier": "indexed"
+  "index_tier": "indexed",
+  "index_class": "catalog",
+  "public": true
 }

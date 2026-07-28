@@ -96,5 +96,7 @@
     "historical_agent",
     "academic_project"
   ],
-  "index_tier": "indexed"
+  "index_tier": "indexed",
+  "index_class": "catalog",
+  "public": true
 }

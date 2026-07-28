@@ -171,5 +171,7 @@
         "method": "self-report"
       }
     }
-  }
+  },
+  "index_class": "catalog",
+  "public": true
 }

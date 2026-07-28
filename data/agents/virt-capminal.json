@@ -84,5 +84,7 @@
   "_review_flags": [
     "auto_tracked",
     "virtuals_protocol"
-  ]
+  ],
+  "index_class": "catalog",
+  "public": true
 }

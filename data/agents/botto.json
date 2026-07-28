@@ -98,5 +98,7 @@
     }
   ],
   "_review_flags": [],
-  "index_tier": "indexed"
+  "index_tier": "indexed",
+  "index_class": "catalog",
+  "public": true
 }

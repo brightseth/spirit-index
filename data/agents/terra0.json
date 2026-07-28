@@ -101,5 +101,7 @@
     "canonical_elder",
     "low_economic_activity"
   ],
-  "index_tier": "indexed"
+  "index_tier": "indexed",
+  "index_class": "catalog",
+  "public": true
 }

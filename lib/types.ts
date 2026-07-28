@@ -64,8 +64,15 @@ export type ArchivalStatus = "historical_test_case" | "canonical_failure" | "cul
 // Confidence levels for scores
 export type Confidence = "high" | "medium" | "low";
 
-// Index tier — editorial vs auto-scored vs staged (self-reported, pending editorial review)
-export type IndexTier = "indexed" | "tracked" | "staged";
+// Index tier — legacy granular label kept for continuity (drives sorting/badges).
+// The full set actually present in the data, not just the original three.
+export type IndexTier = "indexed" | "tracked" | "staged" | "anchor" | "scored" | "external";
+
+// Index class — the rubric v0.1 honest label.
+//   scored     = attribution-clean, episode-backed, real family scores
+//   catalog    = named and mapped, honestly unscored (no fake precision)
+//   reference  = calibration anchor, not a ranked entry
+export type IndexClass = "scored" | "catalog" | "reference";
 
 // How a dimension was scored
 export type ScoringMethod = "editorial" | "auto" | "unscored" | "self-report";
@@ -161,6 +168,8 @@ export interface Agent {
   classification: string;
   network: NetworkAffiliation;
   index_tier: IndexTier;
+  index_class?: IndexClass; // rubric v0.1 honest label (scored / catalog / reference)
+  public?: boolean; // false = held off public surfaces (unlaunched fleet, canon-protected)
   data_sources?: DataSource[];
   last_auto_scored?: string; // ISO date
   archival_status?: ArchivalStatus; // For entities below threshold with historical significance

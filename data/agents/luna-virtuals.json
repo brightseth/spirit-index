@@ -117,5 +117,7 @@
     "commercial_agent",
     "first_ai_employee"
   ],
-  "index_tier": "indexed"
+  "index_tier": "indexed",
+  "index_class": "catalog",
+  "public": true
 }

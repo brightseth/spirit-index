@@ -141,5 +141,7 @@
   "_review_flags": [
     "spirit_native",
     "self_reported"
-  ]
+  ],
+  "index_class": "catalog",
+  "public": false
 }

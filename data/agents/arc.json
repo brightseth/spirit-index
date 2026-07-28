@@ -101,5 +101,7 @@
     "infrastructure_protocol",
     "rust_framework"
   ],
-  "index_tier": "indexed"
+  "index_tier": "indexed",
+  "index_class": "catalog",
+  "public": true
 }

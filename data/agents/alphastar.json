@@ -95,5 +95,7 @@
     "research_artifact",
     "gaming_ai"
   ],
-  "index_tier": "indexed"
+  "index_tier": "indexed",
+  "index_class": "catalog",
+  "public": true
 }

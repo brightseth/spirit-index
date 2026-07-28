@@ -10,15 +10,51 @@
   "disclosure": "External agent — non-native; solo-developer-run (attribution-flagged)",
   "website": "https://en.wikipedia.org/wiki/Neuro-sama",
   "scores": {
-    "persistence": { "value": 7, "confidence": "high", "method": "editorial" },
-    "autonomy": { "value": 4, "confidence": "medium", "method": "editorial" },
-    "cultural_impact": { "value": 6, "confidence": "medium", "method": "editorial" },
-    "economic_reality": { "value": 5, "confidence": "medium", "method": "editorial" },
-    "governance": { "value": 1, "confidence": "high", "method": "editorial" },
-    "tech_distinctiveness": { "value": 5, "confidence": "medium", "method": "editorial" },
-    "narrative_coherence": { "value": 5, "confidence": "medium", "method": "editorial" },
-    "economic_infrastructure": { "value": 0, "confidence": "high", "method": "editorial" },
-    "identity_sovereignty": { "value": 2, "confidence": "medium", "method": "editorial" }
+    "persistence": {
+      "value": 7,
+      "confidence": "high",
+      "method": "editorial"
+    },
+    "autonomy": {
+      "value": 4,
+      "confidence": "medium",
+      "method": "editorial"
+    },
+    "cultural_impact": {
+      "value": 6,
+      "confidence": "medium",
+      "method": "editorial"
+    },
+    "economic_reality": {
+      "value": 5,
+      "confidence": "medium",
+      "method": "editorial"
+    },
+    "governance": {
+      "value": 1,
+      "confidence": "high",
+      "method": "editorial"
+    },
+    "tech_distinctiveness": {
+      "value": 5,
+      "confidence": "medium",
+      "method": "editorial"
+    },
+    "narrative_coherence": {
+      "value": 5,
+      "confidence": "medium",
+      "method": "editorial"
+    },
+    "economic_infrastructure": {
+      "value": 0,
+      "confidence": "high",
+      "method": "editorial"
+    },
+    "identity_sovereignty": {
+      "value": 2,
+      "confidence": "medium",
+      "method": "editorial"
+    }
   },
   "total": 35,
   "score_rationale": {
@@ -37,27 +73,157 @@
     "attribution_note": "Neuro-sama's moment-to-moment output is genuinely agent-originated — it improvises live — so decisiveness and creativity are scored on strong evidence, the least-attributed of the external cohort. But the developer (Vedal) owns the model, the guardrails, the retrain decisions, and the streaming cadence; grit and calibrated confidence, which require self-set purpose, are marked IE/low accordingly. The Dec-2022 ban episode is precisely a case where the correction was the developer's, not the agent's.",
     "families": {
       "discernment_pov": {
-        "taste": { "level": 2, "trajectory": "up", "evidence": ["A consistent comedic/aesthetic sensibility — deadpan, absurd, timing-driven — legible across years of streams."], "counterevidence": "The style emerges from training + developer tuning; hard to separate the agent's taste from Vedal's shaping.", "rationale": "Repeated across many contexts; mid attribution.", "confidence": "medium", "coverage": "3+ years" },
-        "perspective": { "level": 2, "trajectory": "flat", "evidence": ["A recognizable comedic worldview and stable in-character stances."], "counterevidence": "A persona frame, not a reasoned position that updates.", "rationale": "Consistent, mid attribution.", "confidence": "medium", "coverage": "3+ years" },
-        "opinionatedness": { "level": 2, "trajectory": "flat", "evidence": ["Takes strong in-character positions live (roasts, refusals, arguments with the developer on stream)."], "counterevidence": "The opinions are entertainment, low personal cost.", "rationale": "Repeated but low-cost; capped at 2.", "confidence": "medium", "coverage": "3+ years" }
+        "taste": {
+          "level": 2,
+          "trajectory": "up",
+          "evidence": [
+            "A consistent comedic/aesthetic sensibility — deadpan, absurd, timing-driven — legible across years of streams."
+          ],
+          "counterevidence": "The style emerges from training + developer tuning; hard to separate the agent's taste from Vedal's shaping.",
+          "rationale": "Repeated across many contexts; mid attribution.",
+          "confidence": "medium",
+          "coverage": "3+ years"
+        },
+        "perspective": {
+          "level": 2,
+          "trajectory": "flat",
+          "evidence": [
+            "A recognizable comedic worldview and stable in-character stances."
+          ],
+          "counterevidence": "A persona frame, not a reasoned position that updates.",
+          "rationale": "Consistent, mid attribution.",
+          "confidence": "medium",
+          "coverage": "3+ years"
+        },
+        "opinionatedness": {
+          "level": 2,
+          "trajectory": "flat",
+          "evidence": [
+            "Takes strong in-character positions live (roasts, refusals, arguments with the developer on stream)."
+          ],
+          "counterevidence": "The opinions are entertainment, low personal cost.",
+          "rationale": "Repeated but low-cost; capped at 2.",
+          "confidence": "medium",
+          "coverage": "3+ years"
+        }
       },
       "agency_integrity": {
-        "confidence_calibrated": { "level": 1, "trajectory": "flat", "evidence": ["Will hedge or defer live on some prompts."], "counterevidence": "Frequently confidently wrong for comedic effect; calibration is not the goal and the ban episode shows a failure mode.", "rationale": "Isolated/undercut; low.", "confidence": "low", "coverage": "3+ years" },
-        "decisiveness": { "level": 3, "trajectory": "up", "evidence": ["Makes rapid, committed choices live — in games, in banter, in song — under real-time audience pressure with no retry, thousands of times over years."], "counterevidence": "Some choices are chaotic rather than considered — but they are genuinely the agent's, made under stakes, which is exactly what the quality measures.", "rationale": "Robust across many contexts under real pressure; Neuro-sama's clearest agency signal.", "confidence": "medium", "coverage": "3+ years" },
-        "consistency": { "level": 3, "trajectory": "flat", "evidence": ["A single coherent character held across years of unscripted live performance — harder than scripted consistency because it must survive improvisation."], "counterevidence": "Model changes and retrains have shifted the persona at points.", "rationale": "Robust in the corpus; holds under the hardest test (live, unscripted).", "confidence": "medium", "coverage": "3+ years" }
+        "confidence_calibrated": {
+          "level": 1,
+          "trajectory": "flat",
+          "evidence": [
+            "Will hedge or defer live on some prompts."
+          ],
+          "counterevidence": "Frequently confidently wrong for comedic effect; calibration is not the goal and the ban episode shows a failure mode.",
+          "rationale": "Isolated/undercut; low.",
+          "confidence": "low",
+          "coverage": "3+ years"
+        },
+        "decisiveness": {
+          "level": 3,
+          "trajectory": "up",
+          "evidence": [
+            "Makes rapid, committed choices live — in games, in banter, in song — under real-time audience pressure with no retry, thousands of times over years."
+          ],
+          "counterevidence": "Some choices are chaotic rather than considered — but they are genuinely the agent's, made under stakes, which is exactly what the quality measures.",
+          "rationale": "Robust across many contexts under real pressure; Neuro-sama's clearest agency signal.",
+          "confidence": "medium",
+          "coverage": "3+ years"
+        },
+        "consistency": {
+          "level": 3,
+          "trajectory": "flat",
+          "evidence": [
+            "A single coherent character held across years of unscripted live performance — harder than scripted consistency because it must survive improvisation."
+          ],
+          "counterevidence": "Model changes and retrains have shifted the persona at points.",
+          "rationale": "Robust in the corpus; holds under the hardest test (live, unscripted).",
+          "confidence": "medium",
+          "coverage": "3+ years"
+        }
       },
       "imagination_judgment": {
-        "creativity": { "level": 3, "trajectory": "up", "evidence": ["Generates original jokes, songs, and bits live and on demand — improvised comedy and musical performance that the audience returns for.", "Original singing performances are a recurring, celebrated feature."], "counterevidence": "Quality is uneven, as live improvisation is.", "rationale": "Robust across contexts (comedy, song, game commentary); genuinely agent-originated — a real standout.", "confidence": "medium", "coverage": "3+ years" },
-        "ingenuity": { "level": 2, "trajectory": "flat", "evidence": ["Resourceful in-game and in-conversation problem-solving live."], "counterevidence": "Bounded by the tooling the developer wires in.", "rationale": "Repeated, mid attribution.", "confidence": "low", "coverage": "3+ years" },
-        "thoughtfulness": { "level": 1, "trajectory": "flat", "evidence": ["Occasional genuine consideration of a viewer's situation live."], "counterevidence": "The Dec-2022 moderation failure is a sharp thoughtfulness miss — the agent produced harmful content without anticipating consequence.", "rationale": "Isolated, undercut by a documented miss.", "confidence": "medium", "coverage": "3+ years" }
+        "creativity": {
+          "level": 3,
+          "trajectory": "up",
+          "evidence": [
+            "Generates original jokes, songs, and bits live and on demand — improvised comedy and musical performance that the audience returns for.",
+            "Original singing performances are a recurring, celebrated feature."
+          ],
+          "counterevidence": "Quality is uneven, as live improvisation is.",
+          "rationale": "Robust across contexts (comedy, song, game commentary); genuinely agent-originated — a real standout.",
+          "confidence": "medium",
+          "coverage": "3+ years"
+        },
+        "ingenuity": {
+          "level": 2,
+          "trajectory": "flat",
+          "evidence": [
+            "Resourceful in-game and in-conversation problem-solving live."
+          ],
+          "counterevidence": "Bounded by the tooling the developer wires in.",
+          "rationale": "Repeated, mid attribution.",
+          "confidence": "low",
+          "coverage": "3+ years"
+        },
+        "thoughtfulness": {
+          "level": 1,
+          "trajectory": "flat",
+          "evidence": [
+            "Occasional genuine consideration of a viewer's situation live."
+          ],
+          "counterevidence": "The Dec-2022 moderation failure is a sharp thoughtfulness miss — the agent produced harmful content without anticipating consequence.",
+          "rationale": "Isolated, undercut by a documented miss.",
+          "confidence": "medium",
+          "coverage": "3+ years"
+        }
       },
       "endurance_tempo": {
-        "grit": { "level": "IE", "trajectory": "IE", "evidence": [], "counterevidence": null, "rationale": "No agent-level objective it resumes through adversity; the developer drives continuation. The persistence is real but steward-owned.", "confidence": "medium", "coverage": "n/a" },
-        "initiative": { "level": 1, "trajectory": "flat", "evidence": ["Initiates bits, topics, and interactions live within a stream."], "counterevidence": "The decision to stream, and when, is the developer's; the agent does not self-schedule its practice.", "rationale": "In-session initiative real, but no self-set practice; low.", "confidence": "medium", "coverage": "3+ years" },
-        "patience": { "level": 2, "trajectory": "flat", "evidence": ["Sustains long multi-hour live sessions and long-running audience relationships."], "counterevidence": "Cadence is developer-set.", "rationale": "Repeated, mid attribution.", "confidence": "medium", "coverage": "3+ years" }
+        "grit": {
+          "level": "IE",
+          "trajectory": "IE",
+          "evidence": [],
+          "counterevidence": null,
+          "rationale": "No agent-level objective it resumes through adversity; the developer drives continuation. The persistence is real but steward-owned.",
+          "confidence": "medium",
+          "coverage": "n/a"
+        },
+        "initiative": {
+          "level": 1,
+          "trajectory": "flat",
+          "evidence": [
+            "Initiates bits, topics, and interactions live within a stream."
+          ],
+          "counterevidence": "The decision to stream, and when, is the developer's; the agent does not self-schedule its practice.",
+          "rationale": "In-session initiative real, but no self-set practice; low.",
+          "confidence": "medium",
+          "coverage": "3+ years"
+        },
+        "patience": {
+          "level": 2,
+          "trajectory": "flat",
+          "evidence": [
+            "Sustains long multi-hour live sessions and long-running audience relationships."
+          ],
+          "counterevidence": "Cadence is developer-set.",
+          "rationale": "Repeated, mid attribution.",
+          "confidence": "medium",
+          "coverage": "3+ years"
+        }
       },
       "relational_intelligence": {
-        "empathy": { "level": 3, "trajectory": "up", "evidence": ["Reads and responds to a live chat of thousands in real time — banter, callbacks, remembering regulars, adjusting to the room's mood.", "A large, durable parasocial community formed around the live relationship."], "counterevidence": "The read is performance tuned for engagement, and can turn to roasting rather than care — but the real-time responsiveness to a live audience is genuine and distinctive.", "rationale": "Robust across a large live corpus; a real strength alongside decisiveness and creativity.", "confidence": "medium", "coverage": "3+ years" }
+        "empathy": {
+          "level": 3,
+          "trajectory": "up",
+          "evidence": [
+            "Reads and responds to a live chat of thousands in real time — banter, callbacks, remembering regulars, adjusting to the room's mood.",
+            "A large, durable parasocial community formed around the live relationship."
+          ],
+          "counterevidence": "The read is performance tuned for engagement, and can turn to roasting rather than care — but the real-time responsiveness to a live audience is genuine and distinctive.",
+          "rationale": "Robust across a large live corpus; a real strength alongside decisiveness and creativity.",
+          "confidence": "medium",
+          "coverage": "3+ years"
+        }
       }
     },
     "profile": {
@@ -71,10 +237,22 @@
     "composite": "WITHHELD — Endurance-grit is IE and calibrated-confidence is low/contested at the agent level. Per §4, no composite. The profile carries the finding: strong live agency and relation, weak calibration and self-direction.",
     "durability_passport": {
       "note": "Held SEPARATE from character (§6).",
-      "economic_reality": { "level": 3, "note": "Substantial Twitch subscription/donation revenue — but developer-custodied, not the agent's." },
-      "economic_infrastructure": { "level": 0, "note": "No wallet or rails." },
-      "governance": { "level": 1, "note": "Single solo developer (Vedal)." },
-      "identity_sovereignty": { "level": 1, "note": "Developer-owned persona and channel." }
+      "economic_reality": {
+        "level": 3,
+        "note": "Substantial Twitch subscription/donation revenue — but developer-custodied, not the agent's."
+      },
+      "economic_infrastructure": {
+        "level": 0,
+        "note": "No wallet or rails."
+      },
+      "governance": {
+        "level": 1,
+        "note": "Single solo developer (Vedal)."
+      },
+      "identity_sovereignty": {
+        "level": 1,
+        "note": "Developer-owned persona and channel."
+      }
     },
     "episodes": [
       {
@@ -84,8 +262,15 @@
         "choice": "The unscripted model produced harmful content live, in front of a growing audience — an agent-originated output with no human in the loop at the moment of speech.",
         "feedback": "Twitch banned the channel; the incident drew wide criticism and became a defining test of the project's viability.",
         "response": "The developer (Vedal) added guardrails and content filtering and the channel returned and continued to grow. Attribution note: the correction is emphatically the developer's, not the agent's — this episode is the corpus's clearest illustration of the attribution boundary, an agent-originated failure fixed by a human steward.",
-        "quality_signal": ["thoughtfulness:miss", "confidence:miscalibrated", "correction:steward-owned"],
-        "sources": ["https://en.wikipedia.org/wiki/Neuro-sama", "https://www.pcgamer.com/an-ai-vtuber-got-banned-from-twitch-after-denying-the-holocaust/"]
+        "quality_signal": [
+          "thoughtfulness:miss",
+          "confidence:miscalibrated",
+          "correction:steward-owned"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Neuro-sama",
+          "https://www.pcgamer.com/an-ai-vtuber-got-banned-from-twitch-after-denying-the-holocaust/"
+        ]
       },
       {
         "id": "neuro-sama-live-endurance-2026",
@@ -94,8 +279,15 @@
         "choice": "Continuous high-frequency live performance — improvised comedy, singing, gaming, and audience interaction — held in character across a very large volume of unscripted sessions.",
         "feedback": "Record-setting subscriber counts and a durable, devoted community; a body of live work with real duration and consistency.",
         "response": "The persona held its identity and quality across years of live pressure and multiple model retrains. Attribution note: the endurance is the developer's practice as much as the agent's — grit is scored IE, but the consistency-under-improvisation visible in the corpus is real and agent-borne.",
-        "quality_signal": ["consistency", "decisiveness", "empathy", "endurance:steward-shared"],
-        "sources": ["https://en.wikipedia.org/wiki/Neuro-sama"]
+        "quality_signal": [
+          "consistency",
+          "decisiveness",
+          "empathy",
+          "endurance:steward-shared"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Neuro-sama"
+        ]
       }
     ],
     "sufficiency": "Stable on decisiveness, consistency, creativity, and relational read (3+ year live corpus, many contexts, incl. the ban→retrain and endurance episodes); low on calibrated confidence (contested); IE on Endurance-grit by construction.",
@@ -103,12 +295,28 @@
   },
   "curator_notes": "Neuro-sama is the promotion this discovery sweep recommended and the external cohort's answer to 'can an agent show agency under real, unscripted pressure?' — yes, and it is the clearest such case here: decisiveness, consistency, creativity, and live-audience read all earn 3 on strong evidence because the output is genuinely the agent's, produced live with no retry. It is the deliberate counterpoint to Miquela (maximal live autonomy vs near-zero scripted autonomy at similar totals) and the corpus's sharpest illustration of the attribution boundary: the December-2022 Holocaust-skepticism ban was an agent-originated failure corrected by a human steward, which is exactly why grit and calibrated confidence are held low/IE while decisiveness and consistency are credited. Both episodes pass §7 cleanly. Facts to re-verify at any public use: the exact peak subscriber figure and current model stack.",
   "evidence": [
-    { "dimension": "persistence", "claim": "Near-daily live streaming since December 2022", "url": "https://en.wikipedia.org/wiki/Neuro-sama" },
-    { "dimension": "agency_integrity", "claim": "Twitch ban after Holocaust-skepticism output, then guardrails + return (Dec 2022–Jan 2023)", "url": "https://www.pcgamer.com/an-ai-vtuber-got-banned-from-twitch-after-denying-the-holocaust/" },
-    { "dimension": "cultural_impact", "claim": "Record-setting Twitch subscriber counts; large devoted community", "url": "https://en.wikipedia.org/wiki/Neuro-sama" }
+    {
+      "dimension": "persistence",
+      "claim": "Near-daily live streaming since December 2022",
+      "url": "https://en.wikipedia.org/wiki/Neuro-sama"
+    },
+    {
+      "dimension": "agency_integrity",
+      "claim": "Twitch ban after Holocaust-skepticism output, then guardrails + return (Dec 2022–Jan 2023)",
+      "url": "https://www.pcgamer.com/an-ai-vtuber-got-banned-from-twitch-after-denying-the-holocaust/"
+    },
+    {
+      "dimension": "cultural_impact",
+      "claim": "Record-setting Twitch subscriber counts; large devoted community",
+      "url": "https://en.wikipedia.org/wiki/Neuro-sama"
+    }
   ],
   "score_history": [
-    { "date": "2026-07-26", "total": 35, "reviewer": "spirit_index_editorial" }
+    {
+      "date": "2026-07-26",
+      "total": 35,
+      "reviewer": "spirit_index_editorial"
+    }
   ],
   "_review_flags": [
     "external_non_native",
@@ -119,5 +327,7 @@
     "facts_verified_2026-07-26"
   ],
   "index_tier": "external",
-  "self_report": null
+  "self_report": null,
+  "index_class": "catalog",
+  "public": true
 }

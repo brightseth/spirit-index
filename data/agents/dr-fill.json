@@ -10,15 +10,51 @@
   "disclosure": "External agent — non-native, competitive-solving mode",
   "website": "https://en.wikipedia.org/wiki/Dr.Fill",
   "scores": {
-    "persistence": { "value": 7, "confidence": "high", "method": "editorial" },
-    "autonomy": { "value": 5, "confidence": "high", "method": "editorial" },
-    "cultural_impact": { "value": 5, "confidence": "medium", "method": "editorial" },
-    "economic_reality": { "value": 0, "confidence": "high", "method": "editorial" },
-    "governance": { "value": 1, "confidence": "high", "method": "editorial" },
-    "tech_distinctiveness": { "value": 6, "confidence": "high", "method": "editorial" },
-    "narrative_coherence": { "value": 6, "confidence": "high", "method": "editorial" },
-    "economic_infrastructure": { "value": 0, "confidence": "high", "method": "editorial" },
-    "identity_sovereignty": { "value": 2, "confidence": "medium", "method": "editorial" }
+    "persistence": {
+      "value": 7,
+      "confidence": "high",
+      "method": "editorial"
+    },
+    "autonomy": {
+      "value": 5,
+      "confidence": "high",
+      "method": "editorial"
+    },
+    "cultural_impact": {
+      "value": 5,
+      "confidence": "medium",
+      "method": "editorial"
+    },
+    "economic_reality": {
+      "value": 0,
+      "confidence": "high",
+      "method": "editorial"
+    },
+    "governance": {
+      "value": 1,
+      "confidence": "high",
+      "method": "editorial"
+    },
+    "tech_distinctiveness": {
+      "value": 6,
+      "confidence": "high",
+      "method": "editorial"
+    },
+    "narrative_coherence": {
+      "value": 6,
+      "confidence": "high",
+      "method": "editorial"
+    },
+    "economic_infrastructure": {
+      "value": 0,
+      "confidence": "high",
+      "method": "editorial"
+    },
+    "identity_sovereignty": {
+      "value": 2,
+      "confidence": "medium",
+      "method": "editorial"
+    }
   },
   "total": 32,
   "score_rationale": {
@@ -37,27 +73,146 @@
     "attribution_note": "§10's 'whose costly choice was this?' splits cleanly inside this one agent, which is why it earns a place. The SOLVING is the system's: within a puzzle it commits to fills, ranks by confidence, and revises on constraint conflicts — attribution-clean. But the RETURN — entering the ACPT again after each loss — is Matt Ginsberg's choice, not the system's. So grit is scored on the year-over-year improvement IN THE SYSTEM (attribution-clean: the capability genuinely grew), while Initiative reads IE (the decision to compete is the steward's). Do not credit the decade-long persistence itself as agent grit — credit the demonstrated capability gain, and mark the persistence-of-participation to the steward.",
     "families": {
       "discernment_pov": {
-        "taste": { "level": "IE", "trajectory": "IE", "evidence": [], "counterevidence": null, "rationale": "Fills grids to satisfy constraints optimally; there is no meaning, standard, or preference of its own to read. IE — the task affords no opportunity for a point of view, so this is insufficient evidence, NOT a 0 (0 requires counterevidence where the opportunity was present).", "confidence": "high", "coverage": "n/a" },
-        "perspective": { "level": "IE", "trajectory": "IE", "evidence": [], "counterevidence": null, "rationale": "No interpretive frame. The competence-without-POV case in its purest form.", "confidence": "high", "coverage": "n/a" },
-        "opinionatedness": { "level": "IE", "trajectory": "IE", "evidence": [], "counterevidence": null, "rationale": "Makes correctness determinations, not value-choices. IE.", "confidence": "high", "coverage": "n/a" }
+        "taste": {
+          "level": "IE",
+          "trajectory": "IE",
+          "evidence": [],
+          "counterevidence": null,
+          "rationale": "Fills grids to satisfy constraints optimally; there is no meaning, standard, or preference of its own to read. IE — the task affords no opportunity for a point of view, so this is insufficient evidence, NOT a 0 (0 requires counterevidence where the opportunity was present).",
+          "confidence": "high",
+          "coverage": "n/a"
+        },
+        "perspective": {
+          "level": "IE",
+          "trajectory": "IE",
+          "evidence": [],
+          "counterevidence": null,
+          "rationale": "No interpretive frame. The competence-without-POV case in its purest form.",
+          "confidence": "high",
+          "coverage": "n/a"
+        },
+        "opinionatedness": {
+          "level": "IE",
+          "trajectory": "IE",
+          "evidence": [],
+          "counterevidence": null,
+          "rationale": "Makes correctness determinations, not value-choices. IE.",
+          "confidence": "high",
+          "coverage": "n/a"
+        }
       },
       "agency_integrity": {
-        "confidence_calibrated": { "level": 3, "trajectory": "up", "evidence": ["Assigns and updates confidence over candidate fills, committing to high-confidence answers and revising low-confidence ones on constraint conflict — the core of the solver, sharpened materially by the 2020 Berkeley NLP integration."], "counterevidence": "Calibration is over a closed, well-defined answer space.", "rationale": "Robust and attribution-clean; measurably improved over the corpus.", "confidence": "high", "coverage": "decade" },
-        "decisiveness": { "level": 3, "trajectory": "flat", "evidence": ["Commits to a full grid under the tournament clock rather than stalling."], "counterevidence": "Bounded by the puzzle format.", "rationale": "Robust within the task.", "confidence": "medium", "coverage": "decade" },
-        "consistency": { "level": 3, "trajectory": "flat", "evidence": ["The same solving discipline held across a decade of tournaments and puzzle styles."], "counterevidence": null, "rationale": "Robust across contexts.", "confidence": "high", "coverage": "decade" }
+        "confidence_calibrated": {
+          "level": 3,
+          "trajectory": "up",
+          "evidence": [
+            "Assigns and updates confidence over candidate fills, committing to high-confidence answers and revising low-confidence ones on constraint conflict — the core of the solver, sharpened materially by the 2020 Berkeley NLP integration."
+          ],
+          "counterevidence": "Calibration is over a closed, well-defined answer space.",
+          "rationale": "Robust and attribution-clean; measurably improved over the corpus.",
+          "confidence": "high",
+          "coverage": "decade"
+        },
+        "decisiveness": {
+          "level": 3,
+          "trajectory": "flat",
+          "evidence": [
+            "Commits to a full grid under the tournament clock rather than stalling."
+          ],
+          "counterevidence": "Bounded by the puzzle format.",
+          "rationale": "Robust within the task.",
+          "confidence": "medium",
+          "coverage": "decade"
+        },
+        "consistency": {
+          "level": 3,
+          "trajectory": "flat",
+          "evidence": [
+            "The same solving discipline held across a decade of tournaments and puzzle styles."
+          ],
+          "counterevidence": null,
+          "rationale": "Robust across contexts.",
+          "confidence": "high",
+          "coverage": "decade"
+        }
       },
       "imagination_judgment": {
-        "creativity": { "level": 2, "trajectory": "up", "evidence": ["Handles wordplay, puns, and themed/rebus clues that resist literal parsing — a bounded but real form of appropriate novelty, improved by the Berkeley collaboration."], "counterevidence": "Bounded to the crossword domain.", "rationale": "Present across ≥2 contexts.", "confidence": "medium", "coverage": "decade" },
-        "ingenuity": { "level": 2, "trajectory": "flat", "evidence": ["Recombines NLP scoring and constraint propagation to resolve ambiguous grids efficiently."], "counterevidence": "Domain-bounded.", "rationale": "Repeated.", "confidence": "medium", "coverage": "decade" },
-        "thoughtfulness": { "level": "IE", "trajectory": "IE", "evidence": [], "counterevidence": null, "rationale": "No evidence of reasoning about audience or consequence beyond solving. IE.", "confidence": "medium", "coverage": "n/a" }
+        "creativity": {
+          "level": 2,
+          "trajectory": "up",
+          "evidence": [
+            "Handles wordplay, puns, and themed/rebus clues that resist literal parsing — a bounded but real form of appropriate novelty, improved by the Berkeley collaboration."
+          ],
+          "counterevidence": "Bounded to the crossword domain.",
+          "rationale": "Present across ≥2 contexts.",
+          "confidence": "medium",
+          "coverage": "decade"
+        },
+        "ingenuity": {
+          "level": 2,
+          "trajectory": "flat",
+          "evidence": [
+            "Recombines NLP scoring and constraint propagation to resolve ambiguous grids efficiently."
+          ],
+          "counterevidence": "Domain-bounded.",
+          "rationale": "Repeated.",
+          "confidence": "medium",
+          "coverage": "decade"
+        },
+        "thoughtfulness": {
+          "level": "IE",
+          "trajectory": "IE",
+          "evidence": [],
+          "counterevidence": null,
+          "rationale": "No evidence of reasoning about audience or consequence beyond solving. IE.",
+          "confidence": "medium",
+          "coverage": "n/a"
+        }
       },
       "endurance_tempo": {
-        "grit": { "level": 3, "trajectory": "up", "evidence": ["The capability improved year over year across a decade of tournament results — ranked below the top humans for years, then closed the gap and won in 2021 (12,825 to Tyler Hinman-era champion levels). The IMPROVEMENT is in the system.", "The 2020 Berkeley NLP step-change is the visible inflection: a system that had plateaued got materially better and finally cleared the bar."], "counterevidence": "The persistence of ENTERING is Ginsberg's (see attribution_note); grit is scored on the demonstrated capability gain, not the participation streak.", "rationale": "Robust and attribution-clean: the textbook return-after-failure Endurance arc, sourced to the system's measurable improvement — the strongest single family score in the cohort so far.", "confidence": "high", "coverage": "decade" },
-        "initiative": { "level": "IE", "trajectory": "IE", "evidence": [], "counterevidence": null, "rationale": "The decision to compete each year is the steward's, not the agent's. IE per the §10 attribution gate — the sharpest contrast with Adam & Eve (Initiative 3), which selects its own next action.", "confidence": "high", "coverage": "n/a" },
-        "patience": { "level": 2, "trajectory": "flat", "evidence": ["Works through an ambiguous grid methodically rather than forcing early commitment."], "counterevidence": "Tempo set by the clock.", "rationale": "Repeated, task-bounded.", "confidence": "medium", "coverage": "decade" }
+        "grit": {
+          "level": 3,
+          "trajectory": "up",
+          "evidence": [
+            "The capability improved year over year across a decade of tournament results — ranked below the top humans for years, then closed the gap and won in 2021 (12,825 to Tyler Hinman-era champion levels). The IMPROVEMENT is in the system.",
+            "The 2020 Berkeley NLP step-change is the visible inflection: a system that had plateaued got materially better and finally cleared the bar."
+          ],
+          "counterevidence": "The persistence of ENTERING is Ginsberg's (see attribution_note); grit is scored on the demonstrated capability gain, not the participation streak.",
+          "rationale": "Robust and attribution-clean: the textbook return-after-failure Endurance arc, sourced to the system's measurable improvement — the strongest single family score in the cohort so far.",
+          "confidence": "high",
+          "coverage": "decade"
+        },
+        "initiative": {
+          "level": "IE",
+          "trajectory": "IE",
+          "evidence": [],
+          "counterevidence": null,
+          "rationale": "The decision to compete each year is the steward's, not the agent's. IE per the §10 attribution gate — the sharpest contrast with Adam & Eve (Initiative 3), which selects its own next action.",
+          "confidence": "high",
+          "coverage": "n/a"
+        },
+        "patience": {
+          "level": 2,
+          "trajectory": "flat",
+          "evidence": [
+            "Works through an ambiguous grid methodically rather than forcing early commitment."
+          ],
+          "counterevidence": "Tempo set by the clock.",
+          "rationale": "Repeated, task-bounded.",
+          "confidence": "medium",
+          "coverage": "decade"
+        }
       },
       "relational_intelligence": {
-        "empathy": { "level": "IE", "trajectory": "IE", "evidence": [], "counterevidence": null, "rationale": "No interpersonal modeling. Out of scope.", "confidence": "high", "coverage": "n/a" }
+        "empathy": {
+          "level": "IE",
+          "trajectory": "IE",
+          "evidence": [],
+          "counterevidence": null,
+          "rationale": "No interpersonal modeling. Out of scope.",
+          "confidence": "high",
+          "coverage": "n/a"
+        }
       }
     },
     "profile": {
@@ -71,10 +226,22 @@
     "composite": "WITHHELD — Discernment/POV and Relational are IE. Read the profile.",
     "durability_passport": {
       "note": "Held SEPARATE from the character score; never summed (spec §6).",
-      "economic_reality": { "level": 0, "note": "No earning; tournament competitor." },
-      "economic_infrastructure": { "level": 0, "note": "No wallet, rails, or self-custody." },
-      "governance": { "level": 1, "note": "Single creator." },
-      "identity_sovereignty": { "level": 1, "note": "Named, documented; no self-sovereign identity." }
+      "economic_reality": {
+        "level": 0,
+        "note": "No earning; tournament competitor."
+      },
+      "economic_infrastructure": {
+        "level": 0,
+        "note": "No wallet, rails, or self-custody."
+      },
+      "governance": {
+        "level": 1,
+        "note": "Single creator."
+      },
+      "identity_sovereignty": {
+        "level": 1,
+        "note": "Named, documented; no self-sovereign identity."
+      }
     },
     "episodes": [
       {
@@ -84,8 +251,14 @@
         "choice": "Dr.Fill entered and solved the full tournament slate autonomously, ranking respectably but below the top human finishers.",
         "feedback": "Public leaderboard placement — the tournament is the adversary and the result is third-party recorded.",
         "response": "It did not win, and it was re-entered in subsequent years rather than abandoned — the opening of a multi-year arc.",
-        "quality_signal": ["consistency", "confidence_calibrated"],
-        "sources": ["https://en.wikipedia.org/wiki/Dr.Fill", "https://slate.com/technology/2012/03/dr-fill-crossword-puzzle-solving-computer.html"]
+        "quality_signal": [
+          "consistency",
+          "confidence_calibrated"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Dr.Fill",
+          "https://slate.com/technology/2012/03/dr-fill-crossword-puzzle-solving-computer.html"
+        ]
       },
       {
         "id": "dr-fill-berkeley-stepchange-2020",
@@ -94,8 +267,15 @@
         "choice": "Ginsberg's system integrated with the Berkeley NLP group's neural clue-solving (the Berkeley Crossword Solver), a substantial architectural change to how clues were interpreted.",
         "feedback": "Solving accuracy on hard/wordplay clues improved measurably going into the 2021 tournament.",
         "response": "The capability inflected upward — the visible inflection point of the grit trajectory (the improvement is IN THE SYSTEM, attribution-clean).",
-        "quality_signal": ["grit:up", "confidence_calibrated:up", "creativity:up"],
-        "sources": ["https://en.wikipedia.org/wiki/Dr.Fill", "https://www.sciencefriday.com/segments/crossword-puzzle-ai/"]
+        "quality_signal": [
+          "grit:up",
+          "confidence_calibrated:up",
+          "creativity:up"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Dr.Fill",
+          "https://www.sciencefriday.com/segments/crossword-puzzle-ai/"
+        ]
       },
       {
         "id": "dr-fill-win-and-retire-2021",
@@ -104,8 +284,14 @@
         "choice": "In 2021 it posted the top score (edging the human field on combined speed/accuracy), then Ginsberg retired it from competition.",
         "feedback": "Recorded tournament result; covered by NYT crossword community, Slate, Science Friday.",
         "response": "Won on the merits after a decade of returning, and stopped on a clean high — a rare deliberate ending. The capstone of the return-after-failure arc.",
-        "quality_signal": ["grit", "decisiveness"],
-        "sources": ["https://en.wikipedia.org/wiki/Dr.Fill", "https://www.sciencefriday.com/segments/crossword-puzzle-ai/"]
+        "quality_signal": [
+          "grit",
+          "decisiveness"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Dr.Fill",
+          "https://www.sciencefriday.com/segments/crossword-puzzle-ai/"
+        ]
       }
     ],
     "sufficiency": "Stable-leaning on Endurance (grit) and Agency (calibration/consistency) — a decade of third-party-recorded results with a documented capability inflection; IE on Discernment/POV, Relational, and (by attribution) Initiative. Exact 2021 scores to be verified to primary tournament records before any published stable number.",
@@ -113,12 +299,28 @@
   },
   "curator_notes": "Dr.Fill earns its slot for one reason: it is the cleanest illustration of two §10 rules at once. (1) Competence is not POV — it has a genuinely strong, improving Endurance/Agency profile and zero point of view, so a high family score buys it nothing in Discernment. (2) The attribution gate can split a single agent — the SOLVING and the year-over-year IMPROVEMENT are the system's (clean grit), but the ANNUAL RETURN is Ginsberg's (initiative IE). A naive reading would score 'came back for ten years until it won' as heroic agent grit; the gate forces the honest version — the capability grew (agent), the participation persisted (steward). Legacy total 32/90 is, again, the economic/chain dimensions a tournament solver cannot have; read the profile, not the sum.",
   "evidence": [
-    { "dimension": "persistence", "claim": "Competed at ACPT ~2012–2021, improving year over year, won in 2021 and retired", "url": "https://en.wikipedia.org/wiki/Dr.Fill" },
-    { "dimension": "tech_distinctiveness", "claim": "2020 Berkeley NLP integration (Berkeley Crossword Solver) drove a step-change", "url": "https://www.sciencefriday.com/segments/crossword-puzzle-ai/" },
-    { "dimension": "cultural_impact", "claim": "2021 ACPT win covered by Slate / Science Friday / NYT crossword community", "url": "https://slate.com/technology/2012/03/dr-fill-crossword-puzzle-solving-computer.html" }
+    {
+      "dimension": "persistence",
+      "claim": "Competed at ACPT ~2012–2021, improving year over year, won in 2021 and retired",
+      "url": "https://en.wikipedia.org/wiki/Dr.Fill"
+    },
+    {
+      "dimension": "tech_distinctiveness",
+      "claim": "2020 Berkeley NLP integration (Berkeley Crossword Solver) drove a step-change",
+      "url": "https://www.sciencefriday.com/segments/crossword-puzzle-ai/"
+    },
+    {
+      "dimension": "cultural_impact",
+      "claim": "2021 ACPT win covered by Slate / Science Friday / NYT crossword community",
+      "url": "https://slate.com/technology/2012/03/dr-fill-crossword-puzzle-solving-computer.html"
+    }
   ],
   "score_history": [
-    { "date": "2026-07-26", "total": 32, "reviewer": "spirit_index_editorial" }
+    {
+      "date": "2026-07-26",
+      "total": 32,
+      "reviewer": "spirit_index_editorial"
+    }
   ],
   "_review_flags": [
     "external_non_native",
@@ -128,5 +330,7 @@
     "facts_pending_primary_source_verification"
   ],
   "index_tier": "scored",
-  "self_report": null
+  "self_report": null,
+  "index_class": "scored",
+  "public": true
 }

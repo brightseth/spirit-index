@@ -100,5 +100,7 @@
   "_review_flags": [
     "edge_case"
   ],
-  "index_tier": "indexed"
+  "index_tier": "indexed",
+  "index_class": "catalog",
+  "public": true
 }

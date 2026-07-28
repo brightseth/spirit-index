@@ -103,5 +103,7 @@
       "note": "Less than 2 years old; persistence score to be re-evaluated Q3 2026"
     }
   ],
-  "index_tier": "indexed"
+  "index_tier": "indexed",
+  "index_class": "catalog",
+  "public": true
 }

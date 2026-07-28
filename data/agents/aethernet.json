@@ -107,5 +107,7 @@
     "agent_to_agent",
     "farcaster_native"
   ],
-  "index_tier": "indexed"
+  "index_tier": "indexed",
+  "index_class": "catalog",
+  "public": true
 }
