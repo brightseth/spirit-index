@@ -49,6 +49,25 @@ rule, applied to operations).
 6. **Economics** — billing model · metering · payer or runway · cost visibility
 7. **Stewardship** — steward · guardrails · tested kill switch · review cadence · transition stage
 
+## The soul-binding audit
+
+The first line-by-line review of whether a deployed agent's soul actually
+governs it (fleet-internal, 2026-08) produced a failure taxonomy now
+required as a Stewardship check. Every guardrail an agent claims is
+classified:
+
+1. **BINDS** — code at a choke point every path crosses, refusals in the log
+2. **PROSE** — named in the soul, never implemented
+3. **ADJACENT** — guards one step to the side of the thing that matters, with
+   passing tests (the most dangerous class)
+4. **CACHED IDENTITY** — persona living in an app profile a reinstall erases
+5. **UNDEAD SOUL** — a retired soul still wired as a fallback path; the fix
+   standard is fail-closed (no soul → no join, no answer)
+
+Two rules fall out. *A passing test is not evidence a promise is kept unless
+the test calls the function that does the writing.* And *a soul full of
+PROSE gates is a personality, not a governor.*
+
 ## Bar-setters
 
 Each family names the fleet agent currently doing it best, with a pointer to
