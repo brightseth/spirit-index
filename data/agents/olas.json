@@ -100,5 +100,7 @@
   "_review_flags": [
     "recent_emergence"
   ],
-  "index_tier": "indexed"
+  "index_tier": "indexed",
+  "index_class": "catalog",
+  "public": true
 }

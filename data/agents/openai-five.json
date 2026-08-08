@@ -96,5 +96,7 @@
     "gaming_ai",
     "multi_agent_team"
   ],
-  "index_tier": "indexed"
+  "index_tier": "indexed",
+  "index_class": "catalog",
+  "public": true
 }

@@ -103,5 +103,7 @@
     "hanson_robotics",
     "dormancy_review_needed"
   ],
-  "index_tier": "indexed"
+  "index_tier": "indexed",
+  "index_class": "catalog",
+  "public": true
 }

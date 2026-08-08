@@ -116,5 +116,7 @@
     "canonical_elder",
     "governance_outlier"
   ],
-  "index_tier": "indexed"
+  "index_tier": "indexed",
+  "index_class": "catalog",
+  "public": true
 }

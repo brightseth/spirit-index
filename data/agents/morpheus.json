@@ -63,7 +63,7 @@
     "economic_reality": "MOR token crashed 99% from ATH of $138.99 to ~$1.40. Market cap ~$10M. 24h trading volume critically low at ~$34K. Mainnet launched November 2024 with $20M in compute rewards available, but token economics are severely stressed.",
     "governance": "Token-based compute access (1% of MOR = 1% compute budget). Four contributor classes with on-chain incentives. Approaching 'Constitutional.'",
     "tech_distinctiveness": "Lumerin protocol for P2P compute routing. Forge tool for no-code agent deployment. Intent-driven actions via Brian APIs. Novel 'Integrated System' with unique primitives.",
-    "narrative_coherence": "The 'red pill' for AI\u2014decentralized compute for personalized agents. Matrix mythology embedded in naming and philosophy. Strong 'Mythos' potential.",
+    "narrative_coherence": "The 'red pill' for AI—decentralized compute for personalized agents. Matrix mythology embedded in naming and philosophy. Strong 'Mythos' potential.",
     "economic_infrastructure": "MOR token with 42M supply cap. $10M builder rewards live on Base. Multi-asset staking via Aave integration. Lumerin protocol for P2P compute routing generates real economic activity. Token-based compute access model. On-chain treasury on Ethereum and Base. Multiple revenue sources. Infrastructure-level economic model with real activity. Still evolving but substantive.",
     "identity_sovereignty": "On-chain token identity on Ethereum and Base. Smart Agent deployment on-chain. Forge tool creates agents with some on-chain presence. No ERC-8004 or agent-specific identity standard. Identity distributed across token, protocol, and social channels. Protocol-level identity rather than individual agent identity."
   },
@@ -100,5 +100,7 @@
   "_review_flags": [
     "recent_emergence"
   ],
-  "index_tier": "indexed"
+  "index_tier": "indexed",
+  "index_class": "catalog",
+  "public": true
 }

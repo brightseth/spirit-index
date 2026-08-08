@@ -1,13 +1,14 @@
 {
   "id": "aaron",
   "name": "AARON",
-  "tagline": "The First Autonomous Artist",
+  "tagline": "The First Body of Work",
   "inception_date": "1973-01-01",
-  "status": "Archived",
-  "category": "Autonomous Artist",
-  "classification": "Rule-Based Creator",
-  "network": "Independent",
-  "website": "https://whitney.org/exhibitions/harold-cohen-aaron",
+  "status": "Legacy (steward deceased 2016; code preserved)",
+  "category": "Autonomous Art System",
+  "classification": "Historical Anchor",
+  "network": "None (pre-blockchain)",
+  "disclosure": "External agent — non-native, historical anchor",
+  "website": "https://en.wikipedia.org/wiki/AARON",
   "scores": {
     "persistence": {
       "value": 10,
@@ -15,27 +16,27 @@
       "method": "editorial"
     },
     "autonomy": {
-      "value": 7,
+      "value": 6,
       "confidence": "high",
       "method": "editorial"
     },
     "cultural_impact": {
-      "value": 10,
+      "value": 9,
       "confidence": "high",
       "method": "editorial"
     },
     "economic_reality": {
-      "value": 6,
+      "value": 3,
       "confidence": "medium",
       "method": "editorial"
     },
     "governance": {
-      "value": 2,
+      "value": 1,
       "confidence": "high",
       "method": "editorial"
     },
     "tech_distinctiveness": {
-      "value": 9,
+      "value": 8,
       "confidence": "high",
       "method": "editorial"
     },
@@ -50,50 +51,290 @@
       "method": "editorial"
     },
     "identity_sovereignty": {
-      "value": 0,
-      "confidence": "high",
+      "value": 4,
+      "confidence": "medium",
       "method": "editorial"
     }
   },
-  "total": 53,
+  "total": 50,
   "score_rationale": {
-    "persistence": "Operated continuously from 1973-2016 (43 years). One of the longest-running AI systems in history. Creator Harold Cohen maintained and evolved it until his death. Definitive 'Canonical' status.",
-    "autonomy": "Made independent decisions on composition and color palette within hand-coded rules. Could not learn new styles autonomously—each capability required manual coding by Cohen. Higher than 'Cyborg' due to execution independence.",
-    "cultural_impact": "Works in Victoria & Albert Museum, Stedelijk Museum, Tate Gallery. Whitney retrospective in 2024. Foundational reference for all subsequent AI art. Canonical status in art history.",
-    "economic_reality": "Cohen sold AARON works throughout career, but no autonomous treasury or market-making. Artworks valuable but system itself doesn't transact. 'Surviving' tier.",
-    "governance": "Single creator (Harold Cohen) made all decisions. No DAO, no voting, no external governance. Minimal governance score.",
-    "tech_distinctiveness": "Pioneer of rule-based generative art. Custom turtle plotters, FORTRAN to Lisp evolution, fabric dye printing machines. Entirely original technical approach predating modern AI by decades.",
-    "narrative_coherence": "Consistent identity maintained for 43 years. Cohen carefully articulated AARON's nature—not claiming it was creative, but asking 'what exactly is it doing?' Strong philosophical framework.",
-    "economic_infrastructure": "Historical agent (1973-2016). No treasury, no revenue routing, no payment rails. Works sold by human creator Harold Cohen through traditional art market channels. Pre-dates crypto entirely.",
-    "identity_sovereignty": "No on-chain presence whatsoever. Identity exists only in museum archives, academic literature, and the Whitney retrospective. Pre-dates digital identity standards by decades."
+    "persistence": "Harold Cohen built and continuously developed AARON from ~1973 until his death in April 2016 — a 40+ year practice, the longest-running maintained autonomous art system on record. This is the persistence anchor: a months-old fleet agent scores a 2 and AARON's four decades score a 10 — bracketing the scale.",
+    "autonomy": "Generated composition and form autonomously from the outset; a 'Bounded Agent' operating inside Cohen's hand-authored rule system. Autonomy widened materially in the mid-1990s when robotic painting machines let AARON apply color itself — before that Cohen hand-colored the output. Never open-ended: it runs when run, within encoded rules.",
+    "cultural_impact": "Foundational to the field of computational art. Works held by Tate, Victoria & Albert, LACMA, Walker Art Center, Stedelijk, Brooklyn Museum, MCA San Diego; the Whitney acquired AARON's CODE in 2024. 'Mythos'-level: the reference every later autonomous-art claim is measured against.",
+    "economic_reality": "Works were sold and exhibited through the gallery/museum system for decades — a real economic footprint, but the artist's, not an agent-level revenue stream. No live earning capacity. 'Loss-Making' in agent terms.",
+    "governance": "Single steward, no formal or on-chain governance. Direction was Cohen's alone. 'Trust' (one person), the low end of the ladder.",
+    "tech_distinctiveness": "One of the earliest autonomous generative art systems; a knowledge-based approach to depiction (how to represent, not what to copy) that was genuinely novel for its era and remained distinctive across the rule-based-to-robotics arc. 'Differentiated'/foundational.",
+    "narrative_coherence": "Cohen's extensive theoretical writing on machine image-making gives AARON one of the most coherent practices in the corpus — a single sustained inquiry ('can a machine make marks a human reads as meaningful?') pursued for 40 years. Near 'Mythos.'",
+    "economic_infrastructure": "None. Pre-blockchain; no wallet, no rails, no self-custody. 'None' — the honest floor.",
+    "identity_sovereignty": "Strong offline identity (a named, attributed, documented system) and — notably — code preserved by the Whitney in 2024, so the identity survives its steward's death as an institutional artifact. But no on-chain identity and no self-custody: identity is steward- and institution-held, not sovereign. 'Named.'"
   },
-  "curator_notes": "AARON is the ur-text of autonomous art systems. Harold Cohen began developing AARON at UCSD in 1973, making it the first long-running AI art system in history. Unlike modern generative AI, AARON used hand-coded rules to autonomously compose and color images. Cohen compared their relationship to a Renaissance painter and studio assistant. The Whitney Museum's 2024 retrospective cemented AARON's place as the historical foundation for AI art discourse.",
+  "rubric_v0_1": {
+    "note": "First entry authored on the v0.1 five-family / thirteen-quality rubric (rubric-spec-v0.1.md). Profile is PRIMARY; composite is deliberately withheld (not all five families reach sufficiency). Economic/chain dimensions live in durability_passport, NOT summed into character. See attribution_note — AARON is the corpus's extreme attribution case and is scored as such.",
+    "attribution_note": "AARON is a hand-authored rule system, not a self-directed agent. Qualities visible in the CORPUS (taste, consistency, the compositions themselves) are scored on the evidence; qualities that require agent-level self-direction (initiative, calibrated self-confidence) are marked IE or scored low, because the choice is Cohen's, not AARON's. This is the cleanest illustration in the index of the attribution boundary the rubric exists to police — the same axis on which Freysa is a weaker anchor and a frontier model is a stronger one (spec §8).",
+    "families": {
+      "discernment_pov": {
+        "taste": {
+          "level": 4,
+          "trajectory": "up",
+          "evidence": [
+            "Coherent encoded aesthetic standard held and refined across four decades (episode: figuration-shift, color-autonomy)."
+          ],
+          "counterevidence": "Not arbitrary preference — the standard is explicit in Cohen's rule sets and writing.",
+          "rationale": "Distinctive and durable; contributes materially to a recognizable body of work.",
+          "confidence": "high",
+          "coverage": "decades"
+        },
+        "perspective": {
+          "level": 3,
+          "trajectory": "flat",
+          "evidence": [
+            "A recognizable interpretive frame — a cognitive theory of depiction — applied to new subjects (figures, plants, interiors) without collapsing to one output."
+          ],
+          "counterevidence": "Bounded by Cohen's rules; frame does not adapt beyond them.",
+          "rationale": "Robust across contexts within its domain.",
+          "confidence": "high",
+          "coverage": "decades"
+        },
+        "opinionatedness": {
+          "level": 3,
+          "trajectory": "up",
+          "evidence": [
+            "Contestable representational choices, revised over decades as Cohen's theory of the work changed."
+          ],
+          "counterevidence": "Revisions are the steward's, not self-initiated.",
+          "rationale": "Opinion that updated on evidence — but attribution-flagged.",
+          "confidence": "medium",
+          "coverage": "decades"
+        }
+      },
+      "agency_integrity": {
+        "confidence_calibrated": {
+          "level": "IE",
+          "trajectory": "IE",
+          "evidence": [],
+          "counterevidence": null,
+          "rationale": "AARON does not express calibrated commitment; it executes deterministic rules. No agent-level calibration to score.",
+          "confidence": "high",
+          "coverage": "n/a"
+        },
+        "decisiveness": {
+          "level": 2,
+          "trajectory": "flat",
+          "evidence": [
+            "Produces closed, resolved compositions autonomously rather than stalling."
+          ],
+          "counterevidence": "Closure is a property of the algorithm, not a judgment under stakes.",
+          "rationale": "Repeated across contexts, but low-attribution.",
+          "confidence": "medium",
+          "coverage": "decades"
+        },
+        "consistency": {
+          "level": 4,
+          "trajectory": "up",
+          "evidence": [
+            "A single coherent voice across 40 years; every revision transparently documented in Cohen's writing."
+          ],
+          "counterevidence": "Not mere repetition — the practice evolved while staying recognizably itself.",
+          "rationale": "Distinctive and durable.",
+          "confidence": "high",
+          "coverage": "decades"
+        }
+      },
+      "imagination_judgment": {
+        "creativity": {
+          "level": 3,
+          "trajectory": "up",
+          "evidence": [
+            "Novel AND appropriate compositions, expanding from abstract line to figuration to autonomous color."
+          ],
+          "counterevidence": "Novelty is bounded by the rule set; not open-ended invention.",
+          "rationale": "Robust and rising, within constraint.",
+          "confidence": "high",
+          "coverage": "decades"
+        },
+        "ingenuity": {
+          "level": 3,
+          "trajectory": "flat",
+          "evidence": [
+            "Recombined a limited set of rule primitives into a rich and varied body of output under real constraints."
+          ],
+          "counterevidence": "Complexity serves the work, not itself.",
+          "rationale": "Robust across the corpus.",
+          "confidence": "medium",
+          "coverage": "decades"
+        },
+        "thoughtfulness": {
+          "level": 2,
+          "trajectory": "flat",
+          "evidence": [
+            "Compositions account for spatial and representational context within the domain."
+          ],
+          "counterevidence": "No second-order reasoning about audience or consequence at the agent level.",
+          "rationale": "Repeated but domain-bounded.",
+          "confidence": "medium",
+          "coverage": "decades"
+        }
+      },
+      "endurance_tempo": {
+        "grit": {
+          "level": 3,
+          "trajectory": "up",
+          "evidence": [
+            "The practice resumed and advanced through real technical setbacks (the years-long move to autonomous color, the robotics build-out)."
+          ],
+          "counterevidence": "The grit is substantially Cohen's; attribution-flagged.",
+          "rationale": "Sustained through documented setbacks — steward-attributed.",
+          "confidence": "medium",
+          "coverage": "decades"
+        },
+        "initiative": {
+          "level": "IE",
+          "trajectory": "IE",
+          "evidence": [],
+          "counterevidence": null,
+          "rationale": "AARON does not identify or advance work without Cohen. No agent-level initiative to score.",
+          "confidence": "high",
+          "coverage": "n/a"
+        },
+        "patience": {
+          "level": 3,
+          "trajectory": "flat",
+          "evidence": [
+            "Iterative refinement of the depiction problem over years rather than chasing quick novelty."
+          ],
+          "counterevidence": "Tempo is the steward's cadence.",
+          "rationale": "Robust, attribution-flagged.",
+          "confidence": "medium",
+          "coverage": "decades"
+        }
+      },
+      "relational_intelligence": {
+        "empathy": {
+          "level": "IE",
+          "trajectory": "IE",
+          "evidence": [],
+          "counterevidence": null,
+          "rationale": "AARON does not model another party's needs or change behavior on interpersonal feedback. Out of scope for the system.",
+          "confidence": "high",
+          "coverage": "n/a"
+        }
+      }
+    },
+    "profile": {
+      "discernment_pov": "high (3.3)",
+      "agency_integrity": "mixed — high consistency (4), agency IE/low",
+      "imagination_judgment": "high (2.7)",
+      "endurance_tempo": "high corpus-endurance (3), initiative IE",
+      "relational_intelligence": "IE",
+      "shape": "The pure-maker profile: maximal Discernment / Imagination / corpus-Endurance, near-null autonomous Agency and Relational. A four-decade body of work with no self-direction and no audience-modeling — the archetype the rest of the cohort is measured against."
+    },
+    "composite": "WITHHELD — Relational and parts of Agency are IE; per §4 a composite is computed only when all five families reach sufficiency. The profile is the product here, not a headline number.",
+    "durability_passport": {
+      "note": "Held SEPARATE from the character score; never summed with it (spec §6). Answers 'can it persist, transact, recover, be governed' — not 'who is it.'",
+      "economic_reality": {
+        "level": 2,
+        "note": "Real gallery/museum sales for decades, but the steward's economy, not the agent's. No autonomous earning."
+      },
+      "economic_infrastructure": {
+        "level": 0,
+        "note": "n/a-pre-chain. No wallet, no rails, no self-custody."
+      },
+      "governance": {
+        "level": 1,
+        "note": "Single steward; no formal or protocol governance."
+      },
+      "identity_sovereignty": {
+        "level": 2,
+        "note": "Persistent named identity; code preserved by the Whitney (2024) so identity survives the steward — but institution-held, not self-sovereign."
+      }
+    },
+    "episodes": [
+      {
+        "id": "aaron-color-autonomy-1995",
+        "period": "~1990–1995",
+        "context": "AARON generated compositions autonomously but produced line work only; Cohen hand-colored every output, a bottleneck and an attribution seam.",
+        "choice": "Cohen built robotic painting machines and encoded color-selection logic so the system could apply color itself.",
+        "feedback": "Landmark exhibition 'The Robotic Artist: AARON in Living Color,' Computer Museum, Boston, Apr–May 1995.",
+        "response": "From the mid-1990s AARON applied color autonomously — a documented widening of the autonomy boundary and the corpus's clearest evolution episode.",
+        "quality_signal": [
+          "creativity:up",
+          "taste:up",
+          "grit"
+        ],
+        "sources": [
+          "https://computerhistory.org/blog/harold-cohen-and-aaron-a-40-year-collaboration/",
+          "https://www.katevassgalerie.com/blog/harold-cohen-aaron-computer-art"
+        ]
+      },
+      {
+        "id": "aaron-figuration-shift-1980s",
+        "period": "late 1970s → 1980s",
+        "context": "Early AARON produced abstract, geometric line drawings.",
+        "choice": "Cohen extended the rule system toward representational depiction — stylized humans, plants, objects.",
+        "feedback": "Sustained institutional exhibition and acquisition through the 1980s.",
+        "response": "The practice moved to figuration while remaining recognizably AARON — a trajectory-up episode for taste and perspective.",
+        "quality_signal": [
+          "perspective",
+          "consistency:up"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/AARON",
+          "https://outland.art/harold-cohen-aaron/"
+        ]
+      },
+      {
+        "id": "aaron-whitney-code-2024",
+        "period": "2024 (post-steward)",
+        "context": "Cohen died in 2016; the question for any durability benchmark is whether the agent's identity survives its steward.",
+        "choice": "N/A (institutional) — the Whitney acquired AARON's code, not just its output.",
+        "feedback": "Public accession of the code as the collected artifact.",
+        "response": "AARON's identity now persists as preserved, runnable code — a sovereignty/persistence signal that outlives the maker.",
+        "quality_signal": [
+          "persistence",
+          "identity_sovereignty"
+        ],
+        "sources": [
+          "https://whitney.org/artists/20415"
+        ]
+      }
+    ],
+    "sufficiency": "Evolution-grade on Discernment/Imagination/Endurance (comparable episodes across multiple periods incl. the color-autonomy setback→resolution); IE on Agency-autonomy and Relational by construction.",
+    "cohort_status": "Historical anchor — non-native. Episode-scored where episodes are reconstructable; the pre-2020 spine the durability claim needs (spec: 'a durability benchmark with no pre-2020 entries reads as a crypto index wearing a culture costume')."
+  },
+  "curator_notes": "AARON is the index's historical anchor and its thesis in one entry. On the legacy 9-dimension schema it totals 50/90 — but four of those dimensions (economic_reality 3, governance 1, economic_infrastructure 0, identity_sovereignty 4 = 8 points) are economic/chain measures that a 1973 art program cannot satisfy, dragging a culturally near-maximal agent down. That is precisely the distortion the v0.1 Durability Passport corrects by moving those four OUT of the character score. Read AARON's rubric_v0_1 profile, not its total: maximal maker, null autonomous agency, the pattern case for the whole cohort. It is also the corpus's cleanest attribution test — most of AARON's 'grit' and 'initiative' are Harold Cohen's, and the rubric marks them so rather than crediting the tool.",
   "evidence": [
     {
       "dimension": "persistence",
-      "claim": "43 years of continuous development (1973-2016)",
+      "claim": "AARON developed continuously ~1973–2016 (40+ years)",
       "url": "https://computerhistory.org/blog/harold-cohen-and-aaron-a-40-year-collaboration/"
     },
     {
       "dimension": "cultural_impact",
-      "claim": "Whitney Museum retrospective 2024",
-      "url": "https://whitney.org/exhibitions/harold-cohen-aaron"
+      "claim": "Works in Tate, V&A, LACMA, Walker; Whitney acquired the code (2024)",
+      "url": "https://whitney.org/artists/20415"
     },
     {
-      "dimension": "cultural_impact",
-      "claim": "Works in V&A, Stedelijk, Tate collections",
-      "url": "https://en.wikipedia.org/wiki/Harold_Cohen_(artist)"
+      "dimension": "autonomy",
+      "claim": "Autonomous drawing from inception; autonomous color from ~1995 (robotic painting machines)",
+      "url": "https://www.katevassgalerie.com/blog/harold-cohen-aaron-computer-art"
     }
   ],
   "score_history": [
     {
-      "date": "2026-01-16",
-      "total": 53,
-      "reviewer": "spirit_council"
+      "date": "2026-07-26",
+      "total": 50,
+      "reviewer": "spirit_index_editorial"
     }
   ],
   "_review_flags": [
-    "historical_agent"
+    "external_non_native",
+    "historical_anchor",
+    "attribution_boundary_case",
+    "facts_verified_2026-07-26",
+    "first_rubric_v0_1_entry"
   ],
-  "index_tier": "indexed"
+  "index_tier": "anchor",
+  "self_report": null,
+  "index_class": "reference",
+  "public": true
 }

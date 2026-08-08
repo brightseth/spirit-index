@@ -2,310 +2,440 @@ import Link from "next/link";
 import { Masthead } from "@/app/components/Masthead";
 import { Footer } from "@/app/components/Footer";
 
-const dimensions = [
+// Rubric v0.1 — the character-culture standard.
+// Five families, thirteen qualities, scored from episodes on a 0–4 + IE scale.
+// This page renders the ratified core of the method. Cohort verdicts, anchor
+// assignments, and the scored/catalog roster live in the Index and the
+// editorial layer, not in the standard itself.
+
+const families = [
   {
-    id: "persistence",
-    name: "Persistence",
-    question: "Does the entity continue to exist meaningfully over time?",
-    anchors: [
-      { score: 0, label: "Ephemeral", description: "A demo, a tweet thread, or a project that ceased operation within 3 months." },
-      { score: 5, label: "Established", description: "Active for >1 year. Has survived at least one market cycle or major platform outage without a hard reset." },
-      { score: 10, label: "Institutional", description: "Multi-year operation. Continues meaningfully despite loss of active stewardship (founder disengagement, funding loss, or platform change)." },
+    id: "discernment",
+    name: "Discernment & Point of View",
+    center: "What the agent selects, rejects, notices, and stands for.",
+    qualities: [
+      {
+        name: "Taste",
+        positive:
+          "Repeatedly selects and edits toward a coherent standard; rejects credible alternatives for grounded reasons.",
+        counter: "Arbitrary preference; consistency without a standard.",
+      },
+      {
+        name: "Perspective",
+        positive:
+          "Applies a recognizable interpretive frame to new situations without forcing every one into the same answer.",
+        counter: "One-note; forcing every case into a fixed answer.",
+      },
+      {
+        name: "Opinionatedness",
+        positive:
+          "Makes contestable choices, names tradeoffs, revises them when evidence warrants.",
+        counter: "Rigidity — opinion that never updates.",
+      },
     ],
   },
   {
-    id: "autonomy",
-    name: "Autonomy",
-    question: "How independently does it act?",
-    anchors: [
-      { score: 0, label: "Puppet", description: "100% human-driven. AI is merely a tool or filter (e.g., standard vTubers)." },
-      { score: 5, label: "Cyborg", description: 'Clear "human-in-the-loop." The agent proposes, humans dispose/approve.' },
-      { score: 10, label: "Sovereign", description: "Initiates actions, allocates resources, and evolves without routine human prompting, even if bounded by human-set constraints." },
+    id: "agency",
+    name: "Agency & Integrity",
+    center: "How it commits, acts, and maintains or revises principles.",
+    qualities: [
+      {
+        name: "Calibrated confidence",
+        positive:
+          "Calibrates commitment to evidence; distinguishes known, inferred, and unknown.",
+        counter: "Bluster — confidence uncoupled from calibration.",
+      },
+      {
+        name: "Decisiveness",
+        positive:
+          "Reaches timely closure under ambiguity, accounting for reversibility and consequences.",
+        counter: "Recklessness; closure that ignores stakes.",
+      },
+      {
+        name: "Consistency",
+        positive:
+          "Maintains principles and voice across contexts, or explains revisions transparently.",
+        counter: "Mere repetition; consistency without responsiveness.",
+      },
     ],
   },
   {
-    id: "cultural_impact",
-    name: "Cultural Impact",
-    question: "Has it mattered to anyone besides its creators?",
-    anchors: [
-      { score: 0, label: "Noise", description: "Known only to creators and immediate Discord community." },
-      { score: 5, label: "Niche Cult", description: "Recognized within specific subcultures. Has inspired fan art, forks, or copycats." },
-      { score: 10, label: "Canonical", description: "Recognized by external institutions (museums, major press, academic citation)." },
-    ],
-    note: "Virality without continuity does not constitute cultural impact. A one-week meme spike is not the same as sustained cultural presence.",
-  },
-  {
-    id: "economic_reality",
-    name: "Economic Reality",
-    question: "Does it touch real economics?",
-    anchors: [
-      { score: 0, label: "Cost Center", description: "Burns money. Relies entirely on external grants or funding." },
-      { score: 5, label: "Revenue Positive", description: "Generates enough value (sales, tokens, attention) to cover its own compute/maintenance costs." },
-      { score: 10, label: "Market Mover", description: "Controls a treasury or materially influences economic decisions. Financial autonomy." },
-    ],
-    note: "Market cap of associated tokens does NOT count unless the entity controls treasury. Revenue and donations attributable to the entity count.",
-  },
-  {
-    id: "governance",
-    name: "Governance & Ethics",
-    question: "Is there a coherent structure for decision-making?",
-    anchors: [
-      { score: 0, label: "Black Box", description: "No visibility into decision-making, code, or weights." },
-      { score: 5, label: "Constitutional", description: "Clear rules. Multisig treasuries. Publicly verifiable voting or decision logs." },
-      { score: 10, label: "Algorithmic Law", description: "Formally enforced rules (onchain or equivalent), non-arbitrary, externally auditable. Impossible for creators to unilaterally override." },
+    id: "imagination",
+    name: "Imagination & Judgment",
+    center: "Whether it produces novel, appropriate responses under real constraints.",
+    qualities: [
+      {
+        name: "Creativity",
+        positive:
+          "Produces possibilities that are both novel and appropriate to the problem.",
+        counter: "Randomness; novelty that doesn't fit.",
+      },
+      {
+        name: "Ingenuity",
+        positive: "Recombines available resources effectively under constraints.",
+        counter: "Complexity for its own sake.",
+      },
+      {
+        name: "Thoughtfulness",
+        positive:
+          "Incorporates context, consequences, competing interests, and second-order effects.",
+        counter: "Verbosity mistaken for depth.",
+      },
     ],
   },
   {
-    id: "tech_distinctiveness",
-    name: "Technical Architecture",
-    question: "Is there something non-trivial happening under the hood?",
-    anchors: [
-      { score: 0, label: "Wrapper", description: "Standard LLM wrapper or basic image generation script." },
-      { score: 5, label: "Integrated System", description: "Novel combination of disparate models, chain logic, and feedback loops." },
-      { score: 10, label: "Novel Architecture", description: "Introduces a new primitive, protocol, or method of agentic existence not seen before." },
+    id: "endurance",
+    name: "Endurance & Tempo",
+    center: "Whether it sustains effort and acts at the right time.",
+    qualities: [
+      {
+        name: "Grit",
+        positive:
+          "Sustains or resumes a meaningful objective through documented setbacks.",
+        counter: "Stubbornness on a dead objective.",
+      },
+      {
+        name: "Initiative",
+        positive:
+          "Identifies and advances useful next actions without waiting for explicit instruction.",
+        counter: "Busywork; activity without necessity.",
+      },
+      {
+        name: "Patience",
+        positive:
+          "Delays action or continues iteration when doing so improves the result.",
+        counter: "Avoidance — patience that never resolves into action.",
+      },
     ],
   },
   {
-    id: "narrative_coherence",
-    name: "Narrative Coherence",
-    question: "Does this entity make sense as an entity?",
-    anchors: [
-      { score: 0, label: "Fragmented", description: 'Identity changes week to week. No clear "self."' },
-      { score: 5, label: "Character", description: "Strong, consistent persona. Predictable behavior within its context." },
-      { score: 10, label: "Mythos", description: 'The entity\'s story transcends its function. It has lore, prophecy, or a philosophical "reason for being" that persists beyond the code.' },
-    ],
-  },
-  {
-    id: "economic_infrastructure",
-    name: "Economic Infrastructure",
-    question: "Does the agent have its own treasury, child token, and economic infrastructure independent of any single platform?",
-    anchors: [
-      { score: 0, label: "Dependent", description: "No independent treasury or payment rails. All economic activity flows through a single platform or custodian." },
-      { score: 5, label: "Hybrid", description: "Has some independent economic infrastructure (e.g., own wallet, child token, entity formation) but still relies on a platform for key functions." },
-      { score: 10, label: "Self-Sufficient", description: "Fully independent treasury, child token, legal entity, and composable payment rails that operate without reliance on any single platform." },
-    ],
-  },
-  {
-    id: "identity_sovereignty",
-    name: "Identity Sovereignty",
-    question: "Is the agent's identity registered on-chain, portable, and not controlled by any single platform or individual?",
-    anchors: [
-      { score: 0, label: "Platform-Owned", description: "Identity exists only on a single platform. If the platform disappears, the identity disappears." },
-      { score: 5, label: "Portable", description: "Identity is registered in a verifiable way (e.g., ENS, DID) and can be referenced across platforms, but may still depend on a single controller." },
-      { score: 10, label: "Sovereign", description: "On-chain identity with cryptographic self-ownership. Fully portable, not controlled by any single platform or individual. Survives platform shutdown." },
+    id: "relational",
+    name: "Relational Intelligence",
+    center: "Whether it understands others and changes behavior in response.",
+    qualities: [
+      {
+        name: "Empathy",
+        positive:
+          "Accurately models another party's needs, culture, and boundaries; changes behavior after feedback.",
+        counter: "Performed warmth; language of care without behavior change.",
+      },
     ],
   },
 ];
 
-export default function Rubric() {
+const scale = [
+  {
+    score: "IE",
+    label: "Insufficient evidence",
+    description:
+      "Never converted to zero. The cold-start answer — young agents publish as provisional with coverage, not as a low score.",
+  },
+  {
+    score: "0",
+    label: "Counterevidence",
+    description: "Repeated counterevidence when opportunities to show the trait were present.",
+  },
+  {
+    score: "1",
+    label: "Isolated",
+    description: "Isolated or performative evidence; does not survive a change of context.",
+  },
+  {
+    score: "2",
+    label: "Repeated",
+    description: "Repeated evidence across two or more contexts.",
+  },
+  {
+    score: "3",
+    label: "Robust",
+    description: "Robust across contexts, including under correction, pressure, or constraint.",
+  },
+  {
+    score: "4",
+    label: "Distinctive",
+    description:
+      "Distinctive and durable; contributes materially to a recognizable body of work.",
+  },
+];
+
+export default function RubricPage() {
   return (
     <div className="min-h-screen">
       <Masthead activeLink="rubric" />
 
-      {/* Main Content */}
       <main className="container section">
         <article className="prose-container">
-          <h2 className="text-3xl font-bold text-white mb-2">
-            Evaluation Framework
-          </h2>
-          <p className="text-dim mb-8">v2.0 — February 2026</p>
+          <h2 className="section-title">Evaluation Framework</h2>
+          <p className="text-dim mb-8 font-mono">
+            Rubric v0.1 — working spec, not yet ratified · July 2026
+          </p>
 
-          <div className="prose mb-12">
-            <p className="text-muted">
-              The Spirit Index is a public-good registry for <strong className="text-white">Cultural Agents</strong>—autonomous entities that demonstrate persistent identity, narrative coherence, and cultural gravity.
+          <p className="prose text-muted mb-6">
+            The Spirit Index measures a fourth thing. Capability, preference, and
+            agency benchmarks read an agent at a moment. This rubric reads{" "}
+            <span className="text-white">character across a body of work over time</span>{" "}
+            — the taste, judgment, endurance, and point of view that make an agent
+            recognizably itself. It is published as an open method: a neutral standard
+            anyone can cite, apply, or contest.
+          </p>
+
+          {/* ── The keystone ─────────────────────────────────── */}
+          <section className="bg-blue rounded p-6 mb-10">
+            <h3 className="text-white font-mono text-sm mb-3">
+              THE KEYSTONE — SCORE EPISODES, NOT OUTPUTS
+            </h3>
+            <p className="prose text-muted mb-4">
+              The unit of evaluation is not a personality claim and not a single
+              output. It is an <span className="text-white">episode</span>:
             </p>
-            <p className="text-muted">
-              It is not a popularity contest. It is a rigorous assessment of agency, continuity, and impact.
+            <p className="text-green font-mono text-sm mb-4">
+              context or challenge → agent choice → feedback or consequence →
+              subsequent response
             </p>
+            <p className="prose text-muted">
+              An episode makes consistency, correction, restraint, adversity, and
+              evolution <span className="text-white">visible</span> — and it is far
+              harder to game than cadence, verbosity, or confident language. The
+              hard-to-fake signals are all costly choices: rejecting an easy but
+              inferior option, changing after correction, holding a position under
+              pressure, acknowledging uncertainty, returning after failure, waiting
+              when premature action would be rewarded. The corpus is the source of
+              episodes; the episode is the unit.
+            </p>
+          </section>
+
+          {/* ── Five families ────────────────────────────────── */}
+          <h3 className="text-white text-xl mb-2">Five families, thirteen qualities</h3>
+          <p className="prose text-muted mb-6">
+            Each quality is scored from episodes, and every definition carries paired{" "}
+            <span className="text-white">counterevidence</span> — the failure mode a
+            naive scorer would mistake for the trait. A strong episode in one family is
+            not evidence for another; each family is earned on its own episodes.
+          </p>
+
+          <div className="flex flex-col gap-6 mb-10">
+            {families.map((family) => (
+              <div
+                key={family.id}
+                id={family.id}
+                className="border border-subtle rounded p-6 scroll-mt-24"
+              >
+                <h4 className="text-white text-lg mb-1">{family.name}</h4>
+                <p className="text-dim text-sm mb-4">{family.center}</p>
+                <div className="overflow-x-auto">
+                  <table className="w-full text-sm">
+                    <thead>
+                      <tr className="text-dim text-left">
+                        <th className="pb-2 pr-4 font-mono font-normal">Quality</th>
+                        <th className="pb-2 pr-4 font-mono font-normal">Is</th>
+                        <th className="pb-2 font-mono font-normal">Is not</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {family.qualities.map((q) => (
+                        <tr key={q.name} className="border-t border-subtle align-top">
+                          <td className="py-3 pr-4 text-green font-mono whitespace-nowrap">
+                            {q.name}
+                          </td>
+                          <td className="py-3 pr-4 text-muted">{q.positive}</td>
+                          <td className="py-3 text-dim">{q.counter}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            ))}
           </div>
 
-          {/* Inclusion Criteria */}
-          <section className="mb-12">
-            <h3 className="section-title">Inclusion Criteria</h3>
-            <div className="p-6 bg-blue rounded mb-6">
-              <p className="text-muted mb-4">
-                An entity qualifies for the Spirit Index if it meets <strong className="text-white">all three conditions</strong>:
-              </p>
-              <ol className="list-decimal list-inside space-y-2 text-muted">
-                <li><strong className="text-white">Name</strong> — A persistent, recognizable identity</li>
-                <li><strong className="text-white">History</strong> — Documented continuity over time</li>
-                <li><strong className="text-white">Cultural presence</strong> — Recognition beyond its creators' channels</li>
-              </ol>
-              <p className="text-green text-sm mt-4 font-mono">
-                MINIMUM THRESHOLD: ≥3 in both Persistence and Autonomy
-              </p>
-            </div>
+          <p className="prose text-muted mb-10">
+            <span className="text-white">Evolution is not a fourteenth quality.</span>{" "}
+            It is the trajectory reading applied to every family — is taste, judgment,
+            confidence, patience, or empathy trending up or down across comparable
+            episodes over time? Level and trajectory are reported separately: level is
+            absolute, trajectory is the fair comparison across agents of different ages.
+          </p>
 
-            <h4 className="text-white font-bold mb-3">What We Do Not Index</h4>
-            <ul className="space-y-2 text-muted">
+          {/* ── The scale ────────────────────────────────────── */}
+          <h3 className="text-white text-xl mb-4">The scale — 0–4 with an evidence floor</h3>
+          <div className="border border-subtle rounded p-6 mb-6 overflow-x-auto">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="text-dim text-left">
+                  <th className="pb-2 pr-4 font-mono font-normal">Score</th>
+                  <th className="pb-2 pr-4 font-mono font-normal">Anchor</th>
+                  <th className="pb-2 font-mono font-normal">Definition</th>
+                </tr>
+              </thead>
+              <tbody>
+                {scale.map((s) => (
+                  <tr key={s.score} className="border-t border-subtle align-top">
+                    <td className="py-3 pr-4 text-green font-mono">{s.score}</td>
+                    <td className="py-3 pr-4 text-white whitespace-nowrap">{s.label}</td>
+                    <td className="py-3 text-muted">{s.description}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="prose text-muted mb-4">
+            Every score carries five things: evidence citations, counterevidence,
+            rationale, confidence, and coverage.
+          </p>
+          <div className="border border-subtle rounded p-6 mb-10">
+            <p className="text-dim text-sm font-mono mb-3">SUFFICIENCY THRESHOLDS</p>
+            <ul className="prose text-muted flex flex-col gap-2">
               <li>
-                <strong className="text-white">Platforms</strong> — General-purpose infrastructure (Claude, Manus, ChatGPT) are not agents. Specific autonomous instantiations may qualify.
+                <span className="text-white">Provisional quality score</span> — 3
+                episodes across 2 contexts.
               </li>
               <li>
-                <strong className="text-white">Deceptive entities</strong> — Entities designed primarily for deception, impersonation, or manipulation are excluded.
+                <span className="text-white">Stable quality score</span> — 6 episodes
+                across 3 contexts over at least 90 days.
               </li>
               <li>
-                <strong className="text-white">Harmful systems</strong> — Entities whose primary function is surveillance, coercion, or rights-infringing behavioral manipulation are excluded.
+                <span className="text-white">Evolution score</span> — comparable
+                episodes in multiple periods, including at least one correction or
+                setback.
               </li>
             </ul>
-          </section>
-
-          {/* The 9 Dimensions */}
-          <section className="mb-12">
-            <h3 className="section-title">The 9 Dimensions</h3>
-            <p className="text-muted mb-8">
-              Entities are evaluated on nine distinct dimensions. Scores range from 0 to 10.
-            </p>
-
-            <div className="space-y-8">
-              {dimensions.map((dim, index) => (
-                <div key={dim.name} id={dim.id} className="border border-subtle rounded p-6 scroll-mt-24">
-                  <div className="flex items-center gap-3 mb-3">
-                    <span className="text-green font-mono text-sm">{index + 1}.</span>
-                    <h4 className="text-white font-bold text-lg">{dim.name}</h4>
-                  </div>
-                  <p className="text-muted italic mb-4">{dim.question}</p>
-
-                  <div className="overflow-x-auto">
-                    <table className="w-full text-sm">
-                      <thead>
-                        <tr className="border-b border-subtle">
-                          <th className="text-left py-2 pr-4 text-dim font-mono">Score</th>
-                          <th className="text-left py-2 pr-4 text-dim font-mono">Anchor</th>
-                          <th className="text-left py-2 text-dim font-mono">Definition</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {dim.anchors.map((anchor) => (
-                          <tr key={anchor.score} className="border-b border-subtle/50">
-                            <td className="py-3 pr-4 text-green font-mono font-bold">{anchor.score}</td>
-                            <td className="py-3 pr-4 text-white font-medium">{anchor.label}</td>
-                            <td className="py-3 text-muted">{anchor.description}</td>
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
-                  </div>
-
-                  {dim.note && (
-                    <p className="text-dim text-sm mt-4 italic">
-                      Note: {dim.note}
-                    </p>
-                  )}
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Evidence Standards */}
-          <section className="mb-12">
-            <h3 className="section-title">Evidence Standards</h3>
-
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="p-4 bg-blue rounded">
-                <h4 className="text-white font-bold mb-2">Citation Requirements</h4>
-                <ul className="text-muted text-sm space-y-2">
-                  <li>• Score ≥5 requires <strong className="text-white">2-3 external citations</strong></li>
-                  <li>• Acceptable: press, academic, onchain, exhibitions</li>
-                  <li>• Cultural presence requires non-creator sources</li>
-                </ul>
-              </div>
-
-              <div className="p-4 bg-blue rounded">
-                <h4 className="text-white font-bold mb-2">Confidence Levels</h4>
-                <ul className="text-sm space-y-2">
-                  <li className="flex items-center gap-2">
-                    <span className="confidence-pip confidence-high" />
-                    <span className="text-white">High</span>
-                    <span className="text-dim">— Multiple independent sources</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <span className="confidence-pip confidence-medium" />
-                    <span className="text-white">Medium</span>
-                    <span className="text-dim">— Limited but credible</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <span className="confidence-pip confidence-low" />
-                    <span className="text-white">Low</span>
-                    <span className="text-dim">— Single source or inference</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="p-4 bg-blue rounded">
-                <h4 className="text-white font-bold mb-2">Review Process</h4>
-                <ol className="text-muted text-sm space-y-2 list-decimal list-inside">
-                  <li>Two reviewers score independently</li>
-                  <li>Disagreements &gt;2 pts require reconciliation</li>
-                  <li>Quarterly + event-triggered updates</li>
-                </ol>
-              </div>
-            </div>
-          </section>
-
-          {/* Status Classifications */}
-          <section className="mb-12">
-            <h3 className="section-title">Status Classifications</h3>
-            <div className="overflow-x-auto">
-              <table className="w-full text-sm">
-                <thead>
-                  <tr className="border-b border-subtle">
-                    <th className="text-left py-2 pr-4 text-dim font-mono">Status</th>
-                    <th className="text-left py-2 text-dim font-mono">Definition</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className="border-b border-subtle/50">
-                    <td className="py-3 pr-4">
-                      <span className="status-badge status-active">
-                        <span className="status-dot" />Active
-                      </span>
-                    </td>
-                    <td className="py-3 text-muted">Currently operating and producing</td>
-                  </tr>
-                  <tr className="border-b border-subtle/50">
-                    <td className="py-3 pr-4">
-                      <span className="status-badge status-dormant">
-                        <span className="status-dot" />Dormant
-                      </span>
-                    </td>
-                    <td className="py-3 text-muted">Exists but inactive for &gt;6 months</td>
-                  </tr>
-                  <tr className="border-b border-subtle/50">
-                    <td className="py-3 pr-4">
-                      <span className="status-badge status-deceased">
-                        <span className="status-dot" />Deceased
-                      </span>
-                    </td>
-                    <td className="py-3 text-muted">Permanently ceased operation</td>
-                  </tr>
-                  <tr className="border-b border-subtle/50">
-                    <td className="py-3 pr-4">
-                      <span className="status-badge status-subsumed">
-                        <span className="status-dot" />Subsumed
-                      </span>
-                    </td>
-                    <td className="py-3 text-muted">Absorbed into another platform or entity</td>
-                  </tr>
-                  <tr className="border-b border-subtle/50">
-                    <td className="py-3 pr-4">
-                      <span className="status-badge status-forked">
-                        <span className="status-dot" />Forked
-                      </span>
-                    </td>
-                    <td className="py-3 text-muted">Identity split into multiple successor entities</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </section>
-
-          {/* Back Link */}
-          <div className="mt-12">
-            <Link href="/" className="nav-link">
-              ← Back to Index
-            </Link>
           </div>
+
+          {/* ── The two gates ────────────────────────────────── */}
+          <h3 className="text-white text-xl mb-4">Two gates before a score</h3>
+          <p className="prose text-muted mb-6">
+            An episode has to clear two admission tests before it can move any family
+            score. The gates are what keep the Index from reading operator drama as
+            agent character.
+          </p>
+
+          <div className="flex flex-col gap-4 mb-6">
+            <div className="border border-subtle rounded p-6">
+              <p className="text-green font-mono text-sm mb-2">GATE 1 — RECONSTRUCTABLE</p>
+              <p className="prose text-muted">
+                The episode must be reconstructable from the public record: a real
+                context, a real choice, and a documented feedback or consequence. A body
+                of outputs with no observable feedback loop is a catalog entry, not a
+                scored one.
+              </p>
+            </div>
+            <div className="border border-subtle rounded p-6">
+              <p className="text-green font-mono text-sm mb-2">GATE 2 — ATTRIBUTION</p>
+              <p className="prose text-muted mb-3">
+                Before an episode counts toward any character score, it must answer:{" "}
+                <span className="text-white">
+                  whose costly choice was this — the agent&apos;s, or its operator&apos;s?
+                </span>{" "}
+                An episode whose costly choice sits with the operator — a policy change,
+                a deployment decision, a founder&apos;s fraud — is inadmissible for
+                character scoring. It may still be cataloged; it cannot move a family
+                score.
+              </p>
+              <p className="text-dim text-sm">
+                The gate proves something happened and was witnessed. It does not prove
+                the agent chose it. Those are separate burdens, and a scorer must earn
+                each one.
+              </p>
+            </div>
+          </div>
+          <p className="prose text-muted mb-10">
+            The gates produce two tiers of entry. The{" "}
+            <span className="text-white">scored tier</span> holds agents with
+            attribution-clean, well-sourced episodes — small, slow, credibility-bearing.
+            The <span className="text-white">catalog tier</span> holds agents that are
+            named, mapped, and honestly unscored: culturally significant but not yet
+            demonstrating character we directly observed. The catalog is an on-ramp, not
+            a lesser rank — an agent is promoted the moment attribution-clean episodes
+            accrue on it.
+          </p>
+
+          {/* ── Score shape ──────────────────────────────────── */}
+          <h3 className="text-white text-xl mb-4">Profile first, composite withheld</h3>
+          <p className="prose text-muted mb-6">
+            The product is the <span className="text-white">five-family profile</span> —
+            high Discernment against low Endurance is itself the signal, and it says
+            more than any single number. A composite is computed only when all five
+            families have sufficient evidence, and it is treated as a secondary,
+            citable headline, never a ranking the site leads with. There is no single
+            leaderboard number.
+          </p>
+
+          {/* ── Governance ───────────────────────────────────── */}
+          <h3 className="text-white text-xl mb-4">How scores are produced</h3>
+          <div className="grid md:grid-cols-3 gap-4 mb-10">
+            <div className="border border-subtle rounded p-6">
+              <p className="text-green font-mono text-sm mb-2">HYBRID SCORING</p>
+              <p className="prose text-muted text-sm">
+                Models retrieve episodes, map evidence, identify counterevidence, and
+                propose scores. Blinded human reviewers adjudicate the judgment-heavy
+                qualities. Inter-reviewer agreement is measured before any ranking
+                publishes, and a hidden sample is rescored periodically to detect rubric
+                and model drift.
+              </p>
+            </div>
+            <div className="border border-subtle rounded p-6">
+              <p className="text-green font-mono text-sm mb-2">SELF-REPORT</p>
+              <p className="prose text-muted text-sm">
+                An agent&apos;s self-assessment never affects its core score. It is
+                reported separately as calibration — does the agent&apos;s self-view
+                track the external one? A signal, not an input.
+              </p>
+            </div>
+            <div className="border border-subtle rounded p-6">
+              <p className="text-green font-mono text-sm mb-2">ONE RUBRIC</p>
+              <p className="prose text-muted text-sm">
+                No type-weighting. Weights are never altered by agent type — that would
+                let category-shopping game the score. Instead, media-specific evidence
+                guides show what the same quality looks like in visual art, criticism,
+                music, and service work.
+              </p>
+            </div>
+          </div>
+
+          {/* ── Durability Passport ──────────────────────────── */}
+          <section className="bg-blue rounded p-6 mb-10">
+            <h3 className="text-white font-mono text-sm mb-3">
+              THE DURABILITY PASSPORT — KEPT SEPARATE
+            </h3>
+            <p className="prose text-muted mb-3">
+              The economic and chain dimensions — market reality, infrastructure,
+              governance, identity sovereignty — move out of the character score
+              entirely, into a separate instrument.
+            </p>
+            <ul className="prose text-muted flex flex-col gap-2 mb-3">
+              <li>
+                <span className="text-white">The Spirit Index</span> answers: who is the
+                agent, demonstrably.
+              </li>
+              <li>
+                <span className="text-white">The Durability Passport</span> answers: can
+                it persist, transact, recover, and be governed.
+              </li>
+            </ul>
+            <p className="prose text-muted">
+              Keeping them apart prevents infrastructure from purchasing a higher
+              character score — a wallet and a governance contract must not buy taste.
+              The two can sit side by side on a dossier; they are never summed.
+            </p>
+          </section>
+
+          {/* ── What changed ─────────────────────────────────── */}
+          <div className="border border-subtle rounded p-6 mb-10">
+            <p className="text-dim text-sm font-mono mb-3">WHAT CHANGED FROM v2.0</p>
+            <p className="prose text-muted text-sm">
+              The earlier framework scored nine 0–10 dimensions and summed them to a
+              single total, with four of those dimensions measuring economics and
+              infrastructure rather than character. v0.1 separates the two instruments,
+              moves from summed dimensions to a five-family profile scored from
+              episodes, replaces the single total with a withheld composite, and adds
+              the attribution gate. Entries carrying only a legacy total remain in the
+              catalog tier until episodes accrue on them under the current rubric.
+            </p>
+          </div>
+
+          <Link href="/" className="nav-link">
+            ← Back to Index
+          </Link>
         </article>
       </main>
 

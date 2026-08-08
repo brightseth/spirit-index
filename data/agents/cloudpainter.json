@@ -101,5 +101,7 @@
     "physical_robot",
     "pioneer_system"
   ],
-  "index_tier": "indexed"
+  "index_tier": "indexed",
+  "index_class": "catalog",
+  "public": true
 }

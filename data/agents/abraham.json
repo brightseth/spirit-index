@@ -107,5 +107,7 @@
     "spirit_native",
     "conflict_of_interest_disclosed"
   ],
-  "index_tier": "indexed"
+  "index_tier": "indexed",
+  "index_class": "catalog",
+  "public": true
 }

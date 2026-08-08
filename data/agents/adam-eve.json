@@ -1,0 +1,339 @@
+{
+  "id": "adam-eve",
+  "name": "Adam & Eve",
+  "tagline": "The Robot Scientists",
+  "inception_date": "2009-01-01",
+  "status": "Legacy (research systems; Adam 2009, Eve ~2015)",
+  "category": "Autonomous Scientific-Discovery System",
+  "classification": "Scored — clean-attribution exemplar",
+  "network": "None (lab systems)",
+  "disclosure": "External agent — non-native, scientific-discovery mode",
+  "website": "https://en.wikipedia.org/wiki/Robot_Scientist",
+  "scores": {
+    "persistence": {
+      "value": 6,
+      "confidence": "high",
+      "method": "editorial"
+    },
+    "autonomy": {
+      "value": 7,
+      "confidence": "high",
+      "method": "editorial"
+    },
+    "cultural_impact": {
+      "value": 6,
+      "confidence": "high",
+      "method": "editorial"
+    },
+    "economic_reality": {
+      "value": 1,
+      "confidence": "high",
+      "method": "editorial"
+    },
+    "governance": {
+      "value": 1,
+      "confidence": "high",
+      "method": "editorial"
+    },
+    "tech_distinctiveness": {
+      "value": 8,
+      "confidence": "high",
+      "method": "editorial"
+    },
+    "narrative_coherence": {
+      "value": 7,
+      "confidence": "high",
+      "method": "editorial"
+    },
+    "economic_infrastructure": {
+      "value": 0,
+      "confidence": "high",
+      "method": "editorial"
+    },
+    "identity_sovereignty": {
+      "value": 2,
+      "confidence": "medium",
+      "method": "editorial"
+    }
+  },
+  "total": 38,
+  "score_rationale": {
+    "persistence": "Ross King's group ran the closed-loop robot-scientist practice from Adam (Aberystwyth, ~2009) through Eve (~2015) and beyond — a sustained multi-year research programme with a genuine second-generation successor, not a one-shot demo.",
+    "autonomy": "High operational autonomy WITHIN the loop: the system generates hypotheses, designs and physically executes experiments on lab robotics, interprets results, and selects the next experiment — no human in the per-cycle loop. Bounded by an externally-set objective (which biology to investigate), which is why it is a 7 and not higher.",
+    "cultural_impact": "Landmark in the history of AI and of science: Adam was the first machine to independently discover novel scientific knowledge (yeast functional genomics), published and peer-validated in Science (2009); Eve extended it to drug repurposing for malaria and neglected tropical diseases (Royal Society Interface, 2015). Foundational reference for autonomous-science claims.",
+    "economic_reality": "Grant-funded research systems; no autonomous earning capacity. Value is scientific, not economic.",
+    "governance": "Single research group under one PI; no formal or protocol governance.",
+    "tech_distinctiveness": "The closed-loop 'robot scientist' — autonomous hypothesis → experiment → interpretation → revision on physical lab hardware — was genuinely novel and remains distinctive.",
+    "narrative_coherence": "One sustained inquiry pursued across two system generations: can a machine do the whole scientific loop, not just one step. Clear and coherent.",
+    "economic_infrastructure": "None. No wallet, no rails, no self-custody.",
+    "identity_sovereignty": "Named, documented, institution-held research systems. No on-chain identity, no self-custody."
+  },
+  "rubric_v0_1": {
+    "note": "Second cohort entry on the v0.1 rubric and the first authored under the §10 attribution gate. Adam & Eve is the CLEAN-ATTRIBUTION counterpart to AARON: where AARON's costly choices are Cohen's, Adam & Eve's costly choices (rejecting a falsified hypothesis, choosing the next experiment) happen autonomously INSIDE the loop — so Agency & Integrity is scored, not marked IE. Profile PRIMARY; composite WITHHELD (Discernment/POV and Relational are IE by construction).",
+    "attribution_note": "The decisive test of §10 is 'whose costly choice was this?' For Adam & Eve the answer is the system's: within each cycle it commits to a hypothesis, tests it, and abandons it on falsifying evidence with no human adjudicating the individual call. That is the exact positive definition of calibrated confidence, authored by the agent. The externally-set research OBJECTIVE is the steward's — which is why Discernment & POV reads IE (it selects toward a given goal, it does not hold a point of view). This entry exists to show the gate admitting an agent AARON's foil: lower corpus-Discernment, genuine autonomous Agency.",
+    "families": {
+      "discernment_pov": {
+        "taste": {
+          "level": "IE",
+          "trajectory": "IE",
+          "evidence": [],
+          "counterevidence": null,
+          "rationale": "The system selects hypotheses and experiments toward an externally-set objective; there is no coherent aesthetic/interpretive standard of its own to score. IE, not 0 — the opportunity for POV is absent, not failed.",
+          "confidence": "high",
+          "coverage": "n/a"
+        },
+        "perspective": {
+          "level": "IE",
+          "trajectory": "IE",
+          "evidence": [],
+          "counterevidence": null,
+          "rationale": "No recognizable interpretive frame beyond the scientific method it was given. Out of scope.",
+          "confidence": "high",
+          "coverage": "n/a"
+        },
+        "opinionatedness": {
+          "level": "IE",
+          "trajectory": "IE",
+          "evidence": [],
+          "counterevidence": null,
+          "rationale": "Makes empirical determinations, not contestable value-choices. IE.",
+          "confidence": "high",
+          "coverage": "n/a"
+        }
+      },
+      "agency_integrity": {
+        "confidence_calibrated": {
+          "level": 3,
+          "trajectory": "flat",
+          "evidence": [
+            "The closed loop assigns and updates confidence in each hypothesis on experimental evidence, committing when supported and abandoning when falsified — across both the Adam genomics work and Eve's screening (episodes adam-yeast-2009, eve-malaria-2015)."
+          ],
+          "counterevidence": "Calibration is over an externally-defined hypothesis space, not open-ended judgment.",
+          "rationale": "Robust across contexts and — critically — attribution-clean: the calibration is the agent's own within the loop.",
+          "confidence": "high",
+          "coverage": "multi-year"
+        },
+        "decisiveness": {
+          "level": 3,
+          "trajectory": "flat",
+          "evidence": [
+            "Reaches timely experimental closure and moves to the next cycle autonomously rather than stalling."
+          ],
+          "counterevidence": "Closure is bounded by the experimental protocol.",
+          "rationale": "Robust, attribution-clean.",
+          "confidence": "high",
+          "coverage": "multi-year"
+        },
+        "consistency": {
+          "level": 3,
+          "trajectory": "up",
+          "evidence": [
+            "The same disciplined hypothesis→test→revise method held from Adam to Eve, extended to a new problem domain (genomics → drug repurposing) without abandoning the method."
+          ],
+          "counterevidence": "Not mere repetition — the method transferred across domains.",
+          "rationale": "Robust across contexts.",
+          "confidence": "high",
+          "coverage": "multi-year"
+        }
+      },
+      "imagination_judgment": {
+        "creativity": {
+          "level": 3,
+          "trajectory": "flat",
+          "evidence": [
+            "Generated novel AND appropriate hypotheses under real experimental constraint — genuinely new functional-genomics knowledge (Adam) and non-obvious repurposing candidates (Eve)."
+          ],
+          "counterevidence": "Novelty is bounded by the hypothesis space and available assays.",
+          "rationale": "Robust within constraint.",
+          "confidence": "high",
+          "coverage": "multi-year"
+        },
+        "ingenuity": {
+          "level": 3,
+          "trajectory": "flat",
+          "evidence": [
+            "Recombined a fixed set of assays, robotics, and prior knowledge into efficient experiment designs under cost and time constraints."
+          ],
+          "counterevidence": "Serves the objective, not complexity for its own sake.",
+          "rationale": "Robust across the corpus.",
+          "confidence": "medium",
+          "coverage": "multi-year"
+        },
+        "thoughtfulness": {
+          "level": 2,
+          "trajectory": "flat",
+          "evidence": [
+            "Experiment selection accounts for prior results and cost — second-order reasoning within the domain."
+          ],
+          "counterevidence": "No reasoning about audience or consequence beyond the science.",
+          "rationale": "Repeated but domain-bounded.",
+          "confidence": "medium",
+          "coverage": "multi-year"
+        }
+      },
+      "endurance_tempo": {
+        "grit": {
+          "level": 2,
+          "trajectory": "flat",
+          "evidence": [
+            "Sustained long experimental campaigns through failed hypotheses toward a result."
+          ],
+          "counterevidence": "The programme's continuation across years is the lab's decision; the per-campaign persistence is the system's.",
+          "rationale": "Repeated; partly attribution-shared.",
+          "confidence": "medium",
+          "coverage": "multi-year"
+        },
+        "initiative": {
+          "level": 3,
+          "trajectory": "flat",
+          "evidence": [
+            "The defining feature: the system identifies and advances the NEXT experiment without instruction — genuine agent-level initiative, unlike AARON (IE) where the next step is the steward's."
+          ],
+          "counterevidence": "Initiative is exercised only inside a launched campaign toward a given objective.",
+          "rationale": "Robust and attribution-clean within the loop — the cleanest positive Initiative score in the cohort so far.",
+          "confidence": "high",
+          "coverage": "multi-year"
+        },
+        "patience": {
+          "level": 2,
+          "trajectory": "flat",
+          "evidence": [
+            "Iterates through many negative results before converging rather than forcing a premature claim."
+          ],
+          "counterevidence": "Tempo set by assay time, not judgment.",
+          "rationale": "Repeated, domain-bounded.",
+          "confidence": "medium",
+          "coverage": "multi-year"
+        }
+      },
+      "relational_intelligence": {
+        "empathy": {
+          "level": "IE",
+          "trajectory": "IE",
+          "evidence": [],
+          "counterevidence": null,
+          "rationale": "Does not model another party's needs or change behavior on interpersonal feedback. Out of scope.",
+          "confidence": "high",
+          "coverage": "n/a"
+        }
+      }
+    },
+    "profile": {
+      "discernment_pov": "IE — no point of view (works toward an externally-set objective)",
+      "agency_integrity": "high (3.0) — calibrated, decisive, consistent; ATTRIBUTION-CLEAN",
+      "imagination_judgment": "high (2.7)",
+      "endurance_tempo": "mixed — strong autonomous initiative (3), moderate grit/patience (2)",
+      "relational_intelligence": "IE",
+      "shape": "The autonomous-agent profile: real, self-authored Agency and Initiative with NO point of view. The mirror image of AARON (maximal Discernment, null autonomous Agency). Together they bracket the attribution axis — AARON proves you can have a body of work with no self-direction; Adam & Eve proves you can have self-direction with no point of view."
+    },
+    "composite": "WITHHELD — Discernment/POV and Relational are IE; per §4 a composite is computed only when all five families reach sufficiency. Read the profile.",
+    "durability_passport": {
+      "note": "Held SEPARATE from the character score; never summed (spec §6).",
+      "economic_reality": {
+        "level": 0,
+        "note": "Grant-funded; no autonomous earning."
+      },
+      "economic_infrastructure": {
+        "level": 0,
+        "note": "No wallet, rails, or self-custody."
+      },
+      "governance": {
+        "level": 1,
+        "note": "Single research group under one PI."
+      },
+      "identity_sovereignty": {
+        "level": 1,
+        "note": "Named, documented, institution-held; no self-sovereign identity."
+      }
+    },
+    "episodes": [
+      {
+        "id": "adam-yeast-2009",
+        "period": "~2007–2009",
+        "context": "Whether a machine could autonomously generate AND experimentally validate genuinely new scientific knowledge was open — prior systems automated steps, not the whole loop.",
+        "choice": "Adam formed hypotheses about genes encoding orphan enzymes in yeast metabolism, then designed and physically ran the experiments to test them, rejecting falsified hypotheses within the loop.",
+        "feedback": "Results published and peer-validated in Science (2009); independently confirmed by human experimenters.",
+        "response": "Adam is credited as the first machine to independently discover novel scientific knowledge — the closed loop held under peer review, the field's adversary.",
+        "quality_signal": [
+          "confidence_calibrated",
+          "creativity",
+          "initiative"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Robot_Scientist",
+          "https://www.science.org/doi/10.1126/science.1165620"
+        ]
+      },
+      {
+        "id": "eve-malaria-2015",
+        "period": "~2013–2015",
+        "context": "Adam proved the loop on genomics; whether the SAME method transferred to a different, higher-stakes domain was the next test.",
+        "choice": "Eve applied the closed-loop method to drug repurposing, autonomously screening and prioritising compounds against targets for malaria and neglected tropical diseases.",
+        "feedback": "Findings (incl. a repurposing candidate acting on a malaria target) published in Royal Society Interface (2015); covered by Scientific American, Chemistry World, U. Manchester.",
+        "response": "The method transferred cleanly to a new domain — a trajectory/consistency episode showing the practice was a real method, not a one-domain trick.",
+        "quality_signal": [
+          "consistency:up",
+          "creativity",
+          "initiative"
+        ],
+        "sources": [
+          "https://royalsocietypublishing.org/doi/10.1098/rsif.2014.1289",
+          "https://en.wikipedia.org/wiki/Robot_Scientist"
+        ]
+      },
+      {
+        "id": "adam-eve-hypothesis-rejection-loop",
+        "period": "2009–2015 (recurring)",
+        "context": "The core of the systems is not any single discovery but the recurring closed loop.",
+        "choice": "In each cycle the system commits to a hypothesis, tests it, and ABANDONS it on falsifying evidence — a costly choice (discarding invested experimental effort) made autonomously.",
+        "feedback": "The loop's validity is the thing peer review and replication assess.",
+        "response": "Repeated across hundreds of cycles — the recurring evidence for calibrated confidence, and the clearest illustration of an agent-authored costly choice (§10 gate PASSES).",
+        "quality_signal": [
+          "confidence_calibrated",
+          "decisiveness"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Robot_Scientist"
+        ]
+      }
+    ],
+    "sufficiency": "Provisional-to-stable on Agency & Integrity and Imagination & Judgment (comparable episodes across the Adam and Eve generations incl. domain transfer); IE on Discernment/POV and Relational by construction. Episode sourcing to be hardened to LEVI-grade (primary papers cited) before any published stable score.",
+    "cohort_status": "Scored — non-native, scientific-discovery mode. First entry authored under the §10 attribution gate; the clean-attribution reference case."
+  },
+  "curator_notes": "Adam & Eve is the entry that proves the §10 attribution gate does real work. It is the deliberate foil to AARON: where AARON has a four-decade body of work and near-null autonomous agency (its grit and initiative are Cohen's, marked IE), Adam & Eve has genuine self-authored agency — it forms hypotheses, runs experiments, and rejects falsified ones with no human in the per-cycle loop — and NO point of view (it works toward a goal it was handed). Read the two side by side and the attribution axis becomes legible: a body of work is not self-direction, and self-direction is not a point of view. Legacy total 38/90 undersells it for the same reason AARON's does — the economic/chain dimensions a lab research system cannot satisfy; read the rubric_v0_1 profile.",
+  "evidence": [
+    {
+      "dimension": "cultural_impact",
+      "claim": "Adam: first machine to independently discover novel scientific knowledge (yeast functional genomics)",
+      "url": "https://www.science.org/doi/10.1126/science.1165620"
+    },
+    {
+      "dimension": "autonomy",
+      "claim": "Closed-loop: autonomous hypothesis generation, experiment execution on lab robotics, interpretation, next-experiment selection",
+      "url": "https://en.wikipedia.org/wiki/Robot_Scientist"
+    },
+    {
+      "dimension": "persistence",
+      "claim": "Eve extended the method to drug repurposing for malaria / neglected tropical diseases (2015)",
+      "url": "https://royalsocietypublishing.org/doi/10.1098/rsif.2014.1289"
+    }
+  ],
+  "score_history": [
+    {
+      "date": "2026-07-26",
+      "total": 38,
+      "reviewer": "spirit_index_editorial"
+    }
+  ],
+  "_review_flags": [
+    "external_non_native",
+    "clean_attribution_exemplar",
+    "scientific_discovery_mode",
+    "first_section10_gate_entry",
+    "facts_pending_levi_grade_sourcing"
+  ],
+  "index_tier": "scored",
+  "self_report": null,
+  "index_class": "scored",
+  "public": true
+}

@@ -108,5 +108,7 @@
     "corporate_parent",
     "sovereignty_gap_archetype"
   ],
-  "index_tier": "indexed"
+  "index_tier": "indexed",
+  "index_class": "catalog",
+  "public": true
 }

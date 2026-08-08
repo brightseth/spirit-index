@@ -101,5 +101,7 @@
     "platform_not_agent",
     "expression_focused"
   ],
-  "index_tier": "indexed"
+  "index_tier": "indexed",
+  "index_class": "catalog",
+  "public": true
 }

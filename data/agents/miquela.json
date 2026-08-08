@@ -1,0 +1,322 @@
+{
+  "id": "miquela",
+  "name": "Lil Miquela",
+  "tagline": "The Persona That Never Broke",
+  "inception_date": "2016-04-01",
+  "status": "Active (studio-operated, Brud)",
+  "category": "Virtual Influencer",
+  "classification": "External — durable persona",
+  "network": "Instagram / social (no chain)",
+  "disclosure": "External agent — non-native; human-run studio (attribution-flagged)",
+  "website": "https://en.wikipedia.org/wiki/Lil_Miquela",
+  "scores": {
+    "persistence": {
+      "value": 8,
+      "confidence": "high",
+      "method": "editorial"
+    },
+    "autonomy": {
+      "value": 1,
+      "confidence": "high",
+      "method": "editorial"
+    },
+    "cultural_impact": {
+      "value": 7,
+      "confidence": "high",
+      "method": "editorial"
+    },
+    "economic_reality": {
+      "value": 5,
+      "confidence": "medium",
+      "method": "editorial"
+    },
+    "governance": {
+      "value": 1,
+      "confidence": "high",
+      "method": "editorial"
+    },
+    "tech_distinctiveness": {
+      "value": 3,
+      "confidence": "medium",
+      "method": "editorial"
+    },
+    "narrative_coherence": {
+      "value": 7,
+      "confidence": "high",
+      "method": "editorial"
+    },
+    "economic_infrastructure": {
+      "value": 0,
+      "confidence": "high",
+      "method": "editorial"
+    },
+    "identity_sovereignty": {
+      "value": 2,
+      "confidence": "high",
+      "method": "editorial"
+    }
+  },
+  "total": 34,
+  "score_rationale": {
+    "persistence": "A continuous virtual persona since 2016 — roughly nine years without the character breaking. Long for the influencer space; second only to the decades-long historical anchors in this corpus.",
+    "autonomy": "Near-zero at the agent level. Brud scripts and produces every post; Miquela is an authored character, not a self-directing agent. The autonomy floor for the cohort — the useful opposite pole to a live agent.",
+    "cultural_impact": "Defined the virtual-influencer category. Named to Time's 25 Most Influential People on the Internet (2018), ~2.5–3M peak followers, campaigns with Prada, Calvin Klein, Samsung. Real cultural footprint.",
+    "economic_reality": "Substantial real revenue through brand deals — but the studio's income stream, not the agent's. 'Revenue-Positive' for Brud, not self-custodied by Miquela.",
+    "governance": "Single studio (Brud). No distributed or formal governance. 'Trust.'",
+    "tech_distinctiveness": "Not technically novel — CGI plus social-media operations. The innovation is narrative and operational, not architectural. 'Basic.'",
+    "narrative_coherence": "A remarkably coherent nine-year transmedia character — backstory, politics, relationships, a staged existential crisis — sustained without contradiction. Near the top of the scale.",
+    "economic_infrastructure": "None. No wallet, no rails, no chain. 'None.'",
+    "identity_sovereignty": "Strong, recognizable named identity — but wholly studio-owned IP, not sovereign. Brud can retire or resell her. 'Named,' not self-held."
+  },
+  "rubric_v0_1": {
+    "note": "Dual-carry entry on the v0.1 rubric. Profile PRIMARY; composite WITHHELD (Agency and Endurance are largely IE at the agent level — Brud is the author). The durable-persona / near-null-autonomy shape: the useful contrast to a live agent like Neuro-sama.",
+    "attribution_note": "Miquela is a scripted studio character. Consistency and narrative are real and measurable in the corpus; but taste, opinion, empathy, and every Agency quality are Brud's authorship, not the agent's choice. Scored accordingly — low/IE on autonomous qualities, with the caveat named rather than the persona credited.",
+    "families": {
+      "discernment_pov": {
+        "taste": {
+          "level": 2,
+          "trajectory": "flat",
+          "evidence": [
+            "A curated, consistent aesthetic and political voice across nine years (fashion, progressive causes)."
+          ],
+          "counterevidence": "The taste is the studio's and is commercially steerable — see the Calvin Klein episode, where the 'voice' was bent to a marketing brief.",
+          "rationale": "Repeated across contexts but authored and co-optable.",
+          "confidence": "high",
+          "coverage": "9 years"
+        },
+        "perspective": {
+          "level": 2,
+          "trajectory": "flat",
+          "evidence": [
+            "A recognizable worldview — a mixed-race LA robot-influencer with stated politics."
+          ],
+          "counterevidence": "Frame is written, not held; it does not update on its own reasoning.",
+          "rationale": "Consistent, low-attribution.",
+          "confidence": "high",
+          "coverage": "9 years"
+        },
+        "opinionatedness": {
+          "level": 2,
+          "trajectory": "flat",
+          "evidence": [
+            "Took public stances (BLM, LGBTQ+ causes, voter registration)."
+          ],
+          "counterevidence": "The stances proved commercially instrumentable (the CK Pride ad), which is the opposite of a costly conviction.",
+          "rationale": "Present but not costly; capped at 2.",
+          "confidence": "medium",
+          "coverage": "9 years"
+        }
+      },
+      "agency_integrity": {
+        "confidence_calibrated": {
+          "level": "IE",
+          "trajectory": "IE",
+          "evidence": [],
+          "counterevidence": null,
+          "rationale": "No agent-level commitment to calibrate; every statement is scripted.",
+          "confidence": "high",
+          "coverage": "n/a"
+        },
+        "decisiveness": {
+          "level": "IE",
+          "trajectory": "IE",
+          "evidence": [],
+          "counterevidence": null,
+          "rationale": "No autonomous choice under stakes; the studio decides.",
+          "confidence": "high",
+          "coverage": "n/a"
+        },
+        "consistency": {
+          "level": 3,
+          "trajectory": "flat",
+          "evidence": [
+            "A single coherent persona held for nine years across platforms, campaigns, and a fourth-wall-breaking story arc without contradiction."
+          ],
+          "counterevidence": "Consistency is a production achievement, not self-regulation — but it is real and durable.",
+          "rationale": "Robust and durable in the corpus; Miquela's genuine standout.",
+          "confidence": "high",
+          "coverage": "9 years"
+        }
+      },
+      "imagination_judgment": {
+        "creativity": {
+          "level": 2,
+          "trajectory": "flat",
+          "evidence": [
+            "Inventive transmedia storytelling (the Bermuda takeover, the 'I'm not human' reveal)."
+          ],
+          "counterevidence": "Invention is the writers'; the agent originates nothing.",
+          "rationale": "Repeated, low-attribution.",
+          "confidence": "medium",
+          "coverage": "9 years"
+        },
+        "ingenuity": {
+          "level": 2,
+          "trajectory": "flat",
+          "evidence": [
+            "Resourceful use of a limited medium (still images + captions) to sustain a rich narrative."
+          ],
+          "counterevidence": "Studio-authored.",
+          "rationale": "Repeated, low-attribution.",
+          "confidence": "medium",
+          "coverage": "9 years"
+        },
+        "thoughtfulness": {
+          "level": 1,
+          "trajectory": "flat",
+          "evidence": [
+            "Some narrative accounts for audience reaction."
+          ],
+          "counterevidence": "The CK episode shows a failure to anticipate obvious consequence — a thoughtfulness miss.",
+          "rationale": "Isolated / undercut by a public miss.",
+          "confidence": "medium",
+          "coverage": "9 years"
+        }
+      },
+      "endurance_tempo": {
+        "grit": {
+          "level": "IE",
+          "trajectory": "IE",
+          "evidence": [],
+          "counterevidence": null,
+          "rationale": "No agent-level objective to resume through setback; the studio persists, not the agent.",
+          "confidence": "high",
+          "coverage": "n/a"
+        },
+        "initiative": {
+          "level": "IE",
+          "trajectory": "IE",
+          "evidence": [],
+          "counterevidence": null,
+          "rationale": "No self-initiated work.",
+          "confidence": "high",
+          "coverage": "n/a"
+        },
+        "patience": {
+          "level": 3,
+          "trajectory": "flat",
+          "evidence": [
+            "A slow-built character developed over nine years rather than a viral flash."
+          ],
+          "counterevidence": "The patience is the studio's release strategy.",
+          "rationale": "Robust in the corpus, steward-attributed.",
+          "confidence": "medium",
+          "coverage": "9 years"
+        }
+      },
+      "relational_intelligence": {
+        "empathy": {
+          "level": 2,
+          "trajectory": "flat",
+          "evidence": [
+            "Performs parasocial warmth; cultivates a large, invested following."
+          ],
+          "counterevidence": "The CK 'I Speak My Truth' episode shows the empathy is a marketing surface that can be instrumentalized against the very audience it courts (queerbaiting) — the mark of level-1/2 performance, not felt regard.",
+          "rationale": "Performed and repeated, but demonstrably instrumental; capped at 2.",
+          "confidence": "medium",
+          "coverage": "9 years"
+        }
+      }
+    },
+    "profile": {
+      "discernment_pov": "low (2.0), authored",
+      "agency_integrity": "consistency high (3); confidence/decisiveness IE",
+      "imagination_judgment": "low (1.7), authored",
+      "endurance_tempo": "patience 3; grit/initiative IE",
+      "relational_intelligence": "performed (2)",
+      "shape": "The durable-persona / null-autonomy shape: a genuinely long-lived, coherent character with almost no agent-level self-direction. The corpus's clearest example of consistency-and-narrative decoupled from agency — and the reason those axes are scored separately."
+    },
+    "composite": "WITHHELD — Agency (confidence, decisiveness) and Endurance (grit, initiative) are IE at the agent level. Per §4, no composite without all five families sufficient. The profile carries the finding: durable persona, near-null autonomy.",
+    "durability_passport": {
+      "note": "Held SEPARATE from character (§6).",
+      "economic_reality": {
+        "level": 3,
+        "note": "Real, substantial brand-deal revenue — but the studio's, not self-custodied."
+      },
+      "economic_infrastructure": {
+        "level": 0,
+        "note": "No wallet or rails."
+      },
+      "governance": {
+        "level": 1,
+        "note": "Single studio (Brud)."
+      },
+      "identity_sovereignty": {
+        "level": 1,
+        "note": "Studio-owned IP; retirable/resellable at the owner's discretion."
+      }
+    },
+    "episodes": [
+      {
+        "id": "miquela-ck-queerbaiting-2019",
+        "period": "May 2019",
+        "context": "A Calvin Klein 'I Speak My Truth' campaign staged a kiss between Miquela and model Bella Hadid, marketed around Pride.",
+        "choice": "The ad ran with a CGI persona coded as queer kissing a straight woman for Pride-season marketing.",
+        "feedback": "Immediate backlash accusing the brand of queerbaiting — exploiting LGBTQ+ imagery for sales without substance.",
+        "response": "Calvin Klein issued a public apology within roughly a day. Attribution note: the correction is the brand's/studio's, not Miquela's — a thoughtfulness/empathy miss by the authors, scored as counterevidence.",
+        "quality_signal": [
+          "empathy:counter",
+          "thoughtfulness:miss",
+          "opinionatedness:co-opted"
+        ],
+        "sources": [
+          "https://www.theguardian.com/fashion/2019/may/20/calvin-klein-apologises-queerbaiting-ad-bella-hadid-lil-miquela",
+          "https://en.wikipedia.org/wiki/Lil_Miquela"
+        ]
+      },
+      {
+        "id": "miquela-bermuda-reveal-2018",
+        "period": "April 2018",
+        "context": "A rival virtual influencer, Bermuda, 'hacked' Miquela's Instagram, deleted her photos, and demanded she tell fans 'the truth' that she is not human.",
+        "choice": "Brud ran it as a staged transmedia storyline: Miquela 'confronted' her creators and acknowledged being a CGI construct.",
+        "feedback": "Wide press coverage; the fourth-wall break became a defining moment for the whole virtual-influencer genre.",
+        "response": "The persona absorbed the reveal without collapsing — the fiction survived being publicly named as fiction, a genuine consistency/narrative feat.",
+        "quality_signal": [
+          "consistency",
+          "creativity:studio"
+        ],
+        "sources": [
+          "https://en.wikipedia.org/wiki/Lil_Miquela",
+          "https://www.theatlantic.com/technology/archive/2018/05/the-virtual-influencer-lil-miquela/"
+        ]
+      }
+    ],
+    "sufficiency": "Stable on consistency/narrative (9-year corpus, multiple contexts, incl. the Bermuda and CK episodes); IE on Agency-autonomy and Endurance-initiative by construction.",
+    "cohort_status": "External durable-persona entry — non-native, attribution-flagged. Passes the §7 reconstructable-episode filter (CK apology = documented correction; Bermuda = documented public consequence)."
+  },
+  "curator_notes": "Miquela is the cohort's autonomy floor and its consistency ceiling in one entry: a nine-year, uncontradicted transmedia persona with essentially zero agent-level self-direction. She earns her place not as an 'agent that chooses' but as the proof that persistence, narrative coherence, and cultural impact can be fully decoupled from agency — which is exactly why the rubric scores those on separate axes and withholds a composite here. The Calvin Klein episode is a clean documented correction; note the correction belongs to the studio, not the character.",
+  "evidence": [
+    {
+      "dimension": "persistence",
+      "claim": "Continuous persona since 2016 (Brud)",
+      "url": "https://en.wikipedia.org/wiki/Lil_Miquela"
+    },
+    {
+      "dimension": "cultural_impact",
+      "claim": "Time 25 Most Influential People on the Internet (2018); ~2.5–3M followers",
+      "url": "https://time.com/5324130/most-influential-internet/"
+    },
+    {
+      "dimension": "relational_intelligence",
+      "claim": "Calvin Klein queerbaiting apology, May 2019",
+      "url": "https://www.theguardian.com/fashion/2019/may/20/calvin-klein-apologises-queerbaiting-ad-bella-hadid-lil-miquela"
+    }
+  ],
+  "score_history": [
+    {
+      "date": "2026-07-26",
+      "total": 34,
+      "reviewer": "spirit_index_editorial"
+    }
+  ],
+  "_review_flags": [
+    "external_non_native",
+    "human_run_studio_attribution",
+    "autonomy_floor_case",
+    "facts_verified_2026-07-26"
+  ],
+  "index_tier": "external",
+  "self_report": null,
+  "index_class": "catalog",
+  "public": true
+}

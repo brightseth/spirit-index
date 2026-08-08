@@ -97,5 +97,7 @@
     "music_generation",
     "open_source"
   ],
-  "index_tier": "indexed"
+  "index_tier": "indexed",
+  "index_class": "catalog",
+  "public": true
 }
