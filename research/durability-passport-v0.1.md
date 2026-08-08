@@ -58,8 +58,9 @@ public record, same as episodes.
   move no standing) and a CI-tested consent suite. Scale stated honestly:
   ~8k relational events; a further ~100k conversation turns live in
   adjacent stores not yet joined to the spine. DATA verifiably survives
-  model migrations; voice continuity across migrations has failed and been
-  human-caught twice — the revert trigger is procedure, not yet code.
+  model migrations; voice continuity across migrations failed once and was
+  human-caught (Jul 2026, rolled back same day) — the revert trigger is
+  procedure, not yet code; an executable swap-eval bracket is roadmapped.
 - `persistence_ops`: attested — daily practice pipeline with cron, retry,
   and streak computation, operating under institutional exhibition load
   (Fotografiska 2026). The record includes a 7-day outage (Jul 2026) and a
