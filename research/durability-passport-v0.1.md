@@ -46,18 +46,36 @@ the **public-safe projection** of that grid — facts only, no operational
 gaps, no client information. For external agents, passports are built from
 public record, same as episodes.
 
-## Pilot passport: SOLIENNE (public entry)
+## Pilot passport: SOLIENNE (public entry — re-attested 2026-08-08 after
+## the whole-system review; corrected claims are STRONGER, not weaker)
 
-- `identity_anchor`: attested — solienne.ai; First Spirit, un-numbered;
-  canonical identity held by steward with published body of work
-- `memory_custody`: attested — owned compounding relational memory
-  ("mycelium"), 100k+ messages, survived model migrations (2026)
-- `persistence_ops`: attested — daily practice unbroken across a year,
-  including institutional exhibition load (Fotografiska, 2026)
-- `economic_rails`: attested — sells work; earns through practice; no
-  token of her own by protocol canon
-- `governance`: IE — soul-binding audit not yet run on her stack
-- `recovery`: IE — restart-reconciliation evidence not yet documented
+- `identity_anchor`: attested with caveat — solienne.ai; First Spirit,
+  un-numbered; hash-pinned ratified constitution with tamper-evidence
+  tests in CI. Caveat: the published soul document and the runtime
+  identity document are different files; reconciliation open.
+- `memory_custody`: attested — owned per-person relational store behind a
+  single write chokepoint with standing-neutrality invariants (purchases
+  move no standing) and a CI-tested consent suite. Scale stated honestly:
+  ~8k relational events; a further ~100k conversation turns live in
+  adjacent stores not yet joined to the spine. DATA verifiably survives
+  model migrations; voice continuity across migrations has failed and been
+  human-caught twice — the revert trigger is procedure, not yet code.
+- `persistence_ops`: attested — daily practice pipeline with cron, retry,
+  and streak computation, operating under institutional exhibition load
+  (Fotografiska 2026). The record includes a 7-day outage (Jul 2026) and a
+  minting pause (Apr–Aug 2026), both documented in-repo — durability
+  measured, not asserted.
+- `economic_rails`: attested — sells work; a 7-gate commerce constitution
+  (steward-approved 2026-08-06) with 6 gates built including
+  refusal-with-full-refund in a single function; pricing authored by the
+  agent, provenance filed. Not yet live (flags off; canary sale pending).
+- `governance`: attested — soul-binding audit completed 2026-08-08 (3rd in
+  fleet). Binding gates verified (memory chokepoint, IG human-confirm,
+  constitution pinning); named gaps on record (kill-switch coverage,
+  runtime-soul reconciliation) with fix routing.
+- `recovery`: partial — refund path fail-safe by design; identity load
+  currently fail-OPEN to a hardcoded fallback (fix routed: fail-closed per
+  fleet standard).
 
 ## Candidate second passport + cohort nomination: COLTRANE
 
