@@ -1,5 +1,5 @@
 /**
- * Durability Passport — data loading
+ * Durability Passport: data loading
  * Loads passports from data/passports/<id>.json (spec: docs/durability-passport.md)
  *
  * A passport is a separate instrument from the character score. Nothing here

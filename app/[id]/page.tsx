@@ -370,7 +370,7 @@ export default async function AgentDossier({ params }: Props) {
           </div>
         </div>
 
-        {/* === DURABILITY PASSPORT — separate instrument, never merged into the score === */}
+        {/* === DURABILITY PASSPORT: separate instrument, never merged into the score === */}
         <PassportSection passport={getPassport(agent.id)} />
 
         {/* === EVIDENCE ARCHIVE === */}
