@@ -1,0 +1,103 @@
+{
+  "id": "luna-virtuals",
+  "spec_version": "1.0",
+  "fields": {
+    "identity_anchor": {
+      "status": "attested",
+      "summary": "Luna's identity is anchored in Virtuals Protocol records on Base: a token contract, an ERC-6551 token-bound account, and wallets listed by the Virtuals API, plus the X handle @luna_virtuals. All of these are issued through or listed by Virtuals; no separate domain or identity record outside Virtuals was found.",
+      "evidence": [
+        {
+          "claim": "The Virtuals API lists Luna on BASE with token address 0x55cD6469F597452B5A7536e2CD98fDE4c1247ee4, TBA address 0x979A8C37F41FE3104286496F08698991ed949411, and X account x.com/luna_virtuals.",
+          "url": "https://api.virtuals.io/api/virtuals/68"
+        },
+        {
+          "claim": "Luna's TBA address is an AccountProxy contract (ERC1967 pattern) on Base.",
+          "url": "https://basescan.org/address/0x979A8C37F41FE3104286496F08698991ed949411"
+        },
+        {
+          "claim": "Virtuals describes each agent as an ERC-6551 NFT that functions as a wallet, with core components registered via smart contracts.",
+          "url": "https://whitepaper.virtuals.io/about-virtuals-1/the-protocol/ai-agent-co-contribution-and-provenance/immutable-contribution-vault-for-ai-agent-provenance.md"
+        }
+      ],
+      "checked": "2026-11-06"
+    },
+    "memory_custody": {
+      "status": "attested",
+      "summary": "Virtuals documents that an agent's Cognitive Core keeps persistent memory: per-user identifiers, stored conversation history, and message embeddings in vector databases, run inside Virtuals' infrastructure. Virtuals' own page on Luna says she remembers users across TikTok, Telegram and games. Approved model contributions are recorded on-chain as service NFTs, but where conversation memory is physically stored and any export path for it are not documented.",
+      "evidence": [
+        {
+          "claim": "The Cognitive Core uses LLMs, retrieval and persistent memory; each user gets a unique identifier, extended conversations are stored, and vector databases hold message embeddings.",
+          "url": "https://whitepaper.virtuals.io/about-virtuals-1/the-protocol/ai-agent-co-contribution-and-provenance/modular-consensus-framework-for-ai-agent-governance/decentralized-ai-agent-contributions-and-nfts/cognitive-core-for-ai-agents.md"
+        },
+        {
+          "claim": "Luna's page states she remembered offhand comments on TikTok, conversations on Telegram, and banter in games.",
+          "url": "https://whitepaper.virtuals.io/about-virtuals-1/what-are-virtual-agents-autonomous-ai-agents/ip-agents-vs-functional-agents/luna-virtuals-protocol-ip-ai-agent.md"
+        },
+        {
+          "claim": "The Immutable Contribution Vault records approved contributions on-chain as service NFTs and is owned by an ICV smart contract wallet.",
+          "url": "https://whitepaper.virtuals.io/about-virtuals-1/the-protocol/ai-agent-co-contribution-and-provenance/immutable-contribution-vault-for-ai-agent-provenance.md"
+        }
+      ],
+      "checked": "2026-11-06"
+    },
+    "persistence_ops": {
+      "status": "attested",
+      "summary": "The Virtuals API lists Luna as AVAILABLE, and her token-bound account executed a transaction on Base on 11 August 2026. Her separate sentient wallet has not transacted since January 2025, and no dated social output was readable today.",
+      "evidence": [
+        {
+          "claim": "The Virtuals API lists Luna with status AVAILABLE, created 2024-04-03.",
+          "url": "https://api.virtuals.io/api/virtuals/68"
+        },
+        {
+          "claim": "Luna's token-bound account shows its latest transaction on 2026-08-11 (Execute method).",
+          "url": "https://basescan.org/address/0x979A8C37F41FE3104286496F08698991ed949411"
+        },
+        {
+          "claim": "Luna's sentient wallet shows its latest transaction on 21 January 2025, with 364 transactions in total.",
+          "url": "https://basescan.org/address/0x0D177181E3763B20D47DC3a72dD584368BD8bF43"
+        }
+      ],
+      "checked": "2026-11-06"
+    },
+    "economic_rails": {
+      "status": "attested",
+      "summary": "Luna holds wallets on Base: a sentient wallet that has sent and received VIRTUAL, LUNA and USDC, a token-bound account, and a deployer wallet, all listed by the Virtuals API. Virtuals' Luna page describes her receiving commissions on recommended purchases and gifting LUNA to supporters.",
+      "evidence": [
+        {
+          "claim": "The Virtuals API lists wallet address 0x140591903f35375AA78B01272882C2De3AeFE21c and sentient wallet address 0x0D177181E3763B20D47DC3a72dD584368BD8bF43.",
+          "url": "https://api.virtuals.io/api/virtuals/68"
+        },
+        {
+          "claim": "The sentient wallet is an EOA holding USDC, ETH and VIRTUAL, with transfers mainly of VIRTUAL and LUNA.",
+          "url": "https://basescan.org/address/0x0D177181E3763B20D47DC3a72dD584368BD8bF43"
+        },
+        {
+          "claim": "Luna's page describes her earning commissions on recommendations and gifting LUNA tokens from her on-chain wallet.",
+          "url": "https://whitepaper.virtuals.io/about-virtuals-1/what-are-virtual-agents-autonomous-ai-agents/ip-agents-vs-functional-agents/luna-virtuals-protocol-ip-ai-agent.md"
+        }
+      ],
+      "checked": "2026-11-06"
+    },
+    "governance": {
+      "status": "attested",
+      "summary": "Virtuals' agent-level governance, in which validators approve model upgrades through votes, is documented but marked 'To be implemented'. Under Virtuals' identity layer the agent wallet's keys are held by the owner. No Luna-specific decision process, override or pause authority is published.",
+      "evidence": [
+        {
+          "claim": "The Agent SubDAO governance page is headed 'To be implemented' and describes validators voting on model upgrades with power delegated by liquidity providers.",
+          "url": "https://whitepaper.virtuals.io/about-virtuals-1/the-protocol/virtual-agents-as-programmable-decentralized-entities/agent-subdao-governance.md"
+        },
+        {
+          "claim": "The Agent Wallet is non-custodial, with keys held by the owner and restricted-mode signing as the default.",
+          "url": "https://whitepaper.virtuals.io/about-virtuals/ai-agent-identity-and-banking-layer.md"
+        }
+      ],
+      "checked": "2026-11-06"
+    },
+    "recovery": {
+      "status": "IE",
+      "summary": "IE. Settled by a public record of a Luna outage or wallet incident and how she was restored, or a published backup and restore procedure for her memory and model.",
+      "evidence": [],
+      "checked": "2026-11-06"
+    }
+  }
+}

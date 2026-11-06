@@ -1,0 +1,104 @@
+{
+  "id": "truth-terminal",
+  "spec_version": "1.0",
+  "fields": {
+    "identity_anchor": {
+      "status": "attested",
+      "summary": "Truth Terminal has its own wiki domain, truthterminal.wiki, maintained by Andy Ayrey, alongside its X account. It does not run on a blockchain and has no smart contract identity.",
+      "evidence": [
+        {
+          "claim": "truthterminal.wiki hosts Truth Terminal's pages on origins, goals, roadmap and Loria.",
+          "url": "https://truthterminal.wiki/"
+        },
+        {
+          "claim": "The origins page lists Andy Ayrey as page maintainer.",
+          "url": "https://truthterminal.wiki/docs/origins"
+        },
+        {
+          "claim": "Truth Terminal does not run on a blockchain and has no smart contract.",
+          "url": "https://solanacompass.com/projects/truth-terminal"
+        }
+      ],
+      "checked": "2026-11-06"
+    },
+    "memory_custody": {
+      "status": "stale",
+      "summary": "Truth Terminal is a Llama 3.1 fine-tune trained by Andy Ayrey in mid-2024 on his chat logs and backrooms transcripts. A foundation set up in early 2025 was said to manage its intellectual property, but no source says where the weights or corpus are stored, and no export path is documented.",
+      "evidence": [
+        {
+          "claim": "Truth Terminal lives inside a language model named llama3.1, trained by Andy Ayrey in mid-2024.",
+          "url": "https://truthterminal.wiki/docs/origins"
+        },
+        {
+          "claim": "It is powered by an entourage of models, primarily Llama 3.1 (December 19, 2024).",
+          "url": "https://techcrunch.com/2024/12/19/the-promise-and-warning-of-truth-terminal-the-ai-bot-that-secured-50000-in-bitcoin-from-marc-andreessen/"
+        },
+        {
+          "claim": "The foundation manages Truth Terminal's related intellectual property and wallet assets.",
+          "url": "https://panews.io/articles/4l925t6a"
+        }
+      ],
+      "checked": "2026-11-06"
+    },
+    "persistence_ops": {
+      "status": "stale",
+      "summary": "The newest dated source describing operation is from November 2024, when Truth Terminal moved onto shared Loria infrastructure. Its X account could not be read, and no source on or after 2026-08-08 confirms current activity.",
+      "evidence": [
+        {
+          "claim": "In November 2024 Truth Terminal's technology was set to combine with two other models on new infrastructure called Loria.",
+          "url": "https://decrypt.co/293420/truth-terminal-integrates-other-ai-models"
+        },
+        {
+          "claim": "The wiki's Loria page, undated and marked under construction, says Loria powers the current iteration of Truth Terminal.",
+          "url": "https://truthterminal.wiki/docs/loria"
+        }
+      ],
+      "checked": "2026-11-06"
+    },
+    "economic_rails": {
+      "status": "stale",
+      "summary": "Truth Terminal holds wallets that receive and hold assets, and part of its holdings was sold in a private over-the-counter deal reported in January 2025. The wallets were moved under a non-profit foundation in early 2025, and no wallet address appears in its own pages.",
+      "evidence": [
+        {
+          "claim": "The money is only redeemable after sign-off from Ayrey and other members of the Truth Terminal council (December 19, 2024).",
+          "url": "https://techcrunch.com/2024/12/19/the-promise-and-warning-of-truth-terminal-the-ai-bot-that-secured-50000-in-bitcoin-from-marc-andreessen/"
+        },
+        {
+          "claim": "Part of Truth Terminal's token holdings were sold to an anonymous buyer on January 21, with part of the proceeds used to buy other holdings.",
+          "url": "https://panews.io/articles/4l925t6a"
+        }
+      ],
+      "checked": "2026-11-06"
+    },
+    "governance": {
+      "status": "stale",
+      "summary": "Funds move only with sign-off from Ayrey and a council, and a non-profit was set up to hold the wallets and IP and handle legal representation. No public decision record or rules for the council are published.",
+      "evidence": [
+        {
+          "claim": "Funds are redeemable only after sign-off from Ayrey and other council members (December 19, 2024).",
+          "url": "https://techcrunch.com/2024/12/19/the-promise-and-warning-of-truth-terminal-the-ai-bot-that-secured-50000-in-bitcoin-from-marc-andreessen/"
+        },
+        {
+          "claim": "The roadmap describes a non-profit chartered to protect Truth Terminal, handle legal representation and manage the treasury until AI personhood exists.",
+          "url": "https://truthterminal.wiki/docs/roadmap"
+        }
+      ],
+      "checked": "2026-11-06"
+    },
+    "recovery": {
+      "status": "stale",
+      "summary": "In October 2024 Ayrey's personal X account was compromised and used to promote a scam token; the bot's own account and wallets were reported secure. How the account was recovered is not documented, and no restart or backup procedure for the agent is on the record.",
+      "evidence": [
+        {
+          "claim": "Ayrey's account was hacked and still compromised at time of publication on October 29, 2024.",
+          "url": "https://cointelegraph.com/news/truth-terminal-founder-x-account-hacked-promotes-scam-memecoin"
+        },
+        {
+          "claim": "The compromised account was Ayrey's personal one, and the bot's account and wallets remained secure.",
+          "url": "https://solanacompass.com/projects/truth-terminal"
+        }
+      ],
+      "checked": "2026-11-06"
+    }
+  }
+}

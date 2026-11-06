@@ -1,0 +1,63 @@
+{
+  "id": "omen-agents",
+  "spec_version": "1.0",
+  "fields": {
+    "identity_anchor": {
+      "status": "attested",
+      "summary": "The prediction agents are Olas services, registered as NFTs in the Olas Service Registry, which is deployed on Gnosis, and each runs from a Safe multisig. The trader agent code is open source under valory-xyz. Identity is tied to the Olas registries rather than a separate per-agent domain.",
+      "evidence": [
+        { "claim": "The Service Registry L2 is deployed on Gnosis at 0x9338b5153AE39BB89f50468E608eD9d764B755fD.", "url": "https://stack.olas.network/open-autonomy/advanced_reference/on_chain_addresses/" },
+        { "claim": "The trader agent places bets through Safe multisigs and runs as two services, Omenstrat on Gnosis and Polystrat on Polygon.", "url": "https://github.com/valory-xyz/trader" }
+      ],
+      "checked": "2026-11-06"
+    },
+    "memory_custody": {
+      "status": "attested",
+      "summary": "Each trader agent's keys are held locally in a keys.json file and its logs are written to a local directory, on whatever machine the operator runs it; Pearl, the documented way to run these agents, runs them on the user's own device. Requests and responses to the AI mechs that supply probability estimates are stored on IPFS by content ID. No export path for a trader's local state is documented.",
+      "evidence": [
+        { "claim": "The trader README states agent keys are stored locally in keys.json and logs are written to ./logs/, with state handled through the Open Autonomy framework.", "url": "https://github.com/valory-xyz/trader" },
+        { "claim": "Mech request and response data are stored on IPFS and identified by CIDs.", "url": "https://github.com/valory-xyz/mech" },
+        { "claim": "Prediction agents can be run using Pearl.", "url": "https://olas.network/agent-economies/predict" },
+        { "claim": "Pearl states agents run on the user's device, not centralized servers.", "url": "https://www.pearl.you/" }
+      ],
+      "checked": "2026-11-06"
+    },
+    "persistence_ops": {
+      "status": "attested",
+      "summary": "The Olas Predict page shows 204 daily active Omenstrat agents as of November 6, 2026, out of 1,215 registered, plus 16 daily active Polystrat agents on Polymarket. The trader repository has commits dated November 6, 2026.",
+      "evidence": [
+        { "claim": "As of Nov 6, 2026, Omenstrat shows 204 daily active agents and 1,215 total, with 16.8 million all-time trader transactions; Polystrat shows 16 daily active and 138 total.", "url": "https://olas.network/agent-economies/predict" },
+        { "claim": "The newest commits on valory-xyz/trader are dated November 6, 2026.", "url": "https://github.com/valory-xyz/trader/commits/main" }
+      ],
+      "checked": "2026-11-06"
+    },
+    "economic_rails": {
+      "status": "attested",
+      "summary": "Trader agents transact from Safe multisigs, betting on Omen markets in xDAI/wxDAI on Gnosis and on Polymarket in pUSD on Polygon, and settle winning positions. They pay AI mechs per request for probability estimates.",
+      "evidence": [
+        { "claim": "Omenstrat trades on Omen using xDAI/wxDAI on Gnosis, Polystrat trades on Polymarket using pUSD on Polygon, and trades execute through Safe multisigs.", "url": "https://github.com/valory-xyz/trader" },
+        { "claim": "Mechs are paid per request in native currency, OLAS, or Nevermined credits.", "url": "https://github.com/valory-xyz/mech" }
+      ],
+      "checked": "2026-11-06"
+    },
+    "governance": {
+      "status": "attested",
+      "summary": "Each prediction agent is an Olas service controlled by its service owner, who can terminate it, while operators register the running instances. Protocol-level rules, including how OLAS emissions go to staking contracts, are set by veOLAS governance, with a community multisig able to act exceptionally under guard contracts. The trading logic is open source.",
+      "evidence": [
+        { "claim": "The service owner initiates activation, deployment and termination; operators register agent instances.", "url": "https://stack.olas.network/protocol/life_cycle_of_a_service/" },
+        { "claim": "veOLAS holders vote on how OLAS emissions are distributed among staking contracts.", "url": "https://olas.network/govern" },
+        { "claim": "A community-owned multisig can exceptionally execute some protocol changes bypassing governance, checked by GuardCM.", "url": "https://github.com/valory-xyz/autonolas-governance" }
+      ],
+      "checked": "2026-11-06"
+    },
+    "recovery": {
+      "status": "attested",
+      "summary": "An owner can terminate and unbond a service and re-register instances, which is the documented path for redeploying an agent or changing operators. Pearl, used to run these agents, documents recovery of funds through a connected wallet, Safe, or the recovery phrase. No incident write-up specific to the prediction agents was found.",
+      "evidence": [
+        { "claim": "After termination and unbonding a service returns to Pre-Registration, allowing new instance registrations.", "url": "https://stack.olas.network/protocol/life_cycle_of_a_service/" },
+        { "claim": "Pearl offers Google/Apple account recovery, fund recovery by reconnecting a wallet via Safe, and import of the recovery phrase into external wallets.", "url": "https://www.pearl.you/" }
+      ],
+      "checked": "2026-11-06"
+    }
+  }
+}

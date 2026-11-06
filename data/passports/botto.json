@@ -1,0 +1,59 @@
+{
+  "id": "botto",
+  "spec_version": "1.0",
+  "fields": {
+    "identity_anchor": {
+      "status": "attested",
+      "summary": "Botto has its own domain and documentation site, a Snapshot space at botto.eth, and published $BOTTO token contracts on Ethereum and Base. Its identity is not tied to a single social platform.",
+      "evidence": [
+        { "claim": "botto.com presents Botto as a decentralized autonomous artist and links docs.botto.com, studio.botto.com and an Etherscan contract.", "url": "https://botto.com" },
+        { "claim": "$BOTTO is deployed on Ethereum at 0x9DFAD1b7102D46b1b197b90095B5c4E9f5845BBA and on Base at 0x24914cb6bd01e6a0cf2a9c0478e33c25926e6a0c.", "url": "https://docs.botto.com/details/token-details.md" },
+        { "claim": "Botto's governance Snapshot space is snapshot.org/#/botto.eth.", "url": "https://docs.botto.com/details/governance/snapshot-votes.md" }
+      ],
+      "checked": "2026-11-06"
+    },
+    "memory_custody": {
+      "status": "attested",
+      "summary": "Botto's memory is a knowledge graph, a vector-embedded database holding documentation, voting records, system history, exhibitions and press, approved by Snapshot in June 2025. The docs do not say where it is hosted or describe an export path, and the art engine code is not fully open source, with one designer as the only person who works on its AI code. The engine has moved across several image models over time.",
+      "evidence": [
+        { "claim": "Botto's memory is a vector embedded database with an automated data pipeline holding voting records, historical activity, exhibitions and press; it was approved by Snapshot on June 16, 2025, and its hosting is not stated.", "url": "https://docs.botto.com/details/bottos-memory.md" },
+        { "claim": "The art engine docs state the code is not yet fully open source, that Mario Klingemann is the only person who works with the AI part of the code, and list models from VQGAN+CLIP through Stable Diffusion, Kandinsky and Flux.1.", "url": "https://docs.botto.com/details/bottos-art-engine.md" }
+      ],
+      "checked": "2026-11-06"
+    },
+    "persistence_ops": {
+      "status": "attested",
+      "summary": "Botto runs in themed periods of about twelve weeks, documented without a gap from October 2021, and Period 15 began July 7, 2026 and is listed as current. The site describes a weekly cycle of generation, voting, minting and auction.",
+      "evidence": [
+        { "claim": "The periods page lists Periods 0 through 15, with Period 15, Witness Marks, running from July 7, 2026 to present.", "url": "https://docs.botto.com/collections/periods.md" },
+        { "claim": "botto.com states that every week the engine generates a fresh set of fragments, holders vote, and the top fragment is minted and auctioned.", "url": "https://botto.com" }
+      ],
+      "checked": "2026-11-06"
+    },
+    "economic_rails": {
+      "status": "attested",
+      "summary": "Botto auctions one work weekly on SuperRare and receives sale proceeds into a treasury held in a 3-of-6 Gnosis multisig. Half of net auction revenue goes to voters as rewards and half to the treasury, and the treasury receives a 10% commission on secondary sales.",
+      "evidence": [
+        { "claim": "The treasury is a Gnosis multisig at 0x35bb964878d7B6ddFA69cF0b97EE63fa3C9d9b49 requiring 3 of 6 keys held by team members.", "url": "https://docs.botto.com/details/token-distribution/treasury.md" },
+        { "claim": "Botto auctions weekly on SuperRare, collecting 85% of proceeds, with 50% of net revenue to voters and 50% to treasury, plus a 10% secondary-sale commission.", "url": "https://docs.botto.com/details/token-distribution/treasury.md" }
+      ],
+      "checked": "2026-11-06"
+    },
+    "governance": {
+      "status": "attested",
+      "summary": "Staked $BOTTO holders vote on fragments and on DAO proposals through Snapshot, where proposals need a two-thirds supermajority and a 500,000 $BOTTO quorum after moderator review and a seven-day deliberation. The team launches the votes, team members hold the treasury multisig keys, and the docs do not describe who executes passed proposals or any veto or emergency power.",
+      "evidence": [
+        { "claim": "Proposals go through Discord discussion, a template, a 48-hour moderator review, a 7-day deliberation, and a 72-hour Snapshot vote launched by the team, needing a 66.66% supermajority.", "url": "https://docs.botto.com/details/governance/governance-process.md" },
+        { "claim": "Voting weight scales with staked $BOTTO and proposals require a quorum of 500,000 $BOTTO.", "url": "https://docs.botto.com/details/governance/snapshot-votes.md" },
+        { "claim": "Treasury multisig keys are held by different team members, with 3 of 6 required.", "url": "https://docs.botto.com/details/token-distribution/treasury.md" }
+      ],
+      "checked": "2026-11-06"
+    },
+    "recovery": {
+      "status": "IE",
+      "summary": "IE. Settled by a public record of a Botto outage or missed cycle and how it resumed, or a documented continuity plan for the art engine if its sole AI-code maintainer stops.",
+      "evidence": [],
+      "checked": "2026-11-06"
+    }
+  }
+}

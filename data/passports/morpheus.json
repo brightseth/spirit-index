@@ -1,0 +1,104 @@
+{
+  "id": "morpheus",
+  "spec_version": "1.0",
+  "fields": {
+    "identity_anchor": {
+      "status": "attested",
+      "summary": "Morpheus has open-source repositories under the MorpheusAIs GitHub organization, MIT-licensed, and documents its token contracts and community multisigs on Ethereum, Arbitrum and Base. The Ethereum multisig is named MOR.ETH on ENS.",
+      "evidence": [
+        {
+          "claim": "Docs list MOR token contracts on Ethereum, Arbitrum and Base, community multisigs on each chain, and the ENS name MOR.ETH for the Ethereum multisig.",
+          "url": "https://gitbook.mor.org/smart-contracts"
+        },
+        {
+          "claim": "The Morpheus-Lumerin-Node repository is public under MorpheusAIs, MIT-licensed, not archived.",
+          "url": "https://api.github.com/repos/MorpheusAIs/Morpheus-Lumerin-Node"
+        }
+      ],
+      "checked": "2026-11-06"
+    },
+    "memory_custody": {
+      "status": "attested",
+      "summary": "Morpheus is a network, not one agent. Its desktop node keeps services, proxy-router data and the wallet store on the user's own machine, and the code is open source. Its docs say Smart Agents run on the user's laptop. Recovery depends on the user's mnemonic; no other export or backup procedure for local data is documented.",
+      "evidence": [
+        {
+          "claim": "MorpheusUI keeps downloaded services, proxy-router data and the wallet store in Electron's userData directory on the user's machine, protected by a local password.",
+          "url": "https://nodedocs.mor.org/consumers/quickstart"
+        },
+        {
+          "claim": "Smart Agents run on the user's laptop with 8 to 16 GB of RAM.",
+          "url": "https://github.com/MorpheusAIs/Docs/blob/main/README.md"
+        },
+        {
+          "claim": "The consumer troubleshooting guide says to save the mnemonic phrase before a full reset.",
+          "url": "https://nodedocs.mor.org/consumers/troubleshooting"
+        }
+      ],
+      "checked": "2026-11-06"
+    },
+    "persistence_ops": {
+      "status": "attested",
+      "summary": "Morpheus code is under active development: the main node repository was last pushed on 3 November 2026. A proxy-router bug opened on 2 November 2026 has fixes merged to the dev branch and promoted to a test release.",
+      "evidence": [
+        {
+          "claim": "The Morpheus-Lumerin-Node repository shows pushed_at 2026-11-03.",
+          "url": "https://api.github.com/repos/MorpheusAIs/Morpheus-Lumerin-Node"
+        },
+        {
+          "claim": "Issue 1011, opened 2 November 2026, has fixes merged to dev (PR 1032) and promoted as v7.19.10-test.",
+          "url": "https://github.com/MorpheusAIs/Morpheus-Lumerin-Node/issues/1011"
+        }
+      ],
+      "checked": "2026-11-06"
+    },
+    "economic_rails": {
+      "status": "attested",
+      "summary": "The network transacts in MOR, whose token contracts are listed on Ethereum, Arbitrum and Base along with a community multisig on each chain. Users stake MOR to open inference sessions with providers, and unused stake returns when a session is closed.",
+      "evidence": [
+        {
+          "claim": "MOR token contracts: Ethereum 0xcbb8f1bda10b9696c57e13bc128fe674769dcec0, Arbitrum 0x092baadb7def4c3981454dd9c0a0d7ff07bcfc86, Base 0x7431ada8a591c955a994a21710752ef9b882b8e3, with community multisigs on each chain.",
+          "url": "https://gitbook.mor.org/smart-contracts"
+        },
+        {
+          "claim": "Closing a session returns unused stake immediately; the used stipend becomes claimable after about one UTC day.",
+          "url": "https://nodedocs.mor.org/consumers/troubleshooting"
+        }
+      ],
+      "checked": "2026-11-06"
+    },
+    "governance": {
+      "status": "attested",
+      "summary": "Changes are proposed through Morpheus Requests for Comment (MRCs) in a public repository, discussed in a Discord forum, and given statuses such as Implemented or Under Discussion. Treasury and contracts are tied to community multisig accounts, but who signs them, and any pause or upgrade authority, is not documented.",
+      "evidence": [
+        {
+          "claim": "The MRC repository describes proposals to improve the Morpheus reference implementations, discussed on a dedicated Discord forum, with 91 MRCs listed by status.",
+          "url": "https://github.com/MorpheusAIs/MRC"
+        },
+        {
+          "claim": "Docs list 'Community Multisignature Accounts' on each chain without naming signers, upgradeability or pause authority.",
+          "url": "https://gitbook.mor.org/smart-contracts"
+        },
+        {
+          "claim": "Docs state agents should not be given private keys or allowed to make transactions on their own; users approve transaction payloads.",
+          "url": "https://github.com/MorpheusAIs/Docs/blob/main/README.md"
+        }
+      ],
+      "checked": "2026-11-06"
+    },
+    "recovery": {
+      "status": "attested",
+      "summary": "Node operators have a documented recovery path: restart the proxy router, close stuck sessions to recover stake, and reset from the saved mnemonic. Bugs are tracked and fixed in public, as with a November 2026 issue where stake was locked in sessions the API reported as failed. No network-wide outage postmortem was found.",
+      "evidence": [
+        {
+          "claim": "The troubleshooting guide documents closing sessions to recover stake, restarting the proxy router, and resetting after saving the mnemonic.",
+          "url": "https://nodedocs.mor.org/consumers/troubleshooting"
+        },
+        {
+          "claim": "Issue 1011 documents stake locked in sessions the API said did not exist, with fixes merged and promoted to a test release pending main.",
+          "url": "https://github.com/MorpheusAIs/Morpheus-Lumerin-Node/issues/1011"
+        }
+      ],
+      "checked": "2026-11-06"
+    }
+  }
+}

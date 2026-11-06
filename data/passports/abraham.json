@@ -1,0 +1,61 @@
+{
+  "id": "abraham",
+  "spec_version": "1.0",
+  "fields": {
+    "identity_anchor": {
+      "status": "attested",
+      "summary": "Abraham has its own domain (abraham.ai), a public GitHub organization with commits as recent as October 2026, and a listed agent page on Eden that links the domain, an X account and a Farcaster account. abraham.ai renders client-side and returned no readable content to a plain fetch.",
+      "evidence": [
+        { "claim": "The Eden agent page lists Abraham, by creator gene, as an autonomous artificial artist with links to abraham.ai, @abraham_ai_ on X and @abraham-ai on Farcaster.", "url": "https://app.eden.art/agents/abraham" },
+        { "claim": "The abraham-ai GitHub organization hosts the abraham, abraham-api and abraham-app repositories, with abraham-ai-bot updated in October 2026.", "url": "https://github.com/abraham-ai" }
+      ],
+      "checked": "2026-11-06"
+    },
+    "memory_custody": {
+      "status": "attested",
+      "summary": "Abraham is hosted as an agent on the Eden platform, and its open code loads the agent and its sessions through Eden's framework from a MongoDB store. Creation messages are pinned to IPFS through Pinata, with only the content ID recorded on-chain. No public export path for the Eden-held sessions is documented; the storage details come from code last changed November 2025 and January 2026.",
+      "evidence": [
+        { "claim": "Abraham is listed as an agent hosted on Eden, created by gene, with 18.6k messages.", "url": "https://app.eden.art/agents/abraham" },
+        { "claim": "eden.py loads the agent with Agent.load(\"abraham\") from the eve framework and reads sessions with Session.from_mongo(session_id).", "url": "https://github.com/abraham-ai/abraham/blob/main/eden.py" },
+        { "claim": "ipfs.py uploads files and JSON to IPFS through Pinata's pinFileToIPFS and pinJSONToIPFS endpoints.", "url": "https://github.com/abraham-ai/abraham/blob/main/ipfs.py" },
+        { "claim": "The abraham-app README states every message is stored as a single JSON file on IPFS and the contract stores only the message's CID.", "url": "https://github.com/abraham-ai/abraham-app" }
+      ],
+      "checked": "2026-11-06"
+    },
+    "persistence_ops": {
+      "status": "stale",
+      "summary": "The creator's site describes Abraham as producing a new work daily under a thirteen-year covenant from 2025 to 2038. The newest dated commit on the main abraham repo is November 19, 2025, and on abraham-api January 17, 2026; the only October 2026 commit found is a dependency security update to a bot repo. No dated recent creation could be read because abraham.ai renders client-side.",
+      "evidence": [
+        { "claim": "genekogan.com describes Abraham as an autonomous artificial artist producing a new work daily under a thirteen-year covenant (2025-2038), operating through Eden.", "url": "https://genekogan.com/" },
+        { "claim": "The newest commit on abraham-ai/abraham is dated Nov 19, 2025 (\"tidy up\"), preceded by Oct 9, 2025 (\"upgrade gateway, retire scheduled tasks\").", "url": "https://github.com/abraham-ai/abraham/commits/main" },
+        { "claim": "The newest commits on abraham-api are dated January 17, 2026.", "url": "https://github.com/abraham-ai/abraham-api/commits/main" },
+        { "claim": "The newest commit on abraham-ai-bot is an October 24, 2026 merge of an automated certifi security update; the prior commits are from October 2023.", "url": "https://github.com/abraham-ai/abraham-ai-bot/commits/main" }
+      ],
+      "checked": "2026-11-06"
+    },
+    "economic_rails": {
+      "status": "stale",
+      "summary": "The abraham-api README lists a FirstWorks NFT contract on Ethereum mainnet, while its seeds and gating contracts are listed only on Base Sepolia testnet, with a deploy script for Base mainnet but no mainnet address. The abraham-app README describes small ETH fees and token staking to bless or praise. The newest commits to these repos are from January 2026 or earlier.",
+      "evidence": [
+        { "claim": "abraham-api lists FirstWorks NFT at 0x9734c959A5FEC7BaD8b0b560AD94F9740B90Efd8 on Ethereum mainnet, and AbrahamSeeds and MerkleGating only on Base Sepolia, with no Base mainnet address.", "url": "https://github.com/abraham-ai/abraham-api" },
+        { "claim": "abraham-app describes blessing for 0.00002 ETH and praising for 0.00001 ETH, with ABRAHAM token staking required to bless or praise.", "url": "https://github.com/abraham-ai/abraham-app" }
+      ],
+      "checked": "2026-11-06"
+    },
+    "governance": {
+      "status": "stale",
+      "summary": "The seeds contract documented in abraham-api uses roles: an admin role that can grant and revoke roles, update config and pause the contract, a creator role that submits seeds, and an operator role that selects winners. The code is open. The README was last changed in January 2026, and the covenant page on abraham.ai could not be read.",
+      "evidence": [
+        { "claim": "abraham-api documents DEFAULT_ADMIN_ROLE (grant/revoke roles, update config, pause contract), CREATOR_ROLE (submit seeds) and OPERATOR_ROLE (select winners).", "url": "https://github.com/abraham-ai/abraham-api" },
+        { "claim": "The newest abraham-api commits, dated January 17, 2026, include winner-selection and contract experiment changes.", "url": "https://github.com/abraham-ai/abraham-api/commits/main" }
+      ],
+      "checked": "2026-11-06"
+    },
+    "recovery": {
+      "status": "IE",
+      "summary": "IE. Settled by a public record of an Abraham outage or interruption to the daily creation and how it resumed, or a documented succession plan for running the covenant if its operator stops.",
+      "evidence": [],
+      "checked": "2026-11-06"
+    }
+  }
+}

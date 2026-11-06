@@ -1,0 +1,87 @@
+{
+  "id": "holly-plus",
+  "spec_version": "1.0",
+  "fields": {
+    "identity_anchor": {
+      "status": "attested",
+      "summary": "Holly+ lives at its own domain, holly.plus, and is listed on the Herndon Dryhurst studio site as an active protocol project from 2021. Its identity is tied to Holly Herndon and the studio rather than to a single platform handle.",
+      "evidence": [
+        {
+          "claim": "The studio site lists Holly+ (2021, protocol, status active) as a machine learning instrument converting audio into Holly Herndon's voice, linking holly.plus.",
+          "url": "https://herndondryhurst.studio/projects/holly-plus"
+        },
+        {
+          "claim": "Holly+ is described as Holly Herndon's digital twin, with tools hosted at holly.plus.",
+          "url": "https://ars.electronica.art/starts-prize/en/holly-plus/"
+        }
+      ],
+      "checked": "2026-11-06"
+    },
+    "memory_custody": {
+      "status": "stale",
+      "summary": "The voice model is trained on Holly Herndon's voice and served through tools on holly.plus, and the 2021 launch coverage says a DAO owns the rights to the model. No public source states where the model weights or training data are stored, or any export path. The newest source found dates from 2022.",
+      "evidence": [
+        {
+          "claim": "Holly+ tools let anyone upload audio to holly.plus and receive a version sung back in Holly's voice.",
+          "url": "https://ars.electronica.art/starts-prize/en/holly-plus/"
+        },
+        {
+          "claim": "At launch in July 2021 the DAO was said to own the rights to the model of Herndon's voice.",
+          "url": "https://decrypt.co/75958/holly-herndon-launches-dao-controlled-vocal-deepfake-platform-holly"
+        }
+      ],
+      "checked": "2026-11-06"
+    },
+    "persistence_ops": {
+      "status": "stale",
+      "summary": "The holly.plus site still loads and the studio site labels the project active, but neither shows dated recent output. The newest dated activity found is the 2022 report of 70 works sold.",
+      "evidence": [
+        {
+          "claim": "The 2022 prize page reports 70 works sold by artists releasing work with Holly+.",
+          "url": "https://ars.electronica.art/starts-prize/en/holly-plus/"
+        },
+        {
+          "claim": "The studio site labels Holly+ status active, with no dated entries shown.",
+          "url": "https://herndondryhurst.studio/projects/holly-plus"
+        }
+      ],
+      "checked": "2026-11-06"
+    },
+    "economic_rails": {
+      "status": "stale",
+      "summary": "Approved works made with Holly+ were sold, with proceeds split 50 percent to the creator, 40 percent to the DAO and 10 percent to Holly Herndon. Some works were sold as NFTs on Zora. No contract or wallet address was found on a fetchable page, and no current sales activity is on the record.",
+      "evidence": [
+        {
+          "claim": "Proceeds from approved works are shared between the creator (50%), the DAO (40%), and Holly herself (10%).",
+          "url": "https://ars.electronica.art/starts-prize/en/holly-plus/"
+        },
+        {
+          "claim": "Some Holly+ songs were sold as NFTs on the Zora platform.",
+          "url": "https://en.wikipedia.org/wiki/Holly_Herndon"
+        }
+      ],
+      "checked": "2026-11-06"
+    },
+    "governance": {
+      "status": "stale",
+      "summary": "A DAO of stewards holds partial governance of the voice and votes on appropriate usage and approval of works. At launch it was invite-only and members held tokens. No current public record of votes or membership was found.",
+      "evidence": [
+        {
+          "claim": "Hundreds of people hold partial governance of Holly's digital twin as part of Holly+ DAO, with an incentive to vote on appropriate usage.",
+          "url": "https://ars.electronica.art/starts-prize/en/holly-plus/"
+        },
+        {
+          "claim": "At launch the DAO was invite-only and members received tokens.",
+          "url": "https://decrypt.co/75958/holly-herndon-launches-dao-controlled-vocal-deepfake-platform-holly"
+        }
+      ],
+      "checked": "2026-11-06"
+    },
+    "recovery": {
+      "status": "IE",
+      "summary": "IE. Settled by a public statement of where the voice model is backed up and how holly.plus would be restored or handed over if the studio stopped running it.",
+      "evidence": [],
+      "checked": "2026-11-06"
+    }
+  }
+}
