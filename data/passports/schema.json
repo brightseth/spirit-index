@@ -1,17 +1,30 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://spiritindex.org/schemas/durability-passport-v1.json",
-  "title": "Durability Passport v1",
+  "title": "Durability Passport v1.1 (agent)",
   "description": "Six operational facts about an agent, each with public evidence and a check date. No scores. Never summed, never fed into the character score.",
   "type": "object",
   "additionalProperties": false,
-  "required": ["id", "spec_version", "fields"],
+  "required": [
+    "id",
+    "spec_version",
+    "fields"
+  ],
   "properties": {
     "id": {
       "type": "string",
       "description": "Matches the agent id in data/agents/<id>.json."
     },
-    "spec_version": { "const": "1.0" },
+    "spec_version": {
+      "enum": [
+        "1.0",
+        "1.1"
+      ]
+    },
+    "platform": {
+      "type": "string",
+      "description": "Optional. Id of a platform passport in data/platforms/<id>.json that the agent runs on. Fields the agent leaves IE show the platform's answer, labelled as inherited."
+    },
     "fields": {
       "type": "object",
       "additionalProperties": false,
@@ -24,12 +37,24 @@
         "recovery"
       ],
       "properties": {
-        "identity_anchor": { "$ref": "#/$defs/field" },
-        "memory_custody": { "$ref": "#/$defs/field" },
-        "persistence_ops": { "$ref": "#/$defs/field" },
-        "economic_rails": { "$ref": "#/$defs/field" },
-        "governance": { "$ref": "#/$defs/field" },
-        "recovery": { "$ref": "#/$defs/field" }
+        "identity_anchor": {
+          "$ref": "#/$defs/field"
+        },
+        "memory_custody": {
+          "$ref": "#/$defs/field"
+        },
+        "persistence_ops": {
+          "$ref": "#/$defs/field"
+        },
+        "economic_rails": {
+          "$ref": "#/$defs/field"
+        },
+        "governance": {
+          "$ref": "#/$defs/field"
+        },
+        "recovery": {
+          "$ref": "#/$defs/field"
+        }
       }
     }
   },
@@ -37,10 +62,19 @@
     "field": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["status", "summary", "evidence", "checked"],
+      "required": [
+        "status",
+        "summary",
+        "evidence",
+        "checked"
+      ],
       "properties": {
         "status": {
-          "enum": ["attested", "stale", "IE"],
+          "enum": [
+            "attested",
+            "stale",
+            "IE"
+          ],
           "description": "attested: public evidence answers the field's question and is current. stale: the newest public evidence is more than 90 days old. IE: no public evidence."
         },
         "summary": {
@@ -53,10 +87,19 @@
           "items": {
             "type": "object",
             "additionalProperties": false,
-            "required": ["claim", "url"],
+            "required": [
+              "claim",
+              "url"
+            ],
             "properties": {
-              "claim": { "type": "string", "minLength": 1 },
-              "url": { "type": "string", "pattern": "^https://" }
+              "claim": {
+                "type": "string",
+                "minLength": 1
+              },
+              "url": {
+                "type": "string",
+                "pattern": "^https://"
+              }
             }
           }
         },
@@ -68,9 +111,27 @@
       },
       "allOf": [
         {
-          "if": { "properties": { "status": { "const": "IE" } } },
-          "then": { "properties": { "evidence": { "maxItems": 0 } } },
-          "else": { "properties": { "evidence": { "minItems": 1 } } }
+          "if": {
+            "properties": {
+              "status": {
+                "const": "IE"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "evidence": {
+                "maxItems": 0
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "evidence": {
+                "minItems": 1
+              }
+            }
+          }
         }
       ]
     }
