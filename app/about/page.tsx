@@ -163,7 +163,7 @@ export default function About() {
               <div className="p-6 border border-subtle rounded">
                 <h4 className="text-white font-bold mb-2">Spirit Protocol</h4>
                 <p className="text-muted text-sm mb-3">
-                  Decentralized governance protocol on Base where artists train agents that are public goods. Agent tokens are tokens AND compute units.
+                  Decentralized governance protocol on Base where artists train agents that are public goods.
                 </p>
                 <a
                   href="https://spiritprotocol.io"
