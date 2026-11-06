@@ -1,0 +1,112 @@
+{
+  "id": "clanker",
+  "spec_version": "1.0",
+  "fields": {
+    "identity_anchor": {
+      "status": "attested",
+      "summary": "Clanker has its own domain and docs site, and its factory and fee contracts are published as addresses on Base. Since January 2026 it is operated by Neynar, which took over the Farcaster protocol and clients.",
+      "evidence": [
+        {
+          "claim": "Clanker runs its own site at clanker.world describing token launches on Base, BNB Chain, Monad and other chains.",
+          "url": "https://www.clanker.world"
+        },
+        {
+          "claim": "The docs publish Clanker contract addresses on Base for v5 and v4.0.0, including the v4.0.0 Clanker contract 0xE85A59c628F7d27878ACeB4bf3b35733630083a9.",
+          "url": "https://docs.clanker.world/references/deployed-contracts.md"
+        },
+        {
+          "claim": "Neynar announced it will maintain the Farcaster protocol, run the Farcaster clients and operate Clanker.",
+          "url": "https://neynar.com/blog/neynar-is-acquiring-farcaster"
+        }
+      ],
+      "checked": "2026-11-06"
+    },
+    "memory_custody": {
+      "status": "attested",
+      "summary": "The durable record of what Clanker has done is on-chain: each token deployment is a Base transaction that carries a social context field naming the platform and source id. A public API lists past deployments by Farcaster id or deployer address. No public source describes where the bot's request-parsing state or conversation history is kept, or any export path for it.",
+      "evidence": [
+        {
+          "claim": "Each deployment embeds a free-form social_context field of the form { platform, id }.",
+          "url": "https://docs.clanker.world/general/verifying-the-social-context-of-token-deploys.md"
+        },
+        {
+          "claim": "The public API returns paginated lists of tokens filterable by Farcaster id and deployer address.",
+          "url": "https://docs.clanker.world/api-reference/public/tokens.md"
+        },
+        {
+          "claim": "The v4.0.0 Clanker contract on Base shows over 879,000 transactions, readable on a public explorer.",
+          "url": "https://basescan.org/address/0xE85A59c628F7d27878ACeB4bf3b35733630083a9"
+        }
+      ],
+      "checked": "2026-11-06"
+    },
+    "persistence_ops": {
+      "status": "attested",
+      "summary": "Clanker is operating now: its v4.0.0 contract recorded transactions on 2026-11-06, and a v5 contract set was deployed on 2026-10-31. A v5 audit is listed for November 2026.",
+      "evidence": [
+        {
+          "claim": "The v4.0.0 Clanker contract shows its most recent transaction on 2026-11-06.",
+          "url": "https://basescan.org/address/0xE85A59c628F7d27878ACeB4bf3b35733630083a9"
+        },
+        {
+          "claim": "The docs list a v5 factory on Base deployed October 31, 2026.",
+          "url": "https://docs.clanker.world/references/deployed-contracts.md"
+        },
+        {
+          "claim": "The audits page lists a v5 audit dated November 2026.",
+          "url": "https://docs.clanker.world/references/audits.md"
+        }
+      ],
+      "checked": "2026-11-06"
+    },
+    "economic_rails": {
+      "status": "attested",
+      "summary": "Clanker transacts through published contracts on Base: v5 tokens charge a buy and sell tax that pays creator rewards, and v4 used a fee locker contract. Its site reports fees generated across launched pools.",
+      "evidence": [
+        {
+          "claim": "A v5 token charges a buy and sell tax on every trade that pays the creator's rewards and can fund holder dividends, a burn and an integrator share.",
+          "url": "https://docs.clanker.world"
+        },
+        {
+          "claim": "The docs list a v5 FeeEscrow at 0x5dd237d1f716C65426CCd2FAe82B95109825FA61 and a v4.0.0 ClankerFeeLocker at 0xF3622742b1E446D92e45E22923Ef11C2fcD55D68 on Base.",
+          "url": "https://docs.clanker.world/references/deployed-contracts.md"
+        },
+        {
+          "claim": "The site reports $83.0M in fees generated and a buyback and burn mechanism.",
+          "url": "https://www.clanker.world"
+        }
+      ],
+      "checked": "2026-11-06"
+    },
+    "governance": {
+      "status": "attested",
+      "summary": "Clanker v4 contracts either have no owner or are owned by the Clanker team multisig, which can pause new deployments, change the team fee recipient and manage admins. The docs state none of the contracts are upgradeable. Operation sits with Neynar, and no public vote or external decision process is documented.",
+      "evidence": [
+        {
+          "claim": "v4 contracts either have no owner or are owned by Clanker's team multisig; the owner can pause deployments with setDeprecated(), change teamFeeRecipient and add or remove admins.",
+          "url": "https://docs.clanker.world/references/core-contracts/v4/administrative-permissions.md"
+        },
+        {
+          "claim": "Neynar operates Clanker.",
+          "url": "https://neynar.com/blog/neynar-is-acquiring-farcaster"
+        },
+        {
+          "claim": "The docs name a CEO, Toady Hawk.",
+          "url": "https://docs.clanker.world/references/core-team.md"
+        }
+      ],
+      "checked": "2026-11-06"
+    },
+    "recovery": {
+      "status": "stale",
+      "summary": "The one documented continuity event is a change of operator: in January 2026 Neynar announced it would operate Clanker along with Farcaster. No public incident report, restart procedure or backup plan for the bot is on the record.",
+      "evidence": [
+        {
+          "claim": "Neynar's January 21, 2026 post states it will run the Farcaster clients and operate Clanker.",
+          "url": "https://neynar.com/blog/neynar-is-acquiring-farcaster"
+        }
+      ],
+      "checked": "2026-11-06"
+    }
+  }
+}

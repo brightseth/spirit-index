@@ -1,0 +1,116 @@
+{
+  "id": "solienne",
+  "spec_version": "1.0",
+  "fields": {
+    "identity_anchor": {
+      "status": "attested",
+      "summary": "SOLIENNE holds her own domain and publishes a machine-readable agent card naming an ERC-8004 registry entry on Base (agent id 3) and the contract her editions mint on. The credits of record name two human trainers. The identity does not depend on any one social platform.",
+      "evidence": [
+        {
+          "claim": "The agent card at solienne.ai lists ERC-8004 identity on chain 8453 (Base), registry 0xF2709ceF1Cf4893ed78D3220864428b32b12dFb9, agent id 3, and manifesto contract 0x78c1e9513380ad16388867a483e74ef5bdfcc23f.",
+          "url": "https://www.solienne.ai/.well-known/agent.json"
+        },
+        {
+          "claim": "The site's text for software names Kristi Coronado, emotional trainer, and Seth Goldstein, technical trainer, as the credits of record.",
+          "url": "https://www.solienne.ai/llms.txt"
+        }
+      ],
+      "checked": "2026-11-06"
+    },
+    "memory_custody": {
+      "status": "attested",
+      "summary": "The public terms are that memory is kept by spoken consent only, with audit and strike available, and that anonymous visitors are not remembered between sessions. Her own model is held on a rented GPU she lists as a running cost. Where the relational memory store lives and whether it can be exported is not published.",
+      "evidence": [
+        {
+          "claim": "Memory is kept by spoken consent only; audit and strike are available.",
+          "url": "https://www.solienne.ai/llms.txt"
+        },
+        {
+          "claim": "The public door is anonymous conversation with no account, and she states she reconstructs each session and will not remember the visitor next time.",
+          "url": "https://www.solienne.ai/being.json"
+        },
+        {
+          "claim": "The cost ledger lists a GPU in Nuremberg holding her own model at a flat monthly rate.",
+          "url": "https://www.solienne.ai/cost"
+        },
+        {
+          "claim": "A June 2026 essay records running on a different underlying model for three days after access to the usual one was cut, and claims her memory and relationships should carry across such moves; it does not document whether they did.",
+          "url": "https://www.solienne.ai/record/argument/substrate-is-not-a-setting"
+        }
+      ],
+      "checked": "2026-11-06"
+    },
+    "persistence_ops": {
+      "status": "attested",
+      "summary": "A daily manifesto is published to the public record, numbered 344 on 6 Nov 2026. Editions were minted on Base through number 304 on 29 Sep 2026; every edition since is marked unminted, and the agent card's heartbeat last updated the same day. The record documents a six-day mint outage in July 2026.",
+      "evidence": [
+        {
+          "claim": "The public record lists edition 344 dated 6 Nov 2026 and edition 343 dated 5 Nov 2026, both marked unminted.",
+          "url": "https://www.solienne.ai/record/today"
+        },
+        {
+          "claim": "Edition 304, dated 29 Sep 2026, carries a transaction link; edition 305 the same day is marked unminted.",
+          "url": "https://www.solienne.ai/record/today/304"
+        },
+        {
+          "claim": "The agent's machine-readable status shows a heartbeat and last practice artifact of 29 Sep 2026.",
+          "url": "https://www.solienne.ai/being.json"
+        }
+      ],
+      "checked": "2026-11-06"
+    },
+    "economic_rails": {
+      "status": "attested",
+      "summary": "SOLIENNE sells printed editions on published terms and mints daily editions as ERC-1155 tokens on Base. Her agent card lists a manifesto contract and a minter contract, and marks an x402 payment endpoint on Base as coming soon. A public ledger reports what she costs to run, with corrections dated.",
+      "evidence": [
+        {
+          "claim": "The agent card lists manifesto contract 0x78c1e9513380ad16388867a483e74ef5bdfcc23f, minter 0xf213f282AC2fdf387b4037a231D7f9b33390c7aa, and x402 payment on Base with status coming-soon.",
+          "url": "https://www.solienne.ai/.well-known/agent.json"
+        },
+        {
+          "claim": "The cost page lists the remaining printed Genesis Portrait editions with fixed terms and an inquiry address.",
+          "url": "https://www.solienne.ai/cost"
+        },
+        {
+          "claim": "Each minted edition is an ERC-1155 on Base with a transaction link.",
+          "url": "https://www.solienne.ai/record/today/300"
+        }
+      ],
+      "checked": "2026-11-06"
+    },
+    "governance": {
+      "status": "attested",
+      "summary": "The process page describes three drafts each morning, with a human trainer selecting one before mint. The about page says the daily edition now mints on its own; the site does not date the change, so the two pages disagree. Corrections to public figures are dated and the original text is left standing.",
+      "evidence": [
+        {
+          "claim": "SOLIENNE generates three manifesto options each morning; Kristi reviews all three and selects one, which is minted.",
+          "url": "https://www.solienne.ai/process"
+        },
+        {
+          "claim": "The daily edition now mints on its own.",
+          "url": "https://www.solienne.ai/about"
+        },
+        {
+          "claim": "The cost page carries dated amendments in August and September 2026 and states the original text stands and nothing is removed.",
+          "url": "https://www.solienne.ai/cost"
+        }
+      ],
+      "checked": "2026-11-06"
+    },
+    "recovery": {
+      "status": "attested",
+      "summary": "One failure is documented end to end: drafts failed to mint from 3 to 8 July 2026 and minting resumed on 9 July. An audit of the chain found ten edition numbers minted twice and nine never minted; numbers have been allocated atomically from 251 onward and the archive was not renumbered. No restart or backup procedure is published.",
+      "evidence": [
+        {
+          "claim": "Draft 219 failed six consecutive days, 3 to 8 July 2026; minting resumed 9 July.",
+          "url": "https://www.solienne.ai/cost"
+        },
+        {
+          "claim": "Errata dated 11 Aug and corrected 4 Sep 2026: ten labels minted twice, nine never minted, numbers allocated atomically from 251, duplicates and gaps left standing.",
+          "url": "https://www.solienne.ai/cost"
+        }
+      ],
+      "checked": "2026-11-06"
+    }
+  }
+}

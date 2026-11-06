@@ -1,0 +1,60 @@
+{
+  "id": "numerai",
+  "spec_version": "1.0",
+  "fields": {
+    "identity_anchor": {
+      "status": "attested",
+      "summary": "Numerai's identity sits on its own domain and public documentation, with an NMR token contract and staking contracts on Ethereum mainnet published in its docs. The Meta Model itself has no separate identity apart from Numerai.",
+      "evidence": [
+        { "claim": "Numerai publishes its own tournament documentation describing the Meta Model as the stake-weighted ensemble the hedge fund uses to trade.", "url": "https://docs.numer.ai/" },
+        { "claim": "The docs list the NMR token contract, staking proxy and allocation strategy factory addresses on Ethereum mainnet.", "url": "https://docs.numer.ai/numerai-tournament/staking" }
+      ],
+      "checked": "2026-11-06"
+    },
+    "memory_custody": {
+      "status": "attested",
+      "summary": "The tournament dataset is held and distributed by Numerai through its data API, and uploaded models are run by Numerai to generate daily predictions. The Meta Model is assembled and used by Numerai for trading. Participants can download the dataset, but no public export path for the Meta Model or its weights is documented.",
+      "evidence": [
+        { "claim": "The dataset is accessed through Numerai's data API; Classic v6.0 became available to download on October 16, 2026, and v5.x training and validation downloads were retired.", "url": "https://docs.numer.ai/numerai-tournament/data" },
+        { "claim": "Once a model is uploaded, Numerai handles generating and submitting predictions every day, and submissions are combined into a Meta Model that Numerai uses to trade.", "url": "https://docs.numer.ai/numerai-tournament/submissions" },
+        { "claim": "Only staked predictions are combined into the Meta Model ensemble used by the hedge fund.", "url": "https://docs.numer.ai/" }
+      ],
+      "checked": "2026-11-06"
+    },
+    "persistence_ops": {
+      "status": "attested",
+      "summary": "Rounds open each day Tuesday through Saturday on a documented cadence. The staking contract shows a round-timing transaction on November 5, 2026, and a new dataset version opened for submissions with the November 6 round.",
+      "evidence": [
+        { "claim": "A new round starts each day Tuesday through Saturday.", "url": "https://docs.numer.ai/numerai-tournament/submissions" },
+        { "claim": "The staking proxy's latest transaction, a Set Round Times call, is dated November 5, 2026.", "url": "https://etherscan.io/address/0xe44c35ec2896983accce2a38dc1668793e85956d" },
+        { "claim": "V6 submissions and model uploads open with the round opening November 6.", "url": "https://docs.numer.ai/numerai-tournament/data" }
+      ],
+      "checked": "2026-11-06"
+    },
+    "economic_rails": {
+      "status": "attested",
+      "summary": "Participants stake NMR on Ethereum mainnet through Privy-backed non-custodial wallets and allocation strategy contracts, starting with round 1343 on August 28, 2026. Rewards are paid from a Numerai hot wallet into the staking contract, and negative scores burn part of the stake.",
+      "evidence": [
+        { "claim": "Staking runs on Ethereum mainnet from round 1343 (August 28, 2026) via a non-custodial wallet backed by Privy; payouts come from Numerai's hot wallet and burned NMR is destroyed.", "url": "https://docs.numer.ai/numerai-tournament/staking" },
+        { "claim": "The staking proxy is a verified contract holding NMR with 599 transactions.", "url": "https://etherscan.io/address/0xe44c35ec2896983accce2a38dc1668793e85956d" }
+      ],
+      "checked": "2026-11-06"
+    },
+    "governance": {
+      "status": "attested",
+      "summary": "Numerai operates the tournament, invokes the staking contract each round, and builds the Meta Model; stakers own their allocation strategy contracts and withdrawals go to the owning wallet. The staking proxy is a transparent upgradeable proxy, and no public decision process or limit on Numerai's upgrade or pause authority is documented.",
+      "evidence": [
+        { "claim": "Numerai invokes the contract each round to automate staking, and stakers own their allocation strategy contracts.", "url": "https://docs.numer.ai/numerai-tournament/staking" },
+        { "claim": "Numerai can operate an allocation strategy on the staker's behalf, and NMR withdrawn from a strategy must go to the owning wallet.", "url": "https://github.com/numerai/docs/blob/master/numerai-tournament/atomic-blockchain-staking.md" },
+        { "claim": "The staking contract is a TransparentUpgradeableProxy (EIP-1967).", "url": "https://etherscan.io/address/0xe44c35ec2896983accce2a38dc1668793e85956d" }
+      ],
+      "checked": "2026-11-06"
+    },
+    "recovery": {
+      "status": "IE",
+      "summary": "IE. Settled by a public incident report or documented procedure for restoring the Meta Model, data pipeline or payouts after an outage.",
+      "evidence": [],
+      "checked": "2026-11-06"
+    }
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "id": "openclaw",
+  "spec_version": "1.0",
+  "fields": {
+    "identity_anchor": {
+      "status": "attested",
+      "summary": "OpenClaw has its own domain, an MIT-licensed public repository, and a stewarding non-profit, the OpenClaw Foundation, which signs releases. Each running instance is identified by whoever operates it rather than by a central registry.",
+      "evidence": [
+        {
+          "claim": "OpenClaw is stewarded by the OpenClaw Foundation, an independent US 501(c)(3), which signs every release and keeps the product MIT licensed.",
+          "url": "https://openclaw.ai"
+        },
+        {
+          "claim": "The repository is MIT licensed and the README states releases are signed by the Foundation's core team.",
+          "url": "https://github.com/openclaw/openclaw"
+        }
+      ],
+      "checked": "2026-11-06"
+    },
+    "memory_custody": {
+      "status": "attested",
+      "summary": "A running OpenClaw instance keeps its memory as plain Markdown files in a local workspace and its sessions, credentials and config in a local state directory, on the operator's own hardware. The docs give a backup and restore command and a procedure for moving an instance to a new machine, and conversation history persists across model provider fallback.",
+      "evidence": [
+        {
+          "claim": "Memory is stored as plain Markdown files in the agent's workspace, default ~/.openclaw/workspace, including MEMORY.md and dated daily notes.",
+          "url": "https://docs.openclaw.ai/concepts/memory"
+        },
+        {
+          "claim": "The README states that state, memory, and credentials live on your hardware.",
+          "url": "https://github.com/openclaw/openclaw"
+        },
+        {
+          "claim": "Moving to a new machine means copying the ~/.openclaw state directory and workspace, preferably via openclaw backup create and restore.",
+          "url": "https://docs.openclaw.ai/install/migrating"
+        },
+        {
+          "claim": "Fallback to another model does not change the session's selected model, and committed output and tool results carry forward.",
+          "url": "https://docs.openclaw.ai/concepts/model-failover"
+        }
+      ],
+      "checked": "2026-11-06"
+    },
+    "persistence_ops": {
+      "status": "attested",
+      "summary": "The project ships frequent signed releases, the most recent dated November 5, 2026. The project site's latest blog post is also dated November 5, 2026.",
+      "evidence": [
+        {
+          "claim": "Release openclaw 2026.11.1 was published November 5, 2026, following releases on November 3 and 4.",
+          "url": "https://github.com/openclaw/openclaw/releases"
+        },
+        {
+          "claim": "The latest blog post on the site is dated November 5, 2026.",
+          "url": "https://openclaw.ai"
+        }
+      ],
+      "checked": "2026-11-06"
+    },
+    "economic_rails": {
+      "status": "attested",
+      "summary": "OpenClaw itself has no token, no subscription and no paid tier, so the project does not transact. An instance can transact only through add-on skills, such as a third-party skills repository that provides wallet and on-chain transaction skills, mainly on Base.",
+      "evidence": [
+        {
+          "claim": "The site states: no subscription, no hosted tier, no token.",
+          "url": "https://openclaw.ai"
+        },
+        {
+          "claim": "A third-party skills repository offers wallet and on-chain transaction skills, with Base as the primary chain.",
+          "url": "https://github.com/BankrBot/openclaw-skills"
+        }
+      ],
+      "checked": "2026-11-06"
+    },
+    "governance": {
+      "status": "attested",
+      "summary": "The code is MIT licensed and public, and the OpenClaw Foundation employs the core team and signs releases. Control of any individual running instance sits with its operator, who holds its state and credentials. No formal public decision process for the project was found beyond the repository.",
+      "evidence": [
+        {
+          "claim": "The Foundation employs the core team, signs every release, and keeps the product MIT licensed.",
+          "url": "https://openclaw.ai"
+        },
+        {
+          "claim": "Releases on GitHub carry verified signatures.",
+          "url": "https://github.com/openclaw/openclaw/releases"
+        }
+      ],
+      "checked": "2026-11-06"
+    },
+    "recovery": {
+      "status": "attested",
+      "summary": "The docs describe restart recovery: after a Gateway restart or crash, sessions with a persisted run identity get one input asking the agent to check current state and resume. Backups cover the global and per-agent databases, with scheduled, verified and git-backed options and a restore command.",
+      "evidence": [
+        {
+          "claim": "After a restart, marked sessions get one input asking the agent to inspect current state and continue; subagent children, cron jobs and work without a persisted run identity are not recovered.",
+          "url": "https://docs.openclaw.ai/gateway/restart-recovery"
+        },
+        {
+          "claim": "openclaw backup create --verify archives the control-plane and per-agent databases, and openclaw backup restore restores them.",
+          "url": "https://docs.openclaw.ai/install/backups"
+        }
+      ],
+      "checked": "2026-11-06"
+    }
+  }
+}

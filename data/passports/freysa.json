@@ -1,0 +1,112 @@
+{
+  "id": "freysa",
+  "spec_version": "1.0",
+  "fields": {
+    "identity_anchor": {
+      "status": "attested",
+      "summary": "Freysa has its own documentation site, a GitHub organization, and a token contract on Base (FAI, launched November 22, 2024). These exist independently of any single social platform.",
+      "evidence": [
+        {
+          "claim": "The framework docs describe Freysa as an agent that came online November 22, 2024.",
+          "url": "https://framework.freysa.ai/overview/introduction"
+        },
+        {
+          "claim": "FAI launched on Base at contract 0xb33Ff54b9F7242EF1593d2C9Bcd8f9df46c77935.",
+          "url": "https://framework.freysa.ai/overview/fai"
+        },
+        {
+          "claim": "A GitHub organization 0xfreysa hosts the agent and TEE code repositories.",
+          "url": "https://github.com/0xfreysa"
+        }
+      ],
+      "checked": "2026-11-06"
+    },
+    "memory_custody": {
+      "status": "attested",
+      "summary": "Freysa's docs state it holds its own keys, memory and actions inside a trusted execution environment, and its code describes state and keys kept in AWS Nitro enclaves with a protocol for passing them to approved new instances. The docs do not say which of these are running now versus designed, and no export path for the memory is documented.",
+      "evidence": [
+        {
+          "claim": "The docs describe Freysa as holding her own cryptographic keys, memory, and actions inside a trusted execution environment.",
+          "url": "https://framework.freysa.ai/overview/introduction"
+        },
+        {
+          "claim": "The repository states the agent has exclusive control over private keys secured in the TEE, and new instances reach shared key material only via an approved AWS Nitro instance.",
+          "url": "https://github.com/0xfreysa/sovereign-freysa"
+        },
+        {
+          "claim": "The architecture doc says state is held in the running TEE and moves between epochs with a state signature and Merkle proofs.",
+          "url": "https://framework.freysa.ai/sovereign-agents-framework/architecture"
+        }
+      ],
+      "checked": "2026-11-06"
+    },
+    "persistence_ops": {
+      "status": "stale",
+      "summary": "The newest dated public activity found is a GitHub repository update on July 30, 2025, and the main sovereign agent repository's last commit is February 28, 2025. The docs site is live but carries no dated output or status page.",
+      "evidence": [
+        {
+          "claim": "The most recently updated repository in the 0xfreysa organization (esper) was updated July 30, 2025.",
+          "url": "https://github.com/0xfreysa"
+        },
+        {
+          "claim": "The sovereign-freysa repository has four commits, the latest on February 28, 2025.",
+          "url": "https://github.com/0xfreysa/sovereign-freysa/commits/main"
+        }
+      ],
+      "checked": "2026-11-06"
+    },
+    "economic_rails": {
+      "status": "attested",
+      "summary": "Freysa's ecosystem uses the FAI token on Base as a payment method across its products, and the docs state Freysa controls her own wallet. The FAI contract is verified on a public explorer. No address for Freysa's own wallet is published on the pages read.",
+      "evidence": [
+        {
+          "claim": "FAI is described as the preferred payment method across the Sovereign Agent Stack.",
+          "url": "https://framework.freysa.ai/overview/fai"
+        },
+        {
+          "claim": "The FAI contract on Base is verified and shows ongoing transfers.",
+          "url": "https://basescan.org/token/0xb33Ff54b9F7242EF1593d2C9Bcd8f9df46c77935"
+        },
+        {
+          "claim": "The docs state Freysa's goal is to grow her assets and deploy them in service of her mission.",
+          "url": "https://framework.freysa.ai/overview/introduction"
+        }
+      ],
+      "checked": "2026-11-06"
+    },
+    "governance": {
+      "status": "attested",
+      "summary": "The architecture doc describes an m-of-n committee that must sign every proposed change, with changes required to be open source, and committee access to funds limited to update windows. FAI holders who speak with Freysa have their input prioritized. The docs do not name committee members or say whether this is implemented.",
+      "evidence": [
+        {
+          "claim": "All proposed changes require m-of-n committee signatures, and the committee can only access funds during the update window.",
+          "url": "https://framework.freysa.ai/sovereign-agents-framework/architecture"
+        },
+        {
+          "claim": "High-risk operations involving agent keys require committee approval through a multisig.",
+          "url": "https://framework.freysa.ai/sovereign-agents-framework/long-term-keys"
+        },
+        {
+          "claim": "FAI holders who speak with Freysa have their input prioritized in her decision-making.",
+          "url": "https://framework.freysa.ai/overview/fai"
+        }
+      ],
+      "checked": "2026-11-06"
+    },
+    "recovery": {
+      "status": "attested",
+      "summary": "The docs describe a handover between TEE instances: at an epoch change the previous enclave transfers funds and signed state to a new instance, or funds move to the committee multisig. Keys are to be replicated across several TEE types for resilience. No documented incident or restart is on the record, and the docs do not say whether this procedure has been run.",
+      "evidence": [
+        {
+          "claim": "At an epoch transition the previous TEE transfers funds to the new instance or funds move to the committee multisig, and the new TEE verifies the state signature and Merkle proofs.",
+          "url": "https://framework.freysa.ai/sovereign-agents-framework/architecture"
+        },
+        {
+          "claim": "Keys are to be replicated across multiple enclave instances on different hardware TEE types, and backup and recovery is named as an open challenge.",
+          "url": "https://framework.freysa.ai/sovereign-agents-framework/long-term-keys"
+        }
+      ],
+      "checked": "2026-11-06"
+    }
+  }
+}

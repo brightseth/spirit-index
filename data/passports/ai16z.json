@@ -1,0 +1,57 @@
+{
+  "id": "ai16z",
+  "spec_version": "1.0",
+  "fields": {
+    "identity_anchor": {
+      "status": "stale",
+      "summary": "The ai16z DAO launched on Solana in October 2024 and was rebranded under the ElizaOS name in January 2025. The ai16z GitHub organization lists no public repositories, and the newest dated sources on the DAO's identity are from August 2026 or earlier.",
+      "evidence": [
+        { "claim": "In January 2025 the project announced a rebrand to ElizaOS, with the ticker left unchanged pending a DAO vote.", "url": "https://cointelegraph.com/news/elizaos-rebrand-ai16z-token-drop" },
+        { "claim": "The ai16z GitHub organization has no public repositories.", "url": "https://github.com/orgs/ai16z/repositories" },
+        { "claim": "ai16z launched on Solana in October 2024 through daos.fun as a DAO where holders engaged with an AI agent called Marc AIndreessen.", "url": "https://solanacompass.com/projects/elizaos" }
+      ],
+      "checked": "2026-11-06"
+    },
+    "memory_custody": {
+      "status": "IE",
+      "summary": "IE. Settled by a public statement of where the DAO agent's memory, character data and trading history are stored, who controls them, and whether they can be exported.",
+      "evidence": [],
+      "checked": "2026-11-06"
+    },
+    "persistence_ops": {
+      "status": "stale",
+      "summary": "In August 2026 the founder declared the token dead and said the foundation was winding down after a legal settlement. No source on or after 2026-08-08 shows the DAO or its agent operating.",
+      "evidence": [
+        { "claim": "On August 5, 2026 Shaw Walters said the token is dead and there would be no further foundation support, buybacks or supply measures.", "url": "https://www.coindesk.com/markets/2026/08/05/ai-agent-token-once-worth-usd2-4-billion-ends-with-founder-calling-it-dead" },
+        { "claim": "The foundation has begun winding down after the settlement (August 5, 2026).", "url": "https://crypto.news/eliza-token-declared-dead-as-founder-winds-down-foundation-after-legal-settlement/" }
+      ],
+      "checked": "2026-11-06"
+    },
+    "economic_rails": {
+      "status": "stale",
+      "summary": "The foundation transferred its remaining treasury and available funds to settle a proposed class action brought on behalf of holders. As of August 2026 no treasury or foundation payment mechanism remains on the record.",
+      "evidence": [
+        { "claim": "The foundation transferred its remaining treasury and available funds to settle with a group of holders (August 5, 2026).", "url": "https://www.coindesk.com/markets/2026/08/05/ai-agent-token-once-worth-usd2-4-billion-ends-with-founder-calling-it-dead" },
+        { "claim": "The founder transferred the rest of the treasury and all the money the foundation held to settle the lawsuit.", "url": "https://crypto.news/eliza-token-declared-dead-as-founder-winds-down-foundation-after-legal-settlement/" }
+      ],
+      "checked": "2026-11-06"
+    },
+    "governance": {
+      "status": "stale",
+      "summary": "The project was presented as an AI-run fund, while litigation claims said Walters and insiders controlled it. Walters retains ownership of the software IP, and no current DAO decision process is documented.",
+      "evidence": [
+        { "claim": "The project marketed itself as an autonomous, AI-run venture fund despite Walters and insiders controlling it, according to litigation claims.", "url": "https://www.coindesk.com/markets/2026/08/05/ai-agent-token-once-worth-usd2-4-billion-ends-with-founder-calling-it-dead" },
+        { "claim": "Walters retains ownership of the underlying intellectual property for the software.", "url": "https://crypto.news/eliza-token-declared-dead-as-founder-winds-down-foundation-after-legal-settlement/" }
+      ],
+      "checked": "2026-11-06"
+    },
+    "recovery": {
+      "status": "stale",
+      "summary": "The DAO ended with the treasury used to settle litigation and the foundation winding down in August 2026. No restart or handover of the DAO or its agent is documented; only the framework software continues.",
+      "evidence": [
+        { "claim": "Walters plans to continue building the software without launching another token (August 5, 2026).", "url": "https://www.coindesk.com/markets/2026/08/05/ai-agent-token-once-worth-usd2-4-billion-ends-with-founder-calling-it-dead" }
+      ],
+      "checked": "2026-11-06"
+    }
+  }
+}

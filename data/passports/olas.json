@@ -1,0 +1,65 @@
+{
+  "id": "olas",
+  "spec_version": "1.0",
+  "fields": {
+    "identity_anchor": {
+      "status": "attested",
+      "summary": "Olas has its own domain and on-chain registries: components, agent blueprints and services are minted as ERC721 NFTs, with registry contracts deployed on several chains. The registry code is open source under the valory-xyz GitHub organization.",
+      "evidence": [
+        { "claim": "The protocol uses three ERC721 registries: a Component Registry, an Agent Blueprint Registry, and a Service Registry representing AI agents.", "url": "https://stack.olas.network/protocol/technical_overview/" },
+        { "claim": "The Service Registry L2 is deployed on Gnosis at 0x9338b5153AE39BB89f50468E608eD9d764B755fD and on Polygon at 0xE3607b00E75f6405248323A9417ff6b39B244b50, among other chains.", "url": "https://stack.olas.network/open-autonomy/advanced_reference/on_chain_addresses/" },
+        { "claim": "The autonolas-registries repo (MIT) holds the registries for components, agents and services, with IPFS hashes referencing code.", "url": "https://github.com/valory-xyz/autonolas-registries" }
+      ],
+      "checked": "2026-11-06"
+    },
+    "memory_custody": {
+      "status": "attested",
+      "summary": "In the Open Autonomy framework, an agent's shared state is a finite-state machine replicated across all of its agent instances and updated by consensus, so no single operator holds the only copy. Agent code is referenced on-chain by IPFS hashes. Agents run through Pearl execute on the user's own device and are self-custodial; the docs read do not describe a general export path for agent data.",
+      "evidence": [
+        { "claim": "The shared state is a deterministic finite-state machine replicated by all agent instances, each holding a copy, updated when a majority reaches consensus.", "url": "https://stack.olas.network/open-autonomy/key_concepts/aea/" },
+        { "claim": "Registries store component and agent metadata including IPFS hash references to the code.", "url": "https://github.com/valory-xyz/autonolas-registries" },
+        { "claim": "Pearl states agents run on the user's device, not centralized servers, and that it is fully self-custodial.", "url": "https://www.pearl.you/" }
+      ],
+      "checked": "2026-11-06"
+    },
+    "persistence_ops": {
+      "status": "attested",
+      "summary": "The Olas site shows live protocol figures dated November 6, 2026, including 426 daily active agents (7-day average). The registries repository has commits from late October 2026.",
+      "evidence": [
+        { "claim": "olas.network reports 21,119,020 all-time on-chain transactions, 426 daily active agents (7-day average) and 3,787 unique operators as of Nov 6, 2026.", "url": "https://olas.network" },
+        { "claim": "The newest commits to autonolas-registries are dated October 30 and 31, 2026.", "url": "https://github.com/valory-xyz/autonolas-registries/commits/main" }
+      ],
+      "checked": "2026-11-06"
+    },
+    "economic_rails": {
+      "status": "attested",
+      "summary": "Each deployed service gets a Safe multisig through which it transacts, and operators post bonds to register agent instances. The Mech Marketplace, on seven chains, charges agents per request in native currency, OLAS, or Nevermined credits, and marketplace fees are used to burn OLAS. Pearl users stake OLAS to access agents.",
+      "evidence": [
+        { "claim": "When a service reaches Finished Registration, the owner deploys a Safe multisig associated with the service; operators register bonded agent instance addresses.", "url": "https://stack.olas.network/protocol/life_cycle_of_a_service/" },
+        { "claim": "Mechs accept fixed-price native-currency payments, OLAS token payments, or Nevermined credits per request.", "url": "https://github.com/valory-xyz/mech" },
+        { "claim": "The Mech Marketplace runs on 7 chains, charges fees to agents, and the fees are used to burn OLAS; Pearl users stake OLAS.", "url": "https://olas.network" }
+      ],
+      "checked": "2026-11-06"
+    },
+    "governance": {
+      "status": "attested",
+      "summary": "OLAS is locked into veOLAS for voting through GovernorOLAS and a Timelock, with off-chain proposals on Snapshot and on-chain proposals in a Govern app. A community multisig can, exceptionally, execute changes bypassing the governance process, constrained by guard contracts. Core contracts are immutable; periphery contracts are controlled by governance, and NFT transfers are not pausable by governance.",
+      "evidence": [
+        { "claim": "The governance repo describes veOLAS, GovernorOLAS and a Timelock, and states a community-owned multisig (CM) can exceptionally execute some changes bypassing governance, checked by GuardCM.", "url": "https://github.com/valory-xyz/autonolas-governance" },
+        { "claim": "The govern page reports 46,721,075 OLAS locked as veOLAS across 27 addresses and links Snapshot (autonolas.eth) and on-chain proposals at govern.olas.network.", "url": "https://olas.network/govern" },
+        { "claim": "Core contracts are immutable and permissionless, periphery contracts are fully controlled by governance, and transfer functions are not pausable by governance.", "url": "https://stack.olas.network/protocol/technical_overview/" }
+      ],
+      "checked": "2026-11-06"
+    },
+    "recovery": {
+      "status": "attested",
+      "summary": "The framework is designed so that a service of N = 3f + 1 instances keeps reaching consensus with up to f instances failed. A service owner can terminate and unbond a service, returning it to pre-registration so new instances can be registered. Pearl documents recovery of app access through Google or Apple and of funds through a connected wallet, Safe, or the recovery phrase. No specific incident write-up was found.",
+      "evidence": [
+        { "claim": "With N = 3f + 1 agent instances the system tolerates up to f simultaneous failures.", "url": "https://stack.olas.network/open-autonomy/key_concepts/aea/" },
+        { "claim": "After termination and unbonding a service returns to Pre-Registration, allowing new instance registrations.", "url": "https://stack.olas.network/protocol/life_cycle_of_a_service/" },
+        { "claim": "Pearl offers Google/Apple account recovery, fund recovery by reconnecting a wallet via Safe, and import of the Pearl recovery phrase into external wallets.", "url": "https://www.pearl.you/" }
+      ],
+      "checked": "2026-11-06"
+    }
+  }
+}

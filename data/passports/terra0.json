@@ -1,0 +1,99 @@
+{
+  "id": "terra0",
+  "spec_version": "1.0",
+  "fields": {
+    "identity_anchor": {
+      "status": "attested",
+      "summary": "terra0 has its own domain (terra0.org) and a GitHub organization, and its current work, Autonomous Forest, has its own domain and the ENS name autonomousforest.eth. None of these depends on a single platform.",
+      "evidence": [
+        {
+          "claim": "terra0.org describes terra0 as an art collective founded in 2015 and links its GitHub organization terra0project.",
+          "url": "https://terra0.org"
+        },
+        {
+          "claim": "autonomousforest.org lists the ENS name autonomousforest.eth and a Snapshot space for voting.",
+          "url": "https://autonomousforest.org/"
+        },
+        {
+          "claim": "The terra0project GitHub organization hosts its smart contract repositories.",
+          "url": "https://github.com/terra0project"
+        }
+      ],
+      "checked": "2026-11-06"
+    },
+    "memory_custody": {
+      "status": "attested",
+      "summary": "For Autonomous Forest, the ownership and membership record is an NFT contract on Ethereum that maps each token to a geohash cell of the forest plots. Wildlife camera images are posted by a bot to the project's own forum server, and the team published open endpoints for the camera data in December 2025. No export or migration plan for the forum archive is documented.",
+      "evidence": [
+        {
+          "claim": "NFTs are issued by a custom smart contract on Ethereum, with each grid cell covering about 9.54 by 12.38 metres.",
+          "url": "https://www.las-art.foundation/programme/terra0-autonomous-forest"
+        },
+        {
+          "claim": "Trail camera sightings are posted automatically by trailcam_bot, with images hosted on the forum server.",
+          "url": "https://forum.autonomousforest.org/t/aufo-trailcam-bot-photos/22"
+        },
+        {
+          "claim": "In December 2025 the team listed public endpoints for trail camera data and said a fuller API was in progress.",
+          "url": "https://forum.autonomousforest.org/t/trailcam-photos-endpoints-api/26"
+        }
+      ],
+      "checked": "2026-11-06"
+    },
+    "persistence_ops": {
+      "status": "stale",
+      "summary": "The newest dated activity found is a July 26, 2026 forum post from a core member reporting an April site visit and ongoing work on tax handling and an off-ramp. Autonomous Forest launched November 6, 2025. No dated output after early August 2026 was found.",
+      "evidence": [
+        {
+          "claim": "On July 26, 2026 Paul Seidler wrote that he last visited in April and the team was occupied with organisational duties.",
+          "url": "https://forum.autonomousforest.org/t/recent-visits-to-the-autonomous-forest/193"
+        },
+        {
+          "claim": "The Autonomous Forest programme began 6 November 2025, with an NFT sale on 15 December.",
+          "url": "https://www.las-art.foundation/programme/terra0-autonomous-forest"
+        }
+      ],
+      "checked": "2026-11-06"
+    },
+    "economic_rails": {
+      "status": "attested",
+      "summary": "Autonomous Forest sells NFTs on Ethereum, and the proceeds fund the purchase and management of forest land held by a German non-profit association. No contract address was found on the pages read.",
+      "evidence": [
+        {
+          "claim": "NFTs were offered on Ethereum, and the association Autonomous Forest e.V. holds legal ownership of the land.",
+          "url": "https://www.bankless.com/read/autonomous-forest-experiment-ethereum"
+        },
+        {
+          "claim": "An NFT sale opened on 15 December 2025.",
+          "url": "https://www.las-art.foundation/programme/terra0-autonomous-forest"
+        }
+      ],
+      "checked": "2026-11-06"
+    },
+    "governance": {
+      "status": "attested",
+      "summary": "Autonomous Forest combines a German Verein, with a board and ordinary members, and a DAO in which staked NFTs carry voting rights and become non-transferable. Proposals are posted on a public forum and voting is on Snapshot. The Verein holds the land title.",
+      "evidence": [
+        {
+          "claim": "The site describes a non-profit association and DAO with voting on Snapshot under autonomousforest.eth.",
+          "url": "https://autonomousforest.org/"
+        },
+        {
+          "claim": "Staked NFTs become non-transferable, and the association has a Board plus ordinary members.",
+          "url": "https://www.las-art.foundation/programme/terra0-autonomous-forest"
+        },
+        {
+          "claim": "The Community Council discusses proposals publicly and votes online.",
+          "url": "https://www.bankless.com/read/autonomous-forest-experiment-ethereum"
+        }
+      ],
+      "checked": "2026-11-06"
+    },
+    "recovery": {
+      "status": "IE",
+      "summary": "IE. Settled by a public statement of how the forest records, contract and forum would be maintained or handed over if terra0 or the association stopped operating.",
+      "evidence": [],
+      "checked": "2026-11-06"
+    }
+  }
+}
