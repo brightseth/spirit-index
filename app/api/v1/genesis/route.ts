@@ -7,7 +7,7 @@
  */
 
 import { NextRequest } from 'next/server';
-import { getAllAgents } from '@/lib/agents';
+import { getAllAgents, getHeldAgentIds } from '@/lib/agents';
 import {
   handleOptions,
   jsonSuccess,
@@ -121,8 +121,10 @@ export async function GET(request: NextRequest) {
     const cohortAgents = enrichedAgents.filter((a) =>
       genesisAgentIds.has(a.id),
     );
-    const coreAgentsList = Object.entries(genesisStatus.coreAgents).map(
-      ([id, meta]) => ({
+    const heldIds = await getHeldAgentIds();
+    const coreAgentsList = Object.entries(genesisStatus.coreAgents)
+      .filter(([id]) => !heldIds.has(id))
+      .map(([id, meta]) => ({
         id,
         role: meta.role,
         status: meta.status,

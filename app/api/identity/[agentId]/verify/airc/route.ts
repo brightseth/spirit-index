@@ -9,6 +9,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getIdentityByAgentId } from '@/lib/identity';
 import { prisma } from '@/lib/db';
+import { getHeldAgentIds } from '@/lib/agents';
 
 const DEFAULT_AIRC_REGISTRY = 'airc.chat';
 
@@ -147,8 +148,9 @@ export async function GET(
   try {
     const { agentId } = await params;
 
-    // Get identity binding
-    const identity = await getIdentityByAgentId(agentId);
+    // Get identity binding (records held off public surfaces read as absent)
+    const heldIds = await getHeldAgentIds();
+    const identity = heldIds.has(agentId) ? null : await getIdentityByAgentId(agentId);
 
     if (!identity) {
       return NextResponse.json(

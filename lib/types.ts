@@ -161,6 +161,7 @@ export interface Agent {
   classification: string;
   network: NetworkAffiliation;
   index_tier: IndexTier;
+  public?: boolean; // false = held off public surfaces; never served
   data_sources?: DataSource[];
   last_auto_scored?: string; // ISO date
   archival_status?: ArchivalStatus; // For entities below threshold with historical significance
