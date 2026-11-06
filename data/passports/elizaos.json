@@ -49,22 +49,18 @@
     },
     "economic_rails": {
       "status": "attested",
-      "summary": "ElizaOS Cloud deploys agents to dedicated instances against account credits. The project's token lost foundation support in August 2026 when the foundation wound down, and no current project wallet or treasury is documented.",
+      "summary": "ElizaOS Cloud deploys agents to dedicated instances against account credits. The project's docs do not describe a project wallet or treasury.",
       "evidence": [
         {
           "claim": "Cloud deployment runs on a dedicated EC2 instance, and troubleshooting asks users to verify they have credits in their account.",
           "url": "https://docs.elizaos.ai/guides/deploy-to-cloud.md"
-        },
-        {
-          "claim": "The founder said the token is dead with no further foundation support (August 5, 2026).",
-          "url": "https://www.coindesk.com/markets/2026/08/05/ai-agent-token-once-worth-usd2-4-billion-ends-with-founder-calling-it-dead"
         }
       ],
       "checked": "2026-11-06"
     },
     "governance": {
       "status": "attested",
-      "summary": "The code is public under the MIT license and changes land through public pull requests on GitHub. Walters retains ownership of the software IP, and no formal decision process beyond the maintainers' repository control is documented.",
+      "summary": "The code is public under the MIT license and changes land through public pull requests on GitHub. No formal decision process beyond the maintainers' repository control is documented.",
       "evidence": [
         {
           "claim": "The repository is public and MIT-licensed.",
@@ -73,21 +69,17 @@
         {
           "claim": "Recent commits on develop are merged pull requests in the elizaOS organization.",
           "url": "https://github.com/elizaOS/eliza/commits/develop"
-        },
-        {
-          "claim": "Walters retains ownership of the underlying intellectual property for the software.",
-          "url": "https://crypto.news/eliza-token-declared-dead-as-founder-winds-down-foundation-after-legal-settlement/"
         }
       ],
       "checked": "2026-11-06"
     },
     "recovery": {
       "status": "attested",
-      "summary": "When the foundation wound down in August 2026 after a legal settlement, development of the software continued under its founder, and commits are still landing in November 2026. No restart or backup procedure for agents built on the framework is documented.",
+      "summary": "The docs advise operators to implement their own backup strategy for the agent database and give no restore procedure. The project keeps shipping, with commits on 5 and 6 November 2026. No incident or restart record is published in the project's own pages.",
       "evidence": [
         {
-          "claim": "Development of ElizaOS itself will continue after the foundation's closure (August 5, 2026).",
-          "url": "https://crypto.news/eliza-token-declared-dead-as-founder-winds-down-foundation-after-legal-settlement/"
+          "claim": "The database adapter docs advise implementing proper backup strategies and give no restore procedure.",
+          "url": "https://docs.elizaos.ai/plugin-registry/sql/database-adapters.md"
         },
         {
           "claim": "The develop branch shows commits on November 5 and 6, 2026.",
