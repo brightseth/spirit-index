@@ -152,5 +152,6 @@
         "method": "self-report"
       }
     }
-  }
+  },
+  "public": false
 }

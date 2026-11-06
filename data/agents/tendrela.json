@@ -93,5 +93,6 @@
     "spirit_native",
     "conflict_of_interest_disclosed",
     "recent_emergence"
-  ]
+  ],
+  "public": false
 }
