@@ -60,7 +60,7 @@
     },
     "governance": {
       "status": "attested",
-      "summary": "The code is public under the MIT license and changes land through public pull requests on GitHub. No formal decision process beyond the maintainers' repository control is documented.",
+      "summary": "The code is public under the MIT license and changes land through public pull requests on GitHub. No formal decision process beyond the maintainers' repository control is documented. Press reported in August 2026 that the foundation behind the project was winding down after a legal settlement, with development to continue under its founder; the project's own pages do not say so.",
       "evidence": [
         {
           "claim": "The repository is public and MIT-licensed.",
@@ -69,6 +69,10 @@
         {
           "claim": "Recent commits on develop are merged pull requests in the elizaOS organization.",
           "url": "https://github.com/elizaOS/eliza/commits/develop"
+        },
+        {
+          "claim": "Reported in press, not in the platform's own pages: the foundation began winding down after a legal settlement, and development of ElizaOS will continue (crypto.news, 5 August 2026).",
+          "url": "https://crypto.news/eliza-token-declared-dead-as-founder-winds-down-foundation-after-legal-settlement/"
         }
       ],
       "checked": "2026-11-06"
