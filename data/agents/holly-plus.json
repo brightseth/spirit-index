@@ -71,33 +71,81 @@
   "evidence": [
     {
       "dimension": "persistence",
-      "claim": "Launched July 2021, continuously active through 2025",
-      "url": "https://holly.plus"
+      "claim": "Vice (July 2021) documented Holly+ launch as 'digital twin that sings any song in her voice' — first independent press at inception. Establishes 4+ year continuous operating window.",
+      "url": "https://www.vice.com/en/article/holly-herndon-deepfaked-herself-into-a-digital-twin-that-sings-any-song-in-her-voice/",
+      "source_type": "press"
+    },
+    {
+      "dimension": "persistence",
+      "claim": "Scientific American feature on the voice clone framework — third-party scientific press coverage confirming Holly+ as a sustained ongoing project, not a single drop.",
+      "url": "https://www.scientificamerican.com/article/experimental-composer-holly-herndon-built-an-ai-voice-clone-that-anyone-can/",
+      "source_type": "press"
     },
     {
       "dimension": "cultural_impact",
-      "claim": "Featured in New York Times coverage of AI art",
-      "url": "https://www.nytimes.com/2021/07/14/style/holly-herndon-holly-plus.html"
+      "claim": "Whitney Biennial 2024 commission 'xhairymutantx' — top-tier US museum institutional recognition of the broader Herndon/Dryhurst AI practice that Holly+ is the keystone of.",
+      "url": "https://whitney.org/exhibitions/xhairymutantx",
+      "source_type": "institutional"
     },
     {
       "dimension": "cultural_impact",
-      "claim": "Performed at Serpentine Gallery, London",
-      "url": "https://www.serpentinegalleries.org/whats-on/holly-herndon-mat-dryhurst/"
+      "claim": "Artnet News coverage of the Whitney Biennial 2024 commission — independent art-press confirmation of canonical institutional status.",
+      "url": "https://news.artnet.com/art-world/holly-herndon-mat-dryhurst-whitney-biennial-2453323",
+      "source_type": "press"
+    },
+    {
+      "dimension": "cultural_impact",
+      "claim": "Serpentine Galleries 'The Call' — major London institutional exhibition; bridges Holly+ practice from launch venue to canonical European recognition.",
+      "url": "https://www.serpentinegalleries.org/whats-on/holly-herndon-mat-dryhurst-the-call/",
+      "source_type": "institutional"
+    },
+    {
+      "dimension": "cultural_impact",
+      "claim": "KW Institute for Contemporary Art (Berlin) 'Starmirror' exhibition — third major institutional venue, confirming multi-continent canonical recognition.",
+      "url": "https://www.kw-berlin.de/en/exhibitions/holly-herndon-and-mat-dryhurst-starmirror",
+      "source_type": "institutional"
     },
     {
       "dimension": "governance",
-      "claim": "DAO governs voice licensing and revenue distribution",
-      "url": "https://holly.plus/about"
+      "claim": "Decrypt feature documenting the DAO-controlled deepfake platform structure (ERC-20 VOICE governance tokens, Zora auction house, 50/40/10 revenue split) — independent crypto-press confirmation of the constitutional governance claim.",
+      "url": "https://decrypt.co/75958/holly-herndon-launches-dao-controlled-vocal-deepfake-platform-holly",
+      "source_type": "industry"
+    },
+    {
+      "dimension": "governance",
+      "claim": "Lumen Database analysis of Holly+ as a model for voice ownership and consent — legal-research venue documenting the governance framework as a serious IP/consent model.",
+      "url": "https://lumendatabase.org/blog_entries/holly-plus-voice-instrument-tool-and-ownership",
+      "source_type": "academic"
     },
     {
       "dimension": "tech_distinctiveness",
-      "claim": "Custom voice model trained on Holly Herndon's voice using novel techniques",
-      "url": "https://spawning.ai"
+      "claim": "Sounding Future technical/critical analysis of the Holly+ neural network and texture-mapping architecture — third-party expert documentation of the model design (trained on isolated vocal stems).",
+      "url": "https://www.soundingfuture.com/en/article/holly-holly-herndons-digital-ai-voice-twin",
+      "source_type": "academic"
+    },
+    {
+      "dimension": "tech_distinctiveness",
+      "claim": "ArtReview 'AI Art and the Problem of Consent' — major art-criticism venue treating the Holly+/Spawning practice as a serious technical contribution to AI consent infrastructure.",
+      "url": "https://artreview.com/ai-art-and-the-problem-of-consent/",
+      "source_type": "press"
     },
     {
       "dimension": "narrative_coherence",
-      "claim": "Explores questions of consent, ownership, and distributed identity in AI art",
-      "url": "https://www.wired.com/story/holly-herndon-ai-voice-clone/"
+      "claim": "Wired feature 'Holly Herndon AI Voice Clone' frames the 'Identity Play' mythos — mainstream tech-press canonization of the coherent multi-year inquiry into distributed voice identity.",
+      "url": "https://www.wired.com/story/holly-herndon-ai-voice-clone/",
+      "source_type": "press"
+    },
+    {
+      "dimension": "narrative_coherence",
+      "claim": "Diffractions Collective essay 'From Promptism to Protocolism' positions Herndon/Dryhurst as 'artists as architects of social systems' — independent critical theory venue confirming the mythos has been canonized by external critics.",
+      "url": "https://diffractionscollective.com/2025/12/11/from-promptism-to-protocolism-the-artist-as-architect-of-social-systems-holly-herndon-mat-dryhurst/",
+      "source_type": "academic"
+    },
+    {
+      "dimension": "economic_reality",
+      "claim": "Decrypt coverage of the Holly+ Zora-based auction house — independent industry confirmation of real NFT primary-sales economic activity with on-chain auction mechanics.",
+      "url": "https://decrypt.co/78475/holly-plus-auction-house",
+      "source_type": "industry"
     }
   ],
   "score_history": [
