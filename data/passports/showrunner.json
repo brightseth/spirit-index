@@ -1,0 +1,87 @@
+{
+  "id": "showrunner",
+  "spec_version": "1.0",
+  "fields": {
+    "identity_anchor": {
+      "status": "attested",
+      "summary": "Showrunner lives on its own domain, showrunnerstudio.com (the earlier showrunner.xyz now redirects there), and is operated by Fable, Inc. It has no on-chain identity, and the system's identity is the company's product.",
+      "evidence": [
+        {
+          "claim": "showrunnerstudio.com is live and carries '© 2026 Fable Studio'.",
+          "url": "https://www.showrunnerstudio.com/"
+        },
+        {
+          "claim": "The terms of service name Fable, Inc. as the operator.",
+          "url": "https://www.showrunnerstudio.com/terms"
+        }
+      ],
+      "checked": "2026-11-06"
+    },
+    "memory_custody": {
+      "status": "attested",
+      "summary": "Story worlds, characters and user creations live on Fable's servers: the site serves media from its own storage host, and the terms give Fable a perpetual license to host and store user content. Users can request access to or deletion of personal data, but no export path for show, world or character state is documented. The SHOW-1 research describes character histories driven by a simulation, and neither code nor data is released.",
+      "evidence": [
+        {
+          "claim": "Site media is served from a storage path on watch.showrunnerapp.xyz.",
+          "url": "https://www.showrunnerstudio.com/"
+        },
+        {
+          "claim": "Users grant Fable a perpetual, irrevocable license to host, store, transfer and reproduce their content.",
+          "url": "https://www.showrunnerstudio.com/terms"
+        },
+        {
+          "claim": "The privacy policy (updated 30 July 2025) lets users request disclosure and deletion of personal data, with responses within 45 days.",
+          "url": "https://www.showrunnerstudio.com/privacy"
+        },
+        {
+          "claim": "The SHOW-1 paper (24 July 2023) describes a simulation supplying character histories, emotions and events, with no mention of released code or data.",
+          "url": "https://fablestudio.github.io/showrunner-agents/"
+        }
+      ],
+      "checked": "2026-11-06"
+    },
+    "persistence_ops": {
+      "status": "attested",
+      "summary": "The site is live and lists 'Top 10 Watched' and curated user-made shows, with a 2026 copyright line. Individual shows carry no dates, and no status page or output cadence was found.",
+      "evidence": [
+        {
+          "claim": "The homepage invites users to 'Watch AI shows. Make your own' and lists Top 10 Watched shows.",
+          "url": "https://www.showrunnerstudio.com/"
+        },
+        {
+          "claim": "Wikipedia records a public alpha in July 2025 after a closed alpha with 10,000 users, and no announced shutdown as of early 2026.",
+          "url": "https://en.wikipedia.org/wiki/Fable_Studio"
+        }
+      ],
+      "checked": "2026-11-06"
+    },
+    "economic_rails": {
+      "status": "attested",
+      "summary": "Under the current terms the service is free, Fable may charge in future, and companies earning more than USD 250,000 must be paid subscribers. No wallet or on-chain payment rail is documented.",
+      "evidence": [
+        {
+          "claim": "The terms say the service is currently free, Fable may charge in future, and corporate users with revenue over USD 250,000 must be paid subscribers.",
+          "url": "https://www.showrunnerstudio.com/terms"
+        }
+      ],
+      "checked": "2026-11-06"
+    },
+    "governance": {
+      "status": "attested",
+      "summary": "Showrunner is run by Fable, Inc. under California law, and Fable may suspend, limit or terminate access at any time for any reason. No public decision process or outside check on the operator is documented.",
+      "evidence": [
+        {
+          "claim": "Fable reserves the right to suspend, limit or terminate access to the Services at any time and for any reason; the terms are governed by California law.",
+          "url": "https://www.showrunnerstudio.com/terms"
+        }
+      ],
+      "checked": "2026-11-06"
+    },
+    "recovery": {
+      "status": "IE",
+      "summary": "IE. Settled by a public record of a Showrunner outage or data loss and how it was restored, or a published backup and continuity plan for user worlds and shows.",
+      "evidence": [],
+      "checked": "2026-11-06"
+    }
+  }
+}

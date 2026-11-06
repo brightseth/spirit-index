@@ -9,6 +9,8 @@ import { checkRegistration, RegistrationStatus } from "@/lib/chain";
 import { getRegistration } from "@/lib/registry";
 import { GenesisBadge } from "@/app/components/GenesisBadge";
 import { EmbedSection } from "@/app/components/EmbedSection";
+import { PassportSection } from "@/app/components/PassportSection";
+import { getPassport } from "@/lib/passport";
 import { Masthead } from "@/app/components/Masthead";
 import { Footer } from "@/app/components/Footer";
 import { extractDomain, formatArchivalStatus, formatReviewDate } from "@/lib/utils";
@@ -367,6 +369,9 @@ export default async function AgentDossier({ params }: Props) {
             )}
           </div>
         </div>
+
+        {/* === DURABILITY PASSPORT: separate instrument, never merged into the score === */}
+        <PassportSection passport={getPassport(agent.id)} />
 
         {/* === EVIDENCE ARCHIVE === */}
         <div className="section-divider" />

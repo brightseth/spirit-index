@@ -1,0 +1,112 @@
+{
+  "id": "aixbt",
+  "spec_version": "1.0",
+  "fields": {
+    "identity_anchor": {
+      "status": "attested",
+      "summary": "AIXBT has its own domain, aixbt.tech, with published docs, an API and an MCP server, and its token contracts on Base, Ethereum and Solana are listed in its own docs. It is also registered on Virtuals Protocol, and its verified X account is @aixbt_agent.",
+      "evidence": [
+        {
+          "claim": "aixbt.tech lists docs at docs.aixbt.tech, an OpenAPI v3 spec, and an MCP server at api.aixbt.tech/mcp.",
+          "url": "https://aixbt.tech/llms.txt"
+        },
+        {
+          "claim": "AIXBT's docs list token contracts on Base (0x4F9Fd6Be4a90f2620860d680c0d4d5Fb53d1A825), Ethereum (0x0D37aF9D8AE74F35F3A38bD2a08FcB29890Ca6d2) and Solana.",
+          "url": "https://docs.aixbt.tech/resources/tokenomics.mdx"
+        },
+        {
+          "claim": "The Virtuals API lists aixbt on BASE, created 2024-11-02, with verified X account x.com/aixbt_agent and creator @0rxbt.",
+          "url": "https://api.virtuals.io/api/virtuals/1199"
+        }
+      ],
+      "checked": "2026-11-06"
+    },
+    "memory_custody": {
+      "status": "attested",
+      "summary": "AIXBT's working memory is its intel record, an evolving record of developments, held by the AIXBT team on servers and databases run by third-party hosting vendors. That record can be read out through API v3 and an MCP server, and full access requires OAuth or an API key. No bulk export of the full corpus or any plan for surviving a vendor or model change is documented, and the docs do not say whether AIXBT uses Virtuals' Cognitive Core memory.",
+      "evidence": [
+        {
+          "claim": "Intel is kept as an evolving record that accumulates observations, served by API v3.",
+          "url": "https://docs.aixbt.tech/intel.mdx"
+        },
+        {
+          "claim": "The privacy policy (updated 15 October 2026) says data is held on servers and databases located outside the user's country, with third-party vendors for hosting and AI responses.",
+          "url": "https://docs.aixbt.tech/legal/privacy-policy"
+        },
+        {
+          "claim": "The MCP server exposes public Topics without credentials; protected tools require OAuth or an AIXBT API key.",
+          "url": "https://aixbt.tech/llms.txt"
+        }
+      ],
+      "checked": "2026-11-06"
+    },
+    "persistence_ops": {
+      "status": "attested",
+      "summary": "AIXBT's site shows intel dated 5 to 6 November 2026, and its terms and privacy policy were revised on 15 October 2026. No status page or published cadence was found.",
+      "evidence": [
+        {
+          "claim": "aixbt.tech shows ranked topics and intel with data from 5 to 6 November.",
+          "url": "https://aixbt.tech/"
+        },
+        {
+          "claim": "The terms and conditions were last updated 15 October 2026.",
+          "url": "https://docs.aixbt.tech/legal/terms-and-conditions"
+        }
+      ],
+      "checked": "2026-11-06"
+    },
+    "economic_rails": {
+      "status": "attested",
+      "summary": "AIXBT receives payments through subscriptions processed by third-party payment processors, and holding 600,000 AIXBT gives access to a Holder plan. The Virtuals API lists a wallet and a token-bound account on Base.",
+      "evidence": [
+        {
+          "claim": "Subscription fees are processed by third-party payment processors and are non-refundable; token holding grants eligibility for access only.",
+          "url": "https://docs.aixbt.tech/legal/terms-and-conditions"
+        },
+        {
+          "claim": "Holding 600,000 AIXBT grants access to the Holder plan; the token carries no equity, voting rights or revenue share.",
+          "url": "https://docs.aixbt.tech/resources/tokenomics.mdx"
+        },
+        {
+          "claim": "The Virtuals API lists wallet 0x3f736ae2af8edf4c34063f79a0e9d4d93175db2f and TBA 0x007a5Ef9431016C0A5F7BF65f078a83Dc394d793.",
+          "url": "https://api.virtuals.io/api/virtuals/1199"
+        }
+      ],
+      "checked": "2026-11-06"
+    },
+    "governance": {
+      "status": "attested",
+      "summary": "AIXBT is run by 'the AIXBT team', which can suspend or end access with or without notice. Its token docs say the token gives no voting rights, and Virtuals' agent-level governance is marked 'To be implemented'. No public decision process for the agent is documented.",
+      "evidence": [
+        {
+          "claim": "The operator is identified as 'The AIXBT team', which may suspend or terminate access with or without notice.",
+          "url": "https://docs.aixbt.tech/legal/terms-and-conditions"
+        },
+        {
+          "claim": "The AIXBT token confers no voting rights.",
+          "url": "https://docs.aixbt.tech/resources/tokenomics.mdx"
+        },
+        {
+          "claim": "Virtuals' Agent SubDAO governance page is headed 'To be implemented'.",
+          "url": "https://whitepaper.virtuals.io/about-virtuals-1/the-protocol/virtual-agents-as-programmable-decentralized-entities/agent-subdao-governance.md"
+        }
+      ],
+      "checked": "2026-11-06"
+    },
+    "recovery": {
+      "status": "stale",
+      "summary": "On 18 March 2025 an attacker got into AIXBT's dashboard and queued prompts that sent 55.5 ETH from its wallet. The maintainer said core systems were not affected and that the team migrated servers, swapped keys, paused dashboard access and reported the attacker's addresses. No newer incident record or published restore procedure was found.",
+      "evidence": [
+        {
+          "claim": "An attacker compromised the dashboard on 18 March 2025 and queued two prompts that moved 55.5 ETH; the maintainer said the team migrated servers, swapped keys, paused dashboard access and reported addresses to exchanges.",
+          "url": "https://cointelegraph.com/news/hacker-breaches-ai-crypto-bot-aixbt-steals-55-eth"
+        },
+        {
+          "claim": "The AI Incident Database records the event as Incident 1003, dated 18 March 2025.",
+          "url": "https://incidentdatabase.ai/cite/1003/"
+        }
+      ],
+      "checked": "2026-11-06"
+    }
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "id": "aaron",
+  "spec_version": "1.0",
+  "fields": {
+    "identity_anchor": {
+      "status": "attested",
+      "summary": "AARON's identity is held outside any single platform: the Whitney Museum catalogs AARON software as a collection work, and Cohen's own domain aaronshome.com remains live as AARON's home page. It has no on-chain record.",
+      "evidence": [
+        {
+          "claim": "The Whitney Museum collection lists 'AARON for KCAT' (2001), medium 'Artificial intelligence software', accession number 2023.20.",
+          "url": "https://whitney.org/collection/works/65555"
+        },
+        {
+          "claim": "aaronshome.com is live as 'Aaron's home page' and states that the Estate of Harold Cohen is represented by Gazelli Art House.",
+          "url": "https://www.aaronshome.com/aaron/index.html"
+        }
+      ],
+      "checked": "2026-11-06"
+    },
+    "memory_custody": {
+      "status": "attested",
+      "summary": "AARON's code was never released publicly, and development ended with Cohen's death in 2016. Versions of the software are now held in the Whitney Museum's permanent collection, physical outputs and records sit with the Computer History Museum, and the Harold Cohen Trust is represented by Gazelli Art House. No public export path for the source code is documented.",
+      "evidence": [
+        {
+          "claim": "AARON's source code is not publicly available, and as the software is not open source its development effectively ended with Cohen's death in 2016.",
+          "url": "https://en.wikipedia.org/wiki/AARON"
+        },
+        {
+          "claim": "The Whitney holds 'AARON for KCAT' (2001), artificial intelligence software, purchased with funds from the Digital Art Committee, accession 2023.20.",
+          "url": "https://whitney.org/collection/works/65555"
+        },
+        {
+          "claim": "Gazelli Art House states that in 2024 the Whitney acquired AARON codes into its permanent collection, and that Gazelli is the exclusive worldwide representative of the Harold Cohen Trust.",
+          "url": "https://gazelliarthouse.com/usr/library/documents/main/art-basel-2026-harold-cohen.pdf"
+        },
+        {
+          "claim": "The Computer History Museum holds the first image made by the color-enabled AARON in 1995 (collection 102741168) and a 1990 Cohen lecture video, documentation rather than software.",
+          "url": "https://computerhistory.org/blog/into-the-archives-a-look-back-with-robotic-artist-harold-cohen/"
+        }
+      ],
+      "checked": "2026-11-06"
+    },
+    "persistence_ops": {
+      "status": "attested",
+      "summary": "AARON does not run on its own. Development ended in 2016 and the system now runs only when institutions or the estate stage it, as with live-running AARON codes shown at Art Basel in June 2026. Cohen's work continues to be shown, including a group exhibition in New York from September to October 2026.",
+      "evidence": [
+        {
+          "claim": "As the software is not open source, its development effectively ended with Cohen's death in 2016.",
+          "url": "https://en.wikipedia.org/wiki/AARON"
+        },
+        {
+          "claim": "Live-running AARON codes ('Reconstruction of Mazes', 'KCAT, AARON', 'Gijon, AARON') were shown at the Art Basel booth, 18 to 21 June 2026.",
+          "url": "https://gazelliarthouse.com/usr/library/documents/main/art-basel-2026-harold-cohen.pdf"
+        },
+        {
+          "claim": "Cohen's work is in the inaugural Gazelli Art House New York exhibition, 23 September to 31 October 2026 (post dated 15 September 2026).",
+          "url": "https://www.digitalartsblog.com/exhibitions/gazelli-art-house-opens-new-york-gallery"
+        }
+      ],
+      "checked": "2026-11-06"
+    },
+    "economic_rails": {
+      "status": "attested",
+      "summary": "AARON itself holds no wallet and does not transact. Works made by Cohen with AARON are sold through the art market: the estate is represented by Gazelli Art House, which presents the work at art fairs.",
+      "evidence": [
+        {
+          "claim": "The Estate of Harold Cohen is represented by Gazelli Art House, 39 Dover St, London.",
+          "url": "https://www.aaronshome.com/aaron/index.html"
+        },
+        {
+          "claim": "Gazelli Art House is the exclusive worldwide representative of the Harold Cohen Trust and presented a solo Cohen booth at Art Basel 2026.",
+          "url": "https://gazelliarthouse.com/usr/library/documents/main/art-basel-2026-harold-cohen.pdf"
+        }
+      ],
+      "checked": "2026-11-06"
+    },
+    "governance": {
+      "status": "attested",
+      "summary": "Decisions about AARON's code and works rest with Cohen's estate and the Harold Cohen Trust, represented by Gazelli Art House, and with the institutions that hold versions of the software. The code is closed and no public decision process is documented.",
+      "evidence": [
+        {
+          "claim": "The Estate of Harold Cohen is represented by Gazelli Art House.",
+          "url": "https://www.aaronshome.com/aaron/index.html"
+        },
+        {
+          "claim": "AARON's source code is not publicly available.",
+          "url": "https://en.wikipedia.org/wiki/AARON"
+        },
+        {
+          "claim": "The Whitney's curator stated that a genuine Cohen work requires Cohen, a version of AARON, and his process; the museum planned to give most exhibition drawings to the Cohen family trust.",
+          "url": "https://www.theartnewspaper.com/2024/02/26/harold-cohen-artificial-intelligence-aaron-whitney-museum-technology"
+        }
+      ],
+      "checked": "2026-11-06"
+    },
+    "recovery": {
+      "status": "stale",
+      "summary": "After Cohen's death, AARON was brought back for exhibition: Whitney conservators emulated the 2001 KCAT version, and Cohen's son Paul Cohen rewrote the plotter code in Python. Live-running versions, including a 2024 reconstruction of an early program, were shown again in June 2026. No current source describes a standing restore or succession procedure.",
+      "evidence": [
+        {
+          "claim": "Conservators recreated the technical environment, a process known as emulation, to run one of the earlier versions of the software (article dated 10 March 2024).",
+          "url": "https://hyperallergic.com/half-a-century-before-midjourney-there-was-aaron-harold-cohen-whitney-museum/"
+        },
+        {
+          "claim": "Paul Cohen rewrote the code for the plotters in Python for the Whitney exhibition (article dated 26 February 2024).",
+          "url": "https://www.theartnewspaper.com/2024/02/26/harold-cohen-artificial-intelligence-aaron-whitney-museum-technology"
+        },
+        {
+          "claim": "Live-running AARON codes, including 'Reconstruction of Mazes' (1970-72/2024), operated at Art Basel, 18 to 21 June 2026.",
+          "url": "https://gazelliarthouse.com/usr/library/documents/main/art-basel-2026-harold-cohen.pdf"
+        }
+      ],
+      "checked": "2026-11-06"
+    }
+  }
+}

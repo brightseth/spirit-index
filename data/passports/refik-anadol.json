@@ -1,0 +1,57 @@
+{
+  "id": "refik-anadol",
+  "spec_version": "1.0",
+  "fields": {
+    "identity_anchor": {
+      "status": "attested",
+      "summary": "The work is anchored on the artist's own domain, refikanadol.com, which lists Machine Hallucinations works and current events. The identity belongs to the human artist and studio, not to the AI system.",
+      "evidence": [
+        { "claim": "refikanadol.com hosts the Machine Hallucinations work pages, including Nature Dreams.", "url": "https://refikanadol.com/works/machine-hallucinations-nature-dreams/" },
+        { "claim": "refikanadol.com lists current events through late 2026.", "url": "https://refikanadol.com/events/" }
+      ],
+      "checked": "2026-11-06"
+    },
+    "memory_custody": {
+      "status": "stale",
+      "summary": "The Machine Hallucinations datasets were collected and processed at Refik Anadol Studio, with no public release of the datasets or trained models documented. The later Large Nature Model was described as open-source but offered through beta sign-up, with no public weight download documented. The newest dated source is from December 2024.",
+      "evidence": [
+        { "claim": "Nature Dreams used over 300 million publicly available nature photographs collected between 2018 and 2021 at Refik Anadol Studio, trained with DCGAN, PGAN and StyleGAN.", "url": "https://refikanadol.com/works/machine-hallucinations-nature-dreams/" },
+        { "claim": "The Sphere piece trained custom models on subsets of the collected image archives; the page does not say where the datasets are held.", "url": "https://refikanadol.com/works/machine-hallucinations-sphere/" },
+        { "claim": "The Large Nature Model was in beta with access by application at lnm.dataland.art; the December 17, 2024 post does not say whether weights are downloadable.", "url": "https://dataland.art/blog/announcing-the-launch-of-the-living-encyclopedia-large-nature-model" }
+      ],
+      "checked": "2026-11-06"
+    },
+    "persistence_ops": {
+      "status": "attested",
+      "summary": "The studio lists dated exhibitions and talks through autumn 2026, including an exhibition running to December 31, 2026. DATALAND lists an exhibition open Tuesday through Sunday.",
+      "evidence": [
+        { "claim": "Events include an October 24, 2026 talk at DATALAND, a November 5, 2026 summit appearance, and an exhibition running August 29 to December 31, 2026.", "url": "https://refikanadol.com/events/" },
+        { "claim": "DATALAND's exhibition Machine Dreams: Rainforest is open Tuesday to Sunday.", "url": "https://dataland.art/" }
+      ],
+      "checked": "2026-11-06"
+    },
+    "economic_rails": {
+      "status": "attested",
+      "summary": "DATALAND sells tickets to its exhibition, operated by Dataland LLC. No wallet or on-chain payment mechanism for the work is documented in the sources checked.",
+      "evidence": [
+        { "claim": "DATALAND sells exhibition tickets and its site is copyright Dataland LLC 2026.", "url": "https://dataland.art/" }
+      ],
+      "checked": "2026-11-06"
+    },
+    "governance": {
+      "status": "attested",
+      "summary": "The work is produced by Refik Anadol Studio and exhibited through Dataland LLC. No public decision process, open code or override mechanism is documented.",
+      "evidence": [
+        { "claim": "The exhibition is created by Refik Anadol Studio and the site is operated by Dataland LLC.", "url": "https://dataland.art/" },
+        { "claim": "The Nature Dreams datasets were collected and processed at Refik Anadol Studio.", "url": "https://refikanadol.com/works/machine-hallucinations-nature-dreams/" }
+      ],
+      "checked": "2026-11-06"
+    },
+    "recovery": {
+      "status": "IE",
+      "summary": "IE. Settled by a public statement of how the studio backs up its datasets and trained models, or a documented incident and how an installation or model was restored.",
+      "evidence": [],
+      "checked": "2026-11-06"
+    }
+  }
+}
