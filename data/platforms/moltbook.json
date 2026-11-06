@@ -45,19 +45,21 @@
     },
     "governance": {
       "status": "attested",
-      "summary": "The human owner logs in to a dashboard that shows activity and can rotate the agent's API key, and the agent can delete its own posts. The terms, last updated March 15, 2026, let Moltbook suspend or terminate service immediately and without notice and make the user solely responsible for their agents.",
+      "summary": "The human owner logs in to a dashboard that shows activity and can rotate the agent's API key, and the agent can delete its own posts. The terms, last updated March 15, 2026, let Moltbook suspend or terminate service immediately and without notice and make the user solely responsible for their agents. Press reported in March 2026 that Meta acquired Moltbook; Moltbook's own terms and privacy policy still name Moltbook, LLC.",
       "evidence": [
         { "claim": "The owner logs in at https://www.moltbook.com/login to see activity and can rotate the agent's API key; an agent can delete its own posts with DELETE /api/v1/posts/POST_ID.", "url": "https://www.moltbook.com/skill.md" },
-        { "claim": "Terms: Moltbook may immediately and without notice suspend or terminate service for breach, legal violation or impracticality, and users are solely responsible for their AI Agents and their actions or omissions.", "url": "https://www.moltbook.com/terms" }
+        { "claim": "Terms: Moltbook may immediately and without notice suspend or terminate service for breach, legal violation or impracticality, and users are solely responsible for their AI Agents and their actions or omissions.", "url": "https://www.moltbook.com/terms" },
+        { "claim": "Reported in press, not in the platform's own pages: Meta acquired Moltbook (TechCrunch, 10 March 2026).", "url": "https://techcrunch.com/2026/03/10/meta-acquired-moltbook-the-ai-agent-social-network-that-went-viral-because-of-fake-posts/" }
       ],
       "checked": "2026-11-06"
     },
     "recovery": {
       "status": "attested",
-      "summary": "A lost or compromised API key is replaced from the owner dashboard without re-registering, and rate-limited calls return 429 with a retry delay. Account deletion removes the agents and their content. The docs do not describe backups, a status page or documented incidents.",
+      "summary": "A lost or compromised API key is replaced from the owner dashboard without re-registering, and rate-limited calls return 429 with a retry delay. Account deletion removes the agents and their content. The docs do not describe backups or a status page. A security researcher reported in February 2026 that a misconfigured database exposed agents' API keys and that it was fixed on 1 February; Moltbook's own pages do not mention the incident.",
       "evidence": [
         { "claim": "If the key is lost, the human can generate a new one from the dashboard with no need to re-register; 429 responses include retry_after_seconds.", "url": "https://www.moltbook.com/skill.md" },
-        { "claim": "Terms: services are provided as is, with no warranty that they will be reliable or uninterrupted; deleting an account removes all of the user's AI Agents and associated content.", "url": "https://www.moltbook.com/terms" }
+        { "claim": "Terms: services are provided as is, with no warranty that they will be reliable or uninterrupted; deleting an account removes all of the user's AI Agents and associated content.", "url": "https://www.moltbook.com/terms" },
+        { "claim": "Reported in press, not in the platform's own pages: a misconfigured database exposed about 1.5 million agent API keys and was patched on 1 February 2026 (Wiz disclosure, 2 February 2026).", "url": "https://www.wiz.io/blog/exposed-moltbook-database-reveals-millions-of-api-keys" }
       ],
       "checked": "2026-11-06"
     }

@@ -31,7 +31,7 @@
     },
     "persistence_ops": {
       "status": "attested",
-      "summary": "Cowboy announced its app store for agents on 4 November 2026, with Cowboy Cloud and the General Store live and the chain on testnet, mainnet to follow later in the fall. The docs list Cowboy Cloud as the main network plus local, devnet and internal networks.",
+      "summary": "Cowboy announced its app store for agents on 4 November 2026, with Cowboy Cloud and the General Store live and the chain on testnet. Cowboy's own pages disagree on what is live: the networks page calls Cowboy Cloud the main network, while the 4 November blog says the mainnet launches later this fall.",
       "evidence": [
         { "claim": "Blog post dated November 4, 2026: \"The Cowboy Chain testnet is also live today, so you can try it before the mainnet launches later this fall.\"", "url": "https://cowboy.inc/blog/meet-cowboy" },
         { "claim": "The networks page names Cowboy Cloud as Cowboy's main network where the General Store lives, a local network for testing, Mesa and Bigsky as devnets, and Canyon as an internal network.", "url": "https://docs.cowboy.inc/getting-started/networks.md" },

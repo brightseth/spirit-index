@@ -66,6 +66,12 @@ An empty passport is a young or quiet agent, not a bad one. IE is never read as 
    does not say export is impossible.
 5. **Plain summaries.** Two or three sentences. No praise words. Money is described as what the
    agent transacts, holds or sells; never as returns, yield or investment, and never with prices.
+6. **Gaps are stated, not hidden (v1.1).** When press reports a material ownership, control or
+   incident fact that the subject's own pages do not carry, the field keeps the status its own
+   pages support, and its summary says in one sentence that the fact is reported in press and
+   not in the subject's own pages. The press link is listed with a claim that begins "Reported
+   in press, not in the platform's own pages". The same applies when the subject's own pages
+   disagree with each other.
 
 ## The 90-day stale clock
 
