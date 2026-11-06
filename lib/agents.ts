@@ -26,19 +26,28 @@ export type EnrichedAgent = Agent & {
 
 // Module-level cache — agents are read once per process lifetime
 let _cachedAgents: EnrichedAgent[] | null = null;
+let _heldIds: Set<string> | null = null;
 
 /**
- * Get all agents from JSON files (internal use — includes unlisted agents)
+ * Get all agents from JSON files (internal use — includes unlisted agents,
+ * excludes public:false records)
  */
 export async function getAllAgents(): Promise<EnrichedAgent[]> {
   if (_cachedAgents) return _cachedAgents;
 
   const files = fs.readdirSync(AGENTS_DIR).filter(f => f.endsWith('.json'));
 
-  const agents = files.map(file => {
+  const records = files.map(file => {
     const filePath = path.join(AGENTS_DIR, file);
     const content = fs.readFileSync(filePath, 'utf-8');
-    const agent = JSON.parse(content) as Agent;
+    return JSON.parse(content) as Agent;
+  });
+
+  // public:false records are held off every public surface: they are never
+  // served, so dossiers, API records, feeds and sitemaps all treat them as absent.
+  _heldIds = new Set(records.filter(a => a.public === false).map(a => a.id));
+
+  const agents = records.filter(agent => agent.public !== false).map(agent => {
     const comp = calculateComparable(agent.scores);
     const comparable_pct = comp.pct;
     return {
@@ -47,14 +56,27 @@ export async function getAllAgents(): Promise<EnrichedAgent[]> {
       comparable_score: comp.score,
       comparable_max: comp.max,
       comparable_pct,
-      // Staged (self-reported, pending editorial review) entries are never
-      // listed in default views regardless of score
-      listed: comparable_pct >= QUALITY_THRESHOLD && agent.index_tier !== 'staged',
+      // Not listed in default public views if: below quality threshold, staged
+      // (self-reported, pending editorial review), or explicitly held off public
+      // surfaces (public:false).
+      listed:
+        comparable_pct >= QUALITY_THRESHOLD &&
+        agent.index_tier !== 'staged' &&
+        agent.public !== false,
     };
   });
 
   _cachedAgents = agents.sort((a, b) => b.comparable_pct - a.comparable_pct);
   return _cachedAgents;
+}
+
+/**
+ * IDs of records held off public surfaces (public:false). For filtering data
+ * that does not come through getAllAgents (genesis metadata, identity bindings).
+ */
+export async function getHeldAgentIds(): Promise<Set<string>> {
+  if (!_heldIds) await getAllAgents();
+  return _heldIds ?? new Set();
 }
 
 /**

@@ -11,6 +11,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getActiveIdentities } from '@/lib/identity';
 import { prisma } from '@/lib/db';
+import { getHeldAgentIds } from '@/lib/agents';
 
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
@@ -56,6 +57,10 @@ export async function GET(request: NextRequest) {
         },
       });
     }
+
+    // Records held off public surfaces (public:false) are never listed
+    const heldIds = await getHeldAgentIds();
+    identities = identities.filter((i) => !heldIds.has(i.agentId));
 
     // Calculate stats
     const stats = await prisma.identityBinding.groupBy({
