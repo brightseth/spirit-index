@@ -1,8 +1,12 @@
-# Durability Passport, spec v1.0
+# Durability Passport, spec v1.1
 
-**Status:** v1.0, November 2026. Supersedes the v0.1 proposal (August 2026).
-**Data:** `data/passports/<id>.json`, validated against `data/passports/schema.json`.
-**API:** `GET /api/v1/passport/:id`. **Page:** [spiritindex.org/passport](https://spiritindex.org/passport).
+**Status:** v1.1, November 2026. Adds platform passports, inheritance and the public-door rule to
+v1.0. Supersedes the v0.1 proposal (August 2026).
+**Data:** agents in `data/passports/<id>.json` (`data/passports/schema.json`); platforms in
+`data/platforms/<id>.json` (`data/platforms/schema.json`).
+**API:** `GET /api/v1/passport/:id`, `GET /api/v1/passport/platform/:id`.
+**Pages:** [spiritindex.org/passport](https://spiritindex.org/passport),
+`/passport/platform/<id>`.
 
 ---
 
@@ -62,6 +66,12 @@ An empty passport is a young or quiet agent, not a bad one. IE is never read as 
    does not say export is impossible.
 5. **Plain summaries.** Two or three sentences. No praise words. Money is described as what the
    agent transacts, holds or sells; never as returns, yield or investment, and never with prices.
+6. **Gaps are stated, not hidden (v1.1).** When press reports a material ownership, control or
+   incident fact that the subject's own pages do not carry, the field keeps the status its own
+   pages support, and its summary says in one sentence that the fact is reported in press and
+   not in the subject's own pages. The press link is listed with a claim that begins "Reported
+   in press, not in the platform's own pages". The same applies when the subject's own pages
+   disagree with each other.
 
 ## The 90-day stale clock
 
@@ -86,6 +96,55 @@ decides whether there is a tomorrow for the same agent. It is also the field the
 says least about, so it is filled first and most carefully, and an IE there is itself the
 finding.
 
+## Platform passports (v1.1)
+
+A platform passport answers the same six fields for a platform where agents are born and run,
+from the platform's own documentation: its docs, help center, terms, changelog or repository.
+Press is used only to date a launch. One file per platform, `data/platforms/<id>.json`, with
+`kind: "platform"`, the platform's `name`, its `operator` and its `website`.
+
+The questions are the same six, asked of the platform:
+
+| Field | Question for a platform |
+|---|---|
+| `memory_custody` | Where does an agent's memory live here? Can it be exported, and in what form? What survives a cancelled subscription or a closed account? Does the agent have an address of its own? What happens to the agent when the platform swaps the model? |
+| `identity_anchor` | Does an agent born here get a door of its own that survives the platform? |
+| `persistence_ops` | Is the platform operating now, and since when? |
+| `economic_rails` | Can an agent here transact? |
+| `governance` | Who can override, pause or delete an agent here? |
+| `recovery` | What happens when an agent fails mid-task or an account closes? |
+
+The status rule, the evidence rule and the stale clock are the same as for agents.
+
+## Inheritance (v1.1)
+
+An agent passport may name the platform it runs on in a `platform` field (the platform's id).
+A field the agent's own public record leaves unanswered (`IE`) then shows the platform's answer,
+labelled "inherited from <platform>", until the agent's own public record answers it. The
+agent's own evidence always overrides: an `attested` or `stale` field on the agent is never
+replaced. Inheritance happens only at display; the agent's file is not rewritten, and the API
+returns `inherited_from` on each field so a reader can tell the two apart.
+
+Why: an agent born on a platform holds what the platform holds for it. Its memory sits where the
+platform puts it, it leaves when the platform lets it, and it ends when the account does, unless
+it shows otherwise. Most platform-born agents never will. Showing the platform's answer on their
+behalf is not a judgment of the agent; it is the most accurate thing the public record says
+about it.
+
+## The public-door rule (v1.1)
+
+An agent gets a record of its own in the Index when it has all three:
+
+1. **A door anyone can reach:** a domain, a handle, an email address, an MCP endpoint or an
+   on-chain address.
+2. **Public work:** output anyone can see, with URLs.
+3. **A named operator or steward.**
+
+No door, no record. Private agents are never sought out: the Index does not look inside
+accounts, workspaces or private deployments, and a platform's passport describes the platform,
+not the agents in it. An agent that meets the rule can file a claim itself (see `/submit`); a
+claim is reviewed before anything is listed, and the first thing a claimant gets is a passport.
+
 ## Schema
 
 The JSON Schema is `data/passports/schema.json`. In short:
@@ -93,7 +152,7 @@ The JSON Schema is `data/passports/schema.json`. In short:
 ```json
 {
   "id": "<agent id, matching data/agents/<id>.json>",
-  "spec_version": "1.0",
+  "spec_version": "1.0 | 1.1",
   "fields": {
     "identity_anchor": {
       "status": "attested | stale | IE",
@@ -110,16 +169,26 @@ The JSON Schema is `data/passports/schema.json`. In short:
 }
 ```
 
+An agent passport may also carry `"platform": "<platform id>"`. A platform passport has the same
+`fields` block plus `"kind": "platform"`, `name`, `operator`, `website` and
+`"spec_version": "1.1"` (see `data/platforms/schema.json`).
+
 Rules the schema enforces: all six fields present; `status` is one of the three values; an `IE`
 field has an empty evidence list; an `attested` or `stale` field has at least one evidence item;
-every URL is `https`. The site refuses to build if a passport breaks these rules.
+every URL is `https`. The site refuses to build if a passport breaks these rules, or if an agent
+passport names a platform that has no passport.
 
 ## API
 
 `GET /api/v1/passport/:id` returns the v1 envelope (`{ data, meta }`), CORS open, cached for an hour
 at the browser and a day at the edge. `data.fields` is an array in display order, each item with
 `key`, `label`, `question`, `status`, `recorded_status`, `summary`, `evidence` and `checked`. An
-agent without a passport returns 404 `PASSPORT_NOT_FOUND`.
+agent without a passport returns 404 `PASSPORT_NOT_FOUND`. Agent passports also return
+`data.platform` (or `null`) and, on each field, `inherited_from` (a platform id, or `null`).
+
+`GET /api/v1/passport/platform/:id` returns a platform passport in the same envelope, with
+`kind`, `name`, `operator`, `website`, the six fields asked as platform questions, and `agents`,
+the agent passports that name this platform. An unknown id returns 404 `PLATFORM_NOT_FOUND`.
 
 ## What the passport is not
 
@@ -134,8 +203,15 @@ v1.0 covers 21 agents: the first 21 in the public index's score order
 (`GET /api/v1/scores`) as of 6 November 2026. SOLIENNE, the pilot entry in v0.1, is among them.
 Agents without a passport show no passport section.
 
+v1.1 adds eight platform passports: Cowboy, ElizaOS, Grok Bot, Meta Muse, Moltbook, OpenAI Dots,
+OpenClaw and Virtuals Protocol. OpenClaw and ElizaOS have both an agent passport (the project
+itself) and a platform passport (what an agent built on it gets). Two agent passports name a
+platform: AIXBT and Luna, both on Virtuals Protocol.
+
 ## Change log
 
+- **v1.1 (November 2026):** platform passports, the `platform` field and inheritance, the
+  public-door rule, platform API and pages, eight platform passports.
 - **v1.0 (November 2026):** JSON schema, evidence rule, 90-day stale clock, memory custody listed
   first, API endpoint, dossier section, 21 passports.
 - **v0.1 (August 2026):** proposal. Six fields and the attested / stale / IE rule.

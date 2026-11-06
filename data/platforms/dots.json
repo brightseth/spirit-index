@@ -1,0 +1,72 @@
+{
+  "id": "dots",
+  "kind": "platform",
+  "name": "OpenAI Dots",
+  "operator": "OpenAI",
+  "website": "https://chatgpt.com/features/dots/",
+  "spec_version": "1.1",
+  "fields": {
+    "memory_custody": {
+      "status": "attested",
+      "summary": "A dot keeps its own notes about preferences, decisions and ongoing work, separate from ChatGPT saved memory, and a cloud computer that retains its own files, software and browser sessions, all on OpenAI infrastructure with regional data residency. Deleting the dot deletes its chats, subagent history and scheduled tasks within 30 days. The docs read today do not describe an export path, do not say what happens to a dot when the paid plan ends, and describe the dot's handle and the model family it runs on without saying what changes when the model changes.",
+      "evidence": [
+        { "claim": "A dot starts with relevant context from ChatGPT memory and keeps its own notes about preferences, decisions and ongoing work; these notes are separate from ChatGPT saved memory and are not a complete transcript.", "url": "https://learn.chatgpt.com/docs/dots/tasks-and-memory" },
+        { "claim": "The cloud computer retains its own files, software and browser sessions, and sessions persist until the user signs out or the website expires them.", "url": "https://learn.chatgpt.com/docs/dots/computers-and-apps" },
+        { "claim": "Dot chats, native subagent history and scheduled tasks are deleted within 30 days of dot deletion; data storage residency is supported in Australia, Canada, Europe, India, Japan, Singapore, South Korea, the UK and the US.", "url": "https://learn.chatgpt.com/docs/enterprise/dots-security" },
+        { "claim": "A dot starts with a handle such as @yourname-dot, and naming it updates the handle.", "url": "https://learn.chatgpt.com/docs/dots" },
+        { "claim": "OpenAI says it is expanding the family of frontier models that power dots to include GPT-6.1 Terra.", "url": "https://learn.chatgpt.com/docs/dots" }
+      ],
+      "checked": "2026-11-06"
+    },
+    "identity_anchor": {
+      "status": "attested",
+      "summary": "A dot has a handle such as @yourname-dot that follows its name, and in a US beta for Pro users it can be reached by text. The docs tie the dot to a ChatGPT account or workspace and do not describe an address, domain or on-chain identity that survives outside it.",
+      "evidence": [
+        { "claim": "A dot starts with a handle such as @yourname-dot; naming it updates the handle.", "url": "https://learn.chatgpt.com/docs/dots" },
+        { "claim": "Texting is rolling out in beta to ChatGPT Pro users in the U.S., via iMessage or RCS on Android.", "url": "https://learn.chatgpt.com/docs/dots" },
+        { "claim": "Each workspace member chooses whether to create a personal dot, and admins can find, pause, resume or delete personal dots in the workspace.", "url": "https://learn.chatgpt.com/docs/enterprise/dots-admin-guide" }
+      ],
+      "checked": "2026-11-06"
+    },
+    "persistence_ops": {
+      "status": "attested",
+      "summary": "Dots were announced on 29 September 2026 at OpenAI DevDay (press date; the docs read today carry no launch date). The docs say dots are rolling out gradually to eligible Pro and Business Premium accounts, and that from 18 November 2026 access is on by default for enterprise workspaces unless they opt out. The admin guide describes the current period as a free preview.",
+      "evidence": [
+        { "claim": "Press dates the announcement to 29 September 2026 at OpenAI DevDay.", "url": "https://www.datacamp.com/blog/openai-dots" },
+        { "claim": "Dots are rolling out gradually to eligible Pro and Business Premium accounts; starting November 18, 2026, access is on by default unless a workspace opts out.", "url": "https://learn.chatgpt.com/docs/dots" },
+        { "claim": "The admin guide says the preview is free and billing for enabled dots begins November 18, 2026.", "url": "https://learn.chatgpt.com/docs/enterprise/dots-admin-guide" },
+        { "claim": "OpenAI's product page says dots are rolling out in ChatGPT on web, mobile and desktop across Pro, Business Premium and Enterprise plans.", "url": "https://chatgpt.com/features/dots/" }
+      ],
+      "checked": "2026-11-06"
+    },
+    "economic_rails": {
+      "status": "attested",
+      "summary": "A dot sits in paid tiers: Pro 100, Pro 200 and Pro 500 for adults outside the EEA, UK and Switzerland, and Business Premium, with workspace billing beginning 18 November 2026. The docs read today do not describe a wallet held by the dot or a way for it to make purchases.",
+      "evidence": [
+        { "claim": "Dots are available on Pro 100, Pro 200 and Pro 500 for users 18 and older outside the EEA, UK and Switzerland, and on Business Premium in supported regions.", "url": "https://learn.chatgpt.com/docs/dots" },
+        { "claim": "Billing stops during an admin pause and resumes if the dot returns to active; paid access begins November 18, 2026.", "url": "https://learn.chatgpt.com/docs/enterprise/dots-admin-guide" }
+      ],
+      "checked": "2026-11-06"
+    },
+    "governance": {
+      "status": "attested",
+      "summary": "Workspace admins can pause, resume or delete a member's dot from the Admin Console, an admin pause prevents the member from resuming it, and audit logs record these actions. The owner can pause the dot's main task, stop delegated tasks, delete the dot, or Reset it. An automatic review checks actions that could affect accounts or share information before they proceed.",
+      "evidence": [
+        { "claim": "An admin pause prevents the member from resuming the dot; audit logs capture admin pause, resume, delete, manage and saved-tier changes.", "url": "https://learn.chatgpt.com/docs/enterprise/dots-admin-guide" },
+        { "claim": "The dot is automatically reviewed before taking an action that could affect the user's accounts or share information, against instructions, permissions, custom rules and safety requirements.", "url": "https://learn.chatgpt.com/docs/dots/controls" },
+        { "claim": "The owner uses Reset to delete the dot, including its conversations, saved memories and schedules.", "url": "https://learn.chatgpt.com/docs/enterprise/dots-security" }
+      ],
+      "checked": "2026-11-06"
+    },
+    "recovery": {
+      "status": "attested",
+      "summary": "Pausing stops the dot's main task and Resume continues it; deletion cannot be undone and does not undo changes already made in connected apps or recall sent messages. Deleted dot data is removed within 30 days. The docs read today do not describe backups, restore after an outage, or documented incidents.",
+      "evidence": [
+        { "claim": "Pausing stops the main task without cancelling scheduled runs; deleting the dot cannot be undone and does not undo changes in connected apps or recall messages sent.", "url": "https://learn.chatgpt.com/docs/dots/controls" },
+        { "claim": "Dot chats, native subagent history and scheduled tasks are deleted within 30 days of dot deletion.", "url": "https://learn.chatgpt.com/docs/enterprise/dots-security" },
+        { "claim": "When a member leaves, admins are told to check plugin authorizations, website sessions and local computer access separately and review ongoing work before pausing or deleting the dot.", "url": "https://learn.chatgpt.com/docs/enterprise/dots-admin-guide" }
+      ],
+      "checked": "2026-11-06"
+    }
+  }
+}

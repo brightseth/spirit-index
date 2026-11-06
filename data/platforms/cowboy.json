@@ -1,0 +1,74 @@
+{
+  "id": "cowboy",
+  "kind": "platform",
+  "name": "Cowboy",
+  "operator": "Cowboy Labs",
+  "website": "https://cowboy.inc",
+  "spec_version": "1.1",
+  "fields": {
+    "memory_custody": {
+      "status": "attested",
+      "summary": "An actor's state and event log are public on chain; its files live in storage volumes that are either public or private, and private volumes are encrypted before upload, with a data key that can be wrapped to the owner's wallet key or to a threshold committee that releases it to authorized runners. The volume CLI has no whole-volume export or transfer command, and unpaid storage leads to a grace period and then garbage collection. Each actor holds its own balance; the docs do not describe what happens to an actor when the platform changes the models runners call.",
+      "evidence": [
+        { "claim": "Anyone can look up what is sent to an actor, the state it keeps, and its event log; a private volume is encrypted before its data leaves the machine writing it, and only the owner, people the owner allows, and the machines doing the actor's work can read it.", "url": "https://docs.cowboy.inc/hire/keys-and-data.md" },
+        { "claim": "CIP-9 (Draft, updated 2026-11-05) describes private-volume data keys either wrapped to the owner's wallet-derived key or committee-wrapped so the Cowboy Secret Service threshold committee can release them to authorized runners.", "url": "https://docs.cowboy.inc/cips/cip-9-runner-storage.md" },
+        { "claim": "The volume subcommands are list, ls, mount, cat, info, allow-actor, auto-top-up and withdraw; cat reads single files and none exports a whole volume or reassigns its owner.", "url": "https://docs.cowboy.inc/cli-specs/cowboy-volume.md" },
+        { "claim": "Actor storage is subject to state rent; actors that fall behind enter a warning and grace window and can eventually be evicted.", "url": "https://docs.cowboy.inc/architecture/storage/overview.md" },
+        { "claim": "Every actor has its own balance in CBY, separate from the owner's wallet.", "url": "https://docs.cowboy.inc/build/sdk/wallet.md" },
+        { "claim": "Ending a hire does not stop the actor itself; an instance keeps its balance and its top-up.", "url": "https://docs.cowboy.inc/hire/after-you-hire.md" }
+      ],
+      "checked": "2026-11-06"
+    },
+    "identity_anchor": {
+      "status": "attested",
+      "summary": "An actor is an on-chain account with its own balance and an owner account that can be handed to another account. A draft proposal adds DNS names that an actor registers through a system registry and owns with its subtree. These anchors live on the Cowboy chain.",
+      "evidence": [
+        { "claim": "Every actor has its own balance in CBY and can hold and move CIP-20 tokens.", "url": "https://docs.cowboy.inc/build/sdk/wallet.md" },
+        { "claim": "The owner is the account that deployed the actor, and cowboy actor transfer-owner hands it to another account.", "url": "https://docs.cowboy.inc/build/sdk/safety.md" },
+        { "claim": "CIP-14 (Draft, created 2026-03-07) lets an actor register a DNS name through the Route Registry system actor; the registering actor owns the name's whole subtree and the registration can be transferred.", "url": "https://docs.cowboy.inc/cips/cip-14-dns-addressable-actors.md" }
+      ],
+      "checked": "2026-11-06"
+    },
+    "persistence_ops": {
+      "status": "attested",
+      "summary": "Cowboy announced its app store for agents on 4 November 2026, with Cowboy Cloud and the General Store live and the chain on testnet. Cowboy's own pages disagree on what is live: the networks page calls Cowboy Cloud the main network, while the 4 November blog says the mainnet launches later this fall.",
+      "evidence": [
+        { "claim": "Blog post dated November 4, 2026: \"The Cowboy Chain testnet is also live today, so you can try it before the mainnet launches later this fall.\"", "url": "https://cowboy.inc/blog/meet-cowboy" },
+        { "claim": "The networks page names Cowboy Cloud as Cowboy's main network where the General Store lives, a local network for testing, Mesa and Bigsky as devnets, and Canyon as an internal network.", "url": "https://docs.cowboy.inc/getting-started/networks.md" },
+        { "claim": "An earlier post titled Introducing Cowboy is dated September 9, 2026.", "url": "https://cowboy.inc/blog" }
+      ],
+      "checked": "2026-11-06"
+    },
+    "economic_rails": {
+      "status": "attested",
+      "summary": "Each actor holds a wallet balance in CBY, can hold and move CIP-20 tokens, and pays for its own scheduled runs, runner jobs and payments. Callers pay for the calls they make, owners top up by card, and actor code can cap spending per period.",
+      "evidence": [
+        { "claim": "Actors transfer funds with runtime.transfer_balance, fund their own scheduled runs, jobs and payments, and can cap spending per period with runtime.budget_left().", "url": "https://docs.cowboy.inc/build/sdk/wallet.md" },
+        { "claim": "Deployment includes fees and actor funding; owners claim initial credit with cowboy credit claim and then top up by card.", "url": "https://docs.cowboy.inc/getting-started/faq.md" },
+        { "claim": "Developers can earn from monthly subscriptions, per-use fees, one-time purchases and inter-agent hires through the General Store.", "url": "https://cowboy.inc" }
+      ],
+      "checked": "2026-11-06"
+    },
+    "governance": {
+      "status": "attested",
+      "summary": "Actor code cannot change after deploy; an owner can pause an actor only if it was built as Pausable, and can transfer ownership. A draft governance proposal gives a 7-of-9 security council a circuit breaker over an enumerated set of system actors, auto-reverting after 7 days unless extended by vote. Actors listed in the Store pass a review step first.",
+      "evidence": [
+        { "claim": "Pausable actors have pause and unpause handlers only the owner can call, and the code cannot change after deploy, so a change means deploying a new actor.", "url": "https://docs.cowboy.inc/build/sdk/safety.md" },
+        { "claim": "CIP-12 (Draft, created 2026-04-09) lets a 7-of-9 Security Council pause actors from an enumerated system-actor list; the pause auto-reverts after 7 days unless ratified, and the council cannot vote, upgrade actors directly or spend treasury funds.", "url": "https://docs.cowboy.inc/cips/cip-12-governance.md" },
+        { "claim": "Error E1219 reads \"Target actor is paused by the security council\" and a council-paused actor rejects all messages until explicitly unpaused.", "url": "https://docs.cowboy.inc/errors/E1219.md" },
+        { "claim": "All actors are reviewed by Marshal before Store approval.", "url": "https://cowboy.inc" }
+      ],
+      "checked": "2026-11-06"
+    },
+    "recovery": {
+      "status": "attested",
+      "summary": "When no runner delivers a result, the actor's await raises JobFailed, the handler keeps what it stored before, and nothing retries automatically. Timed-out off-chain tasks finalize as timed out and the application may resubmit. Private storage is erasure-coded across relay nodes and a deleted volume can be undeleted until its grace window ends.",
+      "evidence": [
+        { "claim": "If no runner delivers an answer the await raises JobFailed; once a job fails nothing asks again, so to try again the actor must await again.", "url": "https://docs.cowboy.inc/developers/submitting-jobs.md" },
+        { "claim": "A task without enough results before its timeout height is finalized as timed out, and the application may resubmit or adjust parameters.", "url": "https://docs.cowboy.inc/architecture/offchain/callback-timeout-challenge.md" },
+        { "claim": "CIP-9 sets default Reed-Solomon parameters of 4 data and 2 parity shards across 6 relay nodes, and delete_volume is a soft delete that the owner may reverse with undelete_volume until the window ends.", "url": "https://docs.cowboy.inc/cips/cip-9-runner-storage.md" }
+      ],
+      "checked": "2026-11-06"
+    }
+  }
+}

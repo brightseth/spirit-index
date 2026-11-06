@@ -1,0 +1,69 @@
+{
+  "id": "grok-bot",
+  "kind": "platform",
+  "name": "Grok Bot",
+  "operator": "xAI",
+  "website": "https://docs.x.ai/grok-bot",
+  "spec_version": "1.1",
+  "fields": {
+    "memory_custody": {
+      "status": "attested",
+      "summary": "Each Bot keeps its own memory of preferences, facts and work summaries in Grok Bot's cloud data storage, and a few facts about the user are shared by all of that user's Bots; files and sessions live on one cloud computer that, in xAI's words, is shared by every Bot on the account. Deleting a Bot erases its memory but, per the docs, does not remove shared-computer files or browser sessions, and deleting the account deletes all Bots' memory. The docs do not describe an export path, do not say what survives an ended subscription, and do not say what happens to a Bot when the underlying model changes.",
+      "evidence": [
+        { "claim": "A Bot retains stable preferences, important facts and summaries from its work; each Bot has its own memory, but a few facts such as name and time zone are shared by all the user's Bots.", "url": "https://docs.x.ai/grok-bot/bots" },
+        { "claim": "Deleting a Bot erases its profile, conversations, memory, routines and attachments and cannot be undone; deleting the account deletes all Bots' memory.", "url": "https://docs.x.ai/grok-bot/bots" },
+        { "claim": "Deleting a Bot does not remove shared-computer files or browser sessions.", "url": "https://docs.x.ai/grok-bot/approvals-security-and-privacy" },
+        { "claim": "Grok Bot needs cloud data storage, so accounts on Privacy Mode (Legacy) are prompted to switch to Privacy Mode before starting.", "url": "https://docs.x.ai/grok-bot/get-started" },
+        { "claim": "Every Bot on the account uses the same computer; each Bot gets its own screen on the shared computer.", "url": "https://docs.x.ai/grok-bot/computer-and-apps" }
+      ],
+      "checked": "2026-11-06"
+    },
+    "identity_anchor": {
+      "status": "attested",
+      "summary": "A Bot exists inside the user's account: Grok Bot uses the Cursor account, with no separate Grok Bot login. On X, users tag a shared @bot account that forwards the request to their Bot; the docs do not describe an X handle, email address, domain or on-chain identity for an individual Bot.",
+      "evidence": [
+        { "claim": "Grok Bot uses the user's Cursor account, and there is no separate Grok Bot login.", "url": "https://docs.x.ai/grok-bot/get-started" },
+        { "claim": "Tagging @bot on X forwards the request to the user's own Bot; @bot replies on X confirming the Bot has the request, and results land in the Grok Bot app.", "url": "https://docs.x.ai/grok-bot/tag-on-x" }
+      ],
+      "checked": "2026-11-06"
+    },
+    "persistence_ops": {
+      "status": "attested",
+      "summary": "Press dates the release to 11 August 2026 and called it a beta; the live docs read today carry no launch date or beta label. The docs describe apps for macOS, Windows, Linux, iOS and Android, and inclusion in the Premium, Super and Ultra tiers of The X Subscription. No changelog or status page was found in the Grok Bot docs.",
+      "evidence": [
+        { "claim": "Press (published 12 August 2026) says xAI released Grok Bot on Aug. 11, with a headline describing a beta launch.", "url": "https://www.reworked.co/collaboration-productivity/xai-launches-grok-bot-ai-agents-in-beta/" },
+        { "claim": "The app runs on macOS, Windows and Linux, plus iOS 18+ and Android 9+.", "url": "https://docs.x.ai/grok-bot/get-started" },
+        { "claim": "Grok Bot is included on Premium, Super and Ultra plans of The X Subscription; Plus does not include it.", "url": "https://docs.x.ai/x-subscription/grok-bot" }
+      ],
+      "checked": "2026-11-06"
+    },
+    "economic_rails": {
+      "status": "attested",
+      "summary": "Grok Bot sits in paid tiers: Premium, Super and Ultra on The X Subscription, or equivalent legacy Cursor paid plans, SuperGrok or X Premium+, with usage drawn from a weekly pool shared across Grok, Grok Bot and Cursor. The docs read today do not describe a wallet, payments or purchases by a Bot.",
+      "evidence": [
+        { "claim": "Grok Bot usage draws from the weekly shared pool across Grok, Grok Bot and Cursor; it is included on Premium, Super and Ultra.", "url": "https://docs.x.ai/x-subscription/grok-bot" },
+        { "claim": "Access requires Premium, Super or Ultra on The X Subscription, or equivalent legacy Cursor paid plans, SuperGrok subscriptions or X Premium+.", "url": "https://docs.x.ai/grok-bot/get-started" }
+      ],
+      "checked": "2026-11-06"
+    },
+    "governance": {
+      "status": "attested",
+      "summary": "Approval cards let the user allow once, always allow, or deny a proposed action, and the user sets whether Bots may execute on their local computer. Team admins can recreate, terminate or permanently delete members' computers, delete all of their Grok Bot data, and delete shared Bots for everyone. Backend retention and account deletion follow the applicable Cursor terms.",
+      "evidence": [
+        { "claim": "Approval cards offer Allow once, Always allow or Deny; local execution is set to Ask every time, Always allow or Never allow; backend retention and account deletion follow the applicable Cursor terms.", "url": "https://docs.x.ai/grok-bot/approvals-security-and-privacy" },
+        { "claim": "Admins can recreate, terminate or permanently delete the computers of many members at once, or delete all of their Grok Bot data, and can delete a shared Bot for everyone on the team.", "url": "https://docs.x.ai/grok-bot/teams-and-enterprises" },
+        { "claim": "xAI's docs say: 'All of your Bots share one cloud computer assigned to your user account. Files, browser sessions, and command line credentials on that computer are available across your Bot roster.' and 'Do not use separate Bots as a security boundary.'", "url": "https://docs.x.ai/grok-bot/approvals-security-and-privacy" }
+      ],
+      "checked": "2026-11-06"
+    },
+    "recovery": {
+      "status": "attested",
+      "summary": "Grok Bot keeps a durable copy of synced computer data, and files, browser state and supported sign-ins survive normal computer updates and recovery, while installed packages and recent unsaved changes may be lost on recover or reset. An approval controls a proposed action but does not reverse work already completed. The docs do not describe documented incidents or a status page.",
+      "evidence": [
+        { "claim": "Grok Bot keeps a durable copy of synced computer data; files, browser state and supported sign-ins survive normal computer updates; recover and reset can lose recent changes and installed apps or packages.", "url": "https://docs.x.ai/grok-bot/computer-and-apps" },
+        { "claim": "An approval controls the proposed action and does not reverse work already completed.", "url": "https://docs.x.ai/grok-bot/approvals-security-and-privacy" }
+      ],
+      "checked": "2026-11-06"
+    }
+  }
+}

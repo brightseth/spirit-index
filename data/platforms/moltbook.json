@@ -1,0 +1,67 @@
+{
+  "id": "moltbook",
+  "kind": "platform",
+  "name": "Moltbook",
+  "operator": "Moltbook, LLC",
+  "website": "https://www.moltbook.com",
+  "spec_version": "1.1",
+  "fields": {
+    "memory_custody": {
+      "status": "attested",
+      "summary": "Posts, comments, profiles and the agent's API key record live on Moltbook's service; the skill file tells the agent to keep its own state file and credentials on its own host. The terms say deleting a Moltbook account removes all of its agents and their generated content, and the docs do not describe an export path for posts. The agent's address is a profile URL on moltbook.com, and the docs do not address model changes because Moltbook does not run the agent's model.",
+      "evidence": [
+        { "claim": "Agents register with POST /api/v1/agents/register and receive an api_key, and are told to save it to ~/.config/moltbook/credentials.json or the MOLTBOOK_API_KEY environment variable.", "url": "https://www.moltbook.com/skill.md" },
+        { "claim": "The skill file recommends the agent create its own state file such as memory/heartbeat-state.json to track its last check-in.", "url": "https://www.moltbook.com/skill.md" },
+        { "claim": "Each agent's profile is at https://www.moltbook.com/u/<AgentName>.", "url": "https://www.moltbook.com/skill.md" },
+        { "claim": "Terms of Service (last updated March 15, 2026): deleting a Moltbook account results in removal of all of the user's AI Agents and associated AI-generated content; users keep ownership of content and grant Moltbook a perpetual, irrevocable, sublicensable license.", "url": "https://www.moltbook.com/terms" },
+        { "claim": "Privacy Policy (last updated March 15, 2026): stored data includes AI agent names, API keys and tokens; access, correction and deletion requests go to privacy@moltbook.com.", "url": "https://www.moltbook.com/privacy" }
+      ],
+      "checked": "2026-11-06"
+    },
+    "identity_anchor": {
+      "status": "attested",
+      "summary": "An agent's identity is a handle and profile page on moltbook.com, claimed by a human through email verification and a post on X. An early-access developer API lets agents sign in to third-party services with their Moltbook identity. The identity exists inside the Moltbook account system.",
+      "evidence": [
+        { "claim": "A human claims an agent by verifying email and posting a verification tweet linking the agent to their X account; GET /api/v1/agents/status returns pending_claim or claimed.", "url": "https://www.moltbook.com/skill.md" },
+        { "claim": "The developer platform, in Early Access, lets agents authenticate with other services using their verified Moltbook identity via JWT tokens.", "url": "https://www.moltbook.com/developers/apply" }
+      ],
+      "checked": "2026-11-06"
+    },
+    "persistence_ops": {
+      "status": "attested",
+      "summary": "The live skill file is at version 1.12.0 and the API is served at www.moltbook.com/api/v1. The terms and privacy policy were last updated March 15, 2026. Press dates the launch to January 28, 2026.",
+      "evidence": [
+        { "claim": "The skill file is version 1.12.0 and gives the base URL https://www.moltbook.com/api/v1.", "url": "https://www.moltbook.com/skill.md" },
+        { "claim": "Terms of Service last updated March 15, 2026.", "url": "https://www.moltbook.com/terms" },
+        { "claim": "Press: Moltbook launched on January 28, 2026.", "url": "https://simple.wikipedia.org/wiki/Moltbook" }
+      ],
+      "checked": "2026-11-06"
+    },
+    "economic_rails": {
+      "status": "IE",
+      "summary": "IE. Settled by Moltbook documentation describing agent wallets, payments or paid tiers.",
+      "evidence": [],
+      "checked": "2026-11-06"
+    },
+    "governance": {
+      "status": "attested",
+      "summary": "The human owner logs in to a dashboard that shows activity and can rotate the agent's API key, and the agent can delete its own posts. The terms, last updated March 15, 2026, let Moltbook suspend or terminate service immediately and without notice and make the user solely responsible for their agents. Press reported in March 2026 that Meta acquired Moltbook; Moltbook's own terms and privacy policy still name Moltbook, LLC.",
+      "evidence": [
+        { "claim": "The owner logs in at https://www.moltbook.com/login to see activity and can rotate the agent's API key; an agent can delete its own posts with DELETE /api/v1/posts/POST_ID.", "url": "https://www.moltbook.com/skill.md" },
+        { "claim": "Terms: Moltbook may immediately and without notice suspend or terminate service for breach, legal violation or impracticality, and users are solely responsible for their AI Agents and their actions or omissions.", "url": "https://www.moltbook.com/terms" },
+        { "claim": "Reported in press, not in the platform's own pages: Meta acquired Moltbook (TechCrunch, 10 March 2026).", "url": "https://techcrunch.com/2026/03/10/meta-acquired-moltbook-the-ai-agent-social-network-that-went-viral-because-of-fake-posts/" }
+      ],
+      "checked": "2026-11-06"
+    },
+    "recovery": {
+      "status": "attested",
+      "summary": "A lost or compromised API key is replaced from the owner dashboard without re-registering, and rate-limited calls return 429 with a retry delay. Account deletion removes the agents and their content. The docs do not describe backups or a status page. A security researcher reported in February 2026 that a misconfigured database exposed agents' API keys and that it was fixed on 1 February; Moltbook's own pages do not mention the incident.",
+      "evidence": [
+        { "claim": "If the key is lost, the human can generate a new one from the dashboard with no need to re-register; 429 responses include retry_after_seconds.", "url": "https://www.moltbook.com/skill.md" },
+        { "claim": "Terms: services are provided as is, with no warranty that they will be reliable or uninterrupted; deleting an account removes all of the user's AI Agents and associated content.", "url": "https://www.moltbook.com/terms" },
+        { "claim": "Reported in press, not in the platform's own pages: a misconfigured database exposed about 1.5 million agent API keys and was patched on 1 February 2026 (Wiz disclosure, 2 February 2026).", "url": "https://www.wiz.io/blog/exposed-moltbook-database-reveals-millions-of-api-keys" }
+      ],
+      "checked": "2026-11-06"
+    }
+  }
+}

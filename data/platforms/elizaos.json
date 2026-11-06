@@ -1,0 +1,140 @@
+{
+  "id": "elizaos",
+  "kind": "platform",
+  "name": "ElizaOS",
+  "operator": "elizaOS (open-source project; Eliza Cloud hosted service)",
+  "website": "https://docs.elizaos.ai",
+  "spec_version": "1.1",
+  "fields": {
+    "memory_custody": {
+      "status": "attested",
+      "summary": "An agent built on ElizaOS stores its memory (text, embeddings, metadata) in a database its operator chooses: embedded PGLite at ./.eliza/.elizadb by default, or PostgreSQL when POSTGRES_URL is set. A REST endpoint returns all of an agent's memories as JSON, but the docs do not describe a backup or export procedure beyond advising one. On a model swap, the docs warn that all documents must use the same embedding model; for Eliza Cloud, closed repository work says cancelling a subscription does not delete agents, and account deletion offers export before an irreversible purge.",
+      "evidence": [
+        {
+          "claim": "PGLite defaults to ./.eliza/.elizadb; if POSTGRES_URL is set the PostgreSQL adapter is used; the backup guidance is to implement proper backup strategies.",
+          "url": "https://docs.elizaos.ai/plugin-registry/sql/database-adapters.md"
+        },
+        {
+          "claim": "GET /api/memory/{agentId}/memories retrieves all memories for a specific agent as JSON, optionally including embedding vectors.",
+          "url": "https://docs.elizaos.ai/rest-reference/memory/get-agent-memories.md"
+        },
+        {
+          "claim": "Memories are persisted through the IDatabaseAdapter; the page does not describe export, backup or import.",
+          "url": "https://docs.elizaos.ai/agents/memory-and-state.md"
+        },
+        {
+          "claim": "The knowledge docs state all your documents must use the same embedding model for consistency, and do not try to mix different embedding models.",
+          "url": "https://docs.elizaos.ai/plugin-registry/knowledge/contextual-embeddings"
+        },
+        {
+          "claim": "An issue closed as completed on September 26, 2026 requires that subscription cancellation changes recurring billing only and never deletes agents or purchased credits, and that account deletion offers export before irreversible purge.",
+          "url": "https://github.com/elizaOS/eliza/issues/23098"
+        },
+        {
+          "claim": "The README says Eliza Cloud is optional and that the local runtime and direct model-provider configuration remain first-class paths.",
+          "url": "https://github.com/elizaOS/eliza"
+        }
+      ],
+      "checked": "2026-11-06"
+    },
+    "identity_anchor": {
+      "status": "attested",
+      "summary": "A character carries a UUID id and an optional username for social platforms, so most of an agent's doors are accounts its operator configures. With the EVM plugin an agent holds a wallet from a private key, optionally derived inside a Trusted Execution Environment, and an Eliza Cloud deployment gets a persistent URL on the hosted service.",
+      "evidence": [
+        {
+          "claim": "Characters include an optional id field (UUID, auto-generated if not provided) and a username for social platforms.",
+          "url": "https://docs.elizaos.ai/agents/character-interface.md"
+        },
+        {
+          "claim": "The EVM plugin requires EVM_PRIVATE_KEY and supports TEE mode with TEE_MODE and WALLET_SECRET_SALT to derive wallets in a Trusted Execution Environment.",
+          "url": "https://docs.elizaos.ai/plugin-registry/defi/evm"
+        },
+        {
+          "claim": "Cloud deployment lists a persistent URL, HTTPS by default and a dedicated EC2 instance.",
+          "url": "https://docs.elizaos.ai/guides/deploy-to-cloud.md"
+        }
+      ],
+      "checked": "2026-11-06"
+    },
+    "persistence_ops": {
+      "status": "attested",
+      "summary": "The elizaOS/eliza repository was created July 9, 2024 and was last pushed November 6, 2026. The develop branch shows commits on November 5 and 6, 2026, including Cloud work.",
+      "evidence": [
+        {
+          "claim": "The repository was created 2024-07-09 and last pushed 2026-11-06.",
+          "url": "https://api.github.com/repos/elizaOS/eliza"
+        },
+        {
+          "claim": "The develop branch shows commits on November 5 and November 6, 2026, including fix(cloud) commits.",
+          "url": "https://github.com/elizaOS/eliza/commits/develop"
+        }
+      ],
+      "checked": "2026-11-06"
+    },
+    "economic_rails": {
+      "status": "attested",
+      "summary": "An agent can hold a wallet and transact through plugins: the README lists non-custodial EVM and Solana wallet operations with approval boundaries, and the EVM plugin covers transfers, swaps and bridging across 30+ networks. Eliza Cloud deployments run against account credits.",
+      "evidence": [
+        {
+          "claim": "The README lists non-custodial EVM and Solana wallet operations with approval boundaries.",
+          "url": "https://github.com/elizaOS/eliza"
+        },
+        {
+          "claim": "The EVM plugin supports token transfers, swaps, bridging and governance operations across 30+ networks.",
+          "url": "https://docs.elizaos.ai/plugin-registry/defi/evm"
+        },
+        {
+          "claim": "Cloud troubleshooting asks users to verify they have credits in their account.",
+          "url": "https://docs.elizaos.ai/guides/deploy-to-cloud.md"
+        }
+      ],
+      "checked": "2026-11-06"
+    },
+    "governance": {
+      "status": "attested",
+      "summary": "Whoever runs the agent server can stop or permanently delete an agent through the REST API, and the code is MIT licensed and public. For Eliza Cloud, account deletion fences access and billing immediately; the hosted service's terms page did not render for reading, so its suspension rights are not on this record. Press reported in August 2026 that the foundation behind the project was winding down after a legal settlement, with development to continue under its founder; the project's own pages do not say so.",
+      "evidence": [
+        {
+          "claim": "POST /api/agents/{agentId}/stop stops a running agent.",
+          "url": "https://docs.elizaos.ai/rest-reference/agents/stop-an-agent.md"
+        },
+        {
+          "claim": "DELETE /api/agents/{agentId} permanently deletes an agent, and can fail with 409 when active references exist.",
+          "url": "https://docs.elizaos.ai/rest-reference/agents/delete-an-agent.md"
+        },
+        {
+          "claim": "Personal account deletion fences access and billing immediately, offers export and recovery, then irreversibly purges after the published window.",
+          "url": "https://github.com/elizaOS/eliza/issues/23098"
+        },
+        {
+          "claim": "The repository is MIT licensed.",
+          "url": "https://github.com/elizaOS/eliza"
+        },
+        {
+          "claim": "Reported in press, not in the platform's own pages: the foundation began winding down after a legal settlement, and development of ElizaOS will continue (crypto.news, 5 August 2026).",
+          "url": "https://crypto.news/eliza-token-declared-dead-as-founder-winds-down-foundation-after-legal-settlement/"
+        }
+      ],
+      "checked": "2026-11-06"
+    },
+    "recovery": {
+      "status": "attested",
+      "summary": "For self-hosted agents the docs do not describe a restart or restore procedure, only advising backup strategies for the database. Eliza Cloud lists health monitoring and zero-downtime updates, and a recovery window precedes account deletion, after which an hourly job activates the deletion or parks it for an operator.",
+      "evidence": [
+        {
+          "claim": "Cloud deployment lists health monitoring, zero-downtime updates and real-time logs.",
+          "url": "https://docs.elizaos.ai/guides/deploy-to-cloud.md"
+        },
+        {
+          "claim": "A PR merged October 28, 2026 says that when a personal account deletion's recovery window ends, the hourly cron activates it or parks it for an operator.",
+          "url": "https://github.com/elizaOS/eliza/pull/37508"
+        },
+        {
+          "claim": "The database adapter docs advise implementing proper backup strategies and give no restore procedure.",
+          "url": "https://docs.elizaos.ai/plugin-registry/sql/database-adapters.md"
+        }
+      ],
+      "checked": "2026-11-06"
+    }
+  }
+}

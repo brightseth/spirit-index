@@ -11,6 +11,8 @@ import { getAgentById } from '@/lib/agents';
 import { handleOptions, jsonSuccess, jsonError, BASE_URL } from '@/lib/api-utils';
 import {
   getPassport,
+  getPlatformPassport,
+  resolveField,
   effectiveStatus,
   lastChecked,
   PASSPORT_FIELD_ORDER,
@@ -43,14 +45,16 @@ export async function GET(request: NextRequest, { params }: Props) {
     }
 
     const now = new Date();
+    const platform = passport.platform ? getPlatformPassport(passport.platform) : null;
     const fields = PASSPORT_FIELD_ORDER.map((key) => {
-      const f = passport.fields[key];
+      const { field: f, inheritedFrom } = resolveField(passport, key);
       return {
         key,
         label: PASSPORT_FIELDS[key].label,
         question: PASSPORT_FIELDS[key].question,
         status: effectiveStatus(f, now),
         recorded_status: f.status,
+        inherited_from: inheritedFrom ? inheritedFrom.id : null,
         summary: f.summary,
         evidence: f.evidence,
         checked: f.checked,
@@ -62,6 +66,9 @@ export async function GET(request: NextRequest, { params }: Props) {
         id: agent.id,
         name: agent.name,
         spec_version: passport.spec_version,
+        platform: platform
+          ? { id: platform.id, name: platform.name, url: `${BASE_URL}/passport/platform/${platform.id}` }
+          : null,
         last_checked: lastChecked(passport),
         fields,
         url: `${BASE_URL}/${agent.id}#passport`,
@@ -70,7 +77,7 @@ export async function GET(request: NextRequest, { params }: Props) {
         spec: `${BASE_URL}/passport`,
         spec_version: PASSPORT_SPEC_VERSION,
         stale_after_days: STALE_AFTER_DAYS,
-        note: 'The passport is not a score. Fields are never summed and do not affect the character score.',
+        note: 'The passport is not a score. Fields are never summed and do not affect the character score. A field with inherited_from set shows the platform answer because the agent has none of its own yet.',
       },
       {
         cacheControl: 'public, max-age=3600, s-maxage=86400, stale-while-revalidate=86400',

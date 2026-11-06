@@ -1,6 +1,7 @@
 import { MetadataRoute } from "next";
 import { getAllAgentIds } from "@/lib/agents";
 import { DIMENSIONS, DimensionKey } from "@/lib/types";
+import { getPlatformIds } from "@/lib/passport";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = "https://spiritindex.org";
@@ -34,5 +35,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.6,
   }));
 
-  return [...staticPages, ...agentPages, ...leaderboardPages];
+  // Platform passport pages
+  const platformPages = getPlatformIds().map((id) => ({
+    url: `${baseUrl}/passport/platform/${id}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+  }));
+
+  return [...staticPages, ...agentPages, ...leaderboardPages, ...platformPages];
 }

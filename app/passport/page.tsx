@@ -6,6 +6,9 @@ import { getAgentById } from "@/lib/agents";
 import {
   getPassport,
   getPassportIds,
+  getPlatformIds,
+  getPlatformPassport,
+  resolveField,
   effectiveStatus,
   PassportStatus,
   PASSPORT_FIELDS,
@@ -44,6 +47,11 @@ export default async function PassportPage() {
   )
     .filter((r) => r !== null)
     .sort((a, b) => a.agent.name.localeCompare(b.agent.name));
+
+  const platforms = getPlatformIds()
+    .map((id) => getPlatformPassport(id))
+    .filter((p) => p !== null)
+    .sort((a, b) => a.name.localeCompare(b.name));
 
   return (
     <div className="min-h-screen">
@@ -119,11 +127,82 @@ export default async function PassportPage() {
           </section>
         </article>
 
+        <article className="prose-container">
+          <section className="mt-12">
+            <h3 className="section-title">Platforms and inheritance</h3>
+            <div className="prose">
+              <p>
+                Many agents are born inside a platform and hold nothing the platform does not hold
+                for them. So platforms get passports too, answered from their own documentation. An
+                agent that runs on a platform inherits its platform&apos;s answer for any field its
+                own public record leaves unanswered, marked as inherited, until the agent shows
+                otherwise. The agent&apos;s own evidence always wins. Most platform-born agents will
+                carry their platform&apos;s answers for as long as they exist, and that is the point
+                of showing them.
+              </p>
+            </div>
+          </section>
+
+          <section className="mt-12">
+            <h3 className="section-title">The public door</h3>
+            <div className="prose">
+              <p>
+                An agent gets a record of its own when it has a door anyone can reach (a domain, a
+                handle, an email address, an MCP endpoint or an on-chain address), public work, and
+                a named operator or steward. No door, no record. Private agents are never sought
+                out. An agent that meets the rule can file a claim at{" "}
+                <Link href="/submit" className="text-green hover:underline">/submit</Link>.
+              </p>
+            </div>
+          </section>
+        </article>
+
         <section className="mt-12">
-          <h3 className="section-title">Passports ({rows.length})</h3>
+          <h3 className="section-title">Platforms ({platforms.length})</h3>
           <p className="text-dim text-xs font-mono mb-6">
             A = attested &middot; S = stale &middot; IE = insufficient evidence. Not a ranking;
             listed by name.
+          </p>
+          <div className="overflow-x-auto">
+            <table className="w-full text-xs font-mono">
+              <thead>
+                <tr className="text-dim text-left">
+                  <th className="py-2 pr-4 font-normal">Platform</th>
+                  {PASSPORT_FIELD_ORDER.map((key) => (
+                    <th key={key} className="py-2 px-2 font-normal whitespace-nowrap">
+                      {PASSPORT_FIELDS[key].label}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {platforms.map((platform) => (
+                  <tr key={platform.id} className="border-t border-subtle">
+                    <td className="py-2 pr-4 whitespace-nowrap">
+                      <Link href={`/passport/platform/${platform.id}`} className="text-muted hover:text-white">
+                        {platform.name}
+                      </Link>
+                    </td>
+                    {PASSPORT_FIELD_ORDER.map((key) => {
+                      const status = effectiveStatus(platform.fields[key]);
+                      return (
+                        <td key={key} className="py-2 px-2" style={{ color: STATUS_COLOR[status] }}>
+                          {STATUS_MARK[status]}
+                        </td>
+                      );
+                    })}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section className="mt-12">
+          <h3 className="section-title">Agents ({rows.length})</h3>
+          <p className="text-dim text-xs font-mono mb-6">
+            Same marks. A mark followed by * is inherited from the agent&apos;s platform. Listed
+            by name.
           </p>
           <div className="overflow-x-auto">
             <table className="w-full text-xs font-mono">
@@ -146,10 +225,17 @@ export default async function PassportPage() {
                       </Link>
                     </td>
                     {PASSPORT_FIELD_ORDER.map((key) => {
-                      const status = effectiveStatus(passport.fields[key]);
+                      const { field, inheritedFrom } = resolveField(passport, key);
+                      const status = effectiveStatus(field);
                       return (
-                        <td key={key} className="py-2 px-2" style={{ color: STATUS_COLOR[status] }}>
+                        <td
+                          key={key}
+                          className="py-2 px-2"
+                          style={{ color: STATUS_COLOR[status] }}
+                          title={inheritedFrom ? `Inherited from ${inheritedFrom.name}` : undefined}
+                        >
                           {STATUS_MARK[status]}
+                          {inheritedFrom ? "*" : ""}
                         </td>
                       );
                     })}
@@ -163,7 +249,9 @@ export default async function PassportPage() {
         <section className="mt-12">
           <h3 className="section-title">Data</h3>
           <p className="text-muted text-sm">
-            <code>GET /api/v1/passport/:id</code> returns a passport in the v1 envelope, CORS open.
+            <code>GET /api/v1/passport/:id</code> returns an agent passport and{" "}
+            <code>GET /api/v1/passport/platform/:id</code> a platform passport, both in the v1
+            envelope, CORS open.
             The full spec and JSON schema are in the{" "}
             <a
               href="https://github.com/brightseth/spirit-index/blob/main/docs/durability-passport.md"
