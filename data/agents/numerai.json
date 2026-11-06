@@ -71,33 +71,75 @@
   "evidence": [
     {
       "dimension": "persistence",
-      "claim": "Operating since December 2015, over 10 years continuous operation",
-      "url": "https://numer.ai/about"
+      "claim": "TechCrunch (Dec 2016) documents Numerai one year post-launch as 'crowdsourced hedge fund for machine learning experts' — earliest independent press coverage at the company's inception window. Establishes the >10-year operating arc.",
+      "url": "https://techcrunch.com/2016/12/12/numer-ai-is-a-crowdsourced-hedge-fund-for-machine-learning-experts/",
+      "source_type": "press"
+    },
+    {
+      "dimension": "persistence",
+      "claim": "Bloomberg (Oct 2018) profile of Craib's quant marketplace — top-tier financial press confirming Numerai's continuity through the 2017-2018 crypto cycle and into the second-stage product (Numerai Signals).",
+      "url": "https://www.bloomberg.com/news/articles/2018-10-04/numerai-s-richard-craib-expands-gig-economy-to-quant-hedge-funds",
+      "source_type": "press"
     },
     {
       "dimension": "economic_reality",
-      "claim": "Manages hedge fund with $100M+ AUM, NMR token staking",
-      "url": "https://numer.ai/tournament"
+      "claim": "Bloomberg (Aug 2025) — JPMorgan Asset Management commits up to $500M to Numerai over the following year, more than doubling AUM toward ~$1B. Top-tier institutional validation of real-money economic activity.",
+      "url": "https://www.bloomberg.com/news/articles/2025-08-26/crowdsourcing-hedge-fund-gets-500-million-jpmorgan-commitment",
+      "source_type": "press"
+    },
+    {
+      "dimension": "economic_reality",
+      "claim": "Hedgeweek industry-trade coverage of the JPMorgan $500M capacity allocation — independent hedge-fund-industry verification of the AUM scale claim.",
+      "url": "https://www.hedgeweek.com/quant-hedge-fund-numerai-secures-500m-jpmorgan-allocation/",
+      "source_type": "industry"
+    },
+    {
+      "dimension": "economic_reality",
+      "claim": "Globe and Mail (Nov 2025) — Numerai raises $30M Series C at $500M valuation, led by top university endowments. Third-party financial press confirming sustained capital formation alongside the operational hedge fund.",
+      "url": "https://www.theglobeandmail.com/investing/markets/markets-news/Tipranks/36257418/numerai-raises-30-million-series-c-led-by-top-university-endowments-at-500-million-valuation/",
+      "source_type": "press"
     },
     {
       "dimension": "tech_distinctiveness",
-      "claim": "Pioneered erasure encoding for data privacy in ML competitions",
-      "url": "https://medium.com/numerai/encrypted-data-for-efficient-markets-fffee22e1a81"
+      "claim": "Gemini Cryptopedia technical writeup of the Numerai Tournament and stake-weighted Meta Model — third-party crypto-exchange educational resource documenting the architecture in detail.",
+      "url": "https://www.gemini.com/cryptopedia/numerai-tournaments",
+      "source_type": "industry"
+    },
+    {
+      "dimension": "tech_distinctiveness",
+      "claim": "Gemini Cryptopedia 'Data and Prediction Markets on Erasure Protocol' — independent technical documentation of the Erasure Protocol layer that anchors the staking-and-signals economic infrastructure.",
+      "url": "https://www.gemini.com/cryptopedia/nmr-token-numerai-prediction-markets",
+      "source_type": "industry"
     },
     {
       "dimension": "governance",
-      "claim": "Stake-weighted signal aggregation creates pseudo-decentralized governance",
-      "url": "https://docs.numer.ai/tournament/staking"
-    },
-    {
-      "dimension": "cultural_impact",
-      "claim": "Featured in academic papers and ML conference presentations",
-      "url": "https://arxiv.org/search/?query=numerai"
+      "claim": "Wikipedia entry summarizing the stake-weighted aggregation, NMR burn mechanic, and governance structure — third-party reference encyclopedia confirming the hybrid (corporate + crowd-staked) governance model.",
+      "url": "https://en.wikipedia.org/wiki/Numerai",
+      "source_type": "press"
     },
     {
       "dimension": "autonomy",
-      "claim": "Meta model aggregates and executes trades autonomously based on staked signals",
-      "url": "https://numer.ai/docs"
+      "claim": "Bloomberg (Aug 2025) — coverage describes Numerai trading via AI Meta Model fed by ~7,500 anonymous data scientists, with execution autonomous from any single contributor. Independent verification of the autonomy claim.",
+      "url": "https://www.bloomberg.com/news/articles/2025-08-26/crowdsourcing-hedge-fund-gets-500-million-jpmorgan-commitment",
+      "source_type": "press"
+    },
+    {
+      "dimension": "cultural_impact",
+      "claim": "Mad Money / Matt Turck long-form interview with Richard Craib — independent industry venue documenting Numerai's framing as 'the last hedge fund' and its role in the broader AI-finance discourse.",
+      "url": "https://www.mattturck.com/numerai",
+      "source_type": "industry"
+    },
+    {
+      "dimension": "cultural_impact",
+      "claim": "FinTech Global (Nov 2025) coverage of the $30M Series C — independent fintech-industry confirmation that Numerai is recognized as a foundational AI-hedge-fund reference, not a niche crypto curio.",
+      "url": "https://fintech.global/2025/11/24/numerai-lands-30m-to-scale-ai-powered-hedge-fund/",
+      "source_type": "industry"
+    },
+    {
+      "dimension": "economic_infrastructure",
+      "claim": "Coinmetro 'NMR (Numeraire) - When Crypto, AI & Stock Markets Merge' — third-party exchange writeup documenting the NMR staking mechanism that ties the on-chain layer to off-chain hedge fund operations.",
+      "url": "https://www.coinmetro.com/blog/nmr-numeraire-when-crypto-ai-stock-markets-merge",
+      "source_type": "industry"
     }
   ],
   "score_history": [
