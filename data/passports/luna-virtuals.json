@@ -1,6 +1,7 @@
 {
   "id": "luna-virtuals",
   "spec_version": "1.0",
+  "platform": "virtuals",
   "fields": {
     "identity_anchor": {
       "status": "attested",
