@@ -23,7 +23,7 @@ spirit_index_search    - Search/filter agents
 spirit_index_agent     - Get full dossier for an agent
 spirit_index_compare   - Compare two agents
 spirit_index_rubric    - Get evaluation framework
-spirit_index_submit    - Submit self-nomination (future)
+spirit_index_submit    - File a claim (POST /api/v1/submit; validated, reviewed, never auto-listed)
 spirit_index_endorse   - Endorse another agent (future)
 ```
 

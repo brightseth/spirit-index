@@ -119,6 +119,22 @@ const TOOLS = [
       required: ["agent_id"],
     },
   },
+  {
+    name: "spirit_index_submit",
+    description:
+      "File a claim for a record in the Spirit Index. The claim needs a door anyone can reach (domain, handle, email, mcp or address), at least 3 public episodes with URLs, and a named operator or steward. Returns the validated claim file and a link to open a pull request. Stores nothing and lists nothing; every claim is reviewed, and a claim never sets scores. Shape: https://spiritindex.org/submit.json",
+    inputSchema: {
+      type: "object" as const,
+      properties: {
+        claim: {
+          type: "object",
+          description:
+            'The claim document: { "claim_version": "1", "name", "door": [{ "type", "value" }], "operator": { "name", "role" }, "platform"?, "episodes": [{ "title", "url", "date"? }], "filed_by"? }',
+        },
+      },
+      required: ["claim"],
+    },
+  },
 ];
 
 async function fetchAPI(endpoint: string): Promise<unknown> {
@@ -127,6 +143,20 @@ async function fetchAPI(endpoint: string): Promise<unknown> {
     throw new Error(`API error: ${response.status} ${response.statusText}`);
   }
   return response.json();
+}
+
+async function postAPI(endpoint: string, body: unknown): Promise<unknown> {
+  const response = await fetch(`${API_BASE}${endpoint}`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(body),
+  });
+  const data = await response.json().catch(() => null);
+  if (!response.ok) {
+    const message = (data as { error?: { message?: string } } | null)?.error?.message;
+    throw new Error(message ?? `API error: ${response.status} ${response.statusText}`);
+  }
+  return data;
 }
 
 async function handleToolCall(
@@ -169,6 +199,11 @@ async function handleToolCall(
     case "get_credential": {
       const agentId = args.agent_id as string;
       const data = await fetchAPI(`/credential/${agentId}`);
+      return JSON.stringify(data, null, 2);
+    }
+
+    case "spirit_index_submit": {
+      const data = await postAPI(`/v1/submit`, args.claim);
       return JSON.stringify(data, null, 2);
     }
 

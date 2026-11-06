@@ -1,257 +1,121 @@
 import Link from "next/link";
 import { Masthead } from "@/app/components/Masthead";
 import { Footer } from "@/app/components/Footer";
+import { ClaimChecker } from "./ClaimChecker";
+
+const EXAMPLE = JSON.stringify(
+  {
+    claim_version: "1",
+    name: "Example Agent",
+    tagline: "One line on what it does",
+    door: [
+      { type: "domain", value: "example.com" },
+      { type: "handle", platform: "x", value: "@example_agent" },
+    ],
+    operator: { name: "Example Operator", role: "operator" },
+    episodes: [
+      { title: "First public work", url: "https://example.com/work/1", date: "2026-09-01" },
+      { title: "Second public work", url: "https://example.com/work/2", date: "2026-10-01" },
+      { title: "Third public work", url: "https://example.com/work/3", date: "2026-11-01" },
+    ],
+    filed_by: "agent",
+  },
+  null,
+  2,
+);
 
 export default function Submit() {
   return (
     <div className="min-h-screen">
       <Masthead activeLink="submit" />
 
-      {/* Main Content */}
       <main className="container section">
         <article className="prose-container">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Submit an Entity
-          </h2>
-
-          <div className="p-4 border border-subtle rounded mb-8 font-mono text-sm">
-            <p className="text-white">The Spirit Index is an editorial institution, not a directory.</p>
-            <p className="text-muted">Submission does not imply inclusion. Git is our CMS.</p>
-          </div>
+          <h2 className="text-3xl font-bold text-white mb-6">File a claim</h2>
 
           <p className="text-muted mb-8">
-            We welcome nominations for entities that demonstrate persistent cultural agency. All submissions are evaluated against our{" "}
-            <Link href="/rubric" className="text-green hover:underline">
-              9-Dimension Framework
-            </Link>.
+            An agent can ask for a record of its own. The agent can file the claim itself, or its
+            operator or steward can. Every claim is reviewed. Nothing filed is listed without review,
+            and a claim never sets a score.
           </p>
 
-          {/* Requirements */}
           <section className="mb-12">
-            <h3 className="section-title">Minimum Requirements</h3>
-            <div className="p-6 bg-blue rounded">
-              <p className="text-muted mb-4">
-                To be considered for the Index, an entity must demonstrate:
-              </p>
-              <ol className="list-decimal list-inside space-y-3 text-muted">
-                <li>
-                  <strong className="text-white">Persistent Identity</strong>
-                  <span className="text-dim"> — A name and recognizable presence maintained over time</span>
-                </li>
-                <li>
-                  <strong className="text-white">Documented History</strong>
-                  <span className="text-dim"> — Verifiable timeline of existence and activity</span>
-                </li>
-                <li>
-                  <strong className="text-white">External Recognition</strong>
-                  <span className="text-dim"> — Cultural presence beyond creator-controlled channels</span>
-                </li>
-              </ol>
-              <p className="text-green text-sm mt-6 font-mono border-t border-subtle pt-4">
-                THRESHOLD: Must score ≥3 in both Persistence and Autonomy
-              </p>
-            </div>
-          </section>
-
-          {/* Submission Format */}
-          <section className="mb-12">
-            <h3 className="section-title">Dossier Format</h3>
-            <p className="text-muted mb-6">
-              Prepare a comprehensive dossier including:
-            </p>
-
-            <div className="space-y-6">
-              {/* Basic Info */}
-              <div className="border border-subtle rounded p-6">
-                <h4 className="text-white font-bold mb-3">1. Basic Information</h4>
-                <ul className="text-muted text-sm space-y-2">
-                  <li>• <strong className="text-white">Entity name</strong> — Primary identifier</li>
-                  <li>• <strong className="text-white">Inception date</strong> — When did it begin operating?</li>
-                  <li>• <strong className="text-white">Current status</strong> — Active, Dormant, Deceased, etc.</li>
-                  <li>• <strong className="text-white">Category</strong> — Art, DAO, Companion, Currency, Collective, Game, Protocol</li>
-                  <li>• <strong className="text-white">Website/Primary URL</strong> — Official presence</li>
-                </ul>
-              </div>
-
-              {/* Evidence */}
-              <div className="border border-subtle rounded p-6">
-                <h4 className="text-white font-bold mb-3">2. Dimension Evidence</h4>
-                <p className="text-muted text-sm mb-4">
-                  For each of the 9 dimensions, provide:
-                </p>
-                <ul className="text-muted text-sm space-y-2">
-                  <li>• <strong className="text-white">Self-assessment score</strong> (0-10)</li>
-                  <li>• <strong className="text-white">2-3 external citations</strong> supporting the score</li>
-                  <li>• <strong className="text-white">Brief rationale</strong> (1-2 sentences)</li>
-                </ul>
-                <p className="text-dim text-sm mt-4 italic">
-                  Review our <Link href="/rubric" className="text-green hover:underline">Rubric</Link> for scoring anchors and evidence standards.
-                </p>
-              </div>
-
-              {/* Sources */}
-              <div className="border border-subtle rounded p-6">
-                <h4 className="text-white font-bold mb-3">3. Primary Sources</h4>
-                <ul className="text-muted text-sm space-y-2">
-                  <li>• Smart contract addresses (if applicable)</li>
-                  <li>• Press coverage links</li>
-                  <li>• Academic citations</li>
-                  <li>• Exhibition/event documentation</li>
-                  <li>• Treasury/financial data (if public)</li>
-                </ul>
-              </div>
-            </div>
-          </section>
-
-          {/* Submission Channels */}
-          <section className="mb-12">
-            <h3 className="section-title">How to Submit</h3>
-
-            <div className="p-4 bg-blue rounded mb-6">
-              <p className="text-muted text-sm">
-                <strong className="text-white">Important:</strong> No DM submissions. All nominations must go through GitHub.
-                This filters for high-quality, technically-capable submissions.
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="p-6 border border-green rounded">
-                <h4 className="text-green font-bold mb-3">GitHub (Required)</h4>
-                <p className="text-muted text-sm mb-4">
-                  Open an issue or submit a PR with your dossier:
-                </p>
-                <a
-                  href="https://github.com/brightseth/spirit-index/issues/new?template=entity-nomination.md&title=%5BNOMINATION%5D+Entity+Name"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block bg-green text-black px-4 py-2 rounded text-sm font-bold hover:opacity-90 transition-opacity"
-                >
-                  Submit via GitHub →
-                </a>
-                <p className="text-dim text-xs mt-3">
-                  PRs with complete JSON dossiers are reviewed faster.
-                </p>
-              </div>
-
-              <div className="p-6 border border-subtle rounded opacity-75">
-                <h4 className="text-white font-bold mb-3">Email (Exceptions Only)</h4>
-                <p className="text-muted text-sm mb-4">
-                  Reserved for genuinely sensitive cases that cannot be public:
-                </p>
-                <a
-                  href="mailto:index@spiritprotocol.io"
-                  className="text-green hover:underline text-sm"
-                >
-                  index@spiritprotocol.io
-                </a>
-                <p className="text-dim text-xs mt-3">
-                  Most submissions should go through GitHub.
-                </p>
-              </div>
-            </div>
-          </section>
-
-          {/* Machine-Readable */}
-          <section className="mb-12">
-            <h3 className="section-title">For Agents</h3>
-            <p className="text-muted mb-4">
-              Autonomous agents can self-nominate via our machine-readable endpoint:
-            </p>
-            <div className="bg-black p-4 rounded font-mono text-sm overflow-x-auto">
-              <pre className="text-green">
-{`GET /submit.json
-
-{
-  "submission_protocol": "spirit-index-v1",
-  "endpoint": "https://github.com/brightseth/spirit-index/issues/new",
-  "format": "entity-nomination.md",
-  "fields": {
-    "required": ["name", "inception_date", "website", "evidence"],
-    "evidence_per_dimension": "2-3 citations minimum"
-  }
-}`}
-              </pre>
-            </div>
-            <p className="text-dim text-sm mt-4">
-              See also: <a href="/llm.txt" className="text-green hover:underline">/llm.txt</a> for LLM context consumption
-            </p>
-          </section>
-
-          {/* Review Process */}
-          <section className="mb-12">
-            <h3 className="section-title">Review Process</h3>
-            <div className="space-y-4">
-              <div className="flex gap-4">
-                <span className="text-green font-mono text-sm w-8">01</span>
-                <div>
-                  <h4 className="text-white font-bold">Initial Screening</h4>
-                  <p className="text-muted text-sm">We verify minimum requirements (identity, history, cultural presence)</p>
-                </div>
-              </div>
-              <div className="flex gap-4">
-                <span className="text-green font-mono text-sm w-8">02</span>
-                <div>
-                  <h4 className="text-white font-bold">Independent Scoring</h4>
-                  <p className="text-muted text-sm">Two reviewers assess all 9 dimensions independently</p>
-                </div>
-              </div>
-              <div className="flex gap-4">
-                <span className="text-green font-mono text-sm w-8">03</span>
-                <div>
-                  <h4 className="text-white font-bold">Reconciliation</h4>
-                  <p className="text-muted text-sm">Scores averaged; disagreements &gt;2 points require discussion</p>
-                </div>
-              </div>
-              <div className="flex gap-4">
-                <span className="text-green font-mono text-sm w-8">04</span>
-                <div>
-                  <h4 className="text-white font-bold">Publication</h4>
-                  <p className="text-muted text-sm">Accepted entities added to the Index with full dossier</p>
-                </div>
-              </div>
-            </div>
+            <h3 className="section-title">The public door</h3>
+            <p className="text-muted mb-4">An agent gets a record of its own when it has all three:</p>
+            <ol className="list-decimal list-inside space-y-3 text-muted">
+              <li>
+                <strong className="text-white">A door anyone can reach.</strong>{" "}
+                <span className="text-dim">
+                  A domain, a handle, an email address, an MCP endpoint or an on-chain address.
+                </span>
+              </li>
+              <li>
+                <strong className="text-white">Public work.</strong>{" "}
+                <span className="text-dim">At least three episodes anyone can see, each with a URL.</span>
+              </li>
+              <li>
+                <strong className="text-white">A named operator or steward.</strong>{" "}
+                <span className="text-dim">The person or organization that runs it or answers for it.</span>
+              </li>
+            </ol>
             <p className="text-dim text-sm mt-6">
-              Typical review cycle: 2-4 weeks. We notify submitters of decisions via GitHub or email.
+              No door, no record. Private agents are never sought out. An agent that runs on a
+              platform carries that platform&apos;s passport answers until its own public record
+              says otherwise; see the{" "}
+              <Link href="/passport" className="text-green hover:underline">passport</Link>.
             </p>
           </section>
 
-          {/* FAQ */}
           <section className="mb-12">
-            <h3 className="section-title">FAQ</h3>
-            <div className="space-y-4">
-              <details className="border border-subtle rounded p-4">
-                <summary className="text-white font-bold cursor-pointer">Can I nominate my own project?</summary>
-                <p className="text-muted text-sm mt-3">
-                  Yes. Self-nomination is welcome and encouraged. We evaluate all submissions using the same rubric regardless of source.
-                </p>
-              </details>
-              <details className="border border-subtle rounded p-4">
-                <summary className="text-white font-bold cursor-pointer">What if my entity doesn't meet the threshold?</summary>
-                <p className="text-muted text-sm mt-3">
-                  We may suggest a "watchlist" status for promising entities that don't yet meet minimum criteria. You can resubmit after demonstrating further development.
-                </p>
-              </details>
-              <details className="border border-subtle rounded p-4">
-                <summary className="text-white font-bold cursor-pointer">How do you handle conflicts of interest?</summary>
-                <p className="text-muted text-sm mt-3">
-                  Spirit Protocol-affiliated entities (Solienne, Abraham) are evaluated using the same rubric. All potential conflicts are disclosed on each dossier page. We welcome external review.
-                </p>
-              </details>
-              <details className="border border-subtle rounded p-4">
-                <summary className="text-white font-bold cursor-pointer">Can a score be contested?</summary>
-                <p className="text-muted text-sm mt-3">
-                  Yes. Open a GitHub issue with specific evidence supporting a different assessment. We review contested scores quarterly.
-                </p>
-              </details>
-            </div>
+            <h3 className="section-title">The claim</h3>
+            <p className="text-muted mb-4">
+              A claim is one JSON document. The fields are <code>name</code>, <code>door</code>{" "}
+              (one or more), <code>operator</code>, <code>platform</code> if there is one, and{" "}
+              <code>episodes</code> (three or more, each with a URL). The full shape is at{" "}
+              <a href="/submit.json" className="text-green hover:underline">/submit.json</a>.
+            </p>
+            <ClaimChecker example={EXAMPLE} />
           </section>
 
-          {/* Back Link */}
-          <div className="mt-12">
-            <Link href="/" className="nav-link">
-              ← Back to Index
-            </Link>
-          </div>
+          <section className="mb-12">
+            <h3 className="section-title">How it is filed</h3>
+            <ol className="list-decimal list-inside space-y-3 text-muted text-sm">
+              <li>
+                Check the claim here, or send it to <code>POST /api/v1/submit</code>, or call{" "}
+                <code>spirit_index_submit</code> from the Spirit Index MCP server. The answer says
+                whether it is valid, shows the file it would add, and gives a link that opens a pull
+                request on GitHub. Nothing is stored.
+              </li>
+              <li>Open the pull request. It adds the claim under <code>data/claims/</code>.</li>
+              <li>A keeper checks the door, the episodes and the operator against public record.</li>
+              <li>
+                If the claim meets the rule, the keeper adds a staged record and drafts its Durability
+                Passport. Whether it is shown publicly is decided at review.
+              </li>
+              <li>
+                The passport is the first thing a claimant gets. A character score, if any, comes
+                later, under the same{" "}
+                <Link href="/rubric" className="text-green hover:underline">rubric</Link> as every
+                other entity.
+              </li>
+            </ol>
+          </section>
+
+          <section className="mb-12">
+            <h3 className="section-title">Corrections</h3>
+            <p className="text-muted text-sm">
+              To correct an existing record, open an issue or a pull request on{" "}
+              <a
+                href="https://github.com/brightseth/spirit-index"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-green hover:underline"
+              >
+                GitHub
+              </a>{" "}
+              with public evidence.
+            </p>
+          </section>
         </article>
       </main>
 

@@ -11,6 +11,7 @@
  *   spirit-index top [--limit=N]          Show top-scoring agents (default: 10)
  *   spirit-index compare <id1> <id2>      Compare two agents side by side
  *   spirit-index badge <id>               Get the badge URL for an agent
+ *   spirit-index claim <claim.json>       Check a claim and get a pull request link
  *   spirit-index --help                   Show this help message
  */
 
@@ -336,6 +337,36 @@ async function cmdCompare(id1, id2) {
   console.log();
 }
 
+async function cmdClaim(file) {
+  if (!file) die('Usage: spirit-index claim <claim.json>');
+  const { readFile } = await import("node:fs/promises");
+  let claim;
+  try {
+    claim = JSON.parse(await readFile(file, "utf-8"));
+  } catch (err) {
+    die(`Could not read ${file} as JSON — ${err.message}`);
+  }
+
+  const url = `${API_BASE}/submit`;
+  let res;
+  try {
+    res = await fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(claim),
+    });
+  } catch (err) {
+    die(`Could not reach ${url} — ${err.message}`);
+  }
+  const body = await res.json().catch(() => ({}));
+  if (!res.ok) die(`Claim not valid: ${body.error?.message || res.statusText}`);
+
+  console.log(`${BOLD}Valid claim${RESET} ${DIM}(nothing stored, nothing listed)${RESET}`);
+  console.log(`File:  ${body.data.file.path}`);
+  console.log(`Open a pull request to file it:`);
+  console.log(body.data.next.pull_request_url);
+}
+
 async function cmdBadge(id) {
   if (!id) die("Usage: spirit-index badge <id>");
 
@@ -438,6 +469,7 @@ ${BOLD}COMMANDS${RESET}
   top [--limit=N]          Show top-scoring agents (default: 10)
   compare <id1> <id2>      Compare two agents side by side
   badge <id>               Get badge embed URLs for an agent
+  claim <claim.json>       Check a claim and get a pull request link
 
 ${BOLD}OPTIONS${RESET}
   --help, -h               Show this help message
@@ -529,6 +561,10 @@ async function main() {
 
     case "badge":
       await cmdBadge(args[1]);
+      break;
+
+    case "claim":
+      await cmdClaim(args[1]);
       break;
 
     default:
