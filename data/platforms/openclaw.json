@@ -1,0 +1,120 @@
+{
+  "id": "openclaw",
+  "kind": "platform",
+  "name": "OpenClaw",
+  "operator": "OpenClaw Foundation",
+  "website": "https://openclaw.ai",
+  "spec_version": "1.1",
+  "fields": {
+    "memory_custody": {
+      "status": "attested",
+      "summary": "An agent built on OpenClaw keeps its memory as plain Markdown files in a workspace on the operator's own machine, and its config, credentials and session history in a local state directory. The docs give a backup and restore command and a machine-move procedure, and on a model fallback the transcript carries forward while the session keeps its selected model. There is no hosted account to cancel, and the docs reviewed do not describe the framework issuing the agent an address of its own.",
+      "evidence": [
+        {
+          "claim": "Memory is written as plain Markdown files in the agent's workspace, default ~/.openclaw/workspace, including MEMORY.md, USER.md and dated daily notes under memory/.",
+          "url": "https://docs.openclaw.ai/concepts/memory"
+        },
+        {
+          "claim": "The README states that state, memory, and credentials live on your hardware.",
+          "url": "https://github.com/openclaw/openclaw"
+        },
+        {
+          "claim": "openclaw backup create writes a timestamped .tar.gz covering state, config, credentials, every configured agent directory and, by default, workspaces, and can verify the archive.",
+          "url": "https://docs.openclaw.ai/install/backups"
+        },
+        {
+          "claim": "Moving machines means stopping the Gateway, running openclaw backup create --verify on the old machine and openclaw backup restore on the new one; sessions carry conversation history and agent state.",
+          "url": "https://docs.openclaw.ai/install/migrating"
+        },
+        {
+          "claim": "Fallback execution does not change the session's selected model, and continuations preserve the transcript instead of replaying the original request.",
+          "url": "https://docs.openclaw.ai/concepts/model-failover"
+        },
+        {
+          "claim": "The site states: no subscription, no hosted tier, no token.",
+          "url": "https://openclaw.ai"
+        }
+      ],
+      "checked": "2026-11-06"
+    },
+    "identity_anchor": {
+      "status": "attested",
+      "summary": "An agent built on OpenClaw reaches people through the chat platforms and model provider its operator configures, such as Discord, Slack, Telegram or WhatsApp. The docs reviewed do not describe the framework issuing an agent an address, domain or on-chain identity of its own, so any door it has is an account the operator holds.",
+      "evidence": [
+        {
+          "claim": "The README describes the assistant working with the model provider and chat platforms you configure, across Discord, iMessage, Slack, Teams, Telegram, WhatsApp and 20+ more.",
+          "url": "https://github.com/openclaw/openclaw"
+        }
+      ],
+      "checked": "2026-11-06"
+    },
+    "persistence_ops": {
+      "status": "attested",
+      "summary": "The repository was created November 24, 2025 and the project took the OpenClaw name in January 2026 after earlier names. Signed releases ship several times a week, the latest stable on November 5, 2026, alongside beta releases.",
+      "evidence": [
+        {
+          "claim": "The openclaw/openclaw repository was created 2025-11-24 and last pushed 2026-11-06.",
+          "url": "https://api.github.com/repos/openclaw/openclaw"
+        },
+        {
+          "claim": "A January 29, 2026 post says the project started in November 2025 as Clawd, was renamed Moltbot, then settled on OpenClaw.",
+          "url": "https://openclaw.ai/blog/introducing-openclaw"
+        },
+        {
+          "claim": "Stable release v2026.11.1 was published November 5, 2026 with a verified signature, following v2026.10.10 on November 3 and beta v2026.11.5-beta.1 on November 4.",
+          "url": "https://github.com/openclaw/openclaw/releases"
+        }
+      ],
+      "checked": "2026-11-06"
+    },
+    "economic_rails": {
+      "status": "attested",
+      "summary": "OpenClaw has no subscription, no paid tier and no token of its own, so an agent does not sit in a paid plan on the platform. The project's docs reviewed do not describe a built-in wallet, and they record that a token using the OpenClaw name was a scam not issued by the project.",
+      "evidence": [
+        {
+          "claim": "The site states: no subscription, no hosted tier, no token, and there is no enterprise edition and no paid version.",
+          "url": "https://openclaw.ai"
+        },
+        {
+          "claim": "The lore page describes a token launched on Pump.fun under the OpenClaw name after the rebrand as a scam by crypto grifters.",
+          "url": "https://docs.openclaw.ai/start/lore"
+        }
+      ],
+      "checked": "2026-11-06"
+    },
+    "governance": {
+      "status": "attested",
+      "summary": "Each deployment is one trust boundary held by a single operator or a team that trusts each other, who controls pairing, allowlists and can stop the Gateway. The code is MIT licensed and the OpenClaw Foundation, a US 501(c)(3), employs the core team and signs releases. There is no hosted service that could suspend an agent.",
+      "evidence": [
+        {
+          "claim": "The security docs state one trust boundary per gateway, a single operator or a team whose members trust each other, and that OpenClaw is not a hostile multi-tenant security boundary.",
+          "url": "https://docs.openclaw.ai/gateway/security"
+        },
+        {
+          "claim": "Unknown DM senders get a pairing code instead of being processed, and group access runs through allowlists, usually behind a mention gate.",
+          "url": "https://docs.openclaw.ai/gateway/security"
+        },
+        {
+          "claim": "The OpenClaw Foundation, an independent US 501(c)(3), signs every release and keeps the product MIT licensed.",
+          "url": "https://openclaw.ai"
+        }
+      ],
+      "checked": "2026-11-06"
+    },
+    "recovery": {
+      "status": "attested",
+      "summary": "After a Gateway restart, running root sessions get one input asking the agent to check current state and resume; subagents, background processes, cron runs and work that never persisted a run identity before a crash are not resumed. Backups can be verified, scheduled daily with retention, or pushed to git, and a restore command brings them back.",
+      "evidence": [
+        {
+          "claim": "After a restart, running root sessions receive a resume input; transcripts remain in the per-agent SQLite database; work that never persisted a run identity before a crash or SIGKILL is not recovered, and effects are not guaranteed exactly once.",
+          "url": "https://docs.openclaw.ai/gateway/restart-recovery"
+        },
+        {
+          "claim": "backup enable sets a Gateway-owned daily archive with retention such as --keep-daily 7 --keep-weekly 4, and git backups carry incremental database history with credential tables redacted by default.",
+          "url": "https://docs.openclaw.ai/install/backups"
+        }
+      ],
+      "checked": "2026-11-06"
+    }
+  }
+}

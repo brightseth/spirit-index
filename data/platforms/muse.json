@@ -1,0 +1,75 @@
+{
+  "id": "muse",
+  "kind": "platform",
+  "name": "Meta Muse",
+  "operator": "Meta Platforms, Inc.",
+  "website": "https://muse.ai",
+  "spec_version": "1.1",
+  "fields": {
+    "memory_custody": {
+      "status": "attested",
+      "summary": "Muse keeps its memory and the user's files on a cloud virtual machine run by Meta, with a file-based memory system that includes a MEMORY.md file the user can inspect. The user can download a copy of discussions, files and other information from Data controls, but the docs do not name the export format, and deleting the Meta account removes Muse with it. The docs do not say what survives a cancelled subscription, do not describe an address of the agent's own in current help pages, and do not say what happens to the agent when Meta changes the underlying model.",
+      "evidence": [
+        { "claim": "Muse runs on a cloud environment called a virtual machine, each user's VM is isolated, and memory can be consulted in files such as MEMORY.md.", "url": "https://www.meta.com/help/artificial-intelligence/1047255454427887/" },
+        { "claim": "Muse learns through a file-based memory system, and customizations are saved and applied across conversations.", "url": "https://www.meta.com/help/artificial-intelligence/995796179982326/" },
+        { "claim": "Users can download a copy of their discussions, files and other information via Settings, Data controls; no export format is stated.", "url": "https://www.meta.com/help/artificial-intelligence/2225571704857152/" },
+        { "claim": "Deleting the Meta account removes all associated information, including Muse; Reset permanently and irreversibly deletes discussion history, files and active tasks.", "url": "https://www.meta.com/help/artificial-intelligence/2225571704857152/" },
+        { "claim": "After something is deleted, Muse can still remember information learned from what was deleted.", "url": "https://www.meta.com/help/artificial-intelligence/2225571704857152/" },
+        { "claim": "The subscriptions page says plans renew monthly and can be cancelled at any time, and does not describe what happens to data on cancellation.", "url": "https://www.meta.com/help/subscriptions/1021145227643680/" }
+      ],
+      "checked": "2026-11-06"
+    },
+    "identity_anchor": {
+      "status": "attested",
+      "summary": "Muse is used through a Meta account, and deleting that account removes Muse. Meta's 23 September 2026 announcement says Muse will have its own email address, in future tense; the current help center pages read today do not describe one. The docs describe no handle, domain or on-chain identity that survives outside the Meta account.",
+      "evidence": [
+        { "claim": "Users connect to Muse with a Meta account, via app or web.", "url": "https://www.meta.com/help/superintelligence/1331373868832401/" },
+        { "claim": "Meta wrote on 23 September 2026 that Muse will have its own email address it can use to get things done or as another way to communicate with it.", "url": "https://www.meta.com/blog/meta-connect-2026-everything-we-announced/" },
+        { "claim": "Deleting the Meta account removes all associated information, including Muse.", "url": "https://www.meta.com/help/artificial-intelligence/2225571704857152/" }
+      ],
+      "checked": "2026-11-06"
+    },
+    "persistence_ops": {
+      "status": "attested",
+      "summary": "Meta announced Muse on 8 September 2026, rolling out in the US on iOS, Android and muse.ai with a free tier and subscription plans. Help center pages were updated within the last weeks, and a connector platform for outside businesses is live with a submission and review process. The docs do not carry a beta label or a public status page.",
+      "evidence": [
+        { "claim": "Meta's newsroom post dated 8 September 2026 introduces Muse, rolling out in the US on iOS, Android and muse.ai, running on Muse Secure VM.", "url": "https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/" },
+        { "claim": "Meta's 23 September 2026 post says Muse was introduced a few weeks earlier and adds computer use on Mac and new connectors.", "url": "https://www.meta.com/blog/meta-connect-2026-everything-we-announced/" },
+        { "claim": "The Muse Connector Platform describes a three-stage path: describe the product, review against functional, security and legal requirements with end-to-end testing, then directory listing.", "url": "https://platform.muse.ai/" },
+        { "claim": "The getting-started help page shows a last-updated stamp of hours before today's read.", "url": "https://www.meta.com/help/superintelligence/1331373868832401/" }
+      ],
+      "checked": "2026-11-06"
+    },
+    "economic_rails": {
+      "status": "attested",
+      "summary": "Muse transacts on the user's behalf: it pays with Link by Stripe, which issues a one-time card number per purchase, or with a saved card, and asks for approval before any purchase. Muse has a free tier and two paid monthly tiers ($20 and $100) with weekly usage allowances. The docs do not describe a wallet held by the agent itself.",
+      "evidence": [
+        { "claim": "Muse can pay with Link by Stripe, which issues a unique card number per transaction, or log in and pay with a saved credit card, and asks for approval before a purchase.", "url": "https://www.meta.com/help/superintelligence/1436362127544482/" },
+        { "claim": "Paid plans are $20 a month and $100 a month with weekly Muse usage allowances, renewing monthly until cancelled.", "url": "https://www.meta.com/help/subscriptions/1021145227643680/" },
+        { "claim": "The supplemental terms say Muse can execute financial transactions on user instructions and that users bear the risk of financial loss.", "url": "https://muse.ai/terms" },
+        { "claim": "The connector platform says Meta partnered with Stripe so connector providers can accept payments with Link.", "url": "https://platform.muse.ai/" }
+      ],
+      "checked": "2026-11-06"
+    },
+    "governance": {
+      "status": "attested",
+      "summary": "Meta's supplemental terms (last updated 8 September 2026) let Meta suspend or terminate access at any time for any reason without notice, and monitor, log, suspend, block or modify Muse's actions. The owner sets approval levels, reviews activity and disconnects connectors, and can reset Muse to delete everything. Meta does not review custom connectors.",
+      "evidence": [
+        { "claim": "Meta may suspend or terminate access at any time, for any reason, without notice, and reserves the right to monitor, log, examine, suspend, block or modify Muse actions.", "url": "https://muse.ai/terms" },
+        { "claim": "Owners choose approve once, approve for the task, or always approve, and can review activity history and disconnect connectors.", "url": "https://www.meta.com/help/artificial-intelligence/1385290430137537/" },
+        { "claim": "Meta does not review custom connectors or how they use the user's information.", "url": "https://www.meta.com/gu-in/help/superintelligence/1687253048996149/" }
+      ],
+      "checked": "2026-11-06"
+    },
+    "recovery": {
+      "status": "attested",
+      "summary": "The terms say Meta does not warrant that Muse will execute instructions or that actions can be reversed, and that ongoing actions may be cancelled on termination. The help center says some actions, such as sent emails, cannot be undone and the user is responsible for resolving errors; Reset and account deletion are irreversible. The docs do not describe backups, restore after an outage, or documented incidents.",
+      "evidence": [
+        { "claim": "Meta does not warrant Muse will execute instructions, including that actions will be timely or can be reversed once initiated; incomplete actions may be cancelled on termination.", "url": "https://muse.ai/terms" },
+        { "claim": "Actions such as sending emails cannot be reversed, and the user remains responsible for resolving errors, including those of third-party services.", "url": "https://www.meta.com/help/artificial-intelligence/1385290430137537/" },
+        { "claim": "Reset permanently deletes all information and is irreversible; deleting the Meta account removes Muse.", "url": "https://www.meta.com/help/artificial-intelligence/2225571704857152/" }
+      ],
+      "checked": "2026-11-06"
+    }
+  }
+}
