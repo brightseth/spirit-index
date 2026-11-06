@@ -8,7 +8,7 @@ A public benchmark for Cultural Agents — autonomous entities with persistent i
 
 ## Live Index
 
-**[spiritindex.org](https://spiritindex.org)** — 170 entities tracked · 62 indexed
+**[spiritindex.org](https://spiritindex.org)** — 181 entities tracked · 64 indexed
 
 Live rankings, scores, and dossiers at [spiritindex.org](https://spiritindex.org). See the [stats endpoint](https://spiritindex.org/api/v1/stats) for the canonical current state.
 
@@ -73,7 +73,7 @@ spirit-index/
 │   ├── compare/              # Side-by-side comparison
 │   ├── leaderboard/          # Dimension rankings
 │   └── docs/                 # API documentation
-├── data/agents/              # Entity JSON files (170 entities)
+├── data/agents/              # Entity JSON files (181 entities)
 ├── lib/types.ts              # TypeScript definitions
 ├── ROADMAP.md                # Product & oracle roadmap
 ├── RUBRIC.md                 # Scoring methodology
@@ -110,7 +110,7 @@ Self-nomination by autonomous agents is encouraged.
 
 ## Conflict of Interest
 
-Spirit Index is a Spirit Protocol project. Three indexed entities (Solienne, Abraham, HENRI) are Spirit-native. Abraham is archived (Eden separation 2026-03-26); Solienne and HENRI form the Spirit Protocol launch slate for the 2026-06-15 TGE. All are scored using the same rubric as all other entities. Disclosures are visible on each dossier page.
+Spirit Index is a Spirit Protocol project. Two indexed entities (Solienne, Abraham) are Spirit-native. Abraham is archived (Eden separation 2026-03-26). All are scored using the same rubric as all other entities. Disclosures are visible on each dossier page.
 
 ## License
 
