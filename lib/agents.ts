@@ -47,7 +47,11 @@ export async function getAllAgents(): Promise<EnrichedAgent[]> {
   // served, so dossiers, API records, feeds and sitemaps all treat them as absent.
   _heldIds = new Set(records.filter(a => a.public === false).map(a => a.id));
 
-  const agents = records.filter(agent => agent.public !== false).map(agent => {
+  // self_report is calibration data kept in the files, never served: it is
+  // stripped here so no page, API route or feed can ship it.
+  const agents = records.filter(record => record.public !== false).map(record => {
+    const agent: Agent = { ...record };
+    delete agent.self_report;
     const comp = calculateComparable(agent.scores);
     const comparable_pct = comp.pct;
     return {

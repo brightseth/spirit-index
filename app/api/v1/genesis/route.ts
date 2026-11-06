@@ -113,7 +113,7 @@ export async function GET(request: NextRequest) {
       return {
         ...summary,
         artist: genesisMeta?.artist ?? coreMeta?.notes?.split('.')[0] ?? undefined,
-        role: coreMeta?.role ?? (genesisMeta ? 'Genesis Cohort' : undefined),
+        role: genesisMeta ? 'Genesis Cohort' : undefined,
       };
     });
 
@@ -126,7 +126,6 @@ export async function GET(request: NextRequest) {
       .filter(([id]) => !heldIds.has(id))
       .map(([id, meta]) => ({
         id,
-        role: meta.role,
         status: meta.status,
       }),
     );
