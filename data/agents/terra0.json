@@ -71,18 +71,63 @@
   "evidence": [
     {
       "dimension": "persistence",
-      "claim": "Active research project and exhibitions since 2016",
-      "url": "https://terra0.org/archive"
+      "claim": "Network Cultures / MoneyLab (Sep 2016) documents terra0 at inception — earliest independent press coverage. Establishes the >10yr operating window from a verifiable external source.",
+      "url": "https://networkcultures.org/moneylab/2016/09/29/terra0-the-self-owning-augmented-forest/",
+      "source_type": "academic"
+    },
+    {
+      "dimension": "persistence",
+      "claim": "Frieze profile (2023) tracks terra0 through 7+ years of continuous practice — third-party art-press confirmation of continuity through the entire crypto market arc.",
+      "url": "https://www.frieze.com/article/terra0-profile-2023",
+      "source_type": "press"
     },
     {
       "dimension": "cultural_impact",
-      "claim": "Exhibited at Ars Electronica, cited in academic literature on non-human agency",
-      "url": "https://ars.electronica.art/outofthebox/en/terra0/"
+      "claim": "Carnegie International 2022 inclusion — Carnegie Museum of Art is a top-tier US institution; participation in the Carnegie International signals canonical recognition beyond crypto-art subcultures.",
+      "url": "https://cmoa.org/2022-carnegie-international/terra0/",
+      "source_type": "institutional"
+    },
+    {
+      "dimension": "cultural_impact",
+      "claim": "LAS Art Foundation 'Autonomous Forest' — first real German woodland placed under DAO management, presented as institutional art program. Bridges conceptual project to deployed infrastructure.",
+      "url": "https://www.las-art.foundation/programme/terra0-autonomous-forest",
+      "source_type": "institutional"
+    },
+    {
+      "dimension": "cultural_impact",
+      "claim": "Google Arts & Culture story page — terra0 entered the broad-public cultural canon, not just specialist art-tech press.",
+      "url": "https://artsandculture.google.com/story/zwXh9S7M844vAw",
+      "source_type": "institutional"
     },
     {
       "dimension": "tech_distinctiveness",
-      "claim": "Pioneered smart contract-based environmental governance",
-      "url": "https://terra0.org/whitepaper.pdf"
+      "claim": "Canadian Centre for Architecture (CCA Montreal) interview with Paul Kolling and Paul Seidler — institutional architecture/design press treating terra0's smart-contract environmental governance as a serious technical contribution.",
+      "url": "https://www.cca.qc.ca/en/articles/issues/29/a-social-reset/84692/can-an-augmented-forest-own-and-utilise-itself",
+      "source_type": "institutional"
+    },
+    {
+      "dimension": "tech_distinctiveness",
+      "claim": "Bankless feature on the LAS Art Foundation deployment — third-party crypto-industry confirmation that the on-chain forest is a functioning Ethereum-based system, not just a thought experiment.",
+      "url": "https://www.bankless.com/read/autonomous-forest-experiment-ethereum",
+      "source_type": "industry"
+    },
+    {
+      "dimension": "narrative_coherence",
+      "claim": "The NEW Institute 'Economies Beyond the Human' — academic-institutional venue presenting terra0 as foundational reference for non-human economic agency. Confirms the philosophical depth claim.",
+      "url": "https://thenew.institute/en/media/seed-phrase/01-terra0-on-economies-beyond-the-human",
+      "source_type": "academic"
+    },
+    {
+      "dimension": "governance",
+      "claim": "The Blockchain Socialist long-form interview details the on-chain governance structure and the legal/property-rights framing — third-party verification of constitutional logic.",
+      "url": "https://theblockchainsocialist.com/inside-the-cybernetic-forest-terra0s-vision-for-nature-to-own-itself/",
+      "source_type": "industry"
+    },
+    {
+      "dimension": "narrative_coherence",
+      "claim": "CLOT Magazine interview frames terra0 as a coherent multi-year inquiry into 'enabling the forest as an autonomous economic agent' — confirms the mythos persists across press cycles.",
+      "url": "https://clotmag.com/interviews/terra0-enabling-the-forest-to-become-an-autonomous-economic-agent",
+      "source_type": "press"
     }
   ],
   "score_history": [
